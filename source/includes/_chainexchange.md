@@ -4605,6 +4605,15 @@ func main() {
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">balance</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The current market balance</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
+<br/>
+
+**MarketBalance**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/marketBalance.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">ID of the market</td></tr>
+<tr ><td class="parameter-td td_text">balance</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Current market balance</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
 
 ## MarketBalances
 

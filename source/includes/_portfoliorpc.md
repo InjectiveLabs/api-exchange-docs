@@ -26,7 +26,7 @@ async def main() -> None:
     network = Network.testnet()
     client = AsyncClient(network)
     account_address = "inj1clw20s2uxeyxtam6f7m84vgae92s9eh7vygagt"
-    portfolio = await client.fetch_account_portfolio_balances(account_address=account_address)
+    portfolio = await client.fetch_account_portfolio_balances(account_address=account_address, usd=False)
     print(portfolio)
 
 
@@ -51,7 +51,7 @@ import (
 
 func main() {
 	// select network: local, testnet, mainnet
-	network := common.LoadNetwork("testnet", "lb")
+	network := common.LoadNetwork("devnet", "lb")
 	exchangeClient, err := exchangeclient.NewExchangeClient(network)
 	if err != nil {
 		panic(err)
@@ -59,7 +59,7 @@ func main() {
 
 	ctx := context.Background()
 	accountAddress := "inj1clw20s2uxeyxtam6f7m84vgae92s9eh7vygagt"
-	res, err := exchangeClient.GetAccountPortfolioBalances(ctx, accountAddress)
+	res, err := exchangeClient.GetAccountPortfolioBalances(ctx, accountAddress, true)
 	if err != nil {
 		fmt.Println(err)
 	}

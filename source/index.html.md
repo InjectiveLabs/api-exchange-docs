@@ -46,6 +46,7 @@ includes:
   - staking
   - tendermint
   - tokenfactory
+  - txfees
   - wasm
   - wasmx
   - historicalqueries

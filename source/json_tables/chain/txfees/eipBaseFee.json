@@ -1,0 +1,3 @@
+[
+    {"Parameter": "base_fee", "Type": "Decimal", "Description": "The current chain gas price"}
+]

@@ -1,5 +1,11 @@
 # Change Log
 
+## 2025-04-21
+- Added documentation for `TXFees` module's endpoints
+- Updated all messages to reflect the changes included in the chain version 1.15, and the Indexer for that chain version
+- Python SDK v1.10.0
+- Go SDK v1.57.0
+
 ## 2025-02-17
 - Changed the `Permissions` module documentation to reflect the new module version (new queries and messages)
 - Updated all messages to reflect the changes included in the chain version 1.14, and the Indexer for that chain version

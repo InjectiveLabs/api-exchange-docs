@@ -232,25 +232,25 @@ We check if any reduce-only orders would be invalid after executing all of the t
 
 In our example, consider a new reduce-only order of `0.4 BTC` at `$64,600`.
 
-|  Sell Price  |  Quantity   |   Order Type    |
-| :---------:  | :---------: | :-------------: |
-|   $66,500    |   0.2 BTC   |     Vanilla     |
-|   $65,500    |   0.1 BTC   |   Reduce-only   |
-|   $65,400    |   0.1 BTC   |     Vanilla     |
-| **$64,600**  | **0.4 BTC** | **Reduce-only** |
-|   $64,500    |   0.3 BTC   |     Vanilla     |
-|   $63,500    |   0.1 BTC   |   Reduce-only   |
+| Sell Price  |  Quantity   |   Order Type    |
+| :---------: | :---------: | :-------------: |
+|   $66,500   |   0.2 BTC   |     Vanilla     |
+|   $65,500   |   0.1 BTC   |   Reduce-only   |
+|   $65,400   |   0.1 BTC   |     Vanilla     |
+| **$64,600** | **0.4 BTC** | **Reduce-only** |
+|   $64,500   |   0.3 BTC   |     Vanilla     |
+|   $63,500   |   0.1 BTC   |   Reduce-only   |
 
 This is perfectly valid and no further action is required. If the buy price hit $65,500 and all limit sell orders less than or equal to that price were filled, then the long position would be closed. If the price hit $66,500 and the vanilla sell order was filled, then the trader would open a 0.2 BTC short position. But what if the reduce-only order was for `0.5 BTC` instead?
 
-|  Sell Price  |  Quantity   |   Order Type    |
-| :---------:  | :---------: | :-------------: |
-|   $66,500    |   0.2 BTC   |     Vanilla     |
-|   $65,500    |   0.1 BTC   |   Reduce-only   |
-|   $65,400    |   0.1 BTC   |     Vanilla     |
-| **$64,600**  | **0.5 BTC** | **Reduce-only** |
-|   $64,500    |   0.3 BTC   |     Vanilla     |
-|   $63,500    |   0.1 BTC   |   Reduce-only   |
+| Sell Price  |  Quantity   |   Order Type    |
+| :---------: | :---------: | :-------------: |
+|   $66,500   |   0.2 BTC   |     Vanilla     |
+|   $65,500   |   0.1 BTC   |   Reduce-only   |
+|   $65,400   |   0.1 BTC   |     Vanilla     |
+| **$64,600** | **0.5 BTC** | **Reduce-only** |
+|   $64,500   |   0.3 BTC   |     Vanilla     |
+|   $63,500   |   0.1 BTC   |   Reduce-only   |
 
 If the orders are getting matched, once the last vanilla order of 0.1 BTC at $65,400 is filled, the position will have been reduced to `1 BTC - 0.1 BTC - 0.3 BTC - 0.5 BTC - 0.1 BTC = 0 BTC`. The next reduce-only order of 0.1 BTC at $65,500 will thus be invalid.
 
@@ -262,25 +262,25 @@ We check if any reduce-only limit orders would be invalidated if all the orders 
 
 In our example, consider a new vanilla order of `0.4 BTC` at `$64,600`.
 
-|  Sell Price  |  Quantity   |   Order Type    |
-| :---------:  | :---------: | :-------------: |
-|   $66,500    |   0.2 BTC   |     Vanilla     |
-|   $65,500    |   0.1 BTC   |   Reduce-only   |
-|   $65,400    |   0.1 BTC   |     Vanilla     |
-| **$64,600**  | **0.4 BTC** |   **Vanilla**   |
-|   $64,500    |   0.3 BTC   |     Vanilla     |
-|   $63,500    |   0.1 BTC   |   Reduce-only   |
+| Sell Price  |  Quantity   | Order Type  |
+| :---------: | :---------: | :---------: |
+|   $66,500   |   0.2 BTC   |   Vanilla   |
+|   $65,500   |   0.1 BTC   | Reduce-only |
+|   $65,400   |   0.1 BTC   |   Vanilla   |
+| **$64,600** | **0.4 BTC** | **Vanilla** |
+|   $64,500   |   0.3 BTC   |   Vanilla   |
+|   $63,500   |   0.1 BTC   | Reduce-only |
 
 Again this perfectly valid and no further action is required because all order quantities up to the highest priced reduce-only order add up to ≤ the long position quantity. But what if the order was for `0.5 BTC` instead?
 
-|  Sell Price  |  Quantity   |   Order Type    |
-| :---------:  | :---------: | :-------------: |
-|   $66,500    |   0.2 BTC   |     Vanilla     |
-|   $65,500    |   0.1 BTC   |   Reduce-only   |
-|   $65,400    |   0.1 BTC   |     Vanilla     |
-| **$64,600**  | **0.5 BTC** |   **Vanilla**   |
-|   $64,500    |   0.3 BTC   |     Vanilla     |
-|   $63,500    |   0.1 BTC   |   Reduce-only   |
+| Sell Price  |  Quantity   | Order Type  |
+| :---------: | :---------: | :---------: |
+|   $66,500   |   0.2 BTC   |   Vanilla   |
+|   $65,500   |   0.1 BTC   | Reduce-only |
+|   $65,400   |   0.1 BTC   |   Vanilla   |
+| **$64,600** | **0.5 BTC** | **Vanilla** |
+|   $64,500   |   0.3 BTC   |   Vanilla   |
+|   $63,500   |   0.1 BTC   | Reduce-only |
 
 If the orders are getting matched, once the last reduce-only order of $65,500 is reached, the position will have been reduced to `1 BTC - 0.1 BTC - 0.3 BTC - 0.5 BTC - 0.1 BTC = 0 BTC`. A reduce-only order of 0.1 BTC after that will thus be invalid.
 
@@ -309,3 +309,47 @@ When the limit is reached the server will respond sending an error response with
 - SELL_PO (8): Post-Only Sell. Similar to BUY_PO, this ensures that your sell order will only add liquidity to the order book and not match with a pre-existing order.
 - BUY_ATOMIC (9): An atomic buy order is a market order that gets executed instantly, bypassing the Frequent Batch Auctions (FBA). It's intended for smart contracts that need to execute a trade instantly. A higher fee is paid defined in the global exchange parameters (currently it is two times the normal trading fee).
 - SELL_ATOMIC (10): An atomic sell order is similar to a BUY_ATOMIC, and it gets executed instantly at the current market price, bypassing the FBA.
+
+
+## Gas estimation
+
+Interactions with the Injective Chain that involve processing will incur gas consumption. The gas required for any action is related to the interactions with the chain store, and thus, the amount of gas is not deterministic. Users sending messages to the chain in transactions must estimate the gas required.
+There are two primary methods for determining the gas required for a transaction:
+
+- Transaction simulation: The chain allows users to submit transactions in simulation mode. In this mode, the transaction is executed as if it were part of the next chain block, and a response is returned to the user. This response includes the gas required for the simulation. It is advisable to slightly increase the simulated gas when broadcasting the actual transaction to minimize the risk of encountering an out-of-gas error.
+- Gas estimation: Users can estimate the gas required for a transaction based on the messages included and the historical gas consumption of similar messages processed on-chain. For users utilizing the Injective Python SDK, the [message broadcaster](#message-broadcaster) can assist in this estimation.
+
+The InjectiveLabs team is developing a new functionality to make the gas requirement for certain Exchange module messages fixed, thereby making gas calculation deterministic. The fixed gas values, which will be implemented, can already serve as a reliable approximation for manually calculating the gas requirement for a transaction.
+
+### Fixed gas requirement
+
+The following table lists message types with a fixed gas requirement. Any message not mentioned will continue to have a non-deterministic gas requirement based on chain store interactions.
+
+| Message type                                  | Gas units |
+| --------------------------------------------- | --------- |
+| `MsgCreateDerivativeLimitOrderGas`            | 120000    |
+| `MsgCreateDerivativeLimitPostOnlyOrderGas`    | 140000    |
+| `MsgCreateDerivativeMarketOrderGas`           | 105000    |
+| `MsgCancelDerivativeOrderGas`                 | 70000     |
+| `MsgCreateSpotLimitOrderGas`                  | 100000    |
+| `MsgCreateSpotLimitPostOnlyOrderGas`          | 120000    |
+| `MsgCreateSpotMarketOrderGas`                 | 50000     |
+| `MsgCancelSpotOrderGas`                       | 65000     |
+| `MsgCreateBinaryOptionsLimitOrderGas`         | 120000    |
+| `MsgCreateBinaryOptionsLimitPostOnlyOrderGas` | 140000    |
+| `MsgCreateBinaryOptionsMarketOrderGas`        | 105000    |
+| `MsgCancelBinaryOptionsOrderGas`              | 70000     |
+| `MsgDepositGas`                               | 70000     |
+| `MsgWithdrawGas`                              | 70000     |
+| `MsgSubaccountTransferGas`                    | 70000     |
+| `MsgExternalTransferGas`                      | 70000     |
+| `MsgIncreasePositionMarginGas`                | 70000     |
+| `MsgDecreasePositionMarginGas`                | 70000     |
+
+For the `MsgBatchUpdateOrders` the gas requirement will also be fixed. The gas requirement for each order action will match the individual order message actions as specified in the table. This applies similarly to the following batch messages:
+
+- `MsgBatchCreateSpotLimitOrders`
+- `MsgBatchCancelSpotOrders`
+- `MsgBatchCreateDerivativeLimitOrders`
+- `MsgBatchCancelDerivativeOrders`
+- `MsgBatchCancelBinaryOptionsOrders`

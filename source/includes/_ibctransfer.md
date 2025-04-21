@@ -756,6 +756,7 @@ Defines a msg to transfer fungible tokens (i.e Coins) between ICS20 enabled chai
 <!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/ibc/transfer/1_MsgTransfer.py -->
 ```py
 import asyncio
+import json
 import os
 from decimal import Decimal
 
@@ -778,7 +779,10 @@ async def main() -> None:
     client = AsyncClient(network)
     await client.initialize_tokens_from_chain_denoms()
     composer = await client.composer()
-    await client.sync_timeout_height()
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
 
     message_broadcaster = MsgBroadcasterWithPk.new_using_simulation(
         network=network,
@@ -811,7 +815,12 @@ async def main() -> None:
     # broadcast the transaction
     result = await message_broadcaster.broadcast([message])
     print("---Transaction Response---")
-    print(result)
+    print(json.dumps(result, indent=2))
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -830,8 +839,6 @@ import (
 	"os"
 
 	"cosmossdk.io/math"
-
-	"github.com/InjectiveLabs/sdk-go/client"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -876,12 +883,16 @@ func main() {
 	chainClient, err := chainclient.NewChainClient(
 		clientCtx,
 		network,
-		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
 	)
 
 	if err != nil {
 		panic(err)
 	}
+
+	gasPrice := chainClient.CurrentChainGasPrice()
+	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+	gasPrice = int64(float64(gasPrice) * 1.1)
+	chainClient.SetGasPrice(gasPrice)
 
 	sourcePort := "transfer"
 	sourceChannel := "channel-126"
@@ -910,6 +921,11 @@ func main() {
 
 	str, _ := json.MarshalIndent(response, "", " ")
 	fmt.Print(string(str))
+
+	gasPrice = chainClient.CurrentChainGasPrice()
+	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+	gasPrice = int64(float64(gasPrice) * 1.1)
+	chainClient.SetGasPrice(gasPrice)
 }
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->

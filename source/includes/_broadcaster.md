@@ -18,13 +18,14 @@ To use the broadcaster you just need to create an instance of *MsgBroadcasterWit
 <!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/3_MessageBroadcaster.py -->
 ```py
 import asyncio
+import json
 import os
 import uuid
 from decimal import Decimal
 
 import dotenv
 
-from pyinjective.composer import Composer as ProtoMsgComposer
+from pyinjective.async_client import AsyncClient
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import PrivateKey
@@ -36,11 +37,20 @@ async def main() -> None:
 
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    composer = ProtoMsgComposer(network=network.string())
+
+    client = AsyncClient(network)
+    composer = await client.composer()
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
 
     message_broadcaster = MsgBroadcasterWithPk.new_using_simulation(
         network=network,
         private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
     )
 
     priv_key = PrivateKey.from_hex(private_key_in_hexa)
@@ -83,7 +93,12 @@ async def main() -> None:
     # broadcast the transaction
     result = await message_broadcaster.broadcast([msg])
     print("---Transaction Response---")
-    print(result)
+    print(json.dumps(result, indent=2))
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -155,13 +170,14 @@ This is the most common broadcaster configuration. Unless you are using grantee 
 <!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/5_MessageBroadcasterWithoutSimulation.py -->
 ```py
 import asyncio
+import json
 import os
 import uuid
 from decimal import Decimal
 
 import dotenv
 
-from pyinjective.composer import Composer as ProtoMsgComposer
+from pyinjective.async_client import AsyncClient
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import PrivateKey
@@ -173,11 +189,21 @@ async def main() -> None:
 
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    composer = ProtoMsgComposer(network=network.string())
+
+    client = AsyncClient(network)
+    composer = await client.composer()
+    await client.sync_timeout_height()
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
 
     message_broadcaster = MsgBroadcasterWithPk.new_without_simulation(
         network=network,
         private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
     )
 
     priv_key = PrivateKey.from_hex(private_key_in_hexa)
@@ -220,7 +246,12 @@ async def main() -> None:
     # broadcast the transaction
     result = await message_broadcaster.broadcast([msg])
     print("---Transaction Response---")
-    print(result)
+    print(json.dumps(result, indent=2))
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -245,6 +276,7 @@ This is the required broadcaster configuration when operating with grantee accou
 <!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/4_MessageBroadcasterWithGranteeAccount.py -->
 ```py
 import asyncio
+import json
 import os
 import uuid
 from decimal import Decimal
@@ -252,7 +284,6 @@ from decimal import Decimal
 import dotenv
 
 from pyinjective.async_client import AsyncClient
-from pyinjective.composer import Composer as ProtoMsgComposer
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import Address, PrivateKey
@@ -265,10 +296,10 @@ async def main() -> None:
 
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    composer = ProtoMsgComposer(network=network.string())
 
     # initialize grpc client
     client = AsyncClient(network)
+    composer = await client.composer()
     await client.sync_timeout_height()
 
     # load account
@@ -276,9 +307,16 @@ async def main() -> None:
     pub_key = priv_key.to_public_key()
     address = pub_key.to_address()
 
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+
     message_broadcaster = MsgBroadcasterWithPk.new_for_grantee_account_using_simulation(
         network=network,
         grantee_private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
     )
 
     # prepare tx msg
@@ -301,7 +339,12 @@ async def main() -> None:
     # broadcast the transaction
     result = await message_broadcaster.broadcast([msg])
     print("---Transaction Response---")
-    print(result)
+    print(json.dumps(result, indent=2))
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -365,6 +408,7 @@ For the broadcaster to calculate the gas fee running the simulation, create an i
 <!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/6_MessageBroadcasterWithGranteeAccountWithoutSimulation.py -->
 ```py
 import asyncio
+import json
 import os
 import uuid
 from decimal import Decimal
@@ -372,7 +416,6 @@ from decimal import Decimal
 import dotenv
 
 from pyinjective.async_client import AsyncClient
-from pyinjective.composer import Composer as ProtoMsgComposer
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import Address, PrivateKey
@@ -385,20 +428,26 @@ async def main() -> None:
 
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    composer = ProtoMsgComposer(network=network.string())
 
     # initialize grpc client
     client = AsyncClient(network)
-    await client.sync_timeout_height()
+    composer = await client.composer()
 
     # load account
     priv_key = PrivateKey.from_hex(private_key_in_hexa)
     pub_key = priv_key.to_public_key()
     address = pub_key.to_address()
 
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+
     message_broadcaster = MsgBroadcasterWithPk.new_for_grantee_account_without_simulation(
         network=network,
         grantee_private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
     )
 
     # prepare tx msg
@@ -420,7 +469,12 @@ async def main() -> None:
     # broadcast the transaction
     result = await message_broadcaster.broadcast([msg])
     print("---Transaction Response---")
-    print(result)
+    print(json.dumps(result, indent=2))
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -434,21 +488,56 @@ For the broadcaster to calculate the gas fee based on the messages included with
 <br />
 
 ---
-***NOTE:***
-
+**NOTE:**
 There an important consideration when using the Transaction Broadcaster calculating the gas cost without simulation to send a _MsgBatchUpdateOrders_ message.
 The logic that estimates the gas cost for the _MsgBatchUpdateOrders_ correclty calculates the gas required for each order action (creation or cancelation) it includes. But there is no easy way to calculate the gas cost when canceling all orders for a market id using one of the following parameters: `spot_market_ids_to_cancel_all`, `derivative_market_ids_to_cancel_all` or `binary_options_market_ids_to_cancel_all`. The complexity is related to the fact that the gas cost depends on the number of orders to be cancelled.
 By default the estimation logic calculates a gas cost considering the number of orders to cancel for each market id is 20.
-To improve the gas cost calculation when using the _MsgBatchUpdateOrders_ message to cancel all orders for one or more markets you can change the number of estimated orders to cancel per market running the following command:
+To improve the gas cost calculation when using the _MsgBatchUpdateOrders_ message to cancel all orders for one or more markets you can change the number of estimated orders to cancel per market. Check in the fine-tunning section the proper `AVERAGE_CANCEL_ALL_AFFECTED_ORDERS` global variable to change.
+---
 
-    `BatchUpdateOrdersGasLimitEstimator.AVERAGE_CANCEL_ALL_AFFECTED_ORDERS = 30`
 
-
-## Fine-tunning gas fee local estimation
+## Fine-tunning message based gas fee estimation
 
 As mentioned before the gas estimation without using simulation is implemented by using fixed values as gas cost for certain messages and actions. Since the real gas cost can differ at some point from the estimator calculations, the Python SDK allows the developer to fine-tune certain gas cost values in order to improve the gas cost estimation.
 In the next tables you can find the global values used for gas estimation calculations, that can be modified in your application:
 
+### Gas limit estimation based on gas heuristics
+This is the estimator implemented with the class `GasHeuristicsGasLimitEstimator`.
+
+
+| Module                                                | Global Variable                                     | Description                                                                          |
+| ----------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `SPOT_ORDER_CREATION_GAS_LIMIT`                     | The gas cost associated to the creation of one spot limit order                      |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `SPOT_MARKET_ORDER_CREATION_GAS_LIMIT`              | The gas cost associated to the creation of one spot market order                     |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `POST_ONLY_SPOT_ORDER_CREATION_GAS_LIMIT`           | The gas cost associated to the creation of one post only spot limit order            |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `DERIVATIVE_ORDER_CREATION_GAS_LIMIT`               | The gas cost associated to the creation of one derivative order                      |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `DERIVATIVE_MARKET_ORDER_CREATION_GAS_LIMIT`        | The gas cost associated to the creation of one derivative market order               |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `POST_ONLY_DERIVATIVE_ORDER_CREATION_GAS_LIMIT`     | The gas cost associated to the creation of one post only derivative limit order      |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `BINARY_OPTIONS_ORDER_CREATION_GAS_LIMIT`           | The gas cost associated to the creation of one binary options order                  |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `BINARY_OPTIONS_MARKET_ORDER_CREATION_GAS_LIMIT`    | The gas cost associated to the creation of one binary options market order           |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `POST_ONLY_BINARY_OPTIONS_ORDER_CREATION_GAS_LIMIT` | The gas cost associated to the creation of one post only binary options limit order  |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `SPOT_ORDER_CANCELATION_GAS_LIMIT`                  | The gas cost associated to the cancellation of one spot order                        |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `DERIVATIVE_ORDER_CANCELATION_GAS_LIMIT`            | The gas cost associated to the cancellation of one derivative order                  |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `BINARY_OPTIONS_ORDER_CANCELATION_GAS_LIMIT`        | The gas cost associated to the cancellation of one binary options order              |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `DEPOSIT_GAS_LIMIT`                                 | The gas cost associated to a deposit into a subaccount                               |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `WITHDRAW_GAS_LIMIT`                                | The gas cost associated to a withdrawal from a subaccount                            |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `SUBACCOUNT_TRANSFER_GAS_LIMIT`                     | The gas cost associated to a funds transfer between subaccounts of the same address  |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `EXTERNAL_TRANSFER_GAS_LIMIT`                       | The gas cost associated to a funds transfer to a subaccount from a different address |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `INCREASE_POSITION_MARGIN_TRANSFER_GAS_LIMIT`       | The gas cost associated to increasing a position's margin                            |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `DECREASE_POSITION_MARGIN_TRANSFER_GAS_LIMIT`       | The gas cost associated to decreasing a position's margin                            |
+
+
+
+| Module                                                | Class                                  | Global Variable                      | Description                                                                                                                   |
+| ----------------------------------------------------- | -------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| `pyinjective.core.broadcaster.py`                     | `MessageBasedTransactionFeeCalculator` | `TRANSACTION_GAS_LIMIT`              | The gas cost associated to the TX processing                                                                                  |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `GasHeuristicsGasLimitEstimator`       | `GENERAL_MESSAGE_GAS_LIMIT`          | Generic base gas cost for any message                                                                                         |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `BatchUpdateOrdersGasLimitEstimator`   | `AVERAGE_CANCEL_ALL_AFFECTED_ORDERS` | This global represents the expected number of orders to be cancelled when executing a "cancel all orders for a market" action |
+| `pyinjective.core.gas_heuristics_gas_limit_estimator` | `ExecGasLimitEstimator`                | `DEFAULT_GAS_LIMIT`                  | Estimation of the general gas amount required for a MsgExec (for the general message processing)                              |
+
+
+### Gas limit estimation based on chain statistics
+This is the estimator implemented with the class `GasLimitEstimator`, and it is the original implementation for gas estimation without simulations. It has been replaced now by the `GasHeuristicsGasLimitEstimator`, but the user can still use it.
 
 
 | Module                                 | Global Variable                          | Description                                                                                                           |

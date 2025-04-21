@@ -2966,11 +2966,12 @@ Message to create a new namespace
 <!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/permissions/1_MsgCreateNamespace.py -->
 ```py
 import asyncio
+import json
 import os
 
 import dotenv
 
-from pyinjective.composer import Composer as ProtoMsgComposer
+from pyinjective.async_client import AsyncClient
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import PrivateKey
@@ -2982,11 +2983,19 @@ async def main() -> None:
 
     # select network: local, testnet, mainnet
     network = Network.devnet()
-    composer = ProtoMsgComposer(network=network.string())
+    client = AsyncClient(network)
+    composer = await client.composer()
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
 
     message_broadcaster = MsgBroadcasterWithPk.new_using_simulation(
         network=network,
         private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
     )
 
     priv_key = PrivateKey.from_hex(private_key_in_hexa)
@@ -3060,7 +3069,12 @@ async def main() -> None:
     # broadcast the transaction
     result = await message_broadcaster.broadcast([message])
     print("---Transaction Response---")
-    print(result)
+    print(json.dumps(result, indent=2))
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -3079,7 +3093,6 @@ import (
 	"os"
 
 	permissionstypes "github.com/InjectiveLabs/sdk-go/chain/permissions/types"
-	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
@@ -3121,12 +3134,16 @@ func main() {
 	chainClient, err := chainclient.NewChainClient(
 		clientCtx,
 		network,
-		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
 	)
 
 	if err != nil {
 		panic(err)
 	}
+
+	gasPrice := chainClient.CurrentChainGasPrice()
+	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+	gasPrice = int64(float64(gasPrice) * 1.1)
+	chainClient.SetGasPrice(gasPrice)
 
 	denom := "factory/inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r/inj_test"
 	role1 := permissionstypes.Role{
@@ -3205,6 +3222,11 @@ func main() {
 
 	str, _ := json.MarshalIndent(response, "", " ")
 	fmt.Print(string(str))
+
+	gasPrice = chainClient.CurrentChainGasPrice()
+	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+	gasPrice = int64(float64(gasPrice) * 1.1)
+	chainClient.SetGasPrice(gasPrice)
 }
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -3386,11 +3408,12 @@ Message to update a namespace configuration
 <!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/permissions/2_MsgUpdateNamespace.py -->
 ```py
 import asyncio
+import json
 import os
 
 import dotenv
 
-from pyinjective.composer import Composer as ProtoMsgComposer
+from pyinjective.async_client import AsyncClient
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import PrivateKey
@@ -3402,11 +3425,20 @@ async def main() -> None:
 
     # select network: local, testnet, mainnet
     network = Network.devnet()
-    composer = ProtoMsgComposer(network=network.string())
+
+    client = AsyncClient(network)
+    composer = await client.composer()
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
 
     message_broadcaster = MsgBroadcasterWithPk.new_using_simulation(
         network=network,
         private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
     )
 
     priv_key = PrivateKey.from_hex(private_key_in_hexa)
@@ -3462,7 +3494,12 @@ async def main() -> None:
     # broadcast the transaction
     result = await message_broadcaster.broadcast([message])
     print("---Transaction Response---")
-    print(result)
+    print(json.dumps(result, indent=2))
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -3480,11 +3517,11 @@ import (
 	"fmt"
 	"os"
 
+	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+
 	permissionstypes "github.com/InjectiveLabs/sdk-go/chain/permissions/types"
-	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
-	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 )
 
 func main() {
@@ -3523,12 +3560,16 @@ func main() {
 	chainClient, err := chainclient.NewChainClient(
 		clientCtx,
 		network,
-		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
 	)
 
 	if err != nil {
 		panic(err)
 	}
+
+	gasPrice := chainClient.CurrentChainGasPrice()
+	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+	gasPrice = int64(float64(gasPrice) * 1.1)
+	chainClient.SetGasPrice(gasPrice)
 
 	denom := "factory/inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r/inj_test"
 
@@ -3585,6 +3626,11 @@ func main() {
 
 	str, _ := json.MarshalIndent(response, "", " ")
 	fmt.Print(string(str))
+
+	gasPrice = chainClient.CurrentChainGasPrice()
+	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+	gasPrice = int64(float64(gasPrice) * 1.1)
+	chainClient.SetGasPrice(gasPrice)
 }
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -3756,11 +3802,12 @@ Message to update the roles assigned to an actor
 <!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/permissions/3_MsgUpdateActorRoles.py -->
 ```py
 import asyncio
+import json
 import os
 
 import dotenv
 
-from pyinjective.composer import Composer as ProtoMsgComposer
+from pyinjective.async_client import AsyncClient
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import PrivateKey
@@ -3772,11 +3819,20 @@ async def main() -> None:
 
     # select network: local, testnet, mainnet
     network = Network.devnet()
-    composer = ProtoMsgComposer(network=network.string())
+
+    client = AsyncClient(network)
+    composer = await client.composer()
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
 
     message_broadcaster = MsgBroadcasterWithPk.new_using_simulation(
         network=network,
         private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
     )
 
     priv_key = PrivateKey.from_hex(private_key_in_hexa)
@@ -3812,7 +3868,12 @@ async def main() -> None:
     # broadcast the transaction
     result = await message_broadcaster.broadcast([message])
     print("---Transaction Response---")
-    print(result)
+    print(json.dumps(result, indent=2))
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -3834,7 +3895,6 @@ import (
 	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 
 	permissionstypes "github.com/InjectiveLabs/sdk-go/chain/permissions/types"
-	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 )
@@ -3875,12 +3935,16 @@ func main() {
 	chainClient, err := chainclient.NewChainClient(
 		clientCtx,
 		network,
-		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
 	)
 
 	if err != nil {
 		panic(err)
 	}
+
+	gasPrice := chainClient.CurrentChainGasPrice()
+	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+	gasPrice = int64(float64(gasPrice) * 1.1)
+	chainClient.SetGasPrice(gasPrice)
 
 	denom := "factory/inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r/inj_test"
 	roleActors1 := permissionstypes.RoleActors{
@@ -3916,6 +3980,11 @@ func main() {
 
 	str, _ := json.MarshalIndent(response, "", " ")
 	fmt.Print(string(str))
+
+	gasPrice = chainClient.CurrentChainGasPrice()
+	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+	gasPrice = int64(float64(gasPrice) * 1.1)
+	chainClient.SetGasPrice(gasPrice)
 }
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -4029,11 +4098,12 @@ Message to claim existing vouchers for a particular address
 <!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/permissions/4_MsgClaimVoucher.py -->
 ```py
 import asyncio
+import json
 import os
 
 import dotenv
 
-from pyinjective.composer import Composer as ProtoMsgComposer
+from pyinjective.async_client import AsyncClient
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import PrivateKey
@@ -4045,11 +4115,20 @@ async def main() -> None:
 
     # select network: local, testnet, mainnet
     network = Network.devnet()
-    composer = ProtoMsgComposer(network=network.string())
+
+    client = AsyncClient(network)
+    composer = await client.composer()
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
 
     message_broadcaster = MsgBroadcasterWithPk.new_using_simulation(
         network=network,
         private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
     )
 
     priv_key = PrivateKey.from_hex(private_key_in_hexa)
@@ -4066,7 +4145,12 @@ async def main() -> None:
     # broadcast the transaction
     result = await message_broadcaster.broadcast([message])
     print("---Transaction Response---")
-    print(result)
+    print(json.dumps(result, indent=2))
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -4088,7 +4172,6 @@ import (
 	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 
 	permissionstypes "github.com/InjectiveLabs/sdk-go/chain/permissions/types"
-	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 )
@@ -4129,12 +4212,16 @@ func main() {
 	chainClient, err := chainclient.NewChainClient(
 		clientCtx,
 		network,
-		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
 	)
 
 	if err != nil {
 		panic(err)
 	}
+
+	gasPrice := chainClient.CurrentChainGasPrice()
+	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+	gasPrice = int64(float64(gasPrice) * 1.1)
+	chainClient.SetGasPrice(gasPrice)
 
 	denom := "factory/inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r/inj_test"
 
@@ -4152,6 +4239,11 @@ func main() {
 
 	str, _ := json.MarshalIndent(response, "", " ")
 	fmt.Print(string(str))
+
+	gasPrice = chainClient.CurrentChainGasPrice()
+	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+	gasPrice = int64(float64(gasPrice) * 1.1)
+	chainClient.SetGasPrice(gasPrice)
 }
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->

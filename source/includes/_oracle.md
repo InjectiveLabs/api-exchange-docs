@@ -19,7 +19,7 @@ import dotenv
 from grpc import RpcError
 
 from pyinjective.async_client import AsyncClient
-from pyinjective.constant import GAS_FEE_BUFFER_AMOUNT, GAS_PRICE
+from pyinjective.constant import GAS_FEE_BUFFER_AMOUNT
 from pyinjective.core.network import Network
 from pyinjective.transaction import Transaction
 from pyinjective.wallet import PrivateKey
@@ -71,7 +71,10 @@ async def main() -> None:
         return
 
     # build tx
-    gas_price = GAS_PRICE
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+
     gas_limit = int(sim_res["gasInfo"]["gasUsed"]) + GAS_FEE_BUFFER_AMOUNT  # add buffer for gas fee computation
     gas_fee = "{:.18f}".format((gas_price * gas_limit) / pow(10, 18)).rstrip("0")
     fee = [
@@ -107,7 +110,6 @@ import (
 	"os"
 
 	"cosmossdk.io/math"
-	"github.com/InjectiveLabs/sdk-go/client"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 
@@ -152,12 +154,16 @@ func main() {
 	chainClient, err := chainclient.NewChainClient(
 		clientCtx,
 		network,
-		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
 	)
 
 	if err != nil {
 		panic(err)
 	}
+
+	gasPrice := chainClient.CurrentChainGasPrice()
+	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+	gasPrice = int64(float64(gasPrice) * 1.1)
+	chainClient.SetGasPrice(gasPrice)
 
 	price := []math.LegacyDec{math.LegacyMustNewDecFromStr("100")}
 	base := []string{"BAYC"}
@@ -178,6 +184,11 @@ func main() {
 	}
 
 	fmt.Printf("Broadcast result: %s\n", result)
+
+	gasPrice = chainClient.CurrentChainGasPrice()
+	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+	gasPrice = int64(float64(gasPrice) * 1.1)
+	chainClient.SetGasPrice(gasPrice)
 }
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -297,7 +308,7 @@ import dotenv
 from grpc import RpcError
 
 from pyinjective.async_client import AsyncClient
-from pyinjective.constant import GAS_FEE_BUFFER_AMOUNT, GAS_PRICE
+from pyinjective.constant import GAS_FEE_BUFFER_AMOUNT
 from pyinjective.core.network import Network
 from pyinjective.transaction import Transaction
 from pyinjective.wallet import PrivateKey
@@ -354,7 +365,10 @@ async def main() -> None:
     print(sim_res_msg)
 
     # build tx
-    gas_price = GAS_PRICE
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+
     gas_limit = int(sim_res["gasInfo"]["gasUsed"]) + GAS_FEE_BUFFER_AMOUNT  # add buffer for gas fee computation
     gas_fee = "{:.18f}".format((gas_price * gas_limit) / pow(10, 18)).rstrip("0")
     fee = [

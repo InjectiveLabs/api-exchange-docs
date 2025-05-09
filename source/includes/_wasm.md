@@ -1830,7 +1830,7 @@ if __name__ == "__main__":
 
 > Response Example:
 
-``` python
+```python
 txhash: "814807A5C827FC385DF6108E52494E63A2010F36B1D6F36E43B2AEED5D530D60"
 raw_log: "[]"
 
@@ -1916,7 +1916,8 @@ The parameter sent to the `post_message` function has to be encoded in Base64 fo
 
 ### Request Parameters
 > Request Example:
-``` python
+
+```py
 import asyncio
 import base64
 import json
@@ -2001,7 +2002,6 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(main())
-
 ```
 
 | Parameter | Type       | Description                                                                                           | Required |
@@ -2013,7 +2013,7 @@ if __name__ == "__main__":
 ### Response Parameters
 > Response Example:
 
-``` python
+```py
 txhash: "03DDA0A4B49EF093CCC2999435D6D23C71A570B84E588137A0D314F73F5A336B"
 raw_log: "[]"
 

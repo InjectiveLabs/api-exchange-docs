@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "hash",
+    "Type": "string",
+    "Description": "hash is the ethereum transaction hex hash to query the logs for.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination defines an optional pagination for the request.",
+    "Required": "No"
+  }
+]

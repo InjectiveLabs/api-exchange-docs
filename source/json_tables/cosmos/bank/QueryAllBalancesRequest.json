@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address is the address to query balances for.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination defines an optional pagination for the request.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "resolve_denom",
+    "Type": "bool",
+    "Description": "Since: cosmos-sdk 0.50",
+    "Required": "Yes"
+  }
+]

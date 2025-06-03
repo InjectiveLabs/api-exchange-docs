@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "The account's portfolio address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "Related subaccount ID",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "type",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

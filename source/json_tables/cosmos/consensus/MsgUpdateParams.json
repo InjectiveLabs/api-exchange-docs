@@ -1,0 +1,44 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "authority is the address that controls the module (defaults to x/gov unless overwritten).",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "block",
+    "Type": "v1.BlockParams",
+    "Description": "NOTE: All parameters must be supplied.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "evidence",
+    "Type": "v1.EvidenceParams",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "validator",
+    "Type": "v1.ValidatorParams",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "abci",
+    "Type": "v1.ABCIParams",
+    "Description": "Since: cosmos-sdk 0.50",
+    "Required": "No"
+  },
+  {
+    "Parameter": "synchrony",
+    "Type": "v1.SynchronyParams",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "feature",
+    "Type": "v1.FeatureParams",
+    "Description": "",
+    "Required": "No"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "Unique Identifier for contract instance to be registered.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "gas_limit",
+    "Type": "uint64",
+    "Description": "Maximum gas to be used for the smart contract execution.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "gas_price",
+    "Type": "uint64",
+    "Description": "gas price to be used for the smart contract execution.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "admin_address",
+    "Type": "string",
+    "Description": "optional - admin account that will be allowed to perform any changes",
+    "Required": "No"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "Bids",
+    "Type": "TrimmedLimitOrder array",
+    "Description": ""
+  },
+  {
+    "Parameter": "Asks",
+    "Type": "TrimmedLimitOrder array",
+    "Description": ""
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "max_age",
+    "Type": "uint64",
+    "Description": "present on the chain."
+  },
+  {
+    "Parameter": "include_raw_history",
+    "Type": "bool",
+    "Description": "computation is included in the response"
+  },
+  {
+    "Parameter": "include_metadata",
+    "Type": "bool",
+    "Description": "response"
+  }
+]

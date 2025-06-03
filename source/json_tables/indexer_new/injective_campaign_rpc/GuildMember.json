@@ -1,0 +1,57 @@
+[
+  {
+    "Parameter": "campaign_contract",
+    "Type": "string",
+    "Description": "Guild manager contract address"
+  },
+  {
+    "Parameter": "guild_id",
+    "Type": "string",
+    "Description": "Guild ID"
+  },
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "Guild member address"
+  },
+  {
+    "Parameter": "joined_at",
+    "Type": "int64",
+    "Description": "Guild enrollment date (in UNIX milliseconds)"
+  },
+  {
+    "Parameter": "tvl_score",
+    "Type": "string",
+    "Description": "Average TVL score"
+  },
+  {
+    "Parameter": "volume_score",
+    "Type": "string",
+    "Description": "Total volume score"
+  },
+  {
+    "Parameter": "total_tvl",
+    "Type": "string",
+    "Description": "Total volume score"
+  },
+  {
+    "Parameter": "volume_score_percentage",
+    "Type": "float64",
+    "Description": "Volume percentage out of guilds total volume"
+  },
+  {
+    "Parameter": "tvl_score_percentage",
+    "Type": "float64",
+    "Description": "TVL percentage out of guilds total TVL score"
+  },
+  {
+    "Parameter": "tvl_reward",
+    "Type": "Coin array",
+    "Description": "Rewards for volume campaign (amount+denom)"
+  },
+  {
+    "Parameter": "volume_reward",
+    "Type": "Coin array",
+    "Description": "Rewards for TVL campaign (amount+denom)"
+  }
+]

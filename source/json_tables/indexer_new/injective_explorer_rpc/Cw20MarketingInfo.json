@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "project",
+    "Type": "string",
+    "Description": "Project information"
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": "Token's description"
+  },
+  {
+    "Parameter": "logo",
+    "Type": "string",
+    "Description": "logo (url/embedded)"
+  },
+  {
+    "Parameter": "marketing",
+    "Type": "byte array",
+    "Description": "A random field for additional marketing info"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "Parameter": "type",
+    "Type": "string",
+    "Description": "Campaign type",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "active",
+    "Type": "bool",
+    "Description": "Deprecated: use status instead.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "Limit number of returned campaigns",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "cursor",
+    "Type": "string",
+    "Description": "Cursor for pagination",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "from_start_date",
+    "Type": "int64",
+    "Description": "Filter campaigns by start date greater than this value in milliseconds",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "to_start_date",
+    "Type": "int64",
+    "Description": "Filter campaigns by start date lower than this value in milliseconds",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "from_end_date",
+    "Type": "int64",
+    "Description": "Filter campaigns by end date greater than this value in milliseconds",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "to_end_date",
+    "Type": "int64",
+    "Description": "Filter campaigns by end date lower than this value in milliseconds",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Filter campaigns by status",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,117 @@
+[
+  {
+    "Parameter": "id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "moniker",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "operator_address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "consensus_address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "jailed",
+    "Type": "bool",
+    "Description": ""
+  },
+  {
+    "Parameter": "status",
+    "Type": "int32",
+    "Description": ""
+  },
+  {
+    "Parameter": "tokens",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "delegator_shares",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "ValidatorDescription",
+    "Description": ""
+  },
+  {
+    "Parameter": "unbonding_height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "unbonding_time",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "commission_rate",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "commission_max_rate",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "commission_max_change_rate",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "commission_update_time",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "proposed",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "signed",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "missed",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "uptimes",
+    "Type": "ValidatorUptime array",
+    "Description": ""
+  },
+  {
+    "Parameter": "slashing_events",
+    "Type": "SlashingEvent array",
+    "Description": ""
+  },
+  {
+    "Parameter": "uptime_percentage",
+    "Type": "float64",
+    "Description": "uptime percentage base on latest 10k block"
+  },
+  {
+    "Parameter": "image_url",
+    "Type": "string",
+    "Description": "URL of the validator logo"
+  }
+]

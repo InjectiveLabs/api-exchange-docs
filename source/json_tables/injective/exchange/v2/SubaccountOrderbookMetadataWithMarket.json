@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "metadata",
+    "Type": "SubaccountOrderbookMetadata",
+    "Description": ""
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "isBuy",
+    "Type": "bool",
+    "Description": ""
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "market ID."
+  },
+  {
+    "Parameter": "settlement_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "settlement_price defines the settlement price"
+  }
+]

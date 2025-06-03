@@ -1,0 +1,107 @@
+[
+  {
+    "Parameter": "order_hash",
+    "Type": "string",
+    "Description": "Hash of the order"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Spot Market ID is keccak265(baseDenom + quoteDenom)"
+  },
+  {
+    "Parameter": "is_active",
+    "Type": "bool",
+    "Description": "active state of the order"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "The subaccountId that this order belongs to"
+  },
+  {
+    "Parameter": "execution_type",
+    "Type": "string",
+    "Description": "The execution type"
+  },
+  {
+    "Parameter": "order_type",
+    "Type": "string",
+    "Description": "The side of the order"
+  },
+  {
+    "Parameter": "price",
+    "Type": "string",
+    "Description": "Price of the order"
+  },
+  {
+    "Parameter": "trigger_price",
+    "Type": "string",
+    "Description": "Trigger price"
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "string",
+    "Description": "Quantity of the order"
+  },
+  {
+    "Parameter": "filled_quantity",
+    "Type": "string",
+    "Description": "Filled amount"
+  },
+  {
+    "Parameter": "state",
+    "Type": "string",
+    "Description": "Order state"
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "int64",
+    "Description": "Order committed timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "Order updated timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "is_reduce_only",
+    "Type": "bool",
+    "Description": "True if an order is reduce only"
+  },
+  {
+    "Parameter": "direction",
+    "Type": "string",
+    "Description": "Order direction (order side)"
+  },
+  {
+    "Parameter": "is_conditional",
+    "Type": "bool",
+    "Description": "True if this is conditional order, otherwise false"
+  },
+  {
+    "Parameter": "trigger_at",
+    "Type": "uint64",
+    "Description": "Trigger timestamp in unix milli"
+  },
+  {
+    "Parameter": "placed_order_hash",
+    "Type": "string",
+    "Description": "Order hash placed when this triggers"
+  },
+  {
+    "Parameter": "margin",
+    "Type": "string",
+    "Description": "Order's margin"
+  },
+  {
+    "Parameter": "tx_hash",
+    "Type": "string",
+    "Description": "Transaction Hash where order is created. Not all orders have this field"
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "Custom client order ID"
+  }
+]

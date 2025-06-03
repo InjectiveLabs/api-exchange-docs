@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "amount",
+    "Type": "types.Coin",
+    "Description": ""
+  }
+]

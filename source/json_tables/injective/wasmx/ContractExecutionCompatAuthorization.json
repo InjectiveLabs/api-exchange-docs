@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "grants",
+    "Type": "types.ContractGrant array",
+    "Description": "Grants for contract executions"
+  }
+]

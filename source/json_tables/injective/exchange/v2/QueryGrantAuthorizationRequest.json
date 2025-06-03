@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "granter",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "grantee",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

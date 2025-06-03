@@ -1,0 +1,46 @@
+[
+  {
+    "Error Code": 1,
+    "Description": "invalid gas limit"
+  },
+  {
+    "Error Code": 2,
+    "Description": "invalid gas price"
+  },
+  {
+    "Error Code": 3,
+    "Description": "invalid contract address"
+  },
+  {
+    "Error Code": 4,
+    "Description": "contract already registered"
+  },
+  {
+    "Error Code": 5,
+    "Description": "duplicate contract"
+  },
+  {
+    "Error Code": 6,
+    "Description": "no contract addresses found"
+  },
+  {
+    "Error Code": 7,
+    "Description": "invalid code id"
+  },
+  {
+    "Error Code": 8,
+    "Description": "not possible to deduct gas fees"
+  },
+  {
+    "Error Code": 9,
+    "Description": "missing granter address"
+  },
+  {
+    "Error Code": 10,
+    "Description": "granter address does not exist"
+  },
+  {
+    "Error Code": 11,
+    "Description": "invalid funding mode"
+  }
+]

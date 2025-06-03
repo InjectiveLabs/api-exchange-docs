@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "validator_address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "orchestrator_address",
+    "Type": "string",
+    "Description": ""
+  }
+]

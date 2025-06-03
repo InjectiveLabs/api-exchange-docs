@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "denom represents the string name of the given denom unit (e.g uatom)."
+  },
+  {
+    "Parameter": "exponent",
+    "Type": "uint32",
+    "Description": "exponent = 6, thus: 1 atom = 10^6 uatom)."
+  },
+  {
+    "Parameter": "aliases",
+    "Type": "string array",
+    "Description": "aliases is a list of string aliases for the given denom"
+  }
+]

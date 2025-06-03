@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "market_order",
+    "Type": "DerivativeMarketOrder",
+    "Description": ""
+  },
+  {
+    "Parameter": "cancel_quantity",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

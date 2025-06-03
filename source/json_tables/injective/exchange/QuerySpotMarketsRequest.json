@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Status of the market, for convenience it is set to string - not enum",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_ids",
+    "Type": "string array",
+    "Description": "Filter by market IDs",
+    "Required": "Yes"
+  }
+]

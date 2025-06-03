@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "price",
+    "Type": "CosmosCoin array",
+    "Description": "Transaction gas price"
+  },
+  {
+    "Parameter": "gas",
+    "Type": "uint64",
+    "Description": "Transaction gas limit"
+  },
+  {
+    "Parameter": "delegate_fee",
+    "Type": "bool",
+    "Description": "Will be replaced by other flag in the next version."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "order_hash",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "order_mask",
+    "Type": "int32",
+    "Description": ""
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": ""
+  }
+]

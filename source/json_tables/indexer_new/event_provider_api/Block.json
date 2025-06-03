@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "events",
+    "Type": "BlockEvent array",
+    "Description": "Processed block events in the block"
+  },
+  {
+    "Parameter": "in_sync",
+    "Type": "bool",
+    "Description": "Indicates whether the block is the latest one available in the event provider"
+  }
+]

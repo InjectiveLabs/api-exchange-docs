@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID of the derivative market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "index_price",
+    "Type": "bool",
+    "Description": "Request the summary of index price feed",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "resolution",
+    "Type": "string",
+    "Description": "Specify the resolution",
+    "Required": "Yes"
+  }
+]

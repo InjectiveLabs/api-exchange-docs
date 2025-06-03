@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "feed_config_info",
+    "Type": "FeedConfigInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "feed_config",
+    "Type": "FeedConfig",
+    "Description": ""
+  }
+]

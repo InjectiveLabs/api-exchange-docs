@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "name",
+    "Type": "string",
+    "Description": "reached and the software will exit."
+  },
+  {
+    "Parameter": "time",
+    "Type": "time.Time",
+    "Description": "If this field is not empty, an error will be thrown."
+  },
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": "The height at which the upgrade must be performed."
+  },
+  {
+    "Parameter": "info",
+    "Type": "string",
+    "Description": "such as a git commit that validators could automatically upgrade to"
+  },
+  {
+    "Parameter": "upgraded_client_state",
+    "Type": "types.Any",
+    "Description": "If this field is not empty, an error will be thrown."
+  }
+]

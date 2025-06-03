@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "actor",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

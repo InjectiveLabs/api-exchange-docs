@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "delegator_addr",
+    "Type": "string",
+    "Description": "delegator_addr defines the delegator address to query for.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination defines an optional pagination for the request.",
+    "Required": "No"
+  }
+]

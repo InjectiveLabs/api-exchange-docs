@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "constant_fee",
+    "Type": "types.Coin",
+    "Description": "module."
+  }
+]

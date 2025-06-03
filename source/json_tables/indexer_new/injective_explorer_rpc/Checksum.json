@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "algorithm",
+    "Type": "string",
+    "Description": "Algorithm of hash function"
+  },
+  {
+    "Parameter": "hash",
+    "Type": "string",
+    "Description": "Hash if apply algorithm to the cosmwasm bytecode"
+  }
+]

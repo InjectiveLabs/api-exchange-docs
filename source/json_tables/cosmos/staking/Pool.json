@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "not_bonded_tokens",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": ""
+  },
+  {
+    "Parameter": "bonded_tokens",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": ""
+  }
+]

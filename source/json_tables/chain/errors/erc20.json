@@ -1,0 +1,38 @@
+[
+  {
+    "Error Code": 2,
+    "Description": "attempting to create a token pair for bank denom that already has a pair associated"
+  },
+  {
+    "Error Code": 3,
+    "Description": "unauthorized account"
+  },
+  {
+    "Error Code": 4,
+    "Description": "invalid genesis"
+  },
+  {
+    "Error Code": 5,
+    "Description": "invalid token pair"
+  },
+  {
+    "Error Code": 6,
+    "Description": "invalid ERC20 contract address"
+  },
+  {
+    "Error Code": 7,
+    "Description": "unknown bank denom or zero supply"
+  },
+  {
+    "Error Code": 8,
+    "Description": "error uploading ERC20 contract"
+  },
+  {
+    "Error Code": 9,
+    "Description": "invalid token factory denom"
+  },
+  {
+    "Error Code": 10,
+    "Description": "respective erc20:... denom has existing supply"
+  }
+]

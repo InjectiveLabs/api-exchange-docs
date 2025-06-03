@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "grants",
+    "Type": "GrantAuthorization array",
+    "Description": "",
+    "Required": "No"
+  }
+]

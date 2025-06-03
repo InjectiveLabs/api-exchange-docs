@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "max_tokens",
+    "Type": "types.Coin",
+    "Description": "empty, there is no spend limit and any amount of coins can be delegated."
+  },
+  {
+    "Parameter": "authorization_type",
+    "Type": "AuthorizationType",
+    "Description": "authorization_type defines one of AuthorizationType."
+  },
+  {
+    "Parameter": "allow_list",
+    "Type": "StakeAuthorization_Validators",
+    "Description": ""
+  },
+  {
+    "Parameter": "deny_list",
+    "Type": "StakeAuthorization_Validators",
+    "Description": ""
+  },
+  {
+    "Parameter": "address",
+    "Type": "string array",
+    "Description": "Validators defines list of validator addresses."
+  }
+]

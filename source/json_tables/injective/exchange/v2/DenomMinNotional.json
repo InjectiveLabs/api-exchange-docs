@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "min_notional",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

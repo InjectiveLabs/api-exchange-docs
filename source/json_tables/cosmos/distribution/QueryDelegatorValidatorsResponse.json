@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "validators",
+    "Type": "string array",
+    "Description": "validators defines the validators a delegator is delegating for."
+  }
+]

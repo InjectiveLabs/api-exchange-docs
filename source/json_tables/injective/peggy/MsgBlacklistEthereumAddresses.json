@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "signer address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "blacklist_addresses",
+    "Type": "string array",
+    "Description": "Ethereum addresses to include in the blacklist",
+    "Required": "Yes"
+  }
+]

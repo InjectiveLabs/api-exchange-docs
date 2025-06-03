@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "delegator_addr",
+    "Type": "string",
+    "Description": "delegator_addr defines the delegator address to query for.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "src_validator_addr",
+    "Type": "string",
+    "Description": "src_validator_addr defines the validator address to redelegate from.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "dst_validator_addr",
+    "Type": "string",
+    "Description": "dst_validator_addr defines the validator address to redelegate to.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination defines an optional pagination for the request.",
+    "Required": "No"
+  }
+]

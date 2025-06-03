@@ -1,0 +1,107 @@
+[
+  {
+    "Parameter": "id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_number",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_timestamp",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "hash",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "code",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "info",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "gas_wanted",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "gas_used",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "gas_fee",
+    "Type": "GasFee",
+    "Description": ""
+  },
+  {
+    "Parameter": "codespace",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "events",
+    "Type": "Event array",
+    "Description": ""
+  },
+  {
+    "Parameter": "tx_type",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "messages",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "signatures",
+    "Type": "Signature array",
+    "Description": ""
+  },
+  {
+    "Parameter": "memo",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "tx_number",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_unix_timestamp",
+    "Type": "uint64",
+    "Description": "Block timestamp in unix milli"
+  },
+  {
+    "Parameter": "error_log",
+    "Type": "string",
+    "Description": "Transaction log indicating errors"
+  },
+  {
+    "Parameter": "logs",
+    "Type": "byte array",
+    "Description": "transaction event logs"
+  },
+  {
+    "Parameter": "claim_ids",
+    "Type": "int64 array",
+    "Description": "peggy bridge claim id, non-zero if tx contains MsgDepositClaim"
+  }
+]

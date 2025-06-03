@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "oracle_type",
+    "Type": "OracleType",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "base",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "quote",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "scaling_options",
+    "Type": "ScalingOptions",
+    "Description": "",
+    "Required": "No"
+  }
+]

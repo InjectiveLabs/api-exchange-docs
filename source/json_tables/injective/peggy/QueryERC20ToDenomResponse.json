@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "cosmos_originated",
+    "Type": "bool",
+    "Description": ""
+  }
+]

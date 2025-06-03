@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "send_enabled",
+    "Type": "SendEnabled array",
+    "Description": "As of cosmos-sdk 0.47, this only exists for backwards compatibility of genesis files."
+  },
+  {
+    "Parameter": "default_send_enabled",
+    "Type": "bool",
+    "Description": ""
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "campaign_info",
+    "Type": "TradingRewardCampaignInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "campaign_reward_pools_additions",
+    "Type": "CampaignRewardPool array",
+    "Description": ""
+  },
+  {
+    "Parameter": "campaign_reward_pools_updates",
+    "Type": "CampaignRewardPool array",
+    "Description": ""
+  }
+]

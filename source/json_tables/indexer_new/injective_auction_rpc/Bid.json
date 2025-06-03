@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "bidder",
+    "Type": "string",
+    "Description": "Account address of the bidder"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "int64",
+    "Description": "Bid timestamp in UNIX millis."
+  }
+]

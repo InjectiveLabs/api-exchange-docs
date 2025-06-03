@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "denom defines the coin denomination to query all account holders for.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination defines an optional pagination for the request.",
+    "Required": "No"
+  }
+]

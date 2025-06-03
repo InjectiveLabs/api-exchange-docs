@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "role_actors_to_add",
+    "Type": "RoleActors array",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "role_actors_to_revoke",
+    "Type": "RoleActors array",
+    "Description": "",
+    "Required": "No"
+  }
+]

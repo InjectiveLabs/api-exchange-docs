@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": "height of the blockchain"
+  },
+  {
+    "Parameter": "tx_index",
+    "Type": "uint32",
+    "Description": "tx_index of the cosmos transaction"
+  },
+  {
+    "Parameter": "msg_index",
+    "Type": "uint32",
+    "Description": "msg_index in a batch transaction"
+  },
+  {
+    "Parameter": "eth_tx_index",
+    "Type": "int32",
+    "Description": "aka. the transaction list returned by eth_getBlock api."
+  },
+  {
+    "Parameter": "failed",
+    "Type": "bool",
+    "Description": "failed is true if the eth transaction did not go succeed"
+  },
+  {
+    "Parameter": "gas_used",
+    "Type": "uint64",
+    "Description": "it's set to gas limit, which is what's actually deducted by ante handler."
+  },
+  {
+    "Parameter": "cumulative_gas_used",
+    "Type": "uint64",
+    "Description": "processed messages within the current batch transaction."
+  }
+]

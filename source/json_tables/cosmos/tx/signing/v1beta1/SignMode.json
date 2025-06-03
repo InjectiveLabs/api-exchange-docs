@@ -1,0 +1,30 @@
+[
+  {
+    "Code": "0",
+    "Name": "SIGN_MODE_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "SIGN_MODE_DIRECT"
+  },
+  {
+    "Code": "2",
+    "Name": "SIGN_MODE_TEXTUAL"
+  },
+  {
+    "Code": "3",
+    "Name": "SIGN_MODE_DIRECT_AUX"
+  },
+  {
+    "Code": "127",
+    "Name": "SIGN_MODE_LEGACY_AMINO_JSON"
+  },
+  {
+    "Code": "128",
+    "Name": "SIGN_MODE_EIP712_V2"
+  },
+  {
+    "Code": "191",
+    "Name": "SIGN_MODE_EIP_191"
+  }
+]

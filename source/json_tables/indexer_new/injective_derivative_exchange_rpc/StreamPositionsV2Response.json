@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "position",
+    "Type": "DerivativePositionV2",
+    "Description": "Updated derivative Position"
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "int64",
+    "Description": "Operation timestamp in UNIX millis."
+  }
+]

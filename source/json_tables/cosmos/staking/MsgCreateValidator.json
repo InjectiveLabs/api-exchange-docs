@@ -1,0 +1,44 @@
+[
+  {
+    "Parameter": "description",
+    "Type": "Description",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "commission",
+    "Type": "CommissionRates",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "min_self_delegation",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "delegator_address",
+    "Type": "string",
+    "Description": "only in bech32 notation).",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "validator_address",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pubkey",
+    "Type": "types.Any",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "value",
+    "Type": "types1.Coin",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

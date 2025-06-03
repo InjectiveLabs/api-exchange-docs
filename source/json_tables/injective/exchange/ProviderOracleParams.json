@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": "Oracle base currency"
+  },
+  {
+    "Parameter": "provider",
+    "Type": "string",
+    "Description": "Oracle quote currency"
+  },
+  {
+    "Parameter": "oracle_scale_factor",
+    "Type": "uint32",
+    "Description": "Scale factor for oracle prices."
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "types.OracleType",
+    "Description": "Oracle type"
+  }
+]

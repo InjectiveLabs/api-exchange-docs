@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "moniker",
+    "Type": "string",
+    "Description": "moniker defines a human-readable name for the validator."
+  },
+  {
+    "Parameter": "identity",
+    "Type": "string",
+    "Description": "identity defines an optional identity signature (ex. UPort or Keybase)."
+  },
+  {
+    "Parameter": "website",
+    "Type": "string",
+    "Description": "website defines an optional website link."
+  },
+  {
+    "Parameter": "security_contact",
+    "Type": "string",
+    "Description": "security_contact defines an optional email for security contact."
+  },
+  {
+    "Parameter": "details",
+    "Type": "string",
+    "Description": "details define other optional details."
+  }
+]

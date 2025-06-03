@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "market",
+    "Type": "DerivativeMarket",
+    "Description": ""
+  },
+  {
+    "Parameter": "mark_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "*FullDerivativeMarket_FuturesInfo"
+  },
+  {
+    "Parameter": "mid_price_and_tob",
+    "Type": "MidPriceAndTOB",
+    "Description": "and bid orders"
+  },
+  {
+    "Parameter": "perpetual_info",
+    "Type": "PerpetualMarketState",
+    "Description": ""
+  },
+  {
+    "Parameter": "futures_info",
+    "Type": "ExpiryFuturesMarketInfo",
+    "Description": ""
+  }
+]

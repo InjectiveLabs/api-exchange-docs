@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "aggregate_volumes",
+    "Type": "MarketVolume array",
+    "Description": "volumes across all subaccounts for the address"
+  }
+]

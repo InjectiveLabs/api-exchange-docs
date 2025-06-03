@@ -1,0 +1,56 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "feed_id",
+    "Type": "string",
+    "Description": "feed_id is an unique ID for the target of this config",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "signers",
+    "Type": "string array",
+    "Description": "signers ith element is address ith oracle uses to sign a report",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "transmitters",
+    "Type": "string array",
+    "Description": "via the transmit method",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "link_per_observation",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "Fixed LINK reward for each observer",
+    "Required": "No"
+  },
+  {
+    "Parameter": "link_per_transmission",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "Fixed LINK reward for transmitter",
+    "Required": "No"
+  },
+  {
+    "Parameter": "link_denom",
+    "Type": "string",
+    "Description": "Native denom for LINK coin in the bank keeper",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "feed_admin",
+    "Type": "string",
+    "Description": "feed administrator",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "billing_admin",
+    "Type": "string",
+    "Description": "feed billing administrator",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "market_status",
+    "Type": "string",
+    "Description": "Filter by market status",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "Filter by the Coin denomination of the quote currency",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_statuses",
+    "Type": "string array",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

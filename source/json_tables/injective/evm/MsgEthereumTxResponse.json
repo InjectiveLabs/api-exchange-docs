@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "hash",
+    "Type": "string",
+    "Description": "https://github.com/tendermint/tendermint/issues/6539 for reference"
+  },
+  {
+    "Parameter": "logs",
+    "Type": "Log array",
+    "Description": "logs."
+  },
+  {
+    "Parameter": "ret",
+    "Type": "byte array",
+    "Description": "revert opcode)"
+  },
+  {
+    "Parameter": "vm_error",
+    "Type": "string",
+    "Description": "vm_error is the error returned by vm execution"
+  },
+  {
+    "Parameter": "gas_used",
+    "Type": "uint64",
+    "Description": "gas_used specifies how much gas was consumed by the transaction"
+  },
+  {
+    "Parameter": "block_hash",
+    "Type": "byte array",
+    "Description": "include the block hash for json-rpc to use"
+  }
+]

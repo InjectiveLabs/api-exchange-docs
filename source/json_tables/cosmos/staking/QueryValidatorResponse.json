@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "validator",
+    "Type": "Validator",
+    "Description": "validator defines the validator info."
+  }
+]

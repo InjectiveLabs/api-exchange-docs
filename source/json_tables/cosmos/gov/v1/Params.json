@@ -1,0 +1,82 @@
+[
+  {
+    "Parameter": "min_deposit",
+    "Type": "types.Coin array",
+    "Description": "Minimum deposit for a proposal to enter voting period."
+  },
+  {
+    "Parameter": "max_deposit_period",
+    "Type": "time.Duration",
+    "Description": "months."
+  },
+  {
+    "Parameter": "voting_period",
+    "Type": "time.Duration",
+    "Description": "Duration of the voting period."
+  },
+  {
+    "Parameter": "quorum",
+    "Type": "string",
+    "Description": "considered valid."
+  },
+  {
+    "Parameter": "threshold",
+    "Type": "string",
+    "Description": "Minimum proportion of Yes votes for proposal to pass. Default value: 0.5."
+  },
+  {
+    "Parameter": "veto_threshold",
+    "Type": "string",
+    "Description": "vetoed. Default value: 1/3."
+  },
+  {
+    "Parameter": "min_initial_deposit_ratio",
+    "Type": "string",
+    "Description": "The ratio representing the proportion of the deposit value that must be paid at proposal submission."
+  },
+  {
+    "Parameter": "proposal_cancel_ratio",
+    "Type": "string",
+    "Description": "Since: cosmos-sdk 0.50"
+  },
+  {
+    "Parameter": "proposal_cancel_dest",
+    "Type": "string",
+    "Description": "Since: cosmos-sdk 0.50"
+  },
+  {
+    "Parameter": "expedited_voting_period",
+    "Type": "time.Duration",
+    "Description": "Since: cosmos-sdk 0.50"
+  },
+  {
+    "Parameter": "expedited_threshold",
+    "Type": "string",
+    "Description": "Since: cosmos-sdk 0.50"
+  },
+  {
+    "Parameter": "expedited_min_deposit",
+    "Type": "types.Coin array",
+    "Description": "Minimum expedited deposit for a proposal to enter voting period."
+  },
+  {
+    "Parameter": "burn_vote_quorum",
+    "Type": "bool",
+    "Description": "burn deposits if a proposal does not meet quorum"
+  },
+  {
+    "Parameter": "burn_proposal_deposit_prevote",
+    "Type": "bool",
+    "Description": "burn deposits if the proposal does not enter voting period"
+  },
+  {
+    "Parameter": "burn_vote_veto",
+    "Type": "bool",
+    "Description": "burn deposits if quorum with vote type no_veto is met"
+  },
+  {
+    "Parameter": "min_deposit_ratio",
+    "Type": "string",
+    "Description": "Since: cosmos-sdk 0.50"
+  }
+]

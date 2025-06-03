@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": "injective-exchange code version."
+  },
+  {
+    "Parameter": "build",
+    "Type": "map[string]string",
+    "Description": "Additional build meta info."
+  }
+]

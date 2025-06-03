@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "buy_levels",
+    "Type": "v2.Level array",
+    "Description": ""
+  },
+  {
+    "Parameter": "sell_levels",
+    "Type": "v2.Level array",
+    "Description": ""
+  }
+]

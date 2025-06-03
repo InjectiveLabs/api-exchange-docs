@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "block_number",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_timestamp",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "power",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "reason",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "jailed",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "missed_blocks",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "fee_multiplier",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

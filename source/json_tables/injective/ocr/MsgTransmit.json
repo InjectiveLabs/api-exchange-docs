@@ -1,0 +1,50 @@
+[
+  {
+    "Parameter": "transmitter",
+    "Type": "string",
+    "Description": "Address of the transmitter",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "config_digest",
+    "Type": "byte array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "feed_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "epoch",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "round",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "extra_hash",
+    "Type": "byte array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "report",
+    "Type": "Report",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "signatures",
+    "Type": "][byte array",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

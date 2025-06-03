@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "new_token_denom",
+    "Type": "string",
+    "Description": ""
+  }
+]

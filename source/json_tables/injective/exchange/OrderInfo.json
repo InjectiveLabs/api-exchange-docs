@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "bytes32 subaccount ID that created the order"
+  },
+  {
+    "Parameter": "fee_recipient",
+    "Type": "string",
+    "Description": "address fee_recipient address that will receive fees for the order"
+  },
+  {
+    "Parameter": "price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "price of the order"
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "quantity of the order"
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": ""
+  }
+]

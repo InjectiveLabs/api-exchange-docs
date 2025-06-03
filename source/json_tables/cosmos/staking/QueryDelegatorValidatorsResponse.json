@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "validators",
+    "Type": "Validator array",
+    "Description": "validators defines the validators' info of a delegator."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
+  }
+]

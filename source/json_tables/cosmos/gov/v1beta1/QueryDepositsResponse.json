@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "deposits",
+    "Type": "Deposit array",
+    "Description": "deposits defines the requested deposits."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
+  }
+]

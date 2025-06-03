@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "gen_txs",
+    "Type": "encoding_json.RawMessage array",
+    "Description": "gen_txs defines the genesis transactions."
+  }
+]

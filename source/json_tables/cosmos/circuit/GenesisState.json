@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "account_permissions",
+    "Type": "GenesisAccountPermissions array",
+    "Description": ""
+  },
+  {
+    "Parameter": "disabled_type_urls",
+    "Type": "string array",
+    "Description": ""
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "Parameter": "ticker",
+    "Type": "string",
+    "Description": "Ticker for the derivative contract."
+  },
+  {
+    "Parameter": "oracle_symbol",
+    "Type": "string",
+    "Description": "Oracle symbol"
+  },
+  {
+    "Parameter": "oracle_provider",
+    "Type": "string",
+    "Description": "Oracle Provider"
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "types.OracleType",
+    "Description": "Oracle type"
+  },
+  {
+    "Parameter": "oracle_scale_factor",
+    "Type": "uint32",
+    "Description": "Scale factor for oracle prices."
+  },
+  {
+    "Parameter": "expiration_timestamp",
+    "Type": "int64",
+    "Description": "expiration timestamp"
+  },
+  {
+    "Parameter": "settlement_timestamp",
+    "Type": "int64",
+    "Description": "expiration timestamp"
+  },
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "admin of the market"
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "Address of the quote currency denomination for the binary options contract"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Unique market ID."
+  },
+  {
+    "Parameter": "maker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "maker_fee_rate defines the maker fee rate of a binary options market"
+  },
+  {
+    "Parameter": "taker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "taker_fee_rate defines the taker fee rate of a derivative market"
+  },
+  {
+    "Parameter": "relayer_fee_share_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "with the relayer in a derivative market"
+  },
+  {
+    "Parameter": "status",
+    "Type": "MarketStatus",
+    "Description": "Status of the market"
+  },
+  {
+    "Parameter": "min_price_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "required for orders in the market"
+  },
+  {
+    "Parameter": "min_quantity_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "required for orders in the market"
+  },
+  {
+    "Parameter": "settlement_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "min_notional",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "orders in the market"
+  },
+  {
+    "Parameter": "admin_permissions",
+    "Type": "uint32",
+    "Description": "level of admin permissions"
+  },
+  {
+    "Parameter": "quote_decimals",
+    "Type": "uint32",
+    "Description": "quote token decimals"
+  }
+]

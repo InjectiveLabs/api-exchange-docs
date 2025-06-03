@@ -1,0 +1,92 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "+ ticker + quoteDenom + oracleSymbol + oracleProvider)))"
+  },
+  {
+    "Parameter": "market_status",
+    "Type": "string",
+    "Description": "The status of the market"
+  },
+  {
+    "Parameter": "ticker",
+    "Type": "string",
+    "Description": "A name of the binary options market."
+  },
+  {
+    "Parameter": "oracle_symbol",
+    "Type": "string",
+    "Description": "Oracle symbol"
+  },
+  {
+    "Parameter": "oracle_provider",
+    "Type": "string",
+    "Description": "Oracle provider"
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "string",
+    "Description": "Oracle Type"
+  },
+  {
+    "Parameter": "oracle_scale_factor",
+    "Type": "uint32",
+    "Description": "OracleScaleFactor"
+  },
+  {
+    "Parameter": "expiration_timestamp",
+    "Type": "int64",
+    "Description": "Defines the expiration time for the market in UNIX seconds."
+  },
+  {
+    "Parameter": "settlement_timestamp",
+    "Type": "int64",
+    "Description": "Defines the settlement time for the market in UNIX seconds."
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "Coin denom used for the quote asset."
+  },
+  {
+    "Parameter": "quote_token_meta",
+    "Type": "TokenMeta",
+    "Description": "Token metadata for quote asset"
+  },
+  {
+    "Parameter": "maker_fee_rate",
+    "Type": "string",
+    "Description": "Defines the fee percentage makers pay when trading (in quote asset)"
+  },
+  {
+    "Parameter": "taker_fee_rate",
+    "Type": "string",
+    "Description": "Defines the fee percentage takers pay when trading (in quote asset)"
+  },
+  {
+    "Parameter": "service_provider_fee",
+    "Type": "string",
+    "Description": "Percentage of the transaction fee shared with the service provider"
+  },
+  {
+    "Parameter": "min_price_tick_size",
+    "Type": "string",
+    "Description": "Defines the minimum required tick size for the order's price"
+  },
+  {
+    "Parameter": "min_quantity_tick_size",
+    "Type": "string",
+    "Description": "Defines the minimum required tick size for the order's quantity"
+  },
+  {
+    "Parameter": "settlement_price",
+    "Type": "string",
+    "Description": "Defines the settlement price of the market"
+  },
+  {
+    "Parameter": "min_notional",
+    "Type": "string",
+    "Description": "Defines the minimum notional value for the market"
+  }
+]

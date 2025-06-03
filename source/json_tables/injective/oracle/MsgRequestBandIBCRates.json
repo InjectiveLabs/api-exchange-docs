@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "request_id",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

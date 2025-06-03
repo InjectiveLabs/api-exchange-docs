@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "campaign_contract",
+    "Type": "string",
+    "Description": "Campaign contract address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "guild_id",
+    "Type": "string",
+    "Description": "ID of guild, inside campaign",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "Limit number of returned guild members",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "int32",
+    "Description": "Skip some first guild members in the list for next page",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "include_guild_info",
+    "Type": "bool",
+    "Description": "latency, instead of sending 2 requests we just need once",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "sort_by",
+    "Type": "string",
+    "Description": "Sort by some metrics",
+    "Required": "Yes"
+  }
+]

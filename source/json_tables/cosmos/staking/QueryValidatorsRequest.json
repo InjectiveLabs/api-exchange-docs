@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "status enables to query for validators matching a given status.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination defines an optional pagination for the request.",
+    "Required": "No"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "Account address"
+  },
+  {
+    "Parameter": "rewards",
+    "Type": "Coin array",
+    "Description": "Reward coins distributed"
+  },
+  {
+    "Parameter": "distributed_at",
+    "Type": "int64",
+    "Description": "Rewards distribution timestamp in UNIX millis."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "delegator_address",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "withdraw_address",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

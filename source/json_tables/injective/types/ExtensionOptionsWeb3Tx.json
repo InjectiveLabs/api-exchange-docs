@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "typedDataChainID",
+    "Type": "uint64",
+    "Description": "Ethereum network ID in a Web3 provider (e.g. Metamask)."
+  },
+  {
+    "Parameter": "feePayer",
+    "Type": "string",
+    "Description": "during EIP712 signature checking."
+  },
+  {
+    "Parameter": "feePayerSig",
+    "Type": "byte array",
+    "Description": "allows to perform fee delegation when using EIP712 Domain."
+  }
+]

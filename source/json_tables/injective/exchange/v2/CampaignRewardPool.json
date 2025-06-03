@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "start_timestamp",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "max_campaign_rewards",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "end of the campaign"
+  }
+]

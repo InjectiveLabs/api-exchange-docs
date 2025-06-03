@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token_pair",
+    "Type": "TokenPair",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

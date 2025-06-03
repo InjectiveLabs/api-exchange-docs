@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "pool",
+    "Type": "github_com_cosmos_cosmos_sdk_types.DecCoins",
+    "Description": "pool defines community pool's coins."
+  }
+]

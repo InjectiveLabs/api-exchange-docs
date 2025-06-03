@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "delegator_address",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "validator_address",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "types1.Coin",
+    "Description": "amount is always less than or equal to unbonding delegation entry balance",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "creation_height",
+    "Type": "int64",
+    "Description": "creation_height is the height which the unbonding took place.",
+    "Required": "Yes"
+  }
+]

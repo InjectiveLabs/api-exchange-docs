@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "tier_level",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "account_info",
+    "Type": "FeeDiscountTierInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "account_ttl",
+    "Type": "FeeDiscountTierTTL",
+    "Description": ""
+  }
+]

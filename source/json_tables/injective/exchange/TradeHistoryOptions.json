@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "trade_grouping_sec",
+    "Type": "uint64",
+    "Description": "TradeGroupingSec of 0 means use the chain's default grouping"
+  },
+  {
+    "Parameter": "max_age",
+    "Type": "uint64",
+    "Description": "the chain."
+  },
+  {
+    "Parameter": "include_raw_history",
+    "Type": "bool",
+    "Description": "computation is included in the response"
+  },
+  {
+    "Parameter": "include_metadata",
+    "Type": "bool",
+    "Description": "response"
+  }
+]

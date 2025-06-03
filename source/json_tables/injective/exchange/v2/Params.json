@@ -1,0 +1,157 @@
+[
+  {
+    "Parameter": "spot_market_instant_listing_fee",
+    "Type": "types.Coin",
+    "Description": "to create a spot market by bypassing governance"
+  },
+  {
+    "Parameter": "derivative_market_instant_listing_fee",
+    "Type": "types.Coin",
+    "Description": "required to create a derivative market by bypassing governance"
+  },
+  {
+    "Parameter": "default_spot_maker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "a spot market"
+  },
+  {
+    "Parameter": "default_spot_taker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "takers on a new spot market"
+  },
+  {
+    "Parameter": "default_derivative_maker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "makers on a new derivative market"
+  },
+  {
+    "Parameter": "default_derivative_taker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "takers on a new derivative market"
+  },
+  {
+    "Parameter": "default_initial_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "new derivative market"
+  },
+  {
+    "Parameter": "default_maintenance_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "ratio on a new derivative market"
+  },
+  {
+    "Parameter": "default_funding_interval",
+    "Type": "int64",
+    "Description": "derivative market"
+  },
+  {
+    "Parameter": "funding_multiple",
+    "Type": "int64",
+    "Description": "should be a multiple of"
+  },
+  {
+    "Parameter": "relayer_fee_share_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "relayers"
+  },
+  {
+    "Parameter": "default_hourly_funding_rate_cap",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "of the hourly funding rate"
+  },
+  {
+    "Parameter": "default_hourly_interest_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "hourly_interest_rate defines the hourly interest rate"
+  },
+  {
+    "Parameter": "max_derivative_order_side_count",
+    "Type": "uint32",
+    "Description": "active orders a subaccount can have for a given orderbook side"
+  },
+  {
+    "Parameter": "inj_reward_staked_requirement_threshold",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "rewards after which one also needs staked INJ to receive more"
+  },
+  {
+    "Parameter": "trading_rewards_vesting_duration",
+    "Type": "int64",
+    "Description": "rewards"
+  },
+  {
+    "Parameter": "liquidator_reward_share_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "collateral that goes to the liquidator"
+  },
+  {
+    "Parameter": "binary_options_market_instant_listing_fee",
+    "Type": "types.Coin",
+    "Description": "required to create a derivative market by bypassing governance"
+  },
+  {
+    "Parameter": "atomic_market_order_access_level",
+    "Type": "AtomicMarketOrderAccessLevel",
+    "Description": "for executing atomic market orders"
+  },
+  {
+    "Parameter": "spot_atomic_market_order_fee_multiplier",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "executing atomic market orders in spot markets"
+  },
+  {
+    "Parameter": "derivative_atomic_market_order_fee_multiplier",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "multiplier for executing atomic market orders in derivative markets"
+  },
+  {
+    "Parameter": "binary_options_atomic_market_order_fee_multiplier",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "multiplier for executing atomic market orders in binary markets"
+  },
+  {
+    "Parameter": "minimal_protocol_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "minimal_protocol_fee_rate defines the minimal protocol fee rate"
+  },
+  {
+    "Parameter": "is_instant_derivative_market_launch_enabled",
+    "Type": "bool",
+    "Description": "derivative market launch is enabled"
+  },
+  {
+    "Parameter": "post_only_mode_height_threshold",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "margin_decrease_price_timestamp_threshold_seconds",
+    "Type": "int64",
+    "Description": "decrease in margin"
+  },
+  {
+    "Parameter": "exchange_admins",
+    "Type": "string array",
+    "Description": "List of addresses that are allowed to perform exchange admin operations"
+  },
+  {
+    "Parameter": "inj_auction_max_cap",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "inj_auction_max_cap defines the maximum cap for INJ sent to auction"
+  },
+  {
+    "Parameter": "fixed_gas_enabled",
+    "Type": "bool",
+    "Description": "certain msg types"
+  },
+  {
+    "Parameter": "emit_legacy_version_events",
+    "Type": "bool",
+    "Description": "should be emitted in parallel to the new version events"
+  },
+  {
+    "Parameter": "default_reduce_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "new derivative market"
+  }
+]

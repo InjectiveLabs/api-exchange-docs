@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "v1.ConsensusParams",
+    "Description": "tracked separately in the x/upgrade module."
+  }
+]

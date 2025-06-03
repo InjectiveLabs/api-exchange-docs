@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": "Specify unique ticker to search",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "As an alternative is possible to provide a marketId",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "resolution",
+    "Type": "string",
+    "Description": "...).",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "from",
+    "Type": "int32",
+    "Description": "Unix timestamp (UTC) of the leftmost required bar, including from",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "to",
+    "Type": "int32",
+    "Description": "available bar.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "countback",
+    "Type": "int32",
+    "Description": "set, from should be ignored.",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "level",
+    "Type": "Permissions_Level",
+    "Description": "level is the level of permissions granted to this account."
+  },
+  {
+    "Parameter": "limit_type_urls",
+    "Type": "string array",
+    "Description": "a level other than LEVEL_SOME_MSGS."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "master_addresses",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "derivative_addresses",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "spot_addresses",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "cw20_addresses",
+    "Type": "string array",
+    "Description": ""
+  }
+]

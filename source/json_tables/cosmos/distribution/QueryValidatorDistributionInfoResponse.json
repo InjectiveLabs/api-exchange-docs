@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "operator_address",
+    "Type": "string",
+    "Description": "operator_address defines the validator operator address."
+  },
+  {
+    "Parameter": "self_bond_rewards",
+    "Type": "github_com_cosmos_cosmos_sdk_types.DecCoins",
+    "Description": "self_bond_rewards defines the self delegations rewards."
+  },
+  {
+    "Parameter": "commission",
+    "Type": "github_com_cosmos_cosmos_sdk_types.DecCoins",
+    "Description": "commission defines the commission the validator received."
+  }
+]

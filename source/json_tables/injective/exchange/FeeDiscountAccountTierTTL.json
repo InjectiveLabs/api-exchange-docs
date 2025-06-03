@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "account",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "tier_ttl",
+    "Type": "FeeDiscountTierTTL",
+    "Description": ""
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "authority is the address that controls the module (defaults to x/gov unless overwritten).",
+    "Required": "Yes"
+  }
+]

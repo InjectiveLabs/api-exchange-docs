@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "order_hash",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "results",
+    "Type": "DerivativeMarketOrderResults",
+    "Description": ""
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": ""
+  }
+]

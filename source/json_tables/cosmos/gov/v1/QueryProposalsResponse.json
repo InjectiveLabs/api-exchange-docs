@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "proposals",
+    "Type": "Proposal array",
+    "Description": "proposals defines all the requested governance proposals."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
+  }
+]

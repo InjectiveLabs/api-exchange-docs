@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "sender of the atomic swap",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "atomic swap contract address to filter",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "int32",
+    "Description": "skip some swaps",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "limit number of swaps returned by this API",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "from_number",
+    "Type": "int32",
+    "Description": "lowerbound of atomic swap index",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "to_number",
+    "Type": "int32",
+    "Description": "upperbound of atomic swap index",
+    "Required": "Yes"
+  }
+]

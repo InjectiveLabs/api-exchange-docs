@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines all the parameters of the module."
+  },
+  {
+    "Parameter": "signing_infos",
+    "Type": "SigningInfo array",
+    "Description": "signing infos."
+  },
+  {
+    "Parameter": "missed_blocks",
+    "Type": "ValidatorMissedBlocks array",
+    "Description": "missed blocks."
+  }
+]

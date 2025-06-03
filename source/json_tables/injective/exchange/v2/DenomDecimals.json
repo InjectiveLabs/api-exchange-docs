@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "decimals",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

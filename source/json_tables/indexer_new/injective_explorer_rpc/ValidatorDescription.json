@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "moniker",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "identity",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "website",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "security_contact",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "details",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "image_url",
+    "Type": "string",
+    "Description": ""
+  }
+]

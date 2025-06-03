@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "timestamp",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

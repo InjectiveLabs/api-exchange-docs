@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "fee_payer",
+    "Type": "string",
+    "Description": "Fee payer address provided by service"
+  },
+  {
+    "Parameter": "fee_payer_pub_key",
+    "Type": "CosmosPubKey",
+    "Description": "ethsecp256k1 feePayer pubkey"
+  }
+]

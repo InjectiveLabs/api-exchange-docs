@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "active_trading_strategies",
+    "Type": "uint64",
+    "Description": "Total of unique active trading strategies"
+  },
+  {
+    "Parameter": "total_trading_strategies_created",
+    "Type": "uint64",
+    "Description": "Total number of created trading strategies"
+  },
+  {
+    "Parameter": "total_tvl",
+    "Type": "string",
+    "Description": "Total TVL of all active trading strategies"
+  },
+  {
+    "Parameter": "markets",
+    "Type": "Market array",
+    "Description": "Market stats"
+  }
+]

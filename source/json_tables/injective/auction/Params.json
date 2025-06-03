@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "auction_period",
+    "Type": "int64",
+    "Description": "auction_period_duration defines the auction period duration"
+  },
+  {
+    "Parameter": "min_next_bid_increment_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "min_next_bid_increment_rate defines the minimum increment rate for new bids"
+  },
+  {
+    "Parameter": "inj_basket_max_cap",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "basket"
+  }
+]

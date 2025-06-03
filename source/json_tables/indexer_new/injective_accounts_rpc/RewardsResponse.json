@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "rewards",
+    "Type": "Reward array",
+    "Description": "The trading rewards distributed"
+  }
+]

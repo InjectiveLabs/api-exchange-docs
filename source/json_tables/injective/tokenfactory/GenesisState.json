@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines the parameters of the module."
+  },
+  {
+    "Parameter": "factory_denoms",
+    "Type": "GenesisDenom array",
+    "Description": ""
+  }
+]

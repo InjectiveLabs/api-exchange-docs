@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "settlement_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

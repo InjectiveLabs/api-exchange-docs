@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "feed_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "answer",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

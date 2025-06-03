@@ -1,0 +1,62 @@
+[
+  {
+    "Parameter": "bank_balances_filter",
+    "Type": "BankBalancesFilter",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "subaccount_deposits_filter",
+    "Type": "SubaccountDepositsFilter",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "spot_trades_filter",
+    "Type": "TradesFilter",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "derivative_trades_filter",
+    "Type": "TradesFilter",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "spot_orders_filter",
+    "Type": "OrdersFilter",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "derivative_orders_filter",
+    "Type": "OrdersFilter",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "spot_orderbooks_filter",
+    "Type": "OrderbookFilter",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "derivative_orderbooks_filter",
+    "Type": "OrderbookFilter",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "positions_filter",
+    "Type": "PositionsFilter",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "oracle_price_filter",
+    "Type": "OraclePriceFilter",
+    "Description": "",
+    "Required": "No"
+  }
+]

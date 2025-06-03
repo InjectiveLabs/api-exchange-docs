@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "delegator_address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "validator_address",
+    "Type": "string",
+    "Description": ""
+  }
+]

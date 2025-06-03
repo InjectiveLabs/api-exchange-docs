@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "delegator_address",
+    "Type": "string",
+    "Description": "delegator_address is the address of the delegator."
+  },
+  {
+    "Parameter": "withdraw_address",
+    "Type": "string",
+    "Description": "withdraw_address is the address to withdraw the delegation rewards to."
+  }
+]

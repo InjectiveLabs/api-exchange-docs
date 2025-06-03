@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "feed_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "transmitters",
+    "Type": "string array",
+    "Description": "addresses oracles use to transmit the reports",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "payees",
+    "Type": "string array",
+    "Description": "addresses of payees corresponding to list of transmitters",
+    "Required": "Yes"
+  }
+]

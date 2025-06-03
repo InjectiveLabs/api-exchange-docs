@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "order",
+    "Type": "v2.SpotLimitOrder",
+    "Description": ""
+  }
+]

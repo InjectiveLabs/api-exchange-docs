@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "bid_amount",
+    "Type": "types.Coin",
+    "Description": "amount of the bid in INJ tokens",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "round",
+    "Type": "uint64",
+    "Description": "the current auction round being bid on",
+    "Required": "Yes"
+  }
+]

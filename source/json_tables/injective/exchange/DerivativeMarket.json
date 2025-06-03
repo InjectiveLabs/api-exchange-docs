@@ -1,0 +1,107 @@
+[
+  {
+    "Parameter": "ticker",
+    "Type": "string",
+    "Description": "Ticker for the derivative contract."
+  },
+  {
+    "Parameter": "oracle_base",
+    "Type": "string",
+    "Description": "Oracle base currency"
+  },
+  {
+    "Parameter": "oracle_quote",
+    "Type": "string",
+    "Description": "Oracle quote currency"
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "types1.OracleType",
+    "Description": "Oracle type"
+  },
+  {
+    "Parameter": "oracle_scale_factor",
+    "Type": "uint32",
+    "Description": "Scale factor for oracle prices."
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "Address of the quote currency denomination for the derivative contract"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Unique market ID."
+  },
+  {
+    "Parameter": "initial_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "market"
+  },
+  {
+    "Parameter": "maintenance_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "derivative market"
+  },
+  {
+    "Parameter": "maker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "maker_fee_rate defines the maker fee rate of a derivative market"
+  },
+  {
+    "Parameter": "taker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "taker_fee_rate defines the taker fee rate of a derivative market"
+  },
+  {
+    "Parameter": "relayer_fee_share_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "with the relayer in a derivative market"
+  },
+  {
+    "Parameter": "isPerpetual",
+    "Type": "bool",
+    "Description": "futures market"
+  },
+  {
+    "Parameter": "status",
+    "Type": "MarketStatus",
+    "Description": "Status of the market"
+  },
+  {
+    "Parameter": "min_price_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "required for orders in the market"
+  },
+  {
+    "Parameter": "min_quantity_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "required for orders in the market"
+  },
+  {
+    "Parameter": "min_notional",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "orders in the market"
+  },
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "current market admin"
+  },
+  {
+    "Parameter": "admin_permissions",
+    "Type": "uint32",
+    "Description": "level of admin permissions"
+  },
+  {
+    "Parameter": "quote_decimals",
+    "Type": "uint32",
+    "Description": "quote token decimals"
+  },
+  {
+    "Parameter": "reduce_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "reduce_margin_ratio defines the ratio of the margin that is reduced"
+  }
+]

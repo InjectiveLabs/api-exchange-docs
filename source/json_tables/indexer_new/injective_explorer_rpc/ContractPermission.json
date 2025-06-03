@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "access_type",
+    "Type": "int32",
+    "Description": "Access type of instantiation"
+  },
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "Account address"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender address"
+  },
+  {
+    "Parameter": "receiver",
+    "Type": "string",
+    "Description": "the recipient address on the destination chain"
+  },
+  {
+    "Parameter": "source_port",
+    "Type": "string",
+    "Description": "the port on which the packet will be sent"
+  },
+  {
+    "Parameter": "source_channel",
+    "Type": "string",
+    "Description": "the channel by which the packet will be sent"
+  },
+  {
+    "Parameter": "destination_port",
+    "Type": "string",
+    "Description": "identifies the port on the receiving chain"
+  },
+  {
+    "Parameter": "destination_channel",
+    "Type": "string",
+    "Description": "identifies the channel end on the receiving chain"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "string",
+    "Description": "transfer amount"
+  },
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "transafer denom"
+  },
+  {
+    "Parameter": "timeout_height",
+    "Type": "string",
+    "Description": "when set to 0"
+  },
+  {
+    "Parameter": "timeout_timestamp",
+    "Type": "uint64",
+    "Description": "Timeout timestamp (in nanoseconds) relative to the current block timestamp"
+  },
+  {
+    "Parameter": "packet_sequence",
+    "Type": "uint64",
+    "Description": "later sequence number"
+  },
+  {
+    "Parameter": "data_hex",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "state",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "tx_hashes",
+    "Type": "string array",
+    "Description": "it's injective chain tx hash array"
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "string",
+    "Description": ""
+  }
+]

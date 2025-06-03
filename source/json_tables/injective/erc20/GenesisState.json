@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines the parameters of the module."
+  },
+  {
+    "Parameter": "token_pairs",
+    "Type": "TokenPair array",
+    "Description": ""
+  }
+]

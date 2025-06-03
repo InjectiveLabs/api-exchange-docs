@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "validator_address",
+    "Type": "string",
+    "Description": "validator_address is the address of the validator."
+  },
+  {
+    "Parameter": "rewards",
+    "Type": "ValidatorCurrentRewards",
+    "Description": "rewards defines the current rewards of a validator."
+  }
+]

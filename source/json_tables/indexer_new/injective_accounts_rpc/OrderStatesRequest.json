@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "spot_order_hashes",
+    "Type": "string array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "derivative_order_hashes",
+    "Type": "string array",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

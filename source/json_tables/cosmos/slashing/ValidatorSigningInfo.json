@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "start_height",
+    "Type": "int64",
+    "Description": "Height at which validator was first a candidate OR was un-jailed"
+  },
+  {
+    "Parameter": "index_offset",
+    "Type": "int64",
+    "Description": "signed_blocks_window param determines the index in the missed block bitmap."
+  },
+  {
+    "Parameter": "jailed_until",
+    "Type": "time.Time",
+    "Description": "Timestamp until which the validator is jailed due to liveness downtime."
+  },
+  {
+    "Parameter": "tombstoned",
+    "Type": "bool",
+    "Description": "configured misbehavior."
+  },
+  {
+    "Parameter": "missed_blocks_counter",
+    "Type": "int64",
+    "Description": "reads in the missed block bitmap."
+  }
+]

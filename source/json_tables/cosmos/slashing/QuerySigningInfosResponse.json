@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "info",
+    "Type": "ValidatorSigningInfo array",
+    "Description": "info is the signing info of all validators"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": ""
+  }
+]

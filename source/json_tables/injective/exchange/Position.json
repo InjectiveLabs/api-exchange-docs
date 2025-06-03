@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "isLong",
+    "Type": "bool",
+    "Description": ""
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "entry_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "margin",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "cumulative_funding_entry",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

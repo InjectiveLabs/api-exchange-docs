@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "latest_config_digest",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "f",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "n",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "config_count",
+    "Type": "uint64",
+    "Description": "settings"
+  },
+  {
+    "Parameter": "latest_config_block_number",
+    "Type": "int64",
+    "Description": ""
+  }
+]

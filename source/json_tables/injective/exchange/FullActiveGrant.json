@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "grantee",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "active_grant",
+    "Type": "ActiveGrant",
+    "Description": ""
+  }
+]

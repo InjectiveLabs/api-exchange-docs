@@ -1,0 +1,77 @@
+[
+  {
+    "Parameter": "ticker",
+    "Type": "string",
+    "Description": "asset."
+  },
+  {
+    "Parameter": "base_denom",
+    "Type": "string",
+    "Description": "Coin denom used for the base asset"
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "Coin used for the quote asset"
+  },
+  {
+    "Parameter": "maker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "maker_fee_rate defines the fee percentage makers pay when trading"
+  },
+  {
+    "Parameter": "taker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "taker_fee_rate defines the fee percentage takers pay when trading"
+  },
+  {
+    "Parameter": "relayer_fee_share_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "with the relayer in a derivative market"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Unique market ID."
+  },
+  {
+    "Parameter": "status",
+    "Type": "MarketStatus",
+    "Description": "Status of the market"
+  },
+  {
+    "Parameter": "min_price_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "for orders in the market"
+  },
+  {
+    "Parameter": "min_quantity_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "required for orders in the market"
+  },
+  {
+    "Parameter": "min_notional",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "orders in the market"
+  },
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "current market admin"
+  },
+  {
+    "Parameter": "admin_permissions",
+    "Type": "uint32",
+    "Description": "level of admin permissions"
+  },
+  {
+    "Parameter": "base_decimals",
+    "Type": "uint32",
+    "Description": "base token decimals"
+  },
+  {
+    "Parameter": "quote_decimals",
+    "Type": "uint32",
+    "Description": "quote token decimals"
+  }
+]

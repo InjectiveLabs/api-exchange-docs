@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "delegator_address",
+    "Type": "string",
+    "Description": "delegator_address is the bech32-encoded address of the delegator."
+  },
+  {
+    "Parameter": "validator_src_address",
+    "Type": "string",
+    "Description": "validator_src_address is the validator redelegation source operator address."
+  },
+  {
+    "Parameter": "validator_dst_address",
+    "Type": "string",
+    "Description": "validator_dst_address is the validator redelegation destination operator address."
+  },
+  {
+    "Parameter": "entries",
+    "Type": "RedelegationEntry array",
+    "Description": "entries are the redelegation entries."
+  }
+]

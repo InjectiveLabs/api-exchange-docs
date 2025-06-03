@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Status of the market, for convenience it is set to string - not enum",
+    "Required": "Yes"
+  }
+]

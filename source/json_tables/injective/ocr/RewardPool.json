@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "feed_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "amount",
+    "Type": "types.Coin",
+    "Description": ""
+  }
+]

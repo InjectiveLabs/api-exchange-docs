@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "funds",
+    "Type": "string",
+    "Description": "100inj).",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "contract_address defines the contract address to execute",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "data",
+    "Type": "string",
+    "Description": "data defines the call data used when executing the contract",
+    "Required": "Yes"
+  }
+]

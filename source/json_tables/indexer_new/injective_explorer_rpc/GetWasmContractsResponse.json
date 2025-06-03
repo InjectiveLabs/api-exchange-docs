@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "paging",
+    "Type": "Paging",
+    "Description": ""
+  },
+  {
+    "Parameter": "data",
+    "Type": "WasmContract array",
+    "Description": ""
+  }
+]

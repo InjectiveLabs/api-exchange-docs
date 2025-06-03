@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "maker_discount_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "taker_discount_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "staked_amount",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": ""
+  },
+  {
+    "Parameter": "volume",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

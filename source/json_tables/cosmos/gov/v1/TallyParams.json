@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "quorum",
+    "Type": "string",
+    "Description": "considered valid."
+  },
+  {
+    "Parameter": "threshold",
+    "Type": "string",
+    "Description": "Minimum proportion of Yes votes for proposal to pass. Default value: 0.5."
+  },
+  {
+    "Parameter": "veto_threshold",
+    "Type": "string",
+    "Description": "vetoed. Default value: 1/3."
+  }
+]

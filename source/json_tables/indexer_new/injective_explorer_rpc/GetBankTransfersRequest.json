@@ -1,0 +1,62 @@
+[
+  {
+    "Parameter": "senders",
+    "Type": "string array",
+    "Description": "Transfer sender address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "recipients",
+    "Type": "string array",
+    "Description": "Transfer recipient address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "is_community_pool_related",
+    "Type": "bool",
+    "Description": "recipient",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "start_time",
+    "Type": "int64",
+    "Description": "or older than",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "end_time",
+    "Type": "int64",
+    "Description": "or younger than",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "address",
+    "Type": "string array",
+    "Description": "Transfers where either the sender or the recipient is one of the addresses",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "per_page",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

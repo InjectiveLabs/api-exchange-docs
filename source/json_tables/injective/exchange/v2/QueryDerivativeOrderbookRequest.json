@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID for the market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit_cumulative_notional",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "",
+    "Required": "No"
+  }
+]

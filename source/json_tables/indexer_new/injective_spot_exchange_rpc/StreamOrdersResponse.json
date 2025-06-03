@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "order",
+    "Type": "SpotLimitOrder",
+    "Description": "Updated market order"
+  },
+  {
+    "Parameter": "operation_type",
+    "Type": "string",
+    "Description": "Order update type"
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "int64",
+    "Description": "Operation timestamp in UNIX millis."
+  }
+]

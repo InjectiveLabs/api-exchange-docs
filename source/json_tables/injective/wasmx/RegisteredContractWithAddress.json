@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "registered_contract",
+    "Type": "RegisteredContract",
+    "Description": ""
+  }
+]

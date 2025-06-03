@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "data",
+    "Type": "types.Any",
+    "Description": "data is inner transaction data of the Ethereum transaction",
+    "Required": "No"
+  },
+  {
+    "Parameter": "deprecated_hash",
+    "Type": "string",
+    "Description": "hash of the transaction in hex format",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "deprecated_from",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "from",
+    "Type": "byte array",
+    "Description": "secp256k1 elliptic curve",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "raw",
+    "Type": "EthereumTx",
+    "Description": "raw is the raw bytes of the ethereum transaction",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "Parameter": "spot_cancel_success",
+    "Type": "bool array",
+    "Description": ""
+  },
+  {
+    "Parameter": "derivative_cancel_success",
+    "Type": "bool array",
+    "Description": ""
+  },
+  {
+    "Parameter": "spot_order_hashes",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "derivative_order_hashes",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "binary_options_cancel_success",
+    "Type": "bool array",
+    "Description": ""
+  },
+  {
+    "Parameter": "binary_options_order_hashes",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "created_spot_orders_cids",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "failed_spot_orders_cids",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "created_derivative_orders_cids",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "failed_derivative_orders_cids",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "created_binary_options_orders_cids",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "failed_binary_options_orders_cids",
+    "Type": "string array",
+    "Description": ""
+  }
+]

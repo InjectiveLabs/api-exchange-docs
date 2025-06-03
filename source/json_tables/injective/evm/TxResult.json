@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "empty."
+  },
+  {
+    "Parameter": "bloom",
+    "Type": "byte array",
+    "Description": "bloom represents the bloom filter bytes"
+  },
+  {
+    "Parameter": "tx_logs",
+    "Type": "TransactionLogs",
+    "Description": "logs."
+  },
+  {
+    "Parameter": "ret",
+    "Type": "byte array",
+    "Description": "ret defines the bytes from the execution."
+  },
+  {
+    "Parameter": "reverted",
+    "Type": "bool",
+    "Description": "reverted flag is set to true when the call has been reverted"
+  },
+  {
+    "Parameter": "gas_used",
+    "Type": "uint64",
+    "Description": "gas_used notes the amount of gas consumed while execution"
+  }
+]

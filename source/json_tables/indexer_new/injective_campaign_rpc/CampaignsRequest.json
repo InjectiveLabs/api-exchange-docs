@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "round_id",
+    "Type": "int64",
+    "Description": "Round ID, if not specified, it will return latest roundId",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "Address of login account, if not specified it will return no user rewards",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "to_round_id",
+    "Type": "int32",
+    "Description": "multiple rounds",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "Contract address that manages the round and reward",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "type",
+    "Type": "string",
+    "Description": "Campaign type",
+    "Required": "Yes"
+  }
+]

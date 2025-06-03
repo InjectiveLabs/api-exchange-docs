@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "trading_strategy",
+    "Type": "TradingStrategy",
+    "Description": "The trading strategy"
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "int64",
+    "Description": "Timestamp in UNIX millis"
+  }
+]

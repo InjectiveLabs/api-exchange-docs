@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "submitter",
+    "Type": "string",
+    "Description": "submitter is the signer account address of evidence.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "evidence",
+    "Type": "types.Any",
+    "Description": "evidence defines the evidence of misbehavior.",
+    "Required": "No"
+  }
+]

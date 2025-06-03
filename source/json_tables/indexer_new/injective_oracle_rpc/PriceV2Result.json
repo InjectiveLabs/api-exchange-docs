@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "base_symbol",
+    "Type": "string",
+    "Description": "Oracle base currency"
+  },
+  {
+    "Parameter": "quote_symbol",
+    "Type": "string",
+    "Description": "Oracle quote currency"
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "string",
+    "Description": "Oracle Type"
+  },
+  {
+    "Parameter": "oracle_scale_factor",
+    "Type": "uint32",
+    "Description": "OracleScaleFactor"
+  },
+  {
+    "Parameter": "price",
+    "Type": "string",
+    "Description": "The price of the oracle asset"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "marketID"
+  }
+]

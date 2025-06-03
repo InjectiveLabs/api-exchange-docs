@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "proposal_id",
+    "Type": "uint64",
+    "Description": "proposal_id defines the unique id of the proposal.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "voter",
+    "Type": "string",
+    "Description": "voter is the voter address for the proposal.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "options",
+    "Type": "WeightedVoteOption array",
+    "Description": "options defines the weighted vote options.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "metadata",
+    "Type": "string",
+    "Description": "metadata is any arbitrary metadata attached to the VoteWeighted.",
+    "Required": "Yes"
+  }
+]

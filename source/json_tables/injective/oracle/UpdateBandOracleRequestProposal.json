@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "delete_request_ids",
+    "Type": "uint64 array",
+    "Description": ""
+  },
+  {
+    "Parameter": "update_oracle_request",
+    "Type": "BandOracleRequest",
+    "Description": ""
+  }
+]

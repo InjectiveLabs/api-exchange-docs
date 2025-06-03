@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "STORAGE_TYPE_DEFAULT_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "STORAGE_TYPE_MEMORY"
+  },
+  {
+    "Code": "2",
+    "Name": "STORAGE_TYPE_TRANSIENT"
+  }
+]

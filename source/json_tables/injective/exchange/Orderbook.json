@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "buy_levels",
+    "Type": "Level array",
+    "Description": ""
+  },
+  {
+    "Parameter": "sell_levels",
+    "Type": "Level array",
+    "Description": ""
+  }
+]

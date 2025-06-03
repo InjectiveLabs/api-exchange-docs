@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "state",
+    "Type": "PriceState",
+    "Description": ""
+  }
+]

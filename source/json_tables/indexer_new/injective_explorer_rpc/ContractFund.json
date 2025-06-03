@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "Denominator"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "string",
+    "Description": "Amount of denom"
+  }
+]

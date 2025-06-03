@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "is_execution_enabled",
+    "Type": "bool",
+    "Description": "begin blocker."
+  },
+  {
+    "Parameter": "max_begin_block_total_gas",
+    "Type": "uint64",
+    "Description": "BeginBlocker."
+  },
+  {
+    "Parameter": "max_contract_gas_limit",
+    "Type": "uint64",
+    "Description": "BeginBlocker."
+  },
+  {
+    "Parameter": "min_gas_price",
+    "Type": "uint64",
+    "Description": "executed in the BeginBlocker."
+  },
+  {
+    "Parameter": "register_contract_access",
+    "Type": "types.AccessConfig",
+    "Description": ""
+  }
+]

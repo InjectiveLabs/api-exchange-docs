@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "authority is the account authorized to trip or reset the circuit breaker.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "msg_type_urls",
+    "Type": "string array",
+    "Description": "authorized to trip will resume.",
+    "Required": "Yes"
+  }
+]

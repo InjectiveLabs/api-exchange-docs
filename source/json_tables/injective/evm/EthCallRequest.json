@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "args",
+    "Type": "byte array",
+    "Description": "args uses the same json format as the json rpc api.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "gas_cap",
+    "Type": "uint64",
+    "Description": "gas_cap defines the default gas cap to be used",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proposer_address",
+    "Type": "github_com_cosmos_cosmos_sdk_types.ConsAddress",
+    "Description": "proposer_address of the requested block in hex format",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "int64",
+    "Description": "chain_id is the eip155 chain id parsed from the requested block header",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "overrides",
+    "Type": "byte array",
+    "Description": "state overrides encoded as json",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "order",
+    "Type": "types.DerivativeLimitOrder",
+    "Description": ""
+  },
+  {
+    "Parameter": "is_market",
+    "Type": "bool",
+    "Description": ""
+  }
+]

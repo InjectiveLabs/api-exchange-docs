@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "authority is the address that controls the module.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "send_enabled",
+    "Type": "SendEnabled array",
+    "Description": "send_enabled is the list of entries to add or update.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "use_default_for",
+    "Type": "string array",
+    "Description": "it will be ignored.",
+    "Required": "Yes"
+  }
+]

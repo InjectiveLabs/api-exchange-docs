@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "logs",
+    "Type": "Log array",
+    "Description": "logs represents the ethereum logs generated from the given transaction."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
+  }
+]

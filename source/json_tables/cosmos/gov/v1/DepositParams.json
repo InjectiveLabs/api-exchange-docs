@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "min_deposit",
+    "Type": "types.Coin array",
+    "Description": "Minimum deposit for a proposal to enter voting period."
+  },
+  {
+    "Parameter": "max_deposit_period",
+    "Type": "time.Duration",
+    "Description": "months."
+  }
+]

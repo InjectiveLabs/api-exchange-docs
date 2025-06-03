@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "authority is the account authorized to trip the circuit breaker.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "msg_type_urls",
+    "Type": "string array",
+    "Description": "(or all URLs), the operation will fail.",
+    "Required": "Yes"
+  }
+]

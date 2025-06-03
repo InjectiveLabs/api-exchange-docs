@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "Denom of the coin"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "usd_value",
+    "Type": "string",
+    "Description": ""
+  }
+]

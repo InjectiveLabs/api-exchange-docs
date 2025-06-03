@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "messages",
+    "Type": "][byte array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "signatures",
+    "Type": "][byte array",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

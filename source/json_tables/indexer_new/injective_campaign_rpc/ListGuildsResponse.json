@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "guilds",
+    "Type": "Guild array",
+    "Description": ""
+  },
+  {
+    "Parameter": "paging",
+    "Type": "Paging",
+    "Description": ""
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "Snapshot updated at time in UNIX milli"
+  },
+  {
+    "Parameter": "campaign_summary",
+    "Type": "CampaignSummary",
+    "Description": "Summary of the campaign"
+  }
+]

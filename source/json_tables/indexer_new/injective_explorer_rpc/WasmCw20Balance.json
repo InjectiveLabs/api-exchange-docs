@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "Address of CW20 contract"
+  },
+  {
+    "Parameter": "account",
+    "Type": "string",
+    "Description": "Account address"
+  },
+  {
+    "Parameter": "balance",
+    "Type": "string",
+    "Description": "Account balance"
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "update timestamp in milisecond"
+  },
+  {
+    "Parameter": "cw20_metadata",
+    "Type": "Cw20Metadata",
+    "Description": ""
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "status",
+    "Type": "OrderUpdateStatus",
+    "Description": ""
+  },
+  {
+    "Parameter": "order_hash",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "order",
+    "Type": "DerivativeOrder",
+    "Description": ""
+  }
+]

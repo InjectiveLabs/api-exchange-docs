@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "oracle",
+    "Type": "OracleType",
+    "Description": ""
+  },
+  {
+    "Parameter": "symbol_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "int64",
+    "Description": ""
+  }
+]

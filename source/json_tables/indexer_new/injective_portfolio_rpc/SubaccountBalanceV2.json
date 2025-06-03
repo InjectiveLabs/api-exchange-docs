@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "Related subaccount ID"
+  },
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "Coin denom on the chain."
+  },
+  {
+    "Parameter": "deposit",
+    "Type": "SubaccountDeposit",
+    "Description": ""
+  }
+]

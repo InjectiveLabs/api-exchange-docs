@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "batch_nonce",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "batch_timeout",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "transactions",
+    "Type": "OutgoingTransferTx array",
+    "Description": ""
+  },
+  {
+    "Parameter": "token_contract",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "block",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

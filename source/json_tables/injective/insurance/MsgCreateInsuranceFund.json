@@ -1,0 +1,50 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "Creator of the insurance fund.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "ticker",
+    "Type": "string",
+    "Description": "Ticker for the derivative market.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "Coin denom to use for the market quote denom",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "oracle_base",
+    "Type": "string",
+    "Description": "binary options market.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "oracle_quote",
+    "Type": "string",
+    "Description": "the binary options market.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "types.OracleType",
+    "Description": "Oracle type of the binary options or derivative market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "expiry",
+    "Type": "int64",
+    "Description": "for binary options markets.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "initial_deposit",
+    "Type": "types1.Coin",
+    "Description": "Initial deposit of the insurance fund",
+    "Required": "Yes"
+  }
+]

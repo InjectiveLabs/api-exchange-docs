@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "base_decimals",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "quote_decimals",
+    "Type": "uint32",
+    "Description": ""
+  }
+]

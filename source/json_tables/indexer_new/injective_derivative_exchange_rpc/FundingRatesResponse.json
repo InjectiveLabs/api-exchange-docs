@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "funding_rates",
+    "Type": "FundingRate array",
+    "Description": "List of funding rates"
+  },
+  {
+    "Parameter": "paging",
+    "Type": "Paging",
+    "Description": ""
+  }
+]

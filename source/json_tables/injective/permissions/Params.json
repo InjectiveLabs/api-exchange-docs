@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "wasm_hook_query_max_gas",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

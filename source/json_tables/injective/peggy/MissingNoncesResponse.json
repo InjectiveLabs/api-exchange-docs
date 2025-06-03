@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "operator_addresses",
+    "Type": "string array",
+    "Description": ""
+  }
+]

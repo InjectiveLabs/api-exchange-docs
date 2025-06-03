@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID of the derivativeMarket market"
+  },
+  {
+    "Parameter": "open",
+    "Type": "float64",
+    "Description": "Open price."
+  },
+  {
+    "Parameter": "high",
+    "Type": "float64",
+    "Description": "High price."
+  },
+  {
+    "Parameter": "low",
+    "Type": "float64",
+    "Description": "Low price."
+  },
+  {
+    "Parameter": "volume",
+    "Type": "float64",
+    "Description": "Volume."
+  },
+  {
+    "Parameter": "price",
+    "Type": "float64",
+    "Description": "Current price based on latest fill event."
+  },
+  {
+    "Parameter": "change",
+    "Type": "float64",
+    "Description": "Change percent from opening price."
+  }
+]

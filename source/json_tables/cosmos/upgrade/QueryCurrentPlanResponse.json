@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "plan",
+    "Type": "Plan",
+    "Description": "plan is the current upgrade plan."
+  }
+]

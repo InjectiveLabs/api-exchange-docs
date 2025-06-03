@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "cumulative_funding",
+    "Type": "string",
+    "Description": "Defines the cumulative funding of a perpetual market."
+  },
+  {
+    "Parameter": "cumulative_price",
+    "Type": "string",
+    "Description": "timestamp."
+  },
+  {
+    "Parameter": "last_timestamp",
+    "Type": "int64",
+    "Description": "seconds."
+  },
+  {
+    "Parameter": "last_funding_rate",
+    "Type": "string",
+    "Description": "Defines the last funding rate of a perpetual market."
+  }
+]

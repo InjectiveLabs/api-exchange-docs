@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "signers",
+    "Type": "string array",
+    "Description": "signers ith element is address ith oracle uses to sign a report"
+  },
+  {
+    "Parameter": "transmitters",
+    "Type": "string array",
+    "Description": "via the transmit method"
+  },
+  {
+    "Parameter": "f",
+    "Type": "uint32",
+    "Description": "while still working correctly"
+  },
+  {
+    "Parameter": "onchain_config",
+    "Type": "byte array",
+    "Description": "onchain_config serialized data with reporting plugin params on chain."
+  },
+  {
+    "Parameter": "offchain_config_version",
+    "Type": "uint64",
+    "Description": "\"offchain_config\" parameter"
+  },
+  {
+    "Parameter": "offchain_config",
+    "Type": "byte array",
+    "Description": "operation"
+  },
+  {
+    "Parameter": "module_params",
+    "Type": "ModuleParams",
+    "Description": "feed-specific params for the Cosmos module."
+  }
+]

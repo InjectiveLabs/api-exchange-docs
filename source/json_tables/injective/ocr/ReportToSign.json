@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "config_digest",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "epoch",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "round",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "extra_hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "report",
+    "Type": "byte array",
+    "Description": "Opaque report"
+  }
+]

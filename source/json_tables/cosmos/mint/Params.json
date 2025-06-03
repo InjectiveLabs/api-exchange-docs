@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "mint_denom",
+    "Type": "string",
+    "Description": "type of coin to mint"
+  },
+  {
+    "Parameter": "inflation_rate_change",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "maximum annual change in inflation rate"
+  },
+  {
+    "Parameter": "inflation_max",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "maximum inflation rate"
+  },
+  {
+    "Parameter": "inflation_min",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "minimum inflation rate"
+  },
+  {
+    "Parameter": "goal_bonded",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "goal of percent bonded atoms"
+  },
+  {
+    "Parameter": "blocks_per_year",
+    "Type": "uint64",
+    "Description": "expected blocks per year"
+  }
+]

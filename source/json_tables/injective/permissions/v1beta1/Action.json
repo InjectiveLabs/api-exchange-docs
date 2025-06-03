@@ -1,0 +1,42 @@
+[
+  {
+    "Code": "0",
+    "Name": "UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "MINT"
+  },
+  {
+    "Code": "2",
+    "Name": "RECEIVE"
+  },
+  {
+    "Code": "4",
+    "Name": "BURN"
+  },
+  {
+    "Code": "8",
+    "Name": "SEND"
+  },
+  {
+    "Code": "16",
+    "Name": "SUPER_BURN"
+  },
+  {
+    "Code": "0",
+    "Name": "MODIFY_POLICY_MANAGERS"
+  },
+  {
+    "Code": "0",
+    "Name": "MODIFY_CONTRACT_HOOK"
+  },
+  {
+    "Code": "0",
+    "Name": "MODIFY_ROLE_PERMISSIONS"
+  },
+  {
+    "Code": "0",
+    "Name": "MODIFY_ROLE_MANAGERS"
+  }
+]

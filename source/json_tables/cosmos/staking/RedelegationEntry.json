@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "creation_height",
+    "Type": "int64",
+    "Description": "creation_height  defines the height which the redelegation took place."
+  },
+  {
+    "Parameter": "completion_time",
+    "Type": "time.Time",
+    "Description": "completion_time defines the unix time for redelegation completion."
+  },
+  {
+    "Parameter": "initial_balance",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "initial_balance defines the initial balance when redelegation started."
+  },
+  {
+    "Parameter": "shares_dst",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "shares_dst is the amount of destination-validator shares created by redelegation."
+  },
+  {
+    "Parameter": "unbonding_id",
+    "Type": "uint64",
+    "Description": "Incrementing id that uniquely identifies this entry"
+  },
+  {
+    "Parameter": "unbonding_on_hold_ref_count",
+    "Type": "int64",
+    "Description": "Strictly positive if this entry's unbonding has been stopped by external modules"
+  }
+]

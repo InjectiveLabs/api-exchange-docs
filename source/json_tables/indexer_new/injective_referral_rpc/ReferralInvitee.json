@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "Address of the invitee"
+  },
+  {
+    "Parameter": "commission",
+    "Type": "string",
+    "Description": "Commission earned from this invitee"
+  },
+  {
+    "Parameter": "trading_volume",
+    "Type": "string",
+    "Description": "Trading volume of this invitee"
+  },
+  {
+    "Parameter": "join_date",
+    "Type": "string",
+    "Description": "Join date in ISO 8601 format"
+  }
+]

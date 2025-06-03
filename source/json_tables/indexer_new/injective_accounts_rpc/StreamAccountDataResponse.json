@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "subaccount_balance",
+    "Type": "SubaccountBalanceResult",
+    "Description": ""
+  },
+  {
+    "Parameter": "position",
+    "Type": "PositionsResult",
+    "Description": ""
+  },
+  {
+    "Parameter": "trade",
+    "Type": "TradeResult",
+    "Description": ""
+  },
+  {
+    "Parameter": "order",
+    "Type": "OrderResult",
+    "Description": ""
+  },
+  {
+    "Parameter": "order_history",
+    "Type": "OrderHistoryResult",
+    "Description": ""
+  },
+  {
+    "Parameter": "funding_payment",
+    "Type": "FundingPaymentResult",
+    "Description": ""
+  }
+]

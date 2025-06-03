@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "trading_reward_campaign_info",
+    "Type": "TradingRewardCampaignInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "trading_reward_pool_campaign_schedule",
+    "Type": "CampaignRewardPool array",
+    "Description": ""
+  },
+  {
+    "Parameter": "total_trade_reward_points",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "pending_trading_reward_pool_campaign_schedule",
+    "Type": "CampaignRewardPool array",
+    "Description": ""
+  },
+  {
+    "Parameter": "pending_total_trade_reward_points",
+    "Type": "cosmossdk_io_math.LegacyDec array",
+    "Description": ""
+  }
+]

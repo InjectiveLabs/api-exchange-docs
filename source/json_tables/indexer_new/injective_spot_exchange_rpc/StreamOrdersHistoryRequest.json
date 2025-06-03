@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "subaccount ID to filter orders for specific subaccount",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID to filter orders for specific market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "order_types",
+    "Type": "string array",
+    "Description": "filter by order types",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "direction",
+    "Type": "string",
+    "Description": "order side filter",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "state",
+    "Type": "string",
+    "Description": "Filter by order state",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "execution_types",
+    "Type": "string array",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

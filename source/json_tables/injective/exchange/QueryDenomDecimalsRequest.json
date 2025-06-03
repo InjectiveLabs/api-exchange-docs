@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "denoms",
+    "Type": "string array",
+    "Description": "denoms can be empty to query all denom decimals",
+    "Required": "Yes"
+  }
+]

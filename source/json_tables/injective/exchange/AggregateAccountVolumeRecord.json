@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "account",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "market_volumes",
+    "Type": "MarketVolume array",
+    "Description": ""
+  }
+]

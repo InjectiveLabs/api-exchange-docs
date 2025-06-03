@@ -1,0 +1,67 @@
+[
+  {
+    "Parameter": "block_height",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_time",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "bank_balances",
+    "Type": "BankBalance array",
+    "Description": ""
+  },
+  {
+    "Parameter": "subaccount_deposits",
+    "Type": "SubaccountDeposits array",
+    "Description": ""
+  },
+  {
+    "Parameter": "spot_trades",
+    "Type": "SpotTrade array",
+    "Description": ""
+  },
+  {
+    "Parameter": "derivative_trades",
+    "Type": "DerivativeTrade array",
+    "Description": ""
+  },
+  {
+    "Parameter": "spot_orders",
+    "Type": "SpotOrderUpdate array",
+    "Description": ""
+  },
+  {
+    "Parameter": "derivative_orders",
+    "Type": "DerivativeOrderUpdate array",
+    "Description": ""
+  },
+  {
+    "Parameter": "spot_orderbook_updates",
+    "Type": "OrderbookUpdate array",
+    "Description": ""
+  },
+  {
+    "Parameter": "derivative_orderbook_updates",
+    "Type": "OrderbookUpdate array",
+    "Description": ""
+  },
+  {
+    "Parameter": "positions",
+    "Type": "Position array",
+    "Description": ""
+  },
+  {
+    "Parameter": "oracle_prices",
+    "Type": "OraclePrice array",
+    "Description": ""
+  },
+  {
+    "Parameter": "gas_price",
+    "Type": "string",
+    "Description": ""
+  }
+]

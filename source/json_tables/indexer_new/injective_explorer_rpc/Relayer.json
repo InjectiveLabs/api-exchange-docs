@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "name",
+    "Type": "string",
+    "Description": "Relayer identifier"
+  },
+  {
+    "Parameter": "cta",
+    "Type": "string",
+    "Description": "Call to action. A link to the relayer"
+  }
+]

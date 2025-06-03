@@ -1,0 +1,62 @@
+[
+  {
+    "Error Code": 1,
+    "Description": "internal"
+  },
+  {
+    "Error Code": 2,
+    "Description": "duplicate"
+  },
+  {
+    "Error Code": 3,
+    "Description": "invalid"
+  },
+  {
+    "Error Code": 4,
+    "Description": "timeout"
+  },
+  {
+    "Error Code": 5,
+    "Description": "unknown"
+  },
+  {
+    "Error Code": 6,
+    "Description": "empty"
+  },
+  {
+    "Error Code": 7,
+    "Description": "outdated"
+  },
+  {
+    "Error Code": 8,
+    "Description": "unsupported"
+  },
+  {
+    "Error Code": 9,
+    "Description": "non contiguous event nonce"
+  },
+  {
+    "Error Code": 10,
+    "Description": "no unbatched txs found"
+  },
+  {
+    "Error Code": 11,
+    "Description": "can not set orchestrator addresses more than once"
+  },
+  {
+    "Error Code": 12,
+    "Description": "supply cannot exceed max ERC20 value"
+  },
+  {
+    "Error Code": 13,
+    "Description": "invalid ethereum sender on claim"
+  },
+  {
+    "Error Code": 14,
+    "Description": "invalid ethereum destination"
+  },
+  {
+    "Error Code": 15,
+    "Description": "missing previous claim for validator"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "name",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "role_id",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "permissions",
+    "Type": "uint32",
+    "Description": ""
+  }
+]

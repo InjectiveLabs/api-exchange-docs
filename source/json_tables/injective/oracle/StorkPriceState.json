@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "timestamp",
+    "Type": "uint64",
+    "Description": "timestamp of the when the price was signed by stork"
+  },
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": "the symbol of the price, e.g. BTC"
+  },
+  {
+    "Parameter": "value",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "the value of the price scaled by 1e18"
+  },
+  {
+    "Parameter": "price_state",
+    "Type": "PriceState",
+    "Description": "the price state"
+  }
+]

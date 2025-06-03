@@ -1,0 +1,56 @@
+[
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "Unique Identifier for contract instance to be registered.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "gas_limit",
+    "Type": "uint64",
+    "Description": "Maximum gas to be used for the smart contract execution.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "gas_price",
+    "Type": "uint64",
+    "Description": "gas price to be used for the smart contract execution.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "should_pin_contract",
+    "Type": "bool",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "is_migration_allowed",
+    "Type": "bool",
+    "Description": "allowed to be executed",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "code_id",
+    "Type": "uint64",
+    "Description": "execution but only if is_migration_allowed is false",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "admin_address",
+    "Type": "string",
+    "Description": "contract params)",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "granter_address",
+    "Type": "string",
+    "Description": "funding_mode is other than SelfFunded",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "funding_mode",
+    "Type": "FundingMode",
+    "Description": "Specifies how the contract will fund its execution",
+    "Required": "Yes"
+  }
+]

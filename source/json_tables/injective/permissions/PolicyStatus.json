@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "action",
+    "Type": "Action",
+    "Description": ""
+  },
+  {
+    "Parameter": "is_disabled",
+    "Type": "bool",
+    "Description": ""
+  },
+  {
+    "Parameter": "is_sealed",
+    "Type": "bool",
+    "Description": ""
+  }
+]

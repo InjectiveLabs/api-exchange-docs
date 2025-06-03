@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "validator_address",
+    "Type": "string",
+    "Description": "validator_address is the address of the validator."
+  },
+  {
+    "Parameter": "period",
+    "Type": "uint64",
+    "Description": "period defines the period the historical rewards apply to."
+  },
+  {
+    "Parameter": "rewards",
+    "Type": "ValidatorHistoricalRewards",
+    "Description": "rewards defines the historical rewards of a validator."
+  }
+]

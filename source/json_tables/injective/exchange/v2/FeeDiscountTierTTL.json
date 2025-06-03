@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "tier",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "ttl_timestamp",
+    "Type": "int64",
+    "Description": ""
+  }
+]

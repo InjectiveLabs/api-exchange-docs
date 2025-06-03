@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "campaign_contract",
+    "Type": "string",
+    "Description": "Campaign contract address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "Limit number of returned guilds",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "int32",
+    "Description": "Skip some first guilds in the list for next page",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "sort_by",
+    "Type": "string",
+    "Description": "Sort by some metrics",
+    "Required": "Yes"
+  }
+]

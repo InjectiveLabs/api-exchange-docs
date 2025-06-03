@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "min_deposit",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "Minimum deposit for a proposal to enter voting period."
+  },
+  {
+    "Parameter": "max_deposit_period",
+    "Type": "time.Duration",
+    "Description": "months."
+  }
+]

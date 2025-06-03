@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "campaign_duration_seconds",
+    "Type": "int64",
+    "Description": "number of seconds of the duration of each campaign"
+  },
+  {
+    "Parameter": "quote_denoms",
+    "Type": "string array",
+    "Description": "the trading fee quote denoms which will be counted for the rewards"
+  },
+  {
+    "Parameter": "trading_reward_boost_info",
+    "Type": "TradingRewardCampaignBoostInfo",
+    "Description": "the optional boost info for markets"
+  },
+  {
+    "Parameter": "disqualified_market_ids",
+    "Type": "string array",
+    "Description": "the marketIDs which are disqualified from being rewarded"
+  }
+]

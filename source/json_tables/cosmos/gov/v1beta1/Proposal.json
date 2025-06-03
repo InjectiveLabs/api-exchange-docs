@@ -1,0 +1,47 @@
+[
+  {
+    "Parameter": "proposal_id",
+    "Type": "uint64",
+    "Description": "proposal_id defines the unique id of the proposal."
+  },
+  {
+    "Parameter": "content",
+    "Type": "types1.Any",
+    "Description": "content is the proposal's content."
+  },
+  {
+    "Parameter": "status",
+    "Type": "ProposalStatus",
+    "Description": "status defines the proposal status."
+  },
+  {
+    "Parameter": "final_tally_result",
+    "Type": "TallyResult",
+    "Description": "proposal's voting period has ended."
+  },
+  {
+    "Parameter": "submit_time",
+    "Type": "time.Time",
+    "Description": "submit_time is the time of proposal submission."
+  },
+  {
+    "Parameter": "deposit_end_time",
+    "Type": "time.Time",
+    "Description": "deposit_end_time is the end time for deposition."
+  },
+  {
+    "Parameter": "total_deposit",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "total_deposit is the total deposit on the proposal."
+  },
+  {
+    "Parameter": "voting_start_time",
+    "Type": "time.Time",
+    "Description": "voting_start_time is the starting time to vote on a proposal."
+  },
+  {
+    "Parameter": "voting_end_time",
+    "Type": "time.Time",
+    "Description": "voting_end_time is the end time of voting on a proposal."
+  }
+]

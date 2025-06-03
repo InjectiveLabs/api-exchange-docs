@@ -1,0 +1,62 @@
+[
+  {
+    "Parameter": "order_hash",
+    "Type": "string",
+    "Description": "Hash of the order"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "The subaccountId that this order belongs to"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "The Market ID of the order"
+  },
+  {
+    "Parameter": "order_type",
+    "Type": "string",
+    "Description": "The type of the order"
+  },
+  {
+    "Parameter": "order_side",
+    "Type": "string",
+    "Description": "The side of the order"
+  },
+  {
+    "Parameter": "state",
+    "Type": "string",
+    "Description": "The state (status) of the order"
+  },
+  {
+    "Parameter": "quantity_filled",
+    "Type": "string",
+    "Description": "The filled quantity of the order"
+  },
+  {
+    "Parameter": "quantity_remaining",
+    "Type": "string",
+    "Description": "The filled quantity of the order"
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "int64",
+    "Description": "Order committed timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "Order updated timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "price",
+    "Type": "string",
+    "Description": "Order prices"
+  },
+  {
+    "Parameter": "margin",
+    "Type": "string",
+    "Description": "Margin for derivative order"
+  }
+]

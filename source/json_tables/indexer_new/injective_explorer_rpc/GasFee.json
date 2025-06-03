@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "amount",
+    "Type": "CosmosCoin array",
+    "Description": ""
+  },
+  {
+    "Parameter": "gas_limit",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "payer",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "granter",
+    "Type": "string",
+    "Description": ""
+  }
+]

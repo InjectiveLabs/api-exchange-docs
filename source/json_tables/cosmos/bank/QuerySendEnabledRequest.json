@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "denoms",
+    "Type": "string array",
+    "Description": "denoms is the specific denoms you want look up. Leave empty to get all entries.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "only read if the denoms field is empty.",
+    "Required": "No"
+  }
+]

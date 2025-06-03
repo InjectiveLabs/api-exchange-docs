@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address defines an ethereum hex formated address of an account"
+  },
+  {
+    "Parameter": "code",
+    "Type": "string",
+    "Description": "code defines the hex bytes of the account code."
+  },
+  {
+    "Parameter": "storage",
+    "Type": "Storage",
+    "Description": "storage defines the set of state key values for the account."
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "Parameter": "messages",
+    "Type": "types.Any array",
+    "Description": "messages are the arbitrary messages to be executed if proposal passes.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "initial_deposit",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "initial_deposit is the deposit value that must be paid at proposal submission.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proposer",
+    "Type": "string",
+    "Description": "proposer is the account address of the proposer.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "metadata",
+    "Type": "string",
+    "Description": "metadata is any arbitrary metadata attached to the proposal.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": "Since: cosmos-sdk 0.47",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "summary",
+    "Type": "string",
+    "Description": "Since: cosmos-sdk 0.47",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "expedited",
+    "Type": "bool",
+    "Description": "Since: cosmos-sdk 0.50",
+    "Required": "Yes"
+  }
+]

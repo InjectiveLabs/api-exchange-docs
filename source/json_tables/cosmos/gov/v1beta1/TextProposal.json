@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": "title of the proposal."
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": "description associated with the proposal."
+  }
+]

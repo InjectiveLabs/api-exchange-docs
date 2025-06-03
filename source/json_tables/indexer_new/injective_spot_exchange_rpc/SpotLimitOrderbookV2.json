@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "buys",
+    "Type": "PriceLevel array",
+    "Description": "Array of price levels for buys"
+  },
+  {
+    "Parameter": "sells",
+    "Type": "PriceLevel array",
+    "Description": "Array of price levels for sells"
+  },
+  {
+    "Parameter": "sequence",
+    "Type": "uint64",
+    "Description": "market orderbook sequence"
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "int64",
+    "Description": "Last update timestamp in UNIX millis."
+  }
+]

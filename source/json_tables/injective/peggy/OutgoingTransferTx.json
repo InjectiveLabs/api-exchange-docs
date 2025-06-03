@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "id",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "dest_address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "erc20_token",
+    "Type": "ERC20Token",
+    "Description": ""
+  },
+  {
+    "Parameter": "erc20_fee",
+    "Type": "ERC20Token",
+    "Description": ""
+  }
+]

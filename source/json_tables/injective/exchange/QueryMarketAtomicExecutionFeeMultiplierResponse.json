@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "multiplier",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

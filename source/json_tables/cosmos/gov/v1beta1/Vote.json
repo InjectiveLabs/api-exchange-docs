@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "proposal_id",
+    "Type": "uint64",
+    "Description": "proposal_id defines the unique id of the proposal."
+  },
+  {
+    "Parameter": "voter",
+    "Type": "string",
+    "Description": "voter is the voter address of the proposal."
+  },
+  {
+    "Parameter": "option",
+    "Type": "VoteOption",
+    "Description": "other cases, this field will default to VOTE_OPTION_UNSPECIFIED."
+  },
+  {
+    "Parameter": "options",
+    "Type": "WeightedVoteOption array",
+    "Description": "Since: cosmos-sdk 0.43"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "aggregate_account_volumes",
+    "Type": "AggregateAccountVolumeRecord array",
+    "Description": "the aggregate volume records for the accounts specified"
+  },
+  {
+    "Parameter": "aggregate_market_volumes",
+    "Type": "MarketVolume array",
+    "Description": "the aggregate volumes for the markets specified"
+  }
+]

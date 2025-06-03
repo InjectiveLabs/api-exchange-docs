@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "base",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "quote",
+    "Type": "string",
+    "Description": ""
+  }
+]

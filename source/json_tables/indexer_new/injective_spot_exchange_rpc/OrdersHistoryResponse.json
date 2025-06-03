@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "orders",
+    "Type": "SpotOrderHistory array",
+    "Description": "List of history spot orders"
+  },
+  {
+    "Parameter": "paging",
+    "Type": "Paging",
+    "Description": ""
+  }
+]

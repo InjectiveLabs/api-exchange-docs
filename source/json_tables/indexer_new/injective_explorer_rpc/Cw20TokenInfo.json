@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "name",
+    "Type": "string",
+    "Description": "General name of the token"
+  },
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": "Symbol of then token"
+  },
+  {
+    "Parameter": "decimals",
+    "Type": "int64",
+    "Description": "Decimal places of token"
+  },
+  {
+    "Parameter": "total_supply",
+    "Type": "string",
+    "Description": "Token's total supply"
+  }
+]

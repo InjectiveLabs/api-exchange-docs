@@ -1,0 +1,18 @@
+[
+  {
+    "Code": "0",
+    "Name": "Unspecified"
+  },
+  {
+    "Code": "1",
+    "Name": "SelfFunded"
+  },
+  {
+    "Code": "2",
+    "Name": "GrantOnly"
+  },
+  {
+    "Code": "3",
+    "Name": "Dual"
+  }
+]

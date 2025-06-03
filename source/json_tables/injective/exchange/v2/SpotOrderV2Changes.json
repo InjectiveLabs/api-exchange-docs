@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "p",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "price of the order"
+  },
+  {
+    "Parameter": "q",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "quantity of the order"
+  },
+  {
+    "Parameter": "f",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "the amount of the quantity remaining fillable"
+  },
+  {
+    "Parameter": "tp",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "trigger_price is the trigger price used by stop/take orders"
+  }
+]

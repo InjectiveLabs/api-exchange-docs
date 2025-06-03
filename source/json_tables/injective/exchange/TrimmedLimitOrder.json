@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "quantity of the order"
+  },
+  {
+    "Parameter": "order_hash",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": ""
+  }
+]

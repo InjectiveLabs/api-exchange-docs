@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "signed_blocks_window",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "min_signed_per_window",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "downtime_jail_duration",
+    "Type": "time.Duration",
+    "Description": ""
+  },
+  {
+    "Parameter": "slash_fraction_double_sign",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "slash_fraction_downtime",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

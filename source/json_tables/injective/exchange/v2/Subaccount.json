@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "trader",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "subaccount_nonce",
+    "Type": "uint32",
+    "Description": ""
+  }
+]

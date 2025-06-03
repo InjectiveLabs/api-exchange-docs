@@ -1,0 +1,44 @@
+[
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "code_id",
+    "Type": "int64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "from_number",
+    "Type": "int64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "to_number",
+    "Type": "int64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "assets_only",
+    "Type": "bool",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "int64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "label",
+    "Type": "string",
+    "Description": "Label of the contract",
+    "Required": "Yes"
+  }
+]

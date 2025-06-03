@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "next",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "data",
+    "Type": "TxDetailData array",
+    "Description": ""
+  }
+]

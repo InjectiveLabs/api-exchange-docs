@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params define the evm module parameters."
+  }
+]

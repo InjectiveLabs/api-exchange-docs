@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "default_redemption_notice_period_duration",
+    "Type": "time.Duration",
+    "Description": "redemption request before the underwriter can claim his tokens"
+  }
+]

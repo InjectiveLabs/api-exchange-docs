@@ -1,0 +1,94 @@
+[
+  {
+    "Error Code": 1,
+    "Description": "stale report"
+  },
+  {
+    "Error Code": 2,
+    "Description": "incomplete proposal"
+  },
+  {
+    "Error Code": 3,
+    "Description": "repeated oracle address"
+  },
+  {
+    "Error Code": 4,
+    "Description": "too many signers"
+  },
+  {
+    "Error Code": 5,
+    "Description": "incorrect config"
+  },
+  {
+    "Error Code": 6,
+    "Description": "config digest doesn't match"
+  },
+  {
+    "Error Code": 7,
+    "Description": "wrong number of signatures"
+  },
+  {
+    "Error Code": 8,
+    "Description": "incorrect signature"
+  },
+  {
+    "Error Code": 9,
+    "Description": "no transmitter specified"
+  },
+  {
+    "Error Code": 10,
+    "Description": "incorrect transmission data"
+  },
+  {
+    "Error Code": 11,
+    "Description": "no transmissions found"
+  },
+  {
+    "Error Code": 12,
+    "Description": "median value is out of bounds"
+  },
+  {
+    "Error Code": 13,
+    "Description": "LINK denom doesn't match"
+  },
+  {
+    "Error Code": 14,
+    "Description": "Reward Pool doesn't exist"
+  },
+  {
+    "Error Code": 15,
+    "Description": "wrong number of payees and transmitters"
+  },
+  {
+    "Error Code": 16,
+    "Description": "action is restricted to the module admin"
+  },
+  {
+    "Error Code": 17,
+    "Description": "feed already exists"
+  },
+  {
+    "Error Code": 19,
+    "Description": "feed doesnt exists"
+  },
+  {
+    "Error Code": 20,
+    "Description": "action is admin-restricted"
+  },
+  {
+    "Error Code": 21,
+    "Description": "insufficient reward pool"
+  },
+  {
+    "Error Code": 22,
+    "Description": "payee already set"
+  },
+  {
+    "Error Code": 23,
+    "Description": "action is payee-restricted"
+  },
+  {
+    "Error Code": 24,
+    "Description": "feed config not found"
+  }
+]

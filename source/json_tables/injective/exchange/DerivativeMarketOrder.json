@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "order_info",
+    "Type": "OrderInfo",
+    "Description": "order_info contains the information of the order"
+  },
+  {
+    "Parameter": "order_type",
+    "Type": "OrderType",
+    "Description": "order types"
+  },
+  {
+    "Parameter": "margin",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "margin_hold",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "trigger_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "trigger_price is the trigger price used by stop/take orders"
+  },
+  {
+    "Parameter": "order_hash",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

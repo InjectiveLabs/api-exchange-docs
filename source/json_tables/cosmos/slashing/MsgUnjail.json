@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "validator_addr",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

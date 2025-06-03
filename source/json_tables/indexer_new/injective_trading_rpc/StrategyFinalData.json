@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "initial_base_amount",
+    "Type": "string",
+    "Description": "Initial base amount"
+  },
+  {
+    "Parameter": "initial_quote_amount",
+    "Type": "string",
+    "Description": "Initial quote amount"
+  },
+  {
+    "Parameter": "final_base_amount",
+    "Type": "string",
+    "Description": "Final base amount"
+  },
+  {
+    "Parameter": "final_quote_amount",
+    "Type": "string",
+    "Description": "Final quote amount"
+  },
+  {
+    "Parameter": "initial_base_price",
+    "Type": "string",
+    "Description": "Initial base price"
+  },
+  {
+    "Parameter": "initial_quote_price",
+    "Type": "string",
+    "Description": "Initial quote price"
+  },
+  {
+    "Parameter": "final_base_price",
+    "Type": "string",
+    "Description": "Final base price"
+  },
+  {
+    "Parameter": "final_quote_price",
+    "Type": "string",
+    "Description": "Final quote price"
+  }
+]

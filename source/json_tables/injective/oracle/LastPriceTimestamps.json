@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "last_price_timestamps",
+    "Type": "SymbolPriceTimestamp array",
+    "Description": ""
+  }
+]

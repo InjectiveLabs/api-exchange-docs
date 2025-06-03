@@ -1,0 +1,282 @@
+[
+  {
+    "Parameter": "state",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "MarketId of the trading strategy"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "subaccount ID of the trading strategy"
+  },
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "Account address"
+  },
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "Contract address"
+  },
+  {
+    "Parameter": "execution_price",
+    "Type": "string",
+    "Description": "Execution price of the trading strategy"
+  },
+  {
+    "Parameter": "base_quantity",
+    "Type": "string",
+    "Description": "Base quantity of the trading strategy"
+  },
+  {
+    "Parameter": "quote_quantity",
+    "Type": "string",
+    "Description": "Quote quantity of the trading strategy"
+  },
+  {
+    "Parameter": "lower_bound",
+    "Type": "string",
+    "Description": "Lower bound of the trading strategy"
+  },
+  {
+    "Parameter": "upper_bound",
+    "Type": "string",
+    "Description": "Upper bound of the trading strategy"
+  },
+  {
+    "Parameter": "stop_loss",
+    "Type": "string",
+    "Description": "Stop loss limit of the trading strategy"
+  },
+  {
+    "Parameter": "take_profit",
+    "Type": "string",
+    "Description": "Take profit limit of the trading strategy"
+  },
+  {
+    "Parameter": "swap_fee",
+    "Type": "string",
+    "Description": "Swap fee of the trading strategy"
+  },
+  {
+    "Parameter": "base_deposit",
+    "Type": "string",
+    "Description": "Base deposit at the time of closing the trading strategy"
+  },
+  {
+    "Parameter": "quote_deposit",
+    "Type": "string",
+    "Description": "Quote deposit at the time of closing the trading strategy"
+  },
+  {
+    "Parameter": "market_mid_price",
+    "Type": "string",
+    "Description": "Market mid price at the time of closing the trading strategy"
+  },
+  {
+    "Parameter": "subscription_quote_quantity",
+    "Type": "string",
+    "Description": "Subscription quote quantity of the trading strategy"
+  },
+  {
+    "Parameter": "subscription_base_quantity",
+    "Type": "string",
+    "Description": "Subscription base quantity of the trading strategy"
+  },
+  {
+    "Parameter": "number_of_grid_levels",
+    "Type": "string",
+    "Description": "Number of grid levels of the trading strategy"
+  },
+  {
+    "Parameter": "should_exit_with_quote_only",
+    "Type": "bool",
+    "Description": "Indicates whether the trading strategy should exit with quote only"
+  },
+  {
+    "Parameter": "stop_reason",
+    "Type": "string",
+    "Description": "Indicates the reason for stopping the trading strategy"
+  },
+  {
+    "Parameter": "pending_execution",
+    "Type": "bool",
+    "Description": "Indicates whether the trading strategy is pending execution"
+  },
+  {
+    "Parameter": "created_height",
+    "Type": "int64",
+    "Description": "Block height when the strategy was created."
+  },
+  {
+    "Parameter": "removed_height",
+    "Type": "int64",
+    "Description": "Block height when the strategy was removed."
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "int64",
+    "Description": "UpdatedAt timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "UpdatedAt timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "exit_type",
+    "Type": "string",
+    "Description": "strategy ended"
+  },
+  {
+    "Parameter": "stop_loss_config",
+    "Type": "ExitConfig",
+    "Description": "Exit config for stop loss"
+  },
+  {
+    "Parameter": "take_profit_config",
+    "Type": "ExitConfig",
+    "Description": "Exit config for take profit"
+  },
+  {
+    "Parameter": "strategy_type",
+    "Type": "string",
+    "Description": "Strategy type: arithmetic, geometric..."
+  },
+  {
+    "Parameter": "contract_version",
+    "Type": "string",
+    "Description": "Version of the contract"
+  },
+  {
+    "Parameter": "contract_name",
+    "Type": "string",
+    "Description": "Name of the contract"
+  },
+  {
+    "Parameter": "market_type",
+    "Type": "string",
+    "Description": "Type of the market"
+  },
+  {
+    "Parameter": "last_executed_at",
+    "Type": "int64",
+    "Description": "lastExecutedAt timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "trail_up_price",
+    "Type": "string",
+    "Description": "trailing up price"
+  },
+  {
+    "Parameter": "trail_down_price",
+    "Type": "string",
+    "Description": "trailing down price"
+  },
+  {
+    "Parameter": "trail_up_counter",
+    "Type": "int64",
+    "Description": "trailing up counter"
+  },
+  {
+    "Parameter": "trail_down_counter",
+    "Type": "int64",
+    "Description": "trailing down counter"
+  },
+  {
+    "Parameter": "tvl",
+    "Type": "string",
+    "Description": "TVL of the trading strategy"
+  },
+  {
+    "Parameter": "pnl",
+    "Type": "string",
+    "Description": "PnL of the trading strategy"
+  },
+  {
+    "Parameter": "pnl_perc",
+    "Type": "string",
+    "Description": "PnL percentage of the trading strategy"
+  },
+  {
+    "Parameter": "pnl_updated_at",
+    "Type": "int64",
+    "Description": "pnlUpdatedAt timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "performance",
+    "Type": "string",
+    "Description": "Indicates the performance of the trading strategy"
+  },
+  {
+    "Parameter": "roi",
+    "Type": "string",
+    "Description": "Return on investment of the trading strategy"
+  },
+  {
+    "Parameter": "initial_base_price",
+    "Type": "string",
+    "Description": "Use strategyFinalData if available to have more accurate data"
+  },
+  {
+    "Parameter": "initial_quote_price",
+    "Type": "string",
+    "Description": "Use strategyFinalData if available to have more accurate data"
+  },
+  {
+    "Parameter": "current_base_price",
+    "Type": "string",
+    "Description": "Use strategyFinalData if available to have more accurate data"
+  },
+  {
+    "Parameter": "current_quote_price",
+    "Type": "string",
+    "Description": "Use strategyFinalData if available to have more accurate data"
+  },
+  {
+    "Parameter": "final_base_price",
+    "Type": "string",
+    "Description": "Use strategyFinalData if available to have more accurate data"
+  },
+  {
+    "Parameter": "final_quote_price",
+    "Type": "string",
+    "Description": "Use strategyFinalData if available to have more accurate data"
+  },
+  {
+    "Parameter": "final_data",
+    "Type": "StrategyFinalData",
+    "Description": "Final data of the trading strategy. This is present from contract v0.8.4."
+  },
+  {
+    "Parameter": "margin_ratio",
+    "Type": "string",
+    "Description": "Margin ratio of the trading strategy"
+  },
+  {
+    "Parameter": "lower_trailing_bound",
+    "Type": "string",
+    "Description": "Lower trailing bound of the trading strategy"
+  },
+  {
+    "Parameter": "upper_trailing_bound",
+    "Type": "string",
+    "Description": "Upper trailing bound of the trading strategy"
+  },
+  {
+    "Parameter": "new_upper_bound",
+    "Type": "string",
+    "Description": "New upper bound of the trading strategy"
+  },
+  {
+    "Parameter": "new_lower_bound",
+    "Type": "string",
+    "Description": "New lower bound of the trading strategy"
+  }
+]

@@ -1,0 +1,187 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines all the parameters of related to exchange."
+  },
+  {
+    "Parameter": "spot_markets",
+    "Type": "SpotMarket array",
+    "Description": "spot_markets is an array containing the genesis trade pairs"
+  },
+  {
+    "Parameter": "derivative_markets",
+    "Type": "DerivativeMarket array",
+    "Description": "derivative_markets is an array containing the genesis derivative markets"
+  },
+  {
+    "Parameter": "spot_orderbook",
+    "Type": "SpotOrderBook array",
+    "Description": "spot_orderbook defines the spot exchange limit orderbook active at genesis."
+  },
+  {
+    "Parameter": "derivative_orderbook",
+    "Type": "DerivativeOrderBook array",
+    "Description": "at genesis."
+  },
+  {
+    "Parameter": "balances",
+    "Type": "Balance array",
+    "Description": "balances defines the exchange users balances active at genesis."
+  },
+  {
+    "Parameter": "positions",
+    "Type": "DerivativePosition array",
+    "Description": "positions defines the exchange derivative positions at genesis"
+  },
+  {
+    "Parameter": "subaccount_trade_nonces",
+    "Type": "SubaccountNonce array",
+    "Description": "subaccounts at genesis"
+  },
+  {
+    "Parameter": "expiry_futures_market_info_state",
+    "Type": "ExpiryFuturesMarketInfoState array",
+    "Description": "markets at genesis"
+  },
+  {
+    "Parameter": "perpetual_market_info",
+    "Type": "PerpetualMarketInfo array",
+    "Description": "markets at genesis"
+  },
+  {
+    "Parameter": "perpetual_market_funding_state",
+    "Type": "PerpetualMarketFundingState array",
+    "Description": "derivative markets at genesis"
+  },
+  {
+    "Parameter": "derivative_market_settlement_scheduled",
+    "Type": "DerivativeMarketSettlementInfo array",
+    "Description": "settlement at genesis"
+  },
+  {
+    "Parameter": "is_spot_exchange_enabled",
+    "Type": "bool",
+    "Description": "sets spot markets as enabled"
+  },
+  {
+    "Parameter": "is_derivatives_exchange_enabled",
+    "Type": "bool",
+    "Description": "sets derivative markets as enabled"
+  },
+  {
+    "Parameter": "trading_reward_campaign_info",
+    "Type": "TradingRewardCampaignInfo",
+    "Description": "the current trading reward campaign info"
+  },
+  {
+    "Parameter": "trading_reward_pool_campaign_schedule",
+    "Type": "CampaignRewardPool array",
+    "Description": "the current and upcoming trading reward campaign pools"
+  },
+  {
+    "Parameter": "trading_reward_campaign_account_points",
+    "Type": "TradingRewardCampaignAccountPoints array",
+    "Description": "the current trading reward account points"
+  },
+  {
+    "Parameter": "fee_discount_schedule",
+    "Type": "FeeDiscountSchedule",
+    "Description": "the fee discount schedule"
+  },
+  {
+    "Parameter": "fee_discount_account_tier_ttl",
+    "Type": "FeeDiscountAccountTierTTL array",
+    "Description": "the cached fee discount account tiers with TTL"
+  },
+  {
+    "Parameter": "fee_discount_bucket_volume_accounts",
+    "Type": "FeeDiscountBucketVolumeAccounts array",
+    "Description": "the fee discount paid by accounts in all buckets"
+  },
+  {
+    "Parameter": "is_first_fee_cycle_finished",
+    "Type": "bool",
+    "Description": "sets the first fee cycle as finished"
+  },
+  {
+    "Parameter": "pending_trading_reward_pool_campaign_schedule",
+    "Type": "CampaignRewardPool array",
+    "Description": "the current and upcoming trading reward campaign pending pools"
+  },
+  {
+    "Parameter": "pending_trading_reward_campaign_account_points",
+    "Type": "TradingRewardCampaignAccountPendingPoints array",
+    "Description": "the pending trading reward account points"
+  },
+  {
+    "Parameter": "rewards_opt_out_addresses",
+    "Type": "string array",
+    "Description": "the addresses opting out of trading rewards"
+  },
+  {
+    "Parameter": "historical_trade_records",
+    "Type": "TradeRecords array",
+    "Description": ""
+  },
+  {
+    "Parameter": "binary_options_markets",
+    "Type": "BinaryOptionsMarket array",
+    "Description": "markets"
+  },
+  {
+    "Parameter": "binary_options_market_ids_scheduled_for_settlement",
+    "Type": "string array",
+    "Description": "binary options markets scheduled for next-block settlement"
+  },
+  {
+    "Parameter": "spot_market_ids_scheduled_to_force_close",
+    "Type": "string array",
+    "Description": "forced closings at genesis"
+  },
+  {
+    "Parameter": "denom_decimals",
+    "Type": "DenomDecimals array",
+    "Description": "denom_decimals defines the denom decimals for the exchange."
+  },
+  {
+    "Parameter": "conditional_derivative_orderbooks",
+    "Type": "ConditionalDerivativeOrderBook array",
+    "Description": "markets (both lmit and market conditional orders)"
+  },
+  {
+    "Parameter": "market_fee_multipliers",
+    "Type": "MarketFeeMultiplier array",
+    "Description": "multipliers"
+  },
+  {
+    "Parameter": "orderbook_sequences",
+    "Type": "OrderbookSequence array",
+    "Description": ""
+  },
+  {
+    "Parameter": "subaccount_volumes",
+    "Type": "AggregateSubaccountVolumeRecord array",
+    "Description": ""
+  },
+  {
+    "Parameter": "market_volumes",
+    "Type": "MarketVolume array",
+    "Description": ""
+  },
+  {
+    "Parameter": "grant_authorizations",
+    "Type": "FullGrantAuthorizations array",
+    "Description": ""
+  },
+  {
+    "Parameter": "active_grants",
+    "Type": "FullActiveGrant array",
+    "Description": ""
+  },
+  {
+    "Parameter": "denom_min_notionals",
+    "Type": "DenomMinNotional array",
+    "Description": ""
+  }
+]

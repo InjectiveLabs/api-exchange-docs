@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "quorum",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "considered valid."
+  },
+  {
+    "Parameter": "threshold",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "Minimum proportion of Yes votes for proposal to pass. Default value: 0.5."
+  },
+  {
+    "Parameter": "veto_threshold",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "vetoed. Default value: 1/3."
+  }
+]

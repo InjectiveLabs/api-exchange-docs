@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "send_enabled",
+    "Type": "SendEnabled array",
+    "Description": ""
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "populated if the denoms field in the request is empty."
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "ticker",
+    "Type": "string",
+    "Description": "Ticker for the derivative market."
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "type of coin to use as the quote currency"
+  },
+  {
+    "Parameter": "oracle_base",
+    "Type": "string",
+    "Description": "Oracle base currency"
+  },
+  {
+    "Parameter": "oracle_quote",
+    "Type": "string",
+    "Description": "Oracle quote currency"
+  },
+  {
+    "Parameter": "oracle_scale_factor",
+    "Type": "uint32",
+    "Description": "Scale factor for oracle prices."
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "types.OracleType",
+    "Description": "Oracle type"
+  },
+  {
+    "Parameter": "expiry",
+    "Type": "int64",
+    "Description": "Expiration time of the market"
+  },
+  {
+    "Parameter": "initial_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "market"
+  },
+  {
+    "Parameter": "maintenance_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "derivative market"
+  },
+  {
+    "Parameter": "maker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "market"
+  },
+  {
+    "Parameter": "taker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "market"
+  },
+  {
+    "Parameter": "min_price_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "margin"
+  },
+  {
+    "Parameter": "min_quantity_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "quantity"
+  },
+  {
+    "Parameter": "min_notional",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "orders in the market"
+  },
+  {
+    "Parameter": "admin_info",
+    "Type": "AdminInfo",
+    "Description": ""
+  }
+]

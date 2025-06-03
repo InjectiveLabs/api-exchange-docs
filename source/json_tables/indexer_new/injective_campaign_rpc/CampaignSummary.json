@@ -1,0 +1,52 @@
+[
+  {
+    "Parameter": "campaign_id",
+    "Type": "string",
+    "Description": "Campaign id"
+  },
+  {
+    "Parameter": "campaign_contract",
+    "Type": "string",
+    "Description": "Guild manager contract address"
+  },
+  {
+    "Parameter": "total_guilds_count",
+    "Type": "int32",
+    "Description": "Number of guild in the campaign"
+  },
+  {
+    "Parameter": "total_tvl",
+    "Type": "string",
+    "Description": "Total TVL"
+  },
+  {
+    "Parameter": "total_average_tvl",
+    "Type": "string",
+    "Description": "Sum average TVL of all guilds"
+  },
+  {
+    "Parameter": "total_volume",
+    "Type": "string",
+    "Description": "Total volume across all guilds (in market quote denom, often USDT)"
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "Snapshot updated at time in UNIX milli"
+  },
+  {
+    "Parameter": "total_members_count",
+    "Type": "int32",
+    "Description": "Total member joined the campaign (include guild masters)"
+  },
+  {
+    "Parameter": "start_time",
+    "Type": "int64",
+    "Description": "Campaign start time"
+  },
+  {
+    "Parameter": "end_time",
+    "Type": "int64",
+    "Description": "Campaign end time"
+  }
+]

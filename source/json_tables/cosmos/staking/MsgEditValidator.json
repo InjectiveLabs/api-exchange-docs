@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "description",
+    "Type": "Description",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "validator_address",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "commission_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "REF: #2373",
+    "Required": "No"
+  },
+  {
+    "Parameter": "min_self_delegation",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "",
+    "Required": "No"
+  }
+]

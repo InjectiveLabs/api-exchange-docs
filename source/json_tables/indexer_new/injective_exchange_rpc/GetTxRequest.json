@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "hash",
+    "Type": "string",
+    "Description": "Transaction hash in hex without 0x prefix (Cosmos-like).",
+    "Required": "Yes"
+  }
+]

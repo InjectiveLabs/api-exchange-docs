@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "gas",
+    "Type": "uint64",
+    "Description": "gas returns the estimated gas"
+  },
+  {
+    "Parameter": "ret",
+    "Type": "byte array",
+    "Description": "revert opcode)"
+  },
+  {
+    "Parameter": "vm_error",
+    "Type": "string",
+    "Description": "vm_error is the error returned by vm execution"
+  }
+]

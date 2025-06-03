@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "granter",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "net_granted_stake",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": ""
+  },
+  {
+    "Parameter": "is_valid",
+    "Type": "bool",
+    "Description": ""
+  }
+]

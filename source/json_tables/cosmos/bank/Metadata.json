@@ -1,0 +1,47 @@
+[
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "denom_units",
+    "Type": "DenomUnit array",
+    "Description": "denom_units represents the list of DenomUnit's for a given coin"
+  },
+  {
+    "Parameter": "base",
+    "Type": "string",
+    "Description": "base represents the base denom (should be the DenomUnit with exponent = 0)."
+  },
+  {
+    "Parameter": "display",
+    "Type": "string",
+    "Description": "displayed in clients."
+  },
+  {
+    "Parameter": "name",
+    "Type": "string",
+    "Description": "Since: cosmos-sdk 0.43"
+  },
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": "Since: cosmos-sdk 0.43"
+  },
+  {
+    "Parameter": "uri",
+    "Type": "string",
+    "Description": "Since: cosmos-sdk 0.46"
+  },
+  {
+    "Parameter": "uri_hash",
+    "Type": "string",
+    "Description": "Since: cosmos-sdk 0.46"
+  },
+  {
+    "Parameter": "decimals",
+    "Type": "uint32",
+    "Description": "Since: cosmos-sdk 0.50"
+  }
+]

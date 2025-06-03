@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "index",
+    "Type": "int64",
+    "Description": "index is the height at which the block was missed."
+  },
+  {
+    "Parameter": "missed",
+    "Type": "bool",
+    "Description": "missed is the missed status."
+  }
+]

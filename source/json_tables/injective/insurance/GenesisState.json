@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines all the parameters of related to insurance."
+  },
+  {
+    "Parameter": "insurance_funds",
+    "Type": "InsuranceFund array",
+    "Description": "markets"
+  },
+  {
+    "Parameter": "redemption_schedule",
+    "Type": "RedemptionSchedule array",
+    "Description": "redemption_schedule describes the redemption requests pending"
+  },
+  {
+    "Parameter": "next_share_denom_id",
+    "Type": "uint64",
+    "Description": "creating insurance fund incremented by 1 per insurance fund creation"
+  },
+  {
+    "Parameter": "next_redemption_schedule_id",
+    "Type": "uint64",
+    "Description": "used for next schedule incremented by 1 per redemption request"
+  }
+]

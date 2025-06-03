@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "market",
+    "Type": "SpotMarket",
+    "Description": ""
+  },
+  {
+    "Parameter": "mid_price_and_tob",
+    "Type": "MidPriceAndTOB",
+    "Description": "and bid orders"
+  }
+]

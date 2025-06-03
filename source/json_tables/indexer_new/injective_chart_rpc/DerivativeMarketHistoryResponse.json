@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "t",
+    "Type": "int32 array",
+    "Description": "time should be 0."
+  },
+  {
+    "Parameter": "o",
+    "Type": "float64 array",
+    "Description": "Open price."
+  },
+  {
+    "Parameter": "h",
+    "Type": "float64 array",
+    "Description": "High price."
+  },
+  {
+    "Parameter": "l",
+    "Type": "float64 array",
+    "Description": "Low price."
+  },
+  {
+    "Parameter": "c",
+    "Type": "float64 array",
+    "Description": "Close price."
+  },
+  {
+    "Parameter": "v",
+    "Type": "float64 array",
+    "Description": "Volume."
+  },
+  {
+    "Parameter": "s",
+    "Type": "string",
+    "Description": "Status of the request."
+  }
+]

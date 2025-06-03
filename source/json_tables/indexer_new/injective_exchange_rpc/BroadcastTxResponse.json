@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "tx_hash",
+    "Type": "string",
+    "Description": "Hex-encoded Tendermint transaction hash"
+  },
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": "The block height"
+  },
+  {
+    "Parameter": "index",
+    "Type": "uint32",
+    "Description": "Tx index in the block"
+  },
+  {
+    "Parameter": "codespace",
+    "Type": "string",
+    "Description": "Namespace for the resp code"
+  },
+  {
+    "Parameter": "code",
+    "Type": "uint32",
+    "Description": "Response code"
+  },
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "Result bytes, if any"
+  },
+  {
+    "Parameter": "raw_log",
+    "Type": "string",
+    "Description": "non-deterministic."
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "string",
+    "Description": "Time of the previous block."
+  }
+]

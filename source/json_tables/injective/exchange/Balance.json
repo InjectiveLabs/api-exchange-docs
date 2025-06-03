@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "deposits",
+    "Type": "Deposit",
+    "Description": ""
+  }
+]

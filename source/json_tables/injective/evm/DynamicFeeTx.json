@@ -1,0 +1,62 @@
+[
+  {
+    "Parameter": "chain_id",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "chain_id of the destination EVM chain"
+  },
+  {
+    "Parameter": "nonce",
+    "Type": "uint64",
+    "Description": "nonce corresponds to the account nonce (transaction sequence)."
+  },
+  {
+    "Parameter": "gas_tip_cap",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "gas_tip_cap defines the max value for the gas tip"
+  },
+  {
+    "Parameter": "gas_fee_cap",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "gas_fee_cap defines the max value for the gas fee"
+  },
+  {
+    "Parameter": "gas",
+    "Type": "uint64",
+    "Description": "gas defines the gas limit defined for the transaction."
+  },
+  {
+    "Parameter": "to",
+    "Type": "string",
+    "Description": "to is the hex formatted address of the recipient"
+  },
+  {
+    "Parameter": "value",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "value defines the the transaction amount."
+  },
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "data is the data payload bytes of the transaction."
+  },
+  {
+    "Parameter": "accesses",
+    "Type": "AccessList",
+    "Description": "accesses is an array of access tuples"
+  },
+  {
+    "Parameter": "v",
+    "Type": "byte array",
+    "Description": "v defines the signature value"
+  },
+  {
+    "Parameter": "r",
+    "Type": "byte array",
+    "Description": "r defines the signature value"
+  },
+  {
+    "Parameter": "s",
+    "Type": "byte array",
+    "Description": "s define the signature value"
+  }
+]

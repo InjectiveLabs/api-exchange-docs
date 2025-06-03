@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines all the parameters of related to auction."
+  },
+  {
+    "Parameter": "auction_round",
+    "Type": "uint64",
+    "Description": "current auction round"
+  },
+  {
+    "Parameter": "highest_bid",
+    "Type": "Bid",
+    "Description": "current highest bid"
+  },
+  {
+    "Parameter": "auction_ending_timestamp",
+    "Type": "int64",
+    "Description": "auction ending timestamp"
+  },
+  {
+    "Parameter": "last_auction_result",
+    "Type": "LastAuctionResult",
+    "Description": "last auction result"
+  }
+]

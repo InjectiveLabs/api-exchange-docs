@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "spot_markets",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "derivative_markets",
+    "Type": "string array",
+    "Description": ""
+  }
+]

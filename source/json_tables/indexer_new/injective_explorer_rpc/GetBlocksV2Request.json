@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "per_page",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

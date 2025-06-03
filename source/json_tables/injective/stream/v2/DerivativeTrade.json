@@ -1,0 +1,57 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "is_buy",
+    "Type": "bool",
+    "Description": ""
+  },
+  {
+    "Parameter": "executionType",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "position_delta",
+    "Type": "v2.PositionDelta",
+    "Description": ""
+  },
+  {
+    "Parameter": "payout",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "fee",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "order_hash",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "fee_recipient_address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "trade_id",
+    "Type": "string",
+    "Description": ""
+  }
+]

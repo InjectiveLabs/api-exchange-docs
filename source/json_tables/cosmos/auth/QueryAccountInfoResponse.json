@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "info",
+    "Type": "BaseAccount",
+    "Description": "info is the account info which is represented by BaseAccount."
+  }
+]

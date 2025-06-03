@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "id",
+    "Type": "int64",
+    "Description": "updated to uint64 in a future version of the auth query.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "account_id",
+    "Type": "uint64",
+    "Description": "Since: cosmos-sdk 0.47",
+    "Required": "Yes"
+  }
+]

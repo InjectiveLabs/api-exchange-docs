@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "hourly_funding_rate_cap",
+    "Type": "string",
+    "Description": "perpetual market."
+  },
+  {
+    "Parameter": "hourly_interest_rate",
+    "Type": "string",
+    "Description": "Defines the hourly interest rate of the perpetual market."
+  },
+  {
+    "Parameter": "next_funding_timestamp",
+    "Type": "int64",
+    "Description": "seconds."
+  },
+  {
+    "Parameter": "funding_interval",
+    "Type": "int64",
+    "Description": "Defines the funding interval in seconds of a perpetual market in seconds."
+  }
+]

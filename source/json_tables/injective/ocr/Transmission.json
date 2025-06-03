@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "answer",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "observations_timestamp",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "transmission_timestamp",
+    "Type": "int64",
+    "Description": ""
+  }
+]

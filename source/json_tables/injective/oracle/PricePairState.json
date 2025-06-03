@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "pair_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "base_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "quote_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "base_cumulative_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "quote_cumulative_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "base_timestamp",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "quote_timestamp",
+    "Type": "int64",
+    "Description": ""
+  }
+]

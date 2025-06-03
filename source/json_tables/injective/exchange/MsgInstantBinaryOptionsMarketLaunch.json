@@ -1,0 +1,92 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "ticker",
+    "Type": "string",
+    "Description": "Ticker for the derivative contract.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "oracle_symbol",
+    "Type": "string",
+    "Description": "Oracle symbol",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "oracle_provider",
+    "Type": "string",
+    "Description": "Oracle Provider",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "types1.OracleType",
+    "Description": "Oracle type",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "oracle_scale_factor",
+    "Type": "uint32",
+    "Description": "Scale factor for oracle prices.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "maker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "taker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "expiration_timestamp",
+    "Type": "int64",
+    "Description": "expiration timestamp",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "settlement_timestamp",
+    "Type": "int64",
+    "Description": "expiration timestamp",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "admin of the market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "Address of the quote currency denomination for the binary options contract",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "min_price_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "required for orders in the market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "min_quantity_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "required for orders in the market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "min_notional",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "orders in the market",
+    "Required": "Yes"
+  }
+]

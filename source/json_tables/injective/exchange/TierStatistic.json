@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "tier",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "count",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

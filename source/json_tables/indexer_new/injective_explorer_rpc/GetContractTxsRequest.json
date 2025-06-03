@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "Address of contract",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "from_number",
+    "Type": "int64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "to_number",
+    "Type": "int64",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

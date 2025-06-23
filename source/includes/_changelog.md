@@ -1,7 +1,15 @@
 # Change Log
 
+## 2025-07-10
+- Updated all messages to reflect the changes included in the chain version 1.16, and the Indexer for that chain version
+- Added documentation for `erc20` modules endpoints
+- Added documentation for `evm` modules endpoints
+- Updated all `exchange` module examples to query the exchange v2 endpoints and send exchange v2 messages
+- Python SDK v1.11.0
+- Go SDK v1.58.0
+
 ## 2025-04-21
-- Added documentation for `TXFees` module's endpoints
+- Added documentation for `TXFees` modules endpoints
 - Updated all messages to reflect the changes included in the chain version 1.15, and the Indexer for that chain version
 - Python SDK v1.10.0
 - Go SDK v1.57.0

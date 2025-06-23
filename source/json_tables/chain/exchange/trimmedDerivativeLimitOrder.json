@@ -1,8 +1,8 @@
 [
-    {"Parameter": "price", "Type": "Decimal", "Description": "Order price"},
-    {"Parameter": "quantity", "Type": "Decimal", "Description": "Order quantity"},
-    {"Parameter": "margin", "Type": "Decimal", "Description": "Order margin"},
-    {"Parameter": "fillable", "Type": "Decimal", "Description": "The remaining fillable amount of the order"},
+    {"Parameter": "price", "Type": "Decimal", "Description": "Order price (in human redable format)"},
+    {"Parameter": "quantity", "Type": "Decimal", "Description": "Order quantity (in human redable format)"},
+    {"Parameter": "margin", "Type": "Decimal", "Description": "Order margin (in human redable format)"},
+    {"Parameter": "fillable", "Type": "Decimal", "Description": "The remaining fillable amount of the order (in human redable format)"},
     {"Parameter": "is_buy", "Type": "Boolean", "Description": "True if the order is a buy order"},
     {"Parameter": "order_hash", "Type": "String", "Description": "The order hash"},
     {"Parameter": "cid", "Type": "String", "Description": "The client order ID provided by the creator"}

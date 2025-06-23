@@ -8,7 +8,7 @@
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": "derivative_market_ids_to_cancel_all.",
+    "Description": "subaccount_id only used for the spot_market_ids_to_cancel_all and derivative_market_ids_to_cancel_all.",
     "Required": "Yes"
   },
   {

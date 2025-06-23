@@ -8,7 +8,7 @@
   {
     "Parameter": "denoms",
     "Type": "string array",
-    "Description": "the subaccount are provided.",
+    "Description": "Filter balances by denoms. If not set, the balances of all the denoms for the subaccount are provided.",
     "Required": "Yes"
   }
 ]

@@ -12,12 +12,12 @@
   {
     "Parameter": "event_nonce",
     "Type": "uint64",
-    "Description": "deposit"
+    "Description": "The event nonce of WithdrawalClaim event emitted by Ethereum chain upon deposit"
   },
   {
     "Parameter": "event_height",
     "Type": "uint64",
-    "Description": "deposit"
+    "Description": "The block height of WithdrawalClaim event emitted by Ethereum chain upon deposit"
   },
   {
     "Parameter": "amount",

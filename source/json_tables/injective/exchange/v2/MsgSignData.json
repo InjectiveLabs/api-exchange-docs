@@ -8,7 +8,7 @@
   {
     "Parameter": "Data",
     "Type": "byte array",
-    "Description": "etc)",
+    "Description": "Data represents the raw bytes of the content that is signed (text, json, etc)",
     "Required": "Yes"
   }
 ]

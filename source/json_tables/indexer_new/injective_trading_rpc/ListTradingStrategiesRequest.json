@@ -32,13 +32,13 @@
   {
     "Parameter": "start_time",
     "Type": "int64",
-    "Description": "trading strategy",
+    "Description": "The starting timestamp in UNIX milliseconds for the creation time of the trading strategy",
     "Required": "Yes"
   },
   {
     "Parameter": "end_time",
     "Type": "int64",
-    "Description": "trading strategy",
+    "Description": "The ending timestamp in UNIX milliseconds for the creation time of the trading strategy",
     "Required": "Yes"
   },
   {
@@ -68,7 +68,7 @@
   {
     "Parameter": "last_executed_time",
     "Type": "int64",
-    "Description": "of the trading strategy",
+    "Description": "The last executed timestamp in UNIX milliseconds for the last executed time of the trading strategy",
     "Required": "Yes"
   },
   {
@@ -86,7 +86,7 @@
   {
     "Parameter": "with_performance",
     "Type": "bool",
-    "Description": "response",
+    "Description": "Indicates whether the trading strategy performance should be included in the response",
     "Required": "Yes"
   }
 ]

@@ -2,16 +2,16 @@
   {
     "Parameter": "max_age",
     "Type": "uint64",
-    "Description": "present on the chain."
+    "Description": "MaxAge restricts the oracle price records oldest age in seconds from the current block time to consider. A value of 0 means use all the records present on the chain."
   },
   {
     "Parameter": "include_raw_history",
     "Type": "bool",
-    "Description": "computation is included in the response"
+    "Description": "If IncludeRawHistory is true, the raw underlying data used for the computation is included in the response"
   },
   {
     "Parameter": "include_metadata",
     "Type": "bool",
-    "Description": "response"
+    "Description": "If IncludeMetadata is true, metadata on the computation is included in the response"
   }
 ]

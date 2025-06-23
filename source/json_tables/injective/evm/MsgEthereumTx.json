@@ -20,7 +20,7 @@
   {
     "Parameter": "from",
     "Type": "byte array",
-    "Description": "secp256k1 elliptic curve",
+    "Description": "from is the bytes of ethereum signer address. This address value is checked against the address derived from the signature (V, R, S) using the secp256k1 elliptic curve",
     "Required": "Yes"
   },
   {

@@ -2,7 +2,7 @@
   {
     "Parameter": "group_count",
     "Type": "uint32",
-    "Description": "no grouping is used"
+    "Description": "GroupCount refers to the number of groups used. Equals RecordsSampleSize if no grouping is used"
   },
   {
     "Parameter": "records_sample_size",
@@ -12,12 +12,12 @@
   {
     "Parameter": "mean",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "over the price records ∑ (price) / prices_count"
+    "Description": "Mean refers to the arithmetic mean For trades, the mean is the VWAP computed over the grouped trade records ∑ (price * quantity) / ∑ quantity For oracle prices, the mean is computed over the price records ∑ (price) / prices_count"
   },
   {
     "Parameter": "twap",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "∆t_i) / ∑ ∆t_i where ∆t_i = t_i - t_{i-1}"
+    "Description": "TWAP refers to the time-weighted average price which equals ∑ (price_i * ∆t_i) / ∑ ∆t_i where ∆t_i = t_i - t_{i-1}"
   },
   {
     "Parameter": "first_timestamp",

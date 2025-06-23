@@ -17,7 +17,7 @@
   {
     "Parameter": "final_tally_result",
     "Type": "TallyResult",
-    "Description": "proposal's voting period has ended."
+    "Description": "final_tally_result is the final tally result of the proposal. When querying a proposal via gRPC, this field is not populated until the proposal's voting period has ended."
   },
   {
     "Parameter": "submit_time",

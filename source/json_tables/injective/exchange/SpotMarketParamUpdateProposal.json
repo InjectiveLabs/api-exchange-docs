@@ -27,17 +27,17 @@
   {
     "Parameter": "relayer_fee_share_rate",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "market"
+    "Description": "relayer_fee_share_rate defines the relayer fee share rate for the spot market"
   },
   {
     "Parameter": "min_price_tick_size",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "margin"
+    "Description": "min_price_tick_size defines the minimum tick size of the order's price and margin"
   },
   {
     "Parameter": "min_quantity_tick_size",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "quantity"
+    "Description": "min_quantity_tick_size defines the minimum tick size of the order's quantity"
   },
   {
     "Parameter": "status",
@@ -52,7 +52,7 @@
   {
     "Parameter": "min_notional",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "orders in the market"
+    "Description": "min_notional defines the minimum notional (in quote asset) required for orders in the market"
   },
   {
     "Parameter": "admin_info",

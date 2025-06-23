@@ -2,7 +2,7 @@
   {
     "Parameter": "market_id",
     "Type": "string",
-    "Description": "markets"
+    "Description": "DerivativeMarket ID is crypto.Keccak256Hash([]byte((oracleType.String() + ticker + quoteDenom + oracleBase + oracleQuote))) for perpetual markets and crypto.Keccak256Hash([]byte((oracleType.String() + ticker + quoteDenom + oracleBase + oracleQuote + strconv.Itoa(int(expiry))))) for expiry futures markets"
   },
   {
     "Parameter": "market_status",
@@ -12,7 +12,7 @@
   {
     "Parameter": "ticker",
     "Type": "string",
-    "Description": "asset."
+    "Description": "A name of the pair in format AAA/BBB, where AAA is base asset, BBB is quote asset."
   },
   {
     "Parameter": "oracle_base",

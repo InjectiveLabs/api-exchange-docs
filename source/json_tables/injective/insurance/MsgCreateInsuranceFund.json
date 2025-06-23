@@ -20,13 +20,13 @@
   {
     "Parameter": "oracle_base",
     "Type": "string",
-    "Description": "binary options market.",
+    "Description": "Oracle base currency of the derivative market OR the oracle symbol for the binary options market.",
     "Required": "Yes"
   },
   {
     "Parameter": "oracle_quote",
     "Type": "string",
-    "Description": "the binary options market.",
+    "Description": "Oracle quote currency of the derivative market OR the oracle provider for the binary options market.",
     "Required": "Yes"
   },
   {
@@ -38,7 +38,7 @@
   {
     "Parameter": "expiry",
     "Type": "int64",
-    "Description": "for binary options markets.",
+    "Description": "Expiration time of the derivative market. Should be -1 for perpetual or -2 for binary options markets.",
     "Required": "Yes"
   },
   {

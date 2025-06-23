@@ -17,7 +17,7 @@
   {
     "Parameter": "config_count",
     "Type": "uint64",
-    "Description": "settings"
+    "Description": "config_count ordinal number of this config setting among all config settings"
   },
   {
     "Parameter": "latest_config_block_number",

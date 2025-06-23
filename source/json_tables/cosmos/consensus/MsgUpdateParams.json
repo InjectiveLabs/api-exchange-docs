@@ -8,7 +8,7 @@
   {
     "Parameter": "block",
     "Type": "v1.BlockParams",
-    "Description": "NOTE: All parameters must be supplied.",
+    "Description": "params defines the x/consensus parameters to update. VersionsParams is not included in this Msg because it is tracked separarately in x/upgrade.  NOTE: All parameters must be supplied.",
     "Required": "No"
   },
   {

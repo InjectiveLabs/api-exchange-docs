@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address is the bech32-encoded address of the auxiliary signer. If using AuxSignerData across different chains, the bech32 prefix of the target chain (where the final transaction is broadcasted) should be used."
+  },
+  {
+    "Parameter": "sign_doc",
+    "Type": "SignDocDirectAux",
+    "Description": "sign_doc is the SIGN_MODE_DIRECT_AUX sign doc that the auxiliary signer signs. Note: we use the same sign doc even if we're signing with LEGACY_AMINO_JSON."
+  },
+  {
+    "Parameter": "mode",
+    "Type": "signing.SignMode",
+    "Description": "mode is the signing mode of the single signer."
+  },
+  {
+    "Parameter": "sig",
+    "Type": "byte array",
+    "Description": "sig is the signature of the sign doc."
+  }
+]

@@ -12,21 +12,22 @@ Get details of a single spot market.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/1_Market.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/1_Market.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/1_Market.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/1_Market.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     market_id = "0x0611780ba69656949525013d947713300f56c37b6175e02f26bffa495c3208fe"
     market = await client.fetch_spot_market(market_id=market_id)
-    print(market)
+    print(json.dumps(market, indent=2))
 
 
 if __name__ == "__main__":
@@ -34,8 +35,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/1_Market/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/1_Market/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/1_Market/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/1_Market/example.go -->
 ```go
 package main
 
@@ -63,7 +64,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -181,25 +182,26 @@ Get a list of spot markets.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/2_Markets.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/2_Markets.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/2_Markets.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/2_Markets.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     market_status = "active"
     base_denom = "inj"
     quote_denom = "peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5"
     market = await client.fetch_spot_markets(
         market_statuses=[market_status], base_denom=base_denom, quote_denom=quote_denom
     )
-    print(market)
+    print(json.dumps(market, indent=2))
 
 
 if __name__ == "__main__":
@@ -207,8 +209,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/2_Markets/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/2_Markets/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/2_Markets/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/2_Markets/example.go -->
 ```go
 package main
 
@@ -244,7 +246,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -390,16 +392,16 @@ Stream live updates of spot markets.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/3_StreamMarkets.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/3_StreamMarkets.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/3_StreamMarkets.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/3_StreamMarkets.py -->
 ```py
 import asyncio
 from typing import Any, Dict
 
 from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def market_event_processor(event: Dict[str, Any]):
@@ -417,7 +419,7 @@ def stream_closed_processor():
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.mainnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
 
     task = asyncio.get_event_loop().create_task(
         client.listen_spot_markets_updates(
@@ -436,8 +438,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/3_StreamMarket/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/3_StreamMarket/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/3_StreamMarket/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/3_StreamMarket/example.go -->
 ```go
 package main
 
@@ -475,7 +477,7 @@ func main() {
 				fmt.Println(err)
 				return
 			}
-			str, _ := json.MarshalIndent(res, "", " ")
+			str, _ := json.MarshalIndent(res, "", "\t")
 			fmt.Print(string(str))
 		}
 	}
@@ -608,19 +610,20 @@ List history of orders (all states) for a spot market.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/15_HistoricalOrders.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/15_HistoricalOrders.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/15_HistoricalOrders.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/15_HistoricalOrders.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     market_ids = ["0x0611780ba69656949525013d947713300f56c37b6175e02f26bffa495c3208fe"]
     subaccount_id = "0xbdaedec95d563fb05240d6e01821008454c24c36000000000000000000000000"
     skip = 10
@@ -633,7 +636,7 @@ async def main() -> None:
         order_types=order_types,
         pagination=pagination,
     )
-    print(orders)
+    print(json.dumps(orders, indent=2))
 
 
 if __name__ == "__main__":
@@ -641,8 +644,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/14_HistoricalOrders/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/14_HistoricalOrders/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/14_HistoricalOrders/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/14_HistoricalOrders/example.go -->
 ```go
 package main
 
@@ -683,7 +686,7 @@ func main() {
 		panic(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -981,16 +984,16 @@ Stream order updates for spot markets. If no parameters are given, updates to al
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/9_StreamHistoricalOrders.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/9_StreamHistoricalOrders.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/9_StreamHistoricalOrders.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/9_StreamHistoricalOrders.py -->
 ```py
 import asyncio
 from typing import Any, Dict
 
 from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def order_event_processor(event: Dict[str, Any]):
@@ -1007,7 +1010,7 @@ def stream_closed_processor():
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     market_id = "0x0611780ba69656949525013d947713300f56c37b6175e02f26bffa495c3208fe"
     order_direction = "buy"
 
@@ -1030,8 +1033,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/15_StreamHistoricalOrders/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/15_StreamHistoricalOrders/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/15_StreamHistoricalOrders/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/15_StreamHistoricalOrders/example.go -->
 ```go
 package main
 
@@ -1077,7 +1080,7 @@ func main() {
 				panic(err)
 				return
 			}
-			str, _ := json.MarshalIndent(res, "", " ")
+			str, _ := json.MarshalIndent(res, "", "\t")
 			fmt.Print(string(str))
 		}
 	}
@@ -1212,18 +1215,19 @@ Get trade history for a spot market. The default request returns all spot trades
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/6_Trades.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/6_Trades.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/6_Trades.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/6_Trades.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     market_ids = ["0x0611780ba69656949525013d947713300f56c37b6175e02f26bffa495c3208fe"]
     execution_side = "taker"
     direction = "buy"
@@ -1236,7 +1240,7 @@ async def main() -> None:
         direction=direction,
         execution_types=execution_types,
     )
-    print(orders)
+    print(json.dumps(orders, indent=2))
 
 
 if __name__ == "__main__":
@@ -1244,8 +1248,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/16_TradesV2/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/16_TradesV2/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/16_TradesV2/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/16_TradesV2/example.go -->
 ```go
 package main
 
@@ -1280,7 +1284,7 @@ func main() {
 		panic(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -1565,16 +1569,16 @@ Stream newly executed trades of spot markets. The default request streams trades
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/10_StreamTrades.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/10_StreamTrades.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/10_StreamTrades.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/10_StreamTrades.py -->
 ```py
 import asyncio
 from typing import Any, Dict
 
 from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def trade_event_processor(event: Dict[str, Any]):
@@ -1591,7 +1595,7 @@ def stream_closed_processor():
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     market_ids = [
         "0x0611780ba69656949525013d947713300f56c37b6175e02f26bffa495c3208fe",
         "0x7a57e705bb4e09c88aecfc295569481dbf2fe1d5efe364651fbe72385938e9b0",
@@ -1623,8 +1627,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/17_StreamTradesV2/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/17_StreamTradesV2/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/17_StreamTradesV2/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/17_StreamTradesV2/example.go -->
 ```go
 package main
 
@@ -1668,7 +1672,7 @@ func main() {
 				fmt.Println(err)
 				return
 			}
-			str, _ := json.MarshalIndent(res, "", " ")
+			str, _ := json.MarshalIndent(res, "", "\t")
 			fmt.Print(string(str))
 		}
 	}
@@ -1824,24 +1828,26 @@ Get an orderbook snapshot for one or more spot markets.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/14_Orderbooks.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/14_Orderbooks.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/14_Orderbooks.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/14_Orderbooks.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     market_ids = [
         "0x0611780ba69656949525013d947713300f56c37b6175e02f26bffa495c3208fe",
         "0x7a57e705bb4e09c88aecfc295569481dbf2fe1d5efe364651fbe72385938e9b0",
     ]
-    orderbooks = await client.fetch_spot_orderbooks_v2(market_ids=market_ids)
-    print(orderbooks)
+    depth = 1
+    orderbooks = await client.fetch_spot_orderbooks_v2(market_ids=market_ids, depth=depth)
+    print(json.dumps(orderbooks, indent=2))
 
 
 if __name__ == "__main__":
@@ -1849,8 +1855,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/13_Orderbooks/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/13_Orderbooks/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/13_Orderbooks/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/13_Orderbooks/example.go -->
 ```go
 package main
 
@@ -1873,12 +1879,13 @@ func main() {
 
 	ctx := context.Background()
 	marketIds := []string{"0xa508cb32923323679f29a032c70342c147c17d0145625922b0ef22e955c844c0"}
-	res, err := exchangeClient.GetSpotOrderbooksV2(ctx, marketIds)
+	depth := int32(10)
+	res, err := exchangeClient.GetSpotOrderbooksV2(ctx, marketIds, depth)
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -1995,16 +2002,16 @@ Stream orderbook snapshot updates for one or more spot markets.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/7_StreamOrderbookSnapshot.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/7_StreamOrderbookSnapshot.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/7_StreamOrderbookSnapshot.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/7_StreamOrderbookSnapshot.py -->
 ```py
 import asyncio
 from typing import Any, Dict
 
 from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def orderbook_event_processor(event: Dict[str, Any]):
@@ -2021,7 +2028,7 @@ def stream_closed_processor():
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     market_ids = [
         "0x0611780ba69656949525013d947713300f56c37b6175e02f26bffa495c3208fe",
         "0x7a57e705bb4e09c88aecfc295569481dbf2fe1d5efe364651fbe72385938e9b0",
@@ -2045,8 +2052,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/7_StreamOrderbook/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/7_StreamOrderbook/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/7_StreamOrderbook/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/7_StreamOrderbook/example.go -->
 ```go
 package main
 
@@ -2174,8 +2181,8 @@ Stream incremental orderbook updates for one or more spot markets. This stream s
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/8_StreamOrderbookUpdate.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/8_StreamOrderbookUpdate.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/8_StreamOrderbookUpdate.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/8_StreamOrderbookUpdate.py -->
 ```py
 import asyncio
 from decimal import Decimal
@@ -2183,8 +2190,8 @@ from typing import Any, Dict
 
 from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 def stream_error_processor(exception: RpcError):
@@ -2212,9 +2219,9 @@ class Orderbook:
         self.levels = {"buys": {}, "sells": {}}
 
 
-async def load_orderbook_snapshot(async_client: AsyncClient, orderbook: Orderbook):
+async def load_orderbook_snapshot(client: IndexerClient, orderbook: Orderbook):
     # load the snapshot
-    res = await async_client.fetch_spot_orderbooks_v2(market_ids=[orderbook.market_id])
+    res = await client.fetch_spot_orderbooks_v2(market_ids=[orderbook.market_id], depth=0)
     for snapshot in res["orderbooks"]:
         if snapshot["marketId"] != orderbook.market_id:
             raise Exception("unexpected snapshot")
@@ -2233,13 +2240,12 @@ async def load_orderbook_snapshot(async_client: AsyncClient, orderbook: Orderboo
                 quantity=Decimal(sell["quantity"]),
                 timestamp=int(sell["timestamp"]),
             )
-        break
 
 
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    async_client = AsyncClient(network)
+    client = IndexerClient(network)
 
     market_id = "0x0611780ba69656949525013d947713300f56c37b6175e02f26bffa495c3208fe"
     orderbook = Orderbook(market_id=market_id)
@@ -2251,7 +2257,7 @@ async def main() -> None:
 
     # start getting price levels updates
     task = asyncio.get_event_loop().create_task(
-        async_client.listen_spot_orderbook_updates(
+        client.listen_spot_orderbook_updates(
             market_ids=[market_id],
             callback=queue_event,
             on_end_callback=stream_closed_processor,
@@ -2261,7 +2267,7 @@ async def main() -> None:
     tasks.append(task)
 
     # load the snapshot once we are already receiving updates, so we don't miss any
-    await load_orderbook_snapshot(async_client=async_client, orderbook=orderbook)
+    await load_orderbook_snapshot(client=client, orderbook=orderbook)
 
     task = asyncio.get_event_loop().create_task(
         apply_orderbook_update(orderbook=orderbook, updates_queue=updates_queue)
@@ -2335,8 +2341,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/8_StreamOrderbookUpdate/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/8_StreamOrderbookUpdate/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/8_StreamOrderbookUpdate/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/8_StreamOrderbookUpdate/example.go -->
 ```go
 package main
 
@@ -2411,7 +2417,8 @@ func main() {
 
 	// prepare orderbooks map
 	orderbooks := map[string]*MapOrderbook{}
-	res, err := exchangeClient.GetSpotOrderbooksV2(ctx, marketIds)
+	depth := int32(0)
+	res, err := exchangeClient.GetSpotOrderbooksV2(ctx, marketIds, depth)
 	if err != nil {
 		panic(err)
 	}
@@ -2496,7 +2503,7 @@ func main() {
 			}
 		}
 
-		res, _ = exchangeClient.GetSpotOrderbooksV2(ctx, marketIds)
+		res, _ = exchangeClient.GetSpotOrderbooksV2(ctx, marketIds, depth)
 		fmt.Println("query", res.Orderbooks[0].Orderbook.Sequence, len(res.Orderbooks[0].Orderbook.Sells), len(res.Orderbooks[0].Orderbook.Buys))
 
 		// print orderbook
@@ -2616,20 +2623,21 @@ Get orders of a subaccount.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/11_SubaccountOrdersList.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/11_SubaccountOrdersList.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/11_SubaccountOrdersList.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/11_SubaccountOrdersList.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     subaccount_id = "0xc7dca7c15c364865f77a4fb67ab11dc95502e6fe000000000000000000000001"
     market_id = "0x0611780ba69656949525013d947713300f56c37b6175e02f26bffa495c3208fe"
     skip = 10
@@ -2638,7 +2646,7 @@ async def main() -> None:
     orders = await client.fetch_spot_subaccount_orders_list(
         subaccount_id=subaccount_id, market_id=market_id, pagination=pagination
     )
-    print(orders)
+    print(json.dumps(orders, indent=2))
 
 
 if __name__ == "__main__":
@@ -2646,8 +2654,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/11_SubaccountOrdersList/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/11_SubaccountOrdersList/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/11_SubaccountOrdersList/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/11_SubaccountOrdersList/example.go -->
 ```go
 package main
 
@@ -2687,7 +2695,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -2839,20 +2847,21 @@ Get trades of a subaccount.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/12_SubaccountTradesList.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/spot_exchange_rpc/12_SubaccountTradesList.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/12_SubaccountTradesList.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/spot_exchange_rpc/12_SubaccountTradesList.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     subaccount_id = "0xaf79152ac5df276d9a8e1e2e22822f9713474902000000000000000000000000"
     market_id = "0x0611780ba69656949525013d947713300f56c37b6175e02f26bffa495c3208fe"
     execution_type = "market"
@@ -2867,7 +2876,7 @@ async def main() -> None:
         direction=direction,
         pagination=pagination,
     )
-    print(trades)
+    print(json.dumps(trades, indent=2))
 
 
 if __name__ == "__main__":
@@ -2875,8 +2884,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/12_SubaccountTradesList/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/spot/12_SubaccountTradesList/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/12_SubaccountTradesList/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/spot/12_SubaccountTradesList/example.go -->
 ```go
 package main
 
@@ -2916,7 +2925,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```

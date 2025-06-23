@@ -69,7 +69,9 @@ If you are a trader on existing centralized exchanges, you will be familiar with
   - The gas costs are currently minimal, 20K transactions will cost about 1 INJ.
   - You can set the fee_recipient to your own wallet address to save 40% of all trading fees.
 
-**Note: trading from bank balances, which automatically uses the default subaccount 0, will cost roughly 15% more gas than trading from other subaccounts. API traders can use other subaccounts to trade to avoid the extra gas fees—read [here](https://injective.notion.site/The-new-trading-logic-to-be-introduced-in-v1-10-8b422f7bec6c4cac96459d558e917b6d) for more information.**
+<aside class="warning">
+Note: trading from bank balances, which automatically uses the default subaccount 0, will cost roughly 15% more gas than trading from other subaccounts. API traders can use other subaccounts to trade to avoid the extra gas fees—read [here](https://injective.notion.site/The-new-trading-logic-to-be-introduced-in-v1-10-8b422f7bec6c4cac96459d558e917b6d) for more information.
+</aside>
 
 
 ## Mark Price Margin Requirement

@@ -132,7 +132,7 @@
   {
     "Parameter": "exit_type",
     "Type": "string",
-    "Description": "strategy ended"
+    "Description": "Indicate how bot will convert funds (into base or quote or keep as is) after strategy ended"
   },
   {
     "Parameter": "stop_loss_config",
@@ -222,32 +222,32 @@
   {
     "Parameter": "initial_base_price",
     "Type": "string",
-    "Description": "Use strategyFinalData if available to have more accurate data"
+    "Description": "Initial base price of the trading strategy from asset price service Use strategyFinalData if available to have more accurate data"
   },
   {
     "Parameter": "initial_quote_price",
     "Type": "string",
-    "Description": "Use strategyFinalData if available to have more accurate data"
+    "Description": "Initial quote price of the trading strategy from asset price service Use strategyFinalData if available to have more accurate data"
   },
   {
     "Parameter": "current_base_price",
     "Type": "string",
-    "Description": "Use strategyFinalData if available to have more accurate data"
+    "Description": "Current base price of the trading strategy from asset price service Use strategyFinalData if available to have more accurate data"
   },
   {
     "Parameter": "current_quote_price",
     "Type": "string",
-    "Description": "Use strategyFinalData if available to have more accurate data"
+    "Description": "Current quote price of the trading strategy from asset price service Use strategyFinalData if available to have more accurate data"
   },
   {
     "Parameter": "final_base_price",
     "Type": "string",
-    "Description": "Use strategyFinalData if available to have more accurate data"
+    "Description": "Final base price of the trading strategy from asset price service Use strategyFinalData if available to have more accurate data"
   },
   {
     "Parameter": "final_quote_price",
     "Type": "string",
-    "Description": "Use strategyFinalData if available to have more accurate data"
+    "Description": "Final quote price of the trading strategy from asset price service Use strategyFinalData if available to have more accurate data"
   },
   {
     "Parameter": "final_data",

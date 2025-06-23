@@ -38,13 +38,13 @@
   {
     "Parameter": "start_time",
     "Type": "int64",
-    "Description": "older than",
+    "Description": "The starting timestamp in UNIX milliseconds that the trades must be equal or older than",
     "Required": "Yes"
   },
   {
     "Parameter": "end_time",
     "Type": "int64",
-    "Description": "younger than",
+    "Description": "The ending timestamp in UNIX milliseconds that the trades must be equal or younger than",
     "Required": "Yes"
   },
   {
@@ -56,7 +56,7 @@
   {
     "Parameter": "subaccount_ids",
     "Type": "string array",
-    "Description": "trades from multiple subaccounts",
+    "Description": "Subaccount ids of traders we want to get trades. Use this field for fetching trades from multiple subaccounts",
     "Required": "Yes"
   },
   {

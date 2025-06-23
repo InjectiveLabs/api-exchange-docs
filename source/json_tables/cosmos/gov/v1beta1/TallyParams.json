@@ -2,7 +2,7 @@
   {
     "Parameter": "quorum",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "considered valid."
+    "Description": "Minimum percentage of total stake needed to vote for a result to be considered valid."
   },
   {
     "Parameter": "threshold",
@@ -12,6 +12,6 @@
   {
     "Parameter": "veto_threshold",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "vetoed. Default value: 1/3."
+    "Description": "Minimum value of Veto votes to Total votes ratio for proposal to be vetoed. Default value: 1/3."
   }
 ]

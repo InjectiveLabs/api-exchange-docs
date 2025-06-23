@@ -7,6 +7,6 @@
   {
     "Parameter": "pagination",
     "Type": "query.PageResponse",
-    "Description": "populated if the denoms field in the request is empty."
+    "Description": "pagination defines the pagination in the response. This field is only populated if the denoms field in the request is empty."
   }
 ]

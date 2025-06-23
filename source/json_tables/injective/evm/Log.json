@@ -42,6 +42,6 @@
   {
     "Parameter": "removed",
     "Type": "bool",
-    "Description": "through a filter query."
+    "Description": "removed is true if this log was reverted due to a chain reorganisation. You must pay attention to this field if you receive logs through a filter query."
   }
 ]

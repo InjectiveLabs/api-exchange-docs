@@ -7,7 +7,7 @@
   {
     "Parameter": "exponent",
     "Type": "uint32",
-    "Description": "exponent = 6, thus: 1 atom = 10^6 uatom)."
+    "Description": "exponent represents power of 10 exponent that one must raise the base_denom to in order to equal the given DenomUnit's denom 1 denom = 10^exponent base_denom (e.g. with a base_denom of uatom, one can create a DenomUnit of 'atom' with exponent = 6, thus: 1 atom = 10^6 uatom)."
   },
   {
     "Parameter": "aliases",

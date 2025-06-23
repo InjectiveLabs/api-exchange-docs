@@ -22,7 +22,7 @@
   {
     "Parameter": "latest_aggregator_round_ids",
     "Type": "FeedLatestAggregatorRoundIDs array",
-    "Description": "feedId"
+    "Description": "latest_aggregator_round_ids stores the latest aggregator round ID for each feedId"
   },
   {
     "Parameter": "reward_pools",

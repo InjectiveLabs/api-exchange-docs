@@ -37,7 +37,7 @@
   {
     "Parameter": "index_by_sender_contract",
     "Type": "int32",
-    "Description": "to_number, that support contract filter"
+    "Description": "Numerical index by sender + acontract to use in pagination from_number and to_number, that support contract filter"
   },
   {
     "Parameter": "tx_hash",

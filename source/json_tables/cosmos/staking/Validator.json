@@ -52,7 +52,7 @@
   {
     "Parameter": "min_self_delegation",
     "Type": "cosmossdk_io_math.Int",
-    "Description": "Since: cosmos-sdk 0.46"
+    "Description": "min_self_delegation is the validator's self declared minimum self delegation.  Since: cosmos-sdk 0.46"
   },
   {
     "Parameter": "unbonding_on_hold_ref_count",

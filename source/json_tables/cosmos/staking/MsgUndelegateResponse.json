@@ -7,6 +7,6 @@
   {
     "Parameter": "amount",
     "Type": "types1.Coin",
-    "Description": "Since: cosmos-sdk 0.50"
+    "Description": "amount returns the amount of undelegated coins  Since: cosmos-sdk 0.50"
   }
 ]

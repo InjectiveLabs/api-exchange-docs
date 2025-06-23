@@ -2,7 +2,7 @@
   {
     "Parameter": "pagination",
     "Type": "query.PageRequest",
-    "Description": "Since: cosmos-sdk 0.43",
+    "Description": "pagination defines an optional pagination for the request.  Since: cosmos-sdk 0.43",
     "Required": "No"
   }
 ]

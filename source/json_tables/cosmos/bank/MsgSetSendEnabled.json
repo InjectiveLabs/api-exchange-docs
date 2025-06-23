@@ -14,7 +14,7 @@
   {
     "Parameter": "use_default_for",
     "Type": "string array",
-    "Description": "it will be ignored.",
+    "Description": "use_default_for is a list of denoms that should use the params.default_send_enabled value. Denoms listed here will have their SendEnabled entries deleted. If a denom is included that doesn't have a SendEnabled entry, it will be ignored.",
     "Required": "Yes"
   }
 ]

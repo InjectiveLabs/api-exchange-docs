@@ -42,7 +42,7 @@
   {
     "Parameter": "logo",
     "Type": "string",
-    "Description": "on) not a random URL because of front end limitation"
+    "Description": "guild's logo, at the moment it supports numberic string (i.e '1', '2' and so on) not a random URL because of front end limitation"
   },
   {
     "Parameter": "total_tvl",
@@ -62,7 +62,7 @@
   {
     "Parameter": "is_active",
     "Type": "bool",
-    "Description": "requirements"
+    "Description": "Active status of guild, true when master total tvl meets the minimum requirements"
   },
   {
     "Parameter": "master_balance",

@@ -50,43 +50,43 @@
   {
     "Parameter": "maker_fee_rate",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "market",
+    "Description": "maker_fee_rate defines the trade fee rate for makers on the expiry futures market",
     "Required": "Yes"
   },
   {
     "Parameter": "taker_fee_rate",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "market",
+    "Description": "taker_fee_rate defines the trade fee rate for takers on the expiry futures market",
     "Required": "Yes"
   },
   {
     "Parameter": "initial_margin_ratio",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "market",
+    "Description": "initial_margin_ratio defines the initial margin ratio for the derivative market",
     "Required": "Yes"
   },
   {
     "Parameter": "maintenance_margin_ratio",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "derivative market",
+    "Description": "maintenance_margin_ratio defines the maintenance margin ratio for the derivative market",
     "Required": "Yes"
   },
   {
     "Parameter": "min_price_tick_size",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "margin",
+    "Description": "min_price_tick_size defines the minimum tick size of the order's price and margin",
     "Required": "Yes"
   },
   {
     "Parameter": "min_quantity_tick_size",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "quantity",
+    "Description": "min_quantity_tick_size defines the minimum tick size of the order's quantity",
     "Required": "Yes"
   },
   {
     "Parameter": "min_notional",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "orders in the market",
+    "Description": "min_notional defines the minimum notional (in quote asset) required for orders in the market",
     "Required": "Yes"
   },
   {

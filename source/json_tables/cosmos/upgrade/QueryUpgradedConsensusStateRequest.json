@@ -2,7 +2,7 @@
   {
     "Parameter": "last_height",
     "Type": "int64",
-    "Description": "as this is the height under which next consensus state is stored",
+    "Description": "last height of the current chain must be sent in request as this is the height under which next consensus state is stored",
     "Required": "Yes"
   }
 ]

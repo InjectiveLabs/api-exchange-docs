@@ -2,7 +2,7 @@
   {
     "Parameter": "params_type",
     "Type": "string",
-    "Description": "\"tallying\" or \"deposit\".",
+    "Description": "params_type defines which parameters to query for, can be one of \"voting\", \"tallying\" or \"deposit\".",
     "Required": "Yes"
   }
 ]

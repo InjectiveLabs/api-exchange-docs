@@ -8,7 +8,7 @@
   {
     "Parameter": "msg_type_urls",
     "Type": "string array",
-    "Description": "authorized to trip will resume.",
+    "Description": "msg_type_urls specifies a list of Msg type URLs to resume processing. If it is left empty all Msg processing for type URLs that the account is authorized to trip will resume.",
     "Required": "Yes"
   }
 ]

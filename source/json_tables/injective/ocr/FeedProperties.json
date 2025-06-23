@@ -7,7 +7,7 @@
   {
     "Parameter": "f",
     "Type": "uint32",
-    "Description": "while still working correctly"
+    "Description": "f maximum number of faulty/dishonest oracles the protocol can tolerate while still working correctly"
   },
   {
     "Parameter": "onchain_config",
@@ -17,12 +17,12 @@
   {
     "Parameter": "offchain_config_version",
     "Type": "uint64",
-    "Description": "\"offchain_config\" parameter"
+    "Description": "offchain_config_version version of the serialization format used for \"offchain_config\" parameter"
   },
   {
     "Parameter": "offchain_config",
     "Type": "byte array",
-    "Description": "operation"
+    "Description": "offchain_config serialized data used by oracles to configure their offchain operation"
   },
   {
     "Parameter": "min_answer",
@@ -52,6 +52,6 @@
   {
     "Parameter": "description",
     "Type": "string",
-    "Description": "to"
+    "Description": "short human-readable description of observable this feed's answers pertain to"
   }
 ]

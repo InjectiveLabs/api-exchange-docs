@@ -14,7 +14,7 @@
   {
     "Parameter": "resolve_denom",
     "Type": "bool",
-    "Description": "Since: cosmos-sdk 0.50",
+    "Description": "resolve_denom is the flag to resolve the denom into a human-readable form from the metadata.  Since: cosmos-sdk 0.50",
     "Required": "Yes"
   }
 ]

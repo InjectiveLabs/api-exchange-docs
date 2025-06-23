@@ -7,6 +7,6 @@
   {
     "Parameter": "limit_type_urls",
     "Type": "string array",
-    "Description": "a level other than LEVEL_SOME_MSGS."
+    "Description": "limit_type_urls is used with LEVEL_SOME_MSGS to limit the lists of Msg type URLs that the account can trip. It is an error to use limit_type_urls with a level other than LEVEL_SOME_MSGS."
   }
 ]

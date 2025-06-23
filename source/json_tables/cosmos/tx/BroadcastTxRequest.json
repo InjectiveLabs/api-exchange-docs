@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "tx_bytes",
+    "Type": "byte array",
+    "Description": "tx_bytes is the raw transaction.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "mode",
+    "Type": "BroadcastMode",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

@@ -32,13 +32,13 @@
   {
     "Parameter": "start_time",
     "Type": "int64",
-    "Description": "older than",
+    "Description": "The starting timestamp in UNIX milliseconds that the trades must be equal or older than",
     "Required": "Yes"
   },
   {
     "Parameter": "end_time",
     "Type": "int64",
-    "Description": "younger than",
+    "Description": "The ending timestamp in UNIX milliseconds that the trades must be equal or younger than",
     "Required": "Yes"
   },
   {

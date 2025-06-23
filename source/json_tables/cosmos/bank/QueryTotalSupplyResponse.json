@@ -7,6 +7,6 @@
   {
     "Parameter": "pagination",
     "Type": "query.PageResponse",
-    "Description": "Since: cosmos-sdk 0.43"
+    "Description": "pagination defines the pagination in the response.  Since: cosmos-sdk 0.43"
   }
 ]

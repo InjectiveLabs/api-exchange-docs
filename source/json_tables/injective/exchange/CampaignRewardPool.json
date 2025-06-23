@@ -7,6 +7,6 @@
   {
     "Parameter": "max_campaign_rewards",
     "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
-    "Description": "end of the campaign"
+    "Description": "max_campaign_rewards are the maximum reward amounts to be disbursed at the end of the campaign"
   }
 ]

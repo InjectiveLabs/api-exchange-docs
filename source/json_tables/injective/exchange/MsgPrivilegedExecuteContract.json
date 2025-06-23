@@ -8,7 +8,7 @@
   {
     "Parameter": "funds",
     "Type": "string",
-    "Description": "100inj).",
+    "Description": "funds defines the user's bank coins used to fund the execution (e.g. 100inj).",
     "Required": "Yes"
   },
   {

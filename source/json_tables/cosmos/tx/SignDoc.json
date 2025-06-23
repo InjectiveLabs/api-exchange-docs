@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "body_bytes",
+    "Type": "byte array",
+    "Description": "body_bytes is protobuf serialization of a TxBody that matches the representation in TxRaw."
+  },
+  {
+    "Parameter": "auth_info_bytes",
+    "Type": "byte array",
+    "Description": "auth_info_bytes is a protobuf serialization of an AuthInfo that matches the representation in TxRaw."
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "string",
+    "Description": "chain_id is the unique identifier of the chain this transaction targets. It prevents signed transactions from being used on another chain by an attacker"
+  },
+  {
+    "Parameter": "account_number",
+    "Type": "uint64",
+    "Description": "account_number is the account number of the account in state"
+  }
+]

@@ -7,6 +7,6 @@
   {
     "Parameter": "allow_list",
     "Type": "string array",
-    "Description": "Since: cosmos-sdk 0.47"
+    "Description": "allow_list specifies an optional list of addresses to whom the grantee can send tokens on behalf of the granter. If omitted, any recipient is allowed.  Since: cosmos-sdk 0.47"
   }
 ]

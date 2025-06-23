@@ -12,7 +12,7 @@
   {
     "Parameter": "redemption_notice_period_duration",
     "Type": "time.Duration",
-    "Description": "before the underwriter can claim his tokens"
+    "Description": "redemption_notice_period_duration defines the minimum notice period duration that must pass after an underwriter sends a redemption request before the underwriter can claim his tokens"
   },
   {
     "Parameter": "balance",
@@ -37,12 +37,12 @@
   {
     "Parameter": "oracle_base",
     "Type": "string",
-    "Description": "binary options market."
+    "Description": "Oracle base currency of the derivative market OR the oracle symbol for the binary options market."
   },
   {
     "Parameter": "oracle_quote",
     "Type": "string",
-    "Description": "the binary options market."
+    "Description": "Oracle quote currency of the derivative market OR the oracle provider for the binary options market."
   },
   {
     "Parameter": "oracle_type",
@@ -52,6 +52,6 @@
   {
     "Parameter": "expiry",
     "Type": "int64",
-    "Description": "for binary options markets."
+    "Description": "Expiration time of the derivative market. Should be -1 for perpetual or -2 for binary options markets."
   }
 ]

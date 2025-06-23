@@ -14,7 +14,7 @@
   {
     "Parameter": "predecessors",
     "Type": "MsgEthereumTx array",
-    "Description": "need to be replayed first to get correct context for tracing.",
+    "Description": "predecessors is an array of transactions included in the same block need to be replayed first to get correct context for tracing.",
     "Required": "No"
   },
   {

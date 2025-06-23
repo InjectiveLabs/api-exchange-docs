@@ -2,6 +2,6 @@
   {
     "Parameter": "params",
     "Type": "v1.ConsensusParams",
-    "Description": "tracked separately in the x/upgrade module."
+    "Description": "params are the tendermint consensus params stored in the consensus module. Please note that `params.version` is not populated in this response, it is tracked separately in the x/upgrade module."
   }
 ]

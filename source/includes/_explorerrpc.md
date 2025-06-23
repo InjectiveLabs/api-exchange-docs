@@ -12,29 +12,34 @@ Get the details for a specific transaction.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/1_GetTxByHash.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/1_GetTxByHash.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/1_GetTxByHash.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/1_GetTxByHash.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
-from pyinjective.composer import Composer
+from pyinjective.composer_v2 import Composer
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    client = AsyncClient(network)
-    composer = Composer(network=network.string())
+    client = IndexerClient(network=network)
+    composer = Composer(network=network)
+
     tx_hash = "0F3EBEC1882E1EEAC5B7BDD836E976250F1CD072B79485877CEACCB92ACDDF52"
     transaction_response = await client.fetch_tx_by_tx_hash(tx_hash=tx_hash)
-    print(transaction_response)
+    print("Transaction response:")
+    print(f"{json.dumps(transaction_response, indent=2)}\n")
 
     transaction_messages = composer.unpack_transaction_messages(transaction_data=transaction_response["data"])
-    print(transaction_messages)
+    print("Transaction messages:")
+    print(f"{json.dumps(transaction_messages, indent=2)}\n")
     first_message = transaction_messages[0]
-    print(first_message)
+    print("First message:")
+    print(f"{json.dumps(first_message, indent=2)}\n")
 
 
 if __name__ == "__main__":
@@ -42,8 +47,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/1_GetTxByHash/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/1_GetTxByHash/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/1_GetTxByHash/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/1_GetTxByHash/example.go -->
 ```go
 package main
 
@@ -70,7 +75,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -267,22 +272,24 @@ Get the details for a specific transaction.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/2_AccountTxs.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/2_AccountTxs.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/2_AccountTxs.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/2_AccountTxs.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
-from pyinjective.composer import Composer
+from pyinjective.composer_v2 import Composer
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    client = AsyncClient(network)
-    composer = Composer(network=network.string())
+    client = IndexerClient(network=network)
+    composer = Composer(network=network)
+
     address = "inj1phd706jqzd9wznkk5hgsfkrc8jqxv0kmlj0kex"
     message_type = "cosmos.bank.v1beta1.MsgSend"
     limit = 2
@@ -292,11 +299,14 @@ async def main() -> None:
         message_type=message_type,
         pagination=pagination,
     )
-    print(transactions_response)
+    print("Transactions response:")
+    print(f"{json.dumps(transactions_response, indent=2)}\n")
     first_transaction_messages = composer.unpack_transaction_messages(transaction_data=transactions_response["data"][0])
-    print(first_transaction_messages)
+    print("First transaction messages:")
+    print(f"{json.dumps(first_transaction_messages, indent=2)}\n")
     first_message = first_transaction_messages[0]
-    print(first_message)
+    print("First message:")
+    print(f"{json.dumps(first_message, indent=2)}\n")
 
 
 if __name__ == "__main__":
@@ -304,8 +314,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/2_AccountTxs/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/2_AccountTxs/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/2_AccountTxs/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/2_AccountTxs/example.go -->
 ```go
 package main
 
@@ -341,7 +351,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -683,24 +693,25 @@ Get data for blocks.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/3_Blocks.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/3_Blocks.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/3_Blocks.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/3_Blocks.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network=network)
     limit = 2
     pagination = PaginationOption(limit=limit)
     blocks = await client.fetch_blocks(pagination=pagination)
-    print(blocks)
+    print(json.dumps(blocks, indent=2))
 
 
 if __name__ == "__main__":
@@ -708,8 +719,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/3_Blocks/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/3_Blocks/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/3_Blocks/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/3_Blocks/example.go -->
 ```go
 package main
 
@@ -735,7 +746,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -852,22 +863,23 @@ Get detailed data for a single block.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/4_Block.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/4_Block.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/4_Block.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/4_Block.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network=network)
     block_height = "5825046"
     block = await client.fetch_block(block_id=block_height)
-    print(block)
+    print(json.dumps(block, indent=2))
 
 
 if __name__ == "__main__":
@@ -875,8 +887,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/4_Block/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/4_Block/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/4_Block/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/4_Block/example.go -->
 ```go
 package main
 
@@ -903,7 +915,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -1020,24 +1032,25 @@ Get the transactions.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/5_TxsRequest.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/5_TxsRequest.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/5_TxsRequest.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/5_TxsRequest.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network=network)
     limit = 2
     pagination = PaginationOption(limit=limit)
     txs = await client.fetch_txs(pagination=pagination)
-    print(txs)
+    print(json.dumps(txs, indent=2))
 
 
 if __name__ == "__main__":
@@ -1045,8 +1058,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/5_TxsRequest/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/5_TxsRequest/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/5_TxsRequest/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/5_TxsRequest/example.go -->
 ```go
 package main
 
@@ -1080,7 +1093,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -1249,16 +1262,16 @@ Stream transactions.
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/6_StreamTxs.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/6_StreamTxs.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/6_StreamTxs.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/6_StreamTxs.py -->
 ```py
 import asyncio
 from typing import Any, Dict
 
 from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def tx_event_processor(event: Dict[str, Any]):
@@ -1276,7 +1289,7 @@ def stream_closed_processor():
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network=network)
 
     task = asyncio.get_event_loop().create_task(
         client.listen_txs_updates(
@@ -1295,8 +1308,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/6_StreamTxs/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/6_StreamTxs/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/6_StreamTxs/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/6_StreamTxs/example.go -->
 ```go
 package main
 
@@ -1331,7 +1344,7 @@ func main() {
 			if err != nil {
 				panic(err)
 			}
-			str, _ := json.MarshalIndent(res, "", " ")
+			str, _ := json.MarshalIndent(res, "", "\t")
 			fmt.Print(string(str))
 		}
 	}
@@ -1442,16 +1455,16 @@ Stream blocks.
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/7_StreamBlocks.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/7_StreamBlocks.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/7_StreamBlocks.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/7_StreamBlocks.py -->
 ```py
 import asyncio
 from typing import Any, Dict
 
 from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def block_event_processor(event: Dict[str, Any]):
@@ -1469,7 +1482,7 @@ def stream_closed_processor():
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network=network)
 
     task = asyncio.get_event_loop().create_task(
         client.listen_blocks_updates(
@@ -1488,8 +1501,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/7_StreamBlocks/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/7_StreamBlocks/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/7_StreamBlocks/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/7_StreamBlocks/example.go -->
 ```go
 package main
 
@@ -1524,7 +1537,7 @@ func main() {
 			if err != nil {
 				panic(err)
 			}
-			str, _ := json.MarshalIndent(res, "", " ")
+			str, _ := json.MarshalIndent(res, "", "\t")
 			fmt.Print(string(str))
 		}
 	}
@@ -1623,22 +1636,23 @@ Get info on peggy deposits. By default, deposits for all senders and receivers w
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/8_GetPeggyDeposits.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/8_GetPeggyDeposits.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/8_GetPeggyDeposits.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/8_GetPeggyDeposits.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network=network)
     receiver = "inj1phd706jqzd9wznkk5hgsfkrc8jqxv0kmlj0kex"
     peggy_deposits = await client.fetch_peggy_deposit_txs(receiver=receiver)
-    print(peggy_deposits)
+    print(json.dumps(peggy_deposits, indent=2))
 
 
 if __name__ == "__main__":
@@ -1646,8 +1660,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/8_PeggyDeposits/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/8_PeggyDeposits/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/8_PeggyDeposits/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/8_PeggyDeposits/example.go -->
 ```go
 package main
 
@@ -1682,7 +1696,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -1823,25 +1837,26 @@ Get info on peggy withdrawals.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/9_GetPeggyWithdrawals.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/9_GetPeggyWithdrawals.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/9_GetPeggyWithdrawals.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/9_GetPeggyWithdrawals.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network=network)
     sender = "inj14au322k9munkmx5wrchz9q30juf5wjgz2cfqku"
     limit = 2
     pagination = PaginationOption(limit=limit)
     peggy_deposits = await client.fetch_peggy_withdrawal_txs(sender=sender, pagination=pagination)
-    print(peggy_deposits)
+    print(json.dumps(peggy_deposits, indent=2))
 
 
 if __name__ == "__main__":
@@ -1849,8 +1864,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/9_PeggyWithdrawals/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/9_PeggyWithdrawals/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/9_PeggyWithdrawals/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/9_PeggyWithdrawals/example.go -->
 ```go
 package main
 
@@ -1884,7 +1899,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -2044,20 +2059,21 @@ Get data on IBC transfers.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/10_GetIBCTransfers.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/10_GetIBCTransfers.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/10_GetIBCTransfers.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/10_GetIBCTransfers.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network=network)
     sender = "inj1cll5cv3ezgal30gagkhnq2um6zf6qrmhw4r6c8"
     receiver = "cosmos1usr9g5a4s2qrwl63sdjtrs2qd4a7huh622pg82"
     src_channel = "channel-2"
@@ -2076,7 +2092,7 @@ async def main() -> None:
         dest_port=dest_port,
         pagination=pagination,
     )
-    print(ibc_transfers)
+    print(json.dumps(ibc_transfers, indent=2))
 
 
 if __name__ == "__main__":
@@ -2084,8 +2100,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/10_IBCTransfers/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/10_IBCTransfers/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/10_IBCTransfers/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/10_IBCTransfers/example.go -->
 ```go
 package main
 
@@ -2119,7 +2135,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -2248,21 +2264,22 @@ List all cosmwasm code on injective chain. Results are paginated.
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/15_GetWasmCodes.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/15_GetWasmCodes.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/15_GetWasmCodes.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/15_GetWasmCodes.py -->
 ```py
 import asyncio
+import json
 import logging
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     # network: Network = Network.testnet()
-    network: Network = Network.testnet()
-    client: AsyncClient = AsyncClient(network)
+    network = Network.testnet()
+    client = IndexerClient(network=network)
 
     pagination = PaginationOption(
         limit=10,
@@ -2274,7 +2291,7 @@ async def main() -> None:
         pagination=pagination,
     )
     print("Wasm codes:")
-    print(wasm_codes)
+    print(json.dumps(wasm_codes, indent=2))
 
 
 if __name__ == "__main__":
@@ -2283,8 +2300,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/11_GetWasmCodes/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/11_GetWasmCodes/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/11_GetWasmCodes/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/11_GetWasmCodes/example.go -->
 ```go
 package main
 
@@ -2317,7 +2334,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -2469,20 +2486,20 @@ Get cosmwasm code by its code ID
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/16_GetWasmCodeById.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/16_GetWasmCodeById.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/16_GetWasmCodeById.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/16_GetWasmCodeById.py -->
 ```py
 import asyncio
+import json
 import logging
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
-    # network: Network = Network.testnet()
-    network: Network = Network.testnet()
-    client: AsyncClient = AsyncClient(network)
+    network = Network.testnet()
+    client = IndexerClient(network=network)
 
     code_id = 2008
 
@@ -2490,7 +2507,7 @@ async def main() -> None:
         code_id=code_id,
     )
     print("Wasm code:")
-    print(wasm_code)
+    print(json.dumps(wasm_code, indent=2))
 
 
 if __name__ == "__main__":
@@ -2499,8 +2516,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/12_GetWasmCodeById/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/12_GetWasmCodeById/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/12_GetWasmCodeById/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/12_GetWasmCodeById/example.go -->
 ```go
 package main
 
@@ -2533,7 +2550,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -2603,21 +2620,21 @@ Get cosmwasm instantiated contracts on injective-chain. Results are paginated.
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/17_GetWasmContracts.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/17_GetWasmContracts.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/17_GetWasmContracts.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/17_GetWasmContracts.py -->
 ```py
 import asyncio
+import json
 import logging
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
-    # network: Network = Network.testnet()
-    network: Network = Network.testnet()
-    client: AsyncClient = AsyncClient(network)
+    network = Network.testnet()
+    client = IndexerClient(network=network)
 
     pagination = PaginationOption(
         limit=10,
@@ -2630,7 +2647,7 @@ async def main() -> None:
         pagination=pagination,
     )
     print("Wasm contracts:")
-    print(wasm_contracts)
+    print(json.dumps(wasm_contracts, indent=2))
 
 
 if __name__ == "__main__":
@@ -2639,8 +2656,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/13_GetWasmContracts/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/13_GetWasmContracts/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/13_GetWasmContracts/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/13_GetWasmContracts/example.go -->
 ```go
 package main
 
@@ -2671,7 +2688,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -2851,26 +2868,26 @@ Get cosmwasm contract by its address
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/18_GetWasmContractByAddress.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/18_GetWasmContractByAddress.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/18_GetWasmContractByAddress.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/18_GetWasmContractByAddress.py -->
 ```py
 import asyncio
+import json
 import logging
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
-    # network: Network = Network.testnet()
-    network: Network = Network.testnet()
-    client: AsyncClient = AsyncClient(network)
+    network = Network.testnet()
+    client = IndexerClient(network=network)
 
     address = "inj1yhz4e7df95908jhs9erl87vdzjkdsc24q7afjf"
 
     wasm_contract = await client.fetch_wasm_contract_by_address(address=address)
     print("Wasm contract:")
-    print(wasm_contract)
+    print(json.dumps(wasm_contract, indent=2))
 
 
 if __name__ == "__main__":
@@ -2879,8 +2896,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/14_GetWasmContractByAddress/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/14_GetWasmContractByAddress/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/14_GetWasmContractByAddress/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/14_GetWasmContractByAddress/example.go -->
 ```go
 package main
 
@@ -2912,7 +2929,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -3004,26 +3021,26 @@ Get CW20 balances of an injective account across all instantiated CW20 contracts
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/19_GetCw20Balance.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/19_GetCw20Balance.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/19_GetCw20Balance.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/19_GetCw20Balance.py -->
 ```py
 import asyncio
+import json
 import logging
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
-    # network: Network = Network.testnet()
-    network: Network = Network.testnet()
-    client: AsyncClient = AsyncClient(network)
+    network = Network.testnet()
+    client = IndexerClient(network=network)
 
     address = "inj1phd706jqzd9wznkk5hgsfkrc8jqxv0kmlj0kex"
 
     balance = await client.fetch_cw20_balance(address=address)
     print("Cw20 balance:")
-    print(balance)
+    print(json.dumps(balance, indent=2))
 
 
 if __name__ == "__main__":
@@ -3032,8 +3049,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/15_GetCW20Balance/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/15_GetCW20Balance/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/15_GetCW20Balance/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/15_GetCW20Balance/example.go -->
 ```go
 package main
 
@@ -3065,7 +3082,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -3154,8 +3171,8 @@ Returns contract-related transactions
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/16_GetContractTxs/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/16_GetContractTxs/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/16_GetContractTxs/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/16_GetContractTxs/example.go -->
 ```go
 package main
 
@@ -3192,7 +3209,7 @@ func main() {
 
 	response, err := explorerClient.FetchContractTxs(ctx, req)
 	if err != nil {
-		log.Fatalf("Failed to fetch contract transactions: %v", err)
+		log.Panicf("Failed to fetch contract transactions: %v", err)
 	}
 
 	fmt.Println("Total Contract Transactions:", len(response.Data))
@@ -3202,7 +3219,7 @@ func main() {
 
 	fmt.Printf("\n\n")
 	fmt.Println("Full response:")
-	str, _ := json.MarshalIndent(response, "", " ")
+	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -3639,15 +3656,15 @@ Returns contract-related transactions
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/11_GetContractsTxsV2.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/11_GetContractsTxsV2.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/11_GetContractsTxsV2.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/11_GetContractsTxsV2.py -->
 ```py
 import asyncio
 import time
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
@@ -3655,7 +3672,7 @@ async def main() -> None:
     network = Network.testnet()
 
     # Initialize client
-    client = AsyncClient(network)
+    client = IndexerClient(network=network)
 
     try:
         # Example parameters for fetching contract transactions
@@ -3692,8 +3709,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/17_GetContractTxsV2/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/17_GetContractTxsV2/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/17_GetContractTxsV2/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/17_GetContractTxsV2/example.go -->
 ```go
 package main
 
@@ -3726,12 +3743,12 @@ func main() {
 
 	req := &explorerPB.GetContractTxsV2Request{
 		Address: contractAddress,
-		Limit:   10, // Fetch 10 transactions
+		PerPage: 10, // Fetch 10 transactions
 	}
 
 	response, err := explorerClient.FetchContractTxsV2(ctx, req)
 	if err != nil {
-		log.Fatalf("Failed to fetch contract transactions V2: %v", err)
+		log.Panicf("Failed to fetch contract transactions V2: %v", err)
 	}
 
 	fmt.Println("Total Contract Transactions:", len(response.Data))
@@ -3741,7 +3758,7 @@ func main() {
 
 	fmt.Printf("\n\n")
 	fmt.Println("Full response:")
-	str, _ := json.MarshalIndent(response, "", " ")
+	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -4172,21 +4189,20 @@ Returns validators on the active chain
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/12_GetValidators.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/12_GetValidators.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/12_GetValidators.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/12_GetValidators.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main():
     # Select network: choose between testnet, mainnet, or local
     network = Network.testnet()
-
-    # Initialize AsyncClient
-    client = AsyncClient(network)
+    client = IndexerClient(network=network)
 
     try:
         # Fetch validators
@@ -4194,7 +4210,7 @@ async def main():
 
         # Print validators
         print("Validators:")
-        print(validators)
+        print(json.dumps(validators, indent=2))
 
     except Exception as e:
         print(f"Error: {e}")
@@ -4205,8 +4221,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/18_GetValidators/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/18_GetValidators/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/18_GetValidators/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/18_GetValidators/example.go -->
 ```go
 package main
 
@@ -4235,11 +4251,11 @@ func main() {
 
 	response, err := explorerClient.FetchValidators(ctx)
 	if err != nil {
-		log.Fatalf("Failed to fetch validators: %v", err)
+		log.Panicf("Failed to fetch validators: %v", err)
 	}
 
 	fmt.Println("Full response:")
-	str, _ := json.MarshalIndent(response, "", " ")
+	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -4379,21 +4395,21 @@ Returns validator information on the active chain
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/13_GetValidator.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/13_GetValidator.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/13_GetValidator.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/13_GetValidator.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main():
     # Select network: choose between testnet, mainnet, or local
     network = Network.testnet()
+    client = IndexerClient(network=network)
 
-    # Initialize AsyncClient
-    client = AsyncClient(network)
     address = "injvaloper1kk523rsm9pey740cx4plalp40009ncs0wrchfe"
 
     try:
@@ -4402,7 +4418,7 @@ async def main():
 
         # Print validators
         print("Validator:")
-        print(validator)
+        print(json.dumps(validator, indent=2))
 
     except Exception as e:
         print(f"Error: {e}")
@@ -4413,8 +4429,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/19_GetValidator/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/19_GetValidator/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/19_GetValidator/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/19_GetValidator/example.go -->
 ```go
 package main
 
@@ -4446,11 +4462,11 @@ func main() {
 
 	response, err := explorerClient.FetchValidator(ctx, validatorAddress)
 	if err != nil {
-		log.Fatalf("Failed to fetch validator: %v", err)
+		log.Panicf("Failed to fetch validator: %v", err)
 	}
 
 	fmt.Println("Validator:")
-	str, _ := json.MarshalIndent(response, "", " ")
+	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -4560,21 +4576,21 @@ Returns validator uptime information on the active chain
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/14_GetValidatorUptime.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/14_GetValidatorUptime.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/14_GetValidatorUptime.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/14_GetValidatorUptime.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main():
     # Select network: choose between testnet, mainnet, or local
     network = Network.testnet()
+    client = IndexerClient(network=network)
 
-    # Initialize AsyncClient
-    client = AsyncClient(network)
     address = "injvaloper1kk523rsm9pey740cx4plalp40009ncs0wrchfe"
 
     try:
@@ -4583,7 +4599,7 @@ async def main():
 
         # Print uptime
         print("Validator uptime:")
-        print(uptime)
+        print(json.dumps(uptime, indent=2))
 
     except Exception as e:
         print(f"Error: {e}")
@@ -4594,8 +4610,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/20_GetValidatorUptime/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/20_GetValidatorUptime/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/20_GetValidatorUptime/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/20_GetValidatorUptime/example.go -->
 ```go
 package main
 
@@ -4627,11 +4643,11 @@ func main() {
 
 	response, err := explorerClient.FetchValidatorUptime(ctx, validatorAddress)
 	if err != nil {
-		log.Fatalf("Failed to fetch validator uptime: %v", err)
+		log.Panicf("Failed to fetch validator uptime: %v", err)
 	}
 
 	fmt.Println("Validator uptime:")
-	str, _ := json.MarshalIndent(response, "", " ")
+	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -5079,29 +5095,28 @@ Request relayers infos by marketIDs. If no ids are provided, all market with ass
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/20_Relayers.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/20_Relayers.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/20_Relayers.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/20_Relayers.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main():
     # Select network: choose between testnet, mainnet, or local
     network = Network.testnet()
-
-    # Initialize AsyncClient
-    client = AsyncClient(network)
+    client = IndexerClient(network=network)
 
     try:
         # Fetch relayers
-        validators = await client.fetch_relayers()
+        relayers = await client.fetch_relayers()
 
         # Print relayers
         print("Relayers:")
-        print(validators)
+        print(json.dumps(relayers, indent=2))
 
     except Exception as e:
         print(f"Error: {e}")
@@ -5112,8 +5127,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/21_Relayers/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/21_Relayers/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/21_Relayers/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/21_Relayers/example.go -->
 ```go
 package main
 
@@ -5145,11 +5160,11 @@ func main() {
 
 	response, err := explorerClient.FetchRelayers(ctx, marketIds)
 	if err != nil {
-		log.Fatalf("Failed to fetch relayers: %v", err)
+		log.Panicf("Failed to fetch relayers: %v", err)
 	}
 
 	fmt.Println("Relayers:")
-	str, _ := json.MarshalIndent(response, "", " ")
+	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -5200,22 +5215,21 @@ Returns bank transfers
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/21_GetBankTransfers.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/explorer_rpc/21_GetBankTransfers.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/21_GetBankTransfers.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/21_GetBankTransfers.py -->
 ```py
 import asyncio
 import json
 import logging
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
-    # network: Network = Network.testnet()
-    network: Network = Network.testnet()
-    client: AsyncClient = AsyncClient(network)
+    network = Network.testnet()
+    client = IndexerClient(network=network)
 
     pagination = PaginationOption(limit=5)
     senders = ["inj17xpfvakm2amg962yls6f84z3kell8c5l6s5ye9"]
@@ -5231,8 +5245,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/22_GetBankTransfers/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/explorer/22_GetBankTransfers/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/22_GetBankTransfers/example.go) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/22_GetBankTransfers/example.go -->
 ```go
 package main
 
@@ -5267,11 +5281,11 @@ func main() {
 
 	response, err := explorerClient.FetchBankTransfers(ctx, req)
 	if err != nil {
-		log.Fatalf("Failed to fetch bank transfers: %v", err)
+		log.Panicf("Failed to fetch bank transfers: %v", err)
 	}
 
 	fmt.Println("Bank transfers:")
-	str, _ := json.MarshalIndent(response, "", " ")
+	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 }
 ```

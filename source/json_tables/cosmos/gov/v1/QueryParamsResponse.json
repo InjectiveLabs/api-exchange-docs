@@ -2,21 +2,21 @@
   {
     "Parameter": "voting_params",
     "Type": "VotingParams",
-    "Description": "voting_params defines the parameters related to voting."
+    "Description": "Deprecated: Prefer to use `params` instead. voting_params defines the parameters related to voting."
   },
   {
     "Parameter": "deposit_params",
     "Type": "DepositParams",
-    "Description": "deposit_params defines the parameters related to deposit."
+    "Description": "Deprecated: Prefer to use `params` instead. deposit_params defines the parameters related to deposit."
   },
   {
     "Parameter": "tally_params",
     "Type": "TallyParams",
-    "Description": "tally_params defines the parameters related to tally."
+    "Description": "Deprecated: Prefer to use `params` instead. tally_params defines the parameters related to tally."
   },
   {
     "Parameter": "params",
     "Type": "Params",
-    "Description": "Since: cosmos-sdk 0.47"
+    "Description": "params defines all the paramaters of x/gov module.  Since: cosmos-sdk 0.47"
   }
 ]

@@ -22,26 +22,26 @@
   {
     "Parameter": "deposit_params",
     "Type": "DepositParams",
-    "Description": "deposit_params defines all the paramaters of related to deposit."
+    "Description": "Deprecated: Prefer to use `params` instead. deposit_params defines all the paramaters of related to deposit."
   },
   {
     "Parameter": "voting_params",
     "Type": "VotingParams",
-    "Description": "voting_params defines all the paramaters of related to voting."
+    "Description": "Deprecated: Prefer to use `params` instead. voting_params defines all the paramaters of related to voting."
   },
   {
     "Parameter": "tally_params",
     "Type": "TallyParams",
-    "Description": "tally_params defines all the paramaters of related to tally."
+    "Description": "Deprecated: Prefer to use `params` instead. tally_params defines all the paramaters of related to tally."
   },
   {
     "Parameter": "params",
     "Type": "Params",
-    "Description": "Since: cosmos-sdk 0.47"
+    "Description": "params defines all the paramaters of x/gov module.  Since: cosmos-sdk 0.47"
   },
   {
     "Parameter": "constitution",
     "Type": "string",
-    "Description": "Since: cosmos-sdk 0.50"
+    "Description": "The constitution allows builders to lay a foundation and define purpose. This is an immutable string set in genesis. There are no amendments, to go outside of scope, just fork. constitution is an immutable string in genesis for a chain builder to lay out their vision, ideas and ideals.  Since: cosmos-sdk 0.50"
   }
 ]

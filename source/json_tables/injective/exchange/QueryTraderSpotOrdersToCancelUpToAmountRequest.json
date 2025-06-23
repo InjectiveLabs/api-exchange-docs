@@ -32,7 +32,7 @@
   {
     "Parameter": "reference_price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "price",
+    "Description": "The reference price for the cancellation strategy, e.g. mid price or mark price",
     "Required": "No"
   }
 ]

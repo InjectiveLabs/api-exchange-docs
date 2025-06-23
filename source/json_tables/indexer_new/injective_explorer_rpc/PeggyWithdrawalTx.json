@@ -32,7 +32,7 @@
   {
     "Parameter": "batch_timeout",
     "Type": "uint64",
-    "Description": "already"
+    "Description": "The timestamp after which Batch request will be discarded if not processed already"
   },
   {
     "Parameter": "batch_nonce",
@@ -47,12 +47,12 @@
   {
     "Parameter": "event_nonce",
     "Type": "uint64",
-    "Description": "batch withdrawal"
+    "Description": "The event nonce of WithdrawalClaim event emitted by Ethereum chain upon batch withdrawal"
   },
   {
     "Parameter": "event_height",
     "Type": "uint64",
-    "Description": "batch withdrawal"
+    "Description": "The block height of WithdrawalClaim event emitted by Ethereum chain upon batch withdrawal"
   },
   {
     "Parameter": "state",

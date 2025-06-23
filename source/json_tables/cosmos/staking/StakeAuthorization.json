@@ -2,7 +2,7 @@
   {
     "Parameter": "max_tokens",
     "Type": "types.Coin",
-    "Description": "empty, there is no spend limit and any amount of coins can be delegated."
+    "Description": "max_tokens specifies the maximum amount of tokens can be delegate to a validator. If it is empty, there is no spend limit and any amount of coins can be delegated."
   },
   {
     "Parameter": "authorization_type",
@@ -22,6 +22,6 @@
   {
     "Parameter": "address",
     "Type": "string array",
-    "Description": "Validators defines list of validator addresses."
+    "Description": ""
   }
 ]

@@ -2,7 +2,7 @@
   {
     "Parameter": "module_name",
     "Type": "string",
-    "Description": "fetch the full list of module versions from state",
+    "Description": "module_name is a field to query a specific module consensus version from state. Leaving this empty will fetch the full list of module versions from state",
     "Required": "Yes"
   }
 ]

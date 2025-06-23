@@ -17,7 +17,7 @@
   {
     "Parameter": "eth_tx_index",
     "Type": "int32",
-    "Description": "aka. the transaction list returned by eth_getBlock api."
+    "Description": "eth_tx_index is the index in the list of valid eth tx in the block, aka. the transaction list returned by eth_getBlock api."
   },
   {
     "Parameter": "failed",
@@ -27,11 +27,11 @@
   {
     "Parameter": "gas_used",
     "Type": "uint64",
-    "Description": "it's set to gas limit, which is what's actually deducted by ante handler."
+    "Description": "gas_used by the transaction. If it exceeds the block gas limit, it's set to gas limit, which is what's actually deducted by ante handler."
   },
   {
     "Parameter": "cumulative_gas_used",
     "Type": "uint64",
-    "Description": "processed messages within the current batch transaction."
+    "Description": "cumulative_gas_used specifies the cumulated amount of gas used for all processed messages within the current batch transaction."
   }
 ]

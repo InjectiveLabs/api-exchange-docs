@@ -2,6 +2,6 @@
   {
     "Parameter": "default_redemption_notice_period_duration",
     "Type": "time.Duration",
-    "Description": "redemption request before the underwriter can claim his tokens"
+    "Description": "default_redemption_notice_period_duration defines the default minimum notice period duration that must pass after an underwriter sends a redemption request before the underwriter can claim his tokens"
   }
 ]

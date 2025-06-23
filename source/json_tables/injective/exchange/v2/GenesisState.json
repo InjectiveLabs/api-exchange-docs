@@ -22,7 +22,7 @@
   {
     "Parameter": "derivative_orderbook",
     "Type": "DerivativeOrderBook array",
-    "Description": "at genesis."
+    "Description": "derivative_orderbook defines the derivative exchange limit orderbook active at genesis."
   },
   {
     "Parameter": "balances",
@@ -37,27 +37,27 @@
   {
     "Parameter": "subaccount_trade_nonces",
     "Type": "SubaccountNonce array",
-    "Description": "subaccounts at genesis"
+    "Description": "subaccount_trade_nonces defines the subaccount trade nonces for the subaccounts at genesis"
   },
   {
     "Parameter": "expiry_futures_market_info_state",
     "Type": "ExpiryFuturesMarketInfoState array",
-    "Description": "markets at genesis"
+    "Description": "expiry_futures_market_info defines the market info for the expiry futures markets at genesis"
   },
   {
     "Parameter": "perpetual_market_info",
     "Type": "PerpetualMarketInfo array",
-    "Description": "markets at genesis"
+    "Description": "perpetual_market_info defines the market info for the perpetual derivative markets at genesis"
   },
   {
     "Parameter": "perpetual_market_funding_state",
     "Type": "PerpetualMarketFundingState array",
-    "Description": "derivative markets at genesis"
+    "Description": "perpetual_market_funding_state defines the funding state for the perpetual derivative markets at genesis"
   },
   {
     "Parameter": "derivative_market_settlement_scheduled",
     "Type": "DerivativeMarketSettlementInfo array",
-    "Description": "settlement at genesis"
+    "Description": "derivative_market_settlement_scheduled defines the scheduled markets for settlement at genesis"
   },
   {
     "Parameter": "is_spot_exchange_enabled",
@@ -127,17 +127,17 @@
   {
     "Parameter": "binary_options_markets",
     "Type": "BinaryOptionsMarket array",
-    "Description": "markets"
+    "Description": "binary_options_markets is an array containing the genesis binary options markets"
   },
   {
     "Parameter": "binary_options_market_ids_scheduled_for_settlement",
     "Type": "string array",
-    "Description": "binary options markets scheduled for next-block settlement"
+    "Description": "binary_options_markets_scheduled_for_settlement contains the marketIDs of binary options markets scheduled for next-block settlement"
   },
   {
     "Parameter": "spot_market_ids_scheduled_to_force_close",
     "Type": "string array",
-    "Description": "forced closings at genesis"
+    "Description": "spot_market_ids_scheduled_to_force_close defines the scheduled markets for forced closings at genesis"
   },
   {
     "Parameter": "denom_decimals",
@@ -147,12 +147,12 @@
   {
     "Parameter": "conditional_derivative_orderbooks",
     "Type": "ConditionalDerivativeOrderBook array",
-    "Description": "markets (both lmit and market conditional orders)"
+    "Description": "conditional_derivative_orderbook contains conditional orderbooks for all markets (both lmit and market conditional orders)"
   },
   {
     "Parameter": "market_fee_multipliers",
     "Type": "MarketFeeMultiplier array",
-    "Description": "multipliers"
+    "Description": "market_fee_multipliers contains any non-default atomic order fee multipliers"
   },
   {
     "Parameter": "orderbook_sequences",

@@ -7,6 +7,6 @@
   {
     "Parameter": "registered_contracts",
     "Type": "RegisteredContractWithAddress array",
-    "Description": "contracts"
+    "Description": "registered_contracts is an array containing the genesis registered contracts"
   }
 ]

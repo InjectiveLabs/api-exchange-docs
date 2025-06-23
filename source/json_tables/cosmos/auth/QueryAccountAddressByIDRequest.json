@@ -2,13 +2,13 @@
   {
     "Parameter": "id",
     "Type": "int64",
-    "Description": "updated to uint64 in a future version of the auth query.",
+    "Description": "Deprecated, use account_id instead  id is the account number of the address to be queried. This field should have been an uint64 (like all account numbers), and will be updated to uint64 in a future version of the auth query.",
     "Required": "Yes"
   },
   {
     "Parameter": "account_id",
     "Type": "uint64",
-    "Description": "Since: cosmos-sdk 0.47",
+    "Description": "account_id is the account number of the address to be queried.  Since: cosmos-sdk 0.47",
     "Required": "Yes"
   }
 ]

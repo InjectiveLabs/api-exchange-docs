@@ -12,11 +12,11 @@
   {
     "Parameter": "option",
     "Type": "VoteOption",
-    "Description": "other cases, this field will default to VOTE_OPTION_UNSPECIFIED."
+    "Description": "Deprecated: Prefer to use `options` instead. This field is set in queries if and only if `len(options) == 1` and that option has weight 1. In all other cases, this field will default to VOTE_OPTION_UNSPECIFIED."
   },
   {
     "Parameter": "options",
     "Type": "WeightedVoteOption array",
-    "Description": "Since: cosmos-sdk 0.43"
+    "Description": "options is the weighted vote options.  Since: cosmos-sdk 0.43"
   }
 ]

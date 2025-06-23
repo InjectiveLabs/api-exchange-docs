@@ -42,7 +42,7 @@
   {
     "Parameter": "timeout_height",
     "Type": "string",
-    "Description": "when set to 0"
+    "Description": "Timeout height relative to the current block height. The timeout is disabled when set to 0"
   },
   {
     "Parameter": "timeout_timestamp",
@@ -52,7 +52,7 @@
   {
     "Parameter": "packet_sequence",
     "Type": "uint64",
-    "Description": "later sequence number"
+    "Description": "number corresponds to the order of sends and receives, where a Packet with an earlier sequence number must be sent and received before a Packet with a later sequence number"
   },
   {
     "Parameter": "data_hex",

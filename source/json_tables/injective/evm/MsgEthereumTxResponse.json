@@ -2,17 +2,17 @@
   {
     "Parameter": "hash",
     "Type": "string",
-    "Description": "https://github.com/tendermint/tendermint/issues/6539 for reference"
+    "Description": "hash of the ethereum transaction in hex format. This hash differs from the Tendermint sha256 hash of the transaction bytes. See https://github.com/tendermint/tendermint/issues/6539 for reference"
   },
   {
     "Parameter": "logs",
     "Type": "Log array",
-    "Description": "logs."
+    "Description": "logs contains the transaction hash and the proto-compatible ethereum logs."
   },
   {
     "Parameter": "ret",
     "Type": "byte array",
-    "Description": "revert opcode)"
+    "Description": "ret is the returned data from evm function (result or data supplied with revert opcode)"
   },
   {
     "Parameter": "vm_error",

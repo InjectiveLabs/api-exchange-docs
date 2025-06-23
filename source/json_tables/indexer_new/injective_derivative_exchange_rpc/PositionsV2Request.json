@@ -8,7 +8,7 @@
   {
     "Parameter": "market_id",
     "Type": "string",
-    "Description": "single market",
+    "Description": "MarketId of the position we want to fetch. Use this field for fetching from single market",
     "Required": "Yes"
   },
   {
@@ -26,19 +26,19 @@
   {
     "Parameter": "start_time",
     "Type": "int64",
-    "Description": "older than",
+    "Description": "The starting timestamp in UNIX milliseconds that the trades must be equal or older than",
     "Required": "Yes"
   },
   {
     "Parameter": "end_time",
     "Type": "int64",
-    "Description": "younger than",
+    "Description": "The ending timestamp in UNIX milliseconds that the trades must be equal or younger than",
     "Required": "Yes"
   },
   {
     "Parameter": "market_ids",
     "Type": "string array",
-    "Description": "multiple markets",
+    "Description": "MarketIds of the markets we want to filter. Use this field for fetching from multiple markets",
     "Required": "Yes"
   },
   {

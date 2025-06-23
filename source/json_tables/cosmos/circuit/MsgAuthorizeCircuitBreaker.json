@@ -2,7 +2,7 @@
   {
     "Parameter": "granter",
     "Type": "string",
-    "Description": "LEVEL_SUPER_ADMIN.",
+    "Description": "granter is the granter of the circuit breaker permissions and must have LEVEL_SUPER_ADMIN.",
     "Required": "Yes"
   },
   {
@@ -14,7 +14,7 @@
   {
     "Parameter": "permissions",
     "Type": "Permissions",
-    "Description": "be specified to revoke all permissions.",
+    "Description": "permissions are the circuit breaker permissions that the grantee receives. These will overwrite any existing permissions. LEVEL_NONE_UNSPECIFIED can be specified to revoke all permissions.",
     "Required": "No"
   }
 ]

@@ -12,7 +12,7 @@
   {
     "Parameter": "ticker",
     "Type": "string",
-    "Description": "asset."
+    "Description": "A name of the pair in format AAA/BBB, where AAA is base asset, BBB is quote asset."
   },
   {
     "Parameter": "base_denom",

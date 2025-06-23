@@ -162,7 +162,7 @@ process_comment() {
     fi
 
     if [[ $line =~ ^[[:space:]]*//[[:space:]]*(.*) ]]; then
-        # Single-line // comment
+        # Single-line // comment - these can be consecutive for multi-line descriptions
         local comment_text="${BASH_REMATCH[1]}"
         if [ "$in_comment" = false ]; then
             comment_lines=("$comment_text")
@@ -171,6 +171,18 @@ process_comment() {
             comment_lines+=("$comment_text")
         fi
         description=$(IFS=' ' ; echo "${comment_lines[*]}")
+        return
+    fi
+
+    # Reset comment state if we encounter a non-comment, non-empty line
+    # But preserve comment state for empty lines (which might separate comments from fields)
+    if [[ ! $line =~ ^[[:space:]]*$ ]] && [[ ! $line =~ ^[[:space:]]*//.*$ ]] && [ "$in_multiline_comment" = false ]; then
+        # Only reset if this is not a field definition line that should use the accumulated comment
+        if [[ ! $line =~ ^[[:space:]]*[A-Z][[:alnum:]]*[[:space:]] ]] || [[ ! $line =~ protobuf: ]]; then
+            in_comment=false
+            comment_lines=()
+            description=""
+        fi
     fi
 }
 
@@ -207,8 +219,10 @@ process_pb_file() {
             continue
         fi
 
+        # Process comments and update global state
         process_comment "$line"
         
+        # Check if this line is a protobuf field definition
         if [[ $line =~ ^[[:space:]]*[A-Z][[:alnum:]]*[[:space:]] ]] && [[ $line =~ protobuf: ]]; then
             if [ -n "$current_type" ] && [[ ! "$current_type" =~ ^Event ]]; then
                 local proto_name
@@ -237,13 +251,13 @@ process_pb_file() {
                     
                     fields+=("$field_json")
                 fi
+                
+                # Reset comment state after using the description for a field
                 description=""
                 in_comment=false
+                in_multiline_comment=false
                 comment_lines=()
             fi
-        else
-            in_comment=false
-            comment_lines=()
         fi
     done < "$pb_file"
 
@@ -412,6 +426,53 @@ process_repository_modules() {
     done
 }
 
+# Process Cosmos SDK types directory and its subdirectories
+process_cosmos_types_directory() {
+    local types_path="$1"
+    local output_dir="$2"
+    
+    echo "Processing Cosmos SDK types directory: $types_path"
+    process_directory_recursive "$types_path" "$output_dir"
+}
+
+# Generic recursive directory processor for .pb.go files
+process_directory_recursive() {
+    local source_path="$1"
+    local output_base="$2"
+    local max_depth="${3:-10}"  # Safety limit to prevent infinite recursion
+    
+    # Safety check for recursion depth
+    if [ "$max_depth" -le 0 ]; then
+        echo "Warning: Maximum recursion depth reached for $source_path"
+        return
+    fi
+    
+    # Process .pb.go files in the current directory
+    if compgen -G "$source_path/*.pb.go" > /dev/null 2>&1; then
+        echo "Processing .pb.go files in: $source_path"
+        process_directory "$source_path" "$output_base"
+    fi
+    
+    # Process each subdirectory that contains .pb.go files
+    for subdir in "$source_path"/*/; do
+        if [ -d "$subdir" ]; then
+            local subdir_name=$(basename "$subdir")
+            
+            # Check if this subdirectory or its children contain .pb.go files
+            if find "$subdir" -name "*.pb.go" -type f | head -1 | grep -q .; then
+                echo "Checking subdirectory: $subdir_name"
+                local subdir_output="$output_base/$subdir_name"
+                mkdir -p "$subdir_output"
+                
+                # Recursively process the subdirectory
+                process_directory_recursive "$subdir" "$subdir_output" $((max_depth - 1))
+            fi
+        fi
+    done
+}
+
+
+
 # Process Indexer module
 process_indexer_module() {
     local module_dir="$1"
@@ -469,6 +530,13 @@ process_repository_modules "$INJECTIVE_MODULES_PATH" "$INJECTIVE_OUTPUT_DIR"
 # Process Cosmos SDK modules
 echo "Processing Cosmos SDK modules..."
 process_repository_modules "$COSMOS_MODULES_PATH" "$COSMOS_OUTPUT_DIR"
+
+# Process Cosmos SDK types directory and its subdirectories
+if [ -d "$1/types" ]; then
+    echo "Processing Cosmos SDK types directory..."
+    process_cosmos_types_directory "$1/types" "$COSMOS_OUTPUT_DIR"
+fi
+
 [ -d "$COSMOS_PROTO_PATH" ] && process_proto_directory "$COSMOS_PROTO_PATH" "$COSMOS_OUTPUT_DIR"
 
 # Process Indexer modules

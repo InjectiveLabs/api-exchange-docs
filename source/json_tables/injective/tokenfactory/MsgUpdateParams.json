@@ -8,7 +8,7 @@
   {
     "Parameter": "params",
     "Type": "Params",
-    "Description": "NOTE: All parameters must be supplied.",
+    "Description": "params defines the tokenfactory parameters to update.  NOTE: All parameters must be supplied.",
     "Required": "Yes"
   }
 ]

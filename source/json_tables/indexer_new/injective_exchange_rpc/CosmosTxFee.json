@@ -12,6 +12,6 @@
   {
     "Parameter": "delegate_fee",
     "Type": "bool",
-    "Description": "Will be replaced by other flag in the next version."
+    "Description": "Explicitly require fee delegation when set to true. Or don't care = false. Will be replaced by other flag in the next version."
   }
 ]

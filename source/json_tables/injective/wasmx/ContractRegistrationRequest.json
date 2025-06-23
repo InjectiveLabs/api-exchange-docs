@@ -26,26 +26,26 @@
   {
     "Parameter": "is_migration_allowed",
     "Type": "bool",
-    "Description": "allowed to be executed",
+    "Description": "if true contract owner can update it, if false only current code_id will be allowed to be executed",
     "Required": "Yes"
   },
   {
     "Parameter": "code_id",
     "Type": "uint64",
-    "Description": "execution but only if is_migration_allowed is false",
+    "Description": "code_id of the contract being registered - will be verified upon every execution but only if is_migration_allowed is false",
     "Required": "Yes"
   },
   {
     "Parameter": "admin_address",
     "Type": "string",
-    "Description": "contract params)",
-    "Required": "Yes"
+    "Description": "Optional address of admin account (that will be allowed to pause or update contract params)",
+    "Required": "No"
   },
   {
     "Parameter": "granter_address",
     "Type": "string",
-    "Description": "funding_mode is other than SelfFunded",
-    "Required": "Yes"
+    "Description": "Optional address of the contract that grants fees. Must be set if funding_mode is other than SelfFunded",
+    "Required": "No"
   },
   {
     "Parameter": "funding_mode",

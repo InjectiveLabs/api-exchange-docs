@@ -8,7 +8,7 @@
   {
     "Parameter": "active",
     "Type": "bool",
-    "Description": "Deprecated: use status instead.",
+    "Description": "Whether the campaign is active. Deprecated: use status instead.",
     "Required": "Yes"
   },
   {

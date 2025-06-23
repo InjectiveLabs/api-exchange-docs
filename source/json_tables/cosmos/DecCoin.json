@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "amount",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

@@ -12,7 +12,7 @@
   {
     "Parameter": "quote_denoms",
     "Type": "string array",
-    "Description": "contribution"
+    "Description": "the trading fee quote denoms which will be counted for the fee paid contribution"
   },
   {
     "Parameter": "tier_infos",
@@ -22,6 +22,6 @@
   {
     "Parameter": "disqualified_market_ids",
     "Type": "string array",
-    "Description": "amount"
+    "Description": "the marketIDs which are disqualified from contributing to the fee paid amount"
   }
 ]

@@ -17,7 +17,7 @@
   {
     "Parameter": "code_id",
     "Type": "uint64",
-    "Description": "nil/0 any code_id can be executed"
+    "Description": "code_id that is allowed to be executed (to prevent malicious updates) - if nil/0 any code_id can be executed"
   },
   {
     "Parameter": "admin_address",
@@ -27,7 +27,7 @@
   {
     "Parameter": "granter_address",
     "Type": "string",
-    "Description": "Must be set if fund_mode is GrantOnly"
+    "Description": "Optional: address of the contract granting fee Must be set if fund_mode is GrantOnly"
   },
   {
     "Parameter": "fund_mode",

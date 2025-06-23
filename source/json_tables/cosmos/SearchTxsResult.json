@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "total_count",
+    "Type": "uint64",
+    "Description": "Count of all txs"
+  },
+  {
+    "Parameter": "count",
+    "Type": "uint64",
+    "Description": "Count of txs in current page"
+  },
+  {
+    "Parameter": "page_number",
+    "Type": "uint64",
+    "Description": "Index of current page, start from 1"
+  },
+  {
+    "Parameter": "page_total",
+    "Type": "uint64",
+    "Description": "Count of total pages"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "uint64",
+    "Description": "Max count txs per page"
+  },
+  {
+    "Parameter": "txs",
+    "Type": "TxResponse array",
+    "Description": "List of txs in current page"
+  }
+]

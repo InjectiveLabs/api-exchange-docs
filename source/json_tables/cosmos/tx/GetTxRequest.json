@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "hash",
+    "Type": "string",
+    "Description": "hash is the tx hash to query, encoded as a hex string.",
+    "Required": "Yes"
+  }
+]

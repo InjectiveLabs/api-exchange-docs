@@ -37,7 +37,7 @@
   {
     "Parameter": "description",
     "Type": "string",
-    "Description": "to"
+    "Description": "short human-readable description of observable this feed's answers pertain to"
   },
   {
     "Parameter": "feed_admin",

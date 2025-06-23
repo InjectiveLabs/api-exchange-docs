@@ -8,7 +8,7 @@
   {
     "Parameter": "market_id",
     "Type": "string",
-    "Description": "market id. This field is prioritized",
+    "Description": "MarketIds of the funding payment we want to fetch. Using this for only one market id. This field is prioritized",
     "Required": "Yes"
   },
   {
@@ -32,7 +32,7 @@
   {
     "Parameter": "market_ids",
     "Type": "string array",
-    "Description": "multiple market ids",
+    "Description": "Filter by market ids. Using this field for fetching funding payments from multiple market ids",
     "Required": "Yes"
   }
 ]

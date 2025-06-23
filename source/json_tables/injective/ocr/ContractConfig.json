@@ -2,7 +2,7 @@
   {
     "Parameter": "config_count",
     "Type": "uint64",
-    "Description": "settings"
+    "Description": "config_count ordinal number of this config setting among all config settings"
   },
   {
     "Parameter": "signers",
@@ -12,12 +12,12 @@
   {
     "Parameter": "transmitters",
     "Type": "string array",
-    "Description": "via the transmit method"
+    "Description": "transmitters ith element is address ith oracle uses to transmit a report via the transmit method"
   },
   {
     "Parameter": "f",
     "Type": "uint32",
-    "Description": "while still working correctly"
+    "Description": "f maximum number of faulty/dishonest oracles the protocol can tolerate while still working correctly"
   },
   {
     "Parameter": "onchain_config",
@@ -27,11 +27,11 @@
   {
     "Parameter": "offchain_config_version",
     "Type": "uint64",
-    "Description": "\"offchain_config\" parameter"
+    "Description": "offchain_config_version version of the serialization format used for \"offchain_config\" parameter"
   },
   {
     "Parameter": "offchain_config",
     "Type": "byte array",
-    "Description": "operation"
+    "Description": "offchain_config serialized data used by oracles to configure their offchain operation"
   }
 ]

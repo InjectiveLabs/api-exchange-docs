@@ -14,8 +14,8 @@ To use the broadcaster you just need to create an instance of *MsgBroadcasterWit
 
 > Example - Calculate gas fee simulating the transaction:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/3_MessageBroadcaster.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/3_MessageBroadcaster.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/3_MessageBroadcaster.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/3_MessageBroadcaster.py -->
 ```py
 import asyncio
 import json
@@ -25,7 +25,7 @@ from decimal import Decimal
 
 import dotenv
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import PrivateKey
@@ -166,8 +166,8 @@ This is the most common broadcaster configuration. Unless you are using grantee 
 
 > Example - Calculate gas fee without simulation:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/5_MessageBroadcasterWithoutSimulation.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/5_MessageBroadcasterWithoutSimulation.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/5_MessageBroadcasterWithoutSimulation.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/5_MessageBroadcasterWithoutSimulation.py -->
 ```py
 import asyncio
 import json
@@ -177,7 +177,7 @@ from decimal import Decimal
 
 import dotenv
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import PrivateKey
@@ -198,7 +198,7 @@ async def main() -> None:
     # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
     gas_price = int(gas_price * 1.1)
 
-    message_broadcaster = MsgBroadcasterWithPk.new_without_simulation(
+    message_broadcaster = MsgBroadcasterWithPk.new_using_gas_heuristics(
         network=network,
         private_key=private_key_in_hexa,
         gas_price=gas_price,
@@ -272,8 +272,8 @@ This is the required broadcaster configuration when operating with grantee accou
 
 > Example - Calculate gas fee simulating the transaction:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/4_MessageBroadcasterWithGranteeAccount.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/4_MessageBroadcasterWithGranteeAccount.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/4_MessageBroadcasterWithGranteeAccount.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/4_MessageBroadcasterWithGranteeAccount.py -->
 ```py
 import asyncio
 import json
@@ -283,7 +283,7 @@ from decimal import Decimal
 
 import dotenv
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import Address, PrivateKey
@@ -404,8 +404,8 @@ For the broadcaster to calculate the gas fee running the simulation, create an i
 
 > Example - Calculate gas fee without simulation:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/6_MessageBroadcasterWithGranteeAccountWithoutSimulation.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/6_MessageBroadcasterWithGranteeAccountWithoutSimulation.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/6_MessageBroadcasterWithGranteeAccountWithoutSimulation.py) -->
+<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/6_MessageBroadcasterWithGranteeAccountWithoutSimulation.py -->
 ```py
 import asyncio
 import json
@@ -415,7 +415,7 @@ from decimal import Decimal
 
 import dotenv
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import Address, PrivateKey
@@ -487,14 +487,11 @@ For the broadcaster to calculate the gas fee based on the messages included with
 <br />
 <br />
 
----
-
-**NOTE:**
+<aside class="notice">
 There an important consideration when using the Transaction Broadcaster calculating the gas cost without simulation to send a _MsgBatchUpdateOrders_ message.
 The logic that estimates the gas cost for the _MsgBatchUpdateOrders_ correclty calculates the gas required for each order action (creation or cancelation) it includes. But there is no easy way to calculate the gas cost when canceling all orders for a market id using one of the following parameters: `spot_market_ids_to_cancel_all`, `derivative_market_ids_to_cancel_all` or `binary_options_market_ids_to_cancel_all`. The complexity is related to the fact that the gas cost depends on the number of orders to be cancelled.
 By default the estimation logic calculates a gas cost considering the number of orders to cancel for each market id is 20. To improve the gas cost calculation when using the _MsgBatchUpdateOrders_ message to cancel all orders for one or more markets you can change the number of estimated orders to cancel per market. Check in the fine-tunning section the proper `AVERAGE_CANCEL_ALL_AFFECTED_ORDERS` global variable to change.
-
----
+</aside>
 
 
 ## Fine-tunning message based gas fee estimation

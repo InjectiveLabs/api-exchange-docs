@@ -7,12 +7,12 @@
   {
     "Parameter": "mark_price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "*FullDerivativeMarket_FuturesInfo"
+    "Description": ""
   },
   {
     "Parameter": "mid_price_and_tob",
     "Type": "MidPriceAndTOB",
-    "Description": "and bid orders"
+    "Description": "mid_price_and_tob defines the mid price for this market and the best ask and bid orders"
   },
   {
     "Parameter": "perpetual_info",

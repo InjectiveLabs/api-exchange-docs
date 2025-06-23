@@ -32,7 +32,7 @@
   {
     "Parameter": "raw_log",
     "Type": "string",
-    "Description": "non-deterministic."
+    "Description": "The output of the application's logger (raw string). May be non-deterministic."
   },
   {
     "Parameter": "timestamp",

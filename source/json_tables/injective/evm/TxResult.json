@@ -2,7 +2,7 @@
   {
     "Parameter": "contract_address",
     "Type": "string",
-    "Description": "empty."
+    "Description": "contract_address contains the ethereum address of the created contract (if any). If the state transition is an evm.Call, the contract address will be empty."
   },
   {
     "Parameter": "bloom",
@@ -12,7 +12,7 @@
   {
     "Parameter": "tx_logs",
     "Type": "TransactionLogs",
-    "Description": "logs."
+    "Description": "tx_logs contains the transaction hash and the proto-compatible ethereum logs."
   },
   {
     "Parameter": "ret",

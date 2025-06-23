@@ -32,7 +32,7 @@
   {
     "Parameter": "min_quantity_tick_size",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "quantity"
+    "Description": "min_quantity_tick_size defines the minimum tick size of the order's quantity"
   },
   {
     "Parameter": "maker_fee_rate",

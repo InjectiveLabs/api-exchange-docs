@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "gas_wanted",
+    "Type": "uint64",
+    "Description": "GasWanted is the maximum units of work we allow this tx to perform."
+  },
+  {
+    "Parameter": "gas_used",
+    "Type": "uint64",
+    "Description": "GasUsed is the amount of gas actually consumed."
+  }
+]

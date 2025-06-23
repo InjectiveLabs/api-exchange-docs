@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "amount",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "amount is the amount of coins to be paid as a fee"
+  },
+  {
+    "Parameter": "gas_limit",
+    "Type": "uint64",
+    "Description": "gas_limit is the maximum gas that can be used in transaction processing before an out of gas error occurs"
+  },
+  {
+    "Parameter": "payer",
+    "Type": "string",
+    "Description": "if unset, the first signer is responsible for paying the fees. If set, the specified account must pay the fees. the payer must be a tx signer (and thus have signed this field in AuthInfo). setting this field does *not* change the ordering of required signers for the transaction."
+  },
+  {
+    "Parameter": "granter",
+    "Type": "string",
+    "Description": "if set, the fee payer (either the first signer or the value of the payer field) requests that a fee grant be used to pay fees instead of the fee payer's own balance. If an appropriate fee grant does not exist or the chain does not support fee grants, this will fail"
+  }
+]

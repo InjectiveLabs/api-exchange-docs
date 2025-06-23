@@ -36,6 +36,8 @@ includes:
   - derivatives
   - spot
   - binaryoptions
+  - erc20
+  - evm
   - ibccorechannel
   - ibccoreclient
   - ibccoreconnection

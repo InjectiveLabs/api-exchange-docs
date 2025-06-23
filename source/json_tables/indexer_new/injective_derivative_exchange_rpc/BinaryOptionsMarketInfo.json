@@ -2,7 +2,7 @@
   {
     "Parameter": "market_id",
     "Type": "string",
-    "Description": "+ ticker + quoteDenom + oracleSymbol + oracleProvider)))"
+    "Description": "Binary Options Market ID is crypto.Keccak256Hash([]byte((oracleType.String() + ticker + quoteDenom + oracleSymbol + oracleProvider)))"
   },
   {
     "Parameter": "market_status",

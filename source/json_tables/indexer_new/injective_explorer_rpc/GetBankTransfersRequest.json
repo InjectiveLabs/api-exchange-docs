@@ -14,7 +14,7 @@
   {
     "Parameter": "is_community_pool_related",
     "Type": "bool",
-    "Description": "recipient",
+    "Description": "Returns transfers with the community pool address as either sender or recipient",
     "Required": "Yes"
   },
   {
@@ -32,13 +32,13 @@
   {
     "Parameter": "start_time",
     "Type": "int64",
-    "Description": "or older than",
+    "Description": "The starting timestamp in UNIX milliseconds that the transfers must be equal or older than",
     "Required": "Yes"
   },
   {
     "Parameter": "end_time",
     "Type": "int64",
-    "Description": "or younger than",
+    "Description": "The ending timestamp in UNIX milliseconds that the transfers must be equal or younger than",
     "Required": "Yes"
   },
   {

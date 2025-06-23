@@ -12,7 +12,7 @@
   {
     "Parameter": "index_offset",
     "Type": "int64",
-    "Description": "signed_blocks_window param determines the index in the missed block bitmap."
+    "Description": "Index which is incremented every time a validator is bonded in a block and _may_ have signed a pre-commit or not. This in conjunction with the signed_blocks_window param determines the index in the missed block bitmap."
   },
   {
     "Parameter": "jailed_until",
@@ -22,11 +22,11 @@
   {
     "Parameter": "tombstoned",
     "Type": "bool",
-    "Description": "configured misbehavior."
+    "Description": "Whether or not a validator has been tombstoned (killed out of validator set). It is set once the validator commits an equivocation or for any other configured misbehavior."
   },
   {
     "Parameter": "missed_blocks_counter",
     "Type": "int64",
-    "Description": "reads in the missed block bitmap."
+    "Description": "A counter of missed (unsigned) blocks. It is used to avoid unnecessary reads in the missed block bitmap."
   }
 ]

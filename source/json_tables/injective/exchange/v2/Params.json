@@ -2,62 +2,62 @@
   {
     "Parameter": "spot_market_instant_listing_fee",
     "Type": "types.Coin",
-    "Description": "to create a spot market by bypassing governance"
+    "Description": "spot_market_instant_listing_fee defines the expedited fee in INJ required to create a spot market by bypassing governance"
   },
   {
     "Parameter": "derivative_market_instant_listing_fee",
     "Type": "types.Coin",
-    "Description": "required to create a derivative market by bypassing governance"
+    "Description": "derivative_market_instant_listing_fee defines the expedited fee in INJ required to create a derivative market by bypassing governance"
   },
   {
     "Parameter": "default_spot_maker_fee_rate",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "a spot market"
+    "Description": "default_spot_maker_fee defines the default exchange trade fee for makers on a spot market"
   },
   {
     "Parameter": "default_spot_taker_fee_rate",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "takers on a new spot market"
+    "Description": "default_spot_taker_fee_rate defines the default exchange trade fee rate for takers on a new spot market"
   },
   {
     "Parameter": "default_derivative_maker_fee_rate",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "makers on a new derivative market"
+    "Description": "default_derivative_maker_fee defines the default exchange trade fee for makers on a new derivative market"
   },
   {
     "Parameter": "default_derivative_taker_fee_rate",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "takers on a new derivative market"
+    "Description": "default_derivative_taker_fee defines the default exchange trade fee for takers on a new derivative market"
   },
   {
     "Parameter": "default_initial_margin_ratio",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "new derivative market"
+    "Description": "default_initial_margin_ratio defines the default initial margin ratio on a new derivative market"
   },
   {
     "Parameter": "default_maintenance_margin_ratio",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "ratio on a new derivative market"
+    "Description": "default_maintenance_margin_ratio defines the default maintenance margin ratio on a new derivative market"
   },
   {
     "Parameter": "default_funding_interval",
     "Type": "int64",
-    "Description": "derivative market"
+    "Description": "default_funding_interval defines the default funding interval on a derivative market"
   },
   {
     "Parameter": "funding_multiple",
     "Type": "int64",
-    "Description": "should be a multiple of"
+    "Description": "funding_multiple defines the timestamp multiple that the funding timestamp should be a multiple of"
   },
   {
     "Parameter": "relayer_fee_share_rate",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "relayers"
+    "Description": "relayer_fee_share_rate defines the trade fee share percentage that goes to relayers"
   },
   {
     "Parameter": "default_hourly_funding_rate_cap",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "of the hourly funding rate"
+    "Description": "default_hourly_funding_rate_cap defines the default maximum absolute value of the hourly funding rate"
   },
   {
     "Parameter": "default_hourly_interest_rate",
@@ -67,47 +67,47 @@
   {
     "Parameter": "max_derivative_order_side_count",
     "Type": "uint32",
-    "Description": "active orders a subaccount can have for a given orderbook side"
+    "Description": "max_derivative_order_side_count defines the maximum number of derivative active orders a subaccount can have for a given orderbook side"
   },
   {
     "Parameter": "inj_reward_staked_requirement_threshold",
     "Type": "cosmossdk_io_math.Int",
-    "Description": "rewards after which one also needs staked INJ to receive more"
+    "Description": "inj_reward_staked_requirement_threshold defines the threshold on INJ rewards after which one also needs staked INJ to receive more"
   },
   {
     "Parameter": "trading_rewards_vesting_duration",
     "Type": "int64",
-    "Description": "rewards"
+    "Description": "the trading_rewards_vesting_duration defines the vesting times for trading rewards"
   },
   {
     "Parameter": "liquidator_reward_share_rate",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "collateral that goes to the liquidator"
+    "Description": "liquidator_reward_share_rate defines the ratio of the split of the surplus collateral that goes to the liquidator"
   },
   {
     "Parameter": "binary_options_market_instant_listing_fee",
     "Type": "types.Coin",
-    "Description": "required to create a derivative market by bypassing governance"
+    "Description": "binary_options_market_instant_listing_fee defines the expedited fee in INJ required to create a derivative market by bypassing governance"
   },
   {
     "Parameter": "atomic_market_order_access_level",
     "Type": "AtomicMarketOrderAccessLevel",
-    "Description": "for executing atomic market orders"
+    "Description": "atomic_market_order_access_level defines the required access permissions for executing atomic market orders"
   },
   {
     "Parameter": "spot_atomic_market_order_fee_multiplier",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "executing atomic market orders in spot markets"
+    "Description": "spot_atomic_market_order_fee_multiplier defines the default multiplier for executing atomic market orders in spot markets"
   },
   {
     "Parameter": "derivative_atomic_market_order_fee_multiplier",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "multiplier for executing atomic market orders in derivative markets"
+    "Description": "derivative_atomic_market_order_fee_multiplier defines the default multiplier for executing atomic market orders in derivative markets"
   },
   {
     "Parameter": "binary_options_atomic_market_order_fee_multiplier",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "multiplier for executing atomic market orders in binary markets"
+    "Description": "binary_options_atomic_market_order_fee_multiplier defines the default multiplier for executing atomic market orders in binary markets"
   },
   {
     "Parameter": "minimal_protocol_fee_rate",
@@ -117,7 +117,7 @@
   {
     "Parameter": "is_instant_derivative_market_launch_enabled",
     "Type": "bool",
-    "Description": "derivative market launch is enabled"
+    "Description": "is_instant_derivative_market_launch_enabled defines whether instant derivative market launch is enabled"
   },
   {
     "Parameter": "post_only_mode_height_threshold",
@@ -127,7 +127,7 @@
   {
     "Parameter": "margin_decrease_price_timestamp_threshold_seconds",
     "Type": "int64",
-    "Description": "decrease in margin"
+    "Description": "Maximum time in seconds since the last mark price update to allow a decrease in margin"
   },
   {
     "Parameter": "exchange_admins",
@@ -142,16 +142,16 @@
   {
     "Parameter": "fixed_gas_enabled",
     "Type": "bool",
-    "Description": "certain msg types"
+    "Description": "fixed_gas_enabled indicates if msg server will consume fixed gas amount for certain msg types"
   },
   {
     "Parameter": "emit_legacy_version_events",
     "Type": "bool",
-    "Description": "should be emitted in parallel to the new version events"
+    "Description": "emit_legacy_version_events indicates if events of legacy version types should be emitted in parallel to the new version events"
   },
   {
     "Parameter": "default_reduce_margin_ratio",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "new derivative market"
+    "Description": "default_reduce_margin_ratio defines the default reduce margin ratio on a new derivative market"
   }
 ]

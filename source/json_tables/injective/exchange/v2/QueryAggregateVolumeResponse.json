@@ -2,6 +2,6 @@
   {
     "Parameter": "aggregate_volumes",
     "Type": "MarketVolume array",
-    "Description": "volumes across all subaccounts for the address"
+    "Description": "if an address is specified, then the aggregate_volumes will aggregate the volumes across all subaccounts for the address"
   }
 ]

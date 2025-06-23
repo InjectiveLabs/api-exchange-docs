@@ -12,6 +12,6 @@
   {
     "Parameter": "inj_basket_max_cap",
     "Type": "cosmossdk_io_math.Int",
-    "Description": "basket"
+    "Description": "inj_basket_max_cap defines the maximum cap for INJ contained in an auction basket"
   }
 ]

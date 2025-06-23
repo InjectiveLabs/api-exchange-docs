@@ -37,7 +37,7 @@
   {
     "Parameter": "trigger_price",
     "Type": "string",
-    "Description": "trigger price is not set."
+    "Description": "Trigger price is the trigger price used by stop/take orders. 0 if the trigger price is not set."
   },
   {
     "Parameter": "fee_recipient",

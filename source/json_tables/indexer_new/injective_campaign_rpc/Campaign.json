@@ -52,7 +52,7 @@
   {
     "Parameter": "user_score",
     "Type": "string",
-    "Description": "account's reward"
+    "Description": "Total user score if accountAddress is passed, this is useful to estimate account's reward"
   },
   {
     "Parameter": "user_claimed",
@@ -72,7 +72,7 @@
   {
     "Parameter": "version",
     "Type": "string",
-    "Description": "to be sent"
+    "Description": "Version of reward contract, UI use this to determine the message that need to be sent"
   },
   {
     "Parameter": "type",

@@ -14,7 +14,7 @@
   {
     "Parameter": "to_round_id",
     "Type": "int32",
-    "Description": "multiple rounds",
+    "Description": "This will return campaign x where x.roundId <= toRoundId. Useful for listing multiple rounds",
     "Required": "Yes"
   },
   {

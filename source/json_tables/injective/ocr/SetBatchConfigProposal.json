@@ -17,7 +17,7 @@
   {
     "Parameter": "transmitters",
     "Type": "string array",
-    "Description": "via the transmit method"
+    "Description": "transmitters ith element is address ith oracle uses to transmit a report via the transmit method"
   },
   {
     "Parameter": "link_denom",

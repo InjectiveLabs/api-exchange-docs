@@ -26,7 +26,7 @@
   {
     "Parameter": "include_guild_info",
     "Type": "bool",
-    "Description": "latency, instead of sending 2 requests we just need once",
+    "Description": "whether to include guild summary info, it's better to use this in terms of latency, instead of sending 2 requests we just need once",
     "Required": "Yes"
   },
   {

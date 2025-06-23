@@ -8,7 +8,7 @@
   {
     "Parameter": "oracle_script_id",
     "Type": "int64",
-    "Description": "executed.",
+    "Description": "OracleScriptID is the unique identifier of the oracle script to be executed.",
     "Required": "Yes"
   },
   {
@@ -20,19 +20,19 @@
   {
     "Parameter": "ask_count",
     "Type": "uint64",
-    "Description": "oracle request. Higher value means more security, at a higher gas cost.",
+    "Description": "AskCount is the number of validators that are requested to respond to this oracle request. Higher value means more security, at a higher gas cost.",
     "Required": "Yes"
   },
   {
     "Parameter": "min_count",
     "Type": "uint64",
-    "Description": "cost of liveness.",
+    "Description": "MinCount is the minimum number of validators necessary for the request to proceed to the execution phase. Higher value means more security, at the cost of liveness.",
     "Required": "Yes"
   },
   {
     "Parameter": "fee_limit",
     "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
-    "Description": "providers.",
+    "Description": "FeeLimit is the maximum tokens that will be paid to all data source providers.",
     "Required": "Yes"
   },
   {
@@ -50,7 +50,7 @@
   {
     "Parameter": "min_source_count",
     "Type": "uint64",
-    "Description": "each validator",
+    "Description": "MinSourceCount is the minimum number of data sources that must be used by each validator",
     "Required": "Yes"
   }
 ]

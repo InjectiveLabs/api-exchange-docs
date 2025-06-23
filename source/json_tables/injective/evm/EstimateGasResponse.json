@@ -7,7 +7,7 @@
   {
     "Parameter": "ret",
     "Type": "byte array",
-    "Description": "revert opcode)"
+    "Description": "ret is the returned data from evm function (result or data supplied with revert opcode)"
   },
   {
     "Parameter": "vm_error",

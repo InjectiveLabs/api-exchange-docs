@@ -42,7 +42,7 @@
   {
     "Parameter": "galxe_updated",
     "Type": "bool",
-    "Description": "address are added"
+    "Description": "True if this user is updated to be in Galxe Campain list, only eligible address are added"
   },
   {
     "Parameter": "reward_claimed",

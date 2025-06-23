@@ -20,7 +20,7 @@
   {
     "Parameter": "delegator_address",
     "Type": "string",
-    "Description": "only in bech32 notation).",
+    "Description": "Deprecated: Use of Delegator Address in MsgCreateValidator is deprecated. The validator address bytes and delegator address bytes refer to the same account while creating validator (defer only in bech32 notation).",
     "Required": "Yes"
   },
   {

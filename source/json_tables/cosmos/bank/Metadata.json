@@ -17,31 +17,31 @@
   {
     "Parameter": "display",
     "Type": "string",
-    "Description": "displayed in clients."
+    "Description": "display indicates the suggested denom that should be displayed in clients."
   },
   {
     "Parameter": "name",
     "Type": "string",
-    "Description": "Since: cosmos-sdk 0.43"
+    "Description": "name defines the name of the token (eg: Cosmos Atom)  Since: cosmos-sdk 0.43"
   },
   {
     "Parameter": "symbol",
     "Type": "string",
-    "Description": "Since: cosmos-sdk 0.43"
+    "Description": "symbol is the token symbol usually shown on exchanges (eg: ATOM). This can be the same as the display.  Since: cosmos-sdk 0.43"
   },
   {
     "Parameter": "uri",
     "Type": "string",
-    "Description": "Since: cosmos-sdk 0.46"
+    "Description": "URI to a document (on or off-chain) that contains additional information. Optional.  Since: cosmos-sdk 0.46"
   },
   {
     "Parameter": "uri_hash",
     "Type": "string",
-    "Description": "Since: cosmos-sdk 0.46"
+    "Description": "URIHash is a sha256 hash of a document pointed by URI. It's used to verify that the document didn't change. Optional.  Since: cosmos-sdk 0.46"
   },
   {
     "Parameter": "decimals",
     "Type": "uint32",
-    "Description": "Since: cosmos-sdk 0.50"
+    "Description": "Decimals represent the number of decimals use to represent token amount on chain  Since: cosmos-sdk 0.50"
   }
 ]

@@ -7,7 +7,7 @@
   {
     "Parameter": "timeout",
     "Type": "string",
-    "Description": "tracing calls"
+    "Description": "timeout overrides the default timeout of 5 seconds for JavaScript-based tracing calls"
   },
   {
     "Parameter": "reexec",
@@ -57,7 +57,7 @@
   {
     "Parameter": "state_overrides",
     "Type": "byte array",
-    "Description": "eth_call"
+    "Description": "temporary state modifications to Geth in order to simulate the effects of eth_call"
   },
   {
     "Parameter": "block_overrides",

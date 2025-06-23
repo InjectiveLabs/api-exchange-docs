@@ -2,7 +2,7 @@
   {
     "Parameter": "evm_denom",
     "Type": "string",
-    "Description": "transitions."
+    "Description": "evm_denom represents the token denomination used to run the EVM state transitions."
   },
   {
     "Parameter": "enable_create",
@@ -27,16 +27,16 @@
   {
     "Parameter": "allow_unprotected_txs",
     "Type": "bool",
-    "Description": "signed) transactions can be executed on the state machine."
+    "Description": "allow_unprotected_txs defines if replay-protected (i.e non EIP155 signed) transactions can be executed on the state machine."
   },
   {
     "Parameter": "authorized_deployers",
     "Type": "string array",
-    "Description": "if permissioned is true."
+    "Description": "list of ETH addresses that are allowed to deploy contracts. Only relevant if permissioned is true."
   },
   {
     "Parameter": "permissioned",
     "Type": "bool",
-    "Description": "authorized_deployers are allowed to deploy contracts."
+    "Description": "make contract deployment permissioned, such that only accounts listed in authorized_deployers are allowed to deploy contracts."
   }
 ]

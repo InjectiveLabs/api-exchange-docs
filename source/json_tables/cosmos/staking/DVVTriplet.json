@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "delegator_address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "validator_src_address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "validator_dst_address",
+    "Type": "string",
+    "Description": ""
+  }
+]

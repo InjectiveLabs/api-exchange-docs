@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "evidence_hash",
+    "Type": "byte array",
+    "Description": "evidence_hash defines the hash of the requested evidence. Deprecated: Use hash, a HEX encoded string, instead.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "hash",
+    "Type": "string",
+    "Description": "hash defines the evidence hash of the requested evidence.  Since: cosmos-sdk 0.47",
+    "Required": "Yes"
+  }
+]

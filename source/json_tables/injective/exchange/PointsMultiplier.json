@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "maker_points_multiplier",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "taker_points_multiplier",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

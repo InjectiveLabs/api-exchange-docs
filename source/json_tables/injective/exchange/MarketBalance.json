@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "balance",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

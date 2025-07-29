@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": "height is the equivocation height."
+  },
+  {
+    "Parameter": "time",
+    "Type": "time.Time",
+    "Description": "time is the equivocation time."
+  },
+  {
+    "Parameter": "power",
+    "Type": "int64",
+    "Description": "power is the equivocation validator power."
+  },
+  {
+    "Parameter": "consensus_address",
+    "Type": "string",
+    "Description": "consensus_address is the equivocation validator consensus address."
+  }
+]

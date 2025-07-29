@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "subject",
+    "Type": "types1.Any",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "signature",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

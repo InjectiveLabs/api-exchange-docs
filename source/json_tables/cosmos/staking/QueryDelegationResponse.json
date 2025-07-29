@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "delegation_response",
+    "Type": "DelegationResponse",
+    "Description": "delegation_responses defines the delegation info of a delegation."
+  }
+]

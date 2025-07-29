@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address is the validator address."
+  },
+  {
+    "Parameter": "validator_signing_info",
+    "Type": "ValidatorSigningInfo",
+    "Description": "validator_signing_info represents the signing info of this validator."
+  }
+]

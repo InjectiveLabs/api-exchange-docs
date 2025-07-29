@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "bucket_start_timestamp",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "account_volume",
+    "Type": "AccountVolume array",
+    "Description": ""
+  }
+]

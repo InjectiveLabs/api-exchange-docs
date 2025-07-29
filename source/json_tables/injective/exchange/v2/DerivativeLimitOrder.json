@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "order_info",
+    "Type": "OrderInfo",
+    "Description": "order_info contains the information of the order"
+  },
+  {
+    "Parameter": "order_type",
+    "Type": "OrderType",
+    "Description": "order types"
+  },
+  {
+    "Parameter": "margin",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "margin is the margin used by the limit order"
+  },
+  {
+    "Parameter": "fillable",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "the amount of the quantity remaining fillable"
+  },
+  {
+    "Parameter": "trigger_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "trigger_price is the trigger price used by stop/take orders"
+  },
+  {
+    "Parameter": "order_hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "expiration_block",
+    "Type": "int64",
+    "Description": "expiration block is the block number at which the order will expire"
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "Parameter": "deposit_denom",
+    "Type": "string",
+    "Description": "deposit denomination for the given insurance fund"
+  },
+  {
+    "Parameter": "insurance_pool_token_denom",
+    "Type": "string",
+    "Description": "insurance fund pool token denomination for the given insurance fund"
+  },
+  {
+    "Parameter": "redemption_notice_period_duration",
+    "Type": "time.Duration",
+    "Description": "redemption_notice_period_duration defines the minimum notice period duration that must pass after an underwriter sends a redemption request before the underwriter can claim his tokens"
+  },
+  {
+    "Parameter": "balance",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "balance of fund"
+  },
+  {
+    "Parameter": "total_share",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "total share tokens minted"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "marketID of the derivative market"
+  },
+  {
+    "Parameter": "market_ticker",
+    "Type": "string",
+    "Description": "ticker of the derivative market"
+  },
+  {
+    "Parameter": "oracle_base",
+    "Type": "string",
+    "Description": "Oracle base currency of the derivative market OR the oracle symbol for the binary options market."
+  },
+  {
+    "Parameter": "oracle_quote",
+    "Type": "string",
+    "Description": "Oracle quote currency of the derivative market OR the oracle provider for the binary options market."
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "types.OracleType",
+    "Description": "Oracle type of the binary options or derivative market"
+  },
+  {
+    "Parameter": "expiry",
+    "Type": "int64",
+    "Description": "Expiration time of the derivative market. Should be -1 for perpetual or -2 for binary options markets."
+  }
+]

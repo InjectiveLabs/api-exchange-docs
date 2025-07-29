@@ -1,0 +1,77 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_observed_nonce",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "valsets",
+    "Type": "Valset array",
+    "Description": ""
+  },
+  {
+    "Parameter": "valset_confirms",
+    "Type": "MsgValsetConfirm array",
+    "Description": ""
+  },
+  {
+    "Parameter": "batches",
+    "Type": "OutgoingTxBatch array",
+    "Description": ""
+  },
+  {
+    "Parameter": "batch_confirms",
+    "Type": "MsgConfirmBatch array",
+    "Description": ""
+  },
+  {
+    "Parameter": "attestations",
+    "Type": "Attestation array",
+    "Description": ""
+  },
+  {
+    "Parameter": "orchestrator_addresses",
+    "Type": "MsgSetOrchestratorAddresses array",
+    "Description": ""
+  },
+  {
+    "Parameter": "erc20_to_denoms",
+    "Type": "ERC20ToDenom array",
+    "Description": ""
+  },
+  {
+    "Parameter": "unbatched_transfers",
+    "Type": "OutgoingTransferTx array",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_observed_ethereum_height",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_outgoing_batch_id",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_outgoing_pool_id",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_observed_valset",
+    "Type": "Valset",
+    "Description": ""
+  },
+  {
+    "Parameter": "ethereum_blacklist",
+    "Type": "string array",
+    "Description": ""
+  }
+]

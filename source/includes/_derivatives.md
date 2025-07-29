@@ -11,12 +11,12 @@ Get the level 3 aggregated order book for a derivative market
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/56_L3DerivativeOrderBook.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/56_L3DerivativeOrderBook.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/63_L3DerivativeOrderBook.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/63_L3DerivativeOrderBook.py -->
 ```py
 import asyncio
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -38,8 +38,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/56_L3DerivativeOrderBook/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/56_L3DerivativeOrderBook/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/63_L3DerivativeOrderBook/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/63_L3DerivativeOrderBook/example.go -->
 ```go
 package main
 
@@ -47,7 +47,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-
 	"os"
 
 	"github.com/InjectiveLabs/sdk-go/client"
@@ -58,7 +57,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -89,7 +88,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -103,12 +102,12 @@ func main() {
 
 	marketId := "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
 
-	res, err := chainClient.FetchL3DerivativeOrderBook(ctx, marketId)
+	res, err := chainClient.FetchL3DerivativeOrderbook(ctx, marketId)
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -136,8 +135,8 @@ func main() {
 **TrimmedLimitOrder**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/trimmedLimitOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order price</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order quantity</td></tr>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order price (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order quantity (in human redable format)</td></tr>
 <tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">The order hash</td></tr>
 <tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Subaccount ID that created the order</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -152,12 +151,12 @@ Retrieves a derivative market's mid-price
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/21_DerivativeMidPriceAndTOB.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/21_DerivativeMidPriceAndTOB.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/21_DerivativeMidPriceAndTOB.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/21_DerivativeMidPriceAndTOB.py -->
 ```py
 import asyncio
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -179,8 +178,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/21_DerivativeMidPriceAndTOB/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/21_DerivativeMidPriceAndTOB/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/21_DerivativeMidPriceAndTOB/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/21_DerivativeMidPriceAndTOB/example.go -->
 ```go
 package main
 
@@ -198,7 +197,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -229,7 +228,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -248,7 +247,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -264,9 +263,9 @@ func main() {
 
 ``` json
 {
-   "midPrice":"36928150000000000000000000",
-   "bestBuyPrice":"36891200000000000000000000",
-   "bestSellPrice":"36965100000000000000000000"
+    "midPrice": "19.49495",
+    "bestBuyPrice": "19.2929",
+    "bestSellPrice": "19.697"
 }
 ```
 
@@ -286,12 +285,12 @@ Retrieves a derivative market's orderbook by marketID
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/22_DerivativeOrderbook.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/22_DerivativeOrderbook.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/22_DerivativeOrderbook.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/22_DerivativeOrderbook.py -->
 ```py
 import asyncio
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
 
@@ -317,8 +316,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/22_DerivativeOrderbook/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/22_DerivativeOrderbook/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/22_DerivativeOrderbook/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/22_DerivativeOrderbook/example.go -->
 ```go
 package main
 
@@ -339,7 +338,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -370,7 +369,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -391,7 +390,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -409,32 +408,32 @@ func main() {
 
 ``` json
 {
-   "buysPriceLevel":[
-      {
-         "p":"36891200000000000000000000",
-         "q":"3253632000000000000000"
-      },
-      {
-         "p":"36860900000000000000000000",
-         "q":"500000000000000000"
-      }
-   ],
-   "sellsPriceLevel":[
-      {
-         "p":"36965100000000000000000000",
-         "q":"60344815000000000000000"
-      },
-      {
-         "p":"37057500000000000000000000",
-         "q":"60194349800000000000000"
-      }
-   ]
+    "buysPriceLevel": [
+        {
+            "p": "19.2929",
+            "q": "0.0333"
+        },
+        {
+            "p": "19.1837",
+            "q": "0.029"
+        }
+    ],
+    "sellsPriceLevel": [
+        {
+            "p": "19.697",
+            "q": "0.0333"
+        },
+        {
+            "p": "19.899",
+            "q": "0.0333"
+        }
+    ]
 }
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryDerivativeOrderbookResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">buys_price_level</td><td class="type-td td_text">Level Array</td><td class="description-td td_text">Bid side entries</td></tr>
-<tr ><td class="parameter-td td_text">sells_price_level</td><td class="type-td td_text">Level Array</td><td class="description-td td_text">Ask side entries</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">buys_price_level</td><td class="type-td td_text">TrimmedLimitOrder Array</td><td class="description-td td_text">Bid side entries</td></tr>
+<tr ><td class="parameter-td td_text">sells_price_level</td><td class="type-td td_text">TrimmedLimitOrder Array</td><td class="description-td td_text">Ask side entries</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -442,8 +441,8 @@ func main() {
 **Level**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/level.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">p</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Price</td></tr>
-<tr ><td class="parameter-td td_text">q</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Quantity</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">p</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Price (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">q</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Quantity (in human redable format)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -456,8 +455,8 @@ Retrieves a trader's derivative orders
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/23_TraderDerivativeOrders.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/23_TraderDerivativeOrders.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/23_TraderDerivativeOrders.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/23_TraderDerivativeOrders.py -->
 ```py
 import asyncio
 import os
@@ -465,7 +464,7 @@ import os
 import dotenv
 
 from pyinjective import PrivateKey
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -499,8 +498,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/23_TraderDerivativeOrders/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/23_TraderDerivativeOrders/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/23_TraderDerivativeOrders/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/23_TraderDerivativeOrders/example.go -->
 ```go
 package main
 
@@ -518,7 +517,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -549,7 +548,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -569,7 +568,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -601,10 +600,10 @@ func main() {
 **TrimmedDerivativeLimitOrder**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/trimmedDerivativeLimitOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order price</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order quantity</td></tr>
-<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order margin</td></tr>
-<tr ><td class="parameter-td td_text">fillable</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The remaining fillable amount of the order</td></tr>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order price (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order quantity (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order margin (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">fillable</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The remaining fillable amount of the order (in human redable format)</td></tr>
 <tr ><td class="parameter-td td_text">is_buy</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">True if the order is a buy order</td></tr>
 <tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">The order hash</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">String</td><td class="description-td td_text">The client order ID provided by the creator</td></tr></tbody></table>
@@ -620,8 +619,8 @@ Retrieves all account address' derivative orders
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/24_AccountAddressDerivativeOrders.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/24_AccountAddressDerivativeOrders.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/24_AccountAddressDerivativeOrders.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/24_AccountAddressDerivativeOrders.py -->
 ```py
 import asyncio
 import os
@@ -629,7 +628,7 @@ import os
 import dotenv
 
 from pyinjective import PrivateKey
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -661,8 +660,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/24_AccountAddressDerivativeOrders/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/24_AccountAddressDerivativeOrders/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/24_AccountAddressDerivativeOrders/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/24_AccountAddressDerivativeOrders/example.go -->
 ```go
 package main
 
@@ -680,7 +679,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -711,7 +710,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -730,7 +729,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -762,10 +761,10 @@ func main() {
 **TrimmedDerivativeLimitOrder**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/trimmedDerivativeLimitOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order price</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order quantity</td></tr>
-<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order margin</td></tr>
-<tr ><td class="parameter-td td_text">fillable</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The remaining fillable amount of the order</td></tr>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order price (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order quantity (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order margin (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">fillable</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The remaining fillable amount of the order (in human redable format)</td></tr>
 <tr ><td class="parameter-td td_text">is_buy</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">True if the order is a buy order</td></tr>
 <tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">The order hash</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">String</td><td class="description-td td_text">The client order ID provided by the creator</td></tr></tbody></table>
@@ -781,8 +780,8 @@ Retrieves a trader's derivative orders
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/25_DerivativeOrdersByHashes.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/25_DerivativeOrdersByHashes.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/25_DerivativeOrdersByHashes.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/25_DerivativeOrdersByHashes.py -->
 ```py
 import asyncio
 import os
@@ -790,7 +789,7 @@ import os
 import dotenv
 
 from pyinjective import PrivateKey
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -825,8 +824,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/25_DerivativeOrdersByHashes/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/25_DerivativeOrdersByHashes/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/25_DerivativeOrdersByHashes/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/25_DerivativeOrdersByHashes/example.go -->
 ```go
 package main
 
@@ -844,7 +843,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -875,7 +874,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -896,7 +895,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -929,10 +928,10 @@ func main() {
 **TrimmedDerivativeLimitOrder**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/trimmedDerivativeLimitOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order price</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order quantity</td></tr>
-<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order margin</td></tr>
-<tr ><td class="parameter-td td_text">fillable</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The remaining fillable amount of the order</td></tr>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order price (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order quantity (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order margin (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">fillable</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The remaining fillable amount of the order (in human redable format)</td></tr>
 <tr ><td class="parameter-td td_text">is_buy</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">True if the order is a buy order</td></tr>
 <tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">The order hash</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">String</td><td class="description-td td_text">The client order ID provided by the creator</td></tr></tbody></table>
@@ -948,8 +947,8 @@ Retrieves a trader's transient derivative orders
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/26_TraderDerivativeTransientOrders.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/26_TraderDerivativeTransientOrders.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/26_TraderDerivativeTransientOrders.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/26_TraderDerivativeTransientOrders.py -->
 ```py
 import asyncio
 import os
@@ -957,7 +956,7 @@ import os
 import dotenv
 
 from pyinjective import PrivateKey
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -991,8 +990,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/26_TraderDerivativeTransientOrders/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/26_TraderDerivativeTransientOrders/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/26_TraderDerivativeTransientOrders/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/26_TraderDerivativeTransientOrders/example.go -->
 ```go
 package main
 
@@ -1010,7 +1009,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -1041,7 +1040,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -1061,7 +1060,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -1093,10 +1092,10 @@ func main() {
 **TrimmedDerivativeLimitOrder**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/trimmedDerivativeLimitOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order price</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order quantity</td></tr>
-<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order margin</td></tr>
-<tr ><td class="parameter-td td_text">fillable</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The remaining fillable amount of the order</td></tr>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order price (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order quantity (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order margin (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">fillable</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The remaining fillable amount of the order (in human redable format)</td></tr>
 <tr ><td class="parameter-td td_text">is_buy</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">True if the order is a buy order</td></tr>
 <tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">The order hash</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">String</td><td class="description-td td_text">The client order ID provided by the creator</td></tr></tbody></table>
@@ -1112,12 +1111,12 @@ Retrieves a list of derivative markets
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/27_DerivativeMarkets.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/27_DerivativeMarkets.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/27_DerivativeMarkets.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/27_DerivativeMarkets.py -->
 ```py
 import asyncio
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -1140,8 +1139,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/27_DerivativeMarkets/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/27_DerivativeMarkets/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/27_DerivativeMarkets/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/27_DerivativeMarkets/example.go -->
 ```go
 package main
 
@@ -1160,7 +1159,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -1191,7 +1190,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -1212,7 +1211,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -1230,44 +1229,52 @@ func main() {
 
 ``` json
 {
-   "markets":[
-      {
-         "market":{
-            "ticker":"INJ/USDT PERP",
-            "oracleBase":"0x2d9315a88f3019f8efa88dfe9c0f0843712da0bac814461e27733f6b83eb51b3",
-            "oracleQuote":"0x1fc18861232290221461220bd4e2acd1dcdfbc89c84092c93c18bdc7756c1588",
-            "oracleType":"Pyth",
-            "oracleScaleFactor":6,
-            "quoteDenom":"peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5",
-            "marketId":"0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
-            "initialMarginRatio":"50000000000000000",
-            "maintenanceMarginRatio":"20000000000000000",
-            "makerFeeRate":"-100000000000000",
-            "takerFeeRate":"1000000000000000",
-            "relayerFeeShareRate":"400000000000000000",
-            "isPerpetual":true,
-            "status":"Active",
-            "minPriceTickSize":"100000000000000000000",
-            "minQuantityTickSize":"100000000000000",
-			"quoteDecimals":6,
-         },
-         "perpetualInfo":{
-            "marketInfo":{
-               "marketId":"0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
-               "hourlyFundingRateCap":"625000000000000",
-               "hourlyInterestRate":"4166660000000",
-               "nextFundingTimestamp":"1709546400",
-               "fundingInterval":"3600"
-            },
-            "fundingInfo":{
-               "cumulativeFunding":"-44519773449439313111470",
-               "cumulativePrice":"0",
-               "lastTimestamp":"1709542800"
-            }
-         },
-         "markPrice":"39829277195482383939000000"
-      }
-   ]
+	"markets": [
+		{
+			"market": {
+				"ticker": "INJ/USDT PERP",
+				"oracle_base": "0x2d9315a88f3019f8efa88dfe9c0f0843712da0bac814461e27733f6b83eb51b3",
+				"oracle_quote": "0x1fc18861232290221461220bd4e2acd1dcdfbc89c84092c93c18bdc7756c1588",
+				"oracle_type": 9,
+				"quote_denom": "peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5",
+				"market_id": "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
+				"initial_margin_ratio": "0.083333000000000000",
+				"maintenance_margin_ratio": "0.060000000000000000",
+				"maker_fee_rate": "-0.000100000000000000",
+				"taker_fee_rate": "0.000500000000000000",
+				"relayer_fee_share_rate": "0.400000000000000000",
+				"isPerpetual": true,
+				"status": 1,
+				"min_price_tick_size": "0.000100000000000000",
+				"min_quantity_tick_size": "0.000100000000000000",
+				"min_notional": "0.000000000001000000",
+				"quote_decimals": 6,
+				"reduce_margin_ratio": "0.249999000000000000"
+			},
+			"Info": {
+				"perpetual_info": {
+					"market_info": {
+						"market_id": "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
+						"hourly_funding_rate_cap": "0.000625000000000000",
+						"hourly_interest_rate": "0.000004166660000000",
+						"next_funding_timestamp": 1748962800,
+						"funding_interval": 3600
+					},
+					"funding_info": {
+						"cumulative_funding": "0.142734053117809236",
+						"cumulative_price": "0.000000000000000000",
+						"last_timestamp": 1748959200
+					}
+				}
+			},
+			"mark_price": "12.864774536812149196",
+			"mid_price_and_tob": {
+				"mid_price": "19.494950000000000000",
+				"best_buy_price": "19.292900000000000000",
+				"best_sell_price": "19.697000000000000000"
+			}
+		}
+	]
 }
 ```
 
@@ -1282,7 +1289,7 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/fullDerivativeMarket.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market</td><td class="type-td td_text">DerivativeMarket</td><td class="description-td td_text">Market basic information</td></tr>
 <tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">PerpetualMarketState or ExpiryFuturesMarketInfo</td><td class="description-td td_text">Specific information for the perpetual or expiry futures market</td></tr>
-<tr ><td class="parameter-td td_text">mark_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The market mark price</td></tr>
+<tr ><td class="parameter-td td_text">mark_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The market mark price (in human redable format)</td></tr>
 <tr ><td class="parameter-td td_text">mid_price_and_tob</td><td class="type-td td_text">MidPriceAndTOB</td><td class="description-td td_text">The mid price for this market and the best ask and bid orders</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1305,9 +1312,9 @@ func main() {
 <tr ><td class="parameter-td td_text">relayer_fee_share_rate</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Percentage of the transaction fee shared with the relayer in a derivative market</td></tr>
 <tr ><td class="parameter-td td_text">is_perpetual</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">True if the market is a perpetual market. False if the market is an expiry futures market</td></tr>
 <tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">MarketStatus</td><td class="description-td td_text">Status of the market</td></tr>
-<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Minimum tick size that the price required for orders in the market</td></tr>
-<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Minimum tick size of the quantity required for orders in the market</td></tr>
-<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Minimum notional (in quote asset) required for orders in the market</td></tr>
+<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Minimum tick size that the price required for orders in the market (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Minimum tick size of the quantity required for orders in the market (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Minimum notional (in quote asset) required for orders in the market (in human redable format)</td></tr>
 <tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">String</td><td class="description-td td_text">Current market admin's address</td></tr>
 <tr ><td class="parameter-td td_text">admin_permissions</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Level of admin permissions (the permission number is a result of adding up all individual permissions numbers)</td></tr>
 <tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of decimals used for the quote token</td></tr></tbody></table>
@@ -1317,7 +1324,7 @@ func main() {
 
 **OracleType**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/oracle/oracleType.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/oracle/v1beta1/OracleType.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">Unspecified</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">Band</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">PriceFeed</td></tr>
@@ -1329,14 +1336,15 @@ func main() {
 <tr ><td class="code-td td_num">8</td><td class="name-td td_text">Uma</td></tr>
 <tr ><td class="code-td td_num">9</td><td class="name-td td_text">Pyth</td></tr>
 <tr ><td class="code-td td_num">10</td><td class="name-td td_text">BandIBC</td></tr>
-<tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr></tbody></table>
+<tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr>
+<tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **MarketStatus**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/marketStatus.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MarketStatus.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">Unspecified</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">Active</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">Paused</td></tr>
@@ -1371,7 +1379,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/perpetualMarketFunding.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">cumulative_funding</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The market's cumulative funding</td></tr>
-<tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The cumulative price for the current hour up to the last timestamp</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The cumulative price for the current hour up to the last timestamp (in human redable format)</td></tr>
 <tr ><td class="parameter-td td_text">last_timestamp</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Last funding timestamp in seconds</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1383,15 +1391,25 @@ func main() {
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The market ID</td></tr>
 <tr ><td class="parameter-td td_text">expiration_timestamp</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The market's expiration time in seconds</td></tr>
 <tr ><td class="parameter-td td_text">twap_start_timestamp</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Defines the start time of the TWAP calculation window</td></tr>
-<tr ><td class="parameter-td td_text">expiration_twap_start_price_cumulative</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the cumulative price for the start of the TWAP window</td></tr>
-<tr ><td class="parameter-td td_text">settlement_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The settlement price</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">expiration_twap_start_price_cumulative</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the cumulative price for the start of the TWAP window (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">settlement_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The settlement price (in human redable format)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**MidPriceAndTOB**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/midPriceAndTOB.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">mid_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Market's mid price (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">best_buy_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Market's best buy price (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">best_sell_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Market's best sell price (in human redable format)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **AdminPermission**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/adminPermission.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/adminPermission.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">1</td><td class="name-td td_text">Ticker Permission</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">Min Price Tick Size Permission</td></tr>
 <tr ><td class="code-td td_num">4</td><td class="name-td td_text">Min Quantity Tick Size Permission</td></tr>
@@ -1400,8 +1418,45 @@ func main() {
 <tr ><td class="code-td td_num">32</td><td class="name-td td_text">Maintenance Margin Ratio Permission</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/28_DerivativeMarket/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/28_DerivativeMarket/example.go -->
+
+## DerivativeMarket
+
+Retrieves a derivative market by ticker
+
+**IP rate limit group:** `chain`
+
+### Request Parameters
+> Request Example:
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/28_DerivativeMarket.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/28_DerivativeMarket.py -->
+```py
+import asyncio
+
+from pyinjective.async_client_v2 import AsyncClient
+from pyinjective.core.network import Network
+
+
+async def main() -> None:
+    # select network: local, testnet, mainnet
+    network = Network.testnet()
+
+    # initialize grpc client
+    client = AsyncClient(network)
+
+    derivative_market = await client.fetch_chain_derivative_market(
+        market_id="0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
+    )
+    print(derivative_market)
+
+
+if __name__ == "__main__":
+    asyncio.get_event_loop().run_until_complete(main())
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/28_DerivativeMarket/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/28_DerivativeMarket/example.go -->
 ```go
 package main
 
@@ -1420,7 +1475,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -1451,7 +1506,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -1470,7 +1525,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -1486,42 +1541,45 @@ func main() {
 
 ``` json
 {
-   "market":{
-      "market":{
-         "ticker":"INJ/USDT PERP",
-         "oracleBase":"0x2d9315a88f3019f8efa88dfe9c0f0843712da0bac814461e27733f6b83eb51b3",
-         "oracleQuote":"0x1fc18861232290221461220bd4e2acd1dcdfbc89c84092c93c18bdc7756c1588",
-         "oracleType":"Pyth",
-         "oracleScaleFactor":6,
-         "quoteDenom":"peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5",
-         "marketId":"0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
-         "initialMarginRatio":"50000000000000000",
-         "maintenanceMarginRatio":"20000000000000000",
-         "makerFeeRate":"-100000000000000",
-         "takerFeeRate":"1000000000000000",
-         "relayerFeeShareRate":"400000000000000000",
-         "isPerpetual":true,
-         "status":"Active",
-         "minPriceTickSize":"100000000000000000000",
-         "minQuantityTickSize":"100000000000000"
-		 "quoteDecimals":6,
-      },
-      "perpetualInfo":{
-         "marketInfo":{
-            "marketId":"0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
-            "hourlyFundingRateCap":"625000000000000",
-            "hourlyInterestRate":"4166660000000",
-            "nextFundingTimestamp":"1709553600",
-            "fundingInterval":"3600"
-         },
-         "fundingInfo":{
-            "cumulativeFunding":"-44192284639015238855564",
-            "cumulativePrice":"0",
-            "lastTimestamp":"1709550000"
-         }
-      },
-      "markPrice":"39011901904676818317000000"
-   }
+	"market": {
+		"market": {
+			"ticker": "INJ/USDT PERP",
+			"oracle_base": "0x2d9315a88f3019f8efa88dfe9c0f0843712da0bac814461e27733f6b83eb51b3",
+			"oracle_quote": "0x1fc18861232290221461220bd4e2acd1dcdfbc89c84092c93c18bdc7756c1588",
+			"oracle_type": 9,
+			"quote_denom": "peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5",
+			"market_id": "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
+			"initial_margin_ratio": "0.083333000000000000",
+			"maintenance_margin_ratio": "0.060000000000000000",
+			"maker_fee_rate": "-0.000100000000000000",
+			"taker_fee_rate": "0.000500000000000000",
+			"relayer_fee_share_rate": "0.400000000000000000",
+			"isPerpetual": true,
+			"status": 1,
+			"min_price_tick_size": "0.000100000000000000",
+			"min_quantity_tick_size": "0.000100000000000000",
+			"min_notional": "0.000000000001000000",
+			"quote_decimals": 6,
+			"reduce_margin_ratio": "0.249999000000000000"
+		},
+		"Info": {
+			"perpetual_info": {
+				"market_info": {
+					"market_id": "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
+					"hourly_funding_rate_cap": "0.000625000000000000",
+					"hourly_interest_rate": "0.000004166660000000",
+					"next_funding_timestamp": 1748962800,
+					"funding_interval": 3600
+				},
+				"funding_info": {
+					"cumulative_funding": "0.142734053117809236",
+					"cumulative_price": "0.000000000000000000",
+					"last_timestamp": 1748959200
+				}
+			}
+		},
+		"mark_price": "12.824150042260121341"
+	}
 }
 ```
 
@@ -1536,7 +1594,7 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/fullDerivativeMarket.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market</td><td class="type-td td_text">DerivativeMarket</td><td class="description-td td_text">Market basic information</td></tr>
 <tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">PerpetualMarketState or ExpiryFuturesMarketInfo</td><td class="description-td td_text">Specific information for the perpetual or expiry futures market</td></tr>
-<tr ><td class="parameter-td td_text">mark_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The market mark price</td></tr>
+<tr ><td class="parameter-td td_text">mark_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The market mark price (in human redable format)</td></tr>
 <tr ><td class="parameter-td td_text">mid_price_and_tob</td><td class="type-td td_text">MidPriceAndTOB</td><td class="description-td td_text">The mid price for this market and the best ask and bid orders</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1559,9 +1617,9 @@ func main() {
 <tr ><td class="parameter-td td_text">relayer_fee_share_rate</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Percentage of the transaction fee shared with the relayer in a derivative market</td></tr>
 <tr ><td class="parameter-td td_text">is_perpetual</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">True if the market is a perpetual market. False if the market is an expiry futures market</td></tr>
 <tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">MarketStatus</td><td class="description-td td_text">Status of the market</td></tr>
-<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Minimum tick size that the price required for orders in the market</td></tr>
-<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Minimum tick size of the quantity required for orders in the market</td></tr>
-<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Minimum notional (in quote asset) required for orders in the market</td></tr>
+<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Minimum tick size that the price required for orders in the market (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Minimum tick size of the quantity required for orders in the market (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Minimum notional (in quote asset) required for orders in the market (in human redable format)</td></tr>
 <tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">String</td><td class="description-td td_text">Current market admin's address</td></tr>
 <tr ><td class="parameter-td td_text">admin_permissions</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Level of admin permissions (the permission number is a result of adding up all individual permissions numbers)</td></tr>
 <tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of decimals used for the quote token</td></tr></tbody></table>
@@ -1571,7 +1629,7 @@ func main() {
 
 **OracleType**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/oracle/oracleType.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/oracle/v1beta1/OracleType.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">Unspecified</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">Band</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">PriceFeed</td></tr>
@@ -1583,14 +1641,15 @@ func main() {
 <tr ><td class="code-td td_num">8</td><td class="name-td td_text">Uma</td></tr>
 <tr ><td class="code-td td_num">9</td><td class="name-td td_text">Pyth</td></tr>
 <tr ><td class="code-td td_num">10</td><td class="name-td td_text">BandIBC</td></tr>
-<tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr></tbody></table>
+<tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr>
+<tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **MarketStatus**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/marketStatus.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MarketStatus.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">Unspecified</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">Active</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">Paused</td></tr>
@@ -1625,7 +1684,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/perpetualMarketFunding.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">cumulative_funding</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The market's cumulative funding</td></tr>
-<tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The cumulative price for the current hour up to the last timestamp</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The cumulative price for the current hour up to the last timestamp (in human redable format)</td></tr>
 <tr ><td class="parameter-td td_text">last_timestamp</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Last funding timestamp in seconds</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1637,15 +1696,25 @@ func main() {
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The market ID</td></tr>
 <tr ><td class="parameter-td td_text">expiration_timestamp</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The market's expiration time in seconds</td></tr>
 <tr ><td class="parameter-td td_text">twap_start_timestamp</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Defines the start time of the TWAP calculation window</td></tr>
-<tr ><td class="parameter-td td_text">expiration_twap_start_price_cumulative</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the cumulative price for the start of the TWAP window</td></tr>
-<tr ><td class="parameter-td td_text">settlement_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The settlement price</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">expiration_twap_start_price_cumulative</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the cumulative price for the start of the TWAP window (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">settlement_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The settlement price (in human redable format)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**MidPriceAndTOB**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/midPriceAndTOB.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">mid_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Market's mid price (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">best_buy_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Market's best buy price (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">best_sell_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Market's best sell price (in human redable format)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **AdminPermission**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/adminPermission.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/adminPermission.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">1</td><td class="name-td td_text">Ticker Permission</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">Min Price Tick Size Permission</td></tr>
 <tr ><td class="code-td td_num">4</td><td class="name-td td_text">Min Quantity Tick Size Permission</td></tr>
@@ -1654,8 +1723,45 @@ func main() {
 <tr ><td class="code-td td_num">32</td><td class="name-td td_text">Maintenance Margin Ratio Permission</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/29_DerivativeMarketAddress/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/29_DerivativeMarketAddress/example.go -->
+
+## DerivativeMarketAddress
+
+Retrieves a derivative market's corresponding address for fees that contribute to the market's insurance fund
+
+**IP rate limit group:** `chain`
+
+### Request Parameters
+> Request Example:
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/29_DerivativeMarketAddress.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/29_DerivativeMarketAddress.py -->
+```py
+import asyncio
+
+from pyinjective.async_client_v2 import AsyncClient
+from pyinjective.core.network import Network
+
+
+async def main() -> None:
+    # select network: local, testnet, mainnet
+    network = Network.testnet()
+
+    # initialize grpc client
+    client = AsyncClient(network)
+
+    address = await client.fetch_derivative_market_address(
+        market_id="0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
+    )
+    print(address)
+
+
+if __name__ == "__main__":
+    asyncio.get_event_loop().run_until_complete(main())
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/29_DerivativeMarketAddress/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/29_DerivativeMarketAddress/example.go -->
 ```go
 package main
 
@@ -1674,7 +1780,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -1705,7 +1811,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -1724,7 +1830,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -1740,8 +1846,8 @@ func main() {
 
 ``` json
 {
-   "address":"inj1zlh5sqevkfphtwnu9cul8p89vseme2eqt0snn9",
-   "subaccountId":"0x17ef48032cb24375ba7c2e39f384e56433bcab20000000000000000000000000"
+	"address": "inj1zlh5sqevkfphtwnu9cul8p89vseme2eqt0snn9",
+	"subaccount_id": "0x17ef48032cb24375ba7c2e39f384e56433bcab20000000000000000000000000"
 }
 ```
 
@@ -1760,12 +1866,12 @@ Retrieves the entire exchange module's positions
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/31_Positions.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/31_Positions.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/31_Positions.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/31_Positions.py -->
 ```py
 import asyncio
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -1785,8 +1891,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/31_Positions/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/31_Positions/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/31_Positions/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/31_Positions/example.go -->
 ```go
 package main
 
@@ -1805,7 +1911,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -1836,7 +1942,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -1853,7 +1959,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -1868,28 +1974,28 @@ No parameters
 ``` json
 {
    "state":[
-      {
-         "subaccountId":"0xaf79152ac5df276d9a8e1e2e22822f9713474902000000000000000000000000",
-         "marketId":"0x0f03542809143c7e5d3c22f56bc6e51eb2c8bab5009161b58f6f468432dfa196",
-         "position":{
-            "isLong":true,
-            "quantity":"258750000000000000000",
-            "entryPrice":"24100496718773416724721614",
-            "margin":"6777476791762608353694085318",
-            "cumulativeFundingEntry":"50154448152800501378128"
-         }
-      },
-      {
-         "subaccountId":"0xd28d1e9bc2d5a00e5e17f82fa6d4a7b0f4f034de000000000000000000000000",
-         "marketId":"0x0f03542809143c7e5d3c22f56bc6e51eb2c8bab5009161b58f6f468432dfa196",
-         "position":{
-            "quantity":"258750000000000000000",
-            "entryPrice":"23962425204761235933835394",
-            "margin":"6044298532028028581333461495",
-            "cumulativeFundingEntry":"50154448152800501378128",
-            "isLong":false
-         }
-      }
+      	{
+			"subaccount_id": "0x90b61ab108ad861a68a763eb7fd9868737678ed5000000000000000000000000",
+			"market_id": "0x0f03542809143c7e5d3c22f56bc6e51eb2c8bab5009161b58f6f468432dfa196",
+			"position": {
+				"isLong": true,
+				"quantity": "0.000100000000000000",
+				"entry_price": "32.256800000000000000",
+				"margin": "0.004249000000000000",
+				"cumulative_funding_entry": "1.271877043435469720"
+			}
+		},
+		{
+			"subaccount_id": "0xaf79152ac5df276d9a8e1e2e22822f9713474902000000000000000000000000",
+			"market_id": "0x0f03542809143c7e5d3c22f56bc6e51eb2c8bab5009161b58f6f468432dfa196",
+			"position": {
+				"isLong": true,
+				"quantity": "258.750000000000000000",
+				"entry_price": "24.100496718773416725",
+				"margin": "6777.476791762608353694",
+				"cumulative_funding_entry": "0.050154448152800501"
+			}
+		}
    ]
 }
 ```
@@ -1921,6 +2027,172 @@ No parameters
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
+## PositionsInMarket
+
+Retrieves all positions in market
+
+**IP rate limit group:** `chain`
+
+### Request Parameters
+> Request Example:
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/65_PositionsInMarket.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/65_PositionsInMarket.py -->
+```py
+import asyncio
+import json
+
+from pyinjective.async_client_v2 import AsyncClient
+from pyinjective.core.network import Network
+
+
+async def main() -> None:
+    # select network: local, testnet, mainnet
+    network = Network.testnet()
+
+    # initialize grpc client
+    client = AsyncClient(network)
+
+    market_id = "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
+    positions = await client.fetch_chain_positions_in_market(market_id=market_id)
+    print(json.dumps(positions, indent=2))
+
+
+if __name__ == "__main__":
+    asyncio.get_event_loop().run_until_complete(main())
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/65_PositionsInMarket/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/65_PositionsInMarket/example.go -->
+```go
+package main
+
+import (
+	"context"
+	"encoding/json"
+	"fmt"
+
+	"os"
+
+	"github.com/InjectiveLabs/sdk-go/client"
+	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
+	"github.com/InjectiveLabs/sdk-go/client/common"
+	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+)
+
+func main() {
+	network := common.LoadNetwork("testnet", "lb")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
+	if err != nil {
+		panic(err)
+	}
+
+	senderAddress, cosmosKeyring, err := chainclient.InitCosmosKeyring(
+		os.Getenv("HOME")+"/.injectived",
+		"injectived",
+		"file",
+		"inj-user",
+		"12345678",
+		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		false,
+	)
+
+	if err != nil {
+		panic(err)
+	}
+
+	clientCtx, err := chainclient.NewClientContext(
+		network.ChainId,
+		senderAddress.String(),
+		cosmosKeyring,
+	)
+
+	if err != nil {
+		panic(err)
+	}
+
+	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
+
+	chainClient, err := chainclient.NewChainClientV2(
+		clientCtx,
+		network,
+		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
+	)
+
+	if err != nil {
+		panic(err)
+	}
+
+	ctx := context.Background()
+
+	marketId := "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
+
+	res, err := chainClient.FetchChainPositionsInMarket(ctx, marketId)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	str, _ := json.MarshalIndent(res, "", "\t")
+	fmt.Print(string(str))
+
+}
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountPositionInMarketRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### Response Parameters
+> Response Example:
+
+``` json
+{
+	"state": [
+		{
+			"subaccount_id": "0x0000007c60fab7a70c2ae0ebe437f3726b05e7eb000000000000000000000000",
+			"market_id": "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
+			"position": {
+				"quantity": "0.087829315829932072",
+				"entry_price": "26.453271813315285838",
+				"margin": "1.156098565040366061",
+				"cumulative_funding_entry": "-0.259896600932507160"
+			}
+		},
+		{
+			"subaccount_id": "0x0000040f1111c5c3d2037940658ee770bb37e0a2000000000000000000000000",
+			"market_id": "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
+			"position": {
+				"isLong": true,
+				"quantity": "0.000068500966722584",
+				"entry_price": "12.293600000000000000",
+				"margin": "0.000422337168093583",
+				"cumulative_funding_entry": "0.001394965993845972"
+			}
+		}
+	]
+}
+```
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountPositionInMarketResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">Position</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**Position**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/Position.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">isLong</td><td class="type-td td_text">bool</td><td class="description-td td_text">True if the position is long. False if the position is short.</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">The quantity of the position (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">entry_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">The entry price of the position (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">The margin of the position (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_funding_entry</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">The cumulative funding</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+
 ## SubaccountPositions
 
 Retrieves subaccount's positions
@@ -1930,8 +2202,8 @@ Retrieves subaccount's positions
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/32_SubaccountPositions.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/32_SubaccountPositions.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/32_SubaccountPositions.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/32_SubaccountPositions.py -->
 ```py
 import asyncio
 import os
@@ -1939,7 +2211,7 @@ import os
 import dotenv
 
 from pyinjective import PrivateKey
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -1972,8 +2244,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/32_SubaccountPositions/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/32_SubaccountPositions/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/32_SubaccountPositions/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/32_SubaccountPositions/example.go -->
 ```go
 package main
 
@@ -1992,7 +2264,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -2023,7 +2295,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -2042,7 +2314,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -2058,63 +2330,61 @@ func main() {
 
 ``` json
 {
-   "state":[
-      {
-         "subaccountId":"0xbdaedec95d563fb05240d6e01821008454c24c36000000000000000000000000",
-         "marketId":"0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
-         "position":{
-            "quantity":"3340193358036765108",
-            "entryPrice":"36571100000000000000000000",
-            "margin":"122195236794397342072018650",
-            "cumulativeFundingEntry":"-252598128590449182271444",
-            "isLong":false
-         }
-      },
-      {
-         "subaccountId":"0xbdaedec95d563fb05240d6e01821008454c24c36000000000000000000000000",
-         "marketId":"0x95698a9d8ba11660f44d7001d8c6fb191552ece5d9141a05c5d9128711cdc2e0",
-         "position":{
-            "isLong":true,
-            "quantity":"135686990000000000000000",
-            "entryPrice":"22530000000000000000000000",
-            "margin":"636295890792648990477285777577",
-            "cumulativeFundingEntry":"547604913674998202455064"
-         }
-      },
-      {
-         "subaccountId":"0xbdaedec95d563fb05240d6e01821008454c24c36000000000000000000000000",
-         "marketId":"0xba9c96a1a9cc226cfe6bd9bca3a433e396569d1955393f38f2ee728cfda7ec58",
-         "position":{
-            "quantity":"49610000000000000000",
-            "entryPrice":"132668911285488007767214817",
-            "margin":"6506890715472807452489590330",
-            "cumulativeFundingEntry":"1853558761901071670120617",
-            "isLong":false
-         }
-      },
-      {
-         "subaccountId":"0xbdaedec95d563fb05240d6e01821008454c24c36000000000000000000000000",
-         "marketId":"0xd97d0da6f6c11710ef06315971250e4e9aed4b7d4cd02059c9477ec8cf243782",
-         "position":{
-            "quantity":"1000000000000000000",
-            "entryPrice":"10700000000000000000000000",
-            "margin":"10646500000000000000000000",
-            "cumulativeFundingEntry":"452362068840099307543671",
-            "isLong":false
-         }
-      },
-      {
-         "subaccountId":"0xbdaedec95d563fb05240d6e01821008454c24c36000000000000000000000000",
-         "marketId":"0xe185b08a7ccd830a94060edd5e457d30f429aa6f0757f75a8b93aa611780cfac",
-         "position":{
-            "quantity":"71000000000000000000",
-            "entryPrice":"1282490277777777777777778",
-            "margin":"87823626715436695150716328",
-            "cumulativeFundingEntry":"4419299319189937712262",
-            "isLong":false
-         }
-      }
-   ]
+	"state": [
+		{
+			"subaccount_id": "0xaf79152ac5df276d9a8e1e2e22822f9713474902000000000000000000000000",
+			"market_id": "0x0f03542809143c7e5d3c22f56bc6e51eb2c8bab5009161b58f6f468432dfa196",
+			"position": {
+				"isLong": true,
+				"quantity": "258.750000000000000000",
+				"entry_price": "24.100496718773416725",
+				"margin": "6777.476791762608353694",
+				"cumulative_funding_entry": "0.050154448152800501"
+			}
+		},
+		{
+			"subaccount_id": "0xaf79152ac5df276d9a8e1e2e22822f9713474902000000000000000000000000",
+			"market_id": "0x155576f660b3b6116c1ab7a42fbf58a95adf11b3061f88f81bc8df228e7ac934",
+			"position": {
+				"quantity": "0.000000642507772481",
+				"entry_price": "2126.366900000000000000",
+				"margin": "0.000698771862410178",
+				"cumulative_funding_entry": "68.937815618854366506"
+			}
+		},
+		{
+			"subaccount_id": "0xaf79152ac5df276d9a8e1e2e22822f9713474902000000000000000000000000",
+			"market_id": "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
+			"position": {
+				"isLong": true,
+				"quantity": "4001.268237974374735585",
+				"entry_price": "38.219387300439508994",
+				"margin": "149511.194761579584705663",
+				"cumulative_funding_entry": "1.164901749616683959"
+			}
+		},
+		{
+			"subaccount_id": "0xaf79152ac5df276d9a8e1e2e22822f9713474902000000000000000000000000",
+			"market_id": "0x95698a9d8ba11660f44d7001d8c6fb191552ece5d9141a05c5d9128711cdc2e0",
+			"position": {
+				"quantity": "160.000000000000000000",
+				"entry_price": "24.375243283322806983",
+				"margin": "3762.387088377671867635",
+				"cumulative_funding_entry": "0.741360126674168716"
+			}
+		},
+		{
+			"subaccount_id": "0xaf79152ac5df276d9a8e1e2e22822f9713474902000000000000000000000000",
+			"market_id": "0xf97a740538e10845e0c3db9ea94c6eaf8a570aeebe3e3511e2e387501a40e4bb",
+			"position": {
+				"isLong": true,
+				"quantity": "110.000000000000000000",
+				"entry_price": "22.516556291390728477",
+				"margin": "2476.912251655629139073",
+				"cumulative_funding_entry": "0.000000000000000000"
+			}
+		}
+	]
 }
 ```
 
@@ -2154,8 +2424,8 @@ Retrieves subaccount's position in market
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/33_SubaccountPositionInMarket.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/33_SubaccountPositionInMarket.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/33_SubaccountPositionInMarket.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/33_SubaccountPositionInMarket.py -->
 ```py
 import asyncio
 import os
@@ -2163,7 +2433,7 @@ import os
 import dotenv
 
 from pyinjective import PrivateKey
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -2197,8 +2467,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/33_SubaccountPositionInMarket/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/33_SubaccountPositionInMarket/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/33_SubaccountPositionInMarket/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/33_SubaccountPositionInMarket/example.go -->
 ```go
 package main
 
@@ -2217,7 +2487,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -2248,7 +2518,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -2268,7 +2538,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -2285,13 +2555,13 @@ func main() {
 
 ``` json
 {
-   "state":{
-      "quantity":"3340193358036765108",
-      "entryPrice":"36571100000000000000000000",
-      "margin":"122195236794397342072018650",
-      "cumulativeFundingEntry":"-252598128590449182271444",
-      "isLong":false
-   }
+	"state": {
+		"isLong": true,
+		"quantity": "4001.268237974374735585",
+		"entry_price": "38.219387300439508994",
+		"margin": "149511.194761579584705663",
+		"cumulative_funding_entry": "1.164901749616683959"
+	}
 }
 ```
 
@@ -2321,8 +2591,8 @@ Retrieves subaccount's position in market
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/34_SubaccountEffectivePositionInMarket.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/34_SubaccountEffectivePositionInMarket.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/34_SubaccountEffectivePositionInMarket.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/34_SubaccountEffectivePositionInMarket.py -->
 ```py
 import asyncio
 import os
@@ -2330,7 +2600,7 @@ import os
 import dotenv
 
 from pyinjective import PrivateKey
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -2364,8 +2634,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/34_SubaccountEffectivePositionInMarket/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/34_SubaccountEffectivePositionInMarket/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/34_SubaccountEffectivePositionInMarket/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/34_SubaccountEffectivePositionInMarket/example.go -->
 ```go
 package main
 
@@ -2384,7 +2654,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -2415,7 +2685,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -2435,7 +2705,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -2452,12 +2722,12 @@ func main() {
 
 ``` json
 {
-   "state":{
-      "quantity":"3340193358036765108",
-      "entryPrice":"36571100000000000000000000",
-      "effectiveMargin":"115186707927789961723454140",
-      "isLong":false
-   }
+	"state": {
+		"is_long": true,
+		"quantity": "4001.268237974374735585",
+		"entry_price": "38.219387300439508994",
+		"effective_margin": "52225.903642794329315064"
+	}
 }
 ```
 
@@ -2471,9 +2741,9 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/effectivePosition.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">is_effective_position_long</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">True if the position is long. False if the position is short</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The position's amount</td></tr>
-<tr ><td class="parameter-td td_text">entry_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The order execution price when the position was created</td></tr>
-<tr ><td class="parameter-td td_text">effective_margin</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The position's current margin amount</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The position's amount (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">entry_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The order execution price when the position was created (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">effective_margin</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The position's current margin amount (in human redable format)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -2486,12 +2756,12 @@ Retrieves perpetual market's info
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/35_PerpetualMarketInfo.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/35_PerpetualMarketInfo.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/35_PerpetualMarketInfo.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/35_PerpetualMarketInfo.py -->
 ```py
 import asyncio
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -2513,8 +2783,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/35_PerpetualMarketInfo/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/35_PerpetualMarketInfo/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/35_PerpetualMarketInfo/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/35_PerpetualMarketInfo/example.go -->
 ```go
 package main
 
@@ -2533,7 +2803,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -2564,7 +2834,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -2583,7 +2853,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -2635,12 +2905,12 @@ Retrieves expiry market's info
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/36_ExpiryFuturesMarketInfo.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/36_ExpiryFuturesMarketInfo.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/36_ExpiryFuturesMarketInfo.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/36_ExpiryFuturesMarketInfo.py -->
 ```py
 import asyncio
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -2662,8 +2932,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/36_ExpiryFuturesMarketInfo/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/36_ExpiryFuturesMarketInfo/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/36_ExpiryFuturesMarketInfo/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/36_ExpiryFuturesMarketInfo/example.go -->
 ```go
 package main
 
@@ -2682,7 +2952,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -2713,7 +2983,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -2732,7 +3002,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -2762,8 +3032,8 @@ func main() {
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The market ID</td></tr>
 <tr ><td class="parameter-td td_text">expiration_timestamp</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The market's expiration time in seconds</td></tr>
 <tr ><td class="parameter-td td_text">twap_start_timestamp</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Defines the start time of the TWAP calculation window</td></tr>
-<tr ><td class="parameter-td td_text">expiration_twap_start_price_cumulative</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the cumulative price for the start of the TWAP window</td></tr>
-<tr ><td class="parameter-td td_text">settlement_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The settlement price</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">expiration_twap_start_price_cumulative</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the cumulative price for the start of the TWAP window (in human redable format)</td></tr>
+<tr ><td class="parameter-td td_text">settlement_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The settlement price (in human redable format)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -2776,12 +3046,12 @@ Retrieves perpetual market funding
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/37_PerpetualMarketFunding.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/37_PerpetualMarketFunding.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/37_PerpetualMarketFunding.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/37_PerpetualMarketFunding.py -->
 ```py
 import asyncio
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -2803,8 +3073,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/37_PerpetualMarketFunding/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/37_PerpetualMarketFunding/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/37_PerpetualMarketFunding/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/37_PerpetualMarketFunding/example.go -->
 ```go
 package main
 
@@ -2823,7 +3093,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -2854,7 +3124,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -2873,7 +3143,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -2907,7 +3177,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/perpetualMarketFunding.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">cumulative_funding</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The market's cumulative funding</td></tr>
-<tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The cumulative price for the current hour up to the last timestamp</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The cumulative price for the current hour up to the last timestamp (in human redable format)</td></tr>
 <tr ><td class="parameter-td td_text">last_timestamp</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Last funding timestamp in seconds</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -2921,8 +3191,8 @@ Retrieves a trader's derivative conditional orders
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/54_TraderDerivativeConditionalOrders.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/query/54_TraderDerivativeConditionalOrders.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/54_TraderDerivativeConditionalOrders.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/54_TraderDerivativeConditionalOrders.py -->
 ```py
 import asyncio
 import os
@@ -2930,7 +3200,7 @@ import os
 import dotenv
 
 from pyinjective import PrivateKey
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -2964,8 +3234,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/54_TraderDerivativeConditionalOrders/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/query/54_TraderDerivativeConditionalOrders/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/54_TraderDerivativeConditionalOrders/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/54_TraderDerivativeConditionalOrders/example.go -->
 ```go
 package main
 
@@ -2983,7 +3253,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -3014,7 +3284,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -3034,16 +3304,16 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryTraderDerivativeConditionalOrdersRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Trader subaccount ID</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The market ID to query for</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryTraderDerivativeConditionalOrdersRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -3057,23 +3327,23 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryTraderDerivativeConditionalOrdersResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">orders</td><td class="type-td td_text">TrimmedDerivativeConditionalOrder Array</td><td class="description-td td_text">List of conditional orders</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryTraderDerivativeConditionalOrdersResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">orders</td><td class="type-td td_text">TrimmedDerivativeConditionalOrder array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TrimmedDerivativeConditionalOrder**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/trimmedDerivativeConditionalOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The order price</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The order quantity</td></tr>
-<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The order margin</td></tr>
-<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">OracleType</td><td class="description-td td_text">Price to trigger the order</td></tr>
-<tr ><td class="parameter-td td_text">is_buy</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">True if the order is a buy order. False otherwise.</td></tr>
-<tr ><td class="parameter-td td_text">is_limit</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">True if the order is a limit order. False otherwise.</td></tr>
-<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">The order hash</td></tr>
-<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">String</td><td class="description-td td_text">The client order ID provided by the creator</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/TrimmedDerivativeConditionalOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">price of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">quantity of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">margin of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">triggerPrice</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">price to trigger the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">isBuy</td><td class="type-td td_text">bool</td><td class="description-td td_text">true if the order is a buy</td></tr>
+<tr ><td class="parameter-td td_text">isLimit</td><td class="type-td td_text">bool</td><td class="description-td td_text">true if the order is a limit order</td></tr>
+<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client ID</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -3084,8 +3354,8 @@ func main() {
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/4_MsgInstantPerpetualMarketLaunch.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/4_MsgInstantPerpetualMarketLaunch.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/4_MsgInstantPerpetualMarketLaunch.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/4_MsgInstantPerpetualMarketLaunch.py -->
 ```py
 import asyncio
 import json
@@ -3094,7 +3364,7 @@ from decimal import Decimal
 
 import dotenv
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import PrivateKey
@@ -3131,10 +3401,10 @@ async def main() -> None:
     await client.fetch_account(address.to_acc_bech32())
 
     # prepare tx msg
-    message = composer.msg_instant_perpetual_market_launch(
+    message = composer.msg_instant_perpetual_market_launch_v2(
         sender=address.to_acc_bech32(),
         ticker="INJ/USDC PERP",
-        quote_denom="USDC",
+        quote_denom="factory/inj17vytdwqczqz72j65saukplrktd4gyfme5agf6c/usdc",
         oracle_base="INJ",
         oracle_quote="USDC",
         oracle_scale_factor=6,
@@ -3143,6 +3413,7 @@ async def main() -> None:
         taker_fee_rate=Decimal("0.001"),
         initial_margin_ratio=Decimal("0.33"),
         maintenance_margin_ratio=Decimal("0.095"),
+        reduce_margin_ratio=Decimal("3"),
         min_price_tick_size=Decimal("0.001"),
         min_quantity_tick_size=Decimal("0.01"),
         min_notional=Decimal("1"),
@@ -3164,20 +3435,22 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/4_MsgInstantPerpetualMarketLaunch/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/4_MsgInstantPerpetualMarketLaunch/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/4_MsgInstantPerpetualMarketLaunch/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/4_MsgInstantPerpetualMarketLaunch/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	"cosmossdk.io/math"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 
-	exchangetypes "github.com/InjectiveLabs/sdk-go/chain/exchange/types"
+	exchangev2types "github.com/InjectiveLabs/sdk-go/chain/exchange/types/v2"
 	oracletypes "github.com/InjectiveLabs/sdk-go/chain/oracle/types"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
@@ -3185,7 +3458,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -3216,7 +3489,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 	)
@@ -3224,7 +3497,10 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -3232,10 +3508,7 @@ func main() {
 	minPriceTickSize := math.LegacyMustNewDecFromStr("0.01")
 	minQuantityTickSize := math.LegacyMustNewDecFromStr("0.001")
 
-	chainMinPriceTickSize := minPriceTickSize.Mul(math.LegacyNewDecFromIntWithPrec(math.NewInt(1), int64(6)))
-	chainMinQuantityTickSize := minQuantityTickSize
-
-	msg := &exchangetypes.MsgInstantPerpetualMarketLaunch{
+	msg := &exchangev2types.MsgInstantPerpetualMarketLaunch{
 		Sender:                 senderAddress.String(),
 		Ticker:                 "INJ/USDC PERP",
 		QuoteDenom:             "factory/inj17vytdwqczqz72j65saukplrktd4gyfme5agf6c/usdc",
@@ -3247,21 +3520,21 @@ func main() {
 		TakerFeeRate:           math.LegacyMustNewDecFromStr("0.001"),
 		InitialMarginRatio:     math.LegacyMustNewDecFromStr("0.33"),
 		MaintenanceMarginRatio: math.LegacyMustNewDecFromStr("0.095"),
-		MinPriceTickSize:       chainMinPriceTickSize,
-		MinQuantityTickSize:    chainMinQuantityTickSize,
+		ReduceMarginRatio:      math.LegacyMustNewDecFromStr("0.3"),
+		MinPriceTickSize:       minPriceTickSize,
+		MinQuantityTickSize:    minQuantityTickSize,
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.AsyncBroadcastMsg(msg)
-
+	response, err := chainClient.AsyncBroadcastMsg(ctx, msg)
 	if err != nil {
 		panic(err)
 	}
 
-	str, _ := json.MarshalIndent(response, "", " ")
+	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -3269,28 +3542,29 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/msgInstantPerpetualMarketLaunch.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">The market launch requestor address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">ticker</td><td class="type-td td_text">String</td><td class="description-td td_text">Ticker for the perpetual market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">quote_denom</td><td class="type-td td_text">String</td><td class="description-td td_text">Quote tocken denom</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">oracle_base</td><td class="type-td td_text">String</td><td class="description-td td_text">Oracle base currency</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">oracle_quote</td><td class="type-td td_text">String</td><td class="description-td td_text">Oracle quote currency</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">oracle_scale_factor</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Scale factor for oracle prices</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">OracleType</td><td class="description-td td_text">The oracle type</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">maker_fee_rate</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the trade fee rate for makers on the perpetual market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">taker_fee_rate</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the trade fee rate for takers on the perpetual market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">initial_margin_ratio</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the initial margin ratio for the perpetual market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">maintenance_margin_ratio</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the maintenance margin ratio for the perpetual market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the minimum tick size of the order's price</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the minimum tick size of the order's quantity</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the minimum notional (in quote asset) required for orders in the market</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MsgInstantPerpetualMarketLaunch.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">the sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">ticker</td><td class="type-td td_text">string</td><td class="description-td td_text">Ticker for the derivative market.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">quote_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">type of coin to use as the base currency</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_base</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle base currency</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_quote</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle quote currency</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_scale_factor</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Scale factor for oracle prices.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">types1.OracleType</td><td class="description-td td_text">Oracle type</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">maker_fee_rate</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">maker_fee_rate defines the trade fee rate for makers on the perpetual market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">taker_fee_rate</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">taker_fee_rate defines the trade fee rate for takers on the perpetual market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">initial_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">initial_margin_ratio defines the initial margin ratio for the perpetual market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">maintenance_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">maintenance_margin_ratio defines the maintenance margin ratio for the perpetual market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_price_tick_size defines the minimum tick size of the order's price and margin (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_quantity_tick_size defines the minimum tick size of the order's quantity (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OracleType**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/oracle/oracleType.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/oracle/v1beta1/OracleType.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">Unspecified</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">Band</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">PriceFeed</td></tr>
@@ -3302,7 +3576,8 @@ func main() {
 <tr ><td class="code-td td_num">8</td><td class="name-td td_text">Uma</td></tr>
 <tr ><td class="code-td td_num">9</td><td class="name-td td_text">Pyth</td></tr>
 <tr ><td class="code-td td_num">10</td><td class="name-td td_text">BandIBC</td></tr>
-<tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr></tbody></table>
+<tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr>
+<tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -3312,75 +3587,38 @@ func main() {
 
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tx/broadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="paramter-th">Paramter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="paramter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">Transaction details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TxResponse**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/txResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The block height</td></tr>
-<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction hash</td></tr>
-<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">String</td><td class="description-td td_text">Namespace for the code</td></tr>
-<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Response code (zero for success, non-zero for errors)</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">String</td><td class="description-td td_text">Bytes, if any</td></tr>
-<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">String</td><td class="description-td td_text">The output of the application's logger (raw string)</td></tr>
-<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLog Array</td><td class="description-td td_text">The output of the application's logger (typed)</td></tr>
-<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">String</td><td class="description-td td_text">Additional information</td></tr>
-<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas requested for the transaction</td></tr>
-<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas consumed by the transaction</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes</td></tr>
-<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event Array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/TxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">The block height</td></tr>
+<tr ><td class="parameter-td td_text">txhash</td><td class="type-td td_text">string</td><td class="description-td td_text">The transaction hash.</td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_text">Namespace for the Code</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Response code.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">string</td><td class="description-td td_text">Result bytes, if any.</td></tr>
+<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">string</td><td class="description-td td_text">The output of the application's logger (raw string). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLogs</td><td class="description-td td_text">The output of the application's logger (typed). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ABCIMessageLog**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/abciMessageLog.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The message index</td></tr>
-<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">String</td><td class="description-td td_text">The log message</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvent Array</td><td class="description-td td_text">Event objects that were emitted during the execution</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Event**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/event.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">EventAttribute Array</td><td class="description-td td_text">All event object details</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**StringEvent**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/stringEvent.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">Attribute Array</td><td class="description-td td_text">Event data</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**EventAttribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/eventAttribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr>
-<tr ><td class="parameter-td td_text">index</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">If attribute is indexed</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Attribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/attribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/ABCIMessageLog.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvents</td><td class="description-td td_text">Events contains a slice of Event objects that were emitted during some execution.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -3391,8 +3629,8 @@ func main() {
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/5_MsgInstantExpiryFuturesMarketLaunch.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/5_MsgInstantExpiryFuturesMarketLaunch.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/5_MsgInstantExpiryFuturesMarketLaunch.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/5_MsgInstantExpiryFuturesMarketLaunch.py -->
 ```py
 import asyncio
 import json
@@ -3401,7 +3639,7 @@ from decimal import Decimal
 
 import dotenv
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import PrivateKey
@@ -3438,10 +3676,10 @@ async def main() -> None:
     await client.fetch_account(address.to_acc_bech32())
 
     # prepare tx msg
-    message = composer.msg_instant_expiry_futures_market_launch(
+    message = composer.msg_instant_expiry_futures_market_launch_v2(
         sender=address.to_acc_bech32(),
         ticker="INJ/USDC FUT",
-        quote_denom="USDC",
+        quote_denom="factory/inj17vytdwqczqz72j65saukplrktd4gyfme5agf6c/usdc",
         oracle_base="INJ",
         oracle_quote="USDC",
         oracle_scale_factor=6,
@@ -3472,20 +3710,22 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/5_MsgInstantExpiryFuturesMarketLaunch/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/5_MsgInstantExpiryFuturesMarketLaunch/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/5_MsgInstantExpiryFuturesMarketLaunch/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/5_MsgInstantExpiryFuturesMarketLaunch/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	"cosmossdk.io/math"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 
-	exchangetypes "github.com/InjectiveLabs/sdk-go/chain/exchange/types"
+	exchangev2types "github.com/InjectiveLabs/sdk-go/chain/exchange/types/v2"
 	oracletypes "github.com/InjectiveLabs/sdk-go/chain/oracle/types"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
@@ -3493,7 +3733,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -3524,7 +3764,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 	)
@@ -3532,7 +3772,10 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -3540,10 +3783,7 @@ func main() {
 	minPriceTickSize := math.LegacyMustNewDecFromStr("0.01")
 	minQuantityTickSize := math.LegacyMustNewDecFromStr("0.001")
 
-	chainMinPriceTickSize := minPriceTickSize.Mul(math.LegacyNewDecFromIntWithPrec(math.NewInt(1), int64(6)))
-	chainMinQuantityTickSize := minQuantityTickSize
-
-	msg := &exchangetypes.MsgInstantExpiryFuturesMarketLaunch{
+	msg := &exchangev2types.MsgInstantExpiryFuturesMarketLaunch{
 		Sender:                 senderAddress.String(),
 		Ticker:                 "INJ/USDC FUT",
 		QuoteDenom:             "factory/inj17vytdwqczqz72j65saukplrktd4gyfme5agf6c/usdc",
@@ -3556,21 +3796,22 @@ func main() {
 		TakerFeeRate:           math.LegacyMustNewDecFromStr("0.001"),
 		InitialMarginRatio:     math.LegacyMustNewDecFromStr("0.33"),
 		MaintenanceMarginRatio: math.LegacyMustNewDecFromStr("0.095"),
-		MinPriceTickSize:       chainMinPriceTickSize,
-		MinQuantityTickSize:    chainMinQuantityTickSize,
+		ReduceMarginRatio:      math.LegacyMustNewDecFromStr("0.3"),
+		MinPriceTickSize:       minPriceTickSize,
+		MinQuantityTickSize:    minQuantityTickSize,
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.AsyncBroadcastMsg(msg)
+	response, err := chainClient.AsyncBroadcastMsg(ctx, msg)
 
 	if err != nil {
 		panic(err)
 	}
 
-	str, _ := json.MarshalIndent(response, "", " ")
+	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -3578,29 +3819,30 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/msgInstantExpiryFuturesMarketLaunch.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">The market launch requestor address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">ticker</td><td class="type-td td_text">String</td><td class="description-td td_text">Ticker for the expiry futures market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">quote_denom</td><td class="type-td td_text">String</td><td class="description-td td_text">Quote tocken denom</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">oracle_base</td><td class="type-td td_text">String</td><td class="description-td td_text">Oracle base currency</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">oracle_quote</td><td class="type-td td_text">String</td><td class="description-td td_text">Oracle quote currency</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">OracleType</td><td class="description-td td_text">The oracle type</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">oracle_scale_factor</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Scale factor for oracle prices</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">expiry</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Expiration time of the market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">maker_fee_rate</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the trade fee rate for makers on the perpetual market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">taker_fee_rate</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the trade fee rate for takers on the perpetual market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">initial_margin_ratio</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the initial margin ratio for the perpetual market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">maintenance_margin_ratio</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the maintenance margin ratio for the perpetual market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the minimum tick size of the order's price</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the minimum tick size of the order's quantity</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the minimum notional (in quote asset) required for orders in the market</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MsgInstantExpiryFuturesMarketLaunch.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">ticker</td><td class="type-td td_text">string</td><td class="description-td td_text">Ticker for the derivative market.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">quote_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">type of coin to use as the quote currency</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_base</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle base currency</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_quote</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle quote currency</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">types1.OracleType</td><td class="description-td td_text">Oracle type</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_scale_factor</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Scale factor for oracle prices.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">expiry</td><td class="type-td td_text">int64</td><td class="description-td td_text">Expiration time of the market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">maker_fee_rate</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">maker_fee_rate defines the trade fee rate for makers on the expiry futures market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">taker_fee_rate</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">taker_fee_rate defines the trade fee rate for takers on the expiry futures market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">initial_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">initial_margin_ratio defines the initial margin ratio for the derivative market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">maintenance_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">maintenance_margin_ratio defines the maintenance margin ratio for the derivative market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_price_tick_size defines the minimum tick size of the order's price and margin</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_quantity_tick_size defines the minimum tick size of the order's quantity</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OracleType**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/oracle/oracleType.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/oracle/v1beta1/OracleType.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">Unspecified</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">Band</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">PriceFeed</td></tr>
@@ -3612,7 +3854,8 @@ func main() {
 <tr ><td class="code-td td_num">8</td><td class="name-td td_text">Uma</td></tr>
 <tr ><td class="code-td td_num">9</td><td class="name-td td_text">Pyth</td></tr>
 <tr ><td class="code-td td_num">10</td><td class="name-td td_text">BandIBC</td></tr>
-<tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr></tbody></table>
+<tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr>
+<tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -3622,75 +3865,38 @@ func main() {
 
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tx/broadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="paramter-th">Paramter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="paramter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">Transaction details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TxResponse**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/txResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The block height</td></tr>
-<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction hash</td></tr>
-<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">String</td><td class="description-td td_text">Namespace for the code</td></tr>
-<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Response code (zero for success, non-zero for errors)</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">String</td><td class="description-td td_text">Bytes, if any</td></tr>
-<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">String</td><td class="description-td td_text">The output of the application's logger (raw string)</td></tr>
-<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLog Array</td><td class="description-td td_text">The output of the application's logger (typed)</td></tr>
-<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">String</td><td class="description-td td_text">Additional information</td></tr>
-<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas requested for the transaction</td></tr>
-<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas consumed by the transaction</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes</td></tr>
-<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event Array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/TxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">The block height</td></tr>
+<tr ><td class="parameter-td td_text">txhash</td><td class="type-td td_text">string</td><td class="description-td td_text">The transaction hash.</td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_text">Namespace for the Code</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Response code.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">string</td><td class="description-td td_text">Result bytes, if any.</td></tr>
+<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">string</td><td class="description-td td_text">The output of the application's logger (raw string). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLogs</td><td class="description-td td_text">The output of the application's logger (typed). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ABCIMessageLog**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/abciMessageLog.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The message index</td></tr>
-<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">String</td><td class="description-td td_text">The log message</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvent Array</td><td class="description-td td_text">Event objects that were emitted during the execution</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Event**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/event.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">EventAttribute Array</td><td class="description-td td_text">All event object details</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**StringEvent**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/stringEvent.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">Attribute Array</td><td class="description-td td_text">Event data</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**EventAttribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/eventAttribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr>
-<tr ><td class="parameter-td td_text">index</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">If attribute is indexed</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Attribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/attribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/ABCIMessageLog.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvents</td><td class="description-td td_text">Events contains a slice of Event objects that were emitted during some execution.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -3701,27 +3907,26 @@ func main() {
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/10_MsgCreateDerivativeLimitOrder.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/10_MsgCreateDerivativeLimitOrder.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/10_MsgCreateDerivativeLimitOrder.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/10_MsgCreateDerivativeLimitOrder.py -->
 ```py
 import asyncio
+import json
 import os
 import uuid
 from decimal import Decimal
 
 import dotenv
-from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
-from pyinjective.constant import GAS_FEE_BUFFER_AMOUNT
+from pyinjective.async_client_v2 import AsyncClient
+from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
-from pyinjective.transaction import Transaction
 from pyinjective.wallet import PrivateKey
 
 
 async def main() -> None:
     dotenv.load_dotenv()
-    configured_private_key = os.getenv("INJECTIVE_PRIVATE_KEY")
+    private_key_in_hexa = os.getenv("INJECTIVE_PRIVATE_KEY")
 
     # select network: local, testnet, mainnet
     network = Network.testnet()
@@ -3729,13 +3934,22 @@ async def main() -> None:
     # initialize grpc client
     client = AsyncClient(network)
     composer = await client.composer()
-    await client.sync_timeout_height()
 
-    # load account
-    priv_key = PrivateKey.from_hex(configured_private_key)
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+
+    message_broadcaster = MsgBroadcasterWithPk.new_using_gas_heuristics(
+        network=network,
+        private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
+    )
+
+    priv_key = PrivateKey.from_hex(private_key_in_hexa)
     pub_key = priv_key.to_public_key()
     address = pub_key.to_address()
-    await client.fetch_account(address.to_acc_bech32())
     subaccount_id = address.get_subaccount_id(index=0)
 
     # prepare trade info
@@ -3757,53 +3971,15 @@ async def main() -> None:
         cid=str(uuid.uuid4()),
     )
 
-    # build sim tx
-    tx = (
-        Transaction()
-        .with_messages(msg)
-        .with_sequence(client.get_sequence())
-        .with_account_num(client.get_number())
-        .with_chain_id(network.chain_id)
-    )
-    sim_sign_doc = tx.get_sign_doc(pub_key)
-    sim_sig = priv_key.sign(sim_sign_doc.SerializeToString())
-    sim_tx_raw_bytes = tx.get_tx_data(sim_sig, pub_key)
+    # broadcast the transaction
+    result = await message_broadcaster.broadcast([msg])
+    print("---Transaction Response---")
+    print(json.dumps(result, indent=2))
 
-    # simulate tx
-    try:
-        sim_res = await client.simulate(sim_tx_raw_bytes)
-    except RpcError as ex:
-        print(ex)
-        return
-
-    sim_res_msg = sim_res["result"]["msgResponses"]
-    print("---Simulation Response---")
-    print(sim_res_msg)
-
-    # build tx
     gas_price = await client.current_chain_gas_price()
     # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
     gas_price = int(gas_price * 1.1)
-
-    gas_limit = int(sim_res["gasInfo"]["gasUsed"]) + GAS_FEE_BUFFER_AMOUNT  # add buffer for gas fee computation
-    gas_fee = "{:.18f}".format((gas_price * gas_limit) / pow(10, 18)).rstrip("0")
-    fee = [
-        composer.coin(
-            amount=gas_price * gas_limit,
-            denom=network.fee_denom,
-        )
-    ]
-    tx = tx.with_gas(gas_limit).with_fee(fee).with_memo("").with_timeout_height(client.timeout_height)
-    sign_doc = tx.get_sign_doc(pub_key)
-    sig = priv_key.sign(sign_doc.SerializeToString())
-    tx_raw_bytes = tx.get_tx_data(sig, pub_key)
-
-    # broadcast tx: send_tx_async_mode, send_tx_sync_mode, send_tx_block_mode
-    res = await client.broadcast_tx_sync_mode(tx_raw_bytes)
-    print("---Transaction Response---")
-    print(res)
-    print("gas wanted: {}".format(gas_limit))
-    print("gas fee: {} INJ".format(gas_fee))
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -3811,29 +3987,31 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/10_MsgCreateDerivativeLimitOrder/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/10_MsgCreateDerivativeLimitOrder/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/10_MsgCreateDerivativeLimitOrder/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/10_MsgCreateDerivativeLimitOrder/example.go -->
 ```go
 package main
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 	"github.com/google/uuid"
 	"github.com/shopspring/decimal"
 
-	exchangetypes "github.com/InjectiveLabs/sdk-go/chain/exchange/types"
+	exchangev2types "github.com/InjectiveLabs/sdk-go/chain/exchange/types/v2"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 )
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -3864,7 +4042,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 	)
@@ -3873,16 +4051,13 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
-
-	ctx := context.Background()
-	marketsAssistant, err := chainclient.NewMarketsAssistant(ctx, chainClient)
-	if err != nil {
-		panic(err)
-	}
 
 	defaultSubaccountID := chainClient.DefaultSubaccount(senderAddress)
 
@@ -3891,10 +4066,10 @@ func main() {
 	price := decimal.RequireFromString("31000") //31,000
 	leverage := decimal.RequireFromString("2.5")
 
-	order := chainClient.CreateDerivativeOrder(
+	order := chainClient.CreateDerivativeOrderV2(
 		defaultSubaccountID,
 		&chainclient.DerivativeOrderData{
-			OrderType:    exchangetypes.OrderType_BUY, //BUY SELL BUY_PO SELL_PO
+			OrderType:    int32(exchangev2types.OrderType_BUY), //BUY SELL BUY_PO SELL_PO
 			Quantity:     amount,
 			Price:        price,
 			Leverage:     leverage,
@@ -3903,47 +4078,24 @@ func main() {
 			IsReduceOnly: true,
 			Cid:          uuid.NewString(),
 		},
-		marketsAssistant,
 	)
 
-	msg := new(exchangetypes.MsgCreateDerivativeLimitOrder)
-	msg.Sender = senderAddress.String()
-	msg.Order = exchangetypes.DerivativeOrder(*order)
-
-	simRes, err := chainClient.SimulateMsg(clientCtx, msg)
-
-	if err != nil {
-		panic(err)
+	msg := exchangev2types.MsgCreateDerivativeLimitOrder{
+		Sender: senderAddress.String(),
+		Order:  *order,
 	}
-
-	msgCreateDerivativeLimitOrderResponse := exchangetypes.MsgCreateDerivativeLimitOrderResponse{}
-	err = msgCreateDerivativeLimitOrderResponse.Unmarshal(simRes.Result.MsgResponses[0].Value)
-
-	if err != nil {
-		panic(err)
-	}
-
-	fmt.Println("simulated order hash", msgCreateDerivativeLimitOrderResponse.OrderHash)
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	err = chainClient.QueueBroadcastMsg(msg)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, &msg)
 
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
-	time.Sleep(time.Second * 5)
+	str, _ := json.MarshalIndent(response, "", "\t")
+	fmt.Print(string(str))
 
-	gasFee, err := chainClient.GetGasFee()
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("gas fee:", gasFee, "INJ")
-
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -3951,40 +4103,41 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/msgCreateDerivativeLimitOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">The message sender's address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">DerivativeOrder</td><td class="description-td td_text">Order's parameters</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MsgCreateDerivativeLimitOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">the sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">DerivativeOrder</td><td class="description-td td_text">the order details</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **DerivativeOrder**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/derivativeOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The unique ID of the market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">Order's information</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">The order type</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The margin amount used by the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The trigger price used by stop/take orders</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/DerivativeOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market_id represents the unique ID of the market</td></tr>
+<tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">order_info contains the information of the order</td></tr>
+<tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">order types</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">margin is the margin used by the limit order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)</td></tr>
+<tr ><td class="parameter-td td_text">expiration_block</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration block is the block number at which the order will expire</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OrderInfo**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/orderInfo.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Subaccount ID that created the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">String</td><td class="description-td td_text">Address that will receive fees for the order</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Price of the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Quantity of the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">String</td><td class="description-td td_text">Client order ID. An optional identifier for the order set by the creator</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">bytes32 subaccount ID that created the order</td></tr>
+<tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">address fee_recipient address that will receive fees for the order</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">price of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">quantity of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID (optional)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OrderType**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/orderType.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderType.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">UNSPECIFIED</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">BUY</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">SELL</td></tr>
@@ -4022,75 +4175,38 @@ DEBU[0003] gas wanted:  171439                           fn=func1 src="client/ch
 gas fee: 0.0000857195 INJ
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tx/broadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="paramter-th">Paramter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="paramter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">Transaction details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TxResponse**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/txResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The block height</td></tr>
-<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction hash</td></tr>
-<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">String</td><td class="description-td td_text">Namespace for the code</td></tr>
-<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Response code (zero for success, non-zero for errors)</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">String</td><td class="description-td td_text">Bytes, if any</td></tr>
-<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">String</td><td class="description-td td_text">The output of the application's logger (raw string)</td></tr>
-<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLog Array</td><td class="description-td td_text">The output of the application's logger (typed)</td></tr>
-<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">String</td><td class="description-td td_text">Additional information</td></tr>
-<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas requested for the transaction</td></tr>
-<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas consumed by the transaction</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes</td></tr>
-<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event Array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/TxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">The block height</td></tr>
+<tr ><td class="parameter-td td_text">txhash</td><td class="type-td td_text">string</td><td class="description-td td_text">The transaction hash.</td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_text">Namespace for the Code</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Response code.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">string</td><td class="description-td td_text">Result bytes, if any.</td></tr>
+<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">string</td><td class="description-td td_text">The output of the application's logger (raw string). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLogs</td><td class="description-td td_text">The output of the application's logger (typed). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ABCIMessageLog**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/abciMessageLog.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The message index</td></tr>
-<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">String</td><td class="description-td td_text">The log message</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvent Array</td><td class="description-td td_text">Event objects that were emitted during the execution</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Event**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/event.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">EventAttribute Array</td><td class="description-td td_text">All event object details</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**StringEvent**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/stringEvent.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">Attribute Array</td><td class="description-td td_text">Event data</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**EventAttribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/eventAttribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr>
-<tr ><td class="parameter-td td_text">index</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">If attribute is indexed</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Attribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/attribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/ABCIMessageLog.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvents</td><td class="description-td td_text">Events contains a slice of Event objects that were emitted during some execution.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -4101,27 +4217,26 @@ gas fee: 0.0000857195 INJ
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/11_MsgCreateDerivativeMarketOrder.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/11_MsgCreateDerivativeMarketOrder.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/11_MsgCreateDerivativeMarketOrder.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/11_MsgCreateDerivativeMarketOrder.py -->
 ```py
 import asyncio
+import json
 import os
 import uuid
 from decimal import Decimal
 
 import dotenv
-from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
-from pyinjective.constant import GAS_FEE_BUFFER_AMOUNT
+from pyinjective.async_client_v2 import AsyncClient
+from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
-from pyinjective.transaction import Transaction
 from pyinjective.wallet import PrivateKey
 
 
 async def main() -> None:
     dotenv.load_dotenv()
-    configured_private_key = os.getenv("INJECTIVE_PRIVATE_KEY")
+    private_key_in_hexa = os.getenv("INJECTIVE_PRIVATE_KEY")
 
     # select network: local, testnet, mainnet
     network = Network.testnet()
@@ -4129,13 +4244,22 @@ async def main() -> None:
     # initialize grpc client
     client = AsyncClient(network)
     composer = await client.composer()
-    await client.sync_timeout_height()
 
-    # load account
-    priv_key = PrivateKey.from_hex(configured_private_key)
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+
+    message_broadcaster = MsgBroadcasterWithPk.new_using_gas_heuristics(
+        network=network,
+        private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
+    )
+
+    priv_key = PrivateKey.from_hex(private_key_in_hexa)
     pub_key = priv_key.to_public_key()
     address = pub_key.to_address()
-    await client.fetch_account(address.to_acc_bech32())
     subaccount_id = address.get_subaccount_id(index=0)
 
     # prepare trade info
@@ -4157,53 +4281,15 @@ async def main() -> None:
         cid=str(uuid.uuid4()),
     )
 
-    # build sim tx
-    tx = (
-        Transaction()
-        .with_messages(msg)
-        .with_sequence(client.get_sequence())
-        .with_account_num(client.get_number())
-        .with_chain_id(network.chain_id)
-    )
-    sim_sign_doc = tx.get_sign_doc(pub_key)
-    sim_sig = priv_key.sign(sim_sign_doc.SerializeToString())
-    sim_tx_raw_bytes = tx.get_tx_data(sim_sig, pub_key)
+    # broadcast the transaction
+    result = await message_broadcaster.broadcast([msg])
+    print("---Transaction Response---")
+    print(json.dumps(result, indent=2))
 
-    # simulate tx
-    try:
-        sim_res = await client.simulate(sim_tx_raw_bytes)
-    except RpcError as ex:
-        print(ex)
-        return
-
-    sim_res_msg = sim_res["result"]["msgResponses"]
-    print("---Simulation Response---")
-    print(sim_res_msg)
-
-    # build tx
     gas_price = await client.current_chain_gas_price()
     # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
     gas_price = int(gas_price * 1.1)
-
-    gas_limit = int(sim_res["gasInfo"]["gasUsed"]) + GAS_FEE_BUFFER_AMOUNT  # add buffer for gas fee computation
-    gas_fee = "{:.18f}".format((gas_price * gas_limit) / pow(10, 18)).rstrip("0")
-    fee = [
-        composer.coin(
-            amount=gas_price * gas_limit,
-            denom=network.fee_denom,
-        )
-    ]
-    tx = tx.with_gas(gas_limit).with_fee(fee).with_memo("").with_timeout_height(client.timeout_height)
-    sign_doc = tx.get_sign_doc(pub_key)
-    sig = priv_key.sign(sign_doc.SerializeToString())
-    tx_raw_bytes = tx.get_tx_data(sig, pub_key)
-
-    # broadcast tx: send_tx_async_mode, send_tx_sync_mode, send_tx_block_mode
-    res = await client.broadcast_tx_sync_mode(tx_raw_bytes)
-    print("---Transaction Response---")
-    print(res)
-    print("gas wanted: {}".format(gas_limit))
-    print("gas fee: {} INJ".format(gas_fee))
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -4211,29 +4297,31 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/11_MsgCreateDerivativeMarketOrder/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/11_MsgCreateDerivativeMarketOrder/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/11_MsgCreateDerivativeMarketOrder/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/11_MsgCreateDerivativeMarketOrder/example.go -->
 ```go
 package main
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 	"github.com/google/uuid"
 	"github.com/shopspring/decimal"
 
-	exchangetypes "github.com/InjectiveLabs/sdk-go/chain/exchange/types"
+	exchangev2types "github.com/InjectiveLabs/sdk-go/chain/exchange/types/v2"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 )
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -4265,7 +4353,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 	)
@@ -4274,16 +4362,13 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
-
-	ctx := context.Background()
-	marketsAssistant, err := chainclient.NewMarketsAssistant(ctx, chainClient)
-	if err != nil {
-		panic(err)
-	}
 
 	defaultSubaccountID := chainClient.DefaultSubaccount(senderAddress)
 
@@ -4292,10 +4377,10 @@ func main() {
 	price := decimal.RequireFromString("33000") //33,000
 	leverage := decimal.RequireFromString("2.5")
 
-	order := chainClient.CreateDerivativeOrder(
+	order := chainClient.CreateDerivativeOrderV2(
 		defaultSubaccountID,
 		&chainclient.DerivativeOrderData{
-			OrderType:    exchangetypes.OrderType_SELL, //BUY SELL
+			OrderType:    int32(exchangev2types.OrderType_SELL), //BUY SELL
 			Quantity:     amount,
 			Price:        price,
 			Leverage:     leverage,
@@ -4304,48 +4389,24 @@ func main() {
 			IsReduceOnly: true,
 			Cid:          uuid.NewString(),
 		},
-		marketsAssistant,
 	)
 
-	msg := new(exchangetypes.MsgCreateDerivativeMarketOrder)
-	msg.Sender = senderAddress.String()
-	msg.Order = exchangetypes.DerivativeOrder(*order)
-
-	simRes, err := chainClient.SimulateMsg(clientCtx, msg)
-
-	if err != nil {
-		panic(err)
+	msg := exchangev2types.MsgCreateDerivativeMarketOrder{
+		Sender: senderAddress.String(),
+		Order:  *order,
 	}
-
-	msgCreateDerivativeMarketOrderResponse := exchangetypes.MsgCreateDerivativeMarketOrderResponse{}
-	err = msgCreateDerivativeMarketOrderResponse.Unmarshal(simRes.Result.MsgResponses[0].Value)
-
-	if err != nil {
-		panic(err)
-	}
-
-	fmt.Println("simulated order hash", msgCreateDerivativeMarketOrderResponse.OrderHash)
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	err = chainClient.QueueBroadcastMsg(msg)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, &msg)
 
 	if err != nil {
-		fmt.Println(err)
-		return
+		panic(err)
 	}
 
-	time.Sleep(time.Second * 5)
+	str, _ := json.MarshalIndent(response, "", "\t")
+	fmt.Print(string(str))
 
-	gasFee, err := chainClient.GetGasFee()
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("gas fee:", gasFee, "INJ")
-
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -4353,40 +4414,41 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/msgCreateDerivativeMarketOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">The message sender's address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">DerivativeOrder</td><td class="description-td td_text">Order's parameters</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MsgCreateDerivativeMarketOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">the sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">DerivativeOrder</td><td class="description-td td_text">the order details</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **DerivativeOrder**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/derivativeOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The unique ID of the market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">Order's information</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">The order type</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The margin amount used by the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The trigger price used by stop/take orders</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/DerivativeOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market_id represents the unique ID of the market</td></tr>
+<tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">order_info contains the information of the order</td></tr>
+<tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">order types</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">margin is the margin used by the limit order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)</td></tr>
+<tr ><td class="parameter-td td_text">expiration_block</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration block is the block number at which the order will expire</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OrderInfo**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/orderInfo.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Subaccount ID that created the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">String</td><td class="description-td td_text">Address that will receive fees for the order</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Price of the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Quantity of the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">String</td><td class="description-td td_text">Client order ID. An optional identifier for the order set by the creator</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">bytes32 subaccount ID that created the order</td></tr>
+<tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">address fee_recipient address that will receive fees for the order</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">price of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">quantity of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID (optional)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OrderType**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/orderType.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderType.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">UNSPECIFIED</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">BUY</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">SELL</td></tr>
@@ -4424,75 +4486,38 @@ DEBU[0003] gas wanted:  139962                           fn=func1 src="client/ch
 gas fee: 0.000069981 INJ
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tx/broadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="paramter-th">Paramter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="paramter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">Transaction details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TxResponse**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/txResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The block height</td></tr>
-<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction hash</td></tr>
-<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">String</td><td class="description-td td_text">Namespace for the code</td></tr>
-<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Response code (zero for success, non-zero for errors)</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">String</td><td class="description-td td_text">Bytes, if any</td></tr>
-<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">String</td><td class="description-td td_text">The output of the application's logger (raw string)</td></tr>
-<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLog Array</td><td class="description-td td_text">The output of the application's logger (typed)</td></tr>
-<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">String</td><td class="description-td td_text">Additional information</td></tr>
-<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas requested for the transaction</td></tr>
-<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas consumed by the transaction</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes</td></tr>
-<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event Array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/TxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">The block height</td></tr>
+<tr ><td class="parameter-td td_text">txhash</td><td class="type-td td_text">string</td><td class="description-td td_text">The transaction hash.</td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_text">Namespace for the Code</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Response code.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">string</td><td class="description-td td_text">Result bytes, if any.</td></tr>
+<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">string</td><td class="description-td td_text">The output of the application's logger (raw string). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLogs</td><td class="description-td td_text">The output of the application's logger (typed). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ABCIMessageLog**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/abciMessageLog.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The message index</td></tr>
-<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">String</td><td class="description-td td_text">The log message</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvent Array</td><td class="description-td td_text">Event objects that were emitted during the execution</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Event**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/event.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">EventAttribute Array</td><td class="description-td td_text">All event object details</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**StringEvent**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/stringEvent.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">Attribute Array</td><td class="description-td td_text">Event data</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**EventAttribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/eventAttribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr>
-<tr ><td class="parameter-td td_text">index</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">If attribute is indexed</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Attribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/attribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/ABCIMessageLog.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvents</td><td class="description-td td_text">Events contains a slice of Event objects that were emitted during some execution.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -4504,25 +4529,24 @@ gas fee: 0.000069981 INJ
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/12_MsgCancelDerivativeOrder.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/12_MsgCancelDerivativeOrder.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/12_MsgCancelDerivativeOrder.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/12_MsgCancelDerivativeOrder.py -->
 ```py
 import asyncio
+import json
 import os
 
 import dotenv
-from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
-from pyinjective.constant import GAS_FEE_BUFFER_AMOUNT
+from pyinjective.async_client_v2 import AsyncClient
+from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
-from pyinjective.transaction import Transaction
 from pyinjective.wallet import PrivateKey
 
 
 async def main() -> None:
     dotenv.load_dotenv()
-    configured_private_key = os.getenv("INJECTIVE_PRIVATE_KEY")
+    private_key_in_hexa = os.getenv("INJECTIVE_PRIVATE_KEY")
 
     # select network: local, testnet, mainnet
     network = Network.testnet()
@@ -4530,13 +4554,22 @@ async def main() -> None:
     # initialize grpc client
     client = AsyncClient(network)
     composer = await client.composer()
-    await client.sync_timeout_height()
 
-    # load account
-    priv_key = PrivateKey.from_hex(configured_private_key)
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+
+    message_broadcaster = MsgBroadcasterWithPk.new_using_gas_heuristics(
+        network=network,
+        private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
+    )
+
+    priv_key = PrivateKey.from_hex(private_key_in_hexa)
     pub_key = priv_key.to_public_key()
     address = pub_key.to_address()
-    await client.fetch_account(address.to_acc_bech32())
     subaccount_id = address.get_subaccount_id(index=0)
 
     # prepare trade info
@@ -4545,51 +4578,24 @@ async def main() -> None:
 
     # prepare tx msg
     msg = composer.msg_cancel_derivative_order(
-        sender=address.to_acc_bech32(), market_id=market_id, subaccount_id=subaccount_id, order_hash=order_hash
+        sender=address.to_acc_bech32(),
+        market_id=market_id,
+        subaccount_id=subaccount_id,
+        order_hash=order_hash,
+        is_buy=True,
+        is_market_order=False,
+        is_conditional=False,
     )
 
-    # build sim tx
-    tx = (
-        Transaction()
-        .with_messages(msg)
-        .with_sequence(client.get_sequence())
-        .with_account_num(client.get_number())
-        .with_chain_id(network.chain_id)
-    )
-    sim_sign_doc = tx.get_sign_doc(pub_key)
-    sim_sig = priv_key.sign(sim_sign_doc.SerializeToString())
-    sim_tx_raw_bytes = tx.get_tx_data(sim_sig, pub_key)
+    # broadcast the transaction
+    result = await message_broadcaster.broadcast([msg])
+    print("---Transaction Response---")
+    print(json.dumps(result, indent=2))
 
-    # simulate tx
-    try:
-        sim_res = await client.simulate(sim_tx_raw_bytes)
-    except RpcError as ex:
-        print(ex)
-        return
-
-    # build tx
     gas_price = await client.current_chain_gas_price()
     # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
     gas_price = int(gas_price * 1.1)
-
-    gas_limit = int(sim_res["gasInfo"]["gasUsed"]) + GAS_FEE_BUFFER_AMOUNT  # add buffer for gas fee computation
-    gas_fee = "{:.18f}".format((gas_price * gas_limit) / pow(10, 18)).rstrip("0")
-    fee = [
-        composer.coin(
-            amount=gas_price * gas_limit,
-            denom=network.fee_denom,
-        )
-    ]
-    tx = tx.with_gas(gas_limit).with_fee(fee).with_memo("").with_timeout_height(client.timeout_height)
-    sign_doc = tx.get_sign_doc(pub_key)
-    sig = priv_key.sign(sign_doc.SerializeToString())
-    tx_raw_bytes = tx.get_tx_data(sig, pub_key)
-
-    # broadcast tx: send_tx_async_mode, send_tx_sync_mode, send_tx_block_mode
-    res = await client.broadcast_tx_sync_mode(tx_raw_bytes)
-    print(res)
-    print("gas wanted: {}".format(gas_limit))
-    print("gas fee: {} INJ".format(gas_fee))
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -4597,26 +4603,29 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/12_MsgCancelDerivativeOrder/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/12_MsgCancelDerivativeOrder/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/12_MsgCancelDerivativeOrder/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/12_MsgCancelDerivativeOrder/example.go -->
 ```go
 package main
 
 import (
+	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 
-	exchangetypes "github.com/InjectiveLabs/sdk-go/chain/exchange/types"
+	exchangev2types "github.com/InjectiveLabs/sdk-go/chain/exchange/types/v2"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 )
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -4647,7 +4656,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 	)
@@ -4656,12 +4665,15 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
 
-	msg := &exchangetypes.MsgCancelDerivativeOrder{
+	msg := exchangev2types.MsgCancelDerivativeOrder{
 		Sender:       senderAddress.String(),
 		MarketId:     "0x4ca0f92fc28be0c9761326016b5a1a2177dd6375558365116b5bdda9abc229ce",
 		SubaccountId: "0xaf79152ac5df276d9a8e1e2e22822f9713474902000000000000000000000000",
@@ -4669,24 +4681,16 @@ func main() {
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	err = chainClient.QueueBroadcastMsg(msg)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, &msg)
 
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
-	time.Sleep(time.Second * 5)
+	str, _ := json.MarshalIndent(response, "", "\t")
+	fmt.Print(string(str))
 
-	gasFee, err := chainClient.GetGasFee()
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("gas fee:", gasFee, "INJ")
-
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -4694,28 +4698,28 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/msgCancelDerivativeOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">The message sender's address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The unique ID of the order's market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The subaccount ID the order belongs to</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">The order hash (either order_hash or cid have to be provided)</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">order_mask</td><td class="type-td td_text">OrderMask</td><td class="description-td td_text">The order mask that specifies the order type</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">String</td><td class="description-td td_text">The client order ID provided by the creator (either order_hash or cid have to be provided)</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MsgCancelDerivativeOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">the sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash (optional)</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">order_mask</td><td class="type-td td_text">int32</td><td class="description-td td_text">the order mask (bitwise combination of OrderMask enum values) (optional)</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID (optional)</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OrderMask**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/orderMask.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">OrderMask_UNUSED</td></tr>
-<tr ><td class="code-td td_num">1</td><td class="name-td td_text">OrderMask_ANY</td></tr>
-<tr ><td class="code-td td_num">2</td><td class="name-td td_text">OrderMask_REGULAR</td></tr>
-<tr ><td class="code-td td_num">4</td><td class="name-td td_text">OrderMask_CONDITIONAL</td></tr>
-<tr ><td class="code-td td_num">8</td><td class="name-td td_text">OrderMask_BUY_OR_HIGHER</td></tr>
-<tr ><td class="code-td td_num">16</td><td class="name-td td_text">OrderMask_SELL_OR_LOWER</td></tr>
-<tr ><td class="code-td td_num">32</td><td class="name-td td_text">OrderMask_MARKET</td></tr>
-<tr ><td class="code-td td_num">64</td><td class="name-td td_text">OrderMask_LIMIT</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderMask.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">UNUSED</td></tr>
+<tr ><td class="code-td td_num">1</td><td class="name-td td_text">ANY</td></tr>
+<tr ><td class="code-td td_num">2</td><td class="name-td td_text">REGULAR</td></tr>
+<tr ><td class="code-td td_num">4</td><td class="name-td td_text">CONDITIONAL</td></tr>
+<tr ><td class="code-td td_num">8</td><td class="name-td td_text">DIRECTION_BUY_OR_HIGHER</td></tr>
+<tr ><td class="code-td td_num">16</td><td class="name-td td_text">DIRECTION_SELL_OR_LOWER</td></tr>
+<tr ><td class="code-td td_num">32</td><td class="name-td td_text">TYPE_MARKET</td></tr>
+<tr ><td class="code-td td_num">64</td><td class="name-td td_text">TYPE_LIMIT</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -4742,75 +4746,38 @@ DEBU[0003] gas wanted:  141373                           fn=func1 src="client/ch
 gas fee: 0.0000706865 INJ
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tx/broadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="paramter-th">Paramter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="paramter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">Transaction details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TxResponse**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/txResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The block height</td></tr>
-<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction hash</td></tr>
-<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">String</td><td class="description-td td_text">Namespace for the code</td></tr>
-<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Response code (zero for success, non-zero for errors)</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">String</td><td class="description-td td_text">Bytes, if any</td></tr>
-<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">String</td><td class="description-td td_text">The output of the application's logger (raw string)</td></tr>
-<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLog Array</td><td class="description-td td_text">The output of the application's logger (typed)</td></tr>
-<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">String</td><td class="description-td td_text">Additional information</td></tr>
-<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas requested for the transaction</td></tr>
-<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas consumed by the transaction</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes</td></tr>
-<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event Array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/TxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">The block height</td></tr>
+<tr ><td class="parameter-td td_text">txhash</td><td class="type-td td_text">string</td><td class="description-td td_text">The transaction hash.</td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_text">Namespace for the Code</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Response code.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">string</td><td class="description-td td_text">Result bytes, if any.</td></tr>
+<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">string</td><td class="description-td td_text">The output of the application's logger (raw string). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLogs</td><td class="description-td td_text">The output of the application's logger (typed). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ABCIMessageLog**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/abciMessageLog.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The message index</td></tr>
-<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">String</td><td class="description-td td_text">The log message</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvent Array</td><td class="description-td td_text">Event objects that were emitted during the execution</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Event**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/event.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">EventAttribute Array</td><td class="description-td td_text">All event object details</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**StringEvent**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/stringEvent.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">Attribute Array</td><td class="description-td td_text">Event data</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**EventAttribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/eventAttribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr>
-<tr ><td class="parameter-td td_text">index</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">If attribute is indexed</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Attribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/attribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/ABCIMessageLog.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvents</td><td class="description-td td_text">Events contains a slice of Event objects that were emitted during some execution.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -4828,27 +4795,26 @@ Further note that if no marketIDs are provided in the SpotMarketIdsToCancelAll o
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/9_MsgBatchUpdateOrders.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/9_MsgBatchUpdateOrders.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/9_MsgBatchUpdateOrders.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/9_MsgBatchUpdateOrders.py -->
 ```py
 import asyncio
+import json
 import os
 import uuid
 from decimal import Decimal
 
 import dotenv
-from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
-from pyinjective.constant import GAS_FEE_BUFFER_AMOUNT
+from pyinjective.async_client_v2 import AsyncClient
+from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
-from pyinjective.transaction import Transaction
 from pyinjective.wallet import PrivateKey
 
 
 async def main() -> None:
     dotenv.load_dotenv()
-    configured_private_key = os.getenv("INJECTIVE_PRIVATE_KEY")
+    private_key_in_hexa = os.getenv("INJECTIVE_PRIVATE_KEY")
 
     # select network: local, testnet, mainnet
     network = Network.testnet()
@@ -4856,13 +4822,22 @@ async def main() -> None:
     # initialize grpc client
     client = AsyncClient(network)
     composer = await client.composer()
-    await client.sync_timeout_height()
 
-    # load account
-    priv_key = PrivateKey.from_hex(configured_private_key)
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+
+    message_broadcaster = MsgBroadcasterWithPk.new_using_gas_heuristics(
+        network=network,
+        private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
+    )
+
+    priv_key = PrivateKey.from_hex(private_key_in_hexa)
     pub_key = priv_key.to_public_key()
     address = pub_key.to_address()
-    await client.fetch_account(address.to_acc_bech32())
     subaccount_id = address.get_subaccount_id(index=0)
 
     # prepare trade info
@@ -4877,12 +4852,12 @@ async def main() -> None:
     spot_market_id_cancel_2 = "0x7a57e705bb4e09c88aecfc295569481dbf2fe1d5efe364651fbe72385938e9b0"
 
     derivative_orders_to_cancel = [
-        composer.order_data(
+        composer.create_order_data_without_mask(
             market_id=derivative_market_id_cancel,
             subaccount_id=subaccount_id,
             order_hash="0x48690013c382d5dbaff9989db04629a16a5818d7524e027d517ccc89fd068103",
         ),
-        composer.order_data(
+        composer.create_order_data_without_mask(
             market_id=derivative_market_id_cancel_2,
             subaccount_id=subaccount_id,
             order_hash="0x7ee76255d7ca763c56b0eab9828fca89fdd3739645501c8a80f58b62b4f76da5",
@@ -4890,12 +4865,12 @@ async def main() -> None:
     ]
 
     spot_orders_to_cancel = [
-        composer.order_data(
+        composer.create_order_data_without_mask(
             market_id=spot_market_id_cancel,
             subaccount_id=subaccount_id,
             cid="0e5c3ad5-2cc4-4a2a-bbe5-b12697739163",
         ),
-        composer.order_data(
+        composer.create_order_data_without_mask(
             market_id=spot_market_id_cancel_2,
             subaccount_id=subaccount_id,
             order_hash="0x222daa22f60fe9f075ed0ca583459e121c23e64431c3fbffdedda04598ede0d2",
@@ -4959,53 +4934,15 @@ async def main() -> None:
         spot_orders_to_cancel=spot_orders_to_cancel,
     )
 
-    # build sim tx
-    tx = (
-        Transaction()
-        .with_messages(msg)
-        .with_sequence(client.get_sequence())
-        .with_account_num(client.get_number())
-        .with_chain_id(network.chain_id)
-    )
-    sim_sign_doc = tx.get_sign_doc(pub_key)
-    sim_sig = priv_key.sign(sim_sign_doc.SerializeToString())
-    sim_tx_raw_bytes = tx.get_tx_data(sim_sig, pub_key)
+    # broadcast the transaction
+    result = await message_broadcaster.broadcast([msg])
+    print("---Transaction Response---")
+    print(json.dumps(result, indent=2))
 
-    # simulate tx
-    try:
-        sim_res = await client.simulate(sim_tx_raw_bytes)
-    except RpcError as ex:
-        print(ex)
-        return
-
-    sim_res_msg = sim_res["result"]["msgResponses"]
-    print("---Simulation Response---")
-    print(sim_res_msg)
-
-    # build tx
     gas_price = await client.current_chain_gas_price()
     # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
     gas_price = int(gas_price * 1.1)
-
-    gas_limit = int(sim_res["gasInfo"]["gasUsed"]) + GAS_FEE_BUFFER_AMOUNT  # add buffer for gas fee computation
-    gas_fee = "{:.18f}".format((gas_price * gas_limit) / pow(10, 18)).rstrip("0")
-    fee = [
-        composer.coin(
-            amount=gas_price * gas_limit,
-            denom=network.fee_denom,
-        )
-    ]
-    tx = tx.with_gas(gas_limit).with_fee(fee).with_memo("").with_timeout_height(client.timeout_height)
-    sign_doc = tx.get_sign_doc(pub_key)
-    sig = priv_key.sign(sign_doc.SerializeToString())
-    tx_raw_bytes = tx.get_tx_data(sig, pub_key)
-
-    # broadcast tx: send_tx_async_mode, send_tx_sync_mode, send_tx_block_mode
-    res = await client.broadcast_tx_sync_mode(tx_raw_bytes)
-    print("---Transaction Response---")
-    print(res)
-    print("gas wanted: {}".format(gas_limit))
-    print("gas fee: {} INJ".format(gas_fee))
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -5013,29 +4950,31 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/9_MsgBatchUpdateOrders/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/9_MsgBatchUpdateOrders/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/9_MsgBatchUpdateOrders/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/9_MsgBatchUpdateOrders/example.go -->
 ```go
 package main
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 	"github.com/google/uuid"
 	"github.com/shopspring/decimal"
 
-	exchangetypes "github.com/InjectiveLabs/sdk-go/chain/exchange/types"
+	exchangev2types "github.com/InjectiveLabs/sdk-go/chain/exchange/types/v2"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 )
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -5067,7 +5006,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 	)
@@ -5077,16 +5016,13 @@ func main() {
 		return
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
-
-	ctx := context.Background()
-	marketsAssistant, err := chainclient.NewMarketsAssistant(ctx, chainClient)
-	if err != nil {
-		panic(err)
-	}
 
 	defaultSubaccountID := chainClient.DefaultSubaccount(senderAddress)
 
@@ -5095,17 +5031,16 @@ func main() {
 	sprice := decimal.NewFromFloat(22.5)
 	smarketIds := []string{"0xa508cb32923323679f29a032c70342c147c17d0145625922b0ef22e955c844c0"}
 
-	spot_order := chainClient.CreateSpotOrder(
+	spot_order := chainClient.CreateSpotOrderV2(
 		defaultSubaccountID,
 		&chainclient.SpotOrderData{
-			OrderType:    exchangetypes.OrderType_BUY, //BUY SELL BUY_PO SELL_PO
+			OrderType:    int32(exchangev2types.OrderType_BUY), //BUY SELL BUY_PO SELL_PO
 			Quantity:     samount,
 			Price:        sprice,
 			FeeRecipient: senderAddress.String(),
 			MarketId:     smarketId,
 			Cid:          uuid.NewString(),
 		},
-		marketsAssistant,
 	)
 
 	dmarketId := "0x4ca0f92fc28be0c9761326016b5a1a2177dd6375558365116b5bdda9abc229ce"
@@ -5114,10 +5049,10 @@ func main() {
 	dleverage := decimal.RequireFromString("2")
 	dmarketIds := []string{"0x4ca0f92fc28be0c9761326016b5a1a2177dd6375558365116b5bdda9abc229ce"}
 
-	derivative_order := chainClient.CreateDerivativeOrder(
+	derivative_order := chainClient.CreateDerivativeOrderV2(
 		defaultSubaccountID,
 		&chainclient.DerivativeOrderData{
-			OrderType:    exchangetypes.OrderType_BUY, //BUY SELL BUY_PO SELL_PO
+			OrderType:    int32(exchangev2types.OrderType_BUY), //BUY SELL BUY_PO SELL_PO
 			Quantity:     damount,
 			Price:        dprice,
 			Leverage:     dleverage,
@@ -5126,51 +5061,28 @@ func main() {
 			IsReduceOnly: false,
 			Cid:          uuid.NewString(),
 		},
-		marketsAssistant,
 	)
 
-	msg := new(exchangetypes.MsgBatchUpdateOrders)
-	msg.Sender = senderAddress.String()
-	msg.SubaccountId = defaultSubaccountID.Hex()
-	msg.SpotOrdersToCreate = []*exchangetypes.SpotOrder{spot_order}
-	msg.DerivativeOrdersToCreate = []*exchangetypes.DerivativeOrder{derivative_order}
-	msg.SpotMarketIdsToCancelAll = smarketIds
-	msg.DerivativeMarketIdsToCancelAll = dmarketIds
-
-	simRes, err := chainClient.SimulateMsg(clientCtx, msg)
-
-	if err != nil {
-		fmt.Println(err)
-		return
+	msg := exchangev2types.MsgBatchUpdateOrders{
+		Sender:                         senderAddress.String(),
+		SubaccountId:                   defaultSubaccountID.Hex(),
+		SpotOrdersToCreate:             []*exchangev2types.SpotOrder{spot_order},
+		DerivativeOrdersToCreate:       []*exchangev2types.DerivativeOrder{derivative_order},
+		SpotMarketIdsToCancelAll:       smarketIds,
+		DerivativeMarketIdsToCancelAll: dmarketIds,
 	}
-
-	MsgBatchUpdateOrdersResponse := exchangetypes.MsgBatchUpdateOrdersResponse{}
-	MsgBatchUpdateOrdersResponse.Unmarshal(simRes.Result.MsgResponses[0].Value)
-
-	fmt.Println("simulated spot order hashes", MsgBatchUpdateOrdersResponse.SpotOrderHashes)
-
-	fmt.Println("simulated derivative order hashes", MsgBatchUpdateOrdersResponse.DerivativeOrderHashes)
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	err = chainClient.QueueBroadcastMsg(msg)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, &msg)
 
 	if err != nil {
-		fmt.Println(err)
-		return
+		panic(err)
 	}
 
-	time.Sleep(time.Second * 5)
+	str, _ := json.MarshalIndent(response, "", "\t")
+	fmt.Print(string(str))
 
-	gasFee, err := chainClient.GetGasFee()
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("gas fee:", gasFee, "INJ")
-
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -5178,87 +5090,89 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/msgBatchUpdateOrders.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">The message sender's address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The subaccount ID is only used for the spot_market_ids_to_cancel_all and derivative_market_ids_to_cancel_all</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">spot_market_ids_to_cancel_all</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of unique market IDs to cancel all subaccount_id orders</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">derivative_market_ids_to_cancel_all</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of unique market IDs to cancel all subaccount_id orders</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">spot_orders_to_cancel</td><td class="type-td td_text">OrderData Array</td><td class="description-td td_text">List of spot orders to be cancelled</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">derivative_orders_to_cancel</td><td class="type-td td_text">OrderData Array</td><td class="description-td td_text">List of derivative orders to be cancelled</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">spot_orders_to_create</td><td class="type-td td_text">SpotOrder Array</td><td class="description-td td_text">List of spot orders to be created</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">derivative_orders_to_create</td><td class="type-td td_text">DerivativeOrder Array</td><td class="description-td td_text">List of derivative orders to be created</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">binary_options_orders_to_cancel</td><td class="type-td td_text">OrderData Array</td><td class="description-td td_text">List of binary options orders to be cancelled</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">binary_options_market_ids_to_cancel_all</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of unique market IDs to cancel all subaccount_id orders</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">binary_options_orders_to_create</td><td class="type-td td_text">DerivativeOrder Array</td><td class="description-td td_text">List of binary options orders to be created</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MsgBatchUpdateOrders.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">the sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">subaccount_id only used for the spot_market_ids_to_cancel_all and derivative_market_ids_to_cancel_all (optional)</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">spot_market_ids_to_cancel_all</td><td class="type-td td_text">string array</td><td class="description-td td_text">the market IDs to cancel all spot orders for (optional)</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">derivative_market_ids_to_cancel_all</td><td class="type-td td_text">string array</td><td class="description-td td_text">the market IDs to cancel all derivative orders for (optional)</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">spot_orders_to_cancel</td><td class="type-td td_text">OrderData array</td><td class="description-td td_text">the spot orders to cancel</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">derivative_orders_to_cancel</td><td class="type-td td_text">OrderData array</td><td class="description-td td_text">the derivative orders to cancel</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">spot_orders_to_create</td><td class="type-td td_text">SpotOrder array</td><td class="description-td td_text">the spot orders to create</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">derivative_orders_to_create</td><td class="type-td td_text">DerivativeOrder array</td><td class="description-td td_text">the derivative orders to create</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">binary_options_orders_to_cancel</td><td class="type-td td_text">OrderData array</td><td class="description-td td_text">the binary options orders to cancel</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">binary_options_market_ids_to_cancel_all</td><td class="type-td td_text">string array</td><td class="description-td td_text">the market IDs to cancel all binary options orders for (optional)</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">binary_options_orders_to_create</td><td class="type-td td_text">DerivativeOrder array</td><td class="description-td td_text">the binary options orders to create</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OrderData**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/orderData.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The order's market ID</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Subaccount ID that created the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">The order hash (either the order_hash or the cid should be provided)</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">order_mask</td><td class="type-td td_text">OrderMask</td><td class="description-td td_text">The order mask that specifies the order type</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">String</td><td class="description-td td_text">The order's client order ID (either the order_hash or the cid should be provided)</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderData.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td></tr>
+<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash (optional - either the order_hash or the cid should be provided)</td></tr>
+<tr ><td class="parameter-td td_text">order_mask</td><td class="type-td td_text">int32</td><td class="description-td td_text">the order mask (bitwise combination of OrderMask enum values)</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID (optional - either the order_hash or the cid should be provided)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **SpotOrder**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/spotOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The unique ID of the market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">Order's information</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">The order type</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The trigger price used by stop/take orders</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/SpotOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market_id represents the unique ID of the market</td></tr>
+<tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">order_info contains the information of the order</td></tr>
+<tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">order types</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)</td></tr>
+<tr ><td class="parameter-td td_text">expiration_block</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration block is the block number at which the order will expire</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **DerivativeOrder**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/derivativeOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The unique ID of the market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">Order's information</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">The order type</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The margin amount used by the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The trigger price used by stop/take orders</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/DerivativeOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market_id represents the unique ID of the market</td></tr>
+<tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">order_info contains the information of the order</td></tr>
+<tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">order types</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">margin is the margin used by the limit order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)</td></tr>
+<tr ><td class="parameter-td td_text">expiration_block</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration block is the block number at which the order will expire</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OrderMask**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/orderMask.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">OrderMask_UNUSED</td></tr>
-<tr ><td class="code-td td_num">1</td><td class="name-td td_text">OrderMask_ANY</td></tr>
-<tr ><td class="code-td td_num">2</td><td class="name-td td_text">OrderMask_REGULAR</td></tr>
-<tr ><td class="code-td td_num">4</td><td class="name-td td_text">OrderMask_CONDITIONAL</td></tr>
-<tr ><td class="code-td td_num">8</td><td class="name-td td_text">OrderMask_BUY_OR_HIGHER</td></tr>
-<tr ><td class="code-td td_num">16</td><td class="name-td td_text">OrderMask_SELL_OR_LOWER</td></tr>
-<tr ><td class="code-td td_num">32</td><td class="name-td td_text">OrderMask_MARKET</td></tr>
-<tr ><td class="code-td td_num">64</td><td class="name-td td_text">OrderMask_LIMIT</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderMask.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">UNUSED</td></tr>
+<tr ><td class="code-td td_num">1</td><td class="name-td td_text">ANY</td></tr>
+<tr ><td class="code-td td_num">2</td><td class="name-td td_text">REGULAR</td></tr>
+<tr ><td class="code-td td_num">4</td><td class="name-td td_text">CONDITIONAL</td></tr>
+<tr ><td class="code-td td_num">8</td><td class="name-td td_text">DIRECTION_BUY_OR_HIGHER</td></tr>
+<tr ><td class="code-td td_num">16</td><td class="name-td td_text">DIRECTION_SELL_OR_LOWER</td></tr>
+<tr ><td class="code-td td_num">32</td><td class="name-td td_text">TYPE_MARKET</td></tr>
+<tr ><td class="code-td td_num">64</td><td class="name-td td_text">TYPE_LIMIT</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OrderInfo**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/orderInfo.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Subaccount ID that created the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">String</td><td class="description-td td_text">Address that will receive fees for the order</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Price of the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Quantity of the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">String</td><td class="description-td td_text">Client order ID. An optional identifier for the order set by the creator</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">bytes32 subaccount ID that created the order</td></tr>
+<tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">address fee_recipient address that will receive fees for the order</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">price of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">quantity of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID (optional)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OrderType**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/orderType.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderType.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">UNSPECIFIED</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">BUY</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">SELL</td></tr>
@@ -5304,75 +5218,38 @@ DEBU[0003] gas wanted:  659092                           fn=func1 src="client/ch
 gas fee: 0.000329546 INJ
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tx/broadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="paramter-th">Paramter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="paramter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">Transaction details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TxResponse**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/txResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The block height</td></tr>
-<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction hash</td></tr>
-<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">String</td><td class="description-td td_text">Namespace for the code</td></tr>
-<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Response code (zero for success, non-zero for errors)</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">String</td><td class="description-td td_text">Bytes, if any</td></tr>
-<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">String</td><td class="description-td td_text">The output of the application's logger (raw string)</td></tr>
-<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLog Array</td><td class="description-td td_text">The output of the application's logger (typed)</td></tr>
-<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">String</td><td class="description-td td_text">Additional information</td></tr>
-<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas requested for the transaction</td></tr>
-<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas consumed by the transaction</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes</td></tr>
-<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event Array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/TxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">The block height</td></tr>
+<tr ><td class="parameter-td td_text">txhash</td><td class="type-td td_text">string</td><td class="description-td td_text">The transaction hash.</td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_text">Namespace for the Code</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Response code.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">string</td><td class="description-td td_text">Result bytes, if any.</td></tr>
+<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">string</td><td class="description-td td_text">The output of the application's logger (raw string). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLogs</td><td class="description-td td_text">The output of the application's logger (typed). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ABCIMessageLog**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/abciMessageLog.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The message index</td></tr>
-<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">String</td><td class="description-td td_text">The log message</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvent Array</td><td class="description-td td_text">Event objects that were emitted during the execution</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Event**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/event.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">EventAttribute Array</td><td class="description-td td_text">All event object details</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**StringEvent**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/stringEvent.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">Attribute Array</td><td class="description-td td_text">Event data</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**EventAttribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/eventAttribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr>
-<tr ><td class="parameter-td td_text">index</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">If attribute is indexed</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Attribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/attribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/ABCIMessageLog.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvents</td><td class="description-td td_text">Events contains a slice of Event objects that were emitted during some execution.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -5388,27 +5265,26 @@ To detect the liquidable positions please use the Indexer endpoint called [Liqui
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/19_MsgLiquidatePosition.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/19_MsgLiquidatePosition.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/19_MsgLiquidatePosition.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/19_MsgLiquidatePosition.py -->
 ```py
 import asyncio
+import json
 import os
 import uuid
 from decimal import Decimal
 
 import dotenv
-from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
-from pyinjective.constant import GAS_FEE_BUFFER_AMOUNT
+from pyinjective.async_client_v2 import AsyncClient
+from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
-from pyinjective.transaction import Transaction
 from pyinjective.wallet import PrivateKey
 
 
 async def main() -> None:
     dotenv.load_dotenv()
-    configured_private_key = os.getenv("INJECTIVE_PRIVATE_KEY")
+    private_key_in_hexa = os.getenv("INJECTIVE_PRIVATE_KEY")
 
     # select network: local, testnet, mainnet
     network = Network.testnet()
@@ -5416,13 +5292,22 @@ async def main() -> None:
     # initialize grpc client
     client = AsyncClient(network)
     composer = await client.composer()
-    await client.sync_timeout_height()
 
-    # load account
-    priv_key = PrivateKey.from_hex(configured_private_key)
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+
+    message_broadcaster = MsgBroadcasterWithPk.new_using_gas_heuristics(
+        network=network,
+        private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
+    )
+
+    priv_key = PrivateKey.from_hex(private_key_in_hexa)
     pub_key = priv_key.to_public_key()
     address = pub_key.to_address()
-    await client.fetch_account(address.to_acc_bech32())
     subaccount_id = address.get_subaccount_id(index=0)
 
     # prepare trade info
@@ -5451,54 +5336,15 @@ async def main() -> None:
         order=order,
     )
 
-    # build sim tx
-    tx = (
-        Transaction()
-        .with_messages(msg)
-        .with_sequence(client.get_sequence())
-        .with_account_num(client.get_number())
-        .with_chain_id(network.chain_id)
-    )
-    sim_sign_doc = tx.get_sign_doc(pub_key)
-    sim_sig = priv_key.sign(sim_sign_doc.SerializeToString())
-    sim_tx_raw_bytes = tx.get_tx_data(sim_sig, pub_key)
+    # broadcast the transaction
+    result = await message_broadcaster.broadcast([msg])
+    print("---Transaction Response---")
+    print(json.dumps(result, indent=2))
 
-    # simulate tx
-    try:
-        sim_res = await client.simulate(sim_tx_raw_bytes)
-    except RpcError as ex:
-        print(ex)
-        return
-
-    sim_res_msg = sim_res["result"]["msgResponses"]
-    print("---Simulation Response---")
-    print(sim_res_msg)
-
-    # build tx
     gas_price = await client.current_chain_gas_price()
     # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
     gas_price = int(gas_price * 1.1)
-
-    gas_limit = int(sim_res["gasInfo"]["gasUsed"]) + GAS_FEE_BUFFER_AMOUNT  # add buffer for gas fee computation
-    gas_fee = "{:.18f}".format((gas_price * gas_limit) / pow(10, 18)).rstrip("0")
-    fee = [
-        composer.coin(
-            amount=gas_price * gas_limit,
-            denom=network.fee_denom,
-        )
-    ]
-    tx = tx.with_gas(gas_limit).with_fee(fee).with_memo("").with_timeout_height(client.timeout_height)
-    sign_doc = tx.get_sign_doc(pub_key)
-    sig = priv_key.sign(sign_doc.SerializeToString())
-    tx_raw_bytes = tx.get_tx_data(sig, pub_key)
-
-    # broadcast tx: send_tx_async_mode, send_tx_sync_mode, send_tx_block_mode
-    res = await client.broadcast_tx_sync_mode(tx_raw_bytes)
-    print("---Transaction Response---")
-    print(res)
-    print("gas wanted: {}".format(gas_limit))
-    print("gas fee: {} INJ".format(gas_fee))
-    print(f"\n\ncid: {cid}")
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -5506,8 +5352,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/16_MsgLiquidatePosition/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/16_MsgLiquidatePosition/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/16_MsgLiquidatePosition/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/16_MsgLiquidatePosition/example.go -->
 ```go
 package main
 
@@ -5516,19 +5362,20 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	"github.com/google/uuid"
 	"github.com/shopspring/decimal"
 
-	exchangetypes "github.com/InjectiveLabs/sdk-go/chain/exchange/types"
+	exchangev2types "github.com/InjectiveLabs/sdk-go/chain/exchange/types/v2"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 )
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -5559,7 +5406,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 	)
@@ -5568,16 +5415,13 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
-
-	ctx := context.Background()
-	marketsAssistant, err := chainclient.NewMarketsAssistant(ctx, chainClient)
-	if err != nil {
-		panic(err)
-	}
 
 	defaultSubaccountID := chainClient.DefaultSubaccount(senderAddress)
 
@@ -5586,10 +5430,10 @@ func main() {
 	price := decimal.RequireFromString("39.01")
 	leverage := decimal.RequireFromString("1")
 
-	order := chainClient.CreateDerivativeOrder(
+	order := chainClient.CreateDerivativeOrderV2(
 		defaultSubaccountID,
 		&chainclient.DerivativeOrderData{
-			OrderType:    exchangetypes.OrderType_SELL,
+			OrderType:    int32(exchangev2types.OrderType_SELL),
 			Quantity:     amount,
 			Price:        price,
 			Leverage:     leverage,
@@ -5597,10 +5441,9 @@ func main() {
 			MarketId:     marketId,
 			Cid:          uuid.NewString(),
 		},
-		marketsAssistant,
 	)
 
-	msg := &exchangetypes.MsgLiquidatePosition{
+	msg := &exchangev2types.MsgLiquidatePosition{
 		Sender:       senderAddress.String(),
 		SubaccountId: "0x156df4d5bc8e7dd9191433e54bd6a11eeb390921000000000000000000000000",
 		MarketId:     marketId,
@@ -5608,16 +5451,16 @@ func main() {
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.AsyncBroadcastMsg(msg)
+	response, err := chainClient.AsyncBroadcastMsg(ctx, msg)
 
 	if err != nil {
 		panic(err)
 	}
 
-	str, _ := json.MarshalIndent(response, "", " ")
+	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -5625,42 +5468,43 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/msgLiquidatePosition.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">The message sender's address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The subaccount ID to create the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The order's unique market ID</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">DerivativeOrder</td><td class="description-td td_text">Order's parameters</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MsgLiquidatePosition.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">the sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID the position belongs to</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the position's market ID</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">DerivativeOrder</td><td class="description-td td_text">optional order to provide for liquidation</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **DerivativeOrder**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/derivativeOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The unique ID of the market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">Order's information</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">The order type</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The margin amount used by the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The trigger price used by stop/take orders</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/DerivativeOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market_id represents the unique ID of the market</td></tr>
+<tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">order_info contains the information of the order</td></tr>
+<tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">order types</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">margin is the margin used by the limit order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)</td></tr>
+<tr ><td class="parameter-td td_text">expiration_block</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration block is the block number at which the order will expire</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OrderInfo**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/orderInfo.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Subaccount ID that created the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">String</td><td class="description-td td_text">Address that will receive fees for the order</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Price of the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Quantity of the order</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">String</td><td class="description-td td_text">Client order ID. An optional identifier for the order set by the creator</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">bytes32 subaccount ID that created the order</td></tr>
+<tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">address fee_recipient address that will receive fees for the order</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">price of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">quantity of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID (optional)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OrderType**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/orderType.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderType.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">UNSPECIFIED</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">BUY</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">SELL</td></tr>
@@ -5683,75 +5527,38 @@ func main() {
 ```go
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tx/broadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="paramter-th">Paramter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="paramter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">Transaction details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TxResponse**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/txResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The block height</td></tr>
-<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction hash</td></tr>
-<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">String</td><td class="description-td td_text">Namespace for the code</td></tr>
-<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Response code (zero for success, non-zero for errors)</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">String</td><td class="description-td td_text">Bytes, if any</td></tr>
-<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">String</td><td class="description-td td_text">The output of the application's logger (raw string)</td></tr>
-<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLog Array</td><td class="description-td td_text">The output of the application's logger (typed)</td></tr>
-<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">String</td><td class="description-td td_text">Additional information</td></tr>
-<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas requested for the transaction</td></tr>
-<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas consumed by the transaction</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes</td></tr>
-<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event Array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/TxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">The block height</td></tr>
+<tr ><td class="parameter-td td_text">txhash</td><td class="type-td td_text">string</td><td class="description-td td_text">The transaction hash.</td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_text">Namespace for the Code</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Response code.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">string</td><td class="description-td td_text">Result bytes, if any.</td></tr>
+<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">string</td><td class="description-td td_text">The output of the application's logger (raw string). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLogs</td><td class="description-td td_text">The output of the application's logger (typed). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ABCIMessageLog**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/abciMessageLog.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The message index</td></tr>
-<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">String</td><td class="description-td td_text">The log message</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvent Array</td><td class="description-td td_text">Event objects that were emitted during the execution</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Event**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/event.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">EventAttribute Array</td><td class="description-td td_text">All event object details</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**StringEvent**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/stringEvent.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">Attribute Array</td><td class="description-td td_text">Event data</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**EventAttribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/eventAttribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr>
-<tr ><td class="parameter-td td_text">index</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">If attribute is indexed</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Attribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/attribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/ABCIMessageLog.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvents</td><td class="description-td td_text">Events contains a slice of Event objects that were emitted during some execution.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -5763,26 +5570,25 @@ func main() {
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/20_MsgIncreasePositionMargin.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/20_MsgIncreasePositionMargin.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/20_MsgIncreasePositionMargin.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/20_MsgIncreasePositionMargin.py -->
 ```py
 import asyncio
+import json
 import os
 from decimal import Decimal
 
 import dotenv
-from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
-from pyinjective.constant import GAS_FEE_BUFFER_AMOUNT
+from pyinjective.async_client_v2 import AsyncClient
+from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
-from pyinjective.transaction import Transaction
 from pyinjective.wallet import PrivateKey
 
 
 async def main() -> None:
     dotenv.load_dotenv()
-    configured_private_key = os.getenv("INJECTIVE_PRIVATE_KEY")
+    private_key_in_hexa = os.getenv("INJECTIVE_PRIVATE_KEY")
 
     # select network: local, testnet, mainnet
     network = Network.testnet()
@@ -5790,13 +5596,22 @@ async def main() -> None:
     # initialize grpc client
     client = AsyncClient(network)
     composer = await client.composer()
-    await client.sync_timeout_height()
 
-    # load account
-    priv_key = PrivateKey.from_hex(configured_private_key)
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+
+    message_broadcaster = MsgBroadcasterWithPk.new_using_gas_heuristics(
+        network=network,
+        private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
+    )
+
+    priv_key = PrivateKey.from_hex(private_key_in_hexa)
     pub_key = priv_key.to_public_key()
     address = pub_key.to_address()
-    await client.fetch_account(address.to_acc_bech32())
     subaccount_id = address.get_subaccount_id(index=0)
 
     # prepare trade info
@@ -5811,48 +5626,15 @@ async def main() -> None:
         amount=Decimal(2),
     )
 
-    # build sim tx
-    tx = (
-        Transaction()
-        .with_messages(msg)
-        .with_sequence(client.get_sequence())
-        .with_account_num(client.get_number())
-        .with_chain_id(network.chain_id)
-    )
-    sim_sign_doc = tx.get_sign_doc(pub_key)
-    sim_sig = priv_key.sign(sim_sign_doc.SerializeToString())
-    sim_tx_raw_bytes = tx.get_tx_data(sim_sig, pub_key)
+    # broadcast the transaction
+    result = await message_broadcaster.broadcast([msg])
+    print("---Transaction Response---")
+    print(json.dumps(result, indent=2))
 
-    # simulate tx
-    try:
-        sim_res = await client.simulate(sim_tx_raw_bytes)
-    except RpcError as ex:
-        print(ex)
-        return
-
-    # build tx
     gas_price = await client.current_chain_gas_price()
     # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
     gas_price = int(gas_price * 1.1)
-
-    gas_limit = int(sim_res["gasInfo"]["gasUsed"]) + GAS_FEE_BUFFER_AMOUNT  # add buffer for gas fee computation
-    gas_fee = "{:.18f}".format((gas_price * gas_limit) / pow(10, 18)).rstrip("0")
-    fee = [
-        composer.coin(
-            amount=gas_price * gas_limit,
-            denom=network.fee_denom,
-        )
-    ]
-    tx = tx.with_gas(gas_limit).with_fee(fee).with_memo("").with_timeout_height(client.timeout_height)
-    sign_doc = tx.get_sign_doc(pub_key)
-    sig = priv_key.sign(sign_doc.SerializeToString())
-    tx_raw_bytes = tx.get_tx_data(sig, pub_key)
-
-    # broadcast tx: send_tx_async_mode, send_tx_sync_mode, send_tx_block_mode
-    res = await client.broadcast_tx_sync_mode(tx_raw_bytes)
-    print(res)
-    print("gas wanted: {}".format(gas_limit))
-    print("gas fee: {} INJ".format(gas_fee))
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -5860,27 +5642,30 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/17_MsgIncreasePositionMargin/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/17_MsgIncreasePositionMargin/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/17_MsgIncreasePositionMargin/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/17_MsgIncreasePositionMargin/example.go -->
 ```go
 package main
 
 import (
+	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"time"
 
 	"cosmossdk.io/math"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 
-	exchangetypes "github.com/InjectiveLabs/sdk-go/chain/exchange/types"
+	exchangev2types "github.com/InjectiveLabs/sdk-go/chain/exchange/types/v2"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 )
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -5911,7 +5696,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 	)
@@ -5920,12 +5705,15 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
 
-	msg := &exchangetypes.MsgIncreasePositionMargin{
+	msg := exchangev2types.MsgIncreasePositionMargin{
 		Sender:                  senderAddress.String(),
 		MarketId:                "0x4ca0f92fc28be0c9761326016b5a1a2177dd6375558365116b5bdda9abc229ce",
 		SourceSubaccountId:      "0xaf79152ac5df276d9a8e1e2e22822f9713474902000000000000000000000000",
@@ -5934,24 +5722,16 @@ func main() {
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	err = chainClient.QueueBroadcastMsg(msg)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, &msg)
 
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
-	time.Sleep(time.Second * 5)
+	str, _ := json.MarshalIndent(response, "", "\t")
+	fmt.Print(string(str))
 
-	gasFee, err := chainClient.GetGasFee()
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("gas fee:", gasFee, "INJ")
-
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -5959,12 +5739,12 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/msgIncreasePositionMargin.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">The sender's address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">source_subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Subaccount ID from where the funds are deducted</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">destination_subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Subaccount ID the funds are deposited into</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The position's unique market ID</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The amount of margin to add to the position</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MsgIncreasePositionMargin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">the sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">source_subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID sending the funds</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">destination_subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID the position belongs to</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">amount defines the amount of margin to add to the position (in human readable format)</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -5987,75 +5767,38 @@ DEBU[0002] gas wanted:  133614                           fn=func1 src="client/ch
 gas fee: 0.000066807 INJ
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tx/broadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="paramter-th">Paramter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="paramter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">Transaction details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TxResponse**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/txResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The block height</td></tr>
-<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction hash</td></tr>
-<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">String</td><td class="description-td td_text">Namespace for the code</td></tr>
-<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Response code (zero for success, non-zero for errors)</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">String</td><td class="description-td td_text">Bytes, if any</td></tr>
-<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">String</td><td class="description-td td_text">The output of the application's logger (raw string)</td></tr>
-<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLog Array</td><td class="description-td td_text">The output of the application's logger (typed)</td></tr>
-<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">String</td><td class="description-td td_text">Additional information</td></tr>
-<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas requested for the transaction</td></tr>
-<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas consumed by the transaction</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes</td></tr>
-<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event Array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/TxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">The block height</td></tr>
+<tr ><td class="parameter-td td_text">txhash</td><td class="type-td td_text">string</td><td class="description-td td_text">The transaction hash.</td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_text">Namespace for the Code</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Response code.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">string</td><td class="description-td td_text">Result bytes, if any.</td></tr>
+<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">string</td><td class="description-td td_text">The output of the application's logger (raw string). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLogs</td><td class="description-td td_text">The output of the application's logger (typed). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ABCIMessageLog**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/abciMessageLog.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The message index</td></tr>
-<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">String</td><td class="description-td td_text">The log message</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvent Array</td><td class="description-td td_text">Event objects that were emitted during the execution</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Event**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/event.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">EventAttribute Array</td><td class="description-td td_text">All event object details</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**StringEvent**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/stringEvent.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">Attribute Array</td><td class="description-td td_text">Event data</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**EventAttribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/eventAttribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr>
-<tr ><td class="parameter-td td_text">index</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">If attribute is indexed</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Attribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/attribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/ABCIMessageLog.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvents</td><td class="description-td td_text">Events contains a slice of Event objects that were emitted during some execution.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -6069,8 +5812,8 @@ Message to reduce the margin assigned to a particular position
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/23_MsgDecreasePositionMargin.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/23_MsgDecreasePositionMargin.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/23_MsgDecreasePositionMargin.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/23_MsgDecreasePositionMargin.py -->
 ```py
 import asyncio
 import json
@@ -6079,7 +5822,7 @@ from decimal import Decimal
 
 import dotenv
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import PrivateKey
@@ -6143,27 +5886,29 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/23_MsgDecreasePositionMargin/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/23_MsgDecreasePositionMargin/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/23_MsgDecreasePositionMargin/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/23_MsgDecreasePositionMargin/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	"cosmossdk.io/math"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 
-	exchangetypes "github.com/InjectiveLabs/sdk-go/chain/exchange/types"
+	exchangev2types "github.com/InjectiveLabs/sdk-go/chain/exchange/types/v2"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 )
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -6194,7 +5939,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 	)
@@ -6203,14 +5948,17 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
 
 	defaultSubaccountID := chainClient.DefaultSubaccount(senderAddress)
 
-	msg := &exchangetypes.MsgDecreasePositionMargin{
+	msg := &exchangev2types.MsgDecreasePositionMargin{
 		Sender:                  senderAddress.String(),
 		MarketId:                "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
 		SourceSubaccountId:      defaultSubaccountID.String(),
@@ -6219,16 +5967,16 @@ func main() {
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.AsyncBroadcastMsg(msg)
+	response, err := chainClient.AsyncBroadcastMsg(ctx, msg)
 
 	if err != nil {
 		panic(err)
 	}
 
-	str, _ := json.MarshalIndent(response, "", " ")
+	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -6236,12 +5984,12 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/msgDecreasePositionMargin.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">The sender's address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">source_subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Subaccount ID the position belongs to</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">destination_subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Subaccount ID the funds are deposited into</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The position's unique market ID</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The amount of margin to remove from the position</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MsgDecreasePositionMargin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">the sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">source_subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID the position belongs to</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">destination_subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the destination subaccount ID</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">amount defines the amount of margin to withdraw from the position (in human readable format)</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -6264,75 +6012,38 @@ DEBU[0002] gas wanted:  133614                           fn=func1 src="client/ch
 gas fee: 0.000066807 INJ
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tx/broadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="paramter-th">Paramter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="paramter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">Transaction details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TxResponse**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/txResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The block height</td></tr>
-<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction hash</td></tr>
-<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">String</td><td class="description-td td_text">Namespace for the code</td></tr>
-<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Response code (zero for success, non-zero for errors)</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">String</td><td class="description-td td_text">Bytes, if any</td></tr>
-<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">String</td><td class="description-td td_text">The output of the application's logger (raw string)</td></tr>
-<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLog Array</td><td class="description-td td_text">The output of the application's logger (typed)</td></tr>
-<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">String</td><td class="description-td td_text">Additional information</td></tr>
-<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas requested for the transaction</td></tr>
-<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas consumed by the transaction</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes</td></tr>
-<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event Array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/TxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">The block height</td></tr>
+<tr ><td class="parameter-td td_text">txhash</td><td class="type-td td_text">string</td><td class="description-td td_text">The transaction hash.</td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_text">Namespace for the Code</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Response code.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">string</td><td class="description-td td_text">Result bytes, if any.</td></tr>
+<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">string</td><td class="description-td td_text">The output of the application's logger (raw string). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLogs</td><td class="description-td td_text">The output of the application's logger (typed). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ABCIMessageLog**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/abciMessageLog.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The message index</td></tr>
-<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">String</td><td class="description-td td_text">The log message</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvent Array</td><td class="description-td td_text">Event objects that were emitted during the execution</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Event**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/event.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">EventAttribute Array</td><td class="description-td td_text">All event object details</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**StringEvent**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/stringEvent.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">Attribute Array</td><td class="description-td td_text">Event data</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**EventAttribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/eventAttribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr>
-<tr ><td class="parameter-td td_text">index</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">If attribute is indexed</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Attribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/attribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/ABCIMessageLog.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvents</td><td class="description-td td_text">Events contains a slice of Event objects that were emitted during some execution.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -6346,8 +6057,8 @@ Modifies certain market fields. It can only be sent by the market's admin.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/25_MsgUpdateDerivativeMarket.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/exchange/25_MsgUpdateDerivativeMarket.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/25_MsgUpdateDerivativeMarket.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/25_MsgUpdateDerivativeMarket.py -->
 ```py
 import asyncio
 import json
@@ -6356,7 +6067,7 @@ from decimal import Decimal
 
 import dotenv
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
 from pyinjective.wallet import PrivateKey
@@ -6402,6 +6113,7 @@ async def main() -> None:
         new_min_notional=Decimal("2"),
         new_initial_margin_ratio=Decimal("0.40"),
         new_maintenance_margin_ratio=Decimal("0.085"),
+        new_reduce_margin_ratio=Decimal("3.5"),
     )
 
     # broadcast the transaction
@@ -6420,27 +6132,29 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/25_MsgUpdateDerivativeMarket/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/exchange/25_MsgUpdateDerivativeMarket/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/25_MsgUpdateDerivativeMarket/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/25_MsgUpdateDerivativeMarket/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	"cosmossdk.io/math"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 
-	exchangetypes "github.com/InjectiveLabs/sdk-go/chain/exchange/types"
+	exchangev2types "github.com/InjectiveLabs/sdk-go/chain/exchange/types/v2"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 )
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -6471,7 +6185,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 	)
@@ -6479,7 +6193,10 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -6488,32 +6205,29 @@ func main() {
 	minQuantityTickSize := math.LegacyMustNewDecFromStr("0.1")
 	minNotional := math.LegacyMustNewDecFromStr("2")
 
-	chainMinPriceTickSize := minPriceTickSize.Mul(math.LegacyNewDecFromIntWithPrec(math.NewInt(1), int64(6)))
-	chainMinQuantityTickSize := minQuantityTickSize
-	chainMinNotional := minNotional.Mul(math.LegacyNewDecFromIntWithPrec(math.NewInt(1), int64(6)))
-
-	msg := &exchangetypes.MsgUpdateDerivativeMarket{
+	msg := &exchangev2types.MsgUpdateDerivativeMarket{
 		Admin:                     senderAddress.String(),
 		MarketId:                  "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
 		NewTicker:                 "INJ/USDT PERP 2",
-		NewMinPriceTickSize:       chainMinPriceTickSize,
-		NewMinQuantityTickSize:    chainMinQuantityTickSize,
-		NewMinNotional:            chainMinNotional,
+		NewMinPriceTickSize:       minPriceTickSize,
+		NewMinQuantityTickSize:    minQuantityTickSize,
+		NewMinNotional:            minNotional,
 		NewInitialMarginRatio:     math.LegacyMustNewDecFromStr("0.4"),
 		NewMaintenanceMarginRatio: math.LegacyMustNewDecFromStr("0.085"),
+		NewReduceMarginRatio:      math.LegacyMustNewDecFromStr("0.3"),
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.AsyncBroadcastMsg(msg)
+	response, err := chainClient.AsyncBroadcastMsg(ctx, msg)
 
 	if err != nil {
 		panic(err)
 	}
 
-	str, _ := json.MarshalIndent(response, "", " ")
+	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -6521,15 +6235,16 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/msgUpdateDerivativeMarket.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">String</td><td class="description-td td_text">The market's admin address (has to be the message broadcaster)</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The market's unique ID</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">new_ticker</td><td class="type-td td_text">String</td><td class="description-td td_text">New ticker for the perpetual market</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">new_min_price_tick_size</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the minimum tick size of the order's price</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">new_min_quantity_tick_size</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the minimum tick size of the order's quantity</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">new_min_notional</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the minimum notional (in quote asset) required for orders in the market</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">new_initial_margin_ratio</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the initial margin ratio for the perpetual market</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">new_maintenance_margin_ratio</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Defines the maintenance margin ratio for the perpetual market</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MsgUpdateDerivativeMarket.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">string</td><td class="description-td td_text">current admin address of the associated market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">id of the market to be updated</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">new_ticker</td><td class="type-td td_text">string</td><td class="description-td td_text">(optional) updated value for ticker</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">new_min_price_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">(optional) updated value for min_price_tick_size (in human readable format)</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">new_min_quantity_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">(optional) updated value min_quantity_tick_size (in human readable format)</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">new_min_notional</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">(optional) updated min notional (in human readable format)</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">new_initial_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">(optional) updated value for initial_margin_ratio</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">new_maintenance_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">(optional) updated value for maintenance_margin_ratio</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">new_reduce_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">(optional) updated value for reduce_margin_ratio</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -6552,75 +6267,38 @@ DEBU[0002] gas wanted:  133614                           fn=func1 src="client/ch
 gas fee: 0.000066807 INJ
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tx/broadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="paramter-th">Paramter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="paramter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">Transaction details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TxResponse**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/txResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The block height</td></tr>
-<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction hash</td></tr>
-<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">String</td><td class="description-td td_text">Namespace for the code</td></tr>
-<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Response code (zero for success, non-zero for errors)</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">String</td><td class="description-td td_text">Bytes, if any</td></tr>
-<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">String</td><td class="description-td td_text">The output of the application's logger (raw string)</td></tr>
-<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLog Array</td><td class="description-td td_text">The output of the application's logger (typed)</td></tr>
-<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">String</td><td class="description-td td_text">Additional information</td></tr>
-<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas requested for the transaction</td></tr>
-<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas consumed by the transaction</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes</td></tr>
-<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event Array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/TxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">The block height</td></tr>
+<tr ><td class="parameter-td td_text">txhash</td><td class="type-td td_text">string</td><td class="description-td td_text">The transaction hash.</td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_text">Namespace for the Code</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Response code.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">string</td><td class="description-td td_text">Result bytes, if any.</td></tr>
+<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">string</td><td class="description-td td_text">The output of the application's logger (raw string). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLogs</td><td class="description-td td_text">The output of the application's logger (typed). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ABCIMessageLog**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/abciMessageLog.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The message index</td></tr>
-<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">String</td><td class="description-td td_text">The log message</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvent Array</td><td class="description-td td_text">Event objects that were emitted during the execution</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Event**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/event.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">EventAttribute Array</td><td class="description-td td_text">All event object details</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**StringEvent**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/stringEvent.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">Attribute Array</td><td class="description-td td_text">Event data</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**EventAttribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/eventAttribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr>
-<tr ><td class="parameter-td td_text">index</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">If attribute is indexed</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Attribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/attribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/ABCIMessageLog.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvents</td><td class="description-td td_text">Events contains a slice of Event objects that were emitted during some execution.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -6633,17 +6311,18 @@ This function computes order hashes locally for SpotOrder and DerivativeOrder. F
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/1_LocalOrderHash.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/1_LocalOrderHash.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/1_LocalOrderHash.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/1_LocalOrderHash.py -->
 ```py
 import asyncio
+import json
 import os
 import uuid
 from decimal import Decimal
 
 import dotenv
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.constant import GAS_FEE_BUFFER_AMOUNT
 from pyinjective.core.network import Network
 from pyinjective.orderhash import OrderHashManager
@@ -6770,7 +6449,7 @@ async def main() -> None:
 
     # broadcast tx: send_tx_async_mode, send_tx_sync_mode, send_tx_block_mode
     res = await client.broadcast_tx_sync_mode(tx_raw_bytes)
-    print(res)
+    print(json.dumps(res, indent=2))
     print("gas wanted: {}".format(gas_limit))
     print("gas fee: {} INJ".format(gas_fee))
 
@@ -6811,7 +6490,7 @@ async def main() -> None:
 
     # broadcast tx: send_tx_async_mode, send_tx_sync_mode, send_tx_block_mode
     res = await client.broadcast_tx_sync_mode(tx_raw_bytes)
-    print(res)
+    print(json.dumps(res, indent=2))
     print("gas wanted: {}".format(gas_limit))
     print("gas fee: {} INJ".format(gas_fee))
 
@@ -6907,7 +6586,7 @@ async def main() -> None:
 
     # broadcast tx: send_tx_async_mode, send_tx_sync_mode, send_tx_block_mode
     res = await client.broadcast_tx_sync_mode(tx_raw_bytes)
-    print(res)
+    print(json.dumps(res, indent=2))
     print("gas wanted: {}".format(gas_limit))
     print("gas fee: {} INJ".format(gas_fee))
 
@@ -6917,29 +6596,31 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/1_LocalOrderHash/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/1_LocalOrderHash/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/1_LocalOrderHash/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/1_LocalOrderHash/example.go -->
 ```go
 package main
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 	"github.com/google/uuid"
 	"github.com/shopspring/decimal"
 
-	exchangetypes "github.com/InjectiveLabs/sdk-go/chain/exchange/types"
+	exchangev2types "github.com/InjectiveLabs/sdk-go/chain/exchange/types/v2"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 )
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -6970,7 +6651,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 	)
@@ -6979,37 +6660,33 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
 
-	ctx := context.Background()
-	marketsAssistant, err := chainclient.NewMarketsAssistant(ctx, chainClient)
-	if err != nil {
-		panic(err)
-	}
-
 	// prepare tx msg
 	defaultSubaccountID := chainClient.Subaccount(senderAddress, 1)
 
-	spotOrder := chainClient.CreateSpotOrder(
+	spotOrder := chainClient.CreateSpotOrderV2(
 		defaultSubaccountID,
 		&chainclient.SpotOrderData{
-			OrderType:    exchangetypes.OrderType_BUY,
+			OrderType:    int32(exchangev2types.OrderType_BUY),
 			Quantity:     decimal.NewFromFloat(2),
 			Price:        decimal.NewFromFloat(22.55),
 			FeeRecipient: senderAddress.String(),
 			MarketId:     "0x0611780ba69656949525013d947713300f56c37b6175e02f26bffa495c3208fe",
 			Cid:          uuid.NewString(),
 		},
-		marketsAssistant,
 	)
 
-	derivativeOrder := chainClient.CreateDerivativeOrder(
+	derivativeOrder := chainClient.CreateDerivativeOrderV2(
 		defaultSubaccountID,
 		&chainclient.DerivativeOrderData{
-			OrderType:    exchangetypes.OrderType_BUY,
+			OrderType:    int32(exchangev2types.OrderType_BUY),
 			Quantity:     decimal.NewFromFloat(2),
 			Price:        decimal.RequireFromString("31"),
 			Leverage:     decimal.RequireFromString("2.5"),
@@ -7017,16 +6694,17 @@ func main() {
 			MarketId:     "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
 			Cid:          uuid.NewString(),
 		},
-		marketsAssistant,
 	)
 
-	msg := new(exchangetypes.MsgBatchCreateSpotLimitOrders)
-	msg.Sender = senderAddress.String()
-	msg.Orders = []exchangetypes.SpotOrder{*spotOrder}
+	msg := exchangev2types.MsgBatchCreateSpotLimitOrders{
+		Sender: senderAddress.String(),
+		Orders: []exchangev2types.SpotOrder{*spotOrder},
+	}
 
-	msg1 := new(exchangetypes.MsgBatchCreateDerivativeLimitOrders)
-	msg1.Sender = senderAddress.String()
-	msg1.Orders = []exchangetypes.DerivativeOrder{*derivativeOrder, *derivativeOrder}
+	msg1 := exchangev2types.MsgBatchCreateDerivativeLimitOrders{
+		Sender: senderAddress.String(),
+		Orders: []exchangev2types.DerivativeOrder{*derivativeOrder},
+	}
 
 	// compute local order hashes
 	orderHashes, err := chainClient.ComputeOrderHashes(msg.Orders, msg1.Orders, defaultSubaccountID)
@@ -7039,24 +6717,16 @@ func main() {
 	fmt.Println("computed derivative order hashes: ", orderHashes.Derivative)
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	err = chainClient.QueueBroadcastMsg(msg, msg1)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, &msg, &msg1)
 
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
-	time.Sleep(time.Second * 5)
+	str, _ := json.MarshalIndent(response, "", "\t")
+	fmt.Print(string(str))
 
-	gasFee, err := chainClient.GetGasFee()
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("gas fee:", gasFee, "INJ")
-
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)

@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "oracle",
+    "Type": "OracleType",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "symbol_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

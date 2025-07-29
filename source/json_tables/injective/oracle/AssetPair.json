@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "asset_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "signed_prices",
+    "Type": "SignedPriceOfAssetPair array",
+    "Description": ""
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "commission",
+    "Type": "ValidatorAccumulatedCommission",
+    "Description": "commission defines the commission the validator received."
+  }
+]

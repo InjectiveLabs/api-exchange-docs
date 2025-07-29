@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "orchestrator",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "eth_address",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

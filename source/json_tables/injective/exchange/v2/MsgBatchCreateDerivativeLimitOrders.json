@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "orders",
+    "Type": "DerivativeOrder array",
+    "Description": "the orders to create",
+    "Required": "Yes"
+  }
+]

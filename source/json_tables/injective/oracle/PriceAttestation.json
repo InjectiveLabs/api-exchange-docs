@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "price_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "price",
+    "Type": "int64",
+    "Description": "MaxPrice refers to the largest individual raw price considered"
+  },
+  {
+    "Parameter": "conf",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "expo",
+    "Type": "int32",
+    "Description": ""
+  },
+  {
+    "Parameter": "ema_price",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "ema_conf",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "ema_expo",
+    "Type": "int32",
+    "Description": ""
+  },
+  {
+    "Parameter": "publish_time",
+    "Type": "int64",
+    "Description": ""
+  }
+]

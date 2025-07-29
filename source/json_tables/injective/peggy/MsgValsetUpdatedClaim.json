@@ -1,0 +1,44 @@
+[
+  {
+    "Parameter": "event_nonce",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "valset_nonce",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "block_height",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "members",
+    "Type": "BridgeValidator array",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "reward_amount",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "reward_token",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "orchestrator",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "status",
+    "Type": "OrderUpdateStatus",
+    "Description": "the status of the order"
+  },
+  {
+    "Parameter": "order_hash",
+    "Type": "string",
+    "Description": "the order hash"
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "the client order ID"
+  },
+  {
+    "Parameter": "order",
+    "Type": "DerivativeOrder",
+    "Description": "the order details"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "pool",
+    "Type": "Pool",
+    "Description": "pool defines the pool info."
+  }
+]

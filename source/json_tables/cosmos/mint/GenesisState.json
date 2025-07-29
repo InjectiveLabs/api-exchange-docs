@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "minter",
+    "Type": "Minter",
+    "Description": "minter is a space for holding current inflation information."
+  },
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines all the parameters of the module."
+  }
+]

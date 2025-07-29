@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "orderbooks",
+    "Type": "SingleSpotLimitOrderbookV2 array",
+    "Description": ""
+  }
+]

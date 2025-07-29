@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "delegator_address",
+    "Type": "string",
+    "Description": "delegator_address is the address of the delegator."
+  },
+  {
+    "Parameter": "validator_address",
+    "Type": "string",
+    "Description": "validator_address is the address of the validator."
+  },
+  {
+    "Parameter": "starting_info",
+    "Type": "DelegatorStartingInfo",
+    "Description": "starting_info defines the starting info of a delegator."
+  }
+]

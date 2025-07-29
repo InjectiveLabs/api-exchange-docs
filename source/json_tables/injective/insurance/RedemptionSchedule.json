@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "id",
+    "Type": "uint64",
+    "Description": "id of redemption schedule"
+  },
+  {
+    "Parameter": "marketId",
+    "Type": "string",
+    "Description": "marketId of insurance fund for the redemption"
+  },
+  {
+    "Parameter": "redeemer",
+    "Type": "string",
+    "Description": "address of the redeemer"
+  },
+  {
+    "Parameter": "claimable_redemption_time",
+    "Type": "time.Time",
+    "Description": "the time after which the redemption can be claimed"
+  },
+  {
+    "Parameter": "redemption_amount",
+    "Type": "types1.Coin",
+    "Description": "the insurance_pool_token amount to redeem"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "ticker",
+    "Type": "string",
+    "Description": "the ticker for the spot market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "base_denom",
+    "Type": "string",
+    "Description": "the type of coin to use as the base currency",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "type of coin to use as the quote currency",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "min_price_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "min_price_tick_size defines the minimum tick size of the order's price",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "min_quantity_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "min_quantity_tick_size defines the minimum tick size of the order's quantity",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "min_notional",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "min_notional defines the minimum notional (in quote asset) required for orders in the market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "base_decimals",
+    "Type": "uint32",
+    "Description": "base token decimals",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "quote_decimals",
+    "Type": "uint32",
+    "Description": "quote token decimals",
+    "Required": "Yes"
+  }
+]

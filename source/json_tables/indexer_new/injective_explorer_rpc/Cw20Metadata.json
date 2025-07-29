@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "token_info",
+    "Type": "Cw20TokenInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "marketing_info",
+    "Type": "Cw20MarketingInfo",
+    "Description": ""
+  }
+]

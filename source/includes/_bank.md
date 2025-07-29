@@ -9,25 +9,24 @@ Bank module.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/1_MsgSend.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/1_MsgSend.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/1_MsgSend.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/1_MsgSend.py -->
 ```py
 import asyncio
+import json
 import os
 
 import dotenv
-from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
-from pyinjective.constant import GAS_FEE_BUFFER_AMOUNT
+from pyinjective.async_client_v2 import AsyncClient
+from pyinjective.core.broadcaster import MsgBroadcasterWithPk
 from pyinjective.core.network import Network
-from pyinjective.transaction import Transaction
 from pyinjective.wallet import PrivateKey
 
 
 async def main() -> None:
     dotenv.load_dotenv()
-    configured_private_key = os.getenv("INJECTIVE_PRIVATE_KEY")
+    private_key_in_hexa = os.getenv("INJECTIVE_PRIVATE_KEY")
 
     # select network: local, testnet, mainnet
     network = Network.testnet()
@@ -35,64 +34,40 @@ async def main() -> None:
     # initialize grpc client
     client = AsyncClient(network)
     composer = await client.composer()
-    await client.sync_timeout_height()
 
-    # load account
-    priv_key = PrivateKey.from_hex(configured_private_key)
-    pub_key = priv_key.to_public_key()
-    address = pub_key.to_address()
-    await client.fetch_account(address.to_acc_bech32())
-
-    # prepare tx msg
-    msg = composer.MsgSend(
-        from_address=address.to_acc_bech32(),
-        to_address="inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r",
-        amount=0.000000000000000001,
-        denom="INJ",
-    )
-
-    # build sim tx
-    tx = (
-        Transaction()
-        .with_messages(msg)
-        .with_sequence(client.get_sequence())
-        .with_account_num(client.get_number())
-        .with_chain_id(network.chain_id)
-    )
-    sim_sign_doc = tx.get_sign_doc(pub_key)
-    sim_sig = priv_key.sign(sim_sign_doc.SerializeToString())
-    sim_tx_raw_bytes = tx.get_tx_data(sim_sig, pub_key)
-
-    # simulate tx
-    try:
-        sim_res = await client.simulate(sim_tx_raw_bytes)
-    except RpcError as ex:
-        print(ex)
-        return
-
-    # build tx
     gas_price = await client.current_chain_gas_price()
     # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
     gas_price = int(gas_price * 1.1)
 
-    gas_limit = int(sim_res["gasInfo"]["gasUsed"]) + GAS_FEE_BUFFER_AMOUNT  # add buffer for gas fee computation
-    gas_fee = "{:.18f}".format((gas_price * gas_limit) / pow(10, 18)).rstrip("0")
-    fee = [
-        composer.coin(
-            amount=gas_price * gas_limit,
-            denom=network.fee_denom,
-        )
-    ]
-    tx = tx.with_gas(gas_limit).with_fee(fee).with_memo("").with_timeout_height(client.timeout_height)
-    sign_doc = tx.get_sign_doc(pub_key)
-    sig = priv_key.sign(sign_doc.SerializeToString())
-    tx_raw_bytes = tx.get_tx_data(sig, pub_key)
+    message_broadcaster = MsgBroadcasterWithPk.new_using_gas_heuristics(
+        network=network,
+        private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
+    )
 
-    # broadcast tx: send_tx_async_mode, send_tx_sync_mode, send_tx_block_mode
-    res = await client.broadcast_tx_sync_mode(tx_raw_bytes)
-    print(res)
-    print("gas wanted: {}".format(gas_limit))
-    print("gas fee: {} INJ".format(gas_fee))
+    priv_key = PrivateKey.from_hex(private_key_in_hexa)
+    pub_key = priv_key.to_public_key()
+    address = pub_key.to_address()
+
+    # prepare tx msg
+    msg = composer.msg_send(
+        from_address=address.to_acc_bech32(),
+        to_address="inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r",
+        amount=100000000000000000,
+        denom="inj",
+    )
+
+    # broadcast the transaction
+    result = await message_broadcaster.broadcast([msg])
+    print("---Transaction Response---")
+    print(json.dumps(result, indent=2))
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+    message_broadcaster.update_gas_price(gas_price=gas_price)
 
 
 if __name__ == "__main__":
@@ -100,12 +75,14 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/1_MsgSend/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/1_MsgSend/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/1_MsgSend/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/1_MsgSend/example.go -->
 ```go
 package main
 
 import (
+	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"time"
@@ -113,6 +90,7 @@ import (
 	"cosmossdk.io/math"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
+	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -121,7 +99,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -151,7 +129,7 @@ func main() {
 	}
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 	)
@@ -160,13 +138,16 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
 
 	// prepare tx msg
-	msg := &banktypes.MsgSend{
+	msg := banktypes.MsgSend{
 		FromAddress: senderAddress.String(),
 		ToAddress:   "inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r",
 		Amount: []sdktypes.Coin{{
@@ -175,24 +156,16 @@ func main() {
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	err = chainClient.QueueBroadcastMsg(msg)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, &msg)
 
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
-	time.Sleep(time.Second * 5)
+	str, _ := json.MarshalIndent(response, "", "\t")
+	fmt.Print(string(str))
 
-	gasFee, err := chainClient.GetGasFee()
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("gas fee:", gasFee, "INJ")
-
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -227,75 +200,38 @@ DEBU[0004] gas wanted:  119871                           fn=func1 src="client/ch
 gas fee: 0.0000599355 INJ
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tx/broadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="paramter-th">Paramter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="paramter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">Transaction details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TxResponse**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/txResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The block height</td></tr>
-<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction hash</td></tr>
-<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">String</td><td class="description-td td_text">Namespace for the code</td></tr>
-<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Response code (zero for success, non-zero for errors)</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">String</td><td class="description-td td_text">Bytes, if any</td></tr>
-<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">String</td><td class="description-td td_text">The output of the application's logger (raw string)</td></tr>
-<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLog Array</td><td class="description-td td_text">The output of the application's logger (typed)</td></tr>
-<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">String</td><td class="description-td td_text">Additional information</td></tr>
-<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas requested for the transaction</td></tr>
-<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas consumed by the transaction</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes</td></tr>
-<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event Array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/TxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">The block height</td></tr>
+<tr ><td class="parameter-td td_text">txhash</td><td class="type-td td_text">string</td><td class="description-td td_text">The transaction hash.</td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_text">Namespace for the Code</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Response code.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">string</td><td class="description-td td_text">Result bytes, if any.</td></tr>
+<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">string</td><td class="description-td td_text">The output of the application's logger (raw string). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLogs</td><td class="description-td td_text">The output of the application's logger (typed). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ABCIMessageLog**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/abciMessageLog.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The message index</td></tr>
-<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">String</td><td class="description-td td_text">The log message</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvent Array</td><td class="description-td td_text">Event objects that were emitted during the execution</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Event**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/event.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">EventAttribute Array</td><td class="description-td td_text">All event object details</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**StringEvent**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/stringEvent.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">Attribute Array</td><td class="description-td td_text">Event data</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**EventAttribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/eventAttribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr>
-<tr ><td class="parameter-td td_text">index</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">If attribute is indexed</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-<br/>
-
-**Attribute**
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/attribute.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute key</td></tr>
-<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">String</td><td class="description-td td_text">Attribute value</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/ABCIMessageLog.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvents</td><td class="description-td td_text">Events contains a slice of Event objects that were emitted during some execution.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -306,12 +242,14 @@ gas fee: 0.0000599355 INJ
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/2_MsgMultiSend/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/2_MsgMultiSend/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/2_MsgMultiSend/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/2_MsgMultiSend/example.go -->
 ```go
 package main
 
 import (
+	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"time"
@@ -319,6 +257,7 @@ import (
 	"cosmossdk.io/math"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
+	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -327,7 +266,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -360,7 +299,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 	)
@@ -369,14 +308,17 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
 
 	// prepare tx msg
 
-	msg := &banktypes.MsgMultiSend{
+	msg := banktypes.MsgMultiSend{
 		Inputs: []banktypes.Input{
 			{
 				Address: senderAddress.String(),
@@ -408,24 +350,16 @@ func main() {
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	err = chainClient.QueueBroadcastMsg(msg)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, &msg)
 
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
-	time.Sleep(time.Second * 5)
+	str, _ := json.MarshalIndent(response, "", "\t")
+	fmt.Print(string(str))
 
-	gasFee, err := chainClient.GetGasFee()
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("gas fee:", gasFee, "INJ")
-
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -481,12 +415,13 @@ Get the bank balance for all denoms.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/2_BankBalances.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/2_BankBalances.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/2_BankBalances.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/2_BankBalances.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -495,7 +430,7 @@ async def main() -> None:
     client = AsyncClient(network)
     address = "inj1cml96vmptgw99syqrrz8az79xer2pcgp0a885r"
     all_bank_balances = await client.fetch_bank_balances(address=address)
-    print(all_bank_balances)
+    print(json.dumps(all_bank_balances, indent=2))
 
 
 if __name__ == "__main__":
@@ -503,8 +438,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/2_BankBalances/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/2_BankBalances/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/2_BankBalances/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/2_BankBalances/example.go -->
 ```go
 package main
 
@@ -523,7 +458,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -554,7 +489,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -569,10 +504,10 @@ func main() {
 
 	res, err := chainClient.GetBankBalances(ctx, address)
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -681,12 +616,13 @@ Get the bank balance for a specific denom.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/1_BankBalance.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/1_BankBalance.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/1_BankBalance.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/1_BankBalance.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -696,7 +632,7 @@ async def main() -> None:
     address = "inj1cml96vmptgw99syqrrz8az79xer2pcgp0a885r"
     denom = "inj"
     bank_balance = await client.fetch_bank_balance(address=address, denom=denom)
-    print(bank_balance)
+    print(json.dumps(bank_balance, indent=2))
 
 
 if __name__ == "__main__":
@@ -704,8 +640,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/1_BankBalance/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/1_BankBalance/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/1_BankBalance/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/1_BankBalance/example.go -->
 ```go
 package main
 
@@ -725,7 +661,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -756,7 +692,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -775,7 +711,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -831,12 +767,13 @@ Get the bank spendable balances for a specific address.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/3_SpendableBalances.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/3_SpendableBalances.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/3_SpendableBalances.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/3_SpendableBalances.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -845,7 +782,7 @@ async def main() -> None:
     client = AsyncClient(network)
     address = "inj1cml96vmptgw99syqrrz8az79xer2pcgp0a885r"
     spendable_balances = await client.fetch_spendable_balances(address=address)
-    print(spendable_balances)
+    print(json.dumps(spendable_balances, indent=2))
 
 
 if __name__ == "__main__":
@@ -853,8 +790,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/3_BankSpendableBalances/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/3_BankSpendableBalances/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/3_BankSpendableBalances/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/3_BankSpendableBalances/example.go -->
 ```go
 package main
 
@@ -875,7 +812,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -906,7 +843,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -925,7 +862,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -1070,12 +1007,13 @@ Get the bank spendable balances for a specific address and denom.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/4_SpendableBalancesByDenom.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/4_SpendableBalancesByDenom.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/4_SpendableBalancesByDenom.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/4_SpendableBalancesByDenom.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -1085,7 +1023,7 @@ async def main() -> None:
     address = "inj1cml96vmptgw99syqrrz8az79xer2pcgp0a885r"
     denom = "inj"
     spendable_balances = await client.fetch_spendable_balances_by_denom(address=address, denom=denom)
-    print(spendable_balances)
+    print(json.dumps(spendable_balances, indent=2))
 
 
 if __name__ == "__main__":
@@ -1093,8 +1031,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/4_BankSpendableBalancesByDenom/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/4_BankSpendableBalancesByDenom/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/4_BankSpendableBalancesByDenom/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/4_BankSpendableBalancesByDenom/example.go -->
 ```go
 package main
 
@@ -1113,7 +1051,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -1144,7 +1082,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -1163,7 +1101,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -1220,12 +1158,13 @@ Get the total supply for all tokens
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/5_TotalSupply.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/5_TotalSupply.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/5_TotalSupply.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/5_TotalSupply.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
 
@@ -1236,7 +1175,7 @@ async def main() -> None:
     total_supply = await client.fetch_total_supply(
         pagination=PaginationOption(limit=10),
     )
-    print(total_supply)
+    print(json.dumps(total_supply, indent=2))
 
 
 if __name__ == "__main__":
@@ -1244,8 +1183,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/5_BankTotalSupply/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/5_BankTotalSupply/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/5_BankTotalSupply/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/5_BankTotalSupply/example.go -->
 ```go
 package main
 
@@ -1266,7 +1205,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -1297,7 +1236,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -1315,7 +1254,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -1455,12 +1394,13 @@ Queries the supply of a single token
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/6_SupplyOf.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/6_SupplyOf.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/6_SupplyOf.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/6_SupplyOf.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -1468,7 +1408,7 @@ async def main() -> None:
     network = Network.testnet()
     client = AsyncClient(network)
     supply_of = await client.fetch_supply_of(denom="inj")
-    print(supply_of)
+    print(json.dumps(supply_of, indent=2))
 
 
 if __name__ == "__main__":
@@ -1476,8 +1416,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/6_BankSupplyOf/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/6_BankSupplyOf/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/6_BankSupplyOf/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/6_BankSupplyOf/example.go -->
 ```go
 package main
 
@@ -1496,7 +1436,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -1527,7 +1467,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -1545,7 +1485,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -1596,12 +1536,13 @@ Queries the metadata of a single token
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/7_DenomMetadata.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/7_DenomMetadata.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/7_DenomMetadata.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/7_DenomMetadata.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -1610,7 +1551,7 @@ async def main() -> None:
     client = AsyncClient(network)
     denom = "factory/inj107aqkjc3t5r3l9j4n9lgrma5tm3jav8qgppz6m/position"
     metadata = await client.fetch_denom_metadata(denom=denom)
-    print(metadata)
+    print(json.dumps(metadata, indent=2))
 
 
 if __name__ == "__main__":
@@ -1618,8 +1559,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/7_DenomMetadata/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/7_DenomMetadata/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/7_DenomMetadata/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/7_DenomMetadata/example.go -->
 ```go
 package main
 
@@ -1638,7 +1579,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -1669,7 +1610,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -1687,7 +1628,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -1767,12 +1708,13 @@ Queries the metadata of all tokens
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/8_DenomsMetadata.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/8_DenomsMetadata.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/8_DenomsMetadata.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/8_DenomsMetadata.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
 
@@ -1783,7 +1725,7 @@ async def main() -> None:
     denoms = await client.fetch_denoms_metadata(
         pagination=PaginationOption(limit=10),
     )
-    print(denoms)
+    print(json.dumps(denoms, indent=2))
 
 
 if __name__ == "__main__":
@@ -1791,8 +1733,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/8_DenomsMetadata/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/8_DenomsMetadata/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/8_DenomsMetadata/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/8_DenomsMetadata/example.go -->
 ```go
 package main
 
@@ -1813,7 +1755,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -1844,7 +1786,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -1862,7 +1804,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -2186,12 +2128,13 @@ Queries for all account addresses that own a particular token
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/9_DenomOwners.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/9_DenomOwners.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/9_DenomOwners.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/9_DenomOwners.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
 
@@ -2204,7 +2147,7 @@ async def main() -> None:
         denom=denom,
         pagination=PaginationOption(limit=10),
     )
-    print(owners)
+    print(json.dumps(owners, indent=2))
 
 
 if __name__ == "__main__":
@@ -2212,8 +2155,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/9_DenomOwners/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/9_DenomOwners/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/9_DenomOwners/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/9_DenomOwners/example.go -->
 ```go
 package main
 
@@ -2233,7 +2176,7 @@ import (
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -2264,7 +2207,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -2283,7 +2226,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }
@@ -2425,12 +2368,13 @@ This query only returns denominations that have specific SendEnabled settings. A
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/10_SendEnabled.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/bank/query/10_SendEnabled.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/10_SendEnabled.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/10_SendEnabled.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
 
@@ -2443,7 +2387,7 @@ async def main() -> None:
         denoms=[denom],
         pagination=PaginationOption(limit=10),
     )
-    print(enabled)
+    print(json.dumps(enabled, indent=2))
 
 
 if __name__ == "__main__":
@@ -2451,8 +2395,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/10_BankSendEnabled/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/bank/query/10_BankSendEnabled/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/10_BankSendEnabled/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/10_BankSendEnabled/example.go -->
 ```go
 package main
 
@@ -2460,19 +2404,19 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"os"
+
+	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/cosmos/cosmos-sdk/types/query"
 
 	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
-	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
-	"github.com/cosmos/cosmos-sdk/types/query"
-
-	"os"
 )
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -2503,7 +2447,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -2522,7 +2466,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 
 }

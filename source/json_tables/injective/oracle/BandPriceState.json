@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "rate",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": ""
+  },
+  {
+    "Parameter": "resolve_time",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "price_state",
+    "Type": "PriceState",
+    "Description": ""
+  }
+]

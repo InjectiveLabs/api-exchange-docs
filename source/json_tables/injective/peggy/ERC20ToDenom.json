@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "erc20",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": ""
+  }
+]

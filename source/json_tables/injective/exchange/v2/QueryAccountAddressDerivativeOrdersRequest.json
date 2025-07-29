@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID for the market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "Account address of the trader",
+    "Required": "Yes"
+  }
+]

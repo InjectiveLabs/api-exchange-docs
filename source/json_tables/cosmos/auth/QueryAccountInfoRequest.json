@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address is the account address string.",
+    "Required": "Yes"
+  }
+]

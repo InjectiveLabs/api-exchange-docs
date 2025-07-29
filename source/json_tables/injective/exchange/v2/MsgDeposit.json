@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "(Optional) the subaccount ID to deposit funds into. If empty, the coin will be deposited to the sender's default subaccount address.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "types.Coin",
+    "Description": "the amount of the deposit (in chain format)",
+    "Required": "Yes"
+  }
+]

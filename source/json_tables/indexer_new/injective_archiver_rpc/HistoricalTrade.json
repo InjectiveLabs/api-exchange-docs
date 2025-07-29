@@ -1,0 +1,72 @@
+[
+  {
+    "Parameter": "account",
+    "Type": "string",
+    "Description": "Account address"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "The subaccountId that executed the trade"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "The ID of the market that this trade is in"
+  },
+  {
+    "Parameter": "trade_direction",
+    "Type": "string",
+    "Description": "The direction the trade"
+  },
+  {
+    "Parameter": "price",
+    "Type": "PriceLevel",
+    "Description": "Price level at which trade has been executed"
+  },
+  {
+    "Parameter": "fee",
+    "Type": "string",
+    "Description": "The fee associated with the trade (quote asset denom)"
+  },
+  {
+    "Parameter": "executed_at",
+    "Type": "int64",
+    "Description": "Timestamp of trade execution in UNIX millis"
+  },
+  {
+    "Parameter": "executed_height",
+    "Type": "uint64",
+    "Description": "Block height of trade execution"
+  },
+  {
+    "Parameter": "fee_recipient",
+    "Type": "string",
+    "Description": "Fee recipient address"
+  },
+  {
+    "Parameter": "execution_side",
+    "Type": "string",
+    "Description": "Trade's execution side, maker/taker"
+  },
+  {
+    "Parameter": "usd_value",
+    "Type": "string",
+    "Description": "USD value of the trade at the time of execution"
+  },
+  {
+    "Parameter": "flags",
+    "Type": "string array",
+    "Description": "A list of flag assigned to the trade"
+  },
+  {
+    "Parameter": "market_type",
+    "Type": "string",
+    "Description": "Type of market"
+  },
+  {
+    "Parameter": "trade_id",
+    "Type": "string",
+    "Description": "Unique trade ID"
+  }
+]

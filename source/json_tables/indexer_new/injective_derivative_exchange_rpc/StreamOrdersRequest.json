@@ -1,0 +1,86 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "MarketId of market we want to fetch orders from. Using this field for one single marketId",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "order_side",
+    "Type": "string",
+    "Description": "Look for specific order side",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "Look for specific subaccountId of an order",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "uint64",
+    "Description": "Skip will skip the first n item from the result",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "Limit is used to specify the maximum number of items to be returned",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "start_time",
+    "Type": "int64",
+    "Description": "The starting timestamp in UNIX milliseconds that the trades must be equal or older than",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "end_time",
+    "Type": "int64",
+    "Description": "The ending timestamp in UNIX milliseconds that the trades must be equal or younger than",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_ids",
+    "Type": "string array",
+    "Description": "MarketIds of the markets of which we want to get order from, use this field for fetching orders from multiple markets",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "is_conditional",
+    "Type": "string",
+    "Description": "Only search for conditional/non-conditional orders",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "order_type",
+    "Type": "string",
+    "Description": "Search for specific order type",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "include_inactive",
+    "Type": "bool",
+    "Description": "Should include inactive orders",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "subaccount_total_orders",
+    "Type": "bool",
+    "Description": "Choose to return subaccount total orders",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "trade_id",
+    "Type": "string",
+    "Description": "TradeId of the order we want to fetch",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "Client order ID",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "power",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "ethereum_address",
+    "Type": "string",
+    "Description": ""
+  }
+]

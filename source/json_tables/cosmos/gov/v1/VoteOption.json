@@ -1,0 +1,22 @@
+[
+  {
+    "Code": "0",
+    "Name": "VOTE_OPTION_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "VOTE_OPTION_YES"
+  },
+  {
+    "Code": "2",
+    "Name": "VOTE_OPTION_ABSTAIN"
+  },
+  {
+    "Code": "3",
+    "Name": "VOTE_OPTION_NO"
+  },
+  {
+    "Code": "4",
+    "Name": "VOTE_OPTION_NO_WITH_VETO"
+  }
+]

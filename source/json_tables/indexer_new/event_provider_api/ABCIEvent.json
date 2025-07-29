@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "type",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "attributes",
+    "Type": "ABCIAttribute array",
+    "Description": ""
+  }
+]

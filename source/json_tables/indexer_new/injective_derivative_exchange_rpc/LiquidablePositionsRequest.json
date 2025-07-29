@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID to filter orders for specific market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "uint64",
+    "Description": "Skip will skip the first n item from the result",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "Limit is used to specify the maximum number of items to be returned.",
+    "Required": "Yes"
+  }
+]

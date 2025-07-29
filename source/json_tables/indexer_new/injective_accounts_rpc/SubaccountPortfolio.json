@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "The ID of this subaccount"
+  },
+  {
+    "Parameter": "available_balance",
+    "Type": "string",
+    "Description": "The subaccount's available balance value in USD."
+  },
+  {
+    "Parameter": "locked_balance",
+    "Type": "string",
+    "Description": "The subaccount's locked balance value in USD."
+  },
+  {
+    "Parameter": "unrealized_pnl",
+    "Type": "string",
+    "Description": "The subaccount's total unrealized PnL value in USD."
+  }
+]

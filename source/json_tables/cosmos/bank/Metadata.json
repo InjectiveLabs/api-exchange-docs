@@ -1,0 +1,47 @@
+[
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "denom_units",
+    "Type": "DenomUnit array",
+    "Description": "denom_units represents the list of DenomUnit's for a given coin"
+  },
+  {
+    "Parameter": "base",
+    "Type": "string",
+    "Description": "base represents the base denom (should be the DenomUnit with exponent = 0)."
+  },
+  {
+    "Parameter": "display",
+    "Type": "string",
+    "Description": "display indicates the suggested denom that should be displayed in clients."
+  },
+  {
+    "Parameter": "name",
+    "Type": "string",
+    "Description": "name defines the name of the token (eg: Cosmos Atom)  Since: cosmos-sdk 0.43"
+  },
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": "symbol is the token symbol usually shown on exchanges (eg: ATOM). This can be the same as the display.  Since: cosmos-sdk 0.43"
+  },
+  {
+    "Parameter": "uri",
+    "Type": "string",
+    "Description": "URI to a document (on or off-chain) that contains additional information. Optional.  Since: cosmos-sdk 0.46"
+  },
+  {
+    "Parameter": "uri_hash",
+    "Type": "string",
+    "Description": "URIHash is a sha256 hash of a document pointed by URI. It's used to verify that the document didn't change. Optional.  Since: cosmos-sdk 0.46"
+  },
+  {
+    "Parameter": "decimals",
+    "Type": "uint32",
+    "Description": "Decimals represent the number of decimals use to represent token amount on chain  Since: cosmos-sdk 0.50"
+  }
+]

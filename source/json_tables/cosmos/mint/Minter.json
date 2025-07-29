@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "inflation",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "current annual inflation rate"
+  },
+  {
+    "Parameter": "annual_provisions",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "current annual expected provisions"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address of the contract that generated the event"
+  },
+  {
+    "Parameter": "topics",
+    "Type": "string array",
+    "Description": "topics is a list of topics provided by the contract."
+  },
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "data which is supplied by the contract, usually ABI-encoded"
+  },
+  {
+    "Parameter": "block_number",
+    "Type": "uint64",
+    "Description": "block_number of the block in which the transaction was included"
+  },
+  {
+    "Parameter": "tx_hash",
+    "Type": "string",
+    "Description": "tx_hash is the transaction hash"
+  },
+  {
+    "Parameter": "tx_index",
+    "Type": "uint64",
+    "Description": "tx_index of the transaction in the block"
+  },
+  {
+    "Parameter": "block_hash",
+    "Type": "string",
+    "Description": "block_hash of the block in which the transaction was included"
+  },
+  {
+    "Parameter": "index",
+    "Type": "uint64",
+    "Description": "index of the log in the block"
+  },
+  {
+    "Parameter": "removed",
+    "Type": "bool",
+    "Description": "removed is true if this log was reverted due to a chain reorganisation. You must pay attention to this field if you receive logs through a filter query."
+  }
+]

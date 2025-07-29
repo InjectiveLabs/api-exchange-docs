@@ -1,0 +1,44 @@
+[
+  {
+    "Parameter": "from_block",
+    "Type": "uint64",
+    "Description": "The starting block height that the trades must be equal or older than",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "end_block",
+    "Type": "uint64",
+    "Description": "The ending block height that the trades must be equal or older than",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "from_time",
+    "Type": "int64",
+    "Description": "The starting timestamp in UNIX milliseconds that the trades must be equal or older than",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "end_time",
+    "Type": "int64",
+    "Description": "The ending timestamp in UNIX milliseconds that the trades must be equal or older than",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "per_page",
+    "Type": "int32",
+    "Description": "The number of trades to return per page",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "Token for pagination",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "account",
+    "Type": "string",
+    "Description": "Account address",
+    "Required": "Yes"
+  }
+]

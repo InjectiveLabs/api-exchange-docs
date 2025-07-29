@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "authority is the address that controls the module (defaults to x/gov unless overwritten).",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "recipient",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

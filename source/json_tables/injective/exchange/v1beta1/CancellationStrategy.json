@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "UnspecifiedOrder"
+  },
+  {
+    "Code": "1",
+    "Name": "FromWorstToBest"
+  },
+  {
+    "Code": "2",
+    "Name": "FromBestToWorst"
+  }
+]

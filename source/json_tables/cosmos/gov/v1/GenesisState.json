@@ -1,0 +1,47 @@
+[
+  {
+    "Parameter": "starting_proposal_id",
+    "Type": "uint64",
+    "Description": "starting_proposal_id is the ID of the starting proposal."
+  },
+  {
+    "Parameter": "deposits",
+    "Type": "Deposit array",
+    "Description": "deposits defines all the deposits present at genesis."
+  },
+  {
+    "Parameter": "votes",
+    "Type": "Vote array",
+    "Description": "votes defines all the votes present at genesis."
+  },
+  {
+    "Parameter": "proposals",
+    "Type": "Proposal array",
+    "Description": "proposals defines all the proposals present at genesis."
+  },
+  {
+    "Parameter": "deposit_params",
+    "Type": "DepositParams",
+    "Description": "Deprecated: Prefer to use `params` instead. deposit_params defines all the paramaters of related to deposit."
+  },
+  {
+    "Parameter": "voting_params",
+    "Type": "VotingParams",
+    "Description": "Deprecated: Prefer to use `params` instead. voting_params defines all the paramaters of related to voting."
+  },
+  {
+    "Parameter": "tally_params",
+    "Type": "TallyParams",
+    "Description": "Deprecated: Prefer to use `params` instead. tally_params defines all the paramaters of related to tally."
+  },
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines all the paramaters of x/gov module.  Since: cosmos-sdk 0.47"
+  },
+  {
+    "Parameter": "constitution",
+    "Type": "string",
+    "Description": "The constitution allows builders to lay a foundation and define purpose. This is an immutable string set in genesis. There are no amendments, to go outside of scope, just fork. constitution is an immutable string in genesis for a chain builder to lay out their vision, ideas and ideals.  Since: cosmos-sdk 0.50"
+  }
+]

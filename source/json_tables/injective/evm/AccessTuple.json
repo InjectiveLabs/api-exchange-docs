@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address is a hex formatted ethereum address"
+  },
+  {
+    "Parameter": "storage_keys",
+    "Type": "string array",
+    "Description": "storage_keys are hex formatted hashes of the storage keys"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "MarketId of the trading strategy"
+  },
+  {
+    "Parameter": "active_trading_strategies",
+    "Type": "uint64",
+    "Description": "Total of unique active trading strategies"
+  }
+]

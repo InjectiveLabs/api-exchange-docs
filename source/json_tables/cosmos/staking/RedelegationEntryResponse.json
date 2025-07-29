@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "redelegation_entry",
+    "Type": "RedelegationEntry",
+    "Description": ""
+  },
+  {
+    "Parameter": "balance",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": ""
+  }
+]

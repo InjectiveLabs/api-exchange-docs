@@ -11,21 +11,22 @@ Get a list of all oracles.
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/oracle_rpc/3_OracleList.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/oracle_rpc/3_OracleList.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/oracle_rpc/3_OracleList.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/oracle_rpc/3_OracleList.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     oracle_list = await client.fetch_oracle_list()
-    print(oracle_list)
+    print(json.dumps(oracle_list, indent=2))
 
 
 if __name__ == "__main__":
@@ -33,8 +34,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/oracle/3_OracleList/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/oracle/3_OracleList/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/oracle/3_OracleList/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/oracle/3_OracleList/example.go -->
 ```go
 package main
 
@@ -60,7 +61,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -173,19 +174,20 @@ Get the oracle price of an asset.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/oracle_rpc/2_Price.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/oracle_rpc/2_Price.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/oracle_rpc/2_Price.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/oracle_rpc/2_Price.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     market = (await client.all_derivative_markets())[
         "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
     ]
@@ -199,7 +201,7 @@ async def main() -> None:
         quote_symbol=quote_symbol,
         oracle_type=oracle_type,
     )
-    print(oracle_prices)
+    print(json.dumps(oracle_prices, indent=2))
 
 
 if __name__ == "__main__":
@@ -207,8 +209,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/oracle/2_Price/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/oracle/2_Price/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/oracle/2_Price/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/oracle/2_Price/example.go -->
 ```go
 package main
 
@@ -223,12 +225,13 @@ import (
 	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
+	"github.com/InjectiveLabs/sdk-go/client/core"
 	exchangeclient "github.com/InjectiveLabs/sdk-go/client/exchange"
 )
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -260,7 +263,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -272,7 +275,7 @@ func main() {
 	}
 
 	ctx := context.Background()
-	marketsAssistant, err := chainclient.NewMarketsAssistant(ctx, chainClient)
+	marketsAssistant, err := chainclient.NewHumanReadableMarketsAssistant(ctx, chainClient)
 	if err != nil {
 		panic(err)
 	}
@@ -283,17 +286,21 @@ func main() {
 	}
 
 	market := marketsAssistant.AllDerivativeMarkets()["0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"]
+	derivativeMarket, ok := market.(core.DerivativeMarketV2)
+	if !ok {
+		panic("market is not a derivative market")
+	}
 
-	baseSymbol := market.OracleBase
-	quoteSymbol := market.OracleQuote
-	oracleType := market.OracleType
+	baseSymbol := derivativeMarket.OracleBase
+	quoteSymbol := derivativeMarket.OracleQuote
+	oracleType := derivativeMarket.OracleType
 	oracleScaleFactor := uint32(0)
 	res, err := exchangeClient.GetPrice(ctx, baseSymbol, quoteSymbol, oracleType, oracleScaleFactor)
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -335,16 +342,16 @@ Stream new price changes for a specified oracle. If no oracles are provided, all
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/oracle_rpc/1_StreamPrices.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/oracle_rpc/1_StreamPrices.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/oracle_rpc/1_StreamPrices.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/oracle_rpc/1_StreamPrices.py -->
 ```py
 import asyncio
 from typing import Any, Dict
 
 from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def price_event_processor(event: Dict[str, Any]):
@@ -362,7 +369,7 @@ def stream_closed_processor():
 async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     market = (await client.all_derivative_markets())[
         "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
     ]
@@ -391,8 +398,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/oracle/1_StreamPrices/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/oracle/1_StreamPrices/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/oracle/1_StreamPrices/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/oracle/1_StreamPrices/example.go -->
 ```go
 package main
 
@@ -408,12 +415,13 @@ import (
 	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
+	"github.com/InjectiveLabs/sdk-go/client/core"
 	exchangeclient "github.com/InjectiveLabs/sdk-go/client/exchange"
 )
 
 func main() {
 	network := common.LoadNetwork("testnet", "lb")
-	tmClient, err := rpchttp.New(network.TmEndpoint, "/websocket")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
 		panic(err)
 	}
@@ -445,7 +453,7 @@ func main() {
 
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -457,21 +465,25 @@ func main() {
 	}
 
 	ctx := context.Background()
-	marketsAssistant, err := chainclient.NewMarketsAssistant(ctx, chainClient)
+	marketsAssistant, err := chainclient.NewHumanReadableMarketsAssistant(ctx, chainClient)
 	if err != nil {
 		panic(err)
 	}
 
 	market := marketsAssistant.AllDerivativeMarkets()["0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"]
+	derivativeMarket, ok := market.(core.DerivativeMarketV2)
+	if !ok {
+		panic("market is not a derivative market")
+	}
 
 	exchangeClient, err := exchangeclient.NewExchangeClient(network)
 	if err != nil {
 		panic(err)
 	}
 
-	baseSymbol := market.OracleBase
-	quoteSymbol := market.OracleQuote
-	oracleType := strings.ToLower(market.OracleType)
+	baseSymbol := derivativeMarket.OracleBase
+	quoteSymbol := derivativeMarket.OracleQuote
+	oracleType := strings.ToLower(derivativeMarket.OracleType)
 
 	stream, err := exchangeClient.StreamPrices(ctx, baseSymbol, quoteSymbol, oracleType)
 	if err != nil {
@@ -488,7 +500,7 @@ func main() {
 				fmt.Println(err)
 				return
 			}
-			str, _ := json.MarshalIndent(res, "", " ")
+			str, _ := json.MarshalIndent(res, "", "\t")
 			fmt.Print(string(str))
 		}
 	}

@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "The account's portfolio address"
+  },
+  {
+    "Parameter": "bank_balances",
+    "Type": "Coin array",
+    "Description": "Account available bank balances"
+  },
+  {
+    "Parameter": "subaccounts",
+    "Type": "SubaccountBalanceV2 array",
+    "Description": "Subaccounts list"
+  },
+  {
+    "Parameter": "positions_with_upnl",
+    "Type": "PositionsWithUPNL array",
+    "Description": "All positions for all subaccounts, with unrealized PNL"
+  }
+]

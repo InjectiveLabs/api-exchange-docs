@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "p",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "price (in human readable format)"
+  },
+  {
+    "Parameter": "q",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "quantity (in human readable format)"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines the parameters of the module."
+  },
+  {
+    "Parameter": "namespaces",
+    "Type": "Namespace array",
+    "Description": ""
+  },
+  {
+    "Parameter": "vouchers",
+    "Type": "AddressVoucher array",
+    "Description": ""
+  }
+]

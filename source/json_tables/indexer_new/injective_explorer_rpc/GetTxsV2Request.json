@@ -1,0 +1,44 @@
+[
+  {
+    "Parameter": "type",
+    "Type": "string",
+    "Description": "Comma-separated list of msg types",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "start_time",
+    "Type": "int64",
+    "Description": "The starting timestamp in UNIX milliseconds that the txs must be equal or older than",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "end_time",
+    "Type": "int64",
+    "Description": "The ending timestamp in UNIX milliseconds that the txs must be equal or younger than",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "per_page",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "The status of the txs to be returned",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "block_number",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

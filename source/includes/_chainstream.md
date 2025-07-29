@@ -11,16 +11,15 @@ A filter can be specified with a list of values, generally MarketIds, Subaccount
 A filter can also be omitted, in this case the stream will return all the events for the specified type.
 In addition each filter supports a `*` wildcard to match all possible values.
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/7_ChainStream.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/chain_client/7_ChainStream.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/7_ChainStream.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/7_ChainStream.py -->
 ```py
 import asyncio
 from typing import Any, Dict
 
 from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
-from pyinjective.composer import Composer
+from pyinjective.async_client_v2 import AsyncClient
 from pyinjective.core.network import Network
 
 
@@ -40,7 +39,7 @@ async def main() -> None:
     network = Network.testnet()
 
     client = AsyncClient(network)
-    composer = Composer(network=network.string())
+    composer = await client.composer()
 
     subaccount_id = "0xbdaedec95d563fb05240d6e01821008454c24c36000000000000000000000000"
 
@@ -95,8 +94,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/12_ChainStream/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/chain/12_ChainStream/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/12_ChainStream/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/12_ChainStream/example.go -->
 ```go
 package main
 
@@ -105,7 +104,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	chainStreamModule "github.com/InjectiveLabs/sdk-go/chain/stream/types"
+	chainstreamv2 "github.com/InjectiveLabs/sdk-go/chain/stream/types/v2"
 	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
@@ -124,7 +123,7 @@ func main() {
 	}
 	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint)
 
-	chainClient, err := chainclient.NewChainClient(
+	chainClient, err := chainclient.NewChainClientV2(
 		clientCtx,
 		network,
 		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
@@ -139,47 +138,47 @@ func main() {
 	injUsdtMarket := "0x0611780ba69656949525013d947713300f56c37b6175e02f26bffa495c3208fe"
 	injUsdtPerpMarket := "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
 
-	req := chainStreamModule.StreamRequest{
-		BankBalancesFilter: &chainStreamModule.BankBalancesFilter{
+	req := chainstreamv2.StreamRequest{
+		BankBalancesFilter: &chainstreamv2.BankBalancesFilter{
 			Accounts: []string{"*"},
 		},
-		SpotOrdersFilter: &chainStreamModule.OrdersFilter{
+		SpotOrdersFilter: &chainstreamv2.OrdersFilter{
 			MarketIds:     []string{injUsdtMarket},
 			SubaccountIds: []string{subaccountId},
 		},
-		DerivativeOrdersFilter: &chainStreamModule.OrdersFilter{
+		DerivativeOrdersFilter: &chainstreamv2.OrdersFilter{
 			MarketIds:     []string{injUsdtPerpMarket},
 			SubaccountIds: []string{subaccountId},
 		},
-		SpotTradesFilter: &chainStreamModule.TradesFilter{
+		SpotTradesFilter: &chainstreamv2.TradesFilter{
 			MarketIds:     []string{injUsdtMarket},
 			SubaccountIds: []string{"*"},
 		},
-		SubaccountDepositsFilter: &chainStreamModule.SubaccountDepositsFilter{
+		SubaccountDepositsFilter: &chainstreamv2.SubaccountDepositsFilter{
 			SubaccountIds: []string{subaccountId},
 		},
-		DerivativeOrderbooksFilter: &chainStreamModule.OrderbookFilter{
+		DerivativeOrderbooksFilter: &chainstreamv2.OrderbookFilter{
 			MarketIds: []string{injUsdtPerpMarket},
 		},
-		SpotOrderbooksFilter: &chainStreamModule.OrderbookFilter{
+		SpotOrderbooksFilter: &chainstreamv2.OrderbookFilter{
 			MarketIds: []string{injUsdtMarket},
 		},
-		PositionsFilter: &chainStreamModule.PositionsFilter{
+		PositionsFilter: &chainstreamv2.PositionsFilter{
 			SubaccountIds: []string{subaccountId},
 			MarketIds:     []string{injUsdtPerpMarket},
 		},
-		DerivativeTradesFilter: &chainStreamModule.TradesFilter{
+		DerivativeTradesFilter: &chainstreamv2.TradesFilter{
 			SubaccountIds: []string{"*"},
 			MarketIds:     []string{injUsdtPerpMarket},
 		},
-		OraclePriceFilter: &chainStreamModule.OraclePriceFilter{
+		OraclePriceFilter: &chainstreamv2.OraclePriceFilter{
 			Symbol: []string{"INJ", "USDT"},
 		},
 	}
 
 	ctx := context.Background()
 
-	stream, err := chainClient.ChainStream(ctx, req)
+	stream, err := chainClient.ChainStreamV2(ctx, req)
 	if err != nil {
 		panic(err)
 	}
@@ -192,9 +191,8 @@ func main() {
 			res, err := stream.Recv()
 			if err != nil {
 				panic(err)
-				return
 			}
-			str, _ := json.MarshalIndent(res, "", " ")
+			str, _ := json.MarshalIndent(res, "", "\t")
 			fmt.Print(string(str))
 		}
 	}
@@ -202,284 +200,254 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-### Request parameters 
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountDepositsRequest.json -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter                  | Type                     | Description                              | Required |
-| -------------------------- | ------------------------ | ---------------------------------------- | -------- |
-| BankBalancesFilter         | BankBalancesFilter       | Filter for bank balances events          | No       |
-| SpotOrdersFilter           | OrdersFilter             | Filter for spot orders events            | No       |
-| DerivativeOrdersFilter     | OrdersFilter             | Filter for derivative orders events      | No       |
-| SpotTradesFilter           | TradesFilter             | Filter for spot trades events            | No       |
-| SubaccountDepositsFilter   | SubaccountDepositsFilter | Filter for subaccount deposits events    | No       |
-| DerivativeOrderbooksFilter | OrderbookFilter          | Filter for derivative order books events | No       |
-| SpotOrderbooksFilter       | OrderbookFilter          | Filter for spot order books events       | No       |
-| PositionsFilter            | PositionsFilter          | Filter for positions events              | No       |
-| DerivativeTradesFilter     | TradesFilter             | Filter for derivative trades events      | No       |
-| OraclePriceFilter          | OraclePriceFilter        | Filter for oracle price events           | No       |
+<br/>
 
-### BankBalancesFilter
+**BankBalancesFilter**
 
- Structure for filtering bank balances.
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/BankBalancesFilter.json) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter | Type         | Description                | Required |
-| --------- | ------------ | -------------------------- | -------- |
-| Accounts  | String Array | List of account addresses. | No       |
+<br/>
 
-### SubaccountDepositsFilter
+**SubaccountDepositsFilter**
 
- Structure for filtering subaccount deposits.
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/SubaccountDepositsFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter     | Type         | Description             | Required |
-| ------------- | ------------ | ----------------------- | -------- |
-| SubaccountIds | String Array | List of subaccount IDs. | No       |
+<br/>
 
-### TradesFilter
+**TradesFilter**
 
- Structure for filtering trades.
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/TradesFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter     | Type         | Description             | Required |
-| ------------- | ------------ | ----------------------- | -------- |
-| SubaccountIds | String Array | List of subaccount IDs. | No       |
-| MarketIds     | String Array | List of market IDs.     | No       |
+<br/>
 
-### OrdersFilter
+**OrdersFilter**
 
- Structure for filtering orders.
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/OrdersFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter     | Type         | Description             | Required |
-| ------------- | ------------ | ----------------------- | -------- |
-| SubaccountIds | String Array | List of subaccount IDs. | No       |
-| MarketIds     | String Array | List of market IDs.     | No       |
+<br/>
 
-### OrderbookFilter
+**OrderbookFilter**
 
- Structure for filtering orderbook.
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/OrderbookFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter | Type         | Description         | Required |
-| --------- | ------------ | ------------------- | -------- |
-| MarketIds | String Array | List of market IDs. | No       |
+<br/>
 
-### PositionsFilter
+**PositionsFilter**
 
- Structure for filtering positions.
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/PositionsFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter     | Type         | Description             | Required |
-| ------------- | ------------ | ----------------------- | -------- |
-| SubaccountIds | String Array | List of subaccount IDs. | No       |
-| MarketIds     | String Array | List of market IDs.     | No       |
+<br/>
 
-### OraclePriceFilter
+**OraclePriceFilter**
 
- Structure for filtering oracle prices.
-
-| Parameter | Type         | Description      | Required |
-| --------- | ------------ | ---------------- | -------- |
-| Symbol    | String Array | List of symbols. | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/OraclePriceFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## StreamResponse
 The stream response is a stream of events that are sent to the client. 
 Each message contains a list of events that are filtered by the request parameters and it's identified by the block height.
 
-### Response parameters
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/StreamResponse.json -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Response structure for the data stream.
+<br/>
 
-| Parameter                  | Type                     | Description                           | Required |
-| -------------------------- | ------------------------ | ------------------------------------- | -------- |
-| BlockHeight                | Integer                  | The current block height.             |          |
-| BlockTime                  | Integer                  | The current block timestamp           |          |
-| BankBalances               | BankBalance Array        | List of bank balances.                |          |
-| SubaccountDeposits         | SubaccountDeposits Array | List of subaccount deposits.          |          |
-| SpotTrades                 | SpotTrade Array          | List of spot trades.                  |          |
-| DerivativeTrades           | DerivativeTrade Array    | List of derivative trades.            |          |
-| SpotOrders                 | SpotOrder Array          | List of spot orders.                  |          |
-| DerivativeOrders           | DerivativeOrder Array    | List of derivative orders.            |          |
-| SpotOrderbookUpdates       | OrderbookUpdate Array    | List of spot orderbook updates.       |          |
-| DerivativeOrderbookUpdates | OrderbookUpdate Array    | List of derivative orderbook updates. |          |
-| Positions                  | Position Array           | List of positions.                    |          |
-| OraclePrices               | OraclePrice Array        | List of oracle prices.                |          |
+**BankBalance**
 
-### BankBalance
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/BankBalance.json) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Structure for bank balances.
+<br/>
 
-| Parameter | Type   | Description                     | Required |
-| --------- | ------ | ------------------------------- | -------- |
-| Account   | String | The account name.               |          |
-| Balances  | Coins  | The list of available balances. |          |
+**SubaccountDeposits**
 
-### SubaccountDeposits
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/SubaccountDeposit.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">deposit</td><td class="type-td td_text">types.Deposit</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Structure for subaccount deposits.
+<br/>
 
-| Parameter    | Type          | Description        | Required |
-| ------------ | ------------- | ------------------ | -------- |
-| SubaccountId | String        | The subaccount ID. |          |
-| Deposits     | Deposit Array | List of deposits.  |          |
+**SpotTrade**
 
-### SpotTrade
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/SpotTrade.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
+<tr ><td class="parameter-td td_text">is_buy</td><td class="type-td td_text">bool</td><td class="description-td td_text">whether the trade is a buy or sell</td></tr>
+<tr ><td class="parameter-td td_text">executionType</td><td class="type-td td_text">string</td><td class="description-td td_text">the execution type</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the quantity of the trade</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the price of the trade</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID that executed the trade</td></tr>
+<tr ><td class="parameter-td td_text">fee</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the fee of the trade</td></tr>
+<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash</td></tr>
+<tr ><td class="parameter-td td_text">fee_recipient_address</td><td class="type-td td_text">string</td><td class="description-td td_text">the fee recipient address</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID</td></tr>
+<tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the trade ID</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Structure for spot trades.
+<br/>
 
-| Parameter           | Type   | Description                                       | Required |
-| ------------------- | ------ | ------------------------------------------------- | -------- |
-| MarketId            | String | The market ID.                                    |          |
-| IsBuy               | bool   | True if it is a buy, False if it is a sell.       |          |
-| ExecutionType       | String | The execution type.                               |          |
-| Quantity            | Dec    | The quantity of the trade.                        |          |
-| Price               | Dec    | The price of the trade.                           |          |
-| SubaccountId        | String | The subaccount ID that executed the trade.        |          |
-| Fee                 | Dec    | The fee of the trade.                             |          |
-| OrderHash           | String | The hash of the order.                            |          |
-| FeeRecipientAddress | String | The fee recipient address.                        |          |
-| Cid                 | String | Identifier for the order specified by the user    |          |
-| TradeId             | String | Unique identifier to differentiate between trades |          |
+**DerivativeTrade**
 
-### DerivativeTrade
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/DerivativeTrade.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
+<tr ><td class="parameter-td td_text">is_buy</td><td class="type-td td_text">bool</td><td class="description-td td_text">whether the trade is a buy or sell</td></tr>
+<tr ><td class="parameter-td td_text">executionType</td><td class="type-td td_text">string</td><td class="description-td td_text">the execution type</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td></tr>
+<tr ><td class="parameter-td td_text">position_delta</td><td class="type-td td_text">types.PositionDelta</td><td class="description-td td_text">the position delta of the trade</td></tr>
+<tr ><td class="parameter-td td_text">payout</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the payout of the trade</td></tr>
+<tr ><td class="parameter-td td_text">fee</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the fee of the trade</td></tr>
+<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash</td></tr>
+<tr ><td class="parameter-td td_text">fee_recipient_address</td><td class="type-td td_text">string</td><td class="description-td td_text">the fee recipient address</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID</td></tr>
+<tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the trade ID</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Structure for derivative trades.
+<br/>
 
-| Parameter           | Type          | Description                                       | Required |
-| ------------------- | ------------- | ------------------------------------------------- | -------- |
-| MarketId            | String        | The market ID.                                    |          |
-| IsBuy               | bool          | True if it is a buy, False if it is a sell.       |          |
-| ExecutionType       | String        | The execution type.                               |          |
-| SubaccountId        | String        | The subaccount ID that executed the trade.        |          |
-| PositionDelta       | PositionDelta | The position delta.                               |          |
-| Payout              | Dec           | The payout of the trade.                          |          |
-| Fee                 | Dec           | The fee of the trade.                             |          |
-| OrderHash           | String        | The hash of the order.                            |          |
-| FeeRecipientAddress | String        | The fee recipient address.                        |          |
-| Cid                 | String        | Identifier for the order specified by the user    |          |
-| TradeId             | String        | Unique identifier to differentiate between trades |          |
+**SpotOrderUpdate**
 
-### SpotOrder
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/SpotOrderUpdate.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">OrderUpdateStatus</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">SpotOrder</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Structure for spot orders.
+<br/>
 
-| Parameter | Type           | Description     | Required |
-| --------- | -------------- | --------------- | -------- |
-| MarketId  | String         | The market ID.  |          |
-| Order     | SpotLimitOrder | The spot order. |          |
+**DerivativeOrderUpdate**
 
-### DerivativeOrder
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/DerivativeOrderUpdate.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">OrderUpdateStatus</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">DerivativeOrder</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Structure for derivative orders.
+<br/>
 
-| Parameter | Type                 | Description                                                 | Required |
-| --------- | -------------------- | ----------------------------------------------------------- | -------- |
-| MarketId  | String               | The market ID.                                              |          |
-| Order     | DerivativeLimitOrder | The derivative order.                                       |          |
-| IsMarket  | bool                 | True if it is a market order, False if it is a limit order. |          |
+**OrderbookUpdate**
 
-### OrderbookUpdate
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/OrderbookUpdate.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">seq</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">orderbook</td><td class="type-td td_text">Orderbook</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Structure for orderbook updates.
+<br/>
 
-| Parameter | Type      | Description            | Required |
-| --------- | --------- | ---------------------- | -------- |
-| Seq       | Integer   | The sequence number.   |          |
-| Orderbook | Orderbook | The updated orderbook. |          |
+**Position**
 
-### Position
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/Position.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td></tr>
+<tr ><td class="parameter-td td_text">isLong</td><td class="type-td td_text">bool</td><td class="description-td td_text">whether the position is long or short</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the quantity of the position</td></tr>
+<tr ><td class="parameter-td td_text">entry_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the entry price of the position</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the margin of the position</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_funding_entry</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the cumulative funding entry of the position</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Structure for positions.
+<br/>
 
-| Parameter              | Type   | Description                                          | Required |
-| ---------------------- | ------ | ---------------------------------------------------- | -------- |
-| MarketId               | String | The market ID.                                       |          |
-| SubaccountId           | String | The subaccount ID.                                   |          |
-| IsLong                 | bool   | True if it is a long position, False if it is short. |          |
-| Quantity               | Dec    | The quantity of the position.                        |          |
-| EntryPrice             | Dec    | The entry price of the position.                     |          |
-| Margin                 | Dec    | The margin of the position.                          |          |
-| CumulativeFundingEntry | Dec    | The cumulative funding entry of the position.        |          |
+**OraclePrice**
 
-### OraclePrice
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/OraclePrice.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Structure for oracle prices.
+<br/>
 
-| Parameter | Type   | Description              | Required |
-| --------- | ------ | ------------------------ | -------- |
-| Symbol    | String | The symbol of the price. | Yes      |
-| Price     | Dec    | The oracle price.        | Yes      |
-| Type      | String | The price type.          |          |
+**OrderUpdateStatus**
 
-### SubaccountDeposit
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/OrderUpdateStatus.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">Unspecified</td></tr>
+<tr ><td class="code-td td_num">1</td><td class="name-td td_text">Booked</td></tr>
+<tr ><td class="code-td td_num">2</td><td class="name-td td_text">Matched</td></tr>
+<tr ><td class="code-td td_num">3</td><td class="name-td td_text">Cancelled</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Structure for subaccount deposits.
+<br/>
 
-| Parameter | Type    | Description                      | Required |
-| --------- | ------- | -------------------------------- | -------- |
-| Denom     | String  | The denomination of the deposit. |          |
-| Deposit   | Deposit | The deposit details.             |          |
+**SpotOrder**
 
-### Deposit
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/SpotOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">types.SpotLimitOrder</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Structure for deposit details.
+<br/>
 
-| Parameter        | Type | Description                           | Required |
-| ---------------- | ---- | ------------------------------------- | -------- |
-| AvailableBalance | Dec  | The available balance in the deposit. |          |
-| TotalBalance     | Dec  | The total balance in the deposit.     |          |
+**DerivativeOrder**
 
-### SpotLimitOrder
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/DerivativeOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
+<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">types.DerivativeLimitOrder</td><td class="description-td td_text">the derivative order details</td></tr>
+<tr ><td class="parameter-td td_text">is_market</td><td class="type-td td_text">bool</td><td class="description-td td_text">whether the order is a market order</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Structure for spot limit orders.
+<br/>
 
-| Parameter    | Type              | Description                             | Required |
-| ------------ | ----------------- | --------------------------------------- | -------- |
-| OrderInfo    | OrderInfo         | Information about the order.            |          |
-| OrderType    | OrderType         | The order type.                         |          |
-| Fillable     | Dec               | The remaining fillable quantity.        |          |
-| TriggerPrice | Dec (optional)    | The trigger price for stop/take orders. |          |
-| OrderHash    | []byte (optional) | The hash of the order.                  |          |
+**SpotLimitOrder**
 
-### DerivativeLimitOrder
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/SpotLimitOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">order_info contains the information of the order</td></tr>
+<tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">order types</td></tr>
+<tr ><td class="parameter-td td_text">fillable</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the amount of the quantity remaining fillable</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders</td></tr>
+<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">byte array</td><td class="description-td td_text">order hash</td></tr>
+<tr ><td class="parameter-td td_text">expiration_block</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration block is the block number at which the order will expire</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Structure for derivative limit orders.
+<br/>
 
-| Parameter    | Type              | Description                             | Required |
-| ------------ | ----------------- | --------------------------------------- | -------- |
-| OrderInfo    | OrderInfo         | Information about the order.            |          |
-| OrderType    | OrderType         | The order type.                         |          |
-| Margin       | Dec               | The margin used by the order.           |          |
-| Fillable     | Dec               | The remaining fillable quantity.        |          |
-| TriggerPrice | Dec (optional)    | The trigger price for stop/take orders. |          |
-| OrderHash    | []byte (optional) | The hash of the order.                  |          |
+**DerivativeLimitOrder**
 
-### OrderInfo
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/DerivativeLimitOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">order_info contains the information of the order</td></tr>
+<tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">order types</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">margin is the margin used by the limit order</td></tr>
+<tr ><td class="parameter-td td_text">fillable</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the amount of the quantity remaining fillable</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders</td></tr>
+<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">expiration_block</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration block is the block number at which the order will expire</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Structure for order information.
+<br/>
 
-| Parameter    | Type   | Description                                    | Required |
-| ------------ | ------ | ---------------------------------------------- | -------- |
-| SubaccountId | String | The subaccount ID of the order creator.        |          |
-| FeeRecipient | String | The fee recipient address for the order.       |          |
-| Price        | Dec    | The price of the order.                        |          |
-| Quantity     | Dec    | The quantity of the order.                     |          |
-| Cid          | String | Identifier for the order specified by the user |          |
+**Orderbook**
 
-### OrderType
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/Orderbook.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">buy_levels</td><td class="type-td td_text">types.Level array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">sell_levels</td><td class="type-td td_text">types.Level array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-Any of the possible [order types](#overview-order-types)
+<br/>
 
-### Orderbook
+**Level**
 
-Structure for the orderbook.
-
-| Parameter  | Type        | Description          | Required |
-| ---------- | ----------- | -------------------- | -------- |
-| MarketId   | String      | The market ID.       |          |
-| BuyLevels  | Level Array | List of buy levels.  |          |
-| SellLevels | Level Array | List of sell levels. |          |
-
-### Level
-
-Structure for the orderbook levels.
-
-| Parameter | Type | Description                | Required |
-| --------- | ---- | -------------------------- | -------- |
-| P         | Dec  | The price of the level.    |          |
-| Q         | Dec  | The quantity of the level. |          |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/Level.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">p</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">price (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">q</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">quantity (in human readable format)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->

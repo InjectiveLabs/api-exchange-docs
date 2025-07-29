@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "recipient",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "amounts",
+    "Type": "Coin array",
+    "Description": "Amounts transferred"
+  },
+  {
+    "Parameter": "block_number",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_timestamp",
+    "Type": "string",
+    "Description": ""
+  }
+]

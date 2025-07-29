@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "unbond",
+    "Type": "UnbondingDelegation",
+    "Description": "unbond defines the unbonding information of a delegation."
+  }
+]

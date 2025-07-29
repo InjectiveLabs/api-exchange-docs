@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "market ID."
+  },
+  {
+    "Parameter": "expiration_timestamp",
+    "Type": "int64",
+    "Description": "expiration_timestamp defines the expiration time for a time expiry futures market."
+  },
+  {
+    "Parameter": "twap_start_timestamp",
+    "Type": "int64",
+    "Description": "expiration_twap_start_timestamp defines the start time of the TWAP calculation window"
+  },
+  {
+    "Parameter": "expiration_twap_start_price_cumulative",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "expiration_twap_start_price_cumulative defines the cumulative price for the start of the TWAP window (in chain format)"
+  },
+  {
+    "Parameter": "settlement_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "settlement_price defines the settlement price for a time expiry futures market (in chain format)"
+  }
+]

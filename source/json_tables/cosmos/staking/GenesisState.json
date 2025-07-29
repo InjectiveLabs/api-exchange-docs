@@ -1,0 +1,47 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines all the parameters of related to deposit."
+  },
+  {
+    "Parameter": "last_total_power",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "last_total_power tracks the total amounts of bonded tokens recorded during the previous end block."
+  },
+  {
+    "Parameter": "last_validator_powers",
+    "Type": "LastValidatorPower array",
+    "Description": "last_validator_powers is a special index that provides a historical list of the last-block's bonded validators."
+  },
+  {
+    "Parameter": "validators",
+    "Type": "Validator array",
+    "Description": "validators defines the validator set at genesis."
+  },
+  {
+    "Parameter": "delegations",
+    "Type": "Delegation array",
+    "Description": "delegations defines the delegations active at genesis."
+  },
+  {
+    "Parameter": "unbonding_delegations",
+    "Type": "UnbondingDelegation array",
+    "Description": "unbonding_delegations defines the unbonding delegations active at genesis."
+  },
+  {
+    "Parameter": "redelegations",
+    "Type": "Redelegation array",
+    "Description": "redelegations defines the redelegations active at genesis."
+  },
+  {
+    "Parameter": "exported",
+    "Type": "bool",
+    "Description": "exported defines a bool to identify whether the chain dealing with exported or initialized genesis."
+  },
+  {
+    "Parameter": "allowed_delegation_transfer_receivers",
+    "Type": "string array",
+    "Description": "allowed_delegation_transfer_receivers defines the list of addresses that are allowed to receive delegation transfers."
+  }
+]

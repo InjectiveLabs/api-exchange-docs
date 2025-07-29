@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "is_long",
+    "Type": "bool",
+    "Description": ""
+  },
+  {
+    "Parameter": "execution_quantity",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "execution_margin",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "execution_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

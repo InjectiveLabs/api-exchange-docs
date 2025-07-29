@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "campaign",
+    "Type": "Campaign",
+    "Description": "The campaign information"
+  },
+  {
+    "Parameter": "users",
+    "Type": "CampaignUser array",
+    "Description": "The campaign users"
+  },
+  {
+    "Parameter": "paging",
+    "Type": "Paging",
+    "Description": ""
+  }
+]

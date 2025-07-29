@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "order",
+    "Type": "SpotOrder",
+    "Description": "the order details",
+    "Required": "Yes"
+  }
+]

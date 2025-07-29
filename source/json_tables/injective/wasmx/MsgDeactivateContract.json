@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "Unique Identifier for contract instance to be deactivated.",
+    "Required": "Yes"
+  }
+]

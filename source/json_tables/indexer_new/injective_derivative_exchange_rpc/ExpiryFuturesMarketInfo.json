@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "expiration_timestamp",
+    "Type": "int64",
+    "Description": "Defines the expiration time for a time expiry futures market in UNIX seconds."
+  },
+  {
+    "Parameter": "settlement_price",
+    "Type": "string",
+    "Description": "Defines the settlement price for a time expiry futures market."
+  }
+]

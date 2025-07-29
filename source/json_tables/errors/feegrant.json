@@ -1,0 +1,26 @@
+[
+  {
+    "Error Code": 2,
+    "Description": "fee limit exceeded"
+  },
+  {
+    "Error Code": 3,
+    "Description": "fee allowance expired"
+  },
+  {
+    "Error Code": 4,
+    "Description": "invalid duration"
+  },
+  {
+    "Error Code": 5,
+    "Description": "no allowance"
+  },
+  {
+    "Error Code": 6,
+    "Description": "allowed messages are empty"
+  },
+  {
+    "Error Code": 7,
+    "Description": "message not allowed"
+  }
+]

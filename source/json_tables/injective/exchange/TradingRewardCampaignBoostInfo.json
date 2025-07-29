@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "boosted_spot_market_ids",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "spot_market_multipliers",
+    "Type": "PointsMultiplier array",
+    "Description": ""
+  },
+  {
+    "Parameter": "boosted_derivative_market_ids",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "derivative_market_multipliers",
+    "Type": "PointsMultiplier array",
+    "Description": ""
+  }
+]

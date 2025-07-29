@@ -1,0 +1,18 @@
+[
+  {
+    "Code": "0",
+    "Name": "PROPOSAL_EXECUTOR_RESULT_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "PROPOSAL_EXECUTOR_RESULT_NOT_RUN"
+  },
+  {
+    "Code": "2",
+    "Name": "PROPOSAL_EXECUTOR_RESULT_SUCCESS"
+  },
+  {
+    "Code": "3",
+    "Name": "PROPOSAL_EXECUTOR_RESULT_FAILURE"
+  }
+]

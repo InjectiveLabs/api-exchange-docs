@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "authority is the address that controls the module.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "send_enabled",
+    "Type": "SendEnabled array",
+    "Description": "send_enabled is the list of entries to add or update.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "use_default_for",
+    "Type": "string array",
+    "Description": "use_default_for is a list of denoms that should use the params.default_send_enabled value. Denoms listed here will have their SendEnabled entries deleted. If a denom is included that doesn't have a SendEnabled entry, it will be ignored.",
+    "Required": "Yes"
+  }
+]

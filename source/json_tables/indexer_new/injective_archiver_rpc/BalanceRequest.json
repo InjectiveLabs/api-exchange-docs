@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "account",
+    "Type": "string",
+    "Description": "Account address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "resolution",
+    "Type": "string",
+    "Description": "Symbol resolution. Possible resolutions are 1D,1W,1M",
+    "Required": "Yes"
+  }
+]

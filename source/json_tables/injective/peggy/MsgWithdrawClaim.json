@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "event_nonce",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "block_height",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "batch_nonce",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token_contract",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "orchestrator",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

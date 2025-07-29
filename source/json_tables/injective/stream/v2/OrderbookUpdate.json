@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "seq",
+    "Type": "uint64",
+    "Description": "the sequence number of the orderbook update"
+  },
+  {
+    "Parameter": "orderbook",
+    "Type": "Orderbook",
+    "Description": "the orderbook details"
+  }
+]

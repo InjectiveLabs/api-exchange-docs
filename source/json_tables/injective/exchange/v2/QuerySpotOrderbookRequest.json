@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID for the market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "uint64",
+    "Description": "the maximum number of orderbook entries to return per side (optional)",
+    "Required": "No"
+  },
+  {
+    "Parameter": "order_side",
+    "Type": "OrderSide",
+    "Description": "the order side to return the orderbook entries for (optional)",
+    "Required": "No"
+  },
+  {
+    "Parameter": "limit_cumulative_notional",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "limits the number of entries to return per side based on the cumulative notional (in human readable format)",
+    "Required": "No"
+  },
+  {
+    "Parameter": "limit_cumulative_quantity",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "limits the number of entries to return per side based on the cumulative quantity (in human readable format)",
+    "Required": "No"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "message sender, that is also the TX signer",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proposal",
+    "Type": "ExchangeEnableProposal",
+    "Description": "",
+    "Required": "No"
+  }
+]

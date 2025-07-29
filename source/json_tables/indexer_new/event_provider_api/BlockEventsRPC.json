@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "types",
+    "Type": "string array",
+    "Description": "Array of event types"
+  },
+  {
+    "Parameter": "events",
+    "Type": "][byte array",
+    "Description": "Array of parsed events"
+  },
+  {
+    "Parameter": "tx_hashes",
+    "Type": "map[int32][]byte",
+    "Description": "Map of event index - tx hash"
+  }
+]

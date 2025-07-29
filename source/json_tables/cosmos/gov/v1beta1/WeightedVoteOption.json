@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "option",
+    "Type": "VoteOption",
+    "Description": "option defines the valid vote options, it must not contain duplicate vote options."
+  },
+  {
+    "Parameter": "weight",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "weight is the vote weight associated with the vote option."
+  }
+]

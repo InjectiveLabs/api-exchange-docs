@@ -1,0 +1,92 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "initial_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "initial_margin_ratio defines the initial margin ratio for the derivative market"
+  },
+  {
+    "Parameter": "maintenance_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "maintenance_margin_ratio defines the maintenance margin ratio for the derivative market"
+  },
+  {
+    "Parameter": "maker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "maker_fee_rate defines the exchange trade fee for makers for the derivative market"
+  },
+  {
+    "Parameter": "taker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "taker_fee_rate defines the exchange trade fee for takers for the derivative market"
+  },
+  {
+    "Parameter": "relayer_fee_share_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "relayer_fee_share_rate defines the relayer fee share rate for the derivative market"
+  },
+  {
+    "Parameter": "min_price_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "min_price_tick_size defines the minimum tick size of the order's price and margin"
+  },
+  {
+    "Parameter": "min_quantity_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "min_quantity_tick_size defines the minimum tick size of the order's quantity"
+  },
+  {
+    "Parameter": "HourlyInterestRate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "hourly_interest_rate defines the hourly interest rate"
+  },
+  {
+    "Parameter": "HourlyFundingRateCap",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "hourly_funding_rate_cap defines the maximum absolute value of the hourly funding rate"
+  },
+  {
+    "Parameter": "status",
+    "Type": "MarketStatus",
+    "Description": ""
+  },
+  {
+    "Parameter": "oracle_params",
+    "Type": "OracleParams",
+    "Description": ""
+  },
+  {
+    "Parameter": "ticker",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "min_notional",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "min_notional defines the minimum notional (in quote asset) required for orders in the market"
+  },
+  {
+    "Parameter": "admin_info",
+    "Type": "AdminInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "reduce_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "reduce_margin_ratio defines the ratio of the margin that is reduced"
+  }
+]

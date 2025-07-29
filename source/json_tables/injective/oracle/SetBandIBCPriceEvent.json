@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "relayer",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "symbols",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "prices",
+    "Type": "cosmossdk_io_math.LegacyDec array",
+    "Description": ""
+  },
+  {
+    "Parameter": "resolve_time",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "request_id",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "client_id",
+    "Type": "int64",
+    "Description": ""
+  }
+]

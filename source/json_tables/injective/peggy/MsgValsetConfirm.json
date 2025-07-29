@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "nonce",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "orchestrator",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "eth_address",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "signature",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

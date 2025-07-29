@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "dec",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

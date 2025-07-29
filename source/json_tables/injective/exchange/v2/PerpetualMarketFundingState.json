@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "funding",
+    "Type": "PerpetualMarketFunding",
+    "Description": ""
+  }
+]

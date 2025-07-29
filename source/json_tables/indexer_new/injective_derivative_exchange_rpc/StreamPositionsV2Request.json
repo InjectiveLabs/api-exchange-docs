@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "SubaccountId of the trader we want to get the positions from",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Backward compat single market ID of position we want to stream",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_ids",
+    "Type": "string array",
+    "Description": "List of market IDs of the positions we want to stream",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "subaccount_ids",
+    "Type": "string array",
+    "Description": "Subaccount ids of traders we want to get positions",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "filter by account address",
+    "Required": "Yes"
+  }
+]

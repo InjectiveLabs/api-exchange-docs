@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "asset_pairs",
+    "Type": "AssetPair array",
+    "Description": "",
+    "Required": "No"
+  }
+]

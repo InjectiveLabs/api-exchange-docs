@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "type",
+    "Type": "string",
+    "Description": "type of portfolio entry"
+  },
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "denom of portfolio entry"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "string",
+    "Description": "amount of portfolio entry"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "subaccount id of portfolio entry"
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "int64",
+    "Description": "Operation timestamp in UNIX millis."
+  }
+]

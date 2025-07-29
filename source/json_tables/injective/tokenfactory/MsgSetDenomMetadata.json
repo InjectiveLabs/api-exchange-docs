@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "metadata",
+    "Type": "types1.Metadata",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "admin_burn_disabled",
+    "Type": "MsgSetDenomMetadata_AdminBurnDisabled",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "should_disable",
+    "Type": "bool",
+    "Description": "true if the admin burn capability should be disabled",
+    "Required": "Yes"
+  }
+]

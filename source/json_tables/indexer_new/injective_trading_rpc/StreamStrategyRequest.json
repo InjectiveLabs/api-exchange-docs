@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "account_addresses",
+    "Type": "string array",
+    "Description": "Account addresses",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "MarketId of the trading strategy",
+    "Required": "Yes"
+  }
+]

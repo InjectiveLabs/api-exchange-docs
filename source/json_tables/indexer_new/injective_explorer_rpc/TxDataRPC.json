@@ -1,0 +1,52 @@
+[
+  {
+    "Parameter": "id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_number",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_timestamp",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "hash",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "codespace",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "messages",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "tx_number",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "error_log",
+    "Type": "string",
+    "Description": "Transaction log indicating errors"
+  },
+  {
+    "Parameter": "code",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "claim_ids",
+    "Type": "int64 array",
+    "Description": "peggy bridge claim id, non-zero if tx contains MsgDepositClaim"
+  }
+]

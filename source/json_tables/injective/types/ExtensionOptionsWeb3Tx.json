@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "typedDataChainID",
+    "Type": "uint64",
+    "Description": "typedDataChainID used only in EIP712 Domain and should match Ethereum network ID in a Web3 provider (e.g. Metamask)."
+  },
+  {
+    "Parameter": "feePayer",
+    "Type": "string",
+    "Description": "feePayer is an account address for the fee payer. It will be validated during EIP712 signature checking."
+  },
+  {
+    "Parameter": "feePayerSig",
+    "Type": "byte array",
+    "Description": "feePayerSig is a signature data from the fee paying account, allows to perform fee delegation when using EIP712 Domain."
+  }
+]

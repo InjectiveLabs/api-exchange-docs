@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "link_denom",
+    "Type": "string",
+    "Description": "Native denom for LINK coin in the bank keeper"
+  },
+  {
+    "Parameter": "payout_block_interval",
+    "Type": "uint64",
+    "Description": "The block number interval at which payouts are made"
+  },
+  {
+    "Parameter": "module_admin",
+    "Type": "string",
+    "Description": "The admin for the OCR module"
+  }
+]

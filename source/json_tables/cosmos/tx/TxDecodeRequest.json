@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "tx_bytes",
+    "Type": "byte array",
+    "Description": "tx_bytes is the raw transaction.",
+    "Required": "Yes"
+  }
+]

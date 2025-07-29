@@ -11,21 +11,22 @@ Get a list of subaccounts for a specific address.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/3_SubaccountsList.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/3_SubaccountsList.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/accounts_rpc/3_SubaccountsList.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/accounts_rpc/3_SubaccountsList.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     account_address = "inj1clw20s2uxeyxtam6f7m84vgae92s9eh7vygagt"
     subacc_list = await client.fetch_subaccounts_list(account_address)
-    print(subacc_list)
+    print(json.dumps(subacc_list, indent=2))
 
 
 if __name__ == "__main__":
@@ -33,8 +34,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/3_SubaccountsList/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/3_SubaccountsList/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/accounts/3_SubaccountsList/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/accounts/3_SubaccountsList/example.go -->
 ```go
 package main
 
@@ -61,7 +62,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -109,19 +110,20 @@ Get the subaccount's transfer history.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/5_SubaccountHistory.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/5_SubaccountHistory.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/accounts_rpc/5_SubaccountHistory.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/accounts_rpc/5_SubaccountHistory.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.client.model.pagination import PaginationOption
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     subaccount = "0xaf79152ac5df276d9a8e1e2e22822f9713474902000000000000000000000000"
     denom = "inj"
     transfer_types = ["withdraw", "deposit"]
@@ -135,7 +137,7 @@ async def main() -> None:
         transfer_types=transfer_types,
         pagination=pagination,
     )
-    print(subacc_history)
+    print(json.dumps(subacc_history, indent=2))
 
 
 if __name__ == "__main__":
@@ -143,8 +145,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/5_SubaccountHistory/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/5_SubaccountHistory/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/accounts/5_SubaccountHistory/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/accounts/5_SubaccountHistory/example.go -->
 ```go
 package main
 
@@ -185,7 +187,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -328,22 +330,23 @@ Get the balance of a subaccount for a specific denom.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/2_SubaccountBalance.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/2_SubaccountBalance.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/accounts_rpc/2_SubaccountBalance.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/accounts_rpc/2_SubaccountBalance.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     subaccount_id = "0xaf79152ac5df276d9a8e1e2e22822f9713474902000000000000000000000000"
     denom = "inj"
     balance = await client.fetch_subaccount_balance(subaccount_id=subaccount_id, denom=denom)
-    print(balance)
+    print(json.dumps(balance, indent=2))
 
 
 if __name__ == "__main__":
@@ -351,8 +354,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/2_SubaccountBalance/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/2_SubaccountBalance/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/accounts/2_SubaccountBalance/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/accounts/2_SubaccountBalance/example.go -->
 ```go
 package main
 
@@ -380,7 +383,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -458,22 +461,23 @@ List the subaccount's balances for all denoms.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/4_SubaccountBalancesList.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/4_SubaccountBalancesList.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/accounts_rpc/4_SubaccountBalancesList.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/accounts_rpc/4_SubaccountBalancesList.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     subaccount = "0xaf79152ac5df276d9a8e1e2e22822f9713474902000000000000000000000000"
     denoms = ["inj", "peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5"]
     subacc_balances_list = await client.fetch_subaccount_balances_list(subaccount_id=subaccount, denoms=denoms)
-    print(subacc_balances_list)
+    print(json.dumps(subacc_balances_list, indent=2))
 
 
 if __name__ == "__main__":
@@ -481,8 +485,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/4_SubaccountBalancesList/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/4_SubaccountBalancesList/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/accounts/4_SubaccountBalancesList/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/accounts/4_SubaccountBalancesList/example.go -->
 ```go
 package main
 
@@ -509,7 +513,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -618,25 +622,26 @@ Get a summary of the subaccount's active/unfilled orders.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/6_SubaccountOrderSummary.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/6_SubaccountOrderSummary.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/accounts_rpc/6_SubaccountOrderSummary.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/accounts_rpc/6_SubaccountOrderSummary.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     subaccount = "0xaf79152ac5df276d9a8e1e2e22822f9713474902000000000000000000000000"
     order_direction = "buy"
     market_id = "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
     subacc_order_summary = await client.fetch_subaccount_order_summary(
         subaccount_id=subaccount, order_direction=order_direction, market_id=market_id
     )
-    print(subacc_order_summary)
+    print(json.dumps(subacc_order_summary, indent=2))
 
 
 if __name__ == "__main__":
@@ -644,8 +649,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/6_SubaccountOrderSummary/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/6_SubaccountOrderSummary/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/accounts/6_SubaccountOrderSummary/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/accounts/6_SubaccountOrderSummary/example.go -->
 ```go
 package main
 
@@ -725,16 +730,16 @@ Stream the subaccount's balance for all denoms.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/1_StreamSubaccountBalance.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/1_StreamSubaccountBalance.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/accounts_rpc/1_StreamSubaccountBalance.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/accounts_rpc/1_StreamSubaccountBalance.py -->
 ```py
 import asyncio
 from typing import Any, Dict
 
 from grpc import RpcError
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def balance_event_processor(event: Dict[str, Any]):
@@ -751,7 +756,7 @@ def stream_closed_processor():
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     subaccount_id = "0xc7dca7c15c364865f77a4fb67ab11dc95502e6fe000000000000000000000001"
     denoms = ["inj", "peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5"]
     task = asyncio.get_event_loop().create_task(
@@ -773,8 +778,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/1_StreamSubaccountBalance/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/1_StreamSubaccountBalance/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/accounts/1_StreamSubaccountBalance/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/accounts/1_StreamSubaccountBalance/example.go -->
 ```go
 package main
 
@@ -812,7 +817,7 @@ func main() {
 				fmt.Println(err)
 				return
 			}
-			str, _ := json.MarshalIndent(res, "", " ")
+			str, _ := json.MarshalIndent(res, "", "\t")
 			fmt.Print(string(str))
 		}
 	}
@@ -918,18 +923,19 @@ Get orders with an order hash. This request will return market orders and limit 
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/7_OrderStates.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/7_OrderStates.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/accounts_rpc/7_OrderStates.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/accounts_rpc/7_OrderStates.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     spot_order_hashes = [
         "0xce0d9b701f77cd6ddfda5dd3a4fe7b2d53ba83e5d6c054fb2e9e886200b7b7bb",
         "0x2e2245b5431638d76c6e0cc6268970418a1b1b7df60a8e94b8cf37eae6105542",
@@ -941,7 +947,7 @@ async def main() -> None:
     orders = await client.fetch_order_states(
         spot_order_hashes=spot_order_hashes, derivative_order_hashes=derivative_order_hashes
     )
-    print(orders)
+    print(json.dumps(orders, indent=2))
 
 
 if __name__ == "__main__":
@@ -949,8 +955,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/7_OrderStates/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/7_OrderStates/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/accounts/7_OrderStates/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/accounts/7_OrderStates/example.go -->
 ```go
 package main
 
@@ -985,7 +991,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -1101,21 +1107,22 @@ Get an overview of your portfolio.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/8_Portfolio.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/8_Portfolio.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/accounts_rpc/8_Portfolio.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/accounts_rpc/8_Portfolio.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     account_address = "inj14au322k9munkmx5wrchz9q30juf5wjgz2cfqku"
     portfolio = await client.fetch_portfolio(account_address=account_address)
-    print(portfolio)
+    print(json.dumps(portfolio, indent=2))
 
 
 if __name__ == "__main__":
@@ -1123,8 +1130,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/8_Portfolio/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/8_Portfolio/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/accounts/8_Portfolio/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/accounts/8_Portfolio/example.go -->
 ```go
 package main
 
@@ -1151,7 +1158,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```
@@ -1307,22 +1314,23 @@ Get the rewards for Trade & Earn, the request will fetch all addresses for the l
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/9_Rewards.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/master/examples/exchange_client/accounts_rpc/9_Rewards.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/accounts_rpc/9_Rewards.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/accounts_rpc/9_Rewards.py -->
 ```py
 import asyncio
+import json
 
-from pyinjective.async_client import AsyncClient
 from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
 
 
 async def main() -> None:
     network = Network.testnet()
-    client = AsyncClient(network)
+    client = IndexerClient(network)
     account_address = "inj14au322k9munkmx5wrchz9q30juf5wjgz2cfqku"
     epoch = -1
     rewards = await client.fetch_rewards(account_address=account_address, epoch=epoch)
-    print(rewards)
+    print(json.dumps(rewards, indent=2))
 
 
 if __name__ == "__main__":
@@ -1330,8 +1338,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/9_Rewards/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/master/examples/exchange/accounts/9_Rewards/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/accounts/9_Rewards/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/accounts/9_Rewards/example.go -->
 ```go
 package main
 
@@ -1366,7 +1374,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	str, _ := json.MarshalIndent(res, "", " ")
+	str, _ := json.MarshalIndent(res, "", "\t")
 	fmt.Print(string(str))
 }
 ```

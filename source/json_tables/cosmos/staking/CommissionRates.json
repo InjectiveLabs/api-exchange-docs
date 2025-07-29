@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "rate is the commission rate charged to delegators, as a fraction."
+  },
+  {
+    "Parameter": "max_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "max_rate defines the maximum commission rate which validator can ever charge, as a fraction."
+  },
+  {
+    "Parameter": "max_change_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "max_change_rate defines the maximum daily increase of the validator commission, as a fraction."
+  }
+]

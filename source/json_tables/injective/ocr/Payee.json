@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "transmitter_addr",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "payment_addr",
+    "Type": "string",
+    "Description": ""
+  }
+]

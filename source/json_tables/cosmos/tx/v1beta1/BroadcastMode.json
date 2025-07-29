@@ -1,0 +1,18 @@
+[
+  {
+    "Code": "0",
+    "Name": "BROADCAST_MODE_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "BROADCAST_MODE_BLOCK"
+  },
+  {
+    "Code": "2",
+    "Name": "BROADCAST_MODE_SYNC"
+  },
+  {
+    "Code": "3",
+    "Name": "BROADCAST_MODE_ASYNC"
+  }
+]

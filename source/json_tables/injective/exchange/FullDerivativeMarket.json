@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "market",
+    "Type": "DerivativeMarket",
+    "Description": "derivative market details"
+  },
+  {
+    "Parameter": "mark_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "mark price (in chain format)"
+  },
+  {
+    "Parameter": "mid_price_and_tob",
+    "Type": "MidPriceAndTOB",
+    "Description": "mid_price_and_tob defines the mid price for this market and the best ask and bid orders"
+  },
+  {
+    "Parameter": "perpetual_info",
+    "Type": "PerpetualMarketState",
+    "Description": ""
+  },
+  {
+    "Parameter": "futures_info",
+    "Type": "ExpiryFuturesMarketInfo",
+    "Description": ""
+  }
+]

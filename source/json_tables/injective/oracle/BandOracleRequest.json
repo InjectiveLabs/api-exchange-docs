@@ -1,0 +1,56 @@
+[
+  {
+    "Parameter": "request_id",
+    "Type": "uint64",
+    "Description": "Unique Identifier for band ibc oracle request",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "oracle_script_id",
+    "Type": "int64",
+    "Description": "OracleScriptID is the unique identifier of the oracle script to be executed.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "symbols",
+    "Type": "string array",
+    "Description": "Symbols is the list of symbols to prepare in the calldata",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "ask_count",
+    "Type": "uint64",
+    "Description": "AskCount is the number of validators that are requested to respond to this oracle request. Higher value means more security, at a higher gas cost.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "min_count",
+    "Type": "uint64",
+    "Description": "MinCount is the minimum number of validators necessary for the request to proceed to the execution phase. Higher value means more security, at the cost of liveness.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "fee_limit",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "FeeLimit is the maximum tokens that will be paid to all data source providers.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "prepare_gas",
+    "Type": "uint64",
+    "Description": "PrepareGas is amount of gas to pay to prepare raw requests",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "execute_gas",
+    "Type": "uint64",
+    "Description": "ExecuteGas is amount of gas to reserve for executing",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "min_source_count",
+    "Type": "uint64",
+    "Description": "MinSourceCount is the minimum number of data sources that must be used by each validator",
+    "Required": "Yes"
+  }
+]

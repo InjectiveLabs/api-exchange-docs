@@ -1,0 +1,50 @@
+[
+  {
+    "Error Code": 1,
+    "Description": "insurance fund already exists"
+  },
+  {
+    "Error Code": 2,
+    "Description": "insurance fund not found"
+  },
+  {
+    "Error Code": 3,
+    "Description": "redemption already exists"
+  },
+  {
+    "Error Code": 4,
+    "Description": "invalid deposit amount"
+  },
+  {
+    "Error Code": 5,
+    "Description": "invalid deposit denom"
+  },
+  {
+    "Error Code": 6,
+    "Description": "insurance payout exceeds deposits"
+  },
+  {
+    "Error Code": 7,
+    "Description": "invalid ticker"
+  },
+  {
+    "Error Code": 8,
+    "Description": "invalid quote denom"
+  },
+  {
+    "Error Code": 9,
+    "Description": "invalid oracle"
+  },
+  {
+    "Error Code": 10,
+    "Description": "invalid expiration time"
+  },
+  {
+    "Error Code": 11,
+    "Description": "invalid marketID"
+  },
+  {
+    "Error Code": 12,
+    "Description": "invalid share denom"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "proposal_id",
+    "Type": "uint64",
+    "Description": "proposal_id defines the unique id of the proposal."
+  },
+  {
+    "Parameter": "canceled_time",
+    "Type": "time.Time",
+    "Description": "canceled_time is the time when proposal is canceled."
+  },
+  {
+    "Parameter": "canceled_height",
+    "Type": "uint64",
+    "Description": "canceled_height defines the block height at which the proposal is canceled."
+  }
+]

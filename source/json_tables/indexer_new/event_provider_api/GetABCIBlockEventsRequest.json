@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "event_types",
+    "Type": "string array",
+    "Description": "Array of event types",
+    "Required": "Yes"
+  }
+]

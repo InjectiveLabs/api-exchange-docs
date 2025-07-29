@@ -1,0 +1,72 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "spot_market_param_update_proposals",
+    "Type": "SpotMarketParamUpdateProposal array",
+    "Description": ""
+  },
+  {
+    "Parameter": "derivative_market_param_update_proposals",
+    "Type": "DerivativeMarketParamUpdateProposal array",
+    "Description": ""
+  },
+  {
+    "Parameter": "spot_market_launch_proposals",
+    "Type": "SpotMarketLaunchProposal array",
+    "Description": ""
+  },
+  {
+    "Parameter": "perpetual_market_launch_proposals",
+    "Type": "PerpetualMarketLaunchProposal array",
+    "Description": ""
+  },
+  {
+    "Parameter": "expiry_futures_market_launch_proposals",
+    "Type": "ExpiryFuturesMarketLaunchProposal array",
+    "Description": ""
+  },
+  {
+    "Parameter": "trading_reward_campaign_update_proposal",
+    "Type": "TradingRewardCampaignUpdateProposal",
+    "Description": ""
+  },
+  {
+    "Parameter": "binary_options_market_launch_proposals",
+    "Type": "BinaryOptionsMarketLaunchProposal array",
+    "Description": ""
+  },
+  {
+    "Parameter": "binary_options_param_update_proposals",
+    "Type": "BinaryOptionsMarketParamUpdateProposal array",
+    "Description": ""
+  },
+  {
+    "Parameter": "denom_decimals_update_proposal",
+    "Type": "UpdateDenomDecimalsProposal",
+    "Description": ""
+  },
+  {
+    "Parameter": "fee_discount_proposal",
+    "Type": "FeeDiscountProposal",
+    "Description": ""
+  },
+  {
+    "Parameter": "market_forced_settlement_proposals",
+    "Type": "MarketForcedSettlementProposal array",
+    "Description": ""
+  },
+  {
+    "Parameter": "denom_min_notional_proposal",
+    "Type": "DenomMinNotionalProposal",
+    "Description": ""
+  }
+]

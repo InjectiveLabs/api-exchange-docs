@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines all the parameters of related to wasmx."
+  },
+  {
+    "Parameter": "registered_contracts",
+    "Type": "RegisteredContractWithAddress array",
+    "Description": "registered_contracts is an array containing the genesis registered contracts"
+  }
+]

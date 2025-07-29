@@ -1,0 +1,18 @@
+[
+  {
+    "Code": "0",
+    "Name": "LEVEL_NONE_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "LEVEL_SOME_MSGS"
+  },
+  {
+    "Code": "2",
+    "Name": "LEVEL_ALL_MSGS"
+  },
+  {
+    "Code": "3",
+    "Name": "LEVEL_SUPER_ADMIN"
+  }
+]

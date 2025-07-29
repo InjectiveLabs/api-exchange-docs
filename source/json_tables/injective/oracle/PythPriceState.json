@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "price_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "ema_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "ema_conf",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "conf",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "publish_time",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "price_state",
+    "Type": "PriceState",
+    "Description": ""
+  }
+]

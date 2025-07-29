@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "relayer",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "base",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "quote",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "price defines the price of the oracle base and quote"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "position_delta",
+    "Type": "PositionDelta",
+    "Description": ""
+  },
+  {
+    "Parameter": "payout",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "fee",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "order_hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "fee_recipient_address",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "pnl",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

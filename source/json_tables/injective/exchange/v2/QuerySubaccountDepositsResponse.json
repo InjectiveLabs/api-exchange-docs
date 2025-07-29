@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "deposits",
+    "Type": "map[string]Deposit",
+    "Description": ""
+  }
+]

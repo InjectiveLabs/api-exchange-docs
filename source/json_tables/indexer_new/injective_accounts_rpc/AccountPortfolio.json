@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "portfolio_value",
+    "Type": "string",
+    "Description": "The account's portfolio value in USD."
+  },
+  {
+    "Parameter": "available_balance",
+    "Type": "string",
+    "Description": "The account's available balance value in USD."
+  },
+  {
+    "Parameter": "locked_balance",
+    "Type": "string",
+    "Description": "The account's locked balance value in USD."
+  },
+  {
+    "Parameter": "unrealized_pnl",
+    "Type": "string",
+    "Description": "The account's total unrealized PnL value in USD."
+  },
+  {
+    "Parameter": "subaccounts",
+    "Type": "SubaccountPortfolio array",
+    "Description": "List of all subaccounts' portfolio"
+  }
+]

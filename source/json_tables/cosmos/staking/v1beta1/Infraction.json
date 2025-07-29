@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "INFRACTION_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "INFRACTION_DOUBLE_SIGN"
+  },
+  {
+    "Code": "2",
+    "Name": "INFRACTION_DOWNTIME"
+  }
+]

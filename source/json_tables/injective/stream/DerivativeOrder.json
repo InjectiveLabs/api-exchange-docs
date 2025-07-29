@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "the market ID"
+  },
+  {
+    "Parameter": "order",
+    "Type": "types.DerivativeLimitOrder",
+    "Description": "the derivative order details"
+  },
+  {
+    "Parameter": "is_market",
+    "Type": "bool",
+    "Description": "whether the order is a market order"
+  }
+]

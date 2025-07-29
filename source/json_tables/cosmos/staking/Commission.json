@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "commission_rates",
+    "Type": "CommissionRates",
+    "Description": "commission_rates defines the initial commission rates to be used for creating a validator."
+  },
+  {
+    "Parameter": "update_time",
+    "Type": "time.Time",
+    "Description": "update_time is the last time the commission rate was changed."
+  }
+]

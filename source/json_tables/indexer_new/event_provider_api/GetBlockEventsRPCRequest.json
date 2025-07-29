@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "backend",
+    "Type": "string",
+    "Description": "Select backend processor",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "height",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "human_readable",
+    "Type": "bool",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

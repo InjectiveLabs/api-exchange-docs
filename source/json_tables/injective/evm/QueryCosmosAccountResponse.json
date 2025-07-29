@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "cosmos_address",
+    "Type": "string",
+    "Description": "cosmos_address is the cosmos address of the account."
+  },
+  {
+    "Parameter": "sequence",
+    "Type": "uint64",
+    "Description": "sequence is the account's sequence number."
+  },
+  {
+    "Parameter": "account_number",
+    "Type": "uint64",
+    "Description": "account_number is the account number"
+  }
+]

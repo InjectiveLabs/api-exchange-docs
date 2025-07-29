@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "price_attestations",
+    "Type": "PriceAttestation array",
+    "Description": "",
+    "Required": "No"
+  }
+]

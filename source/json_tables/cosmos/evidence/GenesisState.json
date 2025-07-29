@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "evidence",
+    "Type": "types.Any array",
+    "Description": "evidence defines all the evidence at genesis."
+  }
+]

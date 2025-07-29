@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "accounts",
+    "Type": "GenesisAccount array",
+    "Description": "accounts is an array containing the ethereum genesis accounts."
+  },
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines all the parameters of the module."
+  }
+]

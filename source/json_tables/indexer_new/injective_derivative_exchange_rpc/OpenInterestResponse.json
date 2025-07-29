@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "open_interests",
+    "Type": "MarketOpenInterest array",
+    "Description": "Open interest of the markets"
+  }
+]

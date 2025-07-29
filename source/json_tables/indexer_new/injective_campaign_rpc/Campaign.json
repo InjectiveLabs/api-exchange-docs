@@ -1,0 +1,82 @@
+[
+  {
+    "Parameter": "campaign_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "MarketId of the trading strategy"
+  },
+  {
+    "Parameter": "total_score",
+    "Type": "string",
+    "Description": "Total campaign score"
+  },
+  {
+    "Parameter": "last_updated",
+    "Type": "int64",
+    "Description": "Last time the campaign score has been updated."
+  },
+  {
+    "Parameter": "start_date",
+    "Type": "int64",
+    "Description": "Campaign start date in UNIX millis."
+  },
+  {
+    "Parameter": "end_date",
+    "Type": "int64",
+    "Description": "Campaign end date in UNIX millis."
+  },
+  {
+    "Parameter": "is_claimable",
+    "Type": "bool",
+    "Description": "Whether the campaign rewards can be claimed."
+  },
+  {
+    "Parameter": "round_id",
+    "Type": "int32",
+    "Description": "Campaigns round ID"
+  },
+  {
+    "Parameter": "manager_contract",
+    "Type": "string",
+    "Description": "Contract address that controls this campaign"
+  },
+  {
+    "Parameter": "rewards",
+    "Type": "Coin array",
+    "Description": "Reward tokens of this campaign"
+  },
+  {
+    "Parameter": "user_score",
+    "Type": "string",
+    "Description": "Total user score if accountAddress is passed, this is useful to estimate account's reward"
+  },
+  {
+    "Parameter": "user_claimed",
+    "Type": "bool",
+    "Description": "Return true if user claimed the reward of this campaign"
+  },
+  {
+    "Parameter": "subaccount_id_suffix",
+    "Type": "string",
+    "Description": "Suffix of the subaccount that eligible for volume score"
+  },
+  {
+    "Parameter": "reward_contract",
+    "Type": "string",
+    "Description": "Contract that manage users reward"
+  },
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": "Version of reward contract, UI use this to determine the message that need to be sent"
+  },
+  {
+    "Parameter": "type",
+    "Type": "string",
+    "Description": "Campaign type"
+  }
+]

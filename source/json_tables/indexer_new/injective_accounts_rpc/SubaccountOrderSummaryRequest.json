@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "SubaccountId of the trader we want to get the summary from",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "MarketId is limiting order summary to specific market only",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "order_direction",
+    "Type": "string",
+    "Description": "Filter by direction of the orders",
+    "Required": "Yes"
+  }
+]

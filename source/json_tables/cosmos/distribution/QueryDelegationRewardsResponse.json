@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "rewards",
+    "Type": "github_com_cosmos_cosmos_sdk_types.DecCoins",
+    "Description": "rewards defines the rewards accrued by a delegation."
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "Can be empty for no admin, or a valid injective address"
+  },
+  {
+    "Parameter": "admin_burn_allowed",
+    "Type": "bool",
+    "Description": "true if the admin can burn tokens from other addresses"
+  }
+]

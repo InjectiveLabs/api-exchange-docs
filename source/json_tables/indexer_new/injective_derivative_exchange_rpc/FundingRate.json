@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Derivative Market ID"
+  },
+  {
+    "Parameter": "rate",
+    "Type": "string",
+    "Description": "Value of the funding rate"
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "int64",
+    "Description": "Timestamp of funding rate in UNIX millis"
+  }
+]

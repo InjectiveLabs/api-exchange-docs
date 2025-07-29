@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "validators",
+    "Type": "Validator array",
+    "Description": "validators contains all the queried validators."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
+  }
+]

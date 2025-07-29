@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "role",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

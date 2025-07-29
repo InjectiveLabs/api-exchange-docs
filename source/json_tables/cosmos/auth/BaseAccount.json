@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "pub_key",
+    "Type": "types.Any",
+    "Description": ""
+  },
+  {
+    "Parameter": "account_number",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "sequence",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

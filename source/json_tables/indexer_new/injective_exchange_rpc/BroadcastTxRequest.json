@@ -1,0 +1,50 @@
+[
+  {
+    "Parameter": "chain_id",
+    "Type": "uint64",
+    "Description": "Specify Web3 chainID (from prepateTx) for the target Tx",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "tx",
+    "Type": "byte array",
+    "Description": "Amino-encoded Tx JSON data (except Msgs)",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "msgs",
+    "Type": "][byte array",
+    "Description": "List of Cosmos proto3-encoded Msgs from tx",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pub_key",
+    "Type": "CosmosPubKey",
+    "Description": "Specify ethsecp256k1 pubkey of the signer",
+    "Required": "No"
+  },
+  {
+    "Parameter": "signature",
+    "Type": "string",
+    "Description": "Hex-encoded ethsecp256k1 signature bytes",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "fee_payer",
+    "Type": "string",
+    "Description": "Fee payer address provided by service",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "fee_payer_sig",
+    "Type": "string",
+    "Description": "Hex-encoded ethsecp256k1 signature bytes from fee payer",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "mode",
+    "Type": "string",
+    "Description": "Broadcast mode",
+    "Required": "Yes"
+  }
+]

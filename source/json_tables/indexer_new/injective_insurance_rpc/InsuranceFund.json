@@ -1,0 +1,62 @@
+[
+  {
+    "Parameter": "market_ticker",
+    "Type": "string",
+    "Description": "Ticker of the derivative market."
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Derivative Market ID"
+  },
+  {
+    "Parameter": "deposit_denom",
+    "Type": "string",
+    "Description": "Coin denom used for the underwriting of the insurance fund."
+  },
+  {
+    "Parameter": "pool_token_denom",
+    "Type": "string",
+    "Description": "Pool token denom"
+  },
+  {
+    "Parameter": "redemption_notice_period_duration",
+    "Type": "int64",
+    "Description": "Redemption notice period duration in seconds."
+  },
+  {
+    "Parameter": "balance",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "total_share",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "oracle_base",
+    "Type": "string",
+    "Description": "Oracle base currency"
+  },
+  {
+    "Parameter": "oracle_quote",
+    "Type": "string",
+    "Description": "Oracle quote currency"
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "string",
+    "Description": "Oracle Type"
+  },
+  {
+    "Parameter": "expiry",
+    "Type": "int64",
+    "Description": "Defines the expiry, if any"
+  },
+  {
+    "Parameter": "deposit_token_meta",
+    "Type": "TokenMeta",
+    "Description": "Token metadata for the deposit asset"
+  }
+]

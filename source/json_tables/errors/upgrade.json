@@ -1,0 +1,22 @@
+[
+  {
+    "Error Code": 2,
+    "Description": "module version not found"
+  },
+  {
+    "Error Code": 3,
+    "Description": "upgrade plan not found"
+  },
+  {
+    "Error Code": 4,
+    "Description": "upgraded client not found"
+  },
+  {
+    "Error Code": 5,
+    "Description": "upgraded consensus state not found"
+  },
+  {
+    "Error Code": 6,
+    "Description": "expected authority account as only signer for proposal message"
+  }
+]

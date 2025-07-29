@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "market_id represents the unique ID of the market"
+  },
+  {
+    "Parameter": "isBuy",
+    "Type": "bool",
+    "Description": ""
+  }
+]

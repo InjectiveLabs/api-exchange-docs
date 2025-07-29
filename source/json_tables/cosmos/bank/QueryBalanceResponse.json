@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "balance",
+    "Type": "types.Coin",
+    "Description": "balance is the balance of the coin."
+  }
+]

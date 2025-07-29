@@ -1,0 +1,50 @@
+[
+  {
+    "Parameter": "event_nonce",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "block_height",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token_contract",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "ethereum_sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "cosmos_receiver",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "orchestrator",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "data",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

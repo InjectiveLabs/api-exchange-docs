@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID for the market",
+    "Required": "Yes"
+  }
+]

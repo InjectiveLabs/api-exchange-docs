@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "transfers_in_batches",
+    "Type": "OutgoingTransferTx array",
+    "Description": ""
+  },
+  {
+    "Parameter": "unbatched_transfers",
+    "Type": "OutgoingTransferTx array",
+    "Description": ""
+  }
+]

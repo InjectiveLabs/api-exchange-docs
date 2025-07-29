@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "order_hash",
+    "Type": "string",
+    "Description": "the order hash"
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "the client order ID"
+  }
+]

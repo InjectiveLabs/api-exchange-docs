@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "invitee_address",
+    "Type": "string",
+    "Description": "Address of the invitee",
+    "Required": "Yes"
+  }
+]

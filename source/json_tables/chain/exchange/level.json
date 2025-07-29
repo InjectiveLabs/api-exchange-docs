@@ -1,4 +1,4 @@
 [
-    {"Parameter": "p", "Type": "Decimal", "Description": "Price"},
-    {"Parameter": "q", "Type": "Decimal", "Description": "Quantity"}
+    {"Parameter": "p", "Type": "Decimal", "Description": "Price (in human redable format)"},
+    {"Parameter": "q", "Type": "Decimal", "Description": "Quantity (in human redable format)"}
 ]

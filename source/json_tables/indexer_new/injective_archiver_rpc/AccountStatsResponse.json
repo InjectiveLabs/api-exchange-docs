@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "account",
+    "Type": "string",
+    "Description": "Account address"
+  },
+  {
+    "Parameter": "pnl",
+    "Type": "float64",
+    "Description": "Realized profit and loss (USD)"
+  },
+  {
+    "Parameter": "volume",
+    "Type": "float64",
+    "Description": "Trade volume (USD)"
+  }
+]

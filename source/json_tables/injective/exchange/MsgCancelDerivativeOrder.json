@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "the market ID",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "the subaccount ID",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "order_hash",
+    "Type": "string",
+    "Description": "the order hash",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "order_mask",
+    "Type": "int32",
+    "Description": "the order mask",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "the client order ID",
+    "Required": "Yes"
+  }
+]

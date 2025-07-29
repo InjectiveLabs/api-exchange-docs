@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "ORDER_BY_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "ORDER_BY_ASC"
+  },
+  {
+    "Code": "2",
+    "Name": "ORDER_BY_DESC"
+  }
+]

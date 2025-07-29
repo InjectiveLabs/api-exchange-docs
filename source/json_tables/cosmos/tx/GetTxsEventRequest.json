@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "events",
+    "Type": "string array",
+    "Description": "events is the list of transaction event type. Deprecated post v0.47.x: use query instead, which should contain a valid events query.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination defines a pagination for the request. Deprecated post v0.46.x: use page and limit instead.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "order_by",
+    "Type": "OrderBy",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "page",
+    "Type": "uint64",
+    "Description": "page is the page number to query, starts at 1. If not provided, will default to first page.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "uint64",
+    "Description": "limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "query",
+    "Type": "string",
+    "Description": "query defines the transaction event query that is proxied to Tendermint's TxSearch RPC method. The query must be valid.  Since cosmos-sdk 0.50",
+    "Required": "Yes"
+  }
+]

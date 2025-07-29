@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "code",
+    "Type": "byte array",
+    "Description": "code represents the code bytes from an ethereum address."
+  }
+]

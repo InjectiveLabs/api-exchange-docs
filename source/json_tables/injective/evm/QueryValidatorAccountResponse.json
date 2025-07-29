@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "account_address is the cosmos address of the account in bech32 format."
+  },
+  {
+    "Parameter": "sequence",
+    "Type": "uint64",
+    "Description": "sequence is the account's sequence number."
+  },
+  {
+    "Parameter": "account_number",
+    "Type": "uint64",
+    "Description": "account_number is the account number"
+  }
+]

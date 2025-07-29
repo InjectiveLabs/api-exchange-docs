@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "admin_permissions",
+    "Type": "uint32",
+    "Description": ""
+  }
+]

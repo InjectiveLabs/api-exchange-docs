@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "base",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "quote",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "price_state",
+    "Type": "PriceState",
+    "Description": ""
+  },
+  {
+    "Parameter": "relayers",
+    "Type": "string array",
+    "Description": ""
+  }
+]

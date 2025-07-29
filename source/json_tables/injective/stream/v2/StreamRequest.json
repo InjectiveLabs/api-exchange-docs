@@ -1,0 +1,62 @@
+[
+  {
+    "Parameter": "bank_balances_filter",
+    "Type": "BankBalancesFilter",
+    "Description": "filter for bank balances events",
+    "Required": "No"
+  },
+  {
+    "Parameter": "subaccount_deposits_filter",
+    "Type": "SubaccountDepositsFilter",
+    "Description": "filter for subaccount deposits events",
+    "Required": "No"
+  },
+  {
+    "Parameter": "spot_trades_filter",
+    "Type": "TradesFilter",
+    "Description": "filter for spot trades events",
+    "Required": "No"
+  },
+  {
+    "Parameter": "derivative_trades_filter",
+    "Type": "TradesFilter",
+    "Description": "filter for derivative trades events",
+    "Required": "No"
+  },
+  {
+    "Parameter": "spot_orders_filter",
+    "Type": "OrdersFilter",
+    "Description": "filter for spot orders events",
+    "Required": "No"
+  },
+  {
+    "Parameter": "derivative_orders_filter",
+    "Type": "OrdersFilter",
+    "Description": "filter for derivative orders events",
+    "Required": "No"
+  },
+  {
+    "Parameter": "spot_orderbooks_filter",
+    "Type": "OrderbookFilter",
+    "Description": "filter for spot orderbooks events",
+    "Required": "No"
+  },
+  {
+    "Parameter": "derivative_orderbooks_filter",
+    "Type": "OrderbookFilter",
+    "Description": "filter for derivative orderbooks events",
+    "Required": "No"
+  },
+  {
+    "Parameter": "positions_filter",
+    "Type": "PositionsFilter",
+    "Description": "filter for positions events",
+    "Required": "No"
+  },
+  {
+    "Parameter": "oracle_price_filter",
+    "Type": "OraclePriceFilter",
+    "Description": "filter for oracle prices events",
+    "Required": "No"
+  }
+]

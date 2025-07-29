@@ -1,0 +1,50 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "contract_hook",
+    "Type": "MsgUpdateNamespace_SetContractHook",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "role_permissions",
+    "Type": "Role array",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "role_managers",
+    "Type": "RoleManager array",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "policy_statuses",
+    "Type": "PolicyStatus array",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "policy_manager_capabilities",
+    "Type": "PolicyManagerCapability array",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "new_value",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

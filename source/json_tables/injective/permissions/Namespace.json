@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "contract_hook",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "role_permissions",
+    "Type": "Role array",
+    "Description": ""
+  },
+  {
+    "Parameter": "actor_roles",
+    "Type": "ActorRoles array",
+    "Description": ""
+  },
+  {
+    "Parameter": "role_managers",
+    "Type": "RoleManager array",
+    "Description": ""
+  },
+  {
+    "Parameter": "policy_statuses",
+    "Type": "PolicyStatus array",
+    "Description": ""
+  },
+  {
+    "Parameter": "policy_manager_capabilities",
+    "Type": "PolicyManagerCapability array",
+    "Description": ""
+  }
+]

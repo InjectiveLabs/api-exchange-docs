@@ -1,0 +1,18 @@
+[
+  {
+    "Code": "0",
+    "Name": "Nobody"
+  },
+  {
+    "Code": "1",
+    "Name": "BeginBlockerSmartContractsOnly"
+  },
+  {
+    "Code": "2",
+    "Name": "SmartContractsOnly"
+  },
+  {
+    "Code": "3",
+    "Name": "Everyone"
+  }
+]

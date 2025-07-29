@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "Injective address of the stake granter",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "grants",
+    "Type": "GrantAuthorization array",
+    "Description": "list of stake grants to authorize (mandatory)",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "redelegation",
+    "Type": "Redelegation",
+    "Description": ""
+  },
+  {
+    "Parameter": "entries",
+    "Type": "RedelegationEntryResponse array",
+    "Description": ""
+  }
+]

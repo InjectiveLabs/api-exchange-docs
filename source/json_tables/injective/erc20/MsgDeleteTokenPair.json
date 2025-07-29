@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "bank_denom",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

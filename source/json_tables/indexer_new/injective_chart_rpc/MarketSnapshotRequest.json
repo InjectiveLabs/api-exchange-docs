@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "market_i_ds",
+    "Type": "string array",
+    "Description": "Specify multiple marketIDs to search.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "resolution",
+    "Type": "string",
+    "Description": "Symbols resolution(minutes). Default is 1",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "countback",
+    "Type": "int32",
+    "Description": "Number of bars returned, starting from the recent ones.",
+    "Required": "Yes"
+  }
+]

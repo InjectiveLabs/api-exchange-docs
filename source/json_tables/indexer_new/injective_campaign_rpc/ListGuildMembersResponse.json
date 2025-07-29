@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "members",
+    "Type": "GuildMember array",
+    "Description": ""
+  },
+  {
+    "Parameter": "paging",
+    "Type": "Paging",
+    "Description": ""
+  },
+  {
+    "Parameter": "guild_info",
+    "Type": "Guild",
+    "Description": ""
+  }
+]

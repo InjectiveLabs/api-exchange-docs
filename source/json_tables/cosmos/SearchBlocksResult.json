@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "total_count",
+    "Type": "int64",
+    "Description": "Count of all blocks"
+  },
+  {
+    "Parameter": "count",
+    "Type": "int64",
+    "Description": "Count of blocks in current page"
+  },
+  {
+    "Parameter": "page_number",
+    "Type": "int64",
+    "Description": "Index of current page, start from 1"
+  },
+  {
+    "Parameter": "page_total",
+    "Type": "int64",
+    "Description": "Count of total pages"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int64",
+    "Description": "Max count blocks per page"
+  },
+  {
+    "Parameter": "blocks",
+    "Type": "v11.Block array",
+    "Description": "List of blocks in current page"
+  }
+]

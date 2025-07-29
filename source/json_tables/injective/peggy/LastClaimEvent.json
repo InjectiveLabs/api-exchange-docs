@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "ethereum_event_nonce",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "ethereum_event_height",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

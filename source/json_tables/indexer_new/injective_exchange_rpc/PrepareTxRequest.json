@@ -1,0 +1,50 @@
+[
+  {
+    "Parameter": "chain_id",
+    "Type": "uint64",
+    "Description": "Specify chainID for the target tx",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "signer_address",
+    "Type": "string",
+    "Description": "Specify Ethereum address of a signer",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "sequence",
+    "Type": "uint64",
+    "Description": "Deprecated: this field is ignored",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "memo",
+    "Type": "string",
+    "Description": "Textual memo information to attach with tx",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "timeout_height",
+    "Type": "uint64",
+    "Description": "Block height until which the transaction is valid.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "fee",
+    "Type": "CosmosTxFee",
+    "Description": "Transaction fee details.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "msgs",
+    "Type": "][byte array",
+    "Description": "List of Cosmos proto3-encoded Msgs to include in a single tx",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "eip712_wrapper",
+    "Type": "string",
+    "Description": "The wrapper of the EIP712 message, 'v1'/'v2' or 'V1'/'V2'",
+    "Required": "Yes"
+  }
+]

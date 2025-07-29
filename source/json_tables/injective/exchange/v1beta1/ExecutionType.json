@@ -1,0 +1,30 @@
+[
+  {
+    "Code": "0",
+    "Name": "UnspecifiedExecutionType"
+  },
+  {
+    "Code": "1",
+    "Name": "Market"
+  },
+  {
+    "Code": "2",
+    "Name": "LimitFill"
+  },
+  {
+    "Code": "3",
+    "Name": "LimitMatchRestingOrder"
+  },
+  {
+    "Code": "4",
+    "Name": "LimitMatchNewOrder"
+  },
+  {
+    "Code": "5",
+    "Name": "MarketLiquidation"
+  },
+  {
+    "Code": "6",
+    "Name": "ExpiryMarketSettlement"
+  }
+]

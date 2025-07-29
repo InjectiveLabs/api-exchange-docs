@@ -17,6 +17,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      
+      - name: Clone SDK repositories
+        run: |
+          make clone-sdk-repos
+
       - name: Markdown autodocs
         uses: dineshsonachalam/markdown-autodocs@v1.0.7
         with:
@@ -25,7 +30,12 @@ jobs:
 
           # Categories to automatically sync or transform its contents in the markdown files.
           # Defaults to '[code-block,json-to-html-table,workflow-artifact-table]'
-          categories: '[code-block]'
+          categories: '[code-block,json-to-html-table]'
+
+      - name: Clean SDK repositories
+        run: |
+          make clean-sdk-repos
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:

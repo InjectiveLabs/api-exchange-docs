@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "tx",
+    "Type": "Tx",
+    "Description": "tx is the transaction to simulate. Deprecated. Send raw tx bytes instead.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "tx_bytes",
+    "Type": "byte array",
+    "Description": "tx_bytes is the raw transaction.  Since: cosmos-sdk 0.43",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "name",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "permissions",
+    "Type": "string array",
+    "Description": ""
+  }
+]

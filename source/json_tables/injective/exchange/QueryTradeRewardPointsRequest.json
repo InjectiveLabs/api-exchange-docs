@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "accounts",
+    "Type": "string array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pending_pool_timestamp",
+    "Type": "int64",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "executor of the swap"
+  },
+  {
+    "Parameter": "route",
+    "Type": "string",
+    "Description": "swap route"
+  },
+  {
+    "Parameter": "source_coin",
+    "Type": "Coin",
+    "Description": "source coin"
+  },
+  {
+    "Parameter": "dest_coin",
+    "Type": "Coin",
+    "Description": "destination received coin"
+  },
+  {
+    "Parameter": "fees",
+    "Type": "Coin array",
+    "Description": "fees of each steps in route"
+  },
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "contract address that executes to make this swap"
+  },
+  {
+    "Parameter": "index_by_sender",
+    "Type": "int32",
+    "Description": "Numerical index by sender to use in pagination from_number and to_number"
+  },
+  {
+    "Parameter": "index_by_sender_contract",
+    "Type": "int32",
+    "Description": "Numerical index by sender + acontract to use in pagination from_number and to_number, that support contract filter"
+  },
+  {
+    "Parameter": "tx_hash",
+    "Type": "string",
+    "Description": "transaction hash of the swap"
+  },
+  {
+    "Parameter": "executed_at",
+    "Type": "int64",
+    "Description": "transaction timestamp of the swap"
+  },
+  {
+    "Parameter": "refund_amount",
+    "Type": "string",
+    "Description": "Refunded amount of the swap"
+  }
+]

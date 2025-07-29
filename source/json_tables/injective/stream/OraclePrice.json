@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "type",
+    "Type": "string",
+    "Description": ""
+  }
+]

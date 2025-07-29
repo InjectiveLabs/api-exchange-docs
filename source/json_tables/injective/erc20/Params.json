@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "denom_creation_fee",
+    "Type": "types.Coin",
+    "Description": ""
+  }
+]

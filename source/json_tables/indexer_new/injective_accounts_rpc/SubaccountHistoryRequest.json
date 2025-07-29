@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "SubaccountId of the trader we want to get the history from",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "Filter history by denom",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "transfer_types",
+    "Type": "string array",
+    "Description": "Filter history by transfer type",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "uint64",
+    "Description": "Skip will skip the first n item from the result",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "Limit is used to specify the maximum number of items to be returned",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "end_time",
+    "Type": "int64",
+    "Description": "Upper bound of account transfer history's executedAt",
+    "Required": "Yes"
+  }
+]

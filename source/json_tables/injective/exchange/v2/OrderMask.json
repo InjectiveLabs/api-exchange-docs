@@ -1,0 +1,34 @@
+[
+  {
+    "Code": "0",
+    "Name": "UNUSED"
+  },
+  {
+    "Code": "1",
+    "Name": "ANY"
+  },
+  {
+    "Code": "2",
+    "Name": "REGULAR"
+  },
+  {
+    "Code": "4",
+    "Name": "CONDITIONAL"
+  },
+  {
+    "Code": "8",
+    "Name": "DIRECTION_BUY_OR_HIGHER"
+  },
+  {
+    "Code": "16",
+    "Name": "DIRECTION_SELL_OR_LOWER"
+  },
+  {
+    "Code": "32",
+    "Name": "TYPE_MARKET"
+  },
+  {
+    "Code": "64",
+    "Name": "TYPE_LIMIT"
+  }
+]

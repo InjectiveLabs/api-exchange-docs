@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "market_status",
+    "Type": "string",
+    "Description": "Filter by market status",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "Filter by the Coin denomination of the quote currency",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "uint64",
+    "Description": "Skip will skip the first n item from the result",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "Limit is used to specify the maximum number of items to be returned.",
+    "Required": "Yes"
+  }
+]

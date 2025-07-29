@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "voting_params",
+    "Type": "VotingParams",
+    "Description": "voting_params defines the parameters related to voting."
+  },
+  {
+    "Parameter": "deposit_params",
+    "Type": "DepositParams",
+    "Description": "deposit_params defines the parameters related to deposit."
+  },
+  {
+    "Parameter": "tally_params",
+    "Type": "TallyParams",
+    "Description": "tally_params defines the parameters related to tally."
+  }
+]

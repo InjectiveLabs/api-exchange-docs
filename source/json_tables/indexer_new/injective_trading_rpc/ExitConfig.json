@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "exit_type",
+    "Type": "string",
+    "Description": "strategy exit type (stopLoss/takeProfit)"
+  },
+  {
+    "Parameter": "exit_price",
+    "Type": "string",
+    "Description": "strategy stopLoss/takeProfit price"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "Injective sender address"
+  },
+  {
+    "Parameter": "receiver",
+    "Type": "string",
+    "Description": "Ethereum receiver address"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "Amount of tokens withdrawn to Ethereum"
+  }
+]

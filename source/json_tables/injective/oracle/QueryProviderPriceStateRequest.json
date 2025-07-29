@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "provider",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

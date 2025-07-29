@@ -1,0 +1,47 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines all the parameters of related to OCR."
+  },
+  {
+    "Parameter": "feed_configs",
+    "Type": "FeedConfig array",
+    "Description": "feed_configs stores all of the supported OCR feeds"
+  },
+  {
+    "Parameter": "latest_epoch_and_rounds",
+    "Type": "FeedEpochAndRound array",
+    "Description": "latest_epoch_and_rounds stores the latest epoch and round for each feedId"
+  },
+  {
+    "Parameter": "feed_transmissions",
+    "Type": "FeedTransmission array",
+    "Description": "feed_transmissions stores the last transmission for each feed"
+  },
+  {
+    "Parameter": "latest_aggregator_round_ids",
+    "Type": "FeedLatestAggregatorRoundIDs array",
+    "Description": "latest_aggregator_round_ids stores the latest aggregator round ID for each feedId"
+  },
+  {
+    "Parameter": "reward_pools",
+    "Type": "RewardPool array",
+    "Description": "reward_pools stores the reward pools"
+  },
+  {
+    "Parameter": "feed_observation_counts",
+    "Type": "FeedCounts array",
+    "Description": "feed_observation_counts stores the feed observation counts"
+  },
+  {
+    "Parameter": "feed_transmission_counts",
+    "Type": "FeedCounts array",
+    "Description": "feed_transmission_counts stores the feed transmission counts"
+  },
+  {
+    "Parameter": "pending_payeeships",
+    "Type": "PendingPayeeship array",
+    "Description": "pending_payeeships stores the pending payeeships"
+  }
+]

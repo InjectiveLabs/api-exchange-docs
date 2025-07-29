@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "upgraded_consensus_state",
+    "Type": "byte array",
+    "Description": "Since: cosmos-sdk 0.43"
+  }
+]

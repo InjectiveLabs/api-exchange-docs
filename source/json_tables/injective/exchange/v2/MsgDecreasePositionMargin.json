@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "source_subaccount_id",
+    "Type": "string",
+    "Description": "the subaccount ID the position belongs to",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "destination_subaccount_id",
+    "Type": "string",
+    "Description": "the destination subaccount ID",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "the market ID",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "amount defines the amount of margin to withdraw from the position (in human readable format)",
+    "Required": "Yes"
+  }
+]

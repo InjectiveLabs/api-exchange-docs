@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "s",
+    "Type": "string",
+    "Description": "Status of the response."
+  },
+  {
+    "Parameter": "errmsg",
+    "Type": "string",
+    "Description": "Error message."
+  },
+  {
+    "Parameter": "data",
+    "Type": "Validator array",
+    "Description": ""
+  }
+]

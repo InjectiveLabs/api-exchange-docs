@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "total_fees",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": ""
+  }
+]

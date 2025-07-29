@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "transfers",
+    "Type": "SubaccountBalanceTransfer array",
+    "Description": "List of subaccount transfers"
+  },
+  {
+    "Parameter": "paging",
+    "Type": "Paging",
+    "Description": ""
+  }
+]

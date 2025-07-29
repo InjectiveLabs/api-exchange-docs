@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "v",
+    "Type": "string",
+    "Description": "Response version."
+  },
+  {
+    "Parameter": "s",
+    "Type": "string",
+    "Description": "Status of the response."
+  },
+  {
+    "Parameter": "e",
+    "Type": "string",
+    "Description": "Error message."
+  },
+  {
+    "Parameter": "raw_block",
+    "Type": "RawBlock",
+    "Description": ""
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "the subaccount ID to withdraw funds from",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "types.Coin",
+    "Description": "the amount of the withdrawal (in chain format)",
+    "Required": "Yes"
+  }
+]

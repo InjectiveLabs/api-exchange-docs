@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "relayer",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "symbols",
+    "Type": "string array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "rates",
+    "Type": "uint64 array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "resolve_times",
+    "Type": "uint64 array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "requestIDs",
+    "Type": "uint64 array",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

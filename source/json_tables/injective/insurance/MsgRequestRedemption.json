@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "Address of the underwriter requesting a redemption.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "MarketID of the insurance fund.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "types1.Coin",
+    "Description": "Insurance fund share token amount to be redeemed.",
+    "Required": "Yes"
+  }
+]

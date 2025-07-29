@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "provider",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "relayer",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

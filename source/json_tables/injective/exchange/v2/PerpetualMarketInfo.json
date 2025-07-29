@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "market ID."
+  },
+  {
+    "Parameter": "hourly_funding_rate_cap",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "hourly_funding_rate_cap defines the maximum absolute value of the hourly funding rate"
+  },
+  {
+    "Parameter": "hourly_interest_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "hourly_interest_rate defines the hourly interest rate"
+  },
+  {
+    "Parameter": "next_funding_timestamp",
+    "Type": "int64",
+    "Description": "next_funding_timestamp defines the next funding timestamp in seconds of a perpetual market"
+  },
+  {
+    "Parameter": "funding_interval",
+    "Type": "int64",
+    "Description": "funding_interval defines the next funding interval in seconds of a perpetual market."
+  }
+]

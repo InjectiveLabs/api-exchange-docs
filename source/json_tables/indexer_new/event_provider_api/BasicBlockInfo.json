@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": "Block height"
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "int64",
+    "Description": "Block timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "time",
+    "Type": "string",
+    "Description": "Block time in RFC3339 format."
+  }
+]

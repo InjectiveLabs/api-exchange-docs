@@ -1,0 +1,67 @@
+[
+  {
+    "Parameter": "operator_address",
+    "Type": "string",
+    "Description": "operator_address defines the address of the validator's operator; bech encoded in JSON."
+  },
+  {
+    "Parameter": "consensus_pubkey",
+    "Type": "types.Any",
+    "Description": "consensus_pubkey is the consensus public key of the validator, as a Protobuf Any."
+  },
+  {
+    "Parameter": "jailed",
+    "Type": "bool",
+    "Description": "jailed defined whether the validator has been jailed from bonded status or not."
+  },
+  {
+    "Parameter": "status",
+    "Type": "BondStatus",
+    "Description": "status is the validator status (bonded/unbonding/unbonded)."
+  },
+  {
+    "Parameter": "tokens",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "tokens define the delegated tokens (incl. self-delegation)."
+  },
+  {
+    "Parameter": "delegator_shares",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "delegator_shares defines total shares issued to a validator's delegators."
+  },
+  {
+    "Parameter": "description",
+    "Type": "Description",
+    "Description": "description defines the description terms for the validator."
+  },
+  {
+    "Parameter": "unbonding_height",
+    "Type": "int64",
+    "Description": "unbonding_height defines, if unbonding, the height at which this validator has begun unbonding."
+  },
+  {
+    "Parameter": "unbonding_time",
+    "Type": "time.Time",
+    "Description": "unbonding_time defines, if unbonding, the min time for the validator to complete unbonding."
+  },
+  {
+    "Parameter": "commission",
+    "Type": "Commission",
+    "Description": "commission defines the commission parameters."
+  },
+  {
+    "Parameter": "min_self_delegation",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "min_self_delegation is the validator's self declared minimum self delegation.  Since: cosmos-sdk 0.46"
+  },
+  {
+    "Parameter": "unbonding_on_hold_ref_count",
+    "Type": "int64",
+    "Description": "strictly positive if this validator's unbonding has been stopped by external modules"
+  },
+  {
+    "Parameter": "unbonding_ids",
+    "Type": "uint64 array",
+    "Description": "list of unbonding ids, each uniquely identifing an unbonding of this validator"
+  }
+]

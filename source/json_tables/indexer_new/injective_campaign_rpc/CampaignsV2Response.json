@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "campaigns",
+    "Type": "CampaignV2 array",
+    "Description": ""
+  },
+  {
+    "Parameter": "cursor",
+    "Type": "string",
+    "Description": ""
+  }
+]

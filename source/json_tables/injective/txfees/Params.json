@@ -1,0 +1,67 @@
+[
+  {
+    "Parameter": "max_gas_wanted_per_tx",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "high_gas_tx_threshold",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "min_gas_price_for_high_gas_tx",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "mempool1559_enabled",
+    "Type": "bool",
+    "Description": ""
+  },
+  {
+    "Parameter": "min_gas_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "default_base_fee_multiplier",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "max_base_fee_multiplier",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "reset_interval",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "max_block_change_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "target_block_space_percent_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "recheck_fee_low_base_fee",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "recheck_fee_high_base_fee",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "recheck_fee_base_fee_threshold_multiplier",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

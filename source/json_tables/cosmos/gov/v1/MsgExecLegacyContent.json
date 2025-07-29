@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "content",
+    "Type": "types.Any",
+    "Description": "content is the proposal's content.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "authority must be the gov module address.",
+    "Required": "Yes"
+  }
+]

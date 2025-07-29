@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "denom_min_notionals",
+    "Type": "DenomMinNotional array",
+    "Description": ""
+  }
+]

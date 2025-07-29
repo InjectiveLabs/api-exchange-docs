@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "tx_response",
+    "Type": "types.TxResponse",
+    "Description": "tx_response is the queried TxResponses."
+  }
+]

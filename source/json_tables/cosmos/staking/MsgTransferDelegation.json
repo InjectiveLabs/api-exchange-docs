@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "delegator_address",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "validator_address",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "receiver_address",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "types1.Coin",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

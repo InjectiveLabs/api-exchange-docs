@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "observations_timestamp",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "observers",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "observations",
+    "Type": "cosmossdk_io_math.LegacyDec array",
+    "Description": ""
+  }
+]

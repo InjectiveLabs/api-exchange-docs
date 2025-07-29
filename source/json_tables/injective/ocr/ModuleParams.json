@@ -1,0 +1,52 @@
+[
+  {
+    "Parameter": "feed_id",
+    "Type": "string",
+    "Description": "feed_id is an unique ID for the target of this config"
+  },
+  {
+    "Parameter": "min_answer",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "lowest answer the median of a report is allowed to be"
+  },
+  {
+    "Parameter": "max_answer",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "highest answer the median of a report is allowed to be"
+  },
+  {
+    "Parameter": "link_per_observation",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "Fixed LINK reward for each observer"
+  },
+  {
+    "Parameter": "link_per_transmission",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "Fixed LINK reward for transmitter"
+  },
+  {
+    "Parameter": "link_denom",
+    "Type": "string",
+    "Description": "Native denom for LINK coin in the bank keeper"
+  },
+  {
+    "Parameter": "unique_reports",
+    "Type": "bool",
+    "Description": "Enables unique reports"
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": "short human-readable description of observable this feed's answers pertain to"
+  },
+  {
+    "Parameter": "feed_admin",
+    "Type": "string",
+    "Description": "feed administrator"
+  },
+  {
+    "Parameter": "billing_admin",
+    "Type": "string",
+    "Description": "feed billing administrator"
+  }
+]

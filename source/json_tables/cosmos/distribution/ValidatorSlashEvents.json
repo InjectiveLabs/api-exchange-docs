@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "validator_slash_events",
+    "Type": "ValidatorSlashEvent array",
+    "Description": ""
+  }
+]

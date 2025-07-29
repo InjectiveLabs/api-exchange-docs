@@ -1,0 +1,26 @@
+[
+  {
+    "Code": "0",
+    "Name": "PROPOSAL_STATUS_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "PROPOSAL_STATUS_DEPOSIT_PERIOD"
+  },
+  {
+    "Code": "2",
+    "Name": "PROPOSAL_STATUS_VOTING_PERIOD"
+  },
+  {
+    "Code": "3",
+    "Name": "PROPOSAL_STATUS_PASSED"
+  },
+  {
+    "Code": "4",
+    "Name": "PROPOSAL_STATUS_REJECTED"
+  },
+  {
+    "Code": "5",
+    "Name": "PROPOSAL_STATUS_FAILED"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "role_ids",
+    "Type": "uint32 array",
+    "Description": ""
+  }
+]

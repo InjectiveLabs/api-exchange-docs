@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "order",
+    "Type": "SubaccountOrder",
+    "Description": ""
+  },
+  {
+    "Parameter": "order_hash",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

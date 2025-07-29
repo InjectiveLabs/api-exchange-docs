@@ -17,12 +17,12 @@
   {
     "Parameter": "margin",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "margin is the margin used by the limit order"
+    "Description": "margin is the margin used by the limit order (in human readable format)"
   },
   {
     "Parameter": "trigger_price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "trigger_price is the trigger price used by stop/take orders"
+    "Description": "trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)"
   },
   {
     "Parameter": "expiration_block",

@@ -42,17 +42,17 @@
   {
     "Parameter": "min_price_tick_size",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "min_price_tick_size defines the minimum tick size that the price required for orders in the market"
+    "Description": "min_price_tick_size defines the minimum tick size that the price required for orders in the market (in human readable format)"
   },
   {
     "Parameter": "min_quantity_tick_size",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "min_quantity_tick_size defines the minimum tick size of the quantity required for orders in the market"
+    "Description": "min_quantity_tick_size defines the minimum tick size of the quantity required for orders in the market (in human readable format)"
   },
   {
     "Parameter": "min_notional",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "min_notional defines the minimum notional (in quote asset) required for orders in the market"
+    "Description": "min_notional defines the minimum notional (in quote asset) required for orders in the market (in human readable format)"
   },
   {
     "Parameter": "admin",

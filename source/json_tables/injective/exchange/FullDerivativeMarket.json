@@ -2,12 +2,12 @@
   {
     "Parameter": "market",
     "Type": "DerivativeMarket",
-    "Description": ""
+    "Description": "derivative market details"
   },
   {
     "Parameter": "mark_price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "mark price (in chain format)"
   },
   {
     "Parameter": "mid_price_and_tob",

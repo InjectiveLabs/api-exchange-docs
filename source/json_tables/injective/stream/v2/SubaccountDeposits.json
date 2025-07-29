@@ -2,11 +2,11 @@
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the subaccount ID"
   },
   {
     "Parameter": "deposits",
     "Type": "SubaccountDeposit array",
-    "Description": ""
+    "Description": "the deposits details"
   }
 ]

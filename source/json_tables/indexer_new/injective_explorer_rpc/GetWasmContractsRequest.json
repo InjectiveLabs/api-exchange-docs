@@ -40,5 +40,17 @@
     "Type": "string",
     "Description": "Label of the contract",
     "Required": "Yes"
+  },
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "Token name or symbol to filter by",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "lookup",
+    "Type": "string",
+    "Description": "Text to lookup by",
+    "Required": "Yes"
   }
 ]

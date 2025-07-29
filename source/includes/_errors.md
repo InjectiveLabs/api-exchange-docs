@@ -196,7 +196,8 @@
 <tr ><td class="error-code-td td_num">7</td><td class="description-td td_text">unknown bank denom or zero supply</td></tr>
 <tr ><td class="error-code-td td_num">8</td><td class="description-td td_text">error uploading ERC20 contract</td></tr>
 <tr ><td class="error-code-td td_num">9</td><td class="description-td td_text">invalid token factory denom</td></tr>
-<tr ><td class="error-code-td td_num">10</td><td class="description-td td_text">respective erc20:... denom has existing supply</td></tr></tbody></table>
+<tr ><td class="error-code-td td_num">10</td><td class="description-td td_text">respective erc20:... denom has existing supply</td></tr>
+<tr ><td class="error-code-td td_num">11</td><td class="description-td td_text">invalid query request</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Exchange module

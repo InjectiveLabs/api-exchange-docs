@@ -2,16 +2,16 @@
   {
     "Parameter": "mid_price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "mid price of the market"
+    "Description": "mid price of the market (in chain format)"
   },
   {
     "Parameter": "best_buy_price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "best buy price of the market"
+    "Description": "best buy price of the market (in chain format)"
   },
   {
     "Parameter": "best_sell_price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "best sell price of the market"
+    "Description": "best sell price of the market (in chain format)"
   }
 ]

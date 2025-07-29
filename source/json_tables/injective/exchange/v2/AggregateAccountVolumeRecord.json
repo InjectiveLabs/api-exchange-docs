@@ -2,11 +2,11 @@
   {
     "Parameter": "account",
     "Type": "string",
-    "Description": ""
+    "Description": "account the volume belongs to"
   },
   {
     "Parameter": "market_volumes",
     "Type": "MarketVolume array",
-    "Description": ""
+    "Description": "the aggregate volumes for each market"
   }
 ]

@@ -12,16 +12,16 @@
   {
     "Parameter": "price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "price of the order"
+    "Description": "price of the order (in human readable format)"
   },
   {
     "Parameter": "quantity",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "quantity of the order"
+    "Description": "quantity of the order (in human readable format)"
   },
   {
     "Parameter": "cid",
     "Type": "string",
-    "Description": ""
+    "Description": "the client order ID (optional)"
   }
 ]

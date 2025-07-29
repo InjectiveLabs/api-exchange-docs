@@ -2,7 +2,7 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "the sender's Injective address",
     "Required": "Yes"
   },
   {
@@ -68,19 +68,19 @@
   {
     "Parameter": "min_price_tick_size",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "min_price_tick_size defines the minimum tick size of the order's price and margin",
+    "Description": "min_price_tick_size defines the minimum tick size of the order's price and margin (in human readable format)",
     "Required": "Yes"
   },
   {
     "Parameter": "min_quantity_tick_size",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "min_quantity_tick_size defines the minimum tick size of the order's quantity",
+    "Description": "min_quantity_tick_size defines the minimum tick size of the order's quantity (in human readable format)",
     "Required": "Yes"
   },
   {
     "Parameter": "min_notional",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "min_notional defines the minimum notional (in quote asset) required for orders in the market",
+    "Description": "min_notional defines the minimum notional (in quote asset) required for orders in the market (in human readable format)",
     "Required": "Yes"
   },
   {

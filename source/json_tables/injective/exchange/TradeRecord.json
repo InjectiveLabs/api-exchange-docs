@@ -2,16 +2,16 @@
   {
     "Parameter": "timestamp",
     "Type": "int64",
-    "Description": ""
+    "Description": "the timestamp of the trade"
   },
   {
     "Parameter": "price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the price of the trade (in chain format)"
   },
   {
     "Parameter": "quantity",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the quantity of the trade (in chain format)"
   }
 ]

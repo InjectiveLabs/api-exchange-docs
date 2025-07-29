@@ -11,8 +11,8 @@ Get a list of all oracles.
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/oracle_rpc/3_OracleList.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/oracle_rpc/3_OracleList.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/oracle_rpc/3_OracleList.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/oracle_rpc/3_OracleList.py -->
 ```py
 import asyncio
 import json
@@ -34,8 +34,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/oracle/3_OracleList/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/oracle/3_OracleList/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/oracle/3_OracleList/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/oracle/3_OracleList/example.go -->
 ```go
 package main
 
@@ -174,8 +174,8 @@ Get the oracle price of an asset.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/oracle_rpc/2_Price.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/oracle_rpc/2_Price.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/oracle_rpc/2_Price.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/oracle_rpc/2_Price.py -->
 ```py
 import asyncio
 import json
@@ -209,8 +209,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/oracle/2_Price/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/oracle/2_Price/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/oracle/2_Price/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/oracle/2_Price/example.go -->
 ```go
 package main
 
@@ -342,8 +342,8 @@ Stream new price changes for a specified oracle. If no oracles are provided, all
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/oracle_rpc/1_StreamPrices.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/oracle_rpc/1_StreamPrices.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/oracle_rpc/1_StreamPrices.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/oracle_rpc/1_StreamPrices.py -->
 ```py
 import asyncio
 from typing import Any, Dict
@@ -398,8 +398,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/oracle/1_StreamPrices/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/oracle/1_StreamPrices/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/oracle/1_StreamPrices/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/oracle/1_StreamPrices/example.go -->
 ```go
 package main
 

@@ -2,26 +2,26 @@
   {
     "Parameter": "subaccountId",
     "Type": "string",
-    "Description": ""
+    "Description": "the subaccount ID"
   },
   {
     "Parameter": "denom",
     "Type": "string",
-    "Description": ""
+    "Description": "the denom of the balance"
   },
   {
     "Parameter": "available",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the available balance"
   },
   {
     "Parameter": "total",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the total balance"
   },
   {
     "Parameter": "balance_hold",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the balance on hold"
   }
 ]

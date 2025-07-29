@@ -7,11 +7,11 @@
   {
     "Parameter": "cumulative_price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "cumulative_price defines the cumulative price for the current hour up to the last timestamp"
+    "Description": "cumulative_price defines the cumulative price for the current hour up to the last timestamp (in human readable format)"
   },
   {
     "Parameter": "last_timestamp",
     "Type": "int64",
-    "Description": ""
+    "Description": "the last funding timestamp in seconds"
   }
 ]

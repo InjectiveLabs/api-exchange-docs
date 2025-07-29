@@ -2,7 +2,7 @@
   {
     "Parameter": "market",
     "Type": "SpotMarket",
-    "Description": ""
+    "Description": "spot market details"
   },
   {
     "Parameter": "mid_price_and_tob",

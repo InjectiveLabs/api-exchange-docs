@@ -2,19 +2,19 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "the sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": "",
+    "Description": "the subaccount ID",
     "Required": "Yes"
   },
   {
     "Parameter": "market_id",
     "Type": "string",
-    "Description": "",
+    "Description": "the market ID",
     "Required": "Yes"
   },
   {

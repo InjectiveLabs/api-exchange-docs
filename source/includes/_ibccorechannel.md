@@ -11,8 +11,8 @@ Queries an IBC Channel
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/1_Channel.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/1_Channel.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/channel/query/1_Channel.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/channel/query/1_Channel.py -->
 ```py
 import asyncio
 
@@ -39,8 +39,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/1_Channel/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/1_Channel/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/channel/query/1_Channel/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/channel/query/1_Channel/example.go -->
 ```go
 package main
 
@@ -216,8 +216,8 @@ Queries all the IBC channels of a chain
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/2_Channels.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/2_Channels.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/channel/query/2_Channels.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/channel/query/2_Channels.py -->
 ```py
 import asyncio
 
@@ -244,8 +244,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/2_Channels/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/2_Channels/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/channel/query/2_Channels/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/channel/query/2_Channels/example.go -->
 ```go
 package main
 
@@ -493,8 +493,8 @@ Queries all the channels associated with a connection end
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/3_ConnectionChannels.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/3_ConnectionChannels.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/channel/query/3_ConnectionChannels.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/channel/query/3_ConnectionChannels.py -->
 ```py
 import asyncio
 
@@ -522,8 +522,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/3_ConnectionChannels/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/3_ConnectionChannels/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/channel/query/3_ConnectionChannels/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/channel/query/3_ConnectionChannels/example.go -->
 ```go
 package main
 
@@ -787,8 +787,8 @@ Queries the client state for the channel associated with the provided channel id
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/4_ChannelClientState.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/4_ChannelClientState.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/channel/query/4_ChannelClientState.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/channel/query/4_ChannelClientState.py -->
 ```py
 import asyncio
 
@@ -815,8 +815,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/4_ChannelClientState/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/4_ChannelClientState/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/channel/query/4_ChannelClientState/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/channel/query/4_ChannelClientState/example.go -->
 ```go
 package main
 
@@ -1056,8 +1056,8 @@ Queries the client state for the channel associated with the provided channel id
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/5_ChannelConsensusState.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/5_ChannelConsensusState.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/channel/query/5_ChannelConsensusState.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/channel/query/5_ChannelConsensusState.py -->
 ```py
 import asyncio
 
@@ -1088,8 +1088,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/5_ChannelConsensusState/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/5_ChannelConsensusState/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/channel/query/5_ChannelConsensusState/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/channel/query/5_ChannelConsensusState/example.go -->
 ```go
 package main
 
@@ -1221,8 +1221,8 @@ Queries a stored packet commitment hash
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/6_PacketCommitment.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/6_PacketCommitment.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/channel/query/6_PacketCommitment.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/channel/query/6_PacketCommitment.py -->
 ```py
 import asyncio
 
@@ -1250,8 +1250,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/6_PacketCommitment/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/6_PacketCommitment/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/channel/query/6_PacketCommitment/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/channel/query/6_PacketCommitment/example.go -->
 ```go
 package main
 
@@ -1374,8 +1374,8 @@ Returns all the packet commitments hashes associated with a channel
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/7_PacketCommitments.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/7_PacketCommitments.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/channel/query/7_PacketCommitments.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/channel/query/7_PacketCommitments.py -->
 ```py
 import asyncio
 
@@ -1408,8 +1408,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/7_PacketCommitments/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/7_PacketCommitments/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/channel/query/7_PacketCommitments/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/channel/query/7_PacketCommitments/example.go -->
 ```go
 package main
 
@@ -1582,8 +1582,8 @@ Queries if a given packet sequence has been received on the queried chain
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/8_PacketReceipt.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/8_PacketReceipt.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/channel/query/8_PacketReceipt.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/channel/query/8_PacketReceipt.py -->
 ```py
 import asyncio
 
@@ -1611,8 +1611,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/8_PacketReceipt/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/8_PacketReceipt/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/channel/query/8_PacketReceipt/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/channel/query/8_PacketReceipt/example.go -->
 ```go
 package main
 
@@ -1735,8 +1735,8 @@ Queries a stored packet acknowledgement hash
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/9_PacketAcknowledgement.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/9_PacketAcknowledgement.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/channel/query/9_PacketAcknowledgement.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/channel/query/9_PacketAcknowledgement.py -->
 ```py
 import asyncio
 
@@ -1766,8 +1766,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/9_PacketAcknowledgement/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/9_PacketAcknowledgement/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/channel/query/9_PacketAcknowledgement/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/channel/query/9_PacketAcknowledgement/example.go -->
 ```go
 package main
 
@@ -1890,8 +1890,8 @@ Returns all the packet acknowledgements associated with a channel
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/10_PacketAcknowledgements.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/10_PacketAcknowledgements.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/channel/query/10_PacketAcknowledgements.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/channel/query/10_PacketAcknowledgements.py -->
 ```py
 import asyncio
 
@@ -1926,8 +1926,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/10_PacketAcknowledgements/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/10_PacketAcknowledgements/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/channel/query/10_PacketAcknowledgements/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/channel/query/10_PacketAcknowledgements/example.go -->
 ```go
 package main
 
@@ -2096,8 +2096,8 @@ Returns all the unreceived IBC packets associated with a channel and sequences
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/11_UnreceivedPackets.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/11_UnreceivedPackets.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/channel/query/11_UnreceivedPackets.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/channel/query/11_UnreceivedPackets.py -->
 ```py
 import asyncio
 
@@ -2127,8 +2127,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/11_UnreceivedPackets/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/11_UnreceivedPackets/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/channel/query/11_UnreceivedPackets/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/channel/query/11_UnreceivedPackets/example.go -->
 ```go
 package main
 
@@ -2251,8 +2251,8 @@ Returns all the unreceived IBC acknowledgements associated with a channel and se
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/12_UnreceivedAcks.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/12_UnreceivedAcks.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/channel/query/12_UnreceivedAcks.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/channel/query/12_UnreceivedAcks.py -->
 ```py
 import asyncio
 
@@ -2282,8 +2282,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/12_UnreceivedAcks/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/12_UnreceivedAcks/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/channel/query/12_UnreceivedAcks/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/channel/query/12_UnreceivedAcks/example.go -->
 ```go
 package main
 
@@ -2406,8 +2406,8 @@ Returns the next receive sequence for a given channel
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/13_NextSequenceReceive.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/channel/query/13_NextSequenceReceive.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/channel/query/13_NextSequenceReceive.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/channel/query/13_NextSequenceReceive.py -->
 ```py
 import asyncio
 
@@ -2437,8 +2437,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/13_NextSequenceReceive/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/channel/query/13_NextSequenceReceive/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/channel/query/13_NextSequenceReceive/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/channel/query/13_NextSequenceReceive/example.go -->
 ```go
 package main
 

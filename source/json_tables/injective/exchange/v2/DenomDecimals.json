@@ -2,11 +2,11 @@
   {
     "Parameter": "denom",
     "Type": "string",
-    "Description": ""
+    "Description": "the denom of the token"
   },
   {
     "Parameter": "decimals",
     "Type": "uint64",
-    "Description": ""
+    "Description": "the decimals of the token"
   }
 ]

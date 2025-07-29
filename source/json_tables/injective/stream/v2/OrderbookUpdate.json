@@ -2,11 +2,11 @@
   {
     "Parameter": "seq",
     "Type": "uint64",
-    "Description": ""
+    "Description": "the sequence number of the orderbook update"
   },
   {
     "Parameter": "orderbook",
     "Type": "Orderbook",
-    "Description": ""
+    "Description": "the orderbook details"
   }
 ]

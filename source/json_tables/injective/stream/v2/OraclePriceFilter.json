@@ -2,6 +2,6 @@
   {
     "Parameter": "symbol",
     "Type": "string array",
-    "Description": ""
+    "Description": "list of symbol to filter by"
   }
 ]

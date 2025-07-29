@@ -2,16 +2,16 @@
   {
     "Parameter": "market_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the market ID"
   },
   {
     "Parameter": "order",
     "Type": "v2.DerivativeLimitOrder",
-    "Description": ""
+    "Description": "the order details"
   },
   {
     "Parameter": "is_market",
     "Type": "bool",
-    "Description": ""
+    "Description": "whether the order is a market order"
   }
 ]

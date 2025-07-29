@@ -2,13 +2,13 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "the sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "orders",
     "Type": "DerivativeOrder array",
-    "Description": "",
+    "Description": "the orders to create",
     "Required": "Yes"
   }
 ]

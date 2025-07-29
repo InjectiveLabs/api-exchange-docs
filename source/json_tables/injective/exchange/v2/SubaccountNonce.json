@@ -2,11 +2,11 @@
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the subaccount ID"
   },
   {
     "Parameter": "subaccount_trade_nonce",
     "Type": "SubaccountTradeNonce",
-    "Description": ""
+    "Description": "the subaccount trade nonce"
   }
 ]

@@ -2,21 +2,21 @@
   {
     "Parameter": "master_addresses",
     "Type": "string array",
-    "Description": ""
+    "Description": "list of master addresses"
   },
   {
     "Parameter": "derivative_addresses",
     "Type": "string array",
-    "Description": ""
+    "Description": "list of derivative addresses"
   },
   {
     "Parameter": "spot_addresses",
     "Type": "string array",
-    "Description": ""
+    "Description": "list of spot addresses"
   },
   {
     "Parameter": "cw20_addresses",
     "Type": "string array",
-    "Description": ""
+    "Description": "list of cw20 addresses"
   }
 ]

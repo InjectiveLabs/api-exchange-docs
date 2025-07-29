@@ -18,5 +18,10 @@
     "Parameter": "data",
     "Type": "BlockEventsRPC",
     "Description": ""
+  },
+  {
+    "Parameter": "block",
+    "Type": "BasicBlockInfo",
+    "Description": ""
   }
 ]

@@ -103,5 +103,10 @@
     "Parameter": "eip155_chain_id",
     "Type": "cosmossdk_io_math.Int",
     "Description": "eip155_chain_id: identifies the chain and is used for replay protection"
+  },
+  {
+    "Parameter": "blob_schedule_config",
+    "Type": "BlobScheduleConfig",
+    "Description": "eip7840: per-fork schedule of max and target blob counts in client configuration files"
   }
 ]

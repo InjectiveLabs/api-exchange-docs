@@ -2,13 +2,13 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "Injective address of the stake grantee",
     "Required": "Yes"
   },
   {
     "Parameter": "granter",
     "Type": "string",
-    "Description": "",
+    "Description": "Injective address of the stake granter",
     "Required": "Yes"
   }
 ]

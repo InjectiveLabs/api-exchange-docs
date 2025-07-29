@@ -2,36 +2,36 @@
   {
     "Parameter": "market_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the market ID"
   },
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the subaccount ID"
   },
   {
     "Parameter": "isLong",
     "Type": "bool",
-    "Description": ""
+    "Description": "whether the position is long or short"
   },
   {
     "Parameter": "quantity",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the quantity of the position (in human readable format)"
   },
   {
     "Parameter": "entry_price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the entry price of the position (in human readable format)"
   },
   {
     "Parameter": "margin",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the margin of the position (in human readable format)"
   },
   {
     "Parameter": "cumulative_funding_entry",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the cumulative funding entry of the position (in human readable format)"
   }
 ]

@@ -2,25 +2,25 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "the sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "source_subaccount_id",
     "Type": "string",
-    "Description": "",
+    "Description": "the source subaccount ID",
     "Required": "Yes"
   },
   {
     "Parameter": "destination_subaccount_id",
     "Type": "string",
-    "Description": "",
+    "Description": "the destination subaccount ID",
     "Required": "Yes"
   },
   {
     "Parameter": "amount",
     "Type": "types.Coin",
-    "Description": "",
+    "Description": "the amount of the transfer",
     "Required": "Yes"
   }
 ]

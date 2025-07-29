@@ -2,25 +2,25 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "the sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "ticker",
     "Type": "string",
-    "Description": "Ticker for the derivative contract.",
+    "Description": "the ticker for the derivative contract",
     "Required": "Yes"
   },
   {
     "Parameter": "oracle_symbol",
     "Type": "string",
-    "Description": "Oracle symbol",
+    "Description": "the oracle symbol",
     "Required": "Yes"
   },
   {
     "Parameter": "oracle_provider",
     "Type": "string",
-    "Description": "Oracle Provider",
+    "Description": "the oracle provider",
     "Required": "Yes"
   },
   {

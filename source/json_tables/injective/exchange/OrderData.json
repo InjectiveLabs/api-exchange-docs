@@ -2,26 +2,26 @@
   {
     "Parameter": "market_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the market ID"
   },
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the subaccount ID"
   },
   {
     "Parameter": "order_hash",
     "Type": "string",
-    "Description": ""
+    "Description": "the order hash"
   },
   {
     "Parameter": "order_mask",
     "Type": "int32",
-    "Description": ""
+    "Description": "the order mask (bitwise combination of OrderMask enum values)"
   },
   {
     "Parameter": "cid",
     "Type": "string",
-    "Description": ""
+    "Description": "the client order ID"
   }
 ]

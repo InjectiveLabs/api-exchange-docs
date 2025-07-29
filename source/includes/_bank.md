@@ -9,8 +9,8 @@ Bank module.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/1_MsgSend.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/1_MsgSend.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/1_MsgSend.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/1_MsgSend.py -->
 ```py
 import asyncio
 import json
@@ -75,12 +75,14 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/1_MsgSend/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/1_MsgSend/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/1_MsgSend/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/1_MsgSend/example.go -->
 ```go
 package main
 
 import (
+	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"time"
@@ -88,6 +90,7 @@ import (
 	"cosmossdk.io/math"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
+	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -135,13 +138,16 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
 
 	// prepare tx msg
-	msg := &banktypes.MsgSend{
+	msg := banktypes.MsgSend{
 		FromAddress: senderAddress.String(),
 		ToAddress:   "inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r",
 		Amount: []sdktypes.Coin{{
@@ -150,24 +156,16 @@ func main() {
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	err = chainClient.QueueBroadcastMsg(msg)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, &msg)
 
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
-	time.Sleep(time.Second * 5)
+	str, _ := json.MarshalIndent(response, "", "\t")
+	fmt.Print(string(str))
 
-	gasFee, err := chainClient.GetGasFee()
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("gas fee:", gasFee, "INJ")
-
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -244,12 +242,14 @@ gas fee: 0.0000599355 INJ
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/2_MsgMultiSend/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/2_MsgMultiSend/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/2_MsgMultiSend/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/2_MsgMultiSend/example.go -->
 ```go
 package main
 
 import (
+	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"time"
@@ -257,6 +257,7 @@ import (
 	"cosmossdk.io/math"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
+	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -307,14 +308,17 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
 
 	// prepare tx msg
 
-	msg := &banktypes.MsgMultiSend{
+	msg := banktypes.MsgMultiSend{
 		Inputs: []banktypes.Input{
 			{
 				Address: senderAddress.String(),
@@ -346,24 +350,16 @@ func main() {
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	err = chainClient.QueueBroadcastMsg(msg)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, &msg)
 
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
-	time.Sleep(time.Second * 5)
+	str, _ := json.MarshalIndent(response, "", "\t")
+	fmt.Print(string(str))
 
-	gasFee, err := chainClient.GetGasFee()
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("gas fee:", gasFee, "INJ")
-
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -419,8 +415,8 @@ Get the bank balance for all denoms.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/2_BankBalances.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/2_BankBalances.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/2_BankBalances.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/2_BankBalances.py -->
 ```py
 import asyncio
 import json
@@ -442,8 +438,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/2_BankBalances/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/2_BankBalances/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/2_BankBalances/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/2_BankBalances/example.go -->
 ```go
 package main
 
@@ -508,7 +504,7 @@ func main() {
 
 	res, err := chainClient.GetBankBalances(ctx, address)
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
 	str, _ := json.MarshalIndent(res, "", "\t")
@@ -620,8 +616,8 @@ Get the bank balance for a specific denom.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/1_BankBalance.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/1_BankBalance.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/1_BankBalance.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/1_BankBalance.py -->
 ```py
 import asyncio
 import json
@@ -644,8 +640,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/1_BankBalance/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/1_BankBalance/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/1_BankBalance/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/1_BankBalance/example.go -->
 ```go
 package main
 
@@ -771,8 +767,8 @@ Get the bank spendable balances for a specific address.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/3_SpendableBalances.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/3_SpendableBalances.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/3_SpendableBalances.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/3_SpendableBalances.py -->
 ```py
 import asyncio
 import json
@@ -794,8 +790,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/3_BankSpendableBalances/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/3_BankSpendableBalances/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/3_BankSpendableBalances/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/3_BankSpendableBalances/example.go -->
 ```go
 package main
 
@@ -1011,8 +1007,8 @@ Get the bank spendable balances for a specific address and denom.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/4_SpendableBalancesByDenom.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/4_SpendableBalancesByDenom.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/4_SpendableBalancesByDenom.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/4_SpendableBalancesByDenom.py -->
 ```py
 import asyncio
 import json
@@ -1035,8 +1031,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/4_BankSpendableBalancesByDenom/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/4_BankSpendableBalancesByDenom/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/4_BankSpendableBalancesByDenom/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/4_BankSpendableBalancesByDenom/example.go -->
 ```go
 package main
 
@@ -1162,8 +1158,8 @@ Get the total supply for all tokens
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/5_TotalSupply.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/5_TotalSupply.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/5_TotalSupply.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/5_TotalSupply.py -->
 ```py
 import asyncio
 import json
@@ -1187,8 +1183,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/5_BankTotalSupply/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/5_BankTotalSupply/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/5_BankTotalSupply/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/5_BankTotalSupply/example.go -->
 ```go
 package main
 
@@ -1398,8 +1394,8 @@ Queries the supply of a single token
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/6_SupplyOf.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/6_SupplyOf.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/6_SupplyOf.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/6_SupplyOf.py -->
 ```py
 import asyncio
 import json
@@ -1420,8 +1416,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/6_BankSupplyOf/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/6_BankSupplyOf/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/6_BankSupplyOf/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/6_BankSupplyOf/example.go -->
 ```go
 package main
 
@@ -1540,8 +1536,8 @@ Queries the metadata of a single token
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/7_DenomMetadata.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/7_DenomMetadata.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/7_DenomMetadata.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/7_DenomMetadata.py -->
 ```py
 import asyncio
 import json
@@ -1563,8 +1559,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/7_DenomMetadata/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/7_DenomMetadata/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/7_DenomMetadata/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/7_DenomMetadata/example.go -->
 ```go
 package main
 
@@ -1712,8 +1708,8 @@ Queries the metadata of all tokens
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/8_DenomsMetadata.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/8_DenomsMetadata.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/8_DenomsMetadata.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/8_DenomsMetadata.py -->
 ```py
 import asyncio
 import json
@@ -1737,8 +1733,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/8_DenomsMetadata/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/8_DenomsMetadata/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/8_DenomsMetadata/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/8_DenomsMetadata/example.go -->
 ```go
 package main
 
@@ -2132,8 +2128,8 @@ Queries for all account addresses that own a particular token
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/9_DenomOwners.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/9_DenomOwners.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/9_DenomOwners.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/9_DenomOwners.py -->
 ```py
 import asyncio
 import json
@@ -2159,8 +2155,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/9_DenomOwners/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/9_DenomOwners/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/9_DenomOwners/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/9_DenomOwners/example.go -->
 ```go
 package main
 
@@ -2372,8 +2368,8 @@ This query only returns denominations that have specific SendEnabled settings. A
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/10_SendEnabled.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/bank/query/10_SendEnabled.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/bank/query/10_SendEnabled.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/bank/query/10_SendEnabled.py -->
 ```py
 import asyncio
 import json
@@ -2399,8 +2395,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/10_BankSendEnabled/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/bank/query/10_BankSendEnabled/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/bank/query/10_BankSendEnabled/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/bank/query/10_BankSendEnabled/example.go -->
 ```go
 package main
 

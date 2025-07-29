@@ -2,21 +2,21 @@
   {
     "Parameter": "status",
     "Type": "OrderUpdateStatus",
-    "Description": ""
+    "Description": "the status of the order"
   },
   {
     "Parameter": "order_hash",
     "Type": "string",
-    "Description": ""
+    "Description": "the order hash"
   },
   {
     "Parameter": "cid",
     "Type": "string",
-    "Description": ""
+    "Description": "the client order ID"
   },
   {
     "Parameter": "order",
     "Type": "SpotOrder",
-    "Description": ""
+    "Description": "the order details"
   }
 ]

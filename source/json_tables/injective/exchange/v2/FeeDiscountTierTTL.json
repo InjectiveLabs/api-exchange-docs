@@ -2,11 +2,11 @@
   {
     "Parameter": "tier",
     "Type": "uint64",
-    "Description": ""
+    "Description": "the tier number"
   },
   {
     "Parameter": "ttl_timestamp",
     "Type": "int64",
-    "Description": ""
+    "Description": "the TTL timestamp in seconds"
   }
 ]

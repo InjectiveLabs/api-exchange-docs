@@ -2,13 +2,13 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "the sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "data",
     "Type": "OrderData array",
-    "Description": "",
+    "Description": "orders details",
     "Required": "Yes"
   }
 ]

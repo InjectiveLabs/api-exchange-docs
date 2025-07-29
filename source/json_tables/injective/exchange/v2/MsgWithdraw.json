@@ -2,19 +2,19 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "the sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": "bytes32 subaccount ID to withdraw funds from",
+    "Description": "the subaccount ID to withdraw funds from",
     "Required": "Yes"
   },
   {
     "Parameter": "amount",
     "Type": "types.Coin",
-    "Description": "",
+    "Description": "the amount of the withdrawal (in chain format)",
     "Required": "Yes"
   }
 ]

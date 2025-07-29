@@ -9,8 +9,8 @@ Includes the messages to create, underwrite and redeem in insurance funds.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/insurance/1_MsgCreateInsuranceFund.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/insurance/1_MsgCreateInsuranceFund.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/insurance/1_MsgCreateInsuranceFund.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/insurance/1_MsgCreateInsuranceFund.py -->
 ```py
 import asyncio
 import json
@@ -143,8 +143,8 @@ gas fee: 0.000075824 INJ
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/insurance/2_MsgUnderwrite.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/insurance/2_MsgUnderwrite.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/insurance/2_MsgUnderwrite.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/insurance/2_MsgUnderwrite.py -->
 ```py
 import asyncio
 import json
@@ -273,8 +273,8 @@ gas fee: 0.000071021 INJ
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/insurance/3_MsgRequestRedemption.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/insurance/3_MsgRequestRedemption.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/insurance/3_MsgRequestRedemption.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/insurance/3_MsgRequestRedemption.py -->
 ```py
 import asyncio
 import json

@@ -2,6 +2,6 @@
   {
     "Parameter": "amount",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the minimum notional amount for the denom (in chain format)"
   }
 ]

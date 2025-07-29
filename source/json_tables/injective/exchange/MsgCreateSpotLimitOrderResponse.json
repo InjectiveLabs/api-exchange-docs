@@ -2,11 +2,11 @@
   {
     "Parameter": "order_hash",
     "Type": "string",
-    "Description": ""
+    "Description": "the order hash"
   },
   {
     "Parameter": "cid",
     "Type": "string",
-    "Description": ""
+    "Description": "the client order ID"
   }
 ]

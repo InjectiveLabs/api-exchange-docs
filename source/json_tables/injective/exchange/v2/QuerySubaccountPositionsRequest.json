@@ -2,7 +2,7 @@
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": "",
+    "Description": "the subaccount ID",
     "Required": "Yes"
   }
 ]

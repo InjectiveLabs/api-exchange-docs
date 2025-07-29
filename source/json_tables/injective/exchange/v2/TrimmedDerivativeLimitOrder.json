@@ -2,22 +2,22 @@
   {
     "Parameter": "price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "price of the order"
+    "Description": "price of the order (in human readable format)"
   },
   {
     "Parameter": "quantity",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "quantity of the order"
+    "Description": "quantity of the order (in human readable format)"
   },
   {
     "Parameter": "margin",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "margin of the order"
+    "Description": "margin of the order (in human readable format)"
   },
   {
     "Parameter": "fillable",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "the amount of the quantity remaining fillable"
+    "Description": "the amount of the quantity remaining fillable (in human readable format)"
   },
   {
     "Parameter": "isBuy",
@@ -27,11 +27,11 @@
   {
     "Parameter": "order_hash",
     "Type": "string",
-    "Description": ""
+    "Description": "the order hash (optional)"
   },
   {
     "Parameter": "cid",
     "Type": "string",
-    "Description": ""
+    "Description": "the client order ID (optional)"
   }
 ]

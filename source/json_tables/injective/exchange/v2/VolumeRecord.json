@@ -2,11 +2,11 @@
   {
     "Parameter": "maker_volume",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the market's maker volume (in human readable format)"
   },
   {
     "Parameter": "taker_volume",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the market's taker volume (in human readable format)"
   }
 ]

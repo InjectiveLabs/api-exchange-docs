@@ -2,7 +2,7 @@
   {
     "Parameter": "type",
     "Type": "string",
-    "Description": "",
+    "Description": "Comma-separated list of msg types",
     "Required": "Yes"
   },
   {
@@ -26,6 +26,18 @@
   {
     "Parameter": "token",
     "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "The status of the txs to be returned",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "block_number",
+    "Type": "uint64",
     "Description": "",
     "Required": "Yes"
   }

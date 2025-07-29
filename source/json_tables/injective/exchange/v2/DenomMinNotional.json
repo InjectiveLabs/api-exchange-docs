@@ -2,11 +2,11 @@
   {
     "Parameter": "denom",
     "Type": "string",
-    "Description": ""
+    "Description": "the denom of the token"
   },
   {
     "Parameter": "min_notional",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the minimum notional value for the token (in human readable format)"
   }
 ]

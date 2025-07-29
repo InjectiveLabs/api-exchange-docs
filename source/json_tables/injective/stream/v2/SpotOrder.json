@@ -2,11 +2,11 @@
   {
     "Parameter": "market_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the market ID"
   },
   {
     "Parameter": "order",
     "Type": "v2.SpotLimitOrder",
-    "Description": ""
+    "Description": "the order details"
   }
 ]

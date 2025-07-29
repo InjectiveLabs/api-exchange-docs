@@ -2,16 +2,16 @@
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the subaccount ID"
   },
   {
     "Parameter": "denom",
     "Type": "string",
-    "Description": ""
+    "Description": "the denom of the balance"
   },
   {
     "Parameter": "deposits",
     "Type": "Deposit",
-    "Description": ""
+    "Description": "the token deposits details"
   }
 ]

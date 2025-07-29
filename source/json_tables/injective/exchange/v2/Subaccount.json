@@ -2,11 +2,11 @@
   {
     "Parameter": "trader",
     "Type": "string",
-    "Description": ""
+    "Description": "the subaccount's trader address"
   },
   {
     "Parameter": "subaccount_nonce",
     "Type": "uint32",
-    "Description": ""
+    "Description": "the subaccount's nonce number"
   }
 ]

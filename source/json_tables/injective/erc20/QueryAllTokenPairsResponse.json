@@ -3,5 +3,10 @@
     "Parameter": "token_pairs",
     "Type": "TokenPair array",
     "Description": ""
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
   }
 ]

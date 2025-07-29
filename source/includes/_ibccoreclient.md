@@ -11,8 +11,8 @@ Queries an IBC light client
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/1_ClientState.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/1_ClientState.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/client/query/1_ClientState.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/client/query/1_ClientState.py -->
 ```py
 import asyncio
 
@@ -38,8 +38,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/1_ClientState/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/1_ClientState/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/client/query/1_ClientState/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/client/query/1_ClientState/example.go -->
 ```go
 package main
 
@@ -228,8 +228,8 @@ Queries all the IBC light clients of a chain
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/2_ClientStates.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/2_ClientStates.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/client/query/2_ClientStates.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/client/query/2_ClientStates.py -->
 ```py
 import asyncio
 
@@ -256,8 +256,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/2_ClientStates/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/2_ClientStates/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/client/query/2_ClientStates/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/client/query/2_ClientStates/example.go -->
 ```go
 package main
 
@@ -907,8 +907,8 @@ Queries a consensus state associated with a client state at a given height
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/3_ConsensusState.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/3_ConsensusState.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/client/query/3_ConsensusState.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/client/query/3_ConsensusState.py -->
 ```py
 import asyncio
 
@@ -938,8 +938,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/3_ConsensusState/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/3_ConsensusState/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/client/query/3_ConsensusState/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/client/query/3_ConsensusState/example.go -->
 ```go
 package main
 
@@ -1070,8 +1070,8 @@ Queries all the consensus state associated with a given client
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/4_ConsensusStates.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/4_ConsensusStates.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/client/query/4_ConsensusStates.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/client/query/4_ConsensusStates.py -->
 ```py
 import asyncio
 
@@ -1099,8 +1099,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/4_ConsensusStates/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/4_ConsensusStates/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/client/query/4_ConsensusStates/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/client/query/4_ConsensusStates/example.go -->
 ```go
 package main
 
@@ -1285,8 +1285,8 @@ Queries the height of every consensus states associated with a given client
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/5_ConsensusStateHeights.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/5_ConsensusStateHeights.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/client/query/5_ConsensusStateHeights.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/client/query/5_ConsensusStateHeights.py -->
 ```py
 import asyncio
 
@@ -1314,8 +1314,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/5_ConsensusStateHeight/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/5_ConsensusStateHeight/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/client/query/5_ConsensusStateHeight/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/client/query/5_ConsensusStateHeight/example.go -->
 ```go
 package main
 
@@ -1451,8 +1451,8 @@ Queries the status of an IBC client
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/6_ClientStatus.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/6_ClientStatus.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/client/query/6_ClientStatus.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/client/query/6_ClientStatus.py -->
 ```py
 import asyncio
 
@@ -1478,8 +1478,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/6_ClientStatus/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/6_ClientStatus/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/client/query/6_ClientStatus/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/client/query/6_ClientStatus/example.go -->
 ```go
 package main
 
@@ -1582,8 +1582,8 @@ Queries all parameters of the ibc client submodule
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/7_ClientParams.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/7_ClientParams.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/client/query/7_ClientParams.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/client/query/7_ClientParams.py -->
 ```py
 import asyncio
 
@@ -1607,8 +1607,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/7_ClientParams/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/7_ClientParams/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/client/query/7_ClientParams/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/client/query/7_ClientParams/example.go -->
 ```go
 package main
 
@@ -1721,8 +1721,8 @@ Queries an Upgraded IBC light client
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/8_UpgradedClientState.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/8_UpgradedClientState.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/client/query/8_UpgradedClientState.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/client/query/8_UpgradedClientState.py -->
 ```py
 import asyncio
 
@@ -1746,8 +1746,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/8_UpgradedClientState/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/8_UpgradedClientState/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/client/query/8_UpgradedClientState/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/client/query/8_UpgradedClientState/example.go -->
 ```go
 package main
 
@@ -1845,8 +1845,8 @@ Queries an Upgraded IBC consensus state
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/9_UpgradedConsensusState.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/client/query/9_UpgradedConsensusState.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/client/query/9_UpgradedConsensusState.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/client/query/9_UpgradedConsensusState.py -->
 ```py
 import asyncio
 
@@ -1870,8 +1870,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/9_UpgradedConsensusState/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/client/query/9_UpgradedConsensusState/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/client/query/9_UpgradedConsensusState/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/client/query/9_UpgradedConsensusState/example.go -->
 ```go
 package main
 

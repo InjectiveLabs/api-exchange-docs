@@ -2,21 +2,21 @@
   {
     "Parameter": "maker_discount_rate",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the maker discount rate"
   },
   {
     "Parameter": "taker_discount_rate",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the taker discount rate"
   },
   {
     "Parameter": "staked_amount",
     "Type": "cosmossdk_io_math.Int",
-    "Description": ""
+    "Description": "the staked amount required to qualify for the discount (in chain format)"
   },
   {
     "Parameter": "volume",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the volume required to qualify for the discount (in human readable format)"
   }
 ]

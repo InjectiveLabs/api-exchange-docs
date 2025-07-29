@@ -11,8 +11,8 @@ Get details of a single derivative market.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/1_Market.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/1_Market.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/1_Market.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/1_Market.py -->
 ```py
 import asyncio
 import json
@@ -35,8 +35,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/1_Market/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/1_Market/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/1_Market/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/1_Market/example.go -->
 ```go
 package main
 
@@ -243,8 +243,8 @@ Get a list of one or more derivative markets.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/2_Markets.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/2_Markets.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/2_Markets.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/2_Markets.py -->
 ```py
 import asyncio
 import json
@@ -268,8 +268,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/2_Markets/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/2_Markets/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/2_Markets/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/2_Markets/example.go -->
 ```go
 package main
 
@@ -556,8 +556,8 @@ Stream live updates of derivative markets.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/3_StreamMarket.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/3_StreamMarket.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/3_StreamMarket.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/3_StreamMarket.py -->
 ```py
 import asyncio
 from typing import Any, Dict
@@ -602,8 +602,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/3_StreamMarket/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/3_StreamMarket/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/3_StreamMarket/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/3_StreamMarket/example.go -->
 ```go
 package main
 
@@ -829,8 +829,8 @@ Lists historical orders posted from a subaccount
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/21_Historical_Orders.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/21_Historical_Orders.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/21_Historical_Orders.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/21_Historical_Orders.py -->
 ```py
 import asyncio
 import json
@@ -864,8 +864,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/18_HistoricalOrders/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/18_HistoricalOrders/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/18_HistoricalOrders/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/18_HistoricalOrders/example.go -->
 ```go
 package main
 
@@ -1171,8 +1171,8 @@ Stream order updates of a derivative market.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/10_StreamHistoricalOrders.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/10_StreamHistoricalOrders.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/10_StreamHistoricalOrders.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/10_StreamHistoricalOrders.py -->
 ```py
 import asyncio
 from typing import Any, Dict
@@ -1219,8 +1219,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/19_StreamHistoricalOrders/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/19_StreamHistoricalOrders/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/19_StreamHistoricalOrders/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/19_StreamHistoricalOrders/example.go -->
 ```go
 package main
 
@@ -1429,8 +1429,8 @@ The difference between `Trades` and `TradesV2` is that the latter returns a `tra
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/11_Trades.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/11_Trades.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/11_Trades.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/11_Trades.py -->
 ```py
 import asyncio
 import json
@@ -1460,8 +1460,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/21_TradesV2/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/21_TradesV2/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/21_TradesV2/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/21_TradesV2/example.go -->
 ```go
 package main
 
@@ -1846,8 +1846,8 @@ The difference between `StreamTrades` and `StreamTradesV2` is that the latter re
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/12_StreamTrades.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/12_StreamTrades.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/12_StreamTrades.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/12_StreamTrades.py -->
 ```py
 import asyncio
 from typing import Any, Dict
@@ -1899,8 +1899,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/22_StreamTradesV2/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/22_StreamTradesV2/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/22_StreamTradesV2/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/22_StreamTradesV2/example.go -->
 ```go
 package main
 
@@ -2159,8 +2159,8 @@ Get the positions of a market.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/7_Positions.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/7_Positions.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/7_Positions.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/7_Positions.py -->
 ```py
 import asyncio
 import json
@@ -2199,8 +2199,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/8_Positions/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/8_Positions/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/8_Positions/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/8_Positions/example.go -->
 ```go
 package main
 
@@ -2476,8 +2476,8 @@ Stream position updates for a specific market.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/9_StreamPositions.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/9_StreamPositions.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/9_StreamPositions.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/9_StreamPositions.py -->
 ```py
 import asyncio
 from typing import Any, Dict
@@ -2526,8 +2526,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/10_StreamPositions/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/10_StreamPositions/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/10_StreamPositions/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/10_StreamPositions/example.go -->
 ```go
 package main
 
@@ -2703,8 +2703,8 @@ Gets all the liquidable positions
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/23_LiquidablePositions.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/23_LiquidablePositions.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/23_LiquidablePositions.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/23_LiquidablePositions.py -->
 ```py
 import asyncio
 import json
@@ -2733,8 +2733,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/20_LiquidablePositions/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/20_LiquidablePositions/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/20_LiquidablePositions/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/20_LiquidablePositions/example.go -->
 ```go
 package main
 
@@ -3016,8 +3016,8 @@ Get an orderbook snapshot for one or more derivative markets.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/22_OrderbooksV2.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/22_OrderbooksV2.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/22_OrderbooksV2.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/22_OrderbooksV2.py -->
 ```py
 import asyncio
 import json
@@ -3044,8 +3044,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/5_Orderbooks/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/5_Orderbooks/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/5_Orderbooks/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/5_Orderbooks/example.go -->
 ```go
 package main
 
@@ -3265,8 +3265,8 @@ Stream orderbook snapshot updates for one or more derivative markets
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/5_StreamOrderbooks.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/5_StreamOrderbooks.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/5_StreamOrderbooks.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/5_StreamOrderbooks.py -->
 ```py
 import asyncio
 from typing import Any, Dict
@@ -3313,8 +3313,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/6_StreamOrderbook/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/6_StreamOrderbook/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/6_StreamOrderbook/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/6_StreamOrderbook/example.go -->
 ```go
 package main
 
@@ -3431,8 +3431,8 @@ Stream incremental orderbook updates for one or more derivative markets. This st
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/6_StreamOrderbookUpdate.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/6_StreamOrderbookUpdate.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/6_StreamOrderbookUpdate.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/6_StreamOrderbookUpdate.py -->
 ```py
 import asyncio
 from decimal import Decimal
@@ -3591,8 +3591,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/7_StreamOrderbookUpdate/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/7_StreamOrderbookUpdate/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/7_StreamOrderbookUpdate/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/7_StreamOrderbookUpdate/example.go -->
 ```go
 package main
 
@@ -3872,8 +3872,8 @@ Get the derivative orders of a specific subaccount.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/13_SubaccountOrdersList.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/13_SubaccountOrdersList.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/13_SubaccountOrdersList.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/13_SubaccountOrdersList.py -->
 ```py
 import asyncio
 import json
@@ -3903,8 +3903,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/14_SubaccountOrdersList/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/14_SubaccountOrdersList/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/14_SubaccountOrdersList/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/14_SubaccountOrdersList/example.go -->
 ```go
 package main
 
@@ -4089,8 +4089,8 @@ Get the derivative trades for a specific subaccount.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/14_SubaccountTradesList.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/14_SubaccountTradesList.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/14_SubaccountTradesList.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/14_SubaccountTradesList.py -->
 ```py
 import asyncio
 import json
@@ -4126,8 +4126,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/15_SubaccountTradesList/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/15_SubaccountTradesList/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/15_SubaccountTradesList/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/15_SubaccountTradesList/example.go -->
 ```go
 package main
 
@@ -4314,8 +4314,8 @@ Get the funding payments for a subaccount.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/15_FundingPayments.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/15_FundingPayments.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/15_FundingPayments.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/15_FundingPayments.py -->
 ```py
 import asyncio
 import json
@@ -4346,8 +4346,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/16_FundingPayments/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/16_FundingPayments/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/16_FundingPayments/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/16_FundingPayments/example.go -->
 ```go
 package main
 
@@ -4490,8 +4490,8 @@ Get the historical funding rates for a specific market.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/17_FundingRates.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/17_FundingRates.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/17_FundingRates.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/17_FundingRates.py -->
 ```py
 import asyncio
 import json
@@ -4519,8 +4519,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/17_FundingRates/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/exchange/derivatives/17_FundingRates/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/derivatives/17_FundingRates/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/derivatives/17_FundingRates/example.go -->
 ```go
 package main
 
@@ -4648,8 +4648,8 @@ Get details of a single binary options market.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/20_Binary_Options_Market.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/20_Binary_Options_Market.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/20_Binary_Options_Market.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/20_Binary_Options_Market.py -->
 ```py
 import asyncio
 import json
@@ -4764,8 +4764,8 @@ Get a list of binary options markets.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/19_Binary_Options_Markets.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/derivative_exchange_rpc/19_Binary_Options_Markets.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/19_Binary_Options_Markets.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/derivative_exchange_rpc/19_Binary_Options_Markets.py -->
 ```py
 import asyncio
 import json

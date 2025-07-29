@@ -2,66 +2,66 @@
   {
     "Parameter": "block_height",
     "Type": "uint64",
-    "Description": ""
+    "Description": "the block height"
   },
   {
     "Parameter": "block_time",
     "Type": "int64",
-    "Description": ""
+    "Description": "the block time"
   },
   {
     "Parameter": "bank_balances",
     "Type": "BankBalance array",
-    "Description": ""
+    "Description": "list of bank balances updates"
   },
   {
     "Parameter": "subaccount_deposits",
     "Type": "SubaccountDeposits array",
-    "Description": ""
+    "Description": "list of subaccount deposits updates"
   },
   {
     "Parameter": "spot_trades",
     "Type": "SpotTrade array",
-    "Description": ""
+    "Description": "list of spot trades updates"
   },
   {
     "Parameter": "derivative_trades",
     "Type": "DerivativeTrade array",
-    "Description": ""
+    "Description": "list of derivative trades updates"
   },
   {
     "Parameter": "spot_orders",
     "Type": "SpotOrderUpdate array",
-    "Description": ""
+    "Description": "list of spot orders updates"
   },
   {
     "Parameter": "derivative_orders",
     "Type": "DerivativeOrderUpdate array",
-    "Description": ""
+    "Description": "list of derivative orders updates"
   },
   {
     "Parameter": "spot_orderbook_updates",
     "Type": "OrderbookUpdate array",
-    "Description": ""
+    "Description": "list of spot orderbook updates"
   },
   {
     "Parameter": "derivative_orderbook_updates",
     "Type": "OrderbookUpdate array",
-    "Description": ""
+    "Description": "list of derivative orderbook updates"
   },
   {
     "Parameter": "positions",
     "Type": "Position array",
-    "Description": ""
+    "Description": "list of positions updates"
   },
   {
     "Parameter": "oracle_prices",
     "Type": "OraclePrice array",
-    "Description": ""
+    "Description": "list of oracle prices updates"
   },
   {
     "Parameter": "gas_price",
     "Type": "string",
-    "Description": ""
+    "Description": "the current gas price when the block was processed (in chain format)"
   }
 ]

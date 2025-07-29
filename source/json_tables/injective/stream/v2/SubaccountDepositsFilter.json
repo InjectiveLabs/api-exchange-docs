@@ -2,6 +2,6 @@
   {
     "Parameter": "subaccount_ids",
     "Type": "string array",
-    "Description": ""
+    "Description": "list of subaccount IDs to filter by"
   }
 ]

@@ -2,13 +2,13 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "the sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "order",
     "Type": "DerivativeOrder",
-    "Description": "",
+    "Description": "the order details",
     "Required": "Yes"
   }
 ]

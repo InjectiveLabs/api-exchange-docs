@@ -2,12 +2,12 @@
   {
     "Parameter": "bucket_count",
     "Type": "uint64",
-    "Description": ""
+    "Description": "the bucket number"
   },
   {
     "Parameter": "bucket_duration",
     "Type": "int64",
-    "Description": ""
+    "Description": "the bucket duration in seconds"
   },
   {
     "Parameter": "quote_denoms",

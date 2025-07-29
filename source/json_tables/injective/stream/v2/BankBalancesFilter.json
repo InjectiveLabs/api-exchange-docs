@@ -2,6 +2,6 @@
   {
     "Parameter": "accounts",
     "Type": "string array",
-    "Description": ""
+    "Description": "list of account addresses to filter by"
   }
 ]

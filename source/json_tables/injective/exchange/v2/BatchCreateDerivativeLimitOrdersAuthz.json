@@ -2,11 +2,11 @@
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the subaccount ID"
   },
   {
     "Parameter": "market_ids",
     "Type": "string array",
-    "Description": ""
+    "Description": "the market IDs"
   }
 ]

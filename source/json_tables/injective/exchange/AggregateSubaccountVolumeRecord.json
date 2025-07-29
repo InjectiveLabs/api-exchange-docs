@@ -2,11 +2,11 @@
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the subaccount ID"
   },
   {
     "Parameter": "market_volumes",
     "Type": "MarketVolume array",
-    "Description": ""
+    "Description": "the subaccount volumes for each market"
   }
 ]

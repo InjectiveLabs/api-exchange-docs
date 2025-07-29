@@ -63,5 +63,10 @@
     "Parameter": "cid",
     "Type": "string",
     "Description": "Custom client order ID"
+  },
+  {
+    "Parameter": "pnl",
+    "Type": "string",
+    "Description": "Profit and loss of the trade"
   }
 ]

@@ -11,8 +11,8 @@ Queries a denomination trace information
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/transfer/query/1_DenomTrace.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/transfer/query/1_DenomTrace.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/transfer/query/1_DenomTrace.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/transfer/query/1_DenomTrace.py -->
 ```py
 import asyncio
 from hashlib import sha256
@@ -43,8 +43,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/transfer/query/1_DenomTrace/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/transfer/query/1_DenomTrace/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/transfer/query/1_DenomTrace/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/transfer/query/1_DenomTrace/example.go -->
 ```go
 package main
 
@@ -164,8 +164,8 @@ Queries all denomination traces
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/transfer/query/2_DenomTraces.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/transfer/query/2_DenomTraces.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/transfer/query/2_DenomTraces.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/transfer/query/2_DenomTraces.py -->
 ```py
 import asyncio
 
@@ -192,8 +192,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/transfer/query/2_DenomTraces/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/transfer/query/2_DenomTraces/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/transfer/query/2_DenomTraces/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/transfer/query/2_DenomTraces/example.go -->
 ```go
 package main
 
@@ -340,8 +340,8 @@ Queries a denomination hash information
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/transfer/query/3_DenomHash.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/transfer/query/3_DenomHash.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/transfer/query/3_DenomHash.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/transfer/query/3_DenomHash.py -->
 ```py
 import asyncio
 
@@ -369,8 +369,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/transfer/query/3_DenomHash/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/transfer/query/3_DenomHash/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/transfer/query/3_DenomHash/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/transfer/query/3_DenomHash/example.go -->
 ```go
 package main
 
@@ -475,8 +475,8 @@ Returns the escrow address for a particular port and channel id
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/transfer/query/4_EscrowAddress.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/transfer/query/4_EscrowAddress.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/transfer/query/4_EscrowAddress.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/transfer/query/4_EscrowAddress.py -->
 ```py
 import asyncio
 
@@ -503,8 +503,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/transfer/query/4_EscrowAddress/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/transfer/query/4_EscrowAddress/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/transfer/query/4_EscrowAddress/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/transfer/query/4_EscrowAddress/example.go -->
 ```go
 package main
 
@@ -609,8 +609,8 @@ Returns the total amount of tokens in escrow based on the denom
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/transfer/query/5_TotalEscrowForDenom.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/transfer/query/5_TotalEscrowForDenom.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/transfer/query/5_TotalEscrowForDenom.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/transfer/query/5_TotalEscrowForDenom.py -->
 ```py
 import asyncio
 
@@ -636,8 +636,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/transfer/query/5_TotalEscrowForDenom/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/transfer/query/5_TotalEscrowForDenom/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/transfer/query/5_TotalEscrowForDenom/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/transfer/query/5_TotalEscrowForDenom/example.go -->
 ```go
 package main
 
@@ -752,8 +752,8 @@ Defines a msg to transfer fungible tokens (i.e Coins) between ICS20 enabled chai
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/transfer/1_MsgTransfer.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/ibc/transfer/1_MsgTransfer.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/ibc/transfer/1_MsgTransfer.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/ibc/transfer/1_MsgTransfer.py -->
 ```py
 import asyncio
 import json
@@ -831,24 +831,26 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/transfer/1_MsgTransfer/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/ibc/transfer/1_MsgTransfer/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/ibc/transfer/1_MsgTransfer/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/ibc/transfer/1_MsgTransfer/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	"cosmossdk.io/math"
-	"github.com/InjectiveLabs/sdk-go/client/common"
-
-	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	ibctransfertypes "github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
 	ibccoretypes "github.com/cosmos/ibc-go/v8/modules/core/02-client/types"
+
+	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
+	"github.com/InjectiveLabs/sdk-go/client/common"
 )
 
 func main() {
@@ -892,7 +894,10 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -916,7 +921,7 @@ func main() {
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.AsyncBroadcastMsg(msg)
+	response, err := chainClient.AsyncBroadcastMsg(ctx, msg)
 
 	if err != nil {
 		panic(err)
@@ -925,7 +930,7 @@ func main() {
 	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)

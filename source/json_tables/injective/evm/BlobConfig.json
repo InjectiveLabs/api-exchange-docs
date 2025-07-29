@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "target",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "max",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "base_fee_update_fraction",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

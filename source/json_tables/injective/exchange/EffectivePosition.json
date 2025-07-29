@@ -2,21 +2,21 @@
   {
     "Parameter": "is_long",
     "Type": "bool",
-    "Description": ""
+    "Description": "whether the position is long or short"
   },
   {
     "Parameter": "quantity",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the quantity of the position (in chain format)"
   },
   {
     "Parameter": "entry_price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the entry price of the position (in chain format)"
   },
   {
     "Parameter": "effective_margin",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the effective margin of the position (in chain format)"
   }
 ]

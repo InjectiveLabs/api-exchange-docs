@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "cancun",
+    "Type": "BlobConfig",
+    "Description": ""
+  },
+  {
+    "Parameter": "prague",
+    "Type": "BlobConfig",
+    "Description": ""
+  },
+  {
+    "Parameter": "osaka",
+    "Type": "BlobConfig",
+    "Description": ""
+  },
+  {
+    "Parameter": "verkle",
+    "Type": "BlobConfig",
+    "Description": ""
+  }
+]

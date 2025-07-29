@@ -2,11 +2,11 @@
   {
     "Parameter": "market_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the market ID"
   },
   {
     "Parameter": "volume",
     "Type": "VolumeRecord",
-    "Description": ""
+    "Description": "the market volume"
   }
 ]

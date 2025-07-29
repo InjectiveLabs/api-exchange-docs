@@ -12,8 +12,8 @@ Queries an Ethereum account
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/evm/query/1_Account.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/evm/query/1_Account.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/evm/query/1_Account.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/evm/query/1_Account.py -->
 ```py
 import asyncio
 import json
@@ -52,8 +52,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/evm/query/1_Account/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/evm/query/1_Account/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/evm/query/1_Account/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/evm/query/1_Account/example.go -->
 ```go
 package main
 
@@ -158,8 +158,8 @@ Queries an Ethereum account's Cosmos Address
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/evm/query/2_CosmosAccount.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/evm/query/2_CosmosAccount.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/evm/query/2_CosmosAccount.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/evm/query/2_CosmosAccount.py -->
 ```py
 import asyncio
 import json
@@ -198,8 +198,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/evm/query/2_CosmosAccount/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/evm/query/2_CosmosAccount/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/evm/query/2_CosmosAccount/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/evm/query/2_CosmosAccount/example.go -->
 ```go
 package main
 
@@ -303,8 +303,8 @@ Queries an Ethereum account's from a validator consensus Address
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/evm/query/3_ValidatorAccount.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/evm/query/3_ValidatorAccount.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/evm/query/3_ValidatorAccount.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/evm/query/3_ValidatorAccount.py -->
 ```py
 import asyncio
 import json
@@ -343,8 +343,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/evm/query/3_ValidatorAccount/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/evm/query/3_ValidatorAccount/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/evm/query/3_ValidatorAccount/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/evm/query/3_ValidatorAccount/example.go -->
 ```go
 package main
 
@@ -446,8 +446,8 @@ Queries an Ethereum account's from a validator consensus Address
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/evm/query/4_Balance.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/evm/query/4_Balance.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/evm/query/4_Balance.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/evm/query/4_Balance.py -->
 ```py
 import asyncio
 import json
@@ -486,8 +486,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/evm/query/4_Balance/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/evm/query/4_Balance/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/evm/query/4_Balance/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/evm/query/4_Balance/example.go -->
 ```go
 package main
 
@@ -589,8 +589,8 @@ Queries the balance of all coins for a single account
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/evm/query/5_Storage.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/evm/query/5_Storage.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/evm/query/5_Storage.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/evm/query/5_Storage.py -->
 ```py
 import asyncio
 import json
@@ -630,8 +630,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/evm/query/5_Storage/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/evm/query/5_Storage/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/evm/query/5_Storage/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/evm/query/5_Storage/example.go -->
 ```go
 package main
 
@@ -735,8 +735,8 @@ Queries the balance of all coins for a single account
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/evm/query/6_Code.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/evm/query/6_Code.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/evm/query/6_Code.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/evm/query/6_Code.py -->
 ```py
 import asyncio
 import json
@@ -775,8 +775,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/evm/query/6_Code/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/evm/query/6_Code/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/evm/query/6_Code/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/evm/query/6_Code/example.go -->
 ```go
 package main
 
@@ -876,8 +876,8 @@ Queries the base fee of the parent block of the current block, it's similar to f
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/evm/query/7_BaseFee.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/evm/query/7_BaseFee.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/evm/query/7_BaseFee.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/evm/query/7_BaseFee.py -->
 ```py
 import asyncio
 import json
@@ -915,8 +915,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/evm/query/7_BaseFee/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/evm/query/7_BaseFee/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/evm/query/7_BaseFee/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/evm/query/7_BaseFee/example.go -->
 ```go
 package main
 
@@ -1013,8 +1013,8 @@ Creates a new ERC20 token
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/erc20/1_CreateTokenPair.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/erc20/1_CreateTokenPair.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/erc20/1_CreateTokenPair.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/erc20/1_CreateTokenPair.py -->
 ```py
 import asyncio
 import json
@@ -1083,17 +1083,20 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/erc20/1_CreateTokenPair/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/erc20/1_CreateTokenPair/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/erc20/1_CreateTokenPair/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/erc20/1_CreateTokenPair/example.go -->
 ```go
 package main
 
 import (
+	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 
 	erc20types "github.com/InjectiveLabs/sdk-go/chain/erc20/types"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -1140,7 +1143,10 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -1148,7 +1154,7 @@ func main() {
 	usdtDenom := "factory/inj10vkkttgxdeqcgeppu20x9qtyvuaxxev8qh0awq/usdt"
 	usdtERC20 := "0xdAC17F958D2ee523a2206206994597C13D831ec7"
 
-	msg := &erc20types.MsgCreateTokenPair{
+	msg := erc20types.MsgCreateTokenPair{
 		Sender: senderAddress.String(),
 		TokenPair: erc20types.TokenPair{
 			BankDenom:    usdtDenom,
@@ -1157,24 +1163,16 @@ func main() {
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	err = chainClient.QueueBroadcastMsg(msg)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, &msg)
 
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
-	time.Sleep(time.Second * 5)
+	str, _ := json.MarshalIndent(response, "", "\t")
+	fmt.Print(string(str))
 
-	gasFee, err := chainClient.GetGasFee()
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("gas fee:", gasFee, "INJ")
-
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -1247,8 +1245,8 @@ Deletes an ERC20 token
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/erc20/2_DeleteTokenPair.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/erc20/2_DeleteTokenPair.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/erc20/2_DeleteTokenPair.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/erc20/2_DeleteTokenPair.py -->
 ```py
 import asyncio
 import json
@@ -1315,17 +1313,20 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/erc20/2_DeleteTokenPair/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/erc20/2_DeleteTokenPair/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/erc20/2_DeleteTokenPair/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/erc20/2_DeleteTokenPair/example.go -->
 ```go
 package main
 
 import (
+	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 
 	erc20types "github.com/InjectiveLabs/sdk-go/chain/erc20/types"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -1372,37 +1373,32 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
 
 	usdtDenom := "factory/inj10vkkttgxdeqcgeppu20x9qtyvuaxxev8qh0awq/usdt"
 
-	msg := &erc20types.MsgDeleteTokenPair{
+	msg := erc20types.MsgDeleteTokenPair{
 		Sender:    senderAddress.String(),
 		BankDenom: usdtDenom,
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	err = chainClient.QueueBroadcastMsg(msg)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, &msg)
 
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
-	time.Sleep(time.Second * 5)
+	str, _ := json.MarshalIndent(response, "", "\t")
+	fmt.Print(string(str))
 
-	gasFee, err := chainClient.GetGasFee()
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("gas fee:", gasFee, "INJ")
-
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)

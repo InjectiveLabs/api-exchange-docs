@@ -12,8 +12,8 @@ Retrieves the current chain gas price
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/txfees/query/1_GetEipBaseFee.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/txfees/query/1_GetEipBaseFee.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/txfees/query/1_GetEipBaseFee.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/txfees/query/1_GetEipBaseFee.py -->
 ```py
 import asyncio
 import json
@@ -34,8 +34,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/txfees/query/1_GetEipBaseFee/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/txfees/query/1_GetEipBaseFee/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/txfees/query/1_GetEipBaseFee/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/txfees/query/1_GetEipBaseFee/example.go -->
 ```go
 package main
 

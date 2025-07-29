@@ -2,11 +2,11 @@
   {
     "Parameter": "p",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "price"
+    "Description": "price (in chain format)"
   },
   {
     "Parameter": "q",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "quantity"
+    "Description": "quantity (in chain format)"
   }
 ]

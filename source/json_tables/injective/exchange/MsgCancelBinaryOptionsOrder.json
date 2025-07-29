@@ -2,37 +2,37 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "the sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "market_id",
     "Type": "string",
-    "Description": "",
+    "Description": "the market ID",
     "Required": "Yes"
   },
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": "",
+    "Description": "the subaccount ID",
     "Required": "Yes"
   },
   {
     "Parameter": "order_hash",
     "Type": "string",
-    "Description": "",
+    "Description": "the order hash",
     "Required": "Yes"
   },
   {
     "Parameter": "order_mask",
     "Type": "int32",
-    "Description": "",
+    "Description": "the order mask (bitwise combination of OrderMask enum values)",
     "Required": "Yes"
   },
   {
     "Parameter": "cid",
     "Type": "string",
-    "Description": "",
+    "Description": "the client order ID",
     "Required": "Yes"
   }
 ]

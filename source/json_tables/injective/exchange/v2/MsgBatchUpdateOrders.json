@@ -2,67 +2,67 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "the sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": "subaccount_id only used for the spot_market_ids_to_cancel_all and derivative_market_ids_to_cancel_all.",
-    "Required": "Yes"
+    "Description": "subaccount_id only used for the spot_market_ids_to_cancel_all and derivative_market_ids_to_cancel_all (optional)",
+    "Required": "No"
   },
   {
     "Parameter": "spot_market_ids_to_cancel_all",
     "Type": "string array",
-    "Description": "",
-    "Required": "Yes"
+    "Description": "the market IDs to cancel all spot orders for (optional)",
+    "Required": "No"
   },
   {
     "Parameter": "derivative_market_ids_to_cancel_all",
     "Type": "string array",
-    "Description": "",
-    "Required": "Yes"
+    "Description": "the market IDs to cancel all derivative orders for (optional)",
+    "Required": "No"
   },
   {
     "Parameter": "spot_orders_to_cancel",
     "Type": "OrderData array",
-    "Description": "",
+    "Description": "the spot orders to cancel",
     "Required": "No"
   },
   {
     "Parameter": "derivative_orders_to_cancel",
     "Type": "OrderData array",
-    "Description": "",
+    "Description": "the derivative orders to cancel",
     "Required": "No"
   },
   {
     "Parameter": "spot_orders_to_create",
     "Type": "SpotOrder array",
-    "Description": "",
+    "Description": "the spot orders to create",
     "Required": "No"
   },
   {
     "Parameter": "derivative_orders_to_create",
     "Type": "DerivativeOrder array",
-    "Description": "",
+    "Description": "the derivative orders to create",
     "Required": "No"
   },
   {
     "Parameter": "binary_options_orders_to_cancel",
     "Type": "OrderData array",
-    "Description": "",
+    "Description": "the binary options orders to cancel",
     "Required": "No"
   },
   {
     "Parameter": "binary_options_market_ids_to_cancel_all",
     "Type": "string array",
-    "Description": "",
-    "Required": "Yes"
+    "Description": "the market IDs to cancel all binary options orders for (optional)",
+    "Required": "No"
   },
   {
     "Parameter": "binary_options_orders_to_create",
     "Type": "DerivativeOrder array",
-    "Description": "",
+    "Description": "the binary options orders to create",
     "Required": "No"
   }
 ]

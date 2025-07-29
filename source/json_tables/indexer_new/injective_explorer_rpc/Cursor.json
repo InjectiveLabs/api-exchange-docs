@@ -1,22 +1,7 @@
 [
   {
-    "Parameter": "from",
-    "Type": "int32",
-    "Description": "can be either block height or index num"
-  },
-  {
-    "Parameter": "to",
-    "Type": "int32",
-    "Description": "can be either block height or index num"
-  },
-  {
     "Parameter": "next",
     "Type": "string array",
     "Description": "array of tokens to navigate to the next pages"
-  },
-  {
-    "Parameter": "total",
-    "Type": "int64",
-    "Description": "total number of txs saved in database"
   }
 ]

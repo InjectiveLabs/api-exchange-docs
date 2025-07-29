@@ -20,19 +20,19 @@
   {
     "Parameter": "new_min_price_tick_size",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "(optional) updated min price tick size value",
+    "Description": "(optional) updated min price tick size value (in human readable format)",
     "Required": "No"
   },
   {
     "Parameter": "new_min_quantity_tick_size",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "(optional) updated min quantity tick size value",
+    "Description": "(optional) updated min quantity tick size value (in human readable format)",
     "Required": "No"
   },
   {
     "Parameter": "new_min_notional",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "(optional) updated min notional",
+    "Description": "(optional) updated min notional (in human readable format)",
     "Required": "No"
   }
 ]

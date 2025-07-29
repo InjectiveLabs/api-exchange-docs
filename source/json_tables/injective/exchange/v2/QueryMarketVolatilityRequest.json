@@ -2,13 +2,13 @@
   {
     "Parameter": "market_id",
     "Type": "string",
-    "Description": "",
+    "Description": "the market ID to query volatility for",
     "Required": "Yes"
   },
   {
     "Parameter": "trade_history_options",
     "Type": "TradeHistoryOptions",
-    "Description": "",
+    "Description": "the trade history options",
     "Required": "No"
   }
 ]

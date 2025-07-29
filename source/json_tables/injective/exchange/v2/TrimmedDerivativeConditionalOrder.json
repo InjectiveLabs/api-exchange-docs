@@ -2,22 +2,22 @@
   {
     "Parameter": "price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "price of the order"
+    "Description": "price of the order (in human readable format)"
   },
   {
     "Parameter": "quantity",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "quantity of the order"
+    "Description": "quantity of the order (in human readable format)"
   },
   {
     "Parameter": "margin",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "margin of the order"
+    "Description": "margin of the order (in human readable format)"
   },
   {
     "Parameter": "triggerPrice",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "price to trigger the order"
+    "Description": "price to trigger the order (in human readable format)"
   },
   {
     "Parameter": "isBuy",
@@ -27,16 +27,16 @@
   {
     "Parameter": "isLimit",
     "Type": "bool",
-    "Description": ""
+    "Description": "true if the order is a limit order"
   },
   {
     "Parameter": "order_hash",
     "Type": "string",
-    "Description": ""
+    "Description": "the order hash"
   },
   {
     "Parameter": "cid",
     "Type": "string",
-    "Description": ""
+    "Description": "the client ID"
   }
 ]

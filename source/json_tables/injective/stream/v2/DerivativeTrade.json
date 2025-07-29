@@ -2,56 +2,56 @@
   {
     "Parameter": "market_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the market ID"
   },
   {
     "Parameter": "is_buy",
     "Type": "bool",
-    "Description": ""
+    "Description": "whether the trade is a buy or sell"
   },
   {
     "Parameter": "executionType",
     "Type": "string",
-    "Description": ""
+    "Description": "the execution type"
   },
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the subaccount ID"
   },
   {
     "Parameter": "position_delta",
     "Type": "v2.PositionDelta",
-    "Description": ""
+    "Description": "the position delta of the trade (in human readable format)"
   },
   {
     "Parameter": "payout",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the payout of the trade (in human readable format)"
   },
   {
     "Parameter": "fee",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the fee of the trade (in human readable format)"
   },
   {
     "Parameter": "order_hash",
     "Type": "string",
-    "Description": ""
+    "Description": "the order hash"
   },
   {
     "Parameter": "fee_recipient_address",
     "Type": "string",
-    "Description": ""
+    "Description": "the fee recipient address"
   },
   {
     "Parameter": "cid",
     "Type": "string",
-    "Description": ""
+    "Description": "the client order ID"
   },
   {
     "Parameter": "trade_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the trade ID"
   }
 ]

@@ -2,16 +2,16 @@
   {
     "Parameter": "symbol",
     "Type": "string",
-    "Description": ""
+    "Description": "the symbol of the oracle price"
   },
   {
     "Parameter": "price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the updated price"
   },
   {
     "Parameter": "type",
     "Type": "string",
-    "Description": ""
+    "Description": "the oracle type"
   }
 ]

@@ -2,13 +2,13 @@
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": "",
+    "Description": "the subaccount ID",
     "Required": "Yes"
   },
   {
     "Parameter": "market_id",
     "Type": "string",
-    "Description": "",
+    "Description": "the market ID",
     "Required": "Yes"
   }
 ]

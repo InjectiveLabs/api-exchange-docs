@@ -24,7 +24,7 @@
     "Required": "Yes"
   },
   {
-    "Parameter": "limit",
+    "Parameter": "per_page",
     "Type": "int32",
     "Description": "",
     "Required": "Yes"
@@ -33,6 +33,12 @@
     "Parameter": "token",
     "Type": "string",
     "Description": "Pagination token",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "The status of the txs to be returned",
     "Required": "Yes"
   }
 ]

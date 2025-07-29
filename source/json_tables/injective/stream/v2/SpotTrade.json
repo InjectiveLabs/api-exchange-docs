@@ -2,56 +2,56 @@
   {
     "Parameter": "market_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the market ID"
   },
   {
     "Parameter": "is_buy",
     "Type": "bool",
-    "Description": ""
+    "Description": "whether the trade is a buy or sell"
   },
   {
     "Parameter": "executionType",
     "Type": "string",
-    "Description": ""
+    "Description": "the execution type"
   },
   {
     "Parameter": "quantity",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the quantity of the trade (in human readable format)"
   },
   {
     "Parameter": "price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the price of the trade (in human readable format)"
   },
   {
     "Parameter": "subaccount_id",
     "Type": "string",
-    "Description": "bytes32 subaccount ID that executed the trade"
+    "Description": "the subaccount ID that executed the trade"
   },
   {
     "Parameter": "fee",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the fee of the trade (in human readable format)"
   },
   {
     "Parameter": "order_hash",
     "Type": "string",
-    "Description": ""
+    "Description": "the order hash"
   },
   {
     "Parameter": "fee_recipient_address",
     "Type": "string",
-    "Description": ""
+    "Description": "the fee recipient address"
   },
   {
     "Parameter": "cid",
     "Type": "string",
-    "Description": ""
+    "Description": "the client order ID"
   },
   {
     "Parameter": "trade_id",
     "Type": "string",
-    "Description": ""
+    "Description": "the trade ID"
   }
 ]

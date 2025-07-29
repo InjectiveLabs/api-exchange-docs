@@ -10,8 +10,8 @@ Queries validator commission and self-delegation rewards for validator
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/1_ValidatorDistributionInfo.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/1_ValidatorDistributionInfo.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/distribution/query/1_ValidatorDistributionInfo.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/distribution/query/1_ValidatorDistributionInfo.py -->
 ```py
 import asyncio
 import json
@@ -33,8 +33,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/1_ValidatorDistributionInfo/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/1_ValidatorDistributionInfo/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/distribution/query/1_ValidatorDistributionInfo/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/distribution/query/1_ValidatorDistributionInfo/example.go -->
 ```go
 package main
 
@@ -159,8 +159,8 @@ Queries rewards of a validator address
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/2_ValidatorOutstandingRewards.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/2_ValidatorOutstandingRewards.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/distribution/query/2_ValidatorOutstandingRewards.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/distribution/query/2_ValidatorOutstandingRewards.py -->
 ```py
 import asyncio
 import json
@@ -182,8 +182,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/2_ValidatorOutstandingRewards/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/2_ValidatorOutstandingRewards/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/distribution/query/2_ValidatorOutstandingRewards/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/distribution/query/2_ValidatorOutstandingRewards/example.go -->
 ```go
 package main
 
@@ -309,8 +309,8 @@ Queries accumulated commission for a validator
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/3_ValidatorCommission.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/3_ValidatorCommission.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/distribution/query/3_ValidatorCommission.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/distribution/query/3_ValidatorCommission.py -->
 ```py
 import asyncio
 import json
@@ -332,8 +332,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/3_ValidatorCommission/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/3_ValidatorCommission/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/distribution/query/3_ValidatorCommission/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/distribution/query/3_ValidatorCommission/example.go -->
 ```go
 package main
 
@@ -459,8 +459,8 @@ Queries slash events of a validator
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/4_ValidatorSlashes.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/4_ValidatorSlashes.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/distribution/query/4_ValidatorSlashes.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/distribution/query/4_ValidatorSlashes.py -->
 ```py
 import asyncio
 import json
@@ -486,8 +486,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/4_ValidatorSlashes/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/4_ValidatorSlashes/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/distribution/query/4_ValidatorSlashes/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/distribution/query/4_ValidatorSlashes/example.go -->
 ```go
 package main
 
@@ -625,8 +625,8 @@ Queries the total rewards accrued by a delegation
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/5_DelegationRewards.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/5_DelegationRewards.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/distribution/query/5_DelegationRewards.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/distribution/query/5_DelegationRewards.py -->
 ```py
 import asyncio
 import json
@@ -651,8 +651,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/5_DelegationRewards/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/5_DelegationRewards/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/distribution/query/5_DelegationRewards/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/distribution/query/5_DelegationRewards/example.go -->
 ```go
 package main
 
@@ -770,8 +770,8 @@ Queries the total rewards accrued by each validator
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/6_DelegationTotalRewards.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/6_DelegationTotalRewards.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/distribution/query/6_DelegationTotalRewards.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/distribution/query/6_DelegationTotalRewards.py -->
 ```py
 import asyncio
 import json
@@ -795,8 +795,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/6_DelegationTotalRewards/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/6_DelegationTotalRewards/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/distribution/query/6_DelegationTotalRewards/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/distribution/query/6_DelegationTotalRewards/example.go -->
 ```go
 package main
 
@@ -957,8 +957,8 @@ Queries the validators of a delegator
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/7_DelegatorValidators.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/7_DelegatorValidators.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/distribution/query/7_DelegatorValidators.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/distribution/query/7_DelegatorValidators.py -->
 ```py
 import asyncio
 import json
@@ -982,8 +982,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/7_DelegatorValidators/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/7_DelegatorValidators/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/distribution/query/7_DelegatorValidators/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/distribution/query/7_DelegatorValidators/example.go -->
 ```go
 package main
 
@@ -1091,8 +1091,8 @@ Queries the withdraw address of a delegator
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/8_DelegatorWithdrawAddress.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/8_DelegatorWithdrawAddress.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/distribution/query/8_DelegatorWithdrawAddress.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/distribution/query/8_DelegatorWithdrawAddress.py -->
 ```py
 import asyncio
 import json
@@ -1116,8 +1116,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/8_DelegatorWithdrawAddress/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/8_DelegatorWithdrawAddress/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/distribution/query/8_DelegatorWithdrawAddress/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/distribution/query/8_DelegatorWithdrawAddress/example.go -->
 ```go
 package main
 
@@ -1219,8 +1219,8 @@ Queries the community pool coins
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/9_CommunityPool.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/query/9_CommunityPool.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/distribution/query/9_CommunityPool.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/distribution/query/9_CommunityPool.py -->
 ```py
 import asyncio
 import json
@@ -1241,8 +1241,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/9_CommunityPool/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/query/9_CommunityPool/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/distribution/query/9_CommunityPool/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/distribution/query/9_CommunityPool/example.go -->
 ```go
 package main
 
@@ -1355,8 +1355,8 @@ Changes the withdraw address for a delegator (or validator self-delegation)
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/1_SetWithdrawAddress.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/1_SetWithdrawAddress.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/distribution/1_SetWithdrawAddress.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/distribution/1_SetWithdrawAddress.py -->
 ```py
 import asyncio
 import json
@@ -1418,15 +1418,17 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/1_SetWithdrawAddress/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/1_SetWithdrawAddress/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/distribution/1_SetWithdrawAddress/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/distribution/1_SetWithdrawAddress/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	"github.com/cosmos/cosmos-sdk/x/distribution/types"
@@ -1477,7 +1479,10 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -1490,7 +1495,7 @@ func main() {
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.AsyncBroadcastMsg(msg)
+	response, err := chainClient.AsyncBroadcastMsg(ctx, msg)
 
 	if err != nil {
 		panic(err)
@@ -1499,7 +1504,7 @@ func main() {
 	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -1563,8 +1568,8 @@ Withdraw rewards of a delegator
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/2_WithdrawDelegatorReward.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/2_WithdrawDelegatorReward.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/distribution/2_WithdrawDelegatorReward.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/distribution/2_WithdrawDelegatorReward.py -->
 ```py
 import asyncio
 import json
@@ -1627,17 +1632,20 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/2_MsgWithdrawDelegatorReward/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/2_MsgWithdrawDelegatorReward/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/distribution/2_MsgWithdrawDelegatorReward/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/distribution/2_MsgWithdrawDelegatorReward/example.go -->
 ```go
 package main
 
 import (
+	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 	distributiontypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -1686,34 +1694,30 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
 
-	msg := new(distributiontypes.MsgWithdrawDelegatorReward)
-	msg.DelegatorAddress = senderAddress.String()
-	msg.ValidatorAddress = "injvaloper14gy4acwjm96wd20awm9ar6j54lev5p7espy9ug"
+	msg := distributiontypes.MsgWithdrawDelegatorReward{
+		DelegatorAddress: senderAddress.String(),
+		ValidatorAddress: "injvaloper14gy4acwjm96wd20awm9ar6j54lev5p7espy9ug",
+	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	err = chainClient.QueueBroadcastMsg(msg)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, &msg)
 
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
-	time.Sleep(time.Second * 5)
+	str, _ := json.MarshalIndent(response, "", "\t")
+	fmt.Print(string(str))
 
-	gasFee, err := chainClient.GetGasFee()
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("gas fee:", gasFee, "INJ")
-
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -1789,8 +1793,8 @@ Withdraws the full commission to the validator address
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/3_WithdrawValidatorCommission.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/3_WithdrawValidatorCommission.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/distribution/3_WithdrawValidatorCommission.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/distribution/3_WithdrawValidatorCommission.py -->
 ```py
 import asyncio
 import json
@@ -1851,15 +1855,17 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/3_WithdrawValidatorCommission/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/3_WithdrawValidatorCommission/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/distribution/3_WithdrawValidatorCommission/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/distribution/3_WithdrawValidatorCommission/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	"github.com/cosmos/cosmos-sdk/x/distribution/types"
@@ -1910,7 +1916,10 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -1922,7 +1931,7 @@ func main() {
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.AsyncBroadcastMsg(msg)
+	response, err := chainClient.AsyncBroadcastMsg(ctx, msg)
 
 	if err != nil {
 		panic(err)
@@ -1931,7 +1940,7 @@ func main() {
 	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -1994,8 +2003,8 @@ Allows an account to directly fund the community pool
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/4_FundCommunityPool.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/distribution/4_FundCommunityPool.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/distribution/4_FundCommunityPool.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/distribution/4_FundCommunityPool.py -->
 ```py
 import asyncio
 import json
@@ -2058,15 +2067,17 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/4_FundCommunityPool/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/distribution/4_FundCommunityPool/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/distribution/4_FundCommunityPool/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/distribution/4_FundCommunityPool/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	"cosmossdk.io/math"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
@@ -2119,7 +2130,10 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -2132,7 +2146,7 @@ func main() {
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.AsyncBroadcastMsg(msg)
+	response, err := chainClient.AsyncBroadcastMsg(ctx, msg)
 
 	if err != nil {
 		panic(err)
@@ -2141,7 +2155,7 @@ func main() {
 	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -2214,8 +2228,8 @@ Performs a coins delegation from a delegator to a validator
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/staking/1_MsgDelegate.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/staking/1_MsgDelegate.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/staking/1_MsgDelegate.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/staking/1_MsgDelegate.py -->
 ```py
 import asyncio
 import json
@@ -2280,23 +2294,26 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/staking/1_MsgDelegate/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/staking/1_MsgDelegate/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/staking/1_MsgDelegate/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/staking/1_MsgDelegate/example.go -->
 ```go
 package main
 
 import (
+	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"time"
 
 	"cosmossdk.io/math"
-	"github.com/InjectiveLabs/sdk-go/client/common"
-
-	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
+	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
+
+	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
+	"github.com/InjectiveLabs/sdk-go/client/common"
 )
 
 func main() {
@@ -2341,37 +2358,34 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
 
-	msg := new(stakingtypes.MsgDelegate)
-	msg.DelegatorAddress = senderAddress.String()
-	msg.ValidatorAddress = "injvaloper14gy4acwjm96wd20awm9ar6j54lev5p7espy9ug"
-	msg.Amount = sdktypes.Coin{
-		Denom: "inj", Amount: math.NewInt(1000000000000000000), // 1 INJ
+	msg := stakingtypes.MsgDelegate{
+		DelegatorAddress: senderAddress.String(),
+		ValidatorAddress: "injvaloper14gy4acwjm96wd20awm9ar6j54lev5p7espy9ug",
+		Amount: sdktypes.Coin{
+			Denom:  "inj",
+			Amount: math.NewInt(1000000000000000000), // 1 INJ
+		},
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	err = chainClient.QueueBroadcastMsg(msg)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, &msg)
 
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
-	time.Sleep(time.Second * 5)
+	str, _ := json.MarshalIndent(response, "", "\t")
+	fmt.Print(string(str))
 
-	gasFee, err := chainClient.GetGasFee()
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println("gas fee:", gasFee, "INJ")
-
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)

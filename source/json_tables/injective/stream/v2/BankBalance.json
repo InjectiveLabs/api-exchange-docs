@@ -2,11 +2,11 @@
   {
     "Parameter": "account",
     "Type": "string",
-    "Description": ""
+    "Description": "the account address"
   },
   {
     "Parameter": "balances",
     "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
-    "Description": ""
+    "Description": "list of account balances"
   }
 ]

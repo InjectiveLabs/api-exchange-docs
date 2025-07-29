@@ -34,5 +34,9 @@
   {
     "Error Code": 10,
     "Description": "respective erc20:... denom has existing supply"
+  },
+  {
+    "Error Code": 11,
+    "Description": "invalid query request"
   }
 ]

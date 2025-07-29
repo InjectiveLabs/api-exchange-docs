@@ -11,8 +11,8 @@ Gets the authority metadata for tokens by their creator address
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/query/1_DenomAuthorityMetadata.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/query/1_DenomAuthorityMetadata.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/tokenfactory/query/1_DenomAuthorityMetadata.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/tokenfactory/query/1_DenomAuthorityMetadata.py -->
 ```py
 import asyncio
 
@@ -35,8 +35,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/query/1_DenomAuthorityMetadata/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/query/1_DenomAuthorityMetadata/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/tokenfactory/query/1_DenomAuthorityMetadata/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/tokenfactory/query/1_DenomAuthorityMetadata/example.go -->
 ```go
 package main
 
@@ -157,8 +157,8 @@ Gets all the tokens created by a specific admin/creator
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/query/2_DenomsFromCreator.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/query/2_DenomsFromCreator.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/tokenfactory/query/2_DenomsFromCreator.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/tokenfactory/query/2_DenomsFromCreator.py -->
 ```py
 import asyncio
 
@@ -178,8 +178,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/query/2_DenomsFromCreator/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/query/2_DenomsFromCreator/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/tokenfactory/query/2_DenomsFromCreator/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/tokenfactory/query/2_DenomsFromCreator/example.go -->
 ```go
 package main
 
@@ -366,8 +366,8 @@ Retrieves the entire auctions module's state
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/query/3_TokenfactoryModuleState.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/query/3_TokenfactoryModuleState.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/tokenfactory/query/3_TokenfactoryModuleState.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/tokenfactory/query/3_TokenfactoryModuleState.py -->
 ```py
 import asyncio
 
@@ -387,8 +387,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/query/3_TokenfactoryModuleState/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/query/3_TokenfactoryModuleState/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/tokenfactory/query/3_TokenfactoryModuleState/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/tokenfactory/query/3_TokenfactoryModuleState/example.go -->
 ```go
 package main
 
@@ -610,8 +610,8 @@ Create a new denom
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/1_CreateDenom.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/1_CreateDenom.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/tokenfactory/1_CreateDenom.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/tokenfactory/1_CreateDenom.py -->
 ```py
 import asyncio
 import json
@@ -676,20 +676,23 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/1_CreateDenom/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/1_CreateDenom/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/tokenfactory/1_CreateDenom/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/tokenfactory/1_CreateDenom/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
+
+	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 
 	tokenfactorytypes "github.com/InjectiveLabs/sdk-go/chain/tokenfactory/types"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
-	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 )
 
 func main() {
@@ -733,20 +736,24 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
 
-	message := new(tokenfactorytypes.MsgCreateDenom)
-	message.Sender = senderAddress.String()
-	message.Subdenom = "inj_test"
-	message.Name = "Injective Test Token"
-	message.Symbol = "INJTEST"
-	message.Decimals = 18
+	message := tokenfactorytypes.MsgCreateDenom{
+		Sender:   senderAddress.String(),
+		Subdenom: "inj_test",
+		Name:     "Injective Test Token",
+		Symbol:   "INJTEST",
+		Decimals: 18,
+	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.AsyncBroadcastMsg(message)
+	response, err := chainClient.AsyncBroadcastMsg(ctx, &message)
 
 	if err != nil {
 		panic(err)
@@ -755,7 +762,7 @@ func main() {
 	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -825,8 +832,8 @@ Allows a token admin's account to mint more units
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/2_MsgMint.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/2_MsgMint.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/tokenfactory/2_MsgMint.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/tokenfactory/2_MsgMint.py -->
 ```py
 import asyncio
 import json
@@ -890,23 +897,25 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/2_MsgMint/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/2_MsgMint/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/tokenfactory/2_MsgMint/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/tokenfactory/2_MsgMint/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	"cosmossdk.io/math"
+	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	sdktypes "github.com/cosmos/cosmos-sdk/types"
 
 	tokenfactorytypes "github.com/InjectiveLabs/sdk-go/chain/tokenfactory/types"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
-	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
-	sdktypes "github.com/cosmos/cosmos-sdk/types"
 )
 
 func main() {
@@ -950,20 +959,24 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
 
-	message := new(tokenfactorytypes.MsgMint)
-	message.Sender = senderAddress.String()
-	message.Amount = sdktypes.Coin{
-		Denom:  "factory/inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r/inj_test",
-		Amount: math.NewInt(1000000000),
+	message := tokenfactorytypes.MsgMint{
+		Sender: senderAddress.String(),
+		Amount: sdktypes.Coin{
+			Denom:  "factory/inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r/inj_test",
+			Amount: math.NewInt(1000000000),
+		},
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.AsyncBroadcastMsg(message)
+	response, err := chainClient.AsyncBroadcastMsg(ctx, &message)
 
 	if err != nil {
 		panic(err)
@@ -972,7 +985,7 @@ func main() {
 	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -1048,8 +1061,8 @@ Allows a token admin's account to burn circulating units
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/3_MsgBurn.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/3_MsgBurn.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/tokenfactory/3_MsgBurn.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/tokenfactory/3_MsgBurn.py -->
 ```py
 import asyncio
 import json
@@ -1113,23 +1126,25 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/3_MsgBurn/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/3_MsgBurn/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/tokenfactory/3_MsgBurn/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/tokenfactory/3_MsgBurn/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	"cosmossdk.io/math"
+	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	sdktypes "github.com/cosmos/cosmos-sdk/types"
 
 	tokenfactorytypes "github.com/InjectiveLabs/sdk-go/chain/tokenfactory/types"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
-	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
-	sdktypes "github.com/cosmos/cosmos-sdk/types"
 )
 
 func main() {
@@ -1173,20 +1188,24 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
 
-	message := new(tokenfactorytypes.MsgBurn)
-	message.Sender = senderAddress.String()
-	message.Amount = sdktypes.Coin{
-		Denom:  "factory/inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r/inj_test",
-		Amount: math.NewInt(100),
+	message := tokenfactorytypes.MsgBurn{
+		Sender: senderAddress.String(),
+		Amount: sdktypes.Coin{
+			Denom:  "factory/inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r/inj_test",
+			Amount: math.NewInt(100),
+		},
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.AsyncBroadcastMsg(message)
+	response, err := chainClient.AsyncBroadcastMsg(ctx, &message)
 
 	if err != nil {
 		panic(err)
@@ -1195,7 +1214,7 @@ func main() {
 	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -1271,8 +1290,8 @@ Allows a token admin's account to set the token metadata
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/5_MsgSetDenomMetadata.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/5_MsgSetDenomMetadata.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/tokenfactory/5_MsgSetDenomMetadata.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/tokenfactory/5_MsgSetDenomMetadata.py -->
 ```py
 import asyncio
 import json
@@ -1350,15 +1369,17 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/4_MsgSetDenomMetadata/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/4_MsgSetDenomMetadata/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/tokenfactory/4_MsgSetDenomMetadata/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/tokenfactory/4_MsgSetDenomMetadata/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
@@ -1409,7 +1430,10 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -1441,12 +1465,13 @@ func main() {
 		Decimals:    tokenDecimals,
 	}
 
-	message := new(tokenfactorytypes.MsgSetDenomMetadata)
-	message.Sender = senderAddress.String()
-	message.Metadata = metadata
+	message := tokenfactorytypes.MsgSetDenomMetadata{
+		Sender:   senderAddress.String(),
+		Metadata: metadata,
+	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.AsyncBroadcastMsg(message)
+	response, err := chainClient.AsyncBroadcastMsg(ctx, &message)
 
 	if err != nil {
 		panic(err)
@@ -1455,7 +1480,7 @@ func main() {
 	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -1549,8 +1574,8 @@ Allows a token admin's account to transfer administrative privileged to other ac
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/4_MsgChangeAdmin.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/tokenfactory/4_MsgChangeAdmin.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/tokenfactory/4_MsgChangeAdmin.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/tokenfactory/4_MsgChangeAdmin.py -->
 ```py
 import asyncio
 import json
@@ -1612,15 +1637,17 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/5_MsgChangeAdmin/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/tokenfactory/5_MsgChangeAdmin/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/tokenfactory/5_MsgChangeAdmin/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/tokenfactory/5_MsgChangeAdmin/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 
@@ -1670,19 +1697,23 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
 
-	message := new(tokenfactorytypes.MsgChangeAdmin)
-	message.Sender = senderAddress.String()
-	message.Denom = "factory/inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r/inj_test"
-	// This is the zero address to remove admin permissions
-	message.NewAdmin = "inj1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqe2hm49"
+	message := tokenfactorytypes.MsgChangeAdmin{
+		Sender: senderAddress.String(),
+		Denom:  "factory/inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r/inj_test",
+		// This is the zero address to remove admin permissions
+		NewAdmin: "inj1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqe2hm49",
+	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.AsyncBroadcastMsg(message)
+	response, err := chainClient.AsyncBroadcastMsg(ctx, &message)
 
 	if err != nil {
 		panic(err)
@@ -1691,7 +1722,7 @@ func main() {
 	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)

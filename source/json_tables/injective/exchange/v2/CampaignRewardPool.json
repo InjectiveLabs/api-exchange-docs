@@ -2,7 +2,7 @@
   {
     "Parameter": "start_timestamp",
     "Type": "int64",
-    "Description": ""
+    "Description": "the campaign start timestamp in seconds"
   },
   {
     "Parameter": "max_campaign_rewards",

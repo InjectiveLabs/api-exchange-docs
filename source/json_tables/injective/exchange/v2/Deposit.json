@@ -2,11 +2,11 @@
   {
     "Parameter": "available_balance",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the available balance (in chain format)"
   },
   {
     "Parameter": "total_balance",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "the total balance (in chain format)"
   }
 ]

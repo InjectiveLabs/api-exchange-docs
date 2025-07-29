@@ -17,7 +17,7 @@
   {
     "Parameter": "trigger_price",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "trigger_price is the trigger price used by stop/take orders"
+    "Description": "trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)"
   },
   {
     "Parameter": "expiration_block",

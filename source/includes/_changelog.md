@@ -1,10 +1,11 @@
 # Change Log
 
-## 2025-07-10
+## 2025-07-29
 - Updated all messages to reflect the changes included in the chain version 1.16, and the Indexer for that chain version
 - Added documentation for `erc20` modules endpoints
 - Added documentation for `evm` modules endpoints
 - Updated all `exchange` module examples to query the exchange v2 endpoints and send exchange v2 messages
+- New GTB orders functionality (Good-Til-Block orders)
 - Python SDK v1.11.0
 - Go SDK v1.58.0
 

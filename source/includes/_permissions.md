@@ -12,8 +12,8 @@ Defines a gRPC query method that returns the denoms for which a namespace exists
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/1_NamespaceDenoms.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/1_NamespaceDenoms.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/query/1_NamespaceDenoms.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/query/1_NamespaceDenoms.py -->
 ```py
 import asyncio
 
@@ -34,8 +34,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/1_NamespaceDenoms/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/1_NamespaceDenoms/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/query/1_NamespaceDenoms/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/query/1_NamespaceDenoms/example.go -->
 ```go
 package main
 
@@ -137,8 +137,8 @@ Defines a gRPC query method that returns the permissions module's created namesp
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/2_Namespaces.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/2_Namespaces.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/query/2_Namespaces.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/query/2_Namespaces.py -->
 ```py
 import asyncio
 
@@ -159,8 +159,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/2_Namespaces/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/2_Namespaces/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/query/2_Namespaces/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/query/2_Namespaces/example.go -->
 ```go
 package main
 
@@ -657,8 +657,8 @@ Defines a gRPC query method that returns the permissions module's namespace asso
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/3_Namespace.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/3_Namespace.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/query/3_Namespace.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/query/3_Namespace.py -->
 ```py
 import asyncio
 
@@ -680,8 +680,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/3_Namespace/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/3_Namespace/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/query/3_Namespace/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/query/3_Namespace/example.go -->
 ```go
 package main
 
@@ -1179,8 +1179,8 @@ Defines a gRPC query method that returns roles for the actor in the namespace
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/4_RolesByActor.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/4_RolesByActor.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/query/4_RolesByActor.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/query/4_RolesByActor.py -->
 ```py
 import asyncio
 
@@ -1203,8 +1203,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/4_RolesByActor/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/4_RolesByActor/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/query/4_RolesByActor/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/query/4_RolesByActor/example.go -->
 ```go
 package main
 
@@ -1310,8 +1310,8 @@ Defines a gRPC query method that returns a namespace's roles associated with the
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/5_ActorsByRole.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/5_ActorsByRole.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/query/5_ActorsByRole.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/query/5_ActorsByRole.py -->
 ```py
 import asyncio
 
@@ -1334,8 +1334,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/5_ActorsByRole/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/5_ActorsByRole/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/query/5_ActorsByRole/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/query/5_ActorsByRole/example.go -->
 ```go
 package main
 
@@ -1442,8 +1442,8 @@ Defines a gRPC query method that returns a namespace's role managers
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/6_RoleManagers.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/6_RoleManagers.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/query/6_RoleManagers.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/query/6_RoleManagers.py -->
 ```py
 import asyncio
 
@@ -1465,8 +1465,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/6_RoleManagers/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/6_RoleManagers/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/query/6_RoleManagers/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/query/6_RoleManagers/example.go -->
 ```go
 package main
 
@@ -1599,8 +1599,8 @@ Defines a gRPC query method that returns the roles a given role manager manages 
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/7_RoleManager.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/7_RoleManager.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/query/7_RoleManager.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/query/7_RoleManager.py -->
 ```py
 import asyncio
 
@@ -1623,8 +1623,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/7_RoleManager/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/7_RoleManager/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/query/7_RoleManager/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/query/7_RoleManager/example.go -->
 ```go
 package main
 
@@ -1757,8 +1757,8 @@ Defines a gRPC query method that returns a namespace's policy statuses
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/8_PolicyStatuses.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/8_PolicyStatuses.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/query/8_PolicyStatuses.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/query/8_PolicyStatuses.py -->
 ```py
 import asyncio
 
@@ -1780,8 +1780,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/8_PolicyStatuses/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/8_PolicyStatuses/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/query/8_PolicyStatuses/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/query/8_PolicyStatuses/example.go -->
 ```go
 package main
 
@@ -1938,8 +1938,8 @@ Defines a gRPC query method that returns a namespace's policy manager capabiliti
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/9_PolicyManagerCapabilities.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/9_PolicyManagerCapabilities.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/query/9_PolicyManagerCapabilities.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/query/9_PolicyManagerCapabilities.py -->
 ```py
 import asyncio
 
@@ -1961,8 +1961,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/9_PolicyManagerCapabilities/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/9_PolicyManagerCapabilities/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/query/9_PolicyManagerCapabilities/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/query/9_PolicyManagerCapabilities/example.go -->
 ```go
 package main
 
@@ -2120,8 +2120,8 @@ Defines a gRPC query method for the vouchers for a given denom
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/10_Vouchers.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/10_Vouchers.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/query/10_Vouchers.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/query/10_Vouchers.py -->
 ```py
 import asyncio
 
@@ -2143,8 +2143,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/10_Vouchers/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/10_Vouchers/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/query/10_Vouchers/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/query/10_Vouchers/example.go -->
 ```go
 package main
 
@@ -2263,8 +2263,8 @@ Defines a gRPC query method for the vouchers for a given denom and address
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/11_Voucher.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/11_Voucher.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/query/11_Voucher.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/query/11_Voucher.py -->
 ```py
 import asyncio
 
@@ -2287,8 +2287,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/11_Voucher/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/11_Voucher/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/query/11_Voucher/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/query/11_Voucher/example.go -->
 ```go
 package main
 
@@ -2399,8 +2399,8 @@ Retrieves the entire permissions module's state
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/12_PermissionsModuleState.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/query/12_PermissionsModuleState.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/query/12_PermissionsModuleState.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/query/12_PermissionsModuleState.py -->
 ```py
 import asyncio
 
@@ -2421,8 +2421,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/12_PermissionsModuleState/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/query/12_PermissionsModuleState/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/query/12_PermissionsModuleState/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/query/12_PermissionsModuleState/example.go -->
 ```go
 package main
 
@@ -2962,8 +2962,8 @@ Message to create a new namespace
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/1_MsgCreateNamespace.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/1_MsgCreateNamespace.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/1_MsgCreateNamespace.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/1_MsgCreateNamespace.py -->
 ```py
 import asyncio
 import json
@@ -3082,20 +3082,23 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/1_MsgCreateNamespace/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/1_MsgCreateNamespace/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/1_MsgCreateNamespace/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/1_MsgCreateNamespace/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
+
+	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 
 	permissionstypes "github.com/InjectiveLabs/sdk-go/chain/permissions/types"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
-	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 )
 
 func main() {
@@ -3140,7 +3143,10 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -3214,7 +3220,8 @@ func main() {
 	}
 
 	//AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.SyncBroadcastMsg(msg)
+	pollInterval := 100 * time.Millisecond
+	response, err := chainClient.SyncBroadcastMsg(ctx, &pollInterval, 5, msg)
 
 	if err != nil {
 		panic(err)
@@ -3223,7 +3230,7 @@ func main() {
 	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -3367,8 +3374,8 @@ Message to update a namespace configuration
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/2_MsgUpdateNamespace.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/2_MsgUpdateNamespace.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/2_MsgUpdateNamespace.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/2_MsgUpdateNamespace.py -->
 ```py
 import asyncio
 import json
@@ -3470,15 +3477,17 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/2_MsgUpdateNamespace/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/2_MsgUpdateNamespace/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/2_MsgUpdateNamespace/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/2_MsgUpdateNamespace/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 
@@ -3529,7 +3538,10 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -3581,7 +3593,8 @@ func main() {
 	}
 
 	//AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.SyncBroadcastMsg(msg)
+	pollInterval := 100 * time.Millisecond
+	response, err := chainClient.SyncBroadcastMsg(ctx, &pollInterval, 5, msg)
 
 	if err != nil {
 		panic(err)
@@ -3590,7 +3603,7 @@ func main() {
 	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -3724,8 +3737,8 @@ Message to update the roles assigned to an actor
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/3_MsgUpdateActorRoles.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/3_MsgUpdateActorRoles.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/3_MsgUpdateActorRoles.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/3_MsgUpdateActorRoles.py -->
 ```py
 import asyncio
 import json
@@ -3807,22 +3820,24 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/3_MsgUpdateActorRoles/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/3_MsgUpdateActorRoles/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/3_MsgUpdateActorRoles/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/3_MsgUpdateActorRoles/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
+	"github.com/InjectiveLabs/sdk-go/client/common"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 
 	permissionstypes "github.com/InjectiveLabs/sdk-go/chain/permissions/types"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
-	"github.com/InjectiveLabs/sdk-go/client/common"
 )
 
 func main() {
@@ -3867,7 +3882,10 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -3898,7 +3916,7 @@ func main() {
 	}
 
 	//AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	_, response, err := chainClient.BroadcastMsg(txtypes.BroadcastMode_BROADCAST_MODE_SYNC, msg)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, msg)
 
 	if err != nil {
 		panic(err)
@@ -3907,7 +3925,7 @@ func main() {
 	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -3983,8 +4001,8 @@ Message to claim existing vouchers for a particular address
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/4_MsgClaimVoucher.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/permissions/4_MsgClaimVoucher.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/permissions/4_MsgClaimVoucher.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/permissions/4_MsgClaimVoucher.py -->
 ```py
 import asyncio
 import json
@@ -4047,15 +4065,17 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/4_MsgClaimVoucher/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/permissions/4_MsgClaimVoucher/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/permissions/4_MsgClaimVoucher/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/permissions/4_MsgClaimVoucher/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
@@ -4107,7 +4127,10 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -4120,7 +4143,7 @@ func main() {
 	}
 
 	//AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	_, response, err := chainClient.BroadcastMsg(txtypes.BroadcastMode_BROADCAST_MODE_SYNC, msg)
+	_, response, err := chainClient.BroadcastMsg(ctx, txtypes.BroadcastMode_BROADCAST_MODE_SYNC, msg)
 
 	if err != nil {
 		panic(err)
@@ -4129,7 +4152,7 @@ func main() {
 	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Print(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)

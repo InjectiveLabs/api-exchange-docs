@@ -10,8 +10,8 @@ Wasmx smart contract interactions.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/wasmx/1_MsgExecuteContractCompat.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/wasmx/1_MsgExecuteContractCompat.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/wasmx/1_MsgExecuteContractCompat.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/wasmx/1_MsgExecuteContractCompat.py -->
 ```py
 import asyncio
 import json
@@ -82,15 +82,17 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/wasmx/1_MsgExecuteContractCompat/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/chain/wasmx/1_MsgExecuteContractCompat/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/wasmx/1_MsgExecuteContractCompat/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/wasmx/1_MsgExecuteContractCompat/example.go -->
 ```go
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 
@@ -140,7 +142,10 @@ func main() {
 		panic(err)
 	}
 
-	gasPrice := chainClient.CurrentChainGasPrice()
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)
@@ -169,7 +174,7 @@ func main() {
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
-	response, err := chainClient.AsyncBroadcastMsg(&message)
+	response, err := chainClient.AsyncBroadcastMsg(ctx, &message)
 
 	if err != nil {
 		panic(err)
@@ -178,7 +183,7 @@ func main() {
 	str, _ := json.MarshalIndent(response, "", "\t")
 	fmt.Println(string(str))
 
-	gasPrice = chainClient.CurrentChainGasPrice()
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
 	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
 	gasPrice = int64(float64(gasPrice) * 1.1)
 	chainClient.SetGasPrice(gasPrice)

@@ -2,19 +2,19 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "the sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "ticker",
     "Type": "string",
-    "Description": "Ticker for the spot market.",
+    "Description": "the ticker for the spot market",
     "Required": "Yes"
   },
   {
     "Parameter": "base_denom",
     "Type": "string",
-    "Description": "type of coin to use as the base currency",
+    "Description": "the type of coin to use as the base currency",
     "Required": "Yes"
   },
   {

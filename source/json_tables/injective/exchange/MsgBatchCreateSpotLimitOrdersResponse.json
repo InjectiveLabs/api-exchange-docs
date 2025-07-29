@@ -2,16 +2,16 @@
   {
     "Parameter": "order_hashes",
     "Type": "string array",
-    "Description": ""
+    "Description": "the order hashes"
   },
   {
     "Parameter": "created_orders_cids",
     "Type": "string array",
-    "Description": ""
+    "Description": "the client order IDs"
   },
   {
     "Parameter": "failed_orders_cids",
     "Type": "string array",
-    "Description": ""
+    "Description": "the failed client order IDs"
   }
 ]

@@ -12,8 +12,8 @@ Get the details for a specific transaction.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/1_GetTxByHash.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/1_GetTxByHash.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/1_GetTxByHash.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/1_GetTxByHash.py -->
 ```py
 import asyncio
 import json
@@ -47,8 +47,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/1_GetTxByHash/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/1_GetTxByHash/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/1_GetTxByHash/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/1_GetTxByHash/example.go -->
 ```go
 package main
 
@@ -272,8 +272,8 @@ Get the details for a specific transaction.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/2_AccountTxs.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/2_AccountTxs.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/2_AccountTxs.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/2_AccountTxs.py -->
 ```py
 import asyncio
 import json
@@ -314,8 +314,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/2_AccountTxs/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/2_AccountTxs/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/2_AccountTxs/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/2_AccountTxs/example.go -->
 ```go
 package main
 
@@ -693,8 +693,8 @@ Get data for blocks.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/3_Blocks.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/3_Blocks.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/3_Blocks.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/3_Blocks.py -->
 ```py
 import asyncio
 import json
@@ -719,8 +719,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/3_Blocks/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/3_Blocks/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/3_Blocks/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/3_Blocks/example.go -->
 ```go
 package main
 
@@ -863,8 +863,8 @@ Get detailed data for a single block.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/4_Block.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/4_Block.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/4_Block.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/4_Block.py -->
 ```py
 import asyncio
 import json
@@ -887,8 +887,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/4_Block/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/4_Block/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/4_Block/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/4_Block/example.go -->
 ```go
 package main
 
@@ -1032,8 +1032,8 @@ Get the transactions.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/5_TxsRequest.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/5_TxsRequest.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/5_TxsRequest.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/5_TxsRequest.py -->
 ```py
 import asyncio
 import json
@@ -1058,8 +1058,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/5_TxsRequest/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/5_TxsRequest/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/5_TxsRequest/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/5_TxsRequest/example.go -->
 ```go
 package main
 
@@ -1262,8 +1262,8 @@ Stream transactions.
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/6_StreamTxs.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/6_StreamTxs.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/6_StreamTxs.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/6_StreamTxs.py -->
 ```py
 import asyncio
 from typing import Any, Dict
@@ -1308,8 +1308,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/6_StreamTxs/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/6_StreamTxs/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/6_StreamTxs/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/6_StreamTxs/example.go -->
 ```go
 package main
 
@@ -1455,8 +1455,8 @@ Stream blocks.
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/7_StreamBlocks.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/7_StreamBlocks.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/7_StreamBlocks.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/7_StreamBlocks.py -->
 ```py
 import asyncio
 from typing import Any, Dict
@@ -1501,8 +1501,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/7_StreamBlocks/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/7_StreamBlocks/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/7_StreamBlocks/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/7_StreamBlocks/example.go -->
 ```go
 package main
 
@@ -1636,8 +1636,8 @@ Get info on peggy deposits. By default, deposits for all senders and receivers w
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/8_GetPeggyDeposits.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/8_GetPeggyDeposits.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/8_GetPeggyDeposits.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/8_GetPeggyDeposits.py -->
 ```py
 import asyncio
 import json
@@ -1660,8 +1660,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/8_PeggyDeposits/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/8_PeggyDeposits/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/8_PeggyDeposits/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/8_PeggyDeposits/example.go -->
 ```go
 package main
 
@@ -1837,8 +1837,8 @@ Get info on peggy withdrawals.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/9_GetPeggyWithdrawals.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/9_GetPeggyWithdrawals.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/9_GetPeggyWithdrawals.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/9_GetPeggyWithdrawals.py -->
 ```py
 import asyncio
 import json
@@ -1864,8 +1864,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/9_PeggyWithdrawals/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/9_PeggyWithdrawals/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/9_PeggyWithdrawals/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/9_PeggyWithdrawals/example.go -->
 ```go
 package main
 
@@ -2059,8 +2059,8 @@ Get data on IBC transfers.
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/10_GetIBCTransfers.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/10_GetIBCTransfers.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/10_GetIBCTransfers.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/10_GetIBCTransfers.py -->
 ```py
 import asyncio
 import json
@@ -2100,8 +2100,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/10_IBCTransfers/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/10_IBCTransfers/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/10_IBCTransfers/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/10_IBCTransfers/example.go -->
 ```go
 package main
 
@@ -2264,8 +2264,8 @@ List all cosmwasm code on injective chain. Results are paginated.
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/15_GetWasmCodes.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/15_GetWasmCodes.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/15_GetWasmCodes.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/15_GetWasmCodes.py -->
 ```py
 import asyncio
 import json
@@ -2300,8 +2300,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/11_GetWasmCodes/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/11_GetWasmCodes/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/11_GetWasmCodes/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/11_GetWasmCodes/example.go -->
 ```go
 package main
 
@@ -2486,8 +2486,8 @@ Get cosmwasm code by its code ID
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/16_GetWasmCodeById.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/16_GetWasmCodeById.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/16_GetWasmCodeById.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/16_GetWasmCodeById.py -->
 ```py
 import asyncio
 import json
@@ -2516,8 +2516,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/12_GetWasmCodeById/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/12_GetWasmCodeById/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/12_GetWasmCodeById/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/12_GetWasmCodeById/example.go -->
 ```go
 package main
 
@@ -2620,8 +2620,8 @@ Get cosmwasm instantiated contracts on injective-chain. Results are paginated.
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/17_GetWasmContracts.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/17_GetWasmContracts.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/17_GetWasmContracts.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/17_GetWasmContracts.py -->
 ```py
 import asyncio
 import json
@@ -2656,8 +2656,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/13_GetWasmContracts/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/13_GetWasmContracts/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/13_GetWasmContracts/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/13_GetWasmContracts/example.go -->
 ```go
 package main
 
@@ -2868,8 +2868,8 @@ Get cosmwasm contract by its address
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/18_GetWasmContractByAddress.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/18_GetWasmContractByAddress.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/18_GetWasmContractByAddress.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/18_GetWasmContractByAddress.py -->
 ```py
 import asyncio
 import json
@@ -2896,8 +2896,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/14_GetWasmContractByAddress/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/14_GetWasmContractByAddress/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/14_GetWasmContractByAddress/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/14_GetWasmContractByAddress/example.go -->
 ```go
 package main
 
@@ -3021,8 +3021,8 @@ Get CW20 balances of an injective account across all instantiated CW20 contracts
 
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/19_GetCw20Balance.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/19_GetCw20Balance.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/19_GetCw20Balance.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/19_GetCw20Balance.py -->
 ```py
 import asyncio
 import json
@@ -3049,8 +3049,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/15_GetCW20Balance/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/15_GetCW20Balance/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/15_GetCW20Balance/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/15_GetCW20Balance/example.go -->
 ```go
 package main
 
@@ -3171,8 +3171,8 @@ Returns contract-related transactions
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/16_GetContractTxs/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/16_GetContractTxs/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/16_GetContractTxs/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/16_GetContractTxs/example.go -->
 ```go
 package main
 
@@ -3656,8 +3656,8 @@ Returns contract-related transactions
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/11_GetContractsTxsV2.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/11_GetContractsTxsV2.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/11_GetContractsTxsV2.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/11_GetContractsTxsV2.py -->
 ```py
 import asyncio
 import time
@@ -3709,8 +3709,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/17_GetContractTxsV2/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/17_GetContractTxsV2/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/17_GetContractTxsV2/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/17_GetContractTxsV2/example.go -->
 ```go
 package main
 
@@ -4189,8 +4189,8 @@ Returns validators on the active chain
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/12_GetValidators.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/12_GetValidators.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/12_GetValidators.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/12_GetValidators.py -->
 ```py
 import asyncio
 import json
@@ -4221,8 +4221,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/18_GetValidators/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/18_GetValidators/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/18_GetValidators/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/18_GetValidators/example.go -->
 ```go
 package main
 
@@ -4395,8 +4395,8 @@ Returns validator information on the active chain
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/13_GetValidator.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/13_GetValidator.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/13_GetValidator.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/13_GetValidator.py -->
 ```py
 import asyncio
 import json
@@ -4429,8 +4429,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/19_GetValidator/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/19_GetValidator/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/19_GetValidator/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/19_GetValidator/example.go -->
 ```go
 package main
 
@@ -4576,8 +4576,8 @@ Returns validator uptime information on the active chain
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/14_GetValidatorUptime.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/14_GetValidatorUptime.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/14_GetValidatorUptime.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/14_GetValidatorUptime.py -->
 ```py
 import asyncio
 import json
@@ -4610,8 +4610,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/20_GetValidatorUptime/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/20_GetValidatorUptime/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/20_GetValidatorUptime/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/20_GetValidatorUptime/example.go -->
 ```go
 package main
 
@@ -5095,8 +5095,8 @@ Request relayers infos by marketIDs. If no ids are provided, all market with ass
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/20_Relayers.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/20_Relayers.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/20_Relayers.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/20_Relayers.py -->
 ```py
 import asyncio
 import json
@@ -5127,8 +5127,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/21_Relayers/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/21_Relayers/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/21_Relayers/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/21_Relayers/example.go -->
 ```go
 package main
 
@@ -5215,8 +5215,8 @@ Returns bank transfers
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/21_GetBankTransfers.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/exchange_client/explorer_rpc/21_GetBankTransfers.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/21_GetBankTransfers.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/explorer_rpc/21_GetBankTransfers.py -->
 ```py
 import asyncio
 import json
@@ -5245,8 +5245,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/22_GetBankTransfers/example.go) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-go/raw/dev/examples/explorer/22_GetBankTransfers/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/explorer/22_GetBankTransfers/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/explorer/22_GetBankTransfers/example.go -->
 ```go
 package main
 

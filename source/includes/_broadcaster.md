@@ -14,8 +14,8 @@ To use the broadcaster you just need to create an instance of *MsgBroadcasterWit
 
 > Example - Calculate gas fee simulating the transaction:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/3_MessageBroadcaster.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/3_MessageBroadcaster.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/3_MessageBroadcaster.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/3_MessageBroadcaster.py -->
 ```py
 import asyncio
 import json
@@ -166,8 +166,8 @@ This is the most common broadcaster configuration. Unless you are using grantee 
 
 > Example - Calculate gas fee without simulation:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/5_MessageBroadcasterWithoutSimulation.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/5_MessageBroadcasterWithoutSimulation.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/5_MessageBroadcasterWithoutSimulation.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/5_MessageBroadcasterWithoutSimulation.py -->
 ```py
 import asyncio
 import json
@@ -272,8 +272,8 @@ This is the required broadcaster configuration when operating with grantee accou
 
 > Example - Calculate gas fee simulating the transaction:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/4_MessageBroadcasterWithGranteeAccount.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/4_MessageBroadcasterWithGranteeAccount.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/4_MessageBroadcasterWithGranteeAccount.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/4_MessageBroadcasterWithGranteeAccount.py -->
 ```py
 import asyncio
 import json
@@ -404,8 +404,8 @@ For the broadcaster to calculate the gas fee running the simulation, create an i
 
 > Example - Calculate gas fee without simulation:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/6_MessageBroadcasterWithGranteeAccountWithoutSimulation.py) -->
-<!-- The below code snippet is automatically added from https://github.com/InjectiveLabs/sdk-python/raw/dev/examples/chain_client/6_MessageBroadcasterWithGranteeAccountWithoutSimulation.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/6_MessageBroadcasterWithGranteeAccountWithoutSimulation.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/6_MessageBroadcasterWithGranteeAccountWithoutSimulation.py -->
 ```py
 import asyncio
 import json

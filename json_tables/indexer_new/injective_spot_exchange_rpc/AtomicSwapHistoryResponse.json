@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "paging",
+    "Type": "Paging",
+    "Description": "Paging indicates total number of records with this filter"
+  },
+  {
+    "Parameter": "data",
+    "Type": "AtomicSwap array",
+    "Description": "swap data"
+  }
+]

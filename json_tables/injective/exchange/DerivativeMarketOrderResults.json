@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "quantity",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "fee",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "position_delta",
+    "Type": "PositionDelta",
+    "Description": ""
+  },
+  {
+    "Parameter": "payout",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

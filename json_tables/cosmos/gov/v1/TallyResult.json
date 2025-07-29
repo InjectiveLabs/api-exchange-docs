@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "yes_count",
+    "Type": "string",
+    "Description": "yes_count is the number of yes votes on a proposal."
+  },
+  {
+    "Parameter": "abstain_count",
+    "Type": "string",
+    "Description": "abstain_count is the number of abstain votes on a proposal."
+  },
+  {
+    "Parameter": "no_count",
+    "Type": "string",
+    "Description": "no_count is the number of no votes on a proposal."
+  },
+  {
+    "Parameter": "no_with_veto_count",
+    "Type": "string",
+    "Description": "no_with_veto_count is the number of no with veto votes on a proposal."
+  }
+]

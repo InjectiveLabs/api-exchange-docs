@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "payments",
+    "Type": "FundingPayment array",
+    "Description": "List of funding payments"
+  },
+  {
+    "Parameter": "paging",
+    "Type": "Paging",
+    "Description": ""
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "proposal_status",
+    "Type": "ProposalStatus",
+    "Description": "proposal_status defines the status of the proposals.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "voter",
+    "Type": "string",
+    "Description": "voter defines the voter address for the proposals.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "depositor",
+    "Type": "string",
+    "Description": "depositor defines the deposit addresses from the proposals.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination defines an optional pagination for the request.",
+    "Required": "No"
+  }
+]

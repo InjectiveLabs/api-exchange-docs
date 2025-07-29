@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "SIGN_TYPE_UNKNOWN"
+  },
+  {
+    "Code": "1",
+    "Name": "SIGN_TYPE_ORCHESTRATOR_SIGNED_MULTI_SIG_UPDATE"
+  },
+  {
+    "Code": "2",
+    "Name": "SIGN_TYPE_ORCHESTRATOR_SIGNED_WITHDRAW_BATCH"
+  }
+]

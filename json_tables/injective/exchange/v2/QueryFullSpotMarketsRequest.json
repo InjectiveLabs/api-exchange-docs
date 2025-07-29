@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Status of the market, for convenience it is set to string - not enum",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_ids",
+    "Type": "string array",
+    "Description": "Filter by market IDs",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "with_mid_price_and_tob",
+    "Type": "bool",
+    "Description": "Flag to return the markets mid price and top of the book buy and sell orders.",
+    "Required": "Yes"
+  }
+]

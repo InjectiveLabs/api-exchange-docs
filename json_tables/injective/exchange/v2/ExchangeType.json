@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "EXCHANGE_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "SPOT"
+  },
+  {
+    "Code": "2",
+    "Name": "DERIVATIVES"
+  }
+]

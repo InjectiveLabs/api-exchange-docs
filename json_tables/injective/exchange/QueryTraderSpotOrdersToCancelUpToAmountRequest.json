@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID for the market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "SubaccountID of the trader",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "base_amount",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "the base amount to cancel (free up)",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "quote_amount",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "the quote amount to cancel (free up)",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "strategy",
+    "Type": "CancellationStrategy",
+    "Description": "The cancellation strategy",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "reference_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "The reference price for the cancellation strategy, e.g. mid price or mark price",
+    "Required": "No"
+  }
+]

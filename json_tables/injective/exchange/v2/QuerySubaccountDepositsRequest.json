@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "the subaccount ID",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "subaccount",
+    "Type": "Subaccount",
+    "Description": "the subaccount details",
+    "Required": "No"
+  }
+]

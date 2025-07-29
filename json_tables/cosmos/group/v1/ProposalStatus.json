@@ -1,0 +1,26 @@
+[
+  {
+    "Code": "0",
+    "Name": "PROPOSAL_STATUS_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "PROPOSAL_STATUS_SUBMITTED"
+  },
+  {
+    "Code": "2",
+    "Name": "PROPOSAL_STATUS_ACCEPTED"
+  },
+  {
+    "Code": "3",
+    "Name": "PROPOSAL_STATUS_REJECTED"
+  },
+  {
+    "Code": "4",
+    "Name": "PROPOSAL_STATUS_ABORTED"
+  },
+  {
+    "Code": "5",
+    "Name": "PROPOSAL_STATUS_WITHDRAWN"
+  }
+]

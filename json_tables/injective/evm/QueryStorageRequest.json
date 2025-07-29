@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address is the ethereum hex address to query the storage state for.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "key",
+    "Type": "string",
+    "Description": "key defines the key of the storage state",
+    "Required": "Yes"
+  }
+]

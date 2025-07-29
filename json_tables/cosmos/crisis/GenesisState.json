@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "constant_fee",
+    "Type": "types.Coin",
+    "Description": "constant_fee is the fee used to verify the invariant in the crisis module."
+  }
+]

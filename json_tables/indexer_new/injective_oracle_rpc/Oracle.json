@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": "The symbol of the oracle asset."
+  },
+  {
+    "Parameter": "base_symbol",
+    "Type": "string",
+    "Description": "Oracle base currency"
+  },
+  {
+    "Parameter": "quote_symbol",
+    "Type": "string",
+    "Description": "Oracle quote currency"
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "string",
+    "Description": "Oracle Type"
+  },
+  {
+    "Parameter": "price",
+    "Type": "string",
+    "Description": "The price of the oracle asset"
+  }
+]

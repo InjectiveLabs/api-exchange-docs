@@ -1,0 +1,67 @@
+[
+  {
+    "Parameter": "tracer",
+    "Type": "string",
+    "Description": "tracer is a custom javascript tracer"
+  },
+  {
+    "Parameter": "timeout",
+    "Type": "string",
+    "Description": "timeout overrides the default timeout of 5 seconds for JavaScript-based tracing calls"
+  },
+  {
+    "Parameter": "reexec",
+    "Type": "uint64",
+    "Description": "reexec defines the number of blocks the tracer is willing to go back"
+  },
+  {
+    "Parameter": "disable_stack",
+    "Type": "bool",
+    "Description": "disable_stack switches stack capture"
+  },
+  {
+    "Parameter": "disable_storage",
+    "Type": "bool",
+    "Description": "disable_storage switches storage capture"
+  },
+  {
+    "Parameter": "debug",
+    "Type": "bool",
+    "Description": "debug can be used to print output during capture end"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "limit defines the maximum length of output, but zero means unlimited"
+  },
+  {
+    "Parameter": "overrides",
+    "Type": "ChainConfig",
+    "Description": "overrides can be used to execute a trace using future fork rules"
+  },
+  {
+    "Parameter": "enable_memory",
+    "Type": "bool",
+    "Description": "enable_memory switches memory capture"
+  },
+  {
+    "Parameter": "enable_return_data",
+    "Type": "bool",
+    "Description": "enable_return_data switches the capture of return data"
+  },
+  {
+    "Parameter": "tracer_json_config",
+    "Type": "string",
+    "Description": "tracer_json_config configures the tracer using a JSON string"
+  },
+  {
+    "Parameter": "state_overrides",
+    "Type": "byte array",
+    "Description": "temporary state modifications to Geth in order to simulate the effects of eth_call"
+  },
+  {
+    "Parameter": "block_overrides",
+    "Type": "byte array",
+    "Description": "block overrides block context fields encoded as json"
+  }
+]

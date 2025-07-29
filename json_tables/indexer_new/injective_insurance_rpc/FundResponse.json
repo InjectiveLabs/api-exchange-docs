@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "fund",
+    "Type": "InsuranceFund",
+    "Description": "The insurance fund corresponding to the provided token denom"
+  }
+]

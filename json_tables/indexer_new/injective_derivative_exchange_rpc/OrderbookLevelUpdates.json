@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "market's ID"
+  },
+  {
+    "Parameter": "sequence",
+    "Type": "uint64",
+    "Description": "orderbook update sequence"
+  },
+  {
+    "Parameter": "buys",
+    "Type": "PriceLevelUpdate array",
+    "Description": "buy levels"
+  },
+  {
+    "Parameter": "sells",
+    "Type": "PriceLevelUpdate array",
+    "Description": "sell levels"
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "updates timestamp"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "account_trade_reward_points",
+    "Type": "cosmossdk_io_math.LegacyDec array",
+    "Description": ""
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "Sender address of withdrawal request",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "receiver",
+    "Type": "string",
+    "Description": "Address of receiveer upon withdrawal",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

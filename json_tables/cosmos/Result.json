@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "Data is any data returned from message or handler execution. It MUST be length prefixed in order to separate data from multiple message executions. Deprecated. This field is still populated, but prefer msg_response instead because it also contains the Msg response typeURL."
+  },
+  {
+    "Parameter": "log",
+    "Type": "string",
+    "Description": "Log contains the log information from message or handler execution."
+  },
+  {
+    "Parameter": "events",
+    "Type": "v1.Event array",
+    "Description": "Events contains a slice of Event objects that were emitted during message or handler execution."
+  },
+  {
+    "Parameter": "msg_responses",
+    "Type": "types.Any array",
+    "Description": "msg_responses contains the Msg handler responses type packed in Anys.  Since: cosmos-sdk 0.46"
+  }
+]

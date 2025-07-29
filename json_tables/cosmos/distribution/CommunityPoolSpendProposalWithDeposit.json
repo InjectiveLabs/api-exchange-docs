@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "recipient",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "amount",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "deposit",
+    "Type": "string",
+    "Description": ""
+  }
+]

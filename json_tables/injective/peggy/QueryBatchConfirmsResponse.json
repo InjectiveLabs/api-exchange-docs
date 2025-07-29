@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "confirms",
+    "Type": "MsgConfirmBatch array",
+    "Description": ""
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "ethereum_address",
+    "Type": "string",
+    "Description": "Token's Ethereum address, not all token have this information"
+  },
+  {
+    "Parameter": "coingecko_id",
+    "Type": "string",
+    "Description": "Token's CoinGecko id for price references"
+  },
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "Token's denom on injective chain"
+  },
+  {
+    "Parameter": "name",
+    "Type": "string",
+    "Description": "Token name"
+  },
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": "Token symbol"
+  },
+  {
+    "Parameter": "decimals",
+    "Type": "int32",
+    "Description": "Number of decimal places used to represent the token's smallest unit"
+  },
+  {
+    "Parameter": "logo",
+    "Type": "string",
+    "Description": "Token logo URL"
+  }
+]

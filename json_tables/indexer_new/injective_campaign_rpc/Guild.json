@@ -1,0 +1,77 @@
+[
+  {
+    "Parameter": "campaign_contract",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "guild_id",
+    "Type": "string",
+    "Description": "Guild ID"
+  },
+  {
+    "Parameter": "master_address",
+    "Type": "string",
+    "Description": "Guild's master address"
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "int64",
+    "Description": "Guild creation date (in UNIX milliseconds)"
+  },
+  {
+    "Parameter": "tvl_score",
+    "Type": "string",
+    "Description": "Average TVL score"
+  },
+  {
+    "Parameter": "volume_score",
+    "Type": "string",
+    "Description": "Total volume score"
+  },
+  {
+    "Parameter": "rank_by_volume",
+    "Type": "int32",
+    "Description": "guild's rank by volume"
+  },
+  {
+    "Parameter": "rank_by_tvl",
+    "Type": "int32",
+    "Description": "guild's rank by TVL"
+  },
+  {
+    "Parameter": "logo",
+    "Type": "string",
+    "Description": "guild's logo, at the moment it supports numberic string (i.e '1', '2' and so on) not a random URL because of front end limitation"
+  },
+  {
+    "Parameter": "total_tvl",
+    "Type": "string",
+    "Description": "guild's total TVL"
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "Snapshot updated at time in UNIX milli"
+  },
+  {
+    "Parameter": "name",
+    "Type": "string",
+    "Description": "Guild name"
+  },
+  {
+    "Parameter": "is_active",
+    "Type": "bool",
+    "Description": "Active status of guild, true when master total tvl meets the minimum requirements"
+  },
+  {
+    "Parameter": "master_balance",
+    "Type": "string",
+    "Description": "Master balance (in current campaigns denom)"
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": "Guild description, set by master of the guild"
+  }
+]

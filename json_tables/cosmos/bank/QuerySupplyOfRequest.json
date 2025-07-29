@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "denom is the coin denom to query balances for.",
+    "Required": "Yes"
+  }
+]

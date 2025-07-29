@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "the subaccount ID",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "the denom of the balance",
+    "Required": "Yes"
+  }
+]

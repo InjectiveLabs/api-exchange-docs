@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": "height is the height of the block to query.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination defines a pagination for the request.",
+    "Required": "No"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "markets",
+    "Type": "BinaryOptionsMarketInfo array",
+    "Description": "Binary Options Markets list"
+  },
+  {
+    "Parameter": "paging",
+    "Type": "Paging",
+    "Description": ""
+  }
+]

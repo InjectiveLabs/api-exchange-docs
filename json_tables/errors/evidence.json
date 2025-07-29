@@ -1,0 +1,14 @@
+[
+  {
+    "Error Code": 2,
+    "Description": "unregistered handler for evidence type"
+  },
+  {
+    "Error Code": 3,
+    "Description": "invalid evidence"
+  },
+  {
+    "Error Code": 5,
+    "Description": "evidence already exists"
+  }
+]

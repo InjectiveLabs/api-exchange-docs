@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "feed_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "aggregator_round_id",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

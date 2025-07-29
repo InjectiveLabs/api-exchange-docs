@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "market",
+    "Type": "SpotMarketInfo",
+    "Description": "Info about particular spot market"
+  }
+]

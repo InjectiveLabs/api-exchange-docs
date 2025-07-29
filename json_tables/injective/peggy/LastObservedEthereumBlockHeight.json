@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "cosmos_block_height",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "ethereum_block_height",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

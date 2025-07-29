@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "volatility",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "history_metadata",
+    "Type": "MetadataStatistics",
+    "Description": ""
+  },
+  {
+    "Parameter": "raw_history",
+    "Type": "PriceRecord array",
+    "Description": ""
+  }
+]

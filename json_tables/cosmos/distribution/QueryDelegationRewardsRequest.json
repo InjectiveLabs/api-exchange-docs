@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "delegator_address",
+    "Type": "string",
+    "Description": "delegator_address defines the delegator address to query for.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "validator_address",
+    "Type": "string",
+    "Description": "validator_address defines the validator address to query for.",
+    "Required": "Yes"
+  }
+]

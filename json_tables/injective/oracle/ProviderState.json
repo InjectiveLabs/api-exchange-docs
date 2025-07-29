@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "provider_info",
+    "Type": "ProviderInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "provider_price_states",
+    "Type": "ProviderPriceState array",
+    "Description": ""
+  }
+]

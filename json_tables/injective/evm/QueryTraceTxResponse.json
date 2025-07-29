@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "data is the response serialized in bytes"
+  }
+]

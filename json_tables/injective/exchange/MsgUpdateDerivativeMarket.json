@@ -1,0 +1,50 @@
+[
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "current admin address of the associated market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "id of the market to be updated",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "new_ticker",
+    "Type": "string",
+    "Description": "(optional) updated value for ticker",
+    "Required": "No"
+  },
+  {
+    "Parameter": "new_min_price_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "(optional) updated value for min_price_tick_size",
+    "Required": "No"
+  },
+  {
+    "Parameter": "new_min_quantity_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "(optional) updated value min_quantity_tick_size",
+    "Required": "No"
+  },
+  {
+    "Parameter": "new_min_notional",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "(optional) updated min notional",
+    "Required": "No"
+  },
+  {
+    "Parameter": "new_initial_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "(optional) updated value for initial_margin_ratio",
+    "Required": "No"
+  },
+  {
+    "Parameter": "new_maintenance_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "(optional) updated value for maintenance_margin_ratio",
+    "Required": "No"
+  }
+]

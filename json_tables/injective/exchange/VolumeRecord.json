@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "maker_volume",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "taker_volume",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

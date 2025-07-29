@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "base_symbol",
+    "Type": "string",
+    "Description": "Oracle base currency",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "quote_symbol",
+    "Type": "string",
+    "Description": "Oracle quote currency",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "string",
+    "Description": "Oracle Type",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "oracle_scale_factor",
+    "Type": "uint32",
+    "Description": "OracleScaleFactor",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "authority is the address of the governance account.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines the exchange parameters to update.  NOTE: All parameters must be supplied.",
+    "Required": "Yes"
+  }
+]

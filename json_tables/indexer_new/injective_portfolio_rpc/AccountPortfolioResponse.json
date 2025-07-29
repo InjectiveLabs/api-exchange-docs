@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "portfolio",
+    "Type": "Portfolio",
+    "Description": "The portfolio of this account"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "rewards",
+    "Type": "DelegationDelegatorReward array",
+    "Description": "rewards defines all the rewards accrued by a delegator."
+  },
+  {
+    "Parameter": "total",
+    "Type": "github_com_cosmos_cosmos_sdk_types.DecCoins",
+    "Description": "total defines the sum of all the rewards."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "Error Code": 3,
+    "Description": "inactive proposal"
+  },
+  {
+    "Error Code": 4,
+    "Description": "proposal already active"
+  },
+  {
+    "Error Code": 5,
+    "Description": "invalid proposal content"
+  },
+  {
+    "Error Code": 6,
+    "Description": "invalid proposal type"
+  },
+  {
+    "Error Code": 7,
+    "Description": "invalid vote option"
+  },
+  {
+    "Error Code": 8,
+    "Description": "invalid genesis state"
+  },
+  {
+    "Error Code": 9,
+    "Description": "no handler exists for proposal type"
+  },
+  {
+    "Error Code": 10,
+    "Description": "proposal message not recognized by router"
+  },
+  {
+    "Error Code": 11,
+    "Description": "no messages proposed"
+  },
+  {
+    "Error Code": 12,
+    "Description": "invalid proposal message"
+  },
+  {
+    "Error Code": 13,
+    "Description": "expected gov account as only signer for proposal message"
+  },
+  {
+    "Error Code": 15,
+    "Description": "metadata too long"
+  },
+  {
+    "Error Code": 16,
+    "Description": "minimum deposit is too small"
+  },
+  {
+    "Error Code": 18,
+    "Description": "invalid proposer"
+  },
+  {
+    "Error Code": 20,
+    "Description": "voting period already ended"
+  },
+  {
+    "Error Code": 21,
+    "Description": "invalid proposal"
+  },
+  {
+    "Error Code": 22,
+    "Description": "summary too long"
+  },
+  {
+    "Error Code": 23,
+    "Description": "invalid deposit denom"
+  }
+]

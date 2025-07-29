@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "strategies",
+    "Type": "TradingStrategy array",
+    "Description": "The trading strategies"
+  },
+  {
+    "Parameter": "paging",
+    "Type": "Paging",
+    "Description": ""
+  }
+]

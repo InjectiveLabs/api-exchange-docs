@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "amount",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": ""
+  }
+]

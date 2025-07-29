@@ -1,0 +1,67 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "ticker",
+    "Type": "string",
+    "Description": "Ticker for the spot market."
+  },
+  {
+    "Parameter": "base_denom",
+    "Type": "string",
+    "Description": "type of coin to use as the base currency"
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "type of coin to use as the quote currency"
+  },
+  {
+    "Parameter": "min_price_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "min_price_tick_size defines the minimum tick size of the order's price"
+  },
+  {
+    "Parameter": "min_quantity_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "min_quantity_tick_size defines the minimum tick size of the order's quantity"
+  },
+  {
+    "Parameter": "maker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "maker_fee_rate defines the fee percentage makers pay when trading"
+  },
+  {
+    "Parameter": "taker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "taker_fee_rate defines the fee percentage takers pay when trading"
+  },
+  {
+    "Parameter": "min_notional",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "min_notional defines the minimum notional for orders in the market"
+  },
+  {
+    "Parameter": "admin_info",
+    "Type": "AdminInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "base_decimals",
+    "Type": "uint32",
+    "Description": "base token decimals"
+  },
+  {
+    "Parameter": "quote_decimals",
+    "Type": "uint32",
+    "Description": "quote token decimals"
+  }
+]

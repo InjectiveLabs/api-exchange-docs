@@ -1,0 +1,52 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines all the parameters of the module."
+  },
+  {
+    "Parameter": "fee_pool",
+    "Type": "FeePool",
+    "Description": "fee_pool defines the fee pool at genesis."
+  },
+  {
+    "Parameter": "delegator_withdraw_infos",
+    "Type": "DelegatorWithdrawInfo array",
+    "Description": "fee_pool defines the delegator withdraw infos at genesis."
+  },
+  {
+    "Parameter": "previous_proposer",
+    "Type": "string",
+    "Description": "fee_pool defines the previous proposer at genesis."
+  },
+  {
+    "Parameter": "outstanding_rewards",
+    "Type": "ValidatorOutstandingRewardsRecord array",
+    "Description": "fee_pool defines the outstanding rewards of all validators at genesis."
+  },
+  {
+    "Parameter": "validator_accumulated_commissions",
+    "Type": "ValidatorAccumulatedCommissionRecord array",
+    "Description": "fee_pool defines the accumulated commissions of all validators at genesis."
+  },
+  {
+    "Parameter": "validator_historical_rewards",
+    "Type": "ValidatorHistoricalRewardsRecord array",
+    "Description": "fee_pool defines the historical rewards of all validators at genesis."
+  },
+  {
+    "Parameter": "validator_current_rewards",
+    "Type": "ValidatorCurrentRewardsRecord array",
+    "Description": "fee_pool defines the current rewards of all validators at genesis."
+  },
+  {
+    "Parameter": "delegator_starting_infos",
+    "Type": "DelegatorStartingInfoRecord array",
+    "Description": "fee_pool defines the delegator starting infos at genesis."
+  },
+  {
+    "Parameter": "validator_slash_events",
+    "Type": "ValidatorSlashEventRecord array",
+    "Description": "fee_pool defines the validator slash events at genesis."
+  }
+]

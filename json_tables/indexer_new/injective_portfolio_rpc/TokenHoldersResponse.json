@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "holders",
+    "Type": "Holder array",
+    "Description": ""
+  },
+  {
+    "Parameter": "next_cursors",
+    "Type": "string array",
+    "Description": "Next cursors for pagination"
+  }
+]

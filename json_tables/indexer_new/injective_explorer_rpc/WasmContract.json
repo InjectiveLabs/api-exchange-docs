@@ -1,0 +1,87 @@
+[
+  {
+    "Parameter": "label",
+    "Type": "string",
+    "Description": "General name of the contract"
+  },
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "Address of the contract"
+  },
+  {
+    "Parameter": "tx_hash",
+    "Type": "string",
+    "Description": "hash of the instantiate transaction"
+  },
+  {
+    "Parameter": "creator",
+    "Type": "string",
+    "Description": "Address of the contract creator"
+  },
+  {
+    "Parameter": "executes",
+    "Type": "uint64",
+    "Description": "Number of times call to execute contract"
+  },
+  {
+    "Parameter": "instantiated_at",
+    "Type": "uint64",
+    "Description": "Block timestamp that contract was instantiated, in millisecond"
+  },
+  {
+    "Parameter": "init_message",
+    "Type": "string",
+    "Description": "init message when this contract was instantiated"
+  },
+  {
+    "Parameter": "last_executed_at",
+    "Type": "uint64",
+    "Description": "Block timestamp that contract was called, in millisecond"
+  },
+  {
+    "Parameter": "funds",
+    "Type": "ContractFund array",
+    "Description": "Contract funds"
+  },
+  {
+    "Parameter": "code_id",
+    "Type": "uint64",
+    "Description": "Code id of the contract"
+  },
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "Admin of the contract"
+  },
+  {
+    "Parameter": "current_migrate_message",
+    "Type": "string",
+    "Description": "Latest migrate message of the contract"
+  },
+  {
+    "Parameter": "contract_number",
+    "Type": "int64",
+    "Description": "Monotonic contract number in database"
+  },
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": "Contract version string"
+  },
+  {
+    "Parameter": "type",
+    "Type": "string",
+    "Description": "Contract type"
+  },
+  {
+    "Parameter": "cw20_metadata",
+    "Type": "Cw20Metadata",
+    "Description": ""
+  },
+  {
+    "Parameter": "proposal_id",
+    "Type": "int64",
+    "Description": "id of the proposal that instantiate this contract"
+  }
+]

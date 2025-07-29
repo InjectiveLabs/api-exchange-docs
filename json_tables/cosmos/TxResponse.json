@@ -1,0 +1,67 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": "The block height"
+  },
+  {
+    "Parameter": "txhash",
+    "Type": "string",
+    "Description": "The transaction hash."
+  },
+  {
+    "Parameter": "codespace",
+    "Type": "string",
+    "Description": "Namespace for the Code"
+  },
+  {
+    "Parameter": "code",
+    "Type": "uint32",
+    "Description": "Response code."
+  },
+  {
+    "Parameter": "data",
+    "Type": "string",
+    "Description": "Result bytes, if any."
+  },
+  {
+    "Parameter": "raw_log",
+    "Type": "string",
+    "Description": "The output of the application's logger (raw string). May be non-deterministic."
+  },
+  {
+    "Parameter": "logs",
+    "Type": "ABCIMessageLogs",
+    "Description": "The output of the application's logger (typed). May be non-deterministic."
+  },
+  {
+    "Parameter": "info",
+    "Type": "string",
+    "Description": "Additional information. May be non-deterministic."
+  },
+  {
+    "Parameter": "gas_wanted",
+    "Type": "int64",
+    "Description": "Amount of gas requested for transaction."
+  },
+  {
+    "Parameter": "gas_used",
+    "Type": "int64",
+    "Description": "Amount of gas consumed by transaction."
+  },
+  {
+    "Parameter": "tx",
+    "Type": "types.Any",
+    "Description": "The request transaction bytes."
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "string",
+    "Description": "Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time."
+  },
+  {
+    "Parameter": "events",
+    "Type": "v1.Event array",
+    "Description": "Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "Parameter": "campaign_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "MarketId of the trading strategy"
+  },
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "Account address"
+  },
+  {
+    "Parameter": "score",
+    "Type": "string",
+    "Description": "Campaign score"
+  },
+  {
+    "Parameter": "contract_updated",
+    "Type": "bool",
+    "Description": "Whether the distribution contract has been updated with the latest score"
+  },
+  {
+    "Parameter": "block_height",
+    "Type": "int64",
+    "Description": "Block height when the score has been updated."
+  },
+  {
+    "Parameter": "block_time",
+    "Type": "int64",
+    "Description": "Block time timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "purchased_amount",
+    "Type": "string",
+    "Description": "Amount swapped but only count base denom of the market"
+  },
+  {
+    "Parameter": "galxe_updated",
+    "Type": "bool",
+    "Description": "True if this user is updated to be in Galxe Campain list, only eligible address are added"
+  },
+  {
+    "Parameter": "reward_claimed",
+    "Type": "bool",
+    "Description": "True if this user claimed the reward"
+  }
+]

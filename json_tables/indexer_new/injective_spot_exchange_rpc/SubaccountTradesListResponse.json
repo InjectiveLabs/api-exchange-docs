@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "trades",
+    "Type": "SpotTrade array",
+    "Description": "List of spot market trades"
+  }
+]

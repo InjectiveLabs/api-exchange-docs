@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "feed_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "types.Coin",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "Error Code": 2,
+    "Description": "empty validator address"
+  },
+  {
+    "Error Code": 3,
+    "Description": "validator does not exist"
+  },
+  {
+    "Error Code": 4,
+    "Description": "validator already exist for this operator address; must use new validator operator address"
+  },
+  {
+    "Error Code": 5,
+    "Description": "validator already exist for this pubkey; must use new validator pubkey"
+  },
+  {
+    "Error Code": 6,
+    "Description": "validator pubkey type is not supported"
+  },
+  {
+    "Error Code": 7,
+    "Description": "validator for this address is currently jailed"
+  },
+  {
+    "Error Code": 8,
+    "Description": "failed to remove validator"
+  },
+  {
+    "Error Code": 9,
+    "Description": "commission must be positive"
+  },
+  {
+    "Error Code": 10,
+    "Description": "commission cannot be more than 100%"
+  },
+  {
+    "Error Code": 11,
+    "Description": "commission cannot be more than the max rate"
+  },
+  {
+    "Error Code": 12,
+    "Description": "commission cannot be changed more than once in 24h"
+  },
+  {
+    "Error Code": 13,
+    "Description": "commission change rate must be positive"
+  },
+  {
+    "Error Code": 14,
+    "Description": "commission change rate cannot be more than the max rate"
+  },
+  {
+    "Error Code": 15,
+    "Description": "commission cannot be changed more than max change rate"
+  },
+  {
+    "Error Code": 16,
+    "Description": "validator's self delegation must be greater than their minimum self delegation"
+  },
+  {
+    "Error Code": 17,
+    "Description": "minimum self delegation cannot be decrease"
+  },
+  {
+    "Error Code": 18,
+    "Description": "empty delegator address"
+  },
+  {
+    "Error Code": 19,
+    "Description": "no delegation for (address, validator) tuple"
+  },
+  {
+    "Error Code": 20,
+    "Description": "delegator does not exist with address"
+  },
+  {
+    "Error Code": 21,
+    "Description": "delegator does not contain delegation"
+  },
+  {
+    "Error Code": 22,
+    "Description": "insufficient delegation shares"
+  },
+  {
+    "Error Code": 23,
+    "Description": "cannot delegate to an empty validator"
+  },
+  {
+    "Error Code": 24,
+    "Description": "not enough delegation shares"
+  },
+  {
+    "Error Code": 25,
+    "Description": "entry not mature"
+  },
+  {
+    "Error Code": 26,
+    "Description": "no unbonding delegation found"
+  },
+  {
+    "Error Code": 27,
+    "Description": "too many unbonding delegation entries for (delegator, validator) tuple"
+  },
+  {
+    "Error Code": 28,
+    "Description": "no redelegation found"
+  },
+  {
+    "Error Code": 29,
+    "Description": "cannot redelegate to the same validator"
+  },
+  {
+    "Error Code": 30,
+    "Description": "too few tokens to redelegate (truncates to zero tokens)"
+  },
+  {
+    "Error Code": 31,
+    "Description": "redelegation destination validator not found"
+  },
+  {
+    "Error Code": 32,
+    "Description": "redelegation to this validator already in progress; first redelegation to this validator must complete before next redelegation"
+  },
+  {
+    "Error Code": 33,
+    "Description": "too many redelegation entries for (delegator, src-validator, dst-validator) tuple"
+  },
+  {
+    "Error Code": 34,
+    "Description": "cannot delegate to validators with invalid (zero) ex-rate"
+  },
+  {
+    "Error Code": 35,
+    "Description": "both shares amount and shares percent provided"
+  },
+  {
+    "Error Code": 36,
+    "Description": "neither shares amount nor shares percent provided"
+  },
+  {
+    "Error Code": 37,
+    "Description": "invalid historical info"
+  },
+  {
+    "Error Code": 38,
+    "Description": "no historical info found"
+  },
+  {
+    "Error Code": 39,
+    "Description": "empty validator public key"
+  },
+  {
+    "Error Code": 40,
+    "Description": "commission cannot be less than min rate"
+  },
+  {
+    "Error Code": 41,
+    "Description": "unbonding operation not found"
+  },
+  {
+    "Error Code": 42,
+    "Description": "cannot un-hold unbonding operation that is not on hold"
+  },
+  {
+    "Error Code": 43,
+    "Description": "expected authority account as only signer for proposal message"
+  },
+  {
+    "Error Code": 44,
+    "Description": "redelegation source validator not found"
+  },
+  {
+    "Error Code": 45,
+    "Description": "unbonding type not found"
+  },
+  {
+    "Error Code": 70,
+    "Description": "commission rate too small"
+  }
+]

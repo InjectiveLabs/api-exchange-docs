@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params provides the parameters of the bank module."
+  }
+]

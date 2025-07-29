@@ -1,0 +1,87 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines all the parameters of related to oracle."
+  },
+  {
+    "Parameter": "band_relayers",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "band_price_states",
+    "Type": "BandPriceState array",
+    "Description": ""
+  },
+  {
+    "Parameter": "price_feed_price_states",
+    "Type": "PriceFeedState array",
+    "Description": ""
+  },
+  {
+    "Parameter": "coinbase_price_states",
+    "Type": "CoinbasePriceState array",
+    "Description": ""
+  },
+  {
+    "Parameter": "band_ibc_price_states",
+    "Type": "BandPriceState array",
+    "Description": ""
+  },
+  {
+    "Parameter": "band_ibc_oracle_requests",
+    "Type": "BandOracleRequest array",
+    "Description": ""
+  },
+  {
+    "Parameter": "band_ibc_params",
+    "Type": "BandIBCParams",
+    "Description": ""
+  },
+  {
+    "Parameter": "band_ibc_latest_client_id",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "calldata_records",
+    "Type": "CalldataRecord array",
+    "Description": ""
+  },
+  {
+    "Parameter": "band_ibc_latest_request_id",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "chainlink_price_states",
+    "Type": "ChainlinkPriceState array",
+    "Description": ""
+  },
+  {
+    "Parameter": "historical_price_records",
+    "Type": "PriceRecords array",
+    "Description": ""
+  },
+  {
+    "Parameter": "provider_states",
+    "Type": "ProviderState array",
+    "Description": ""
+  },
+  {
+    "Parameter": "pyth_price_states",
+    "Type": "PythPriceState array",
+    "Description": ""
+  },
+  {
+    "Parameter": "stork_price_states",
+    "Type": "StorkPriceState array",
+    "Description": ""
+  },
+  {
+    "Parameter": "stork_publishers",
+    "Type": "string array",
+    "Description": ""
+  }
+]

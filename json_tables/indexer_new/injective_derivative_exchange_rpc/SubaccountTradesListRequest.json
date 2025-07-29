@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "SubaccountId of the trader we want to get the trades from",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Filter trades by market ID",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "execution_type",
+    "Type": "string",
+    "Description": "Filter by execution type of trades",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "direction",
+    "Type": "string",
+    "Description": "Filter by direction trades",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "uint64",
+    "Description": "Skip will skip the first n item from the result",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "Limit is used to specify the maximum number of items to be returned",
+    "Required": "Yes"
+  }
+]

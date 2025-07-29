@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID of the market"
+  },
+  {
+    "Parameter": "relayers",
+    "Type": "Relayer array",
+    "Description": "Relayers list for specified market"
+  }
+]

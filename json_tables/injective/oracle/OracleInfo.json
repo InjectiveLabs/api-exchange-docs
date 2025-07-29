@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "OracleType",
+    "Description": ""
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "limit_buy_orders",
+    "Type": "DerivativeLimitOrder array",
+    "Description": ""
+  },
+  {
+    "Parameter": "market_buy_orders",
+    "Type": "DerivativeMarketOrder array",
+    "Description": ""
+  },
+  {
+    "Parameter": "limit_sell_orders",
+    "Type": "DerivativeLimitOrder array",
+    "Description": ""
+  },
+  {
+    "Parameter": "market_sell_orders",
+    "Type": "DerivativeMarketOrder array",
+    "Description": ""
+  }
+]

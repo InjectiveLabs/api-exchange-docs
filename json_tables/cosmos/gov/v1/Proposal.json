@@ -1,0 +1,77 @@
+[
+  {
+    "Parameter": "id",
+    "Type": "uint64",
+    "Description": "id defines the unique id of the proposal."
+  },
+  {
+    "Parameter": "messages",
+    "Type": "types1.Any array",
+    "Description": "messages are the arbitrary messages to be executed if the proposal passes."
+  },
+  {
+    "Parameter": "status",
+    "Type": "ProposalStatus",
+    "Description": "status defines the proposal status."
+  },
+  {
+    "Parameter": "final_tally_result",
+    "Type": "TallyResult",
+    "Description": "final_tally_result is the final tally result of the proposal. When querying a proposal via gRPC, this field is not populated until the proposal's voting period has ended."
+  },
+  {
+    "Parameter": "submit_time",
+    "Type": "time.Time",
+    "Description": "submit_time is the time of proposal submission."
+  },
+  {
+    "Parameter": "deposit_end_time",
+    "Type": "time.Time",
+    "Description": "deposit_end_time is the end time for deposition."
+  },
+  {
+    "Parameter": "total_deposit",
+    "Type": "types.Coin array",
+    "Description": "total_deposit is the total deposit on the proposal."
+  },
+  {
+    "Parameter": "voting_start_time",
+    "Type": "time.Time",
+    "Description": "voting_start_time is the starting time to vote on a proposal."
+  },
+  {
+    "Parameter": "voting_end_time",
+    "Type": "time.Time",
+    "Description": "voting_end_time is the end time of voting on a proposal."
+  },
+  {
+    "Parameter": "metadata",
+    "Type": "string",
+    "Description": "metadata is any arbitrary metadata attached to the proposal. the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/gov#proposal-3"
+  },
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": "title is the title of the proposal  Since: cosmos-sdk 0.47"
+  },
+  {
+    "Parameter": "summary",
+    "Type": "string",
+    "Description": "summary is a short summary of the proposal  Since: cosmos-sdk 0.47"
+  },
+  {
+    "Parameter": "proposer",
+    "Type": "string",
+    "Description": "proposer is the address of the proposal sumbitter  Since: cosmos-sdk 0.47"
+  },
+  {
+    "Parameter": "expedited",
+    "Type": "bool",
+    "Description": "expedited defines if the proposal is expedited  Since: cosmos-sdk 0.50"
+  },
+  {
+    "Parameter": "failed_reason",
+    "Type": "string",
+    "Description": "failed_reason defines the reason why the proposal failed  Since: cosmos-sdk 0.50"
+  }
+]

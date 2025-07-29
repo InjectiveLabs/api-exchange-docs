@@ -1,0 +1,62 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "Sender address of deposit request"
+  },
+  {
+    "Parameter": "receiver",
+    "Type": "string",
+    "Description": "Address of receiveer upon deposit"
+  },
+  {
+    "Parameter": "event_nonce",
+    "Type": "uint64",
+    "Description": "The event nonce of WithdrawalClaim event emitted by Ethereum chain upon deposit"
+  },
+  {
+    "Parameter": "event_height",
+    "Type": "uint64",
+    "Description": "The block height of WithdrawalClaim event emitted by Ethereum chain upon deposit"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "string",
+    "Description": "Amount of tokens being deposited"
+  },
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "Denom of tokens being deposited"
+  },
+  {
+    "Parameter": "orchestrator_address",
+    "Type": "string",
+    "Description": "orchestratorAddress who created batch request"
+  },
+  {
+    "Parameter": "state",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "claim_type",
+    "Type": "int32",
+    "Description": "The claimType will be DepoistClaim for Deposits"
+  },
+  {
+    "Parameter": "tx_hashes",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "string",
+    "Description": ""
+  }
+]

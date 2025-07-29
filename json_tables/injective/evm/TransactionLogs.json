@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "hash",
+    "Type": "string",
+    "Description": "hash of the transaction"
+  },
+  {
+    "Parameter": "logs",
+    "Type": "Log array",
+    "Description": "logs is an array of Logs for the given transaction hash"
+  }
+]

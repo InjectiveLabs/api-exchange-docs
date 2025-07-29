@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "authority is the address that controls the module (defaults to x/gov unless overwritten).",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "plan",
+    "Type": "Plan",
+    "Description": "plan is the upgrade plan.",
+    "Required": "Yes"
+  }
+]

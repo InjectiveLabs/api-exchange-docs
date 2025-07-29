@@ -1,0 +1,67 @@
+[
+  {
+    "Parameter": "code_id",
+    "Type": "uint64",
+    "Description": "ID of stored wasmcode, sorted in descending order"
+  },
+  {
+    "Parameter": "tx_hash",
+    "Type": "string",
+    "Description": "Tx hash of store code transaction"
+  },
+  {
+    "Parameter": "checksum",
+    "Type": "Checksum",
+    "Description": "Checksum of the cosmwasm code"
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "uint64",
+    "Description": "Block time when the code is stored, in millisecond"
+  },
+  {
+    "Parameter": "contract_type",
+    "Type": "string",
+    "Description": "Contract type of the wasm code"
+  },
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": "version string of the wasm code"
+  },
+  {
+    "Parameter": "permission",
+    "Type": "ContractPermission",
+    "Description": "describe instantiate permission"
+  },
+  {
+    "Parameter": "code_schema",
+    "Type": "string",
+    "Description": "code schema preview"
+  },
+  {
+    "Parameter": "code_view",
+    "Type": "string",
+    "Description": "code repo preview, may contain schema folder"
+  },
+  {
+    "Parameter": "instantiates",
+    "Type": "uint64",
+    "Description": "count number of contract instantiation from this code"
+  },
+  {
+    "Parameter": "creator",
+    "Type": "string",
+    "Description": "creator of this code"
+  },
+  {
+    "Parameter": "code_number",
+    "Type": "int64",
+    "Description": "monotonic order of the code stored"
+  },
+  {
+    "Parameter": "proposal_id",
+    "Type": "int64",
+    "Description": "id of the proposal that store this code"
+  }
+]

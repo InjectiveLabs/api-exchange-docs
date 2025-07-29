@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "config",
+    "Type": "FeedConfig",
+    "Description": "",
+    "Required": "No"
+  }
+]

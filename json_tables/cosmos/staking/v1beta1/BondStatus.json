@@ -1,0 +1,18 @@
+[
+  {
+    "Code": "0",
+    "Name": "BOND_STATUS_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "BOND_STATUS_UNBONDED"
+  },
+  {
+    "Code": "2",
+    "Name": "BOND_STATUS_UNBONDING"
+  },
+  {
+    "Code": "3",
+    "Name": "BOND_STATUS_BONDED"
+  }
+]

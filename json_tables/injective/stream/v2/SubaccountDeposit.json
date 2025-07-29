@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "deposit",
+    "Type": "v2.Deposit",
+    "Description": ""
+  }
+]

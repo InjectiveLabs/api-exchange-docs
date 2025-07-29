@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "tally",
+    "Type": "TallyResult",
+    "Description": "tally defines the requested tally."
+  }
+]

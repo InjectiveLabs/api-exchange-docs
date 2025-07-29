@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "withdraw_address",
+    "Type": "string",
+    "Description": "withdraw_address defines the delegator address to query for."
+  }
+]

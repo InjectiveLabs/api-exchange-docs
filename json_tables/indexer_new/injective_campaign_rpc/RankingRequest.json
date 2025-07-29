@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "campaign_id",
+    "Type": "string",
+    "Description": "Campaign ID",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "MarketId of the campaign",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "Account address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "Contract address that manages the round and reward",
+    "Required": "Yes"
+  }
+]

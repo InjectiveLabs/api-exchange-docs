@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "bech32_prefix",
+    "Type": "string",
+    "Description": ""
+  }
+]

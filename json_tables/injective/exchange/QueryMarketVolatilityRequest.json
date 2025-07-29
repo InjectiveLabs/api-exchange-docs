@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "trade_history_options",
+    "Type": "TradeHistoryOptions",
+    "Description": "",
+    "Required": "No"
+  }
+]

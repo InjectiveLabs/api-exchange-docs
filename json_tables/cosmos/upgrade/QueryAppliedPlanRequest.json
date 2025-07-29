@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "name",
+    "Type": "string",
+    "Description": "name is the name of the applied plan to query for.",
+    "Required": "Yes"
+  }
+]

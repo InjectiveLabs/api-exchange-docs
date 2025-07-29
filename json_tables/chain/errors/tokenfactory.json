@@ -1,0 +1,34 @@
+[
+  {
+    "Error Code": 2,
+    "Description": "attempting to create a denom that already exists (has bank metadata)"
+  },
+  {
+    "Error Code": 3,
+    "Description": "unauthorized account"
+  },
+  {
+    "Error Code": 4,
+    "Description": "invalid denom"
+  },
+  {
+    "Error Code": 5,
+    "Description": "invalid creator"
+  },
+  {
+    "Error Code": 6,
+    "Description": "invalid authority metadata"
+  },
+  {
+    "Error Code": 7,
+    "Description": "invalid genesis"
+  },
+  {
+    "Error Code": 12,
+    "Description": "denom does not exist"
+  },
+  {
+    "Error Code": 13,
+    "Description": "amount has to be positive"
+  }
+]

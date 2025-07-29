@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "data",
+    "Type": "MsgData array",
+    "Description": "data field is deprecated and not populated."
+  },
+  {
+    "Parameter": "msg_responses",
+    "Type": "types.Any array",
+    "Description": "msg_responses contains the Msg handler responses packed into Anys.  Since: cosmos-sdk 0.46"
+  }
+]

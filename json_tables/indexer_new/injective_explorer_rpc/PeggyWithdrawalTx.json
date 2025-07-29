@@ -1,0 +1,82 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "Sender address of withdrawal request"
+  },
+  {
+    "Parameter": "receiver",
+    "Type": "string",
+    "Description": "Address of receiveer upon withdrawal"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "string",
+    "Description": "Amount of tokens being withdrawan"
+  },
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "Denom of tokens being withdrawan"
+  },
+  {
+    "Parameter": "bridge_fee",
+    "Type": "string",
+    "Description": "The bridge fee paid by sender for withdrawal"
+  },
+  {
+    "Parameter": "outgoing_tx_id",
+    "Type": "uint64",
+    "Description": "A auto incremented unique ID representing the withdrawal request"
+  },
+  {
+    "Parameter": "batch_timeout",
+    "Type": "uint64",
+    "Description": "The timestamp after which Batch request will be discarded if not processed already"
+  },
+  {
+    "Parameter": "batch_nonce",
+    "Type": "uint64",
+    "Description": "A auto incremented unique ID representing the Withdrawal Batches"
+  },
+  {
+    "Parameter": "orchestrator_address",
+    "Type": "string",
+    "Description": "orchestratorAddress who created batch request"
+  },
+  {
+    "Parameter": "event_nonce",
+    "Type": "uint64",
+    "Description": "The event nonce of WithdrawalClaim event emitted by Ethereum chain upon batch withdrawal"
+  },
+  {
+    "Parameter": "event_height",
+    "Type": "uint64",
+    "Description": "The block height of WithdrawalClaim event emitted by Ethereum chain upon batch withdrawal"
+  },
+  {
+    "Parameter": "state",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "claim_type",
+    "Type": "int32",
+    "Description": "The claimType will be WithdrawalClaim for Batch Withdrawals"
+  },
+  {
+    "Parameter": "tx_hashes",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "string",
+    "Description": ""
+  }
+]

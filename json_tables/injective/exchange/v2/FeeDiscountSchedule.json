@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "bucket_count",
+    "Type": "uint64",
+    "Description": "the bucket number"
+  },
+  {
+    "Parameter": "bucket_duration",
+    "Type": "int64",
+    "Description": "the bucket duration in seconds"
+  },
+  {
+    "Parameter": "quote_denoms",
+    "Type": "string array",
+    "Description": "the trading fee quote denoms which will be counted for the fee paid contribution"
+  },
+  {
+    "Parameter": "tier_infos",
+    "Type": "FeeDiscountTierInfo array",
+    "Description": "the fee discount tiers"
+  },
+  {
+    "Parameter": "disqualified_market_ids",
+    "Type": "string array",
+    "Description": "the marketIDs which are disqualified from contributing to the fee paid amount"
+  }
+]

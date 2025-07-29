@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "authority is the address that controls the module (defaults to x/gov unless overwritten).",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines the x/slashing parameters to update.  NOTE: All parameters must be supplied.",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "tx_bytes",
+    "Type": "byte array",
+    "Description": "tx_bytes is the encoded transaction bytes."
+  }
+]

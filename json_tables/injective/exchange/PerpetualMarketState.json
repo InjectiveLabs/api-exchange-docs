@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "market_info",
+    "Type": "PerpetualMarketInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "funding_info",
+    "Type": "PerpetualMarketFunding",
+    "Description": ""
+  }
+]

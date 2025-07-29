@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "slashes",
+    "Type": "ValidatorSlashEvent array",
+    "Description": "slashes defines the slashes the validator received."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
+  }
+]

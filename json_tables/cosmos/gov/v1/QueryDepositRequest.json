@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "proposal_id",
+    "Type": "uint64",
+    "Description": "proposal_id defines the unique id of the proposal.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "depositor",
+    "Type": "string",
+    "Description": "depositor defines the deposit addresses from the proposals.",
+    "Required": "Yes"
+  }
+]

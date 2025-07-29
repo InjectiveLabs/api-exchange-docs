@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "transaction_id",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

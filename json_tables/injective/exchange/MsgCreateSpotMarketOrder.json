@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "order",
+    "Type": "SpotOrder",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

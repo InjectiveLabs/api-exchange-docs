@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_time",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_timestamp",
+    "Type": "int64",
+    "Description": "Block timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "txs_results",
+    "Type": "ABCIResponseDeliverTx array",
+    "Description": ""
+  },
+  {
+    "Parameter": "begin_block_events",
+    "Type": "ABCIEvent array",
+    "Description": ""
+  },
+  {
+    "Parameter": "end_block_events",
+    "Type": "ABCIEvent array",
+    "Description": ""
+  }
+]

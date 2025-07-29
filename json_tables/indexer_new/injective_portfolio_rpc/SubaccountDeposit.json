@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "total_balance",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "available_balance",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "total_balance_usd",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "available_balance_usd",
+    "Type": "string",
+    "Description": ""
+  }
+]

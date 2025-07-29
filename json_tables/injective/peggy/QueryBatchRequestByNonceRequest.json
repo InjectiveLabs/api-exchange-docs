@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "nonce",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

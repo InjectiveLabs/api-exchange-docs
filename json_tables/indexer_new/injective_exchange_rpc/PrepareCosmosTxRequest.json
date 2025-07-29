@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "chain_id",
+    "Type": "uint64",
+    "Description": "Specify chainID for the target tx",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "sender_address",
+    "Type": "string",
+    "Description": "sender address provided",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "memo",
+    "Type": "string",
+    "Description": "Textual memo information to attach with tx",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "timeout_height",
+    "Type": "uint64",
+    "Description": "Block height until which the transaction is valid.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "fee",
+    "Type": "CosmosTxFee",
+    "Description": "Transaction fee details.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "msgs",
+    "Type": "][byte array",
+    "Description": "List of Cosmos proto3-encoded Msgs to include in a single tx",
+    "Required": "Yes"
+  }
+]

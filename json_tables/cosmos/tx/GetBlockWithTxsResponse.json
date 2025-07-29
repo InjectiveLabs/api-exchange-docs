@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "txs",
+    "Type": "Tx array",
+    "Description": "txs are the transactions in the block."
+  },
+  {
+    "Parameter": "block_id",
+    "Type": "v1.BlockID",
+    "Description": ""
+  },
+  {
+    "Parameter": "block",
+    "Type": "v1.Block",
+    "Description": ""
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines a pagination for the response."
+  }
+]

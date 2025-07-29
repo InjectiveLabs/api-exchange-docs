@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "amount",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "amount describes the amount put on auction"
+  },
+  {
+    "Parameter": "auctionRound",
+    "Type": "uint64",
+    "Description": "auctionRound describes current auction round"
+  },
+  {
+    "Parameter": "auctionClosingTime",
+    "Type": "uint64",
+    "Description": "auctionClosingTime describes auction close time for the round"
+  },
+  {
+    "Parameter": "highestBidder",
+    "Type": "string",
+    "Description": "highestBidder describes highest bidder on current round"
+  },
+  {
+    "Parameter": "highestBidAmount",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "highestBidAmount describes highest bid amount on current round"
+  }
+]

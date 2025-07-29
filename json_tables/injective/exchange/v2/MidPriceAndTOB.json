@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "mid_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "mid price of the market (in human readable format)"
+  },
+  {
+    "Parameter": "best_buy_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "best buy price of the market (in human readable format)"
+  },
+  {
+    "Parameter": "best_sell_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "best sell price of the market (in human readable format)"
+  }
+]

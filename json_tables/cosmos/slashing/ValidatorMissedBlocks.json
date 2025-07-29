@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address is the validator address."
+  },
+  {
+    "Parameter": "missed_blocks",
+    "Type": "MissedBlock array",
+    "Description": "missed_blocks is an array of missed blocks by the validator."
+  }
+]

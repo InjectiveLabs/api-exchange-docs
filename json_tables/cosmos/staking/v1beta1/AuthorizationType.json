@@ -1,0 +1,22 @@
+[
+  {
+    "Code": "0",
+    "Name": "AUTHORIZATION_TYPE_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "AUTHORIZATION_TYPE_DELEGATE"
+  },
+  {
+    "Code": "2",
+    "Name": "AUTHORIZATION_TYPE_UNDELEGATE"
+  },
+  {
+    "Code": "3",
+    "Name": "AUTHORIZATION_TYPE_REDELEGATE"
+  },
+  {
+    "Code": "4",
+    "Name": "AUTHORIZATION_TYPE_CANCEL_UNBONDING_DELEGATION"
+  }
+]

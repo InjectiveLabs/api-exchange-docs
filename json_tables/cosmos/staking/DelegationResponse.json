@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "delegation",
+    "Type": "Delegation",
+    "Description": ""
+  },
+  {
+    "Parameter": "balance",
+    "Type": "types1.Coin",
+    "Description": ""
+  }
+]

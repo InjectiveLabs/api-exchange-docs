@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "msg_index",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "log",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "events",
+    "Type": "StringEvents",
+    "Description": "Events contains a slice of Event objects that were emitted during some execution."
+  }
+]

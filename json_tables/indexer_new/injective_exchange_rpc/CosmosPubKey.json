@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "type",
+    "Type": "string",
+    "Description": "Pubkey type URL"
+  },
+  {
+    "Parameter": "key",
+    "Type": "string",
+    "Description": "Hex-encoded string of the public key"
+  }
+]

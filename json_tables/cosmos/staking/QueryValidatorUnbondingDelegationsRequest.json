@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "validator_addr",
+    "Type": "string",
+    "Description": "validator_addr defines the validator address to query for.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination defines an optional pagination for the request.",
+    "Required": "No"
+  }
+]

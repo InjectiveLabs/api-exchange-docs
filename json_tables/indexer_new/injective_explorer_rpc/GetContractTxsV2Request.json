@@ -1,0 +1,44 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "Address of contract",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "height",
+    "Type": "uint64",
+    "Description": "Height of the block",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "from",
+    "Type": "int64",
+    "Description": "Unix timestamp (UTC) in milliseconds",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "to",
+    "Type": "int64",
+    "Description": "Unix timestamp (UTC) in milliseconds",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "per_page",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "Pagination token",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "The status of the txs to be returned",
+    "Required": "Yes"
+  }
+]

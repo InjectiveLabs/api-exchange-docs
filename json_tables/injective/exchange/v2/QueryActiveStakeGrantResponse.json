@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "grant",
+    "Type": "ActiveGrant",
+    "Description": ""
+  },
+  {
+    "Parameter": "effective_grant",
+    "Type": "EffectiveGrant",
+    "Description": ""
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "Denom address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "Token for pagination",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

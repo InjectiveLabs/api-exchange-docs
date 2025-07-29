@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "gas",
+    "Type": "uint64",
+    "Description": "gas returns the estimated gas"
+  },
+  {
+    "Parameter": "ret",
+    "Type": "byte array",
+    "Description": "ret is the returned data from evm function (result or data supplied with revert opcode)"
+  },
+  {
+    "Parameter": "vm_error",
+    "Type": "string",
+    "Description": "vm_error is the error returned by vm execution"
+  }
+]

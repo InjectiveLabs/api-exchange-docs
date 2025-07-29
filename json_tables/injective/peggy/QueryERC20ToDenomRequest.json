@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "erc20",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

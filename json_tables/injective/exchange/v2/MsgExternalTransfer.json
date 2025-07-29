@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "source_subaccount_id",
+    "Type": "string",
+    "Description": "the source subaccount ID",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "destination_subaccount_id",
+    "Type": "string",
+    "Description": "the destination subaccount ID",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "types.Coin",
+    "Description": "the amount to transfer (in chain format)",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "evm_denom",
+    "Type": "string",
+    "Description": "evm_denom represents the token denomination used to run the EVM state transitions."
+  },
+  {
+    "Parameter": "enable_create",
+    "Type": "bool",
+    "Description": "enable_create toggles state transitions that use the vm.Create function"
+  },
+  {
+    "Parameter": "enable_call",
+    "Type": "bool",
+    "Description": "enable_call toggles state transitions that use the vm.Call function"
+  },
+  {
+    "Parameter": "extra_eips",
+    "Type": "int64 array",
+    "Description": "extra_eips defines the additional EIPs for the vm.Config"
+  },
+  {
+    "Parameter": "chain_config",
+    "Type": "ChainConfig",
+    "Description": "chain_config defines the EVM chain configuration parameters"
+  },
+  {
+    "Parameter": "allow_unprotected_txs",
+    "Type": "bool",
+    "Description": "allow_unprotected_txs defines if replay-protected (i.e non EIP155 signed) transactions can be executed on the state machine."
+  },
+  {
+    "Parameter": "authorized_deployers",
+    "Type": "string array",
+    "Description": "list of ETH addresses that are allowed to deploy contracts. Only relevant if permissioned is true."
+  },
+  {
+    "Parameter": "permissioned",
+    "Type": "bool",
+    "Description": "make contract deployment permissioned, such that only accounts listed in authorized_deployers are allowed to deploy contracts."
+  }
+]

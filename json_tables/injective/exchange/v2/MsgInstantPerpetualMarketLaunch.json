@@ -1,0 +1,92 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "ticker",
+    "Type": "string",
+    "Description": "Ticker for the derivative market.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "type of coin to use as the base currency",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "oracle_base",
+    "Type": "string",
+    "Description": "Oracle base currency",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "oracle_quote",
+    "Type": "string",
+    "Description": "Oracle quote currency",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "oracle_scale_factor",
+    "Type": "uint32",
+    "Description": "Scale factor for oracle prices.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "types1.OracleType",
+    "Description": "Oracle type",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "maker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "maker_fee_rate defines the trade fee rate for makers on the perpetual market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "taker_fee_rate",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "taker_fee_rate defines the trade fee rate for takers on the perpetual market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "initial_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "initial_margin_ratio defines the initial margin ratio for the perpetual market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "maintenance_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "maintenance_margin_ratio defines the maintenance margin ratio for the perpetual market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "min_price_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "min_price_tick_size defines the minimum tick size of the order's price and margin (in human readable format)",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "min_quantity_tick_size",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "min_quantity_tick_size defines the minimum tick size of the order's quantity (in human readable format)",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "min_notional",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "min_notional defines the minimum notional (in quote asset) required for orders in the market (in human readable format)",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "reduce_margin_ratio",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "reduce_margin_ratio defines the ratio of the margin that is reduced",
+    "Required": "Yes"
+  }
+]

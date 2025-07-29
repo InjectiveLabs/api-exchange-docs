@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "Coin denominator"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "string",
+    "Description": "Coin amount (big int)"
+  }
+]

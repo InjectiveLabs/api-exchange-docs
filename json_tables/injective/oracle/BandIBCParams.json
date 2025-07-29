@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "band_ibc_enabled",
+    "Type": "bool",
+    "Description": "true if Band IBC should be enabled"
+  },
+  {
+    "Parameter": "ibc_request_interval",
+    "Type": "int64",
+    "Description": "block request interval to send Band IBC prices"
+  },
+  {
+    "Parameter": "ibc_source_channel",
+    "Type": "string",
+    "Description": "band IBC source channel"
+  },
+  {
+    "Parameter": "ibc_version",
+    "Type": "string",
+    "Description": "band IBC version"
+  },
+  {
+    "Parameter": "ibc_port_id",
+    "Type": "string",
+    "Description": "band IBC portID"
+  },
+  {
+    "Parameter": "legacy_oracle_ids",
+    "Type": "int64 array",
+    "Description": "legacy oracle scheme ids"
+  }
+]

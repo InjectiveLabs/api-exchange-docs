@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "accounts",
+    "Type": "string array",
+    "Description": "list of account addresses to filter by"
+  }
+]

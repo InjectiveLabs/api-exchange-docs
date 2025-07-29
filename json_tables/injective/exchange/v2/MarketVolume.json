@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "the market ID"
+  },
+  {
+    "Parameter": "volume",
+    "Type": "VolumeRecord",
+    "Description": "the market volume"
+  }
+]

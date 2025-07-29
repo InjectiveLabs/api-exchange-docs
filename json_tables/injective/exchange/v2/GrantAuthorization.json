@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "grantee",
+    "Type": "string",
+    "Description": "the grantee address"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "the amount of stake granted (INJ in chain format)"
+  }
+]

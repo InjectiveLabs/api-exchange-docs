@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "referrer",
+    "Type": "string",
+    "Description": "Address of the referrer"
+  },
+  {
+    "Parameter": "used_code",
+    "Type": "string",
+    "Description": "Referral code used"
+  },
+  {
+    "Parameter": "trading_volume",
+    "Type": "string",
+    "Description": "Total trading volume"
+  },
+  {
+    "Parameter": "joined_at",
+    "Type": "string",
+    "Description": "Join date in ISO 8601 format"
+  },
+  {
+    "Parameter": "active",
+    "Type": "bool",
+    "Description": "Whether the referral is still active"
+  }
+]

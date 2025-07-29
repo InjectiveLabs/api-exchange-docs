@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "gas_info",
+    "Type": "GasInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "result",
+    "Type": "Result",
+    "Description": ""
+  }
+]

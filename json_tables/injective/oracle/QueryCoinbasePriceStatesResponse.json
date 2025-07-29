@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "price_states",
+    "Type": "CoinbasePriceState array",
+    "Description": ""
+  }
+]

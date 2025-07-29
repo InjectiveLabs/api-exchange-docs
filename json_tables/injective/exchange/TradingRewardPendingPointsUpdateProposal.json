@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "pending_pool_timestamp",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "reward_point_updates",
+    "Type": "RewardPointUpdate array",
+    "Description": ""
+  }
+]

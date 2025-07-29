@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "account",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "volume",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

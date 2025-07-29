@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "signers",
+    "Type": "string array",
+    "Description": "signers ith element is address ith oracle uses to sign a report"
+  },
+  {
+    "Parameter": "transmitters",
+    "Type": "string array",
+    "Description": "transmitters ith element is address ith oracle uses to transmit a report via the transmit method"
+  },
+  {
+    "Parameter": "link_denom",
+    "Type": "string",
+    "Description": "Native denom for LINK coin in the bank keeper"
+  },
+  {
+    "Parameter": "feed_properties",
+    "Type": "FeedProperties array",
+    "Description": "feed properties"
+  }
+]

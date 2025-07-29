@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "the subaccount ID"
+  },
+  {
+    "Parameter": "deposits",
+    "Type": "SubaccountDeposit array",
+    "Description": "the deposits details"
+  }
+]

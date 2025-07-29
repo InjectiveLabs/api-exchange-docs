@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "hist",
+    "Type": "HistoricalInfo",
+    "Description": "hist defines the historical info at the given height."
+  }
+]

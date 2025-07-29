@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "latest_round_id",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "data",
+    "Type": "Transmission",
+    "Description": ""
+  }
+]

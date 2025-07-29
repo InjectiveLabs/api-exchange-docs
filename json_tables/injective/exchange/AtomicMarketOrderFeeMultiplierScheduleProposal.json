@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "market_fee_multipliers",
+    "Type": "MarketFeeMultiplier array",
+    "Description": ""
+  }
+]

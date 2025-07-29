@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "signatures",
+    "Type": "SignatureDescriptor array",
+    "Description": "signatures are the signature descriptors"
+  }
+]

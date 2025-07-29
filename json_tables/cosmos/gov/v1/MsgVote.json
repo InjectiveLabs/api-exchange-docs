@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "proposal_id",
+    "Type": "uint64",
+    "Description": "proposal_id defines the unique id of the proposal.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "voter",
+    "Type": "string",
+    "Description": "voter is the voter address for the proposal.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "option",
+    "Type": "VoteOption",
+    "Description": "option defines the vote option.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "metadata",
+    "Type": "string",
+    "Description": "metadata is any arbitrary metadata attached to the Vote.",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "authority is the account authorized to trip the circuit breaker.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "msg_type_urls",
+    "Type": "string array",
+    "Description": "msg_type_urls specifies a list of type URLs to immediately stop processing. IF IT IS LEFT EMPTY, ALL MSG PROCESSING WILL STOP IMMEDIATELY. This value is validated against the authority's permissions and if the authority does not have permissions to trip the specified msg type URLs (or all URLs), the operation will fail.",
+    "Required": "Yes"
+  }
+]

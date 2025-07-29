@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "denoms",
+    "Type": "string array",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "provider",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "relayers",
+    "Type": "string array",
+    "Description": ""
+  }
+]

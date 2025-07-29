@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "voting_period",
+    "Type": "time.Duration",
+    "Description": "Duration of the voting period."
+  }
+]

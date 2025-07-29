@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "base_info",
+    "Type": "OracleInfo",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "quote_info",
+    "Type": "OracleInfo",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "oracle_history_options",
+    "Type": "OracleHistoryOptions",
+    "Description": "",
+    "Required": "No"
+  }
+]

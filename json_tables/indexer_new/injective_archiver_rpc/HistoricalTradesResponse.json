@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "trades",
+    "Type": "HistoricalTrade array",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_height",
+    "Type": "uint64",
+    "Description": "The last block height available in the service"
+  },
+  {
+    "Parameter": "last_time",
+    "Type": "int64",
+    "Description": "The timestamp of the last block available in the service"
+  },
+  {
+    "Parameter": "next",
+    "Type": "string array",
+    "Description": "Next token for pagination"
+  }
+]

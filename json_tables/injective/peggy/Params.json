@@ -1,0 +1,117 @@
+[
+  {
+    "Parameter": "peggy_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "contract_source_hash",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "bridge_ethereum_address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "bridge_chain_id",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "signed_valsets_window",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "signed_batches_window",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "signed_claims_window",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "target_batch_timeout",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "average_block_time",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "average_ethereum_block_time",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "slash_fraction_valset",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "slash_fraction_batch",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "slash_fraction_claim",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "slash_fraction_conflicting_claim",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "unbond_slashing_valsets_window",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "slash_fraction_bad_eth_signature",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "cosmos_coin_denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "cosmos_coin_erc20_contract",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "claim_slashing_enabled",
+    "Type": "bool",
+    "Description": ""
+  },
+  {
+    "Parameter": "bridge_contract_start_height",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "valset_reward",
+    "Type": "types.Coin",
+    "Description": ""
+  },
+  {
+    "Parameter": "admins",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "segregated_wallet_address",
+    "Type": "string",
+    "Description": "address for receiving Peggy Deposits from sanctioned Ethereum addresses"
+  }
+]

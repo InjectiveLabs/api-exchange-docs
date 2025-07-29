@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "Address of the underwriter.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "MarketID of the insurance fund.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "deposit",
+    "Type": "types1.Coin",
+    "Description": "Amount of quote_denom to underwrite the insurance fund.",
+    "Required": "Yes"
+  }
+]

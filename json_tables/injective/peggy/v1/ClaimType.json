@@ -1,0 +1,22 @@
+[
+  {
+    "Code": "0",
+    "Name": "CLAIM_TYPE_UNKNOWN"
+  },
+  {
+    "Code": "1",
+    "Name": "CLAIM_TYPE_DEPOSIT"
+  },
+  {
+    "Code": "2",
+    "Name": "CLAIM_TYPE_WITHDRAW"
+  },
+  {
+    "Code": "3",
+    "Name": "CLAIM_TYPE_ERC20_DEPLOYED"
+  },
+  {
+    "Code": "4",
+    "Name": "CLAIM_TYPE_VALSET_UPDATED"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "base",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "quote",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "relayers",
+    "Type": "string array",
+    "Description": ""
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "MarketId of the market's orderbook we want to fetch",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "depth",
+    "Type": "int32",
+    "Description": "Depth of the orderbook",
+    "Required": "Yes"
+  }
+]

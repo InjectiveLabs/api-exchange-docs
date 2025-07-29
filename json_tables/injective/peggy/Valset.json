@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "nonce",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "members",
+    "Type": "BridgeValidator array",
+    "Description": ""
+  },
+  {
+    "Parameter": "height",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "reward_amount",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": ""
+  },
+  {
+    "Parameter": "reward_token",
+    "Type": "string",
+    "Description": "the reward token in it's Ethereum hex address representation"
+  }
+]

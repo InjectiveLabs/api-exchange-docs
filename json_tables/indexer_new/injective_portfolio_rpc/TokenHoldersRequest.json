@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "Denom of the token",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "cursor",
+    "Type": "string",
+    "Description": "Cursor for pagination",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

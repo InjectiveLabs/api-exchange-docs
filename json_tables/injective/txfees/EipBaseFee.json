@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "base_fee",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

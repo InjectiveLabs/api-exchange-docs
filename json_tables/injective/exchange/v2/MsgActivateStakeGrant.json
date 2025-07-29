@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "Injective address of the stake grantee",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "granter",
+    "Type": "string",
+    "Description": "Injective address of the stake granter",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "market_ids",
+    "Type": "string array",
+    "Description": "list of market IDs to filter by"
+  }
+]

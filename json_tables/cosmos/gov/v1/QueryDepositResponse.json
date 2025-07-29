@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "deposit",
+    "Type": "Deposit",
+    "Description": "deposit defines the requested deposit."
+  }
+]

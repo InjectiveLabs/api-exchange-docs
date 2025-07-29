@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "gas_limit",
+    "Type": "uint64",
+    "Description": "limit of gas per BB execution"
+  },
+  {
+    "Parameter": "gas_price",
+    "Type": "uint64",
+    "Description": "gas price that contract is willing to pay for execution in BeginBlocker"
+  },
+  {
+    "Parameter": "is_executable",
+    "Type": "bool",
+    "Description": "is contract currently active"
+  },
+  {
+    "Parameter": "code_id",
+    "Type": "uint64",
+    "Description": "code_id that is allowed to be executed (to prevent malicious updates) - if nil/0 any code_id can be executed"
+  },
+  {
+    "Parameter": "admin_address",
+    "Type": "string",
+    "Description": "optional - admin addr that is allowed to update contract data"
+  },
+  {
+    "Parameter": "granter_address",
+    "Type": "string",
+    "Description": "Optional: address of the contract granting fee Must be set if fund_mode is GrantOnly"
+  },
+  {
+    "Parameter": "fund_mode",
+    "Type": "FundingMode",
+    "Description": "funding mode"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "contract_registration_request",
+    "Type": "ContractRegistrationRequest",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

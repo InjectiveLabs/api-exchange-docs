@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "vote",
+    "Type": "Vote",
+    "Description": "vote defines the queried vote."
+  }
+]

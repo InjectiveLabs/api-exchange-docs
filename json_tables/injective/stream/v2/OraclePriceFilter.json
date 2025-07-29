@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "symbol",
+    "Type": "string array",
+    "Description": "list of symbol to filter by"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "campaigns",
+    "Type": "Campaign array",
+    "Description": ""
+  },
+  {
+    "Parameter": "accumulated_rewards",
+    "Type": "Coin array",
+    "Description": ""
+  },
+  {
+    "Parameter": "reward_count",
+    "Type": "int32",
+    "Description": ""
+  }
+]

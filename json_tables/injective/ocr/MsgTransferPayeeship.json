@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "transmitter address of oracle whose payee is changing",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "transmitter",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "feed_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proposed",
+    "Type": "string",
+    "Description": "new payee address",
+    "Required": "Yes"
+  }
+]

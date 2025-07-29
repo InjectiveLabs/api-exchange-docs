@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "granter",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "total_grant_amount",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_delegations_checked_time",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "grants",
+    "Type": "GrantAuthorization array",
+    "Description": ""
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "account",
+    "Type": "string",
+    "Description": "can either be an address or a subaccount",
+    "Required": "Yes"
+  }
+]

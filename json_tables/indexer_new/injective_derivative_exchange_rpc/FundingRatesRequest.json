@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "MarketId of the position we want to fetch",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "uint64",
+    "Description": "Skip will skip the first n item from the result",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "Limit is used to specify the maximum number of items to be returned.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "end_time",
+    "Type": "int64",
+    "Description": "Upper bound of funding timestamp",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "observed",
+    "Type": "bool",
+    "Description": ""
+  },
+  {
+    "Parameter": "votes",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "height",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "claim",
+    "Type": "types.Any",
+    "Description": ""
+  }
+]

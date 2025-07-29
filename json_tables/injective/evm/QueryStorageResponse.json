@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "value",
+    "Type": "string",
+    "Description": "value defines the storage state value hash associated with the given key."
+  }
+]

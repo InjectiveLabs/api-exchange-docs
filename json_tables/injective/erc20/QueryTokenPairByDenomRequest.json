@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "bank_denom",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

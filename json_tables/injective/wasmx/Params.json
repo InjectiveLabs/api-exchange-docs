@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "is_execution_enabled",
+    "Type": "bool",
+    "Description": "Set the status to active to indicate that contracts can be executed in begin blocker."
+  },
+  {
+    "Parameter": "max_begin_block_total_gas",
+    "Type": "uint64",
+    "Description": "Maximum aggregate total gas to be used for the contract executions in the BeginBlocker."
+  },
+  {
+    "Parameter": "max_contract_gas_limit",
+    "Type": "uint64",
+    "Description": "the maximum gas limit each individual contract can consume in the BeginBlocker."
+  },
+  {
+    "Parameter": "min_gas_price",
+    "Type": "uint64",
+    "Description": "min_gas_price defines the minimum gas price the contracts must pay to be executed in the BeginBlocker."
+  },
+  {
+    "Parameter": "register_contract_access",
+    "Type": "types.AccessConfig",
+    "Description": ""
+  }
+]

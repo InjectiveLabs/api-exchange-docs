@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "Account address for the holder"
+  },
+  {
+    "Parameter": "balance",
+    "Type": "string",
+    "Description": "The balance of the holder"
+  }
+]

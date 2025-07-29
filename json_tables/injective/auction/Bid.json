@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "bidder",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "amount",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coin",
+    "Description": ""
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "feed_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "transmitter",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "proposed_payee",
+    "Type": "string",
+    "Description": ""
+  }
+]

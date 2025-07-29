@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "unbonding_responses",
+    "Type": "UnbondingDelegation array",
+    "Description": ""
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
+  }
+]

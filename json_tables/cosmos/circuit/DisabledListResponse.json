@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "disabled_list",
+    "Type": "string array",
+    "Description": ""
+  }
+]

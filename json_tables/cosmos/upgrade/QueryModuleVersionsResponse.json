@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "module_versions",
+    "Type": "ModuleVersion array",
+    "Description": "module_versions is a list of module names with their consensus versions."
+  }
+]

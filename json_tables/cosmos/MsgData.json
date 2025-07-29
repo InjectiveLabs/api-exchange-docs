@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "msg_type",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

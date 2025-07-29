@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "sequence",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  }
+]

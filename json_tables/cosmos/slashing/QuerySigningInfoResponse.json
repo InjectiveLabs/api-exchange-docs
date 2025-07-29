@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "val_signing_info",
+    "Type": "ValidatorSigningInfo",
+    "Description": "val_signing_info is the signing info of requested val cons address"
+  }
+]

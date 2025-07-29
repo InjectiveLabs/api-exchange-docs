@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "the subaccount ID the position belongs to",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "the position's market ID",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "order",
+    "Type": "DerivativeOrder",
+    "Description": "optional order to provide for liquidation",
+    "Required": "No"
+  }
+]

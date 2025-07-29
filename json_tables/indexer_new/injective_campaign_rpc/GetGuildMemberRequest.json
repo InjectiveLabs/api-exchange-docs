@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "campaign_contract",
+    "Type": "string",
+    "Description": "Campaign contract address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "User address",
+    "Required": "Yes"
+  }
+]

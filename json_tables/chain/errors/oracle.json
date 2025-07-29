@@ -1,0 +1,174 @@
+[
+  {
+    "Error Code": 1,
+    "Description": "relayer address is empty"
+  },
+  {
+    "Error Code": 2,
+    "Description": "bad rates count"
+  },
+  {
+    "Error Code": 3,
+    "Description": "bad resolve times"
+  },
+  {
+    "Error Code": 4,
+    "Description": "bad request ID"
+  },
+  {
+    "Error Code": 5,
+    "Description": "relayer not authorized"
+  },
+  {
+    "Error Code": 6,
+    "Description": "bad price feed base count"
+  },
+  {
+    "Error Code": 7,
+    "Description": "bad price feed quote count"
+  },
+  {
+    "Error Code": 8,
+    "Description": "unsupported oracle type"
+  },
+  {
+    "Error Code": 9,
+    "Description": "bad messages count"
+  },
+  {
+    "Error Code": 10,
+    "Description": "bad Coinbase message"
+  },
+  {
+    "Error Code": 11,
+    "Description": "bad Ethereum signature"
+  },
+  {
+    "Error Code": 12,
+    "Description": "bad Coinbase message timestamp"
+  },
+  {
+    "Error Code": 13,
+    "Description": "Coinbase price not found"
+  },
+  {
+    "Error Code": 14,
+    "Description": "Prices must be positive"
+  },
+  {
+    "Error Code": 15,
+    "Description": "Prices must be less than 10 million."
+  },
+  {
+    "Error Code": 16,
+    "Description": "Invalid Band IBC Request"
+  },
+  {
+    "Error Code": 17,
+    "Description": "sample error"
+  },
+  {
+    "Error Code": 18,
+    "Description": "invalid packet timeout"
+  },
+  {
+    "Error Code": 19,
+    "Description": "invalid symbols count"
+  },
+  {
+    "Error Code": 20,
+    "Description": "could not claim port capability"
+  },
+  {
+    "Error Code": 21,
+    "Description": "invalid IBC Port ID"
+  },
+  {
+    "Error Code": 22,
+    "Description": "invalid IBC Channel ID"
+  },
+  {
+    "Error Code": 23,
+    "Description": "invalid Band IBC request interval"
+  },
+  {
+    "Error Code": 24,
+    "Description": "Invalid Band IBC Update Request Proposal"
+  },
+  {
+    "Error Code": 25,
+    "Description": "Band IBC Oracle Request not found"
+  },
+  {
+    "Error Code": 26,
+    "Description": "Base Info is empty"
+  },
+  {
+    "Error Code": 27,
+    "Description": "provider is empty"
+  },
+  {
+    "Error Code": 28,
+    "Description": "invalid provider name"
+  },
+  {
+    "Error Code": 29,
+    "Description": "invalid symbol"
+  },
+  {
+    "Error Code": 30,
+    "Description": "relayer already exists"
+  },
+  {
+    "Error Code": 31,
+    "Description": "provider price not found"
+  },
+  {
+    "Error Code": 32,
+    "Description": "invalid oracle request"
+  },
+  {
+    "Error Code": 33,
+    "Description": "no price for oracle was found"
+  },
+  {
+    "Error Code": 34,
+    "Description": "no address for Pyth contract found"
+  },
+  {
+    "Error Code": 35,
+    "Description": "unauthorized Pyth price relay"
+  },
+  {
+    "Error Code": 36,
+    "Description": "unauthorized Pyth price relay"
+  },
+  {
+    "Error Code": 37,
+    "Description": "unauthorized Pyth price relay"
+  },
+  {
+    "Error Code": 38,
+    "Description": "unauthorized Pyth price relay"
+  },
+  {
+    "Error Code": 39,
+    "Description": "empty price attestations"
+  },
+  {
+    "Error Code": 40,
+    "Description": "bad Stork message timestamp"
+  },
+  {
+    "Error Code": 41,
+    "Description": "sender stork is empty"
+  },
+  {
+    "Error Code": 42,
+    "Description": "invalid stork signature"
+  },
+  {
+    "Error Code": 43,
+    "Description": "stork asset id not unique"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "config_digest",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "epoch_and_round",
+    "Type": "EpochAndRound",
+    "Description": ""
+  },
+  {
+    "Parameter": "data",
+    "Type": "Transmission",
+    "Description": ""
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "oracle",
+    "Type": "OracleType",
+    "Description": ""
+  },
+  {
+    "Parameter": "symbol_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "latest_price_records",
+    "Type": "PriceRecord array",
+    "Description": ""
+  }
+]

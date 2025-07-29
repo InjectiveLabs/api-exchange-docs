@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "MarketId of the market we want to fetch open interest from"
+  },
+  {
+    "Parameter": "open_interest",
+    "Type": "string",
+    "Description": "Open interest of the market"
+  }
+]

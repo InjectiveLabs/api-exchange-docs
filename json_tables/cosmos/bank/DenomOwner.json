@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address defines the address that owns a particular denomination."
+  },
+  {
+    "Parameter": "balance",
+    "Type": "types.Coin",
+    "Description": "balance is the balance of the denominated coin for an account."
+  }
+]

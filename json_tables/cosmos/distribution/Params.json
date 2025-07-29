@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "community_tax",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "base_proposer_reward",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "Deprecated: The base_proposer_reward field is deprecated and is no longer used in the x/distribution module's reward mechanism."
+  },
+  {
+    "Parameter": "bonus_proposer_reward",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "Deprecated: The bonus_proposer_reward field is deprecated and is no longer used in the x/distribution module's reward mechanism."
+  },
+  {
+    "Parameter": "withdraw_addr_enabled",
+    "Type": "bool",
+    "Description": ""
+  }
+]

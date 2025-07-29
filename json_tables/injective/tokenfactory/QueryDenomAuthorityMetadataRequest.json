@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "creator",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "sub_denom",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

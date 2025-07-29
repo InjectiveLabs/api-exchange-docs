@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "completion_time",
+    "Type": "time.Time",
+    "Description": ""
+  },
+  {
+    "Parameter": "amount",
+    "Type": "types1.Coin",
+    "Description": "amount returns the amount of undelegated coins  Since: cosmos-sdk 0.50"
+  }
+]

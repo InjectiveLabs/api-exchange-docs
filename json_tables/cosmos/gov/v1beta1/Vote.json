@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "proposal_id",
+    "Type": "uint64",
+    "Description": "proposal_id defines the unique id of the proposal."
+  },
+  {
+    "Parameter": "voter",
+    "Type": "string",
+    "Description": "voter is the voter address of the proposal."
+  },
+  {
+    "Parameter": "option",
+    "Type": "VoteOption",
+    "Description": "Deprecated: Prefer to use `options` instead. This field is set in queries if and only if `len(options) == 1` and that option has weight 1. In all other cases, this field will default to VOTE_OPTION_UNSPECIFIED."
+  },
+  {
+    "Parameter": "options",
+    "Type": "WeightedVoteOption array",
+    "Description": "options is the weighted vote options.  Since: cosmos-sdk 0.43"
+  }
+]

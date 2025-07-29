@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "subdenom",
+    "Type": "string",
+    "Description": "subdenom can be up to 44 \"alphanumeric\" characters long.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "name",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "decimals",
+    "Type": "uint32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "allow_admin_burn",
+    "Type": "bool",
+    "Description": "true if admins are allowed to burn tokens from other addresses",
+    "Required": "Yes"
+  }
+]

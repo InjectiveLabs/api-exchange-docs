@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "the market ID"
+  },
+  {
+    "Parameter": "balance",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "the current balance of the market"
+  }
+]

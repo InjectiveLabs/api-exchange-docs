@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "latest_trade_records",
+    "Type": "TradeRecord array",
+    "Description": ""
+  }
+]

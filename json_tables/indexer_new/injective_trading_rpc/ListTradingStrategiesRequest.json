@@ -1,0 +1,92 @@
+[
+  {
+    "Parameter": "state",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "MarketId of the trading strategy",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "subaccount ID to filter by",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "Account address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pending_execution",
+    "Type": "bool",
+    "Description": "Indicates whether the trading strategy is pending execution",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "start_time",
+    "Type": "int64",
+    "Description": "The starting timestamp in UNIX milliseconds for the creation time of the trading strategy",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "end_time",
+    "Type": "int64",
+    "Description": "The ending timestamp in UNIX milliseconds for the creation time of the trading strategy",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "strategy_type",
+    "Type": "string array",
+    "Description": "Filter by strategy type",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_type",
+    "Type": "string",
+    "Description": "Filter by market type",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "last_executed_time",
+    "Type": "int64",
+    "Description": "The last executed timestamp in UNIX milliseconds for the last executed time of the trading strategy",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "with_tvl",
+    "Type": "bool",
+    "Description": "Include TVL in the response",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "is_trailing_strategy",
+    "Type": "bool",
+    "Description": "Indicates whether the trading strategy is a trailing strategy",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "with_performance",
+    "Type": "bool",
+    "Description": "Indicates whether the trading strategy performance should be included in the response",
+    "Required": "Yes"
+  }
+]

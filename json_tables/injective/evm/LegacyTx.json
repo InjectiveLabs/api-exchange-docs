@@ -1,0 +1,47 @@
+[
+  {
+    "Parameter": "nonce",
+    "Type": "uint64",
+    "Description": "nonce corresponds to the account nonce (transaction sequence)."
+  },
+  {
+    "Parameter": "gas_price",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "gas_price defines the value for each gas unit"
+  },
+  {
+    "Parameter": "gas",
+    "Type": "uint64",
+    "Description": "gas defines the gas limit defined for the transaction."
+  },
+  {
+    "Parameter": "to",
+    "Type": "string",
+    "Description": "to is the hex formatted address of the recipient"
+  },
+  {
+    "Parameter": "value",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "value defines the unsigned integer value of the transaction amount."
+  },
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "data is the data payload bytes of the transaction."
+  },
+  {
+    "Parameter": "v",
+    "Type": "byte array",
+    "Description": "v defines the signature value"
+  },
+  {
+    "Parameter": "r",
+    "Type": "byte array",
+    "Description": "r defines the signature value"
+  },
+  {
+    "Parameter": "s",
+    "Type": "byte array",
+    "Description": "s define the signature value"
+  }
+]

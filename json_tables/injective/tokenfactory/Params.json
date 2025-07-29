@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "denom_creation_fee",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": ""
+  }
+]

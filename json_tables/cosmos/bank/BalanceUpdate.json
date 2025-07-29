@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "addr",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "denom",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "amt",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "the latest amount"
+  }
+]

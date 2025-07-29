@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "inputs",
+    "Type": "Input array",
+    "Description": "Inputs, despite being `repeated`, only allows one sender input. This is checked in MsgMultiSend's ValidateBasic.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "outputs",
+    "Type": "Output array",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

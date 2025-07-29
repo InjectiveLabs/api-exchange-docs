@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "balance",
+    "Type": "string",
+    "Description": "balance is the balance of the EVM denomination."
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "next",
+    "Type": "string array",
+    "Description": "array of tokens to navigate to the next pages"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "quorum",
+    "Type": "string",
+    "Description": "Minimum percentage of total stake needed to vote for a result to be considered valid."
+  },
+  {
+    "Parameter": "threshold",
+    "Type": "string",
+    "Description": "Minimum proportion of Yes votes for proposal to pass. Default value: 0.5."
+  },
+  {
+    "Parameter": "veto_threshold",
+    "Type": "string",
+    "Description": "Minimum value of Veto votes to Total votes ratio for proposal to be vetoed. Default value: 1/3."
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "actor",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "roles",
+    "Type": "string array",
+    "Description": ""
+  }
+]

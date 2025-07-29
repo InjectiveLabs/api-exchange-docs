@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "band_ibc_params",
+    "Type": "BandIBCParams",
+    "Description": ""
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "validator_address",
+    "Type": "string",
+    "Description": "validator_address is the address of the validator."
+  },
+  {
+    "Parameter": "accumulated",
+    "Type": "ValidatorAccumulatedCommission",
+    "Description": "accumulated is the accumulated commission of a validator."
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "Parameter": "msg",
+    "Type": "MsgEthereumTx",
+    "Description": "msg is the MsgEthereumTx for the requested transaction",
+    "Required": "No"
+  },
+  {
+    "Parameter": "trace_config",
+    "Type": "TraceConfig",
+    "Description": "trace_config holds extra parameters to trace functions.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "predecessors",
+    "Type": "MsgEthereumTx array",
+    "Description": "predecessors is an array of transactions included in the same block need to be replayed first to get correct context for tracing.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "block_number",
+    "Type": "int64",
+    "Description": "block_number of requested transaction",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "block_hash",
+    "Type": "string",
+    "Description": "block_hash of requested transaction",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "block_time",
+    "Type": "time.Time",
+    "Description": "block_time of requested transaction",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proposer_address",
+    "Type": "github_com_cosmos_cosmos_sdk_types.ConsAddress",
+    "Description": "proposer_address is the proposer of the requested block",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "int64",
+    "Description": "chain_id is the the eip155 chain id parsed from the requested block header",
+    "Required": "Yes"
+  }
+]

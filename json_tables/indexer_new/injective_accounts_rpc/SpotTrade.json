@@ -1,0 +1,62 @@
+[
+  {
+    "Parameter": "order_hash",
+    "Type": "string",
+    "Description": "Maker order hash."
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "The subaccountId that executed the trade"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "The ID of the market that this trade is in"
+  },
+  {
+    "Parameter": "trade_execution_type",
+    "Type": "string",
+    "Description": "The execution type of the trade"
+  },
+  {
+    "Parameter": "trade_direction",
+    "Type": "string",
+    "Description": "The direction the trade"
+  },
+  {
+    "Parameter": "price",
+    "Type": "PriceLevel",
+    "Description": "Price level at which trade has been executed"
+  },
+  {
+    "Parameter": "fee",
+    "Type": "string",
+    "Description": "The fee associated with the trade (quote asset denom)"
+  },
+  {
+    "Parameter": "executed_at",
+    "Type": "int64",
+    "Description": "Timestamp of trade execution in UNIX millis"
+  },
+  {
+    "Parameter": "fee_recipient",
+    "Type": "string",
+    "Description": "Fee recipient address"
+  },
+  {
+    "Parameter": "trade_id",
+    "Type": "string",
+    "Description": "A unique string that helps differentiate between trades"
+  },
+  {
+    "Parameter": "execution_side",
+    "Type": "string",
+    "Description": "Trade's execution side, marker/taker"
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "Custom client order ID"
+  }
+]

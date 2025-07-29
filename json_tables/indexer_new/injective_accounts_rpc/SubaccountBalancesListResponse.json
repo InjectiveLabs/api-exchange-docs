@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "balances",
+    "Type": "SubaccountBalance array",
+    "Description": "List of subaccount balances"
+  }
+]

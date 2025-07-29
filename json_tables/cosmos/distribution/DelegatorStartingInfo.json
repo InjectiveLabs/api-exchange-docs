@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "previous_period",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "stake",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "height",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

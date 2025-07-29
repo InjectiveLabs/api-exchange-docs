@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "key",
+    "Type": "string",
+    "Description": "key is the stored key"
+  },
+  {
+    "Parameter": "value",
+    "Type": "string",
+    "Description": "value is the stored value for the given key"
+  }
+]

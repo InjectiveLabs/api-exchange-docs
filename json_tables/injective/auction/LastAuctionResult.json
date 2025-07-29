@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "winner",
+    "Type": "string",
+    "Description": "winner describes the address of the winner"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coin",
+    "Description": "amount describes the amount the winner get from the auction"
+  },
+  {
+    "Parameter": "round",
+    "Type": "uint64",
+    "Description": "round defines the round number of auction"
+  }
+]

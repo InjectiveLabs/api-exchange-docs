@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "delegator_address",
+    "Type": "string",
+    "Description": "delegator_address is the encoded address of the delegator."
+  },
+  {
+    "Parameter": "validator_address",
+    "Type": "string",
+    "Description": "validator_address is the encoded address of the validator."
+  },
+  {
+    "Parameter": "entries",
+    "Type": "UnbondingDelegationEntry array",
+    "Description": "entries are the unbonding delegation entries."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID of the spot market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "resolution",
+    "Type": "string",
+    "Description": "Specify the resolution",
+    "Required": "Yes"
+  }
+]

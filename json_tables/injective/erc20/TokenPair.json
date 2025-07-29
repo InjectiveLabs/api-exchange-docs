@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "bank_denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "erc20_address",
+    "Type": "string",
+    "Description": ""
+  }
+]

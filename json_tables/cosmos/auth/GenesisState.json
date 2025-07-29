@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines all the parameters of the module."
+  },
+  {
+    "Parameter": "accounts",
+    "Type": "types.Any array",
+    "Description": "accounts are the accounts present at genesis."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "publisher_key",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  },
+  {
+    "Parameter": "signature",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

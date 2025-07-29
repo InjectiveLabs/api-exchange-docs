@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "the denom of the token"
+  },
+  {
+    "Parameter": "decimals",
+    "Type": "uint64",
+    "Description": "the decimals of the token"
+  }
+]

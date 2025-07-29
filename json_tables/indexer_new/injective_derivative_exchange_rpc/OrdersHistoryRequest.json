@@ -1,0 +1,98 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "subaccount ID to filter orders for specific subaccount",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID to filter orders for specific market",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip",
+    "Type": "uint64",
+    "Description": "Skip will skip the first n item from the result",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "Limit is used to specify the maximum number of items to be returned",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "order_types",
+    "Type": "string array",
+    "Description": "filter by order types",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "direction",
+    "Type": "string",
+    "Description": "order side filter",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "start_time",
+    "Type": "int64",
+    "Description": "Search for orders which createdAt >= startTime, time in millisecond",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "end_time",
+    "Type": "int64",
+    "Description": "Search for orders which createdAt <= endTime, time in millisecond",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "is_conditional",
+    "Type": "string",
+    "Description": "Only search for conditional/non-conditional orders",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "order_type",
+    "Type": "string",
+    "Description": "filter by order type",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "state",
+    "Type": "string",
+    "Description": "Filter by order state",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "execution_types",
+    "Type": "string array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_ids",
+    "Type": "string array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "trade_id",
+    "Type": "string",
+    "Description": "TradeId of the order we want to fetch",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "active_markets_only",
+    "Type": "bool",
+    "Description": "Return only orders for active markets",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "Client order ID",
+    "Required": "Yes"
+  }
+]

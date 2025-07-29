@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sign_type",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "value",
+    "Type": "MsgSignData",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "metadata",
+    "Type": "Metadata",
+    "Description": "metadata describes and provides all the client information for the requested token."
+  }
+]

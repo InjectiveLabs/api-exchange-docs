@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "validator_period",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "fraction",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": ""
+  }
+]

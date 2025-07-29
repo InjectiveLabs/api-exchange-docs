@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "namespace",
+    "Type": "Namespace",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

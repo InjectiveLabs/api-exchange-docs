@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "manager",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "roles",
+    "Type": "string array",
+    "Description": ""
+  }
+]

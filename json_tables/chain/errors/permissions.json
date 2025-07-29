@@ -1,0 +1,62 @@
+[
+  {
+    "Error Code": 2,
+    "Description": "attempting to create a namespace for denom that already exists"
+  },
+  {
+    "Error Code": 3,
+    "Description": "unauthorized account"
+  },
+  {
+    "Error Code": 4,
+    "Description": "invalid genesis"
+  },
+  {
+    "Error Code": 5,
+    "Description": "invalid namespace"
+  },
+  {
+    "Error Code": 6,
+    "Description": "invalid permissions"
+  },
+  {
+    "Error Code": 7,
+    "Description": "unknown role"
+  },
+  {
+    "Error Code": 8,
+    "Description": "unknown contract address"
+  },
+  {
+    "Error Code": 9,
+    "Description": "restricted action"
+  },
+  {
+    "Error Code": 10,
+    "Description": "invalid role"
+  },
+  {
+    "Error Code": 11,
+    "Description": "namespace for denom does not exist"
+  },
+  {
+    "Error Code": 12,
+    "Description": "wasm hook query error"
+  },
+  {
+    "Error Code": 13,
+    "Description": "voucher was not found"
+  },
+  {
+    "Error Code": 14,
+    "Description": "invalid contract hook"
+  },
+  {
+    "Error Code": 15,
+    "Description": "unknown policy"
+  },
+  {
+    "Error Code": 16,
+    "Description": "unauthorized policy change"
+  }
+]

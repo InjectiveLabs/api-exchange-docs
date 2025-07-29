@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "volumes",
+    "Type": "MarketVolume array",
+    "Description": "the aggregate volumes for the entire market"
+  }
+]

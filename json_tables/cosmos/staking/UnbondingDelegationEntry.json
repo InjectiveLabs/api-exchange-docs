@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "creation_height",
+    "Type": "int64",
+    "Description": "creation_height is the height which the unbonding took place."
+  },
+  {
+    "Parameter": "completion_time",
+    "Type": "time.Time",
+    "Description": "completion_time is the unix time for unbonding completion."
+  },
+  {
+    "Parameter": "initial_balance",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "initial_balance defines the tokens initially scheduled to receive at completion."
+  },
+  {
+    "Parameter": "balance",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "balance defines the tokens to receive at completion."
+  },
+  {
+    "Parameter": "unbonding_id",
+    "Type": "uint64",
+    "Description": "Incrementing id that uniquely identifies this entry"
+  },
+  {
+    "Parameter": "unbonding_on_hold_ref_count",
+    "Type": "int64",
+    "Description": "Strictly positive if this entry's unbonding has been stopped by external modules"
+  }
+]

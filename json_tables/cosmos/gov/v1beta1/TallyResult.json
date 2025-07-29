@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "yes",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "yes is the number of yes votes on a proposal."
+  },
+  {
+    "Parameter": "abstain",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "abstain is the number of abstain votes on a proposal."
+  },
+  {
+    "Parameter": "no",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "no is the number of no votes on a proposal."
+  },
+  {
+    "Parameter": "no_with_veto",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "no_with_veto is the number of no with veto votes on a proposal."
+  }
+]

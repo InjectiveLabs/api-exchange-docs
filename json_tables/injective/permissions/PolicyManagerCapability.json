@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "manager",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "action",
+    "Type": "Action",
+    "Description": ""
+  },
+  {
+    "Parameter": "can_disable",
+    "Type": "bool",
+    "Description": ""
+  },
+  {
+    "Parameter": "can_seal",
+    "Type": "bool",
+    "Description": ""
+  }
+]

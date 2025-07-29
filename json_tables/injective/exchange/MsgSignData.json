@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "Signer",
+    "Type": "github_com_cosmos_cosmos_sdk_types.AccAddress",
+    "Description": "Signer is the sdk.AccAddress of the message signer",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "Data",
+    "Type": "byte array",
+    "Description": "Data represents the raw bytes of the content that is signed (text, json, etc)",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "new_points",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "new_points overwrites the current trading reward points for the account"
+  }
+]

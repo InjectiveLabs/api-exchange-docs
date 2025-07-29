@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "marketId",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

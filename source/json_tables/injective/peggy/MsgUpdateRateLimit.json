@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "authority is the address of peggy admin or governance account",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token_address",
+    "Type": "string",
+    "Description": "token_address is the address of rate limited token",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "new_token_price_id",
+    "Type": "string",
+    "Description": "new_token_price_id is the new Pyth price ID of the rate limited token",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "new_rate_limit_usd",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "new_rate_limit_usd is the new notional limit (on withdrawals) in USD",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "new_rate_limit_window",
+    "Type": "uint64",
+    "Description": "new_rate_limit_window is the new length of the sliding window",
+    "Required": "Yes"
+  }
+]

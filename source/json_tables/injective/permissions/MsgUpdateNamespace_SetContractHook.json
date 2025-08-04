@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "new_value",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

@@ -1,3 +1,0 @@
-[
-    {"Parameter": "denom", "Type": "String", "Description": "The token denom", "Required": "Yes"}
-]

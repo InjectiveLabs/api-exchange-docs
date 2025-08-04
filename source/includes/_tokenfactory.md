@@ -112,9 +112,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tokenfactory/queryDenomAuthorityMetadataRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">creator</td><td class="type-td td_text">String</td><td class="description-td td_text">The denom creator address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">sub_denom</td><td class="type-td td_text">String</td><td class="description-td td_text">The token subdenom</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/tokenfactory/QueryDenomAuthorityMetadataRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">creator</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">sub_denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -134,16 +134,17 @@ func main() {
 
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tokenfactory/queryDenomAuthorityMetadataResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">authority_metadata</td><td class="type-td td_text">DenomAuthorityMetadata</td><td class="description-td td_text">The denom authority information</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/tokenfactory/QueryDenomAuthorityMetadataResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">authority_metadata</td><td class="type-td td_text">DenomAuthorityMetadata</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **DenomAuthorityMetadata**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tokenfactory/denomAuthorityMetadata.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">String</td><td class="description-td td_text">The denom admin</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/tokenfactory/DenomAuthorityMetadata.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">string</td><td class="description-td td_text">Can be empty for no admin, or a valid injective address</td></tr>
+<tr ><td class="parameter-td td_text">admin_burn_allowed</td><td class="type-td td_text">bool</td><td class="description-td td_text">true if the admin can burn tokens from other addresses</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -254,8 +255,8 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tokenfactory/queryDenomsFromCreatorRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">creator</td><td class="type-td td_text">String</td><td class="description-td td_text">The denom creator address</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/tokenfactory/QueryDenomsFromCreatorRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">creator</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -352,8 +353,8 @@ func main() {
 
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tokenfactory/queryDenomsFromCreatorResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denoms</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of denoms</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/tokenfactory/QueryDenomsFromCreatorResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denoms</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -550,25 +551,25 @@ No parameters
 
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tokenfactory/queryModuleStateResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">GenesisState</td><td class="description-td td_text">The state details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/tokenfactory/QueryModuleStateResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">GenesisState</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **GenesisState**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tokenfactory/genesisState.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">params</td><td class="type-td td_text">Params</td><td class="description-td td_text">Module parameters</td></tr>
-<tr ><td class="parameter-td td_text">factory_denoms</td><td class="type-td td_text">GenesisDenom Array</td><td class="description-td td_text">Module parameters</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/tokenfactory/GenesisState.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">params</td><td class="type-td td_text">Params</td><td class="description-td td_text">params defines the parameters of the module.</td></tr>
+<tr ><td class="parameter-td td_text">factory_denoms</td><td class="type-td td_text">GenesisDenom array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Params**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tokenfactory/params.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denoms_creation_fee</td><td class="type-td td_text">Coin Array</td><td class="description-td td_text">Fee required to create a denom</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/tokenfactory/Params.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom_creation_fee</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -584,19 +585,21 @@ No parameters
 
 **GenesisDenom**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tokenfactory/genesisDenom.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">String</td><td class="description-td td_text">Token denom</td></tr>
-<tr ><td class="parameter-td td_text">authority_metadata</td><td class="type-td td_text">DenomAuthorityMetadata</td><td class="description-td td_text">Token authority metadata</td></tr>
-<tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">String</td><td class="description-td td_text">Token name</td></tr>
-<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">String</td><td class="description-td td_text">Token symbol</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/tokenfactory/GenesisDenom.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">authority_metadata</td><td class="type-td td_text">DenomAuthorityMetadata</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **DenomAuthorityMetadata**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tokenfactory/denomAuthorityMetadata.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">String</td><td class="description-td td_text">The denom admin</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/tokenfactory/DenomAuthorityMetadata.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">string</td><td class="description-td td_text">Can be empty for no admin, or a valid injective address</td></tr>
+<tr ><td class="parameter-td td_text">admin_burn_allowed</td><td class="type-td td_text">bool</td><td class="description-td td_text">true if the admin can burn tokens from other addresses</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -770,12 +773,13 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tokenfactory/msgCreateDenom.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">Sender Injective address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">subdenom</td><td class="type-td td_text">String</td><td class="description-td td_text">New token subdenom</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">String</td><td class="description-td td_text">New token name</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">String</td><td class="description-td td_text">New token symbol</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of decimals use to represent token amount on chain</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/tokenfactory/MsgCreateDenom.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">subdenom</td><td class="type-td td_text">string</td><td class="description-td td_text">subdenom can be up to 44 "alphanumeric" characters long.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">allow_admin_burn</td><td class="type-td td_text">bool</td><td class="description-td td_text">true if admins are allowed to burn tokens from other addresses</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -993,9 +997,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tokenfactory/msgMint.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">Sender Injective address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">Coin</td><td class="description-td td_text">Amount to mint</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/tokenfactory/MsgMint.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">types.Coin</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">receiver</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1222,9 +1227,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tokenfactory/msgBurn.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">Sender Injective address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">Coin</td><td class="description-td td_text">Amount to burn</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/tokenfactory/MsgBurn.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">types.Coin</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">burnFromAddress</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1488,35 +1494,36 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tokenfactory/msgSetDenomMetadata.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">Sender Injective address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">metadata</td><td class="type-td td_text">Metadata</td><td class="description-td td_text">Token metadata</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/tokenfactory/MsgSetDenomMetadata.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">metadata</td><td class="type-td td_text">types1.Metadata</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">admin_burn_disabled</td><td class="type-td td_text">MsgSetDenomMetadata_AdminBurnDisabled</td><td class="description-td td_num"></td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Metadata**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/bank/metadata.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">description</td><td class="type-td td_text">String</td><td class="description-td td_text">Token description</td></tr>
-<tr ><td class="parameter-td td_text">denom_units</td><td class="type-td td_text">DenomUnit Array</td><td class="description-td td_text">All token units</td></tr>
-<tr ><td class="parameter-td td_text">base</td><td class="type-td td_text">String</td><td class="description-td td_text">The base token denom</td></tr>
-<tr ><td class="parameter-td td_text">display</td><td class="type-td td_text">String</td><td class="description-td td_text">Suggested denom that should be displayed in clients</td></tr>
-<tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">String</td><td class="description-td td_text">Token name</td></tr>
-<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">String</td><td class="description-td td_text">Token symbol</td></tr>
-<tr ><td class="parameter-td td_text">uri</td><td class="type-td td_text">String</td><td class="description-td td_text">URI to a document (on or off-chain) that contains additional information. Optional</td></tr>
-<tr ><td class="parameter-td td_text">uri_hash</td><td class="type-td td_text">String</td><td class="description-td td_text">URIHash is a sha256 hash of a document pointed by URI. It's used to verify that the document didn't change. Optional</td></tr>
-<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of decimals use to represent token amount on chain</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/Metadata.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">description</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">denom_units</td><td class="type-td td_text">DenomUnit array</td><td class="description-td td_text">denom_units represents the list of DenomUnit's for a given coin</td></tr>
+<tr ><td class="parameter-td td_text">base</td><td class="type-td td_text">string</td><td class="description-td td_text">base represents the base denom (should be the DenomUnit with exponent = 0).</td></tr>
+<tr ><td class="parameter-td td_text">display</td><td class="type-td td_text">string</td><td class="description-td td_text">display indicates the suggested denom that should be displayed in clients.</td></tr>
+<tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">name defines the name of the token (eg: Cosmos Atom)  Since: cosmos-sdk 0.43</td></tr>
+<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">symbol is the token symbol usually shown on exchanges (eg: ATOM). This can be the same as the display.  Since: cosmos-sdk 0.43</td></tr>
+<tr ><td class="parameter-td td_text">uri</td><td class="type-td td_text">string</td><td class="description-td td_text">URI to a document (on or off-chain) that contains additional information. Optional.  Since: cosmos-sdk 0.46</td></tr>
+<tr ><td class="parameter-td td_text">uri_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">URIHash is a sha256 hash of a document pointed by URI. It's used to verify that the document didn't change. Optional.  Since: cosmos-sdk 0.46</td></tr>
+<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Decimals represent the number of decimals use to represent token amount on chain  Since: cosmos-sdk 0.50</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **DenomUnit**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/bank/denomUnit.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">String</td><td class="description-td td_text">Name of the denom unit</td></tr>
-<tr ><td class="parameter-td td_text">exponent</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Exponent represents power of 10 exponent that one must raise the base_denom to in order to equal the given DenomUnit's denom 1 denom = 10^exponent base_denom (e.g. with a base_denom of uatom, one can create a DenomUnit of 'atom' with exponent = 6, thus: 1 atom = 10^6 uatom)</td></tr>
-<tr ><td class="parameter-td td_text">aliases</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of aliases for the denom</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/DenomUnit.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">denom represents the string name of the given denom unit (e.g uatom).</td></tr>
+<tr ><td class="parameter-td td_text">exponent</td><td class="type-td td_text">uint32</td><td class="description-td td_text">exponent represents power of 10 exponent that one must raise the base_denom to in order to equal the given DenomUnit's denom 1 denom = 10^exponent base_denom (e.g. with a base_denom of uatom, one can create a DenomUnit of 'atom' with exponent = 6, thus: 1 atom = 10^6 uatom).</td></tr>
+<tr ><td class="parameter-td td_text">aliases</td><td class="type-td td_text">string array</td><td class="description-td td_text">aliases is a list of string aliases for the given denom</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1730,10 +1737,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tokenfactory/msgChangeAdmin.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">Sender Injective address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">String</td><td class="description-td td_text">Token denom</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">new_admin</td><td class="type-td td_text">String</td><td class="description-td td_text">New admin Injective address</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/tokenfactory/MsgChangeAdmin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">new_admin</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters

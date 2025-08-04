@@ -202,7 +202,7 @@ process_pb_file() {
     declare -a comment_lines
     
     while IFS= read -r line || [ -n "$line" ]; do
-        if [[ $line =~ ^type[[:space:]]+([[:alnum:]]+)[[:space:]]+struct[[:space:]]+\{ ]]; then
+        if [[ $line =~ ^type[[:space:]]+([[:alnum:]_]+)[[:space:]]+struct[[:space:]]+\{ ]]; then
             local new_type="${BASH_REMATCH[1]}"
             
             if [ -n "$current_type" ] && [ ${#fields[@]} -gt 0 ] && [[ ! "$current_type" =~ ^Event ]]; then

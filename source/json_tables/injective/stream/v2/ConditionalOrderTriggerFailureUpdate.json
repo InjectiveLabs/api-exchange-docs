@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "the market ID"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "the subaccount ID"
+  },
+  {
+    "Parameter": "mark_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "the mark price"
+  },
+  {
+    "Parameter": "order_hash",
+    "Type": "string",
+    "Description": "the order hash"
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "the client order ID"
+  },
+  {
+    "Parameter": "error_description",
+    "Type": "string",
+    "Description": "the error code"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "mode",
+    "Type": "SignMode",
+    "Description": "mode is the signing mode of the single signer"
+  },
+  {
+    "Parameter": "signature",
+    "Type": "byte array",
+    "Description": "signature is the raw signature bytes"
+  }
+]

@@ -1,8 +1,8 @@
 # Repository versions and URLs
-COSMOS_SDK_VERSION := v0.50.13-evm-comet1-inj.3
+COSMOS_SDK_VERSION := v0.50.13-evm-comet1-inj.4
 COSMOS_SDK_REPO := https://github.com/InjectiveLabs/cosmos-sdk.git
 
-INJECTIVE_CORE_VERSION := v1.16.0
+INJECTIVE_CORE_VERSION := master
 INJECTIVE_CORE_REPO := https://github.com/InjectiveLabs/injective-core.git
 
 INDEXER_VERSION := v1.16.54

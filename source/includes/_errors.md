@@ -2,7 +2,7 @@
 
 ## Authz module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/authz.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/errors/authz.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">authorization not found</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">expiration time of authorization should be more than current time</td></tr>
 <tr ><td class="error-code-td td_num">4</td><td class="description-td td_text">unknown authorization type</td></tr>
@@ -15,7 +15,7 @@
 
 ## Bank module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/bank.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/errors/bank.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">no inputs to send transaction</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">no outputs to send transaction</td></tr>
 <tr ><td class="error-code-td td_num">4</td><td class="description-td td_text">sum inputs != sum outputs</td></tr>
@@ -28,14 +28,14 @@
 
 ## Crisis module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/crisis.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/errors/crisis.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">sender address is empty</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">unknown invariant</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Distribution module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/distribution.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/errors/distribution.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">delegator address is empty</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">withdraw address is empty</td></tr>
 <tr ><td class="error-code-td td_num">4</td><td class="description-td td_text">validator address is empty</td></tr>
@@ -52,7 +52,7 @@
 
 ## Evidence module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/evidence.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/errors/evidence.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">unregistered handler for evidence type</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">invalid evidence</td></tr>
 <tr ><td class="error-code-td td_num">5</td><td class="description-td td_text">evidence already exists</td></tr></tbody></table>
@@ -60,7 +60,7 @@
 
 ## Feegrant module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/feegrant.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/errors/feegrant.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">fee limit exceeded</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">fee allowance expired</td></tr>
 <tr ><td class="error-code-td td_num">4</td><td class="description-td td_text">invalid duration</td></tr>
@@ -71,7 +71,7 @@
 
 ## Gov module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/gov.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/errors/gov.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">inactive proposal</td></tr>
 <tr ><td class="error-code-td td_num">4</td><td class="description-td td_text">proposal already active</td></tr>
 <tr ><td class="error-code-td td_num">5</td><td class="description-td td_text">invalid proposal content</td></tr>
@@ -94,7 +94,7 @@
 
 ## Nft module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/nft.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/errors/nft.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">nft class already exists</td></tr>
 <tr ><td class="error-code-td td_num">4</td><td class="description-td td_text">nft class does not exist</td></tr>
 <tr ><td class="error-code-td td_num">5</td><td class="description-td td_text">nft already exists</td></tr>
@@ -105,7 +105,7 @@
 
 ## Slashing module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/slashing.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/errors/slashing.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">address is not associated with any known validator</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">validator does not exist for that address</td></tr>
 <tr ><td class="error-code-td td_num">4</td><td class="description-td td_text">validator still jailed; cannot be unjailed</td></tr>
@@ -118,7 +118,7 @@
 
 ## Staking module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/staking.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/errors/staking.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">empty validator address</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">validator does not exist</td></tr>
 <tr ><td class="error-code-td td_num">4</td><td class="description-td td_text">validator already exist for this operator address; must use new validator operator address</td></tr>
@@ -168,7 +168,7 @@
 
 ## Upgrade module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/upgrade.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/errors/upgrade.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">module version not found</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">upgrade plan not found</td></tr>
 <tr ><td class="error-code-td td_num">4</td><td class="description-td td_text">upgraded client not found</td></tr>
@@ -180,14 +180,14 @@
 
 ## Auction module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/errors/auction.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/errors/auction.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">1</td><td class="description-td td_text">invalid bid denom</td></tr>
 <tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">invalid bid round</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Erc20 module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/errors/erc20.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/errors/erc20.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">attempting to create a token pair for bank denom that already has a pair associated</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">unauthorized account</td></tr>
 <tr ><td class="error-code-td td_num">4</td><td class="description-td td_text">invalid genesis</td></tr>
@@ -202,7 +202,7 @@
 
 ## Exchange module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/errors/exchange.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/errors/exchange.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">1</td><td class="description-td td_text">failed to validate order</td></tr>
 <tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">spot market not found</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">spot market exists</td></tr>
@@ -279,7 +279,7 @@
 <tr ><td class="error-code-td td_num">74</td><td class="description-td td_text">sender should be a market admin</td></tr>
 <tr ><td class="error-code-td td_num">75</td><td class="description-td td_text">market is already scheduled to settle</td></tr>
 <tr ><td class="error-code-td td_num">76</td><td class="description-td td_text">market not found</td></tr>
-<tr ><td class="error-code-td td_num">77</td><td class="description-td td_text">denom decimal cannot be higher than max scale factor</td></tr>
+<tr ><td class="error-code-td td_num">77</td><td class="description-td td_text">denom decimal should be greater than 0 and not greater than max scale factor</td></tr>
 <tr ><td class="error-code-td td_num">78</td><td class="description-td td_text">state is invalid</td></tr>
 <tr ><td class="error-code-td td_num">79</td><td class="description-td td_text">transient orders up to cancellation not supported</td></tr>
 <tr ><td class="error-code-td td_num">80</td><td class="description-td td_text">invalid trade</td></tr>
@@ -315,7 +315,7 @@
 
 ## Insurance module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/errors/insurance.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/errors/insurance.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">1</td><td class="description-td td_text">insurance fund already exists</td></tr>
 <tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">insurance fund not found</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">redemption already exists</td></tr>
@@ -332,7 +332,7 @@
 
 ## Ocr module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/errors/ocr.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/errors/ocr.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">1</td><td class="description-td td_text">stale report</td></tr>
 <tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">incomplete proposal</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">repeated oracle address</td></tr>
@@ -360,7 +360,7 @@
 
 ## Oracle module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/errors/oracle.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/errors/oracle.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">1</td><td class="description-td td_text">relayer address is empty</td></tr>
 <tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">bad rates count</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">bad resolve times</td></tr>
@@ -408,7 +408,7 @@
 
 ## Peggy module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/errors/peggy.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/errors/peggy.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">1</td><td class="description-td td_text">internal</td></tr>
 <tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">duplicate</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">invalid</td></tr>
@@ -428,7 +428,7 @@
 
 ## Permissions module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/errors/permissions.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/errors/permissions.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">attempting to create a namespace for denom that already exists</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">unauthorized account</td></tr>
 <tr ><td class="error-code-td td_num">4</td><td class="description-td td_text">invalid genesis</td></tr>
@@ -448,7 +448,7 @@
 
 ## Tokenfactory module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/errors/tokenfactory.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/errors/tokenfactory.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">attempting to create a denom that already exists (has bank metadata)</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">unauthorized account</td></tr>
 <tr ><td class="error-code-td td_num">4</td><td class="description-td td_text">invalid denom</td></tr>
@@ -461,7 +461,7 @@
 
 ## Wasmx module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/errors/wasmx.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/errors/wasmx.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="error-code-th">Error Code</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="error-code-td td_num">1</td><td class="description-td td_text">invalid gas limit</td></tr>
 <tr ><td class="error-code-td td_num">2</td><td class="description-td td_text">invalid gas price</td></tr>
 <tr ><td class="error-code-td td_num">3</td><td class="description-td td_text">invalid contract address</td></tr>

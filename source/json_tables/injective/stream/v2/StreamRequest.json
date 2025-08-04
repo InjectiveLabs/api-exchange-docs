@@ -58,5 +58,17 @@
     "Type": "OraclePriceFilter",
     "Description": "filter for oracle prices events",
     "Required": "No"
+  },
+  {
+    "Parameter": "order_failures_filter",
+    "Type": "OrderFailuresFilter",
+    "Description": "filter for order failures events",
+    "Required": "No"
+  },
+  {
+    "Parameter": "conditional_order_trigger_failures_filter",
+    "Type": "ConditionalOrderTriggerFailuresFilter",
+    "Description": "filter for conditional order trigger failures events",
+    "Required": "No"
   }
 ]

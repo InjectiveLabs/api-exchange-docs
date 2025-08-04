@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "spot_order_history",
+    "Type": "SpotOrderHistory",
+    "Description": "Spot order history"
+  }
+]

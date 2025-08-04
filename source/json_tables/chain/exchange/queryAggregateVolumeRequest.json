@@ -1,3 +1,0 @@
-[
-    {"Parameter": "account", "Type": "String", "Description": "Account address or subaccount id", "Required": "Yes"}
-]

@@ -171,10 +171,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/auction/msgBid.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">The sender Injective address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">bid_amount</td><td class="type-td td_text">Coin</td><td class="description-td td_text">Bid amount in INJ tokens</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">round</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The current auction round</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/auction/MsgBid.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">the sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">bid_amount</td><td class="type-td td_text">types.Coin</td><td class="description-td td_text">amount of the bid in INJ tokens</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">round</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the current auction round being bid on</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>

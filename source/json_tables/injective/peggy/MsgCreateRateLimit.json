@@ -1,0 +1,44 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "address of peggy admin or governance account",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token_address",
+    "Type": "string",
+    "Description": "address of the ERC20 token",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token_decimals",
+    "Type": "uint32",
+    "Description": "decimals of the ERC20 token",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token_price_id",
+    "Type": "string",
+    "Description": "a Pyth-specific ID used to obtain USD price of the ERC20 token",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "rate_limit_usd",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "the notional USD limit imposed on all outgoing traffic (per token)",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "absolute_mint_limit",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "the absolute amount of tokens that can be minted on Injective",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "rate_limit_window",
+    "Type": "uint64",
+    "Description": "length of the sliding window in which inbound (outbound) traffic is measured",
+    "Required": "Yes"
+  }
+]

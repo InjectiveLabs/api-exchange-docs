@@ -108,17 +108,17 @@ process_modules() {
 
 # Clean up any existing files and create directory structure
 echo "Setting up directories..."
-rm -rf "$BASE_OUTPUT_DIR/errors" "$BASE_OUTPUT_DIR/chain/errors"
-mkdir -p "$BASE_OUTPUT_DIR/errors" "$BASE_OUTPUT_DIR/chain/errors"
+rm -rf "$BASE_OUTPUT_DIR/cosmos/errors" "$BASE_OUTPUT_DIR/injective/errors"
+mkdir -p "$BASE_OUTPUT_DIR/cosmos/errors" "$BASE_OUTPUT_DIR/injective/errors"
 
 # Process Cosmos SDK repository
 echo "Processing Cosmos SDK repository..."
-process_modules "$COSMOS_SDK_DIR" "$BASE_OUTPUT_DIR/errors" "x"
+process_modules "$COSMOS_SDK_DIR" "$BASE_OUTPUT_DIR/cosmos/errors" "x"
 
 # Process Injective Core repository
 echo "Processing Injective Core repository..."
-process_modules "$INJECTIVE_CORE_DIR" "$BASE_OUTPUT_DIR/chain/errors" "injective-chain/modules"
+process_modules "$INJECTIVE_CORE_DIR" "$BASE_OUTPUT_DIR/injective/errors" "injective-chain/modules"
 
 echo "Error extraction complete. JSON files have been created in:"
-echo "- $BASE_OUTPUT_DIR/errors (Cosmos SDK modules)"
-echo "- $BASE_OUTPUT_DIR/chain/errors (Injective Core modules)" 
+echo "- $BASE_OUTPUT_DIR/cosmos/errors (Cosmos SDK modules)"
+echo "- $BASE_OUTPUT_DIR/injective/errors (Injective Core modules)" 

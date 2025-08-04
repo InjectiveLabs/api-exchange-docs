@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "spot_trade",
+    "Type": "SpotTrade",
+    "Description": "New spot market trade"
+  }
+]

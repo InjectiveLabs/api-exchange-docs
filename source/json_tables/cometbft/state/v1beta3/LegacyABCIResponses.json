@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "deliver_txs",
+    "Type": "v1beta3.ExecTxResult array",
+    "Description": ""
+  },
+  {
+    "Parameter": "end_block",
+    "Type": "ResponseEndBlock",
+    "Description": ""
+  },
+  {
+    "Parameter": "begin_block",
+    "Type": "ResponseBeginBlock",
+    "Description": ""
+  }
+]

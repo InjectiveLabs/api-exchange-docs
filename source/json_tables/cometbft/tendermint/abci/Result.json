@@ -1,0 +1,26 @@
+[
+  {
+    "Code": "0",
+    "Name": "UNKNOWN"
+  },
+  {
+    "Code": "1",
+    "Name": "ACCEPT"
+  },
+  {
+    "Code": "2",
+    "Name": "ABORT"
+  },
+  {
+    "Code": "3",
+    "Name": "RETRY"
+  },
+  {
+    "Code": "4",
+    "Name": "RETRY_SNAPSHOT"
+  },
+  {
+    "Code": "5",
+    "Name": "REJECT_SNAPSHOT"
+  }
+]

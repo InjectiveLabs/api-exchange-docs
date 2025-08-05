@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "consensus_params",
+    "Type": "v1beta21.ConsensusParams",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_height_changed",
+    "Type": "int64",
+    "Description": ""
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "signer address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "wasm_byte_code",
+    "Type": "byte array",
+    "Description": "wasm byte code of light client contract. It can be raw or gzip compressed",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "packet_fees",
+    "Type": "PacketFee array",
+    "Description": "list of packet fees"
+  }
+]

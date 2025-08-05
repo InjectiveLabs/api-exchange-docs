@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "consensus_states",
+    "Type": "ConsensusStateWithHeight array",
+    "Description": "consensus states associated with the identifier"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination response"
+  }
+]

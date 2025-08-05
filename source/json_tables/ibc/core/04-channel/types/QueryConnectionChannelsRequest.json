@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "connection",
+    "Type": "string",
+    "Description": "connection unique identifier",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination request",
+    "Required": "No"
+  }
+]

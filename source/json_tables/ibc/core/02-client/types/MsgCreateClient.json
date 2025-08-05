@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "client_state",
+    "Type": "types.Any",
+    "Description": "light client state",
+    "Required": "No"
+  },
+  {
+    "Parameter": "consensus_state",
+    "Type": "types.Any",
+    "Description": "consensus state associated with the client that corresponds to a given height.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "signer address",
+    "Required": "Yes"
+  }
+]

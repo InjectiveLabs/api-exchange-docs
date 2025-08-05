@@ -1,4 +1,0 @@
-[
-    {"Parameter": "identifier", "Type": "String", "Description": "Unique version identifier"},
-    {"Parameter": "features", "Type": "String Array", "Description": "List of features compatible with the specified identifier"}
-]

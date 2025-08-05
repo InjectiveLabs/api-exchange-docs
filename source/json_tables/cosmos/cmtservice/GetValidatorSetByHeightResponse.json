@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "block_height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "validators",
+    "Type": "Validator array",
+    "Description": ""
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines an pagination for the response."
+  }
+]

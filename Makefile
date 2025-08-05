@@ -8,6 +8,12 @@ INJECTIVE_CORE_REPO := https://github.com/InjectiveLabs/injective-core.git
 INDEXER_VERSION := v1.16.54
 INDEXER_REPO := https://github.com/InjectiveLabs/injective-indexer.git
 
+IBC_GO_VERSION := v8.7.0-evm-comet1-inj
+IBC_GO_REPO := https://github.com/InjectiveLabs/ibc-go.git
+
+COMETBFT_VERSION := v1.0.1-inj.2
+COMETBFT_REPO := https://github.com/InjectiveLabs/cometbft.git
+
 PYTHON_SDK_VERSION := v1.11.0
 PYTHON_SDK_REPO := https://github.com/InjectiveLabs/sdk-python.git
 
@@ -19,6 +25,8 @@ TEMP_DIR := /tmp/injective-docs-repos
 COSMOS_SDK_DIR := $(TEMP_DIR)/cosmos-sdk
 INJECTIVE_CORE_DIR := $(TEMP_DIR)/injective-core
 INDEXER_DIR := $(TEMP_DIR)/injective-indexer
+IBC_GO_DIR := $(TEMP_DIR)/ibc-go
+COMETBFT_DIR := $(TEMP_DIR)/cometbft
 PYTHON_SDK_DIR := tmp-python-sdk
 GO_SDK_DIR := tmp-go-sdk
 
@@ -49,7 +57,7 @@ _update-errors:
 
 _update-proto:
 	@echo "Generating proto JSON files..."
-	@./scripts/generate_proto_json_files.sh $(COSMOS_SDK_DIR) $(INJECTIVE_CORE_DIR) $(INDEXER_DIR)
+	@./scripts/generate_proto_json_files.sh $(COSMOS_SDK_DIR) $(INJECTIVE_CORE_DIR) $(INDEXER_DIR) $(IBC_GO_DIR) $(COMETBFT_DIR)
 
 # Public targets with repository management
 update-errors-documentation:
@@ -70,6 +78,8 @@ clone-repos:
 	@git clone -q --depth 1 --branch $(COSMOS_SDK_VERSION) $(COSMOS_SDK_REPO) $(COSMOS_SDK_DIR)
 	@git clone -q --depth 1 --branch $(INJECTIVE_CORE_VERSION) $(INJECTIVE_CORE_REPO) $(INJECTIVE_CORE_DIR)
 	@git clone -q --depth 1 --branch $(INDEXER_VERSION) $(INDEXER_REPO) $(INDEXER_DIR)
+	@git clone -q --depth 1 --branch $(IBC_GO_VERSION) $(IBC_GO_REPO) $(IBC_GO_DIR)
+	@git clone -q --depth 1 --branch $(COMETBFT_VERSION) $(COMETBFT_REPO) $(COMETBFT_DIR)
 
 clean-repos:
 	@echo "Cleaning up repositories..."

@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "state",
+    "Type": "State",
+    "Description": "current state of the channel end"
+  },
+  {
+    "Parameter": "ordering",
+    "Type": "Order",
+    "Description": "whether the channel is ordered or unordered"
+  },
+  {
+    "Parameter": "counterparty",
+    "Type": "Counterparty",
+    "Description": "counterparty channel end"
+  },
+  {
+    "Parameter": "connection_hops",
+    "Type": "string array",
+    "Description": "list of connection identifiers, in order, along which packets sent on this channel will travel"
+  },
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": "opaque channel version, which is agreed upon during the handshake"
+  },
+  {
+    "Parameter": "port_id",
+    "Type": "string",
+    "Description": "port identifier"
+  },
+  {
+    "Parameter": "channel_id",
+    "Type": "string",
+    "Description": "channel identifier"
+  },
+  {
+    "Parameter": "upgrade_sequence",
+    "Type": "uint64",
+    "Description": "upgrade sequence indicates the latest upgrade attempt performed by this channel the value of 0 indicates the channel has never been upgraded"
+  }
+]

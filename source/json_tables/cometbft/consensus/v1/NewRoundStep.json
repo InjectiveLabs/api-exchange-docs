@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "round",
+    "Type": "int32",
+    "Description": ""
+  },
+  {
+    "Parameter": "step",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "seconds_since_start_time",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_commit_round",
+    "Type": "int32",
+    "Description": ""
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "list_snapshots",
+    "Type": "RequestListSnapshots",
+    "Description": ""
+  }
+]

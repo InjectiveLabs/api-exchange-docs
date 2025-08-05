@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "tx_results",
+    "Type": "v1.ExecTxResult array",
+    "Description": ""
+  },
+  {
+    "Parameter": "finalize_block_events",
+    "Type": "v1.Event array",
+    "Description": ""
+  },
+  {
+    "Parameter": "validator_updates",
+    "Type": "v1.ValidatorUpdate array",
+    "Description": ""
+  },
+  {
+    "Parameter": "consensus_param_updates",
+    "Type": "v11.ConsensusParams",
+    "Description": ""
+  },
+  {
+    "Parameter": "app_hash",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "connection_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "port_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "channel_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "is_middleware_enabled",
+    "Type": "bool",
+    "Description": ""
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "format",
+    "Type": "uint32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "chunk",
+    "Type": "uint32",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

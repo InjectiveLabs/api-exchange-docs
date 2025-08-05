@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "node",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "abci",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "p2p",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "block",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

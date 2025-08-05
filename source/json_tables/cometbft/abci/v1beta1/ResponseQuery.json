@@ -1,0 +1,47 @@
+[
+  {
+    "Parameter": "code",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "log",
+    "Type": "string",
+    "Description": "bytes data = 2; // use \"value\" instead."
+  },
+  {
+    "Parameter": "info",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "index",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "key",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "value",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "proof_ops",
+    "Type": "v1.ProofOps",
+    "Description": ""
+  },
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "codespace",
+    "Type": "string",
+    "Description": ""
+  }
+]

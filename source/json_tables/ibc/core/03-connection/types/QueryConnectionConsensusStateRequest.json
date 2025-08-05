@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "connection_id",
+    "Type": "string",
+    "Description": "connection identifier",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "revision_number",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "revision_height",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

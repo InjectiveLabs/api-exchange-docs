@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "packet_id",
+    "Type": "types.PacketId",
+    "Description": "unique packet identifier comprised of the channel ID, port ID and sequence",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "packet_fee",
+    "Type": "PacketFee",
+    "Description": "the packet fee associated with a particular IBC packet",
+    "Required": "Yes"
+  }
+]

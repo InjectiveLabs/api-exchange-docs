@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "denom_traces",
+    "Type": "Traces",
+    "Description": "denom_traces returns all denominations trace information."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
+  }
+]

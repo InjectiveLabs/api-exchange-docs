@@ -1,4 +1,0 @@
-[
-    {"Parameter": "height", "Type": "Height", "Description": "Consensus state height"},
-    {"Parameter": "consensus_state", "Type": "Any", "Description": "Consensus state"}
-]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "client identifier"
+  },
+  {
+    "Parameter": "consensus_states",
+    "Type": "ConsensusStateWithHeight array",
+    "Description": "consensus states and their heights associated with the client"
+  }
+]

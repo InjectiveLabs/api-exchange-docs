@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "bytes encoding the client state of the underlying light client implemented as a Wasm contract."
+  },
+  {
+    "Parameter": "checksum",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "latest_height",
+    "Type": "types.Height",
+    "Description": ""
+  }
+]

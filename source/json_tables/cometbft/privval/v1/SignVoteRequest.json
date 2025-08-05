@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "vote",
+    "Type": "v1.Vote",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "skip_extension_signing",
+    "Type": "bool",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

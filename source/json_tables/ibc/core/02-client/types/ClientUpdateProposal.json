@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": "the title of the update proposal"
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": "the description of the proposal"
+  },
+  {
+    "Parameter": "subject_client_id",
+    "Type": "string",
+    "Description": "the client identifier for the client to be updated if the proposal passes"
+  },
+  {
+    "Parameter": "substitute_client_id",
+    "Type": "string",
+    "Description": "the substitute client identifier for the client standing in for the subject client"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "owner",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "connection_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

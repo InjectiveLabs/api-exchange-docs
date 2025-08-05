@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "owner",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "connection_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "packet_data",
+    "Type": "types1.InterchainAccountPacketData",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "relative_timeout",
+    "Type": "uint64",
+    "Description": "Relative timeout timestamp provided will be added to the current block time during transaction execution. The timeout timestamp must be non-zero.",
+    "Required": "Yes"
+  }
+]

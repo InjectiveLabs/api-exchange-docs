@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "proposal_pol_round",
+    "Type": "int32",
+    "Description": ""
+  },
+  {
+    "Parameter": "proposal_pol",
+    "Type": "v11.BitArray",
+    "Description": ""
+  }
+]

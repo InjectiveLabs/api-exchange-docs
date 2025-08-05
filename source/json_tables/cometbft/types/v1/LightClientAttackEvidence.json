@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "conflicting_block",
+    "Type": "LightBlock",
+    "Description": ""
+  },
+  {
+    "Parameter": "common_height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "byzantine_validators",
+    "Type": "Validator array",
+    "Description": ""
+  },
+  {
+    "Parameter": "total_voting_power",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "time.Time",
+    "Description": ""
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "packet",
+    "Type": "Packet",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_commitment",
+    "Type": "byte array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_height",
+    "Type": "types.Height",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

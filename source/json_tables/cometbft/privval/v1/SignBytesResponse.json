@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "signature",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "error",
+    "Type": "RemoteSignerError",
+    "Description": ""
+  }
+]

@@ -1,3 +1,0 @@
-[
-    {"Parameter": "connection_id", "Type": "String", "Description": "Connection identifier", "Required": "Yes"}
-]

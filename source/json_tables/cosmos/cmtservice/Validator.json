@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "pub_key",
+    "Type": "types.Any",
+    "Description": ""
+  },
+  {
+    "Parameter": "voting_power",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "proposer_priority",
+    "Type": "int64",
+    "Description": ""
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "Parameter": "port_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "previous_channel_id",
+    "Type": "string",
+    "Description": "Deprecated: this field is unused. Crossing hello's are no longer supported in core IBC.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "channel",
+    "Type": "Channel",
+    "Description": "NOTE: the version field within the channel has been deprecated. Its value will be ignored by core IBC.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "counterparty_version",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_init",
+    "Type": "byte array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_height",
+    "Type": "types.Height",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

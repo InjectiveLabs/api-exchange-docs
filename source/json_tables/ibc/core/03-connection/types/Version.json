@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "identifier",
+    "Type": "string",
+    "Description": "unique version identifier"
+  },
+  {
+    "Parameter": "features",
+    "Type": "string array",
+    "Description": "list of features compatible with the specified identifier"
+  }
+]

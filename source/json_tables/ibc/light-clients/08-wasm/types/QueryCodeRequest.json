@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "checksum",
+    "Type": "string",
+    "Description": "checksum is a hex encoded string of the code stored.",
+    "Required": "Yes"
+  }
+]

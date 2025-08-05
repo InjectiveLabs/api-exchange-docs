@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "precision",
+    "Type": "time.Duration",
+    "Description": "Bound for how skewed a proposer's clock may be from any validator on the network while still producing valid proposals."
+  },
+  {
+    "Parameter": "message_delay",
+    "Type": "time.Duration",
+    "Description": "Bound for how long a proposal message may take to reach all validators on a network and still be considered valid."
+  }
+]

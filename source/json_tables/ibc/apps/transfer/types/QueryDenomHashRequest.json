@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "trace",
+    "Type": "string",
+    "Description": "The denomination trace ([port_id]/[channel_id])+/[denom]",
+    "Required": "Yes"
+  }
+]

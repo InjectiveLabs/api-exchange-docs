@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "client_genesis",
+    "Type": "types.GenesisState",
+    "Description": "ICS002 - Clients genesis state"
+  },
+  {
+    "Parameter": "connection_genesis",
+    "Type": "types1.GenesisState",
+    "Description": "ICS003 - Connections genesis state"
+  },
+  {
+    "Parameter": "channel_genesis",
+    "Type": "types2.GenesisState",
+    "Description": "ICS004 - Channel genesis state"
+  }
+]

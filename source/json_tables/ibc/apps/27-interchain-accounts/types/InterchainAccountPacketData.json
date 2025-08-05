@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "type",
+    "Type": "Type",
+    "Description": ""
+  },
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "memo",
+    "Type": "string",
+    "Description": ""
+  }
+]

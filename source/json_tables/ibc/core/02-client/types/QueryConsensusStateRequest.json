@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "client identifier",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "revision_number",
+    "Type": "uint64",
+    "Description": "consensus state revision number",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "revision_height",
+    "Type": "uint64",
+    "Description": "consensus state revision height",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "latest_height",
+    "Type": "bool",
+    "Description": "latest_height overrrides the height field and queries the latest stored ConsensusState",
+    "Required": "Yes"
+  }
+]

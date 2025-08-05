@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "revision_number",
+    "Type": "uint64",
+    "Description": "the revision that the client is currently on"
+  },
+  {
+    "Parameter": "revision_height",
+    "Type": "uint64",
+    "Description": "the height within the given revision"
+  }
+]

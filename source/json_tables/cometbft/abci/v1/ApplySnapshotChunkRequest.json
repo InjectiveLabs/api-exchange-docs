@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "index",
+    "Type": "uint32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "chunk",
+    "Type": "byte array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

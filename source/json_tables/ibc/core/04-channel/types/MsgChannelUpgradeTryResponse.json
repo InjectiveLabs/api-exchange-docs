@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "upgrade",
+    "Type": "Upgrade",
+    "Description": ""
+  },
+  {
+    "Parameter": "upgrade_sequence",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "result",
+    "Type": "ResponseResultType",
+    "Description": ""
+  }
+]

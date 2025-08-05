@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "sign_proposal_request",
+    "Type": "SignProposalRequest",
+    "Description": "",
+    "Required": "No"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "extension",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "round",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "string",
+    "Description": ""
+  }
+]

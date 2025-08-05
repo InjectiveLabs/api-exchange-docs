@@ -1,3 +1,0 @@
-[
-    {"Parameter": "sum", "Type": "isEvidence_Sum", "Description": "Valid types for 'sum' are Evidence_DuplicateVoteEvidence and Evidence_LightClientAttackEvidence"}
-]

@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "consensus_state",
+    "Type": "types1.Any",
+    "Description": "consensus state associated with the channel"
+  },
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "client ID associated with the consensus state"
+  },
+  {
+    "Parameter": "proof",
+    "Type": "byte array",
+    "Description": "merkle proof of existence"
+  },
+  {
+    "Parameter": "proof_height",
+    "Type": "types.Height",
+    "Description": "height at which the proof was retrieved"
+  }
+]

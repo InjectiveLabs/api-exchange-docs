@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "upgraded_client_state",
+    "Type": "types.Any",
+    "Description": "client state associated with the request identifier"
+  }
+]

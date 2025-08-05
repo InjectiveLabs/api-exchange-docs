@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "client state unique identifier"
+  },
+  {
+    "Parameter": "paths",
+    "Type": "string array",
+    "Description": "list of connection paths"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "owner",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "connection_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "ordering",
+    "Type": "types.Order",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "types.Height",
+    "Description": "block height after which the packet or upgrade times out"
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "uint64",
+    "Description": "block timestamp (in nanoseconds) after which the packet or upgrade times out"
+  }
+]

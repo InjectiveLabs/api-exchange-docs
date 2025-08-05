@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "pub_key_request",
+    "Type": "PubKeyRequest",
+    "Description": "",
+    "Required": "No"
+  }
+]

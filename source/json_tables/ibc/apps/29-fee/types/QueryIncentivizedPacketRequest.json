@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "packet_id",
+    "Type": "types.PacketId",
+    "Description": "unique packet identifier comprised of channel ID, port ID and sequence",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "query_height",
+    "Type": "uint64",
+    "Description": "block height at which to query",
+    "Required": "Yes"
+  }
+]

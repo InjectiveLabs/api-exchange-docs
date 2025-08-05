@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "interface_names",
+    "Type": "string array",
+    "Description": "interface_names is an array of all the registered interfaces."
+  }
+]

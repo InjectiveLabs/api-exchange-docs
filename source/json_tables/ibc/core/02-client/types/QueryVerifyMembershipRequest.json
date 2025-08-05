@@ -1,0 +1,44 @@
+[
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "client unique identifier.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof",
+    "Type": "byte array",
+    "Description": "the proof to be verified by the client.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_height",
+    "Type": "Height",
+    "Description": "the height of the commitment root at which the proof is verified.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "merkle_path",
+    "Type": "types1.MerklePath",
+    "Description": "the commitment key path.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "value",
+    "Type": "byte array",
+    "Description": "the value which is proven.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "time_delay",
+    "Type": "uint64",
+    "Description": "optional time delay",
+    "Required": "No"
+  },
+  {
+    "Parameter": "block_delay",
+    "Type": "uint64",
+    "Description": "optional block delay",
+    "Required": "No"
+  }
+]

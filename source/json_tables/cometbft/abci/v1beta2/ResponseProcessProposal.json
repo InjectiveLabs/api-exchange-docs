@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "status",
+    "Type": "ResponseProcessProposal_ProposalStatus",
+    "Description": ""
+  }
+]

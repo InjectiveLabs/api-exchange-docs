@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "block_id",
+    "Type": "v1.BlockID",
+    "Description": ""
+  },
+  {
+    "Parameter": "block",
+    "Type": "v1.Block",
+    "Description": "Deprecated: please use `sdk_block` instead"
+  },
+  {
+    "Parameter": "sdk_block",
+    "Type": "Block",
+    "Description": "Since: cosmos-sdk 0.47"
+  }
+]

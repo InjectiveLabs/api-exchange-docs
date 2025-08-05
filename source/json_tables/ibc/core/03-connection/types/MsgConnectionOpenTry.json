@@ -1,0 +1,80 @@
+[
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "previous_connection_id",
+    "Type": "string",
+    "Description": "Deprecated: this field is unused. Crossing hellos are no longer supported in core IBC.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "client_state",
+    "Type": "types.Any",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "counterparty",
+    "Type": "Counterparty",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "delay_period",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "counterparty_versions",
+    "Type": "Version array",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "proof_height",
+    "Type": "types1.Height",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_init",
+    "Type": "byte array",
+    "Description": "proof of the initialization the connection on Chain A: `UNITIALIZED -> INIT`",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_client",
+    "Type": "byte array",
+    "Description": "proof of client state included in message",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_consensus",
+    "Type": "byte array",
+    "Description": "proof of client consensus state",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "consensus_height",
+    "Type": "types1.Height",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "host_consensus_state_proof",
+    "Type": "byte array",
+    "Description": "optional proof data for host state machines that are unable to introspect their own consensus state",
+    "Required": "No"
+  }
+]

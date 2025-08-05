@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "client_states",
+    "Type": "IdentifiedClientStates",
+    "Description": "list of stored ClientStates of the chain."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination response"
+  }
+]

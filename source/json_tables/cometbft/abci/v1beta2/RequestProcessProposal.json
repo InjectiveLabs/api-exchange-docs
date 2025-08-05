@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "txs",
+    "Type": "][byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "proposed_last_commit",
+    "Type": "CommitInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "misbehavior",
+    "Type": "Misbehavior array",
+    "Description": ""
+  },
+  {
+    "Parameter": "hash",
+    "Type": "byte array",
+    "Description": "hash is the merkle root hash of the fields of the proposed block."
+  },
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "time",
+    "Type": "time.Time",
+    "Description": ""
+  },
+  {
+    "Parameter": "next_validators_hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "proposer_address",
+    "Type": "byte array",
+    "Description": "address of the public key of the original proposer of the block."
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "bytes encoding the consensus state of the underlying light client implemented as a Wasm contract."
+  }
+]

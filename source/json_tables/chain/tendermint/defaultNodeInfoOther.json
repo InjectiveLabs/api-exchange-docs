@@ -1,4 +1,0 @@
-[
-    {"Parameter": "tx_index", "Type": "String", "Description": "TX indexing status (on/off)"},
-    {"Parameter": "rpc_address", "Type": "String", "Description": "URI for RPC connections"}
-]

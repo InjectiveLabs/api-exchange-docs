@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "vote",
+    "Type": "v1beta1.Vote",
+    "Description": ""
+  },
+  {
+    "Parameter": "error",
+    "Type": "RemoteSignerError",
+    "Description": ""
+  }
+]

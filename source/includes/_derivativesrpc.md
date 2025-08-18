@@ -3083,6 +3083,7 @@ func main() {
 | Parameter  | Type         | Description                                            | Required |
 | ---------- | ------------ | ------------------------------------------------------ | -------- |
 | market_ids | String Array | List of IDs of markets to get orderbook snapshots from | Yes      |
+| depth | Integer | The depth of the orderbook | Yes |
 
 
 ### Response Parameters

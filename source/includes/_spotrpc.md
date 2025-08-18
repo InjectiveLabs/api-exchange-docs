@@ -1891,10 +1891,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter  | Type         | Description                                            | Required |
-| ---------- | ------------ | ------------------------------------------------------ | -------- |
-| market_ids | String Array | List of IDs of markets to get orderbook snapshots from | Yes      |
-| depth | Integer | The depth of the orderbook | Yes |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/OrderbooksV2Request.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">MarketIds of the markets</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">depth</td><td class="type-td td_text">int32</td><td class="description-td td_text">Depth of the orderbook</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -1964,36 +1964,43 @@ func main() {
 
 ```
 
-| Parameter  | Type                             | Description                                    |
-| ---------- | -------------------------------- | ---------------------------------------------- |
-| orderbooks | SingleSpotLimitOrderbookV2 Array | List of spot market orderbooks with market IDs |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/OrderbooksV2Response.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">orderbooks</td><td class="type-td td_text">SingleSpotLimitOrderbookV2 array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **SingleSpotLimitOrderbookV2**
 
-| Parameter | Type                 | Description             |
-| --------- | -------------------- | ----------------------- |
-| market_id | String               | ID of spot market       |
-| orderbook | SpotLimitOrderBookV2 | Orderbook of the market |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/SingleSpotLimitOrderbookV2.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market's ID</td></tr>
+<tr ><td class="parameter-td td_text">orderbook</td><td class="type-td td_text">SpotLimitOrderbookV2</td><td class="description-td td_text">Orderbook of the market</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
+<br/>
 
 **SpotLimitOrderbookV2**
 
-| Parameter | Type             | Description                                                   |
-| --------- | ---------------- | ------------------------------------------------------------- |
-| buys      | PriceLevel Array | List of price levels for buys                                 |
-| sells     | PriceLevel Array | List of price levels for sells                                |
-| sequence  | Integer          | Sequence number of the orderbook; increments by 1 each update |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/SpotLimitOrderbookV2.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">buys</td><td class="type-td td_text">PriceLevel array</td><td class="description-td td_text">Array of price levels for buys</td></tr>
+<tr ><td class="parameter-td td_text">sells</td><td class="type-td td_text">PriceLevel array</td><td class="description-td td_text">Array of price levels for sells</td></tr>
+<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">market orderbook sequence</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Last update timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">Block height at which the orderbook was last updated.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **PriceLevel**
 
-| Parameter | Type    | Description                                       |
-| --------- | ------- | ------------------------------------------------- |
-| price     | String  | Price number of the price level                   |
-| quantity  | String  | Quantity of the price level                       |
-| timestamp | Integer | Price level last updated timestamp in UNIX millis |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/PriceLevel.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">Price number of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Quantity of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Price level last updated timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
-## StreamOrderbooksV2
+## StreamOrderbookV2
 
 Stream orderbook snapshot updates for one or more spot markets.
 
@@ -2097,12 +2104,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter          | Type         | Description                                                                                          | Required |
-| ------------------ | ------------ | ---------------------------------------------------------------------------------------------------- | -------- |
-| market_ids         | String Array | List of market IDs for orderbook streaming; empty means all spot markets                             | Yes      |
-| callback           | Function     | Function receiving one parameter (a stream event JSON dictionary) to process each new event          | Yes      |
-| on_end_callback    | Function     | Function with the logic to execute when the stream connection is interrupted                         | No       |
-| on_status_callback | Function     | Function receiving one parameter (the exception) with the logic to execute when an exception happens | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/StreamOrderbookV2Request.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of market IDs for orderbook streaming, empty means 'ALL' spot markets</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -2148,28 +2152,36 @@ func main() {
 
 ```
 
-| Parameter      | Type                 | Description                                                                         |
-| -------------- | -------------------- | ----------------------------------------------------------------------------------- |
-| orderbook      | SpotLimitOrderbookV2 | Orderbook of a Spot Market                                                          |
-| operation_type | String               | Order update type (Should be one of: ["insert", "replace", "update", "invalidate"]) |
-| timestamp      | Integer              | Operation timestamp in UNIX millis                                                  |
-| market_id      | String               | ID of the market the orderbook belongs to                                           |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/StreamOrderbookV2Response.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">orderbook</td><td class="type-td td_text">SpotLimitOrderbookV2</td><td class="description-td td_text">Orderbook of a Spot Market</td></tr>
+<tr ><td class="parameter-td td_text">operation_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Order update type</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Operation timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">MarketId of the market's orderbook</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **SpotLimitOrderbookV2**
 
-| Parameter | Type             | Description                                                   |
-| --------- | ---------------- | ------------------------------------------------------------- |
-| buys      | PriceLevel Array | List of price levels for buys                                 |
-| sells     | PriceLevel Array | List of price levels for sells                                |
-| sequence  | Integer          | Sequence number of the orderbook; increments by 1 each update |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/SpotLimitOrderbookV2.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">buys</td><td class="type-td td_text">PriceLevel array</td><td class="description-td td_text">Array of price levels for buys</td></tr>
+<tr ><td class="parameter-td td_text">sells</td><td class="type-td td_text">PriceLevel array</td><td class="description-td td_text">Array of price levels for sells</td></tr>
+<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">market orderbook sequence</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Last update timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">Block height at which the orderbook was last updated.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **PriceLevel**
 
-| Parameter | Type    | Description                                       |
-| --------- | ------- | ------------------------------------------------- |
-| price     | String  | Price number of the price level                   |
-| quantity  | String  | Quantity of the price level                       |
-| timestamp | Integer | Price level last updated timestamp in UNIX millis |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/PriceLevel.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">Price number of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Quantity of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Price level last updated timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 
 ## StreamOrderbookUpdate

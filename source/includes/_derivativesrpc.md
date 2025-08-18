@@ -70,10 +70,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter | Type   | Description               | Required |
-| --------- | ------ | ------------------------- | -------- |
-| market_id | String | ID of the market to fetch | Yes      |
-
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/MarketRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">MarketId of the market we want to fetch</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -165,72 +164,82 @@ func main() {
 }
 ```
 
-| Parameter | Type                 | Description                               |
-| --------- | -------------------- | ----------------------------------------- |
-| market    | DerivativeMarketInfo | Info about a particular derivative market |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/MarketResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market</td><td class="type-td td_text">DerivativeMarketInfo</td><td class="description-td td_text">Info about particular derivative market</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 **DerivativeMarketInfo**
 
-| Parameter                  | Type                    | Description                                                                                             |
-| -------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------- |
-| oracle_quote               | String                  | Oracle quote currency                                                                                   |
-| oracle_type                | String                  | Oracle Type                                                                                             |
-| quote_denom                | String                  | Coin denom used for the quote asset                                                                     |
-| is_perpetual               | Boolean                 | True if the market is a perpetual swap market                                                           |
-| maker_fee_rate             | String                  | Defines the fee percentage makers pay (or receive, if negative) in quote asset when trading             |
-| min_price_tick_size        | String                  | Defines the minimum required tick size for the order's price                                            |
-| min_quantity_tick_size     | String                  | Defines the minimum required tick size for the order's quantity                                         |
-| oracle_scale_factor        | Integer                 | Scaling multiple to scale oracle prices to the correct number of decimals                               |
-| taker_fee_rate             | String                  | Defines the fee percentage takers pay (in quote asset) when trading                                     |
-| expiry_futures_market_info | ExpiryFuturesMarketInfo | Info about expiry futures market                                                                        |
-| initial_margin_ratio       | String                  | The initial margin ratio of the derivative market                                                       |
-| market_status              | String                  | The status of the market (Should be one of: ["active", "paused", "suspended", "demolished", "expired"]) |
-| service_provider_fee       | String                  | Percentage of the transaction fee shared with the service provider                                      |
-| oracle_base                | String                  | Oracle base currency                                                                                    |
-| perpetual_market_funding   | PerpetualMarketFunding  | PerpetualMarketFunding object                                                                           |
-| perpetual_market_info      | PerpetualMarketInfo     | Information about the perpetual market                                                                  |
-| ticker                     | String                  | The name of the pair in format AAA/BBB, where AAA is the base asset and BBB is the quote asset          |
-| maintenance_margin_ratio   | String                  | The maintenance margin ratio of the derivative market                                                   |
-| market_id                  | String                  | The market ID                                                                                           |
-| quoteTokenMeta             | TokenMeta               | Token metadata for quote asset, only for Ethereum-based assets                                          |
-| min_notional           | String    | Defines the minimum required notional for an order to be accepted |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/DerivativeMarketInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">DerivativeMarket ID is crypto.Keccak256Hash([]byte((oracleType.String() + ticker + quoteDenom + oracleBase + oracleQuote))) for perpetual markets and crypto.Keccak256Hash([]byte((oracleType.String() + ticker + quoteDenom + oracleBase + oracleQuote + strconv.Itoa(int(expiry))))) for expiry futures markets</td></tr>
+<tr ><td class="parameter-td td_text">market_status</td><td class="type-td td_text">string</td><td class="description-td td_text">The status of the market</td></tr>
+<tr ><td class="parameter-td td_text">ticker</td><td class="type-td td_text">string</td><td class="description-td td_text">A name of the pair in format AAA/BBB, where AAA is base asset, BBB is quote asset.</td></tr>
+<tr ><td class="parameter-td td_text">oracle_base</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle base currency</td></tr>
+<tr ><td class="parameter-td td_text">oracle_quote</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle quote currency</td></tr>
+<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle Type</td></tr>
+<tr ><td class="parameter-td td_text">oracle_scale_factor</td><td class="type-td td_text">uint32</td><td class="description-td td_text">OracleScaleFactor</td></tr>
+<tr ><td class="parameter-td td_text">initial_margin_ratio</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the initial margin ratio of a derivative market</td></tr>
+<tr ><td class="parameter-td td_text">maintenance_margin_ratio</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the maintenance margin ratio of a derivative market</td></tr>
+<tr ><td class="parameter-td td_text">quote_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin denom used for the quote asset.</td></tr>
+<tr ><td class="parameter-td td_text">quote_token_meta</td><td class="type-td td_text">TokenMeta</td><td class="description-td td_text">Token metadata for quote asset</td></tr>
+<tr ><td class="parameter-td td_text">maker_fee_rate</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the fee percentage makers pay when trading (in quote asset)</td></tr>
+<tr ><td class="parameter-td td_text">taker_fee_rate</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the fee percentage takers pay when trading (in quote asset)</td></tr>
+<tr ><td class="parameter-td td_text">service_provider_fee</td><td class="type-td td_text">string</td><td class="description-td td_text">Percentage of the transaction fee shared with the service provider</td></tr>
+<tr ><td class="parameter-td td_text">is_perpetual</td><td class="type-td td_text">bool</td><td class="description-td td_text">True if the market is a perpetual swap market</td></tr>
+<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the minimum required tick size for the order's price</td></tr>
+<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the minimum required tick size for the order's quantity</td></tr>
+<tr ><td class="parameter-td td_text">perpetual_market_info</td><td class="type-td td_text">PerpetualMarketInfo</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">perpetual_market_funding</td><td class="type-td td_text">PerpetualMarketFunding</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">expiry_futures_market_info</td><td class="type-td td_text">ExpiryFuturesMarketInfo</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">string</td><td class="description-td td_text">Minimum notional value for the order</td></tr>
+<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the reduce margin ratio of a derivative market</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-**ExpiryFuturesMarketInfo**
-
-| Parameter            | Type    | Description                                                                  |
-| -------------------- | ------- | ---------------------------------------------------------------------------- |
-| expiration_timestamp | Integer | Defines the expiration time for a time expiry futures market in UNIX seconds |
-| settlement_price     | String  | Defines the settlement price for a time expiry futures market                |
-
-**PerpetualMarketFunding**
-
-| Parameter          | Type    | Description                                                                |
-| ------------------ | ------- | -------------------------------------------------------------------------- |
-| cumulative_funding | String  | Defines the cumulative funding of a perpetual market                       |
-| cumulative_price   | String  | Defines the cumulative price for the current hour up to the last timestamp |
-| last_timestamp     | Integer | Defines the last funding timestamp in UNIX seconds                         |
-
-
-**PerpetualMarketInfo**
-
-| Parameter               | Type    | Description                                                           |
-| ----------------------- | ------- | --------------------------------------------------------------------- |
-| hourly_funding_rate_cap | String  | Defines the default maximum absolute value of the hourly funding rate |
-| hourly_interest_rate    | String  | Defines the hourly interest rate of the perpetual market              |
-| next_funding_timestamp  | Integer | Defines the next funding timestamp in UNIX seconds                    |
-| funding_interval        | Integer | Defines the funding interval in seconds                               |
-
+<br/>
 
 **TokenMeta**
 
-| Parameter | Type    | Description                                     |
-| --------- | ------- | ----------------------------------------------- |
-| address   | String  | Token's Ethereum contract address               |
-| decimals  | Integer | Token decimals                                  |
-| logo      | String  | URL to the logo image                           |
-| name      | String  | Token full name                                 |
-| symbol    | String  | Token symbol short name                         |
-| updatedAt | Integer | Token metadata fetched timestamp in UNIX millis |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/TokenMeta.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">Token full name</td></tr>
+<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">Token contract address (native or not)</td></tr>
+<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Token symbol short name</td></tr>
+<tr ><td class="parameter-td td_text">logo</td><td class="type-td td_text">string</td><td class="description-td td_text">URL to the logo image</td></tr>
+<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">int32</td><td class="description-td td_text">Token decimals</td></tr>
+<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Token metadata fetched timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PerpetualMarketInfo**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/PerpetualMarketInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">hourly_funding_rate_cap</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the default maximum absolute value of the hourly funding rate of the perpetual market.</td></tr>
+<tr ><td class="parameter-td td_text">hourly_interest_rate</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the hourly interest rate of the perpetual market.</td></tr>
+<tr ><td class="parameter-td td_text">next_funding_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Defines the next funding timestamp in seconds of a perpetual market in UNIX seconds.</td></tr>
+<tr ><td class="parameter-td td_text">funding_interval</td><td class="type-td td_text">int64</td><td class="description-td td_text">Defines the funding interval in seconds of a perpetual market in seconds.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PerpetualMarketFunding**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/PerpetualMarketFunding.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">cumulative_funding</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the cumulative funding of a perpetual market.</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines defines the cumulative price for the current hour up to the last timestamp.</td></tr>
+<tr ><td class="parameter-td td_text">last_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Defines the last funding timestamp in seconds of a perpetual market in UNIX seconds.</td></tr>
+<tr ><td class="parameter-td td_text">last_funding_rate</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the last funding rate of a perpetual market.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**ExpiryFuturesMarketInfo**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/ExpiryFuturesMarketInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">expiration_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Defines the expiration time for a time expiry futures market in UNIX seconds.</td></tr>
+<tr ><td class="parameter-td td_text">settlement_price</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the settlement price for a time expiry futures market.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 
 ## Markets
@@ -3080,10 +3089,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter  | Type         | Description                                            | Required |
-| ---------- | ------------ | ------------------------------------------------------ | -------- |
-| market_ids | String Array | List of IDs of markets to get orderbook snapshots from | Yes      |
-| depth | Integer | The depth of the orderbook | Yes |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/OrderbooksV2Request.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">MarketIds of the markets</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">depth</td><td class="type-td td_text">int32</td><td class="description-td td_text">Depth of the orderbook</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -3228,35 +3237,43 @@ func main() {
 
 ```
 
-| Parameter  | Type                                   | Description                          |
-| ---------- | -------------------------------------- | ------------------------------------ |
-| orderbooks | SingleDerivativeLimitOrderbookV2 Array | List of derivative market orderbooks |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/OrderbooksV2Response.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">orderbooks</td><td class="type-td td_text">SingleDerivativeLimitOrderbookV2 array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 **SingleDerivativeLimitOrderbookV2**
 
-| Parameter | Type                       | Description                                    |
-| --------- | -------------------------- | ---------------------------------------------- |
-| market_id | String                     | ID of the market that the orderbook belongs to |
-| orderbook | DerivativeLimitOrderbookV2 | Orderbook of the market                        |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/SingleDerivativeLimitOrderbookV2.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market's ID</td></tr>
+<tr ><td class="parameter-td td_text">orderbook</td><td class="type-td td_text">DerivativeLimitOrderbookV2</td><td class="description-td td_text">Orderbook of the market</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **DerivativeLimitOrderbookV2**
 
-| Parameter | Type             | Description                                                   |
-| --------- | ---------------- | ------------------------------------------------------------- |
-| buys      | PriceLevel Array | List of price levels for buys                                 |
-| sells     | PriceLevel Array | List of price levels for sells                                |
-| sequence  | Integer          | Sequence number of the orderbook; increments by 1 each update |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/DerivativeLimitOrderbookV2.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">buys</td><td class="type-td td_text">PriceLevel array</td><td class="description-td td_text">Array of price levels for buys</td></tr>
+<tr ><td class="parameter-td td_text">sells</td><td class="type-td td_text">PriceLevel array</td><td class="description-td td_text">Array of price levels for sells</td></tr>
+<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">market orderbook sequence</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Last update timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">Block height at which the orderbook was last updated.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **PriceLevel**
 
-| Parameter | Type    | Description                                       |
-| --------- | ------- | ------------------------------------------------- |
-| quantity  | String  | Quantity of the price level                       |
-| timestamp | Integer | Price level last updated timestamp in UNIX millis |
-| price     | String  | Price number of the price level                   |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/PriceLevel.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">Price number of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Quantity of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Price level last updated timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 
-## StreamOrderbooksV2
+## StreamOrderbookV2
 
 Stream orderbook snapshot updates for one or more derivative markets
 
@@ -3358,12 +3375,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter          | Type         | Description                                                                                          | Required |
-| ------------------ | ------------ | ---------------------------------------------------------------------------------------------------- | -------- |
-| market_ids         | String Array | List of market IDs for orderbook streaming; empty means all spot markets                             | Yes      |
-| callback           | Function     | Function receiving one parameter (a stream event JSON dictionary) to process each new event          | Yes      |
-| on_end_callback    | Function     | Function with the logic to execute when the stream connection is interrupted                         | No       |
-| on_status_callback | Function     | Function receiving one parameter (the exception) with the logic to execute when an exception happens | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/StreamOrderbookV2Request.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of market IDs for orderbook streaming, empty means 'ALL' derivative markets</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -3398,28 +3412,34 @@ func main() {
 
 ```
 
-| Parameter      | Type                       | Description                                                                         |
-| -------------- | -------------------------- | ----------------------------------------------------------------------------------- |
-| orderbook      | DerivativeLimitOrderbookV2 | Orderbook of a Derivative Market                                                    |
-| operation_type | String                     | Order update type (Should be one of: ["insert", "replace", "update", "invalidate"]) |
-| timestamp      | Integer                    | Operation timestamp in UNIX millis                                                  |
-| market_id      | String                     | ID of the market the orderbook belongs to                                           |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/StreamOrderbookV2Response.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">orderbook</td><td class="type-td td_text">DerivativeLimitOrderbookV2</td><td class="description-td td_text">Orderbook of a Derivative Market</td></tr>
+<tr ><td class="parameter-td td_text">operation_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Order update type</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Operation timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">MarketId of the market's orderbook</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **DerivativeLimitOrderbookV2**
 
-| Parameter | Type             | Description                                                   |
-| --------- | ---------------- | ------------------------------------------------------------- |
-| buys      | PriceLevel Array | List of price levels for buys                                 |
-| sells     | PriceLevel Array | List of price levels for sells                                |
-| sequence  | Integer          | Sequence number of the orderbook; increments by 1 each update |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/DerivativeLimitOrderbookV2.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">buys</td><td class="type-td td_text">PriceLevel array</td><td class="description-td td_text">Array of price levels for buys</td></tr>
+<tr ><td class="parameter-td td_text">sells</td><td class="type-td td_text">PriceLevel array</td><td class="description-td td_text">Array of price levels for sells</td></tr>
+<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">market orderbook sequence</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Last update timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">Block height at which the orderbook was last updated.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **PriceLevel**
 
-| Parameter | Type    | Description                                       |
-| --------- | ------- | ------------------------------------------------- |
-| price     | String  | Price number of the price level                   |
-| quantity  | String  | Quantity of the price level                       |
-| timestamp | Integer | Price level last updated timestamp in UNIX millis |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_derivative_exchange_rpc/PriceLevel.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">Price number of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Quantity of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Price level last updated timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## StreamOrderbookUpdate

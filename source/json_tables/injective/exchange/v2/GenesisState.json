@@ -142,7 +142,7 @@
   {
     "Parameter": "auction_exchange_transfer_denom_decimals",
     "Type": "DenomDecimals array",
-    "Description": "denom_decimals defines the denom decimals for the exchange."
+    "Description": "auction_exchange_transfer_denom_decimals defines the denom decimals for the exchange."
   },
   {
     "Parameter": "conditional_derivative_orderbooks",

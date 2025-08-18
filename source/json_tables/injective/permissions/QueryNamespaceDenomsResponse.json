@@ -2,6 +2,6 @@
   {
     "Parameter": "denoms",
     "Type": "string array",
-    "Description": ""
+    "Description": "List of denoms"
   }
 ]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "redemptions",
+    "Type": "Redemption array",
+    "Description": "List of subscriptions"
+  },
+  {
+    "Parameter": "next",
+    "Type": "string array",
+    "Description": "Next tokens for pagination"
+  }
+]

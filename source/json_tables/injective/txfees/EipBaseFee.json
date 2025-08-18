@@ -2,6 +2,6 @@
   {
     "Parameter": "base_fee",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": ""
+    "Description": "The current chain gas price"
   }
 ]

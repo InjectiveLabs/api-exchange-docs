@@ -2,6 +2,6 @@
   {
     "Parameter": "vouchers",
     "Type": "AddressVoucher array",
-    "Description": ""
+    "Description": "List of vouchers"
   }
 ]

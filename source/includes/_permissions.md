@@ -124,7 +124,7 @@ No parameters
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryNamespaceDenomsResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denoms</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denoms</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of denoms</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -564,7 +564,7 @@ No parameters
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryNamespacesResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">namespaces</td><td class="type-td td_text">Namespace array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">namespaces</td><td class="type-td td_text">Namespace array</td><td class="description-td td_text">List of namespaces</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -572,13 +572,13 @@ No parameters
 **Namespace**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Namespace.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">contract_hook</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">role_permissions</td><td class="type-td td_text">Role array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">actor_roles</td><td class="type-td td_text">ActorRoles array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The tokenfactory denom to which this namespace applies to</td></tr>
+<tr ><td class="parameter-td td_text">contract_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of smart contract to apply code-based restrictions</td></tr>
+<tr ><td class="parameter-td td_text">role_permissions</td><td class="type-td td_text">Role array</td><td class="description-td td_text">permissions for each role</td></tr>
+<tr ><td class="parameter-td td_text">actor_roles</td><td class="type-td td_text">ActorRoles array</td><td class="description-td td_text">roles for each actor</td></tr>
+<tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">managers for each role</td></tr>
+<tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">status for each policy</td></tr>
+<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -586,9 +586,9 @@ No parameters
 **Role**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Role.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">role_id</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">The role name</td></tr>
+<tr ><td class="parameter-td td_text">role_id</td><td class="type-td td_text">uint32</td><td class="description-td td_text">The role ID</td></tr>
+<tr ><td class="parameter-td td_text">permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Integer representing the bitwise combination of all actions assigned to the role</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -596,8 +596,8 @@ No parameters
 **ActorRoles**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/ActorRoles.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">actor</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">actor</td><td class="type-td td_text">string</td><td class="description-td td_text">The actor name</td></tr>
+<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_text">The roles for the actor</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -605,8 +605,8 @@ No parameters
 **RoleManager**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/RoleManager.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_text">The manager name</td></tr>
+<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of roles associated with the manager</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -614,9 +614,9 @@ No parameters
 **PolicyStatus**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/PolicyStatus.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">is_disabled</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">is_sealed</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_text">The action code number</td></tr>
+<tr ><td class="parameter-td td_text">is_disabled</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the policy is disabled</td></tr>
+<tr ><td class="parameter-td td_text">is_sealed</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the policy is sealed</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -624,10 +624,10 @@ No parameters
 **PolicyManagerCapability**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/PolicyManagerCapability.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">can_disable</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">can_seal</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_text">The manager name</td></tr>
+<tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_text">The action code number</td></tr>
+<tr ><td class="parameter-td td_text">can_disable</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the manager can disable the policy</td></tr>
+<tr ><td class="parameter-td td_text">can_seal</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the manager can seal the policy</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -757,7 +757,7 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryNamespaceRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The token denom</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1086,7 +1086,7 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryNamespaceResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">namespace</td><td class="type-td td_text">Namespace</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">namespace</td><td class="type-td td_text">Namespace</td><td class="description-td td_text">The namespace details</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1094,13 +1094,13 @@ func main() {
 **Namespace**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Namespace.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">contract_hook</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">role_permissions</td><td class="type-td td_text">Role array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">actor_roles</td><td class="type-td td_text">ActorRoles array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The tokenfactory denom to which this namespace applies to</td></tr>
+<tr ><td class="parameter-td td_text">contract_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of smart contract to apply code-based restrictions</td></tr>
+<tr ><td class="parameter-td td_text">role_permissions</td><td class="type-td td_text">Role array</td><td class="description-td td_text">permissions for each role</td></tr>
+<tr ><td class="parameter-td td_text">actor_roles</td><td class="type-td td_text">ActorRoles array</td><td class="description-td td_text">roles for each actor</td></tr>
+<tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">managers for each role</td></tr>
+<tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">status for each policy</td></tr>
+<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1108,9 +1108,9 @@ func main() {
 **Role**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Role.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">role_id</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">The role name</td></tr>
+<tr ><td class="parameter-td td_text">role_id</td><td class="type-td td_text">uint32</td><td class="description-td td_text">The role ID</td></tr>
+<tr ><td class="parameter-td td_text">permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Integer representing the bitwise combination of all actions assigned to the role</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1118,8 +1118,8 @@ func main() {
 **ActorRoles**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/ActorRoles.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">actor</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">actor</td><td class="type-td td_text">string</td><td class="description-td td_text">The actor name</td></tr>
+<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_text">The roles for the actor</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1127,8 +1127,8 @@ func main() {
 **RoleManager**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/RoleManager.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_text">The manager name</td></tr>
+<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of roles associated with the manager</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1136,9 +1136,9 @@ func main() {
 **PolicyStatus**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/PolicyStatus.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">is_disabled</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">is_sealed</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_text">The action code number</td></tr>
+<tr ><td class="parameter-td td_text">is_disabled</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the policy is disabled</td></tr>
+<tr ><td class="parameter-td td_text">is_sealed</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the policy is sealed</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1146,10 +1146,10 @@ func main() {
 **PolicyManagerCapability**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/PolicyManagerCapability.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">can_disable</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">can_seal</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_text">The manager name</td></tr>
+<tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_text">The action code number</td></tr>
+<tr ><td class="parameter-td td_text">can_disable</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the manager can disable the policy</td></tr>
+<tr ><td class="parameter-td td_text">can_seal</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the manager can seal the policy</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1281,8 +1281,8 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryRolesByActorRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">actor</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The token denom</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">actor</td><td class="type-td td_text">string</td><td class="description-td td_text">The actor's Injective address</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1298,7 +1298,7 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryRolesByActorResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of roles</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## ActorsByRole
@@ -1412,8 +1412,8 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryActorsByRoleRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">role</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The token denom</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">role</td><td class="type-td td_text">string</td><td class="description-td td_text">The role to query actors for</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1429,7 +1429,7 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryActorsByRoleResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">actors</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">actors</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of actors' Injective addresses</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1541,7 +1541,7 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryRoleManagersRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The token denom</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1577,7 +1577,7 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryRoleManagersResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">List of role managers</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1585,8 +1585,8 @@ func main() {
 **RoleManager**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/RoleManager.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_text">The manager name</td></tr>
+<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of roles associated with the manager</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1700,8 +1700,8 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryRoleManagerRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The token denom</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_text">The manager Injective address</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1735,7 +1735,7 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryRoleManagerResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">role_manager</td><td class="type-td td_text">RoleManager</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">role_manager</td><td class="type-td td_text">RoleManager</td><td class="description-td td_text">The role manager details</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1743,8 +1743,8 @@ func main() {
 **RoleManager**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/RoleManager.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_text">The manager name</td></tr>
+<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of roles associated with the manager</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1856,7 +1856,7 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryPolicyStatusesRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The token denom</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1898,7 +1898,7 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryPolicyStatusesResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">List of policy statuses</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1906,9 +1906,9 @@ func main() {
 **PolicyStatus**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/PolicyStatus.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">is_disabled</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">is_sealed</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_text">The action code number</td></tr>
+<tr ><td class="parameter-td td_text">is_disabled</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the policy is disabled</td></tr>
+<tr ><td class="parameter-td td_text">is_sealed</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the policy is sealed</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2037,7 +2037,7 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryPolicyManagerCapabilitiesRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The token denom</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -2079,7 +2079,7 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryPolicyManagerCapabilitiesResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">List of policy manager capabilities</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2087,10 +2087,10 @@ func main() {
 **PolicyManagerCapability**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/PolicyManagerCapability.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">can_disable</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">can_seal</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_text">The manager name</td></tr>
+<tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_text">The action code number</td></tr>
+<tr ><td class="parameter-td td_text">can_disable</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the manager can disable the policy</td></tr>
+<tr ><td class="parameter-td td_text">can_seal</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the manager can seal the policy</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2220,7 +2220,7 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryVouchersRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The token denom</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -2232,7 +2232,7 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryVouchersResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">vouchers</td><td class="type-td td_text">AddressVoucher array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">vouchers</td><td class="type-td td_text">AddressVoucher array</td><td class="description-td td_text">List of vouchers</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2240,8 +2240,8 @@ func main() {
 **AddressVoucher**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/AddressVoucher.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">voucher</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coin</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">The Injective address that the voucher is for</td></tr>
+<tr ><td class="parameter-td td_text">voucher</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coin</td><td class="description-td td_text">The voucher amount</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2364,8 +2364,8 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryVoucherRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The token denom</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">The Injective address of the receiver</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -2377,7 +2377,7 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryVoucherResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">voucher</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coin</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">voucher</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coin</td><td class="description-td td_text">The voucher amount</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2831,7 +2831,7 @@ No parameters
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/QueryModuleStateResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">GenesisState</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">GenesisState</td><td class="description-td td_text">The module state</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2839,9 +2839,9 @@ No parameters
 **GenesisState**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/GenesisState.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">params</td><td class="type-td td_text">Params</td><td class="description-td td_text">params defines the parameters of the module.</td></tr>
-<tr ><td class="parameter-td td_text">namespaces</td><td class="type-td td_text">Namespace array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">vouchers</td><td class="type-td td_text">AddressVoucher array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">params</td><td class="type-td td_text">Params</td><td class="description-td td_text">params defines the parameters of the module</td></tr>
+<tr ><td class="parameter-td td_text">namespaces</td><td class="type-td td_text">Namespace array</td><td class="description-td td_text">namespaces defines the namespaces of the module</td></tr>
+<tr ><td class="parameter-td td_text">vouchers</td><td class="type-td td_text">AddressVoucher array</td><td class="description-td td_text">vouchers defines the vouchers of the module</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2849,7 +2849,7 @@ No parameters
 **Params**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Params.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">wasm_hook_query_max_gas</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">wasm_hook_query_max_gas</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Max amount of gas allowed for wasm hook queries</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2857,13 +2857,13 @@ No parameters
 **Namespace**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Namespace.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">contract_hook</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">role_permissions</td><td class="type-td td_text">Role array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">actor_roles</td><td class="type-td td_text">ActorRoles array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The tokenfactory denom to which this namespace applies to</td></tr>
+<tr ><td class="parameter-td td_text">contract_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of smart contract to apply code-based restrictions</td></tr>
+<tr ><td class="parameter-td td_text">role_permissions</td><td class="type-td td_text">Role array</td><td class="description-td td_text">permissions for each role</td></tr>
+<tr ><td class="parameter-td td_text">actor_roles</td><td class="type-td td_text">ActorRoles array</td><td class="description-td td_text">roles for each actor</td></tr>
+<tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">managers for each role</td></tr>
+<tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">status for each policy</td></tr>
+<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2871,8 +2871,8 @@ No parameters
 **AddressVoucher**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/AddressVoucher.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">voucher</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coin</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">The Injective address that the voucher is for</td></tr>
+<tr ><td class="parameter-td td_text">voucher</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coin</td><td class="description-td td_text">The voucher amount</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2880,9 +2880,9 @@ No parameters
 **Role**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Role.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">role_id</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">The role name</td></tr>
+<tr ><td class="parameter-td td_text">role_id</td><td class="type-td td_text">uint32</td><td class="description-td td_text">The role ID</td></tr>
+<tr ><td class="parameter-td td_text">permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Integer representing the bitwise combination of all actions assigned to the role</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2890,8 +2890,8 @@ No parameters
 **ActorRoles**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/ActorRoles.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">actor</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">actor</td><td class="type-td td_text">string</td><td class="description-td td_text">The actor name</td></tr>
+<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_text">The roles for the actor</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2899,8 +2899,8 @@ No parameters
 **RoleManager**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/RoleManager.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_text">The manager name</td></tr>
+<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of roles associated with the manager</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2908,9 +2908,9 @@ No parameters
 **PolicyStatus**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/PolicyStatus.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">is_disabled</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">is_sealed</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_text">The action code number</td></tr>
+<tr ><td class="parameter-td td_text">is_disabled</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the policy is disabled</td></tr>
+<tr ><td class="parameter-td td_text">is_sealed</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the policy is sealed</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2918,10 +2918,10 @@ No parameters
 **PolicyManagerCapability**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/PolicyManagerCapability.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">can_disable</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">can_seal</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_text">The manager name</td></tr>
+<tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_text">The action code number</td></tr>
+<tr ><td class="parameter-td td_text">can_disable</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the manager can disable the policy</td></tr>
+<tr ><td class="parameter-td td_text">can_seal</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the manager can seal the policy</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3239,8 +3239,8 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/MsgCreateNamespace.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">namespace</td><td class="type-td td_text">Namespace</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">The sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">namespace</td><td class="type-td td_text">Namespace</td><td class="description-td td_text">The namespace information</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3248,13 +3248,13 @@ func main() {
 **Namespace**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Namespace.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">contract_hook</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">role_permissions</td><td class="type-td td_text">Role array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">actor_roles</td><td class="type-td td_text">ActorRoles array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The tokenfactory denom to which this namespace applies to</td></tr>
+<tr ><td class="parameter-td td_text">contract_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of smart contract to apply code-based restrictions</td></tr>
+<tr ><td class="parameter-td td_text">role_permissions</td><td class="type-td td_text">Role array</td><td class="description-td td_text">permissions for each role</td></tr>
+<tr ><td class="parameter-td td_text">actor_roles</td><td class="type-td td_text">ActorRoles array</td><td class="description-td td_text">roles for each actor</td></tr>
+<tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">managers for each role</td></tr>
+<tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">status for each policy</td></tr>
+<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3262,9 +3262,9 @@ func main() {
 **Role**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Role.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">role_id</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">The role name</td></tr>
+<tr ><td class="parameter-td td_text">role_id</td><td class="type-td td_text">uint32</td><td class="description-td td_text">The role ID</td></tr>
+<tr ><td class="parameter-td td_text">permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Integer representing the bitwise combination of all actions assigned to the role</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3272,8 +3272,8 @@ func main() {
 **ActorRoles**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/ActorRoles.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">actor</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">actor</td><td class="type-td td_text">string</td><td class="description-td td_text">The actor name</td></tr>
+<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_text">The roles for the actor</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3281,8 +3281,8 @@ func main() {
 **RoleManager**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/RoleManager.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_text">The manager name</td></tr>
+<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of roles associated with the manager</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3290,9 +3290,9 @@ func main() {
 **PolicyStatus**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/PolicyStatus.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">is_disabled</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">is_sealed</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_text">The action code number</td></tr>
+<tr ><td class="parameter-td td_text">is_disabled</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the policy is disabled</td></tr>
+<tr ><td class="parameter-td td_text">is_sealed</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the policy is sealed</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3300,10 +3300,10 @@ func main() {
 **PolicyManagerCapability**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/PolicyManagerCapability.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">can_disable</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">can_seal</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_text">The manager name</td></tr>
+<tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_text">The action code number</td></tr>
+<tr ><td class="parameter-td td_text">can_disable</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the manager can disable the policy</td></tr>
+<tr ><td class="parameter-td td_text">can_seal</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the manager can seal the policy</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3612,13 +3612,13 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/MsgUpdateNamespace.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">contract_hook</td><td class="type-td td_text">MsgUpdateNamespace_SetContractHook</td><td class="description-td td_num"></td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">role_permissions</td><td class="type-td td_text">Role array</td><td class="description-td td_num"></td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_num"></td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_num"></td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_num"></td><td class="required-td td_text">No</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">The sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">denom whose namespace updates are to be applied</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">contract_hook</td><td class="type-td td_text">MsgUpdateNamespace_SetContractHook</td><td class="description-td td_text">address of smart contract to apply code-based restrictions</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">role_permissions</td><td class="type-td td_text">Role array</td><td class="description-td td_text">role permissions to update</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">role managers to update</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">policy statuses to update</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">policy manager capabilities to update</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3634,9 +3634,9 @@ func main() {
 **Role**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Role.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">role_id</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">The role name</td></tr>
+<tr ><td class="parameter-td td_text">role_id</td><td class="type-td td_text">uint32</td><td class="description-td td_text">The role ID</td></tr>
+<tr ><td class="parameter-td td_text">permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Integer representing the bitwise combination of all actions assigned to the role</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3644,8 +3644,8 @@ func main() {
 **RoleManager**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/RoleManager.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_text">The manager name</td></tr>
+<tr ><td class="parameter-td td_text">roles</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of roles associated with the manager</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3653,9 +3653,9 @@ func main() {
 **PolicyStatus**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/PolicyStatus.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">is_disabled</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">is_sealed</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_text">The action code number</td></tr>
+<tr ><td class="parameter-td td_text">is_disabled</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the policy is disabled</td></tr>
+<tr ><td class="parameter-td td_text">is_sealed</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the policy is sealed</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3663,10 +3663,10 @@ func main() {
 **PolicyManagerCapability**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/PolicyManagerCapability.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">can_disable</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">can_seal</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">manager</td><td class="type-td td_text">string</td><td class="description-td td_text">The manager name</td></tr>
+<tr ><td class="parameter-td td_text">action</td><td class="type-td td_text">Action</td><td class="description-td td_text">The action code number</td></tr>
+<tr ><td class="parameter-td td_text">can_disable</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the manager can disable the policy</td></tr>
+<tr ><td class="parameter-td td_text">can_seal</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether the manager can seal the policy</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3934,10 +3934,10 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/MsgUpdateActorRoles.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">role_actors_to_add</td><td class="type-td td_text">RoleActors array</td><td class="description-td td_num"></td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">role_actors_to_revoke</td><td class="type-td td_text">RoleActors array</td><td class="description-td td_num"></td><td class="required-td td_text">No</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">The sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The namespace denom to which this updates are applied</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">role_actors_to_add</td><td class="type-td td_text">RoleActors array</td><td class="description-td td_text">The roles to add for given actors</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">role_actors_to_revoke</td><td class="type-td td_text">RoleActors array</td><td class="description-td td_text">The roles to revoke from given actors</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3945,8 +3945,8 @@ func main() {
 **RoleActors**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/RoleActors.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">role</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">actors</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">role</td><td class="type-td td_text">string</td><td class="description-td td_text">The role name</td></tr>
+<tr ><td class="parameter-td td_text">actors</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of actor names associated with the role</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -4161,8 +4161,8 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/MsgClaimVoucher.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">The sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The token denom of the voucher to claim</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters

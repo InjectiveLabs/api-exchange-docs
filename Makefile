@@ -5,7 +5,7 @@ COSMOS_SDK_REPO := https://github.com/InjectiveLabs/cosmos-sdk.git
 INJECTIVE_CORE_VERSION := master
 INJECTIVE_CORE_REPO := https://github.com/InjectiveLabs/injective-core.git
 
-INDEXER_VERSION := v1.16.54
+INDEXER_VERSION := v1.16.75
 INDEXER_REPO := https://github.com/InjectiveLabs/injective-indexer.git
 
 IBC_GO_VERSION := v8.7.0-evm-comet1-inj

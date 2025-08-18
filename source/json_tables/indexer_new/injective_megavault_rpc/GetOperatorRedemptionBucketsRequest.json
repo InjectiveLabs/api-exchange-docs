@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "operator_address",
+    "Type": "string",
+    "Description": "Operator address",
+    "Required": "Yes"
+  }
+]

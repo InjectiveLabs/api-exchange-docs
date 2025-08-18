@@ -2,16 +2,16 @@
   {
     "Parameter": "params",
     "Type": "Params",
-    "Description": "params defines the parameters of the module."
+    "Description": "params defines the parameters of the module"
   },
   {
     "Parameter": "namespaces",
     "Type": "Namespace array",
-    "Description": ""
+    "Description": "namespaces defines the namespaces of the module"
   },
   {
     "Parameter": "vouchers",
     "Type": "AddressVoucher array",
-    "Description": ""
+    "Description": "vouchers defines the vouchers of the module"
   }
 ]

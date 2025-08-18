@@ -2,13 +2,13 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "The sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "namespace",
     "Type": "Namespace",
-    "Description": "",
+    "Description": "The namespace information",
     "Required": "Yes"
   }
 ]

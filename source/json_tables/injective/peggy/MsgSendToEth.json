@@ -2,25 +2,25 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "The sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "eth_dest",
     "Type": "string",
-    "Description": "",
+    "Description": "The Ethereum address to send the tokens to",
     "Required": "Yes"
   },
   {
     "Parameter": "amount",
     "Type": "types.Coin",
-    "Description": "",
+    "Description": "The amount of tokens to send",
     "Required": "Yes"
   },
   {
     "Parameter": "bridge_fee",
     "Type": "types.Coin",
-    "Description": "",
+    "Description": "The fee paid for the bridge, distinct from the fee paid to the chain to actually send this message in the first place. So a successful send has two layers of fees for the user",
     "Required": "Yes"
   }
 ]

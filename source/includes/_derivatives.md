@@ -1381,7 +1381,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/PerpetualMarketFunding.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">cumulative_funding</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">cumulative_funding defines the cumulative funding of a perpetual market.</td></tr>
-<tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">cumulative_price defines the cumulative price for the current hour up to the last timestamp (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">cumulative_price defines the running time-integral of the perp premium ((VWAP - mark_price) / mark_price) i.e., sum(premium * seconds) used to compute the interval’s average premium for funding</td></tr>
 <tr ><td class="parameter-td td_text">last_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">the last funding timestamp in seconds</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1686,7 +1686,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/PerpetualMarketFunding.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">cumulative_funding</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">cumulative_funding defines the cumulative funding of a perpetual market.</td></tr>
-<tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">cumulative_price defines the cumulative price for the current hour up to the last timestamp (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">cumulative_price defines the running time-integral of the perp premium ((VWAP - mark_price) / mark_price) i.e., sum(premium * seconds) used to compute the interval’s average premium for funding</td></tr>
 <tr ><td class="parameter-td td_text">last_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">the last funding timestamp in seconds</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -3179,7 +3179,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/PerpetualMarketFunding.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">cumulative_funding</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">cumulative_funding defines the cumulative funding of a perpetual market.</td></tr>
-<tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">cumulative_price defines the cumulative price for the current hour up to the last timestamp (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">cumulative_price defines the running time-integral of the perp premium ((VWAP - mark_price) / mark_price) i.e., sum(premium * seconds) used to compute the interval’s average premium for funding</td></tr>
 <tr ><td class="parameter-td td_text">last_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">the last funding timestamp in seconds</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 

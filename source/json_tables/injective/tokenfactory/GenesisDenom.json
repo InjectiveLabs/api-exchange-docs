@@ -2,26 +2,26 @@
   {
     "Parameter": "denom",
     "Type": "string",
-    "Description": ""
+    "Description": "The denom"
   },
   {
     "Parameter": "authority_metadata",
     "Type": "DenomAuthorityMetadata",
-    "Description": ""
+    "Description": "The authority metadata"
   },
   {
     "Parameter": "name",
     "Type": "string",
-    "Description": ""
+    "Description": "The name"
   },
   {
     "Parameter": "symbol",
     "Type": "string",
-    "Description": ""
+    "Description": "The symbol"
   },
   {
     "Parameter": "decimals",
     "Type": "uint32",
-    "Description": ""
+    "Description": "The number of decimals"
   }
 ]

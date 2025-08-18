@@ -2,6 +2,6 @@
   {
     "Parameter": "policy_statuses",
     "Type": "PolicyStatus array",
-    "Description": ""
+    "Description": "List of policy statuses"
   }
 ]

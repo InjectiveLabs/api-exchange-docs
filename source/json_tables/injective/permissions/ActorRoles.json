@@ -2,11 +2,11 @@
   {
     "Parameter": "actor",
     "Type": "string",
-    "Description": ""
+    "Description": "The actor name"
   },
   {
     "Parameter": "roles",
     "Type": "string array",
-    "Description": ""
+    "Description": "The roles for the actor"
   }
 ]

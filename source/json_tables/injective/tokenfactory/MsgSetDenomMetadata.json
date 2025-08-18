@@ -2,13 +2,13 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "The sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "metadata",
     "Type": "types1.Metadata",
-    "Description": "",
+    "Description": "The metadata",
     "Required": "Yes"
   },
   {

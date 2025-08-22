@@ -71,9 +71,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter       | Type   | Description                                 | Required |
-| --------------- | ------ | ------------------------------------------- | -------- |
-| account_address | String | Address of the account to get portfolio for | Yes      |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_portfolio_rpc/AccountPortfolioBalancesRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account_address</td><td class="type-td td_text">string</td><td class="description-td td_text">Account address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">usd</td><td class="type-td td_text">bool</td><td class="description-td td_text">Whether to return USD values for the balances</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
 > Response Example:
@@ -247,39 +248,51 @@ func main() {
 
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|portfolio|Portfolio|The portfolio of the account|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_portfolio_rpc/AccountPortfolioBalancesResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">portfolio</td><td class="type-td td_text">PortfolioBalances</td><td class="description-td td_text">The portfolio balances of this account</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **PortfolioBalances**
 
-|Parameter|Type|Description|
-|----|----|----|
-|account_address|String|The account&#39;s portfolio address|
-|bank_balances|Coin Array|Account available bank balances|
-|subaccounts|SubaccountBalanceV2|Subaccounts list|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_portfolio_rpc/PortfolioBalances.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account_address</td><td class="type-td td_text">string</td><td class="description-td td_text">The account's portfolio address</td></tr>
+<tr ><td class="parameter-td td_text">bank_balances</td><td class="type-td td_text">Coin array</td><td class="description-td td_text">Account available bank balances</td></tr>
+<tr ><td class="parameter-td td_text">subaccounts</td><td class="type-td td_text">SubaccountBalanceV2 array</td><td class="description-td td_text">Subaccounts list</td></tr>
+<tr ><td class="parameter-td td_text">total_usd</td><td class="type-td td_text">string</td><td class="description-td td_text">USD value of the portfolio</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Coin**
 
-|Parameter|Type|Description|
-|----|----|----|
-|denom|String|Denom of the coin|
-|amount|String|Amount of the coin|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_portfolio_rpc/Coin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Denom of the coin</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">usd_value</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **SubaccountBalanceV2**
 
-|Parameter|Type|Description|
-|-----|----|-----------|
-|subaccount_id|String|Related subaccount ID|
-|denom|String|Coin denom on the chain|
-|deposit|SubaccountDeposit|Subaccount's total balanace and available balances|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_portfolio_rpc/SubaccountBalanceV2.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">Related subaccount ID</td></tr>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin denom on the chain.</td></tr>
+<tr ><td class="parameter-td td_text">deposit</td><td class="type-td td_text">SubaccountDeposit</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **SubaccountDeposit**
 
-|Parameter|Type|Description|
-|-----|----|----|
-|total_balance|String| All balances (in specific denom) that this subaccount has |
-|available_balance|String| Available balance (in specific denom), the balance that is not used by current orders |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_portfolio_rpc/SubaccountDeposit.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">total_balance</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">available_balance</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">total_balance_usd</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">available_balance_usd</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## StreamAccountPortfolio
@@ -386,13 +399,11 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter          | Type     | Description                                                                                          | Required |
-| ------------------ | -------- | ---------------------------------------------------------------------------------------------------- | -------- |
-| account_address    | String   | The account&#39;s portfolio address                                                                  | Yes      |
-| subaccount_id      | String   | Related subaccount ID                                                                                | No       |
-| callback           | Function | Function receiving one parameter (a stream event JSON dictionary) to process each new event          | Yes      |
-| on_end_callback    | Function | Function with the logic to execute when the stream connection is interrupted                         | No       |
-| on_status_callback | Function | Function receiving one parameter (the exception) with the logic to execute when an exception happens | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_portfolio_rpc/StreamAccountPortfolioRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account_address</td><td class="type-td td_text">string</td><td class="description-td td_text">The account's portfolio address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">Related subaccount ID</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -429,9 +440,10 @@ func main() {
 }
 ```
 
-| Parameter     | Type   | Description                                                                                  |
-|---------------|--------|----------------------------------------------------------------------------------------------|
-| type          | String | Type of portfolio document (should be one of ["bank", "total_balance", "available_balance"]) |
-| denom         | String | Denom of portfolio entry                                                                     |
-| amount        | String | Amount of portfolio entry                                                                    |
-| subaccount_id | String | Subaccount id of portfolio entry                                                             |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_portfolio_rpc/StreamAccountPortfolioResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">string</td><td class="description-td td_text">type of portfolio entry</td></tr>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">denom of portfolio entry</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">string</td><td class="description-td td_text">amount of portfolio entry</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">subaccount id of portfolio entry</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Operation timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->

@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "id",
+    "Type": "uint64",
+    "Description": "id is the unique ID of the group."
+  },
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "admin is the account address of the group's admin."
+  },
+  {
+    "Parameter": "metadata",
+    "Type": "string",
+    "Description": "metadata is any arbitrary metadata to attached to the group. the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#group-1"
+  },
+  {
+    "Parameter": "version",
+    "Type": "uint64",
+    "Description": "version is used to track changes to a group's membership structure that would break existing proposals. Whenever any members weight is changed, or any member is added or removed this version is incremented and will cause proposals based on older versions of this group to fail"
+  },
+  {
+    "Parameter": "total_weight",
+    "Type": "string",
+    "Description": "total_weight is the sum of the group members' weights."
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "time.Time",
+    "Description": "created_at is a timestamp specifying when a group was created."
+  }
+]

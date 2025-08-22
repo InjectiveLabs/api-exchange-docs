@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "admin is the account address of the group admin.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "group_policy_address",
+    "Type": "string",
+    "Description": "group_policy_address is the account address of the group policy.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "new_admin",
+    "Type": "string",
+    "Description": "new_admin is the new group policy admin.",
+    "Required": "Yes"
+  }
+]

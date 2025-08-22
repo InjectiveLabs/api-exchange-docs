@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "group_id",
+    "Type": "uint64",
+    "Description": "group_id is the unique ID of the newly created group with policy."
+  },
+  {
+    "Parameter": "group_policy_address",
+    "Type": "string",
+    "Description": "group_policy_address is the account address of the newly created group policy."
+  }
+]

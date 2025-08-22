@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "grantee",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "msgs",
+    "Type": "string array",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

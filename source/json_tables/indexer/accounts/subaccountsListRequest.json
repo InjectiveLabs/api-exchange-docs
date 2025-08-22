@@ -1,3 +1,0 @@
-[
-    {"Parameter": "account_address", "Type": "String", "Description": "Injective address of the account to query for subaccounts", "Required": "Yes"}
-]

@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address is the member's account address.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "weight",
+    "Type": "string",
+    "Description": "weight is the member's voting weight that should be greater than 0.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "metadata",
+    "Type": "string",
+    "Description": "metadata is any arbitrary metadata attached to the member.",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "voting_period",
+    "Type": "time.Duration",
+    "Description": "voting_period is the duration from submission of a proposal to the end of voting period Within this times votes can be submitted with MsgVote."
+  },
+  {
+    "Parameter": "min_execution_period",
+    "Type": "time.Duration",
+    "Description": "min_execution_period is the minimum duration after the proposal submission where members can start sending MsgExec. This means that the window for sending a MsgExec transaction is: `[ submission + min_execution_period ; submission + voting_period + max_execution_period]` where max_execution_period is a app-specific config, defined in the keeper. If not set, min_execution_period will default to 0.  Please make sure to set a `min_execution_period` that is smaller than `voting_period + max_execution_period`, or else the above execution window is empty, meaning that all proposals created with this decision policy won't be able to be executed."
+  }
+]

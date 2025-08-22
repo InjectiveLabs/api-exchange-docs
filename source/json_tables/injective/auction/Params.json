@@ -13,5 +13,10 @@
     "Parameter": "inj_basket_max_cap",
     "Type": "cosmossdk_io_math.Int",
     "Description": "inj_basket_max_cap defines the maximum cap for INJ contained in an auction basket"
+  },
+  {
+    "Parameter": "bidders_whitelist",
+    "Type": "string array",
+    "Description": "bidders_whitelist defines the list of addresses that are allowed to bid if empty, any address can bid; if populated, only whitelisted addresses can bid"
   }
 ]

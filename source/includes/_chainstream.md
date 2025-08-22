@@ -200,7 +200,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountDepositsRequest.json -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountDepositsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">subaccount</td><td class="type-td td_text">Subaccount</td><td class="description-td td_text">the subaccount details</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -208,6 +210,7 @@ func main() {
 **BankBalancesFilter**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/BankBalancesFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">accounts</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -266,7 +269,19 @@ func main() {
 The stream response is a stream of events that are sent to the client. 
 Each message contains a list of events that are filtered by the request parameters and it's identified by the block height.
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/StreamResponse.json -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/StreamResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_height</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_time</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">bank_balances</td><td class="type-td td_text">BankBalance array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">subaccount_deposits</td><td class="type-td td_text">SubaccountDeposits array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">spot_trades</td><td class="type-td td_text">SpotTrade array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">derivative_trades</td><td class="type-td td_text">DerivativeTrade array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">spot_orders</td><td class="type-td td_text">SpotOrderUpdate array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">derivative_orders</td><td class="type-td td_text">DerivativeOrderUpdate array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">spot_orderbook_updates</td><td class="type-td td_text">OrderbookUpdate array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">derivative_orderbook_updates</td><td class="type-td td_text">OrderbookUpdate array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">positions</td><td class="type-td td_text">Position array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">oracle_prices</td><td class="type-td td_text">OraclePrice array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -274,6 +289,8 @@ Each message contains a list of events that are filtered by the request paramete
 **BankBalance**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/BankBalance.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">balances</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>

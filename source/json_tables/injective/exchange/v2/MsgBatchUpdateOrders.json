@@ -64,5 +64,23 @@
     "Type": "DerivativeOrder array",
     "Description": "the binary options orders to create",
     "Required": "No"
+  },
+  {
+    "Parameter": "spot_market_orders_to_create",
+    "Type": "SpotOrder array",
+    "Description": "the spot market orders to create",
+    "Required": "No"
+  },
+  {
+    "Parameter": "derivative_market_orders_to_create",
+    "Type": "DerivativeOrder array",
+    "Description": "the derivative market orders to create",
+    "Required": "No"
+  },
+  {
+    "Parameter": "binary_options_market_orders_to_create",
+    "Type": "DerivativeOrder array",
+    "Description": "the binary options market orders to create",
+    "Required": "No"
   }
 ]

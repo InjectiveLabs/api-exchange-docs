@@ -7,7 +7,7 @@ Get the server health.
 
 **IP rate limit group:** `indexer`
 
-
+### Request Parameters
 > Request Example:
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/meta_rpc/1_Ping.py) -->
@@ -88,6 +88,7 @@ Get the server version.
 
 **IP rate limit group:** `indexer`
 
+### Request Parameters
 > Request Example:
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/meta_rpc/2_Version.py) -->
@@ -178,17 +179,10 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|version|String|injective-exchange code version|
-|build|VersionResponse.BuildEntry Array|Additional build meta info|
-
-**VersionResponse.BuildEntry**
-
-|Parameter|Type|Description|
-|----|----|----|
-|key|String|Name|
-|value|String|Description|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_meta_rpc/VersionResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">string</td><td class="description-td td_text">injective-exchange code version.</td></tr>
+<tr ><td class="parameter-td td_text">build</td><td class="type-td td_text">map[string]string</td><td class="description-td td_text">Additional build meta info.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## Info
@@ -265,9 +259,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|timestamp|Integer|Your current system UNIX timestamp in millis|No, if using our async_client implementation, otherwise yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_meta_rpc/InfoRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Provide current system UNIX timestamp in millis</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -288,20 +282,13 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|timestamp|Integer|The original timestamp (from your system) of the request in UNIX millis|
-|server_time|Integer|UNIX time on the server in millis|
-|version|String|injective-exchange code version|
-|build|VersionResponse.BuildEntry Array|Additional build meta info|
-
-
-**VersionResponse.BuildEntry**
-
-|Parameter|Type|Description|
-|----|----|----|
-|key|String|Name|
-|value|String|Description|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_meta_rpc/InfoResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">The original timestamp value in millis.</td></tr>
+<tr ><td class="parameter-td td_text">server_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">UNIX time on the server in millis.</td></tr>
+<tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">string</td><td class="description-td td_text">injective-exchange code version.</td></tr>
+<tr ><td class="parameter-td td_text">build</td><td class="type-td td_text">map[string]string</td><td class="description-td td_text">Additional build meta info.</td></tr>
+<tr ><td class="parameter-td td_text">region</td><td class="type-td td_text">string</td><td class="description-td td_text">Server's location region</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## StreamKeepAlive
@@ -310,6 +297,7 @@ Subscribe to a stream and gracefully disconnect and connect to another sentry no
 
 **IP rate limit group:** `indexer`
 
+### Request Parameters
 > Request Example:
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/meta_rpc/4_StreamKeepAlive.py) -->
@@ -423,11 +411,7 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter          | Type     | Description                                                                                          | Required |
-| ------------------ | -------- | ---------------------------------------------------------------------------------------------------- | -------- |
-| callback           | Function | Function receiving one parameter (a stream event JSON dictionary) to process each new event          | Yes      |
-| on_end_callback    | Function | Function with the logic to execute when the stream connection is interrupted                         | No       |
-| on_status_callback | Function | Function receiving one parameter (the exception) with the logic to execute when an exception happens | No       |
+No parameters
 
 
 ### Response Parameters
@@ -440,8 +424,10 @@ timestamp: 1636236225847,
 "Cancelled all tasks"
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|event|String|Server event|
-|new_endpoint|String|New connection endpoint for the gRPC API|
-|timestamp|Integer|Operation timestamp in UNIX millis|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_meta_rpc/InfoResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">The original timestamp value in millis.</td></tr>
+<tr ><td class="parameter-td td_text">server_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">UNIX time on the server in millis.</td></tr>
+<tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">string</td><td class="description-td td_text">injective-exchange code version.</td></tr>
+<tr ><td class="parameter-td td_text">build</td><td class="type-td td_text">map[string]string</td><td class="description-td td_text">Additional build meta info.</td></tr>
+<tr ><td class="parameter-td td_text">region</td><td class="type-td td_text">string</td><td class="description-td td_text">Server's location region</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "grants",
+    "Type": "Grant array",
+    "Description": "authorizations is a list of grants granted for grantee by granter."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines an pagination for the response."
+  }
+]

@@ -70,9 +70,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter | Type   | Description                             | Required |
-| --------- | ------ | --------------------------------------- | -------- |
-| market_id | String | MarketId of the market we want to fetch | Yes      |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/MarketRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">MarketId of the market we want to fetch</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -138,38 +138,42 @@ func main() {
 }
 ```
 
-| Parameter | Type           | Description                       |
-| --------- | -------------- | --------------------------------- |
-| market    | SpotMarketInfo | Info about particular spot market |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/MarketResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market</td><td class="type-td td_text">SpotMarketInfo</td><td class="description-td td_text">Info about particular spot market</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **SpotMarketInfo**
 
-| Parameter              | Type      | Description                                                                                             |
-| ---------------------- | --------- | ------------------------------------------------------------------------------------------------------- |
-| base_denom             | String    | Coin denom of the base asset                                                                            |
-| market_id              | String    | ID of the spot market of interest                                                                       |
-| market_status          | String    | The status of the market (Should be one of: ["active", "paused", "suspended", "demolished", "expired"]) |
-| min_quantity_tick_size | String    | Defines the minimum required tick size for the order's quantity                                         |
-| quote_token_meta       | TokenMeta | Token metadata for quote asset, only for Ethereum-based assets                                          |
-| service_provider_fee   | String    | Percentage of the transaction fee shared with the service provider                                      |
-| base_token_meta        | TokenMeta | Token metadata for base asset, only for Ethereum-based assets                                           |
-| maker_fee_rate         | String    | Defines the fee percentage makers pay (or receive, if negative) in quote asset when trading             |
-| min_price_tick_size    | String    | Defines the minimum required tick size for the order's price                                            |
-| quote_denom            | String    | Coin denom of the quote asset                                                                           |
-| taker_fee_rate         | String    | Defines the fee percentage takers pay (in the quote asset) when trading                                 |
-| ticker                 | String    | A name of the pair in format AAA/BBB, where AAA is base asset, BBB is quote asset                       |
-| min_notional           | String    | Defines the minimum required notional for an order to be accepted |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SpotMarketInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">SpotMarket ID is keccak265(baseDenom || quoteDenom)</td></tr>
+<tr ><td class="parameter-td td_text">market_status</td><td class="type-td td_text">string</td><td class="description-td td_text">The status of the market</td></tr>
+<tr ><td class="parameter-td td_text">ticker</td><td class="type-td td_text">string</td><td class="description-td td_text">A name of the pair in format AAA/BBB, where AAA is base asset, BBB is quote asset.</td></tr>
+<tr ><td class="parameter-td td_text">base_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin denom used for the base asset.</td></tr>
+<tr ><td class="parameter-td td_text">base_token_meta</td><td class="type-td td_text">TokenMeta</td><td class="description-td td_text">Token metadata for base asset</td></tr>
+<tr ><td class="parameter-td td_text">quote_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin denom used for the quote asset.</td></tr>
+<tr ><td class="parameter-td td_text">quote_token_meta</td><td class="type-td td_text">TokenMeta</td><td class="description-td td_text">Token metadata for quote asset</td></tr>
+<tr ><td class="parameter-td td_text">maker_fee_rate</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the fee percentage makers pay when trading (in quote asset)</td></tr>
+<tr ><td class="parameter-td td_text">taker_fee_rate</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the fee percentage takers pay when trading (in quote asset)</td></tr>
+<tr ><td class="parameter-td td_text">service_provider_fee</td><td class="type-td td_text">string</td><td class="description-td td_text">Percentage of the transaction fee shared with the service provider</td></tr>
+<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the minimum required tick size for the order's price</td></tr>
+<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the minimum required tick size for the order's quantity</td></tr>
+<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">string</td><td class="description-td td_text">Minimum notional value for the market</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **TokenMeta**
 
-| Parameter | Type    | Description                                     |
-| --------- | ------- | ----------------------------------------------- |
-| address   | String  | Token's Ethereum contract address               |
-| decimals  | Integer | Token decimals                                  |
-| logo      | String  | URL to the logo image                           |
-| name      | String  | Token full name                                 |
-| symbol    | String  | Token symbol short name                         |
-| updatedAt | Integer | Token metadata fetched timestamp in UNIX millis |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/TokenMeta.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">Token full name</td></tr>
+<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">Token contract address (native or not)</td></tr>
+<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Token symbol short name</td></tr>
+<tr ><td class="parameter-td td_text">logo</td><td class="type-td td_text">string</td><td class="description-td td_text">URL to the logo image</td></tr>
+<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">int32</td><td class="description-td td_text">Token decimals</td></tr>
+<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Token metadata fetched timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## Markets
@@ -253,11 +257,12 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
-| Parameter       | Type         | Description                                                                                                   | Required |
-| --------------- | ------------ | ------------------------------------------------------------------------------------------------------------- | -------- |
-| market_statuses | String Array | Filter by status of the market (Should be any of: ["active", "paused", "suspended", "demolished", "expired"]) | No       |
-| base_denom      | String       | Filter by the Coin denomination of the base currency                                                          | No       |
-| quote_denom     | String       | Filter by the Coin denomination of the quote currency                                                         | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/MarketsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_status</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by market status</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">base_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by the Coin denomination of the base currency</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">quote_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by the Coin denomination of the quote currency</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_statuses</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -347,39 +352,42 @@ func main() {
 }
 ```
 
-| Parameter | Type                 | Description          |
-| --------- | -------------------- | -------------------- |
-| markets   | SpotMarketInfo Array | List of spot markets |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/MarketsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">markets</td><td class="type-td td_text">SpotMarketInfo array</td><td class="description-td td_text">Spot Markets list</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **SpotMarketInfo**
 
-| Parameter              | Type      | Description                                                                                             |
-| ---------------------- | --------- | ------------------------------------------------------------------------------------------------------- |
-| base_denom             | String    | Coin denom of the base asset                                                                            |
-| market_id              | String    | ID of the spot market of interest                                                                       |
-| market_status          | String    | The status of the market (Should be one of: ["active", "paused", "suspended", "demolished", "expired"]) |
-| min_quantity_tick_size | String    | Defines the minimum required tick size for the order's quantity                                         |
-| quote_token_meta       | TokenMeta | Token metadata for quote asset, only for Ethereum-based assets                                          |
-| service_provider_fee   | String    | Percentage of the transaction fee shared with the service provider                                      |
-| base_token_meta        | TokenMeta | Token metadata for base asset, only for Ethereum-based assets                                           |
-| maker_fee_rate         | String    | Defines the fee percentage makers pay (or receive, if negative) in quote asset when trading             |
-| min_price_tick_size    | String    | Defines the minimum required tick size for the order's price                                            |
-| quote_denom            | String    | Coin denom of the quote asset                                                                           |
-| taker_fee_rate         | String    | Defines the fee percentage takers pay (in the quote asset) when trading                                 |
-| ticker                 | String    | A name of the pair in format AAA/BBB, where AAA is base asset, BBB is quote asset                       |
-| min_notional           | String    | Defines the minimum required notional for an order to be accepted |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SpotMarketInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">SpotMarket ID is keccak265(baseDenom || quoteDenom)</td></tr>
+<tr ><td class="parameter-td td_text">market_status</td><td class="type-td td_text">string</td><td class="description-td td_text">The status of the market</td></tr>
+<tr ><td class="parameter-td td_text">ticker</td><td class="type-td td_text">string</td><td class="description-td td_text">A name of the pair in format AAA/BBB, where AAA is base asset, BBB is quote asset.</td></tr>
+<tr ><td class="parameter-td td_text">base_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin denom used for the base asset.</td></tr>
+<tr ><td class="parameter-td td_text">base_token_meta</td><td class="type-td td_text">TokenMeta</td><td class="description-td td_text">Token metadata for base asset</td></tr>
+<tr ><td class="parameter-td td_text">quote_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin denom used for the quote asset.</td></tr>
+<tr ><td class="parameter-td td_text">quote_token_meta</td><td class="type-td td_text">TokenMeta</td><td class="description-td td_text">Token metadata for quote asset</td></tr>
+<tr ><td class="parameter-td td_text">maker_fee_rate</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the fee percentage makers pay when trading (in quote asset)</td></tr>
+<tr ><td class="parameter-td td_text">taker_fee_rate</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the fee percentage takers pay when trading (in quote asset)</td></tr>
+<tr ><td class="parameter-td td_text">service_provider_fee</td><td class="type-td td_text">string</td><td class="description-td td_text">Percentage of the transaction fee shared with the service provider</td></tr>
+<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the minimum required tick size for the order's price</td></tr>
+<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the minimum required tick size for the order's quantity</td></tr>
+<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">string</td><td class="description-td td_text">Minimum notional value for the market</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **TokenMeta**
 
-| Parameter | Type    | Description                                     |
-| --------- | ------- | ----------------------------------------------- |
-| address   | String  | Token's Ethereum contract address               |
-| decimals  | Integer | Token decimals                                  |
-| logo      | String  | URL to the logo image                           |
-| name      | String  | Token full name                                 |
-| symbol    | String  | Token symbol short name                         |
-| updatedAt | Integer | Token metadata fetched timestamp in UNIX millis |
-
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/TokenMeta.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">Token full name</td></tr>
+<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">Token contract address (native or not)</td></tr>
+<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Token symbol short name</td></tr>
+<tr ><td class="parameter-td td_text">logo</td><td class="type-td td_text">string</td><td class="description-td td_text">URL to the logo image</td></tr>
+<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">int32</td><td class="description-td td_text">Token decimals</td></tr>
+<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Token metadata fetched timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## StreamMarkets
@@ -485,9 +493,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter  | Type         | Description                                                              | Required |
-| ---------- | ------------ | ------------------------------------------------------------------------ | -------- |
-| market_ids | String Array | List of market IDs for updates streaming, empty means 'ALL' spot markets | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/StreamMarketsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of market IDs for updates streaming, empty means 'ALL' spot markets</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
 > Streaming Response Example:
@@ -564,40 +572,44 @@ func main() {
 }
 ```
 
-| Parameter      | Type           | Description                                                                   |
-| -------------- | -------------- | ----------------------------------------------------------------------------- |
-| market         | SpotMarketInfo | Info about particular spot market                                             |
-| operation_type | String         | Update type (Should be one of: ["insert", "replace", "update", "invalidate"]) |
-| timestamp      | Integer        | Operation timestamp in UNIX millis                                            |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/StreamMarketsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market</td><td class="type-td td_text">SpotMarketInfo</td><td class="description-td td_text">Info about particular spot market</td></tr>
+<tr ><td class="parameter-td td_text">operation_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Update type</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Operation timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **SpotMarketInfo**
 
-| Parameter              | Type      | Description                                                                                             |
-| ---------------------- | --------- | ------------------------------------------------------------------------------------------------------- |
-| base_denom             | String    | Coin denom of the base asset                                                                            |
-| market_id              | String    | ID of the spot market of interest                                                                       |
-| market_status          | String    | The status of the market (Should be one of: ["active", "paused", "suspended", "demolished", "expired"]) |
-| min_quantity_tick_size | String    | Defines the minimum required tick size for the order's quantity                                         |
-| quote_token_meta       | TokenMeta | Token metadata for quote asset, only for Ethereum-based assets                                          |
-| service_provider_fee   | String    | Percentage of the transaction fee shared with the service provider                                      |
-| base_token_meta        | TokenMeta | Token metadata for base asset, only for Ethereum-based assets                                           |
-| maker_fee_rate         | String    | Defines the fee percentage makers pay (or receive, if negative) in quote asset when trading             |
-| min_price_tick_size    | String    | Defines the minimum required tick size for the order's price                                            |
-| quote_denom            | String    | Coin denom of the quote asset                                                                           |
-| taker_fee_rate         | String    | Defines the fee percentage takers pay (in the quote asset) when trading                                 |
-| ticker                 | String    | A name of the pair in format AAA/BBB, where AAA is base asset, BBB is quote asset                       |
-| min_notional           | String    | Defines the minimum required notional for an order to be accepted                                       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SpotMarketInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">SpotMarket ID is keccak265(baseDenom || quoteDenom)</td></tr>
+<tr ><td class="parameter-td td_text">market_status</td><td class="type-td td_text">string</td><td class="description-td td_text">The status of the market</td></tr>
+<tr ><td class="parameter-td td_text">ticker</td><td class="type-td td_text">string</td><td class="description-td td_text">A name of the pair in format AAA/BBB, where AAA is base asset, BBB is quote asset.</td></tr>
+<tr ><td class="parameter-td td_text">base_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin denom used for the base asset.</td></tr>
+<tr ><td class="parameter-td td_text">base_token_meta</td><td class="type-td td_text">TokenMeta</td><td class="description-td td_text">Token metadata for base asset</td></tr>
+<tr ><td class="parameter-td td_text">quote_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin denom used for the quote asset.</td></tr>
+<tr ><td class="parameter-td td_text">quote_token_meta</td><td class="type-td td_text">TokenMeta</td><td class="description-td td_text">Token metadata for quote asset</td></tr>
+<tr ><td class="parameter-td td_text">maker_fee_rate</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the fee percentage makers pay when trading (in quote asset)</td></tr>
+<tr ><td class="parameter-td td_text">taker_fee_rate</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the fee percentage takers pay when trading (in quote asset)</td></tr>
+<tr ><td class="parameter-td td_text">service_provider_fee</td><td class="type-td td_text">string</td><td class="description-td td_text">Percentage of the transaction fee shared with the service provider</td></tr>
+<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the minimum required tick size for the order's price</td></tr>
+<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the minimum required tick size for the order's quantity</td></tr>
+<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">string</td><td class="description-td td_text">Minimum notional value for the market</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **TokenMeta**
 
-| Parameter | Type    | Description                                     |
-| --------- | ------- | ----------------------------------------------- |
-| address   | String  | Token's Ethereum contract address               |
-| decimals  | Integer | Token decimals                                  |
-| logo      | String  | URL to the logo image                           |
-| name      | String  | Token full name                                 |
-| symbol    | String  | Token symbol short name                         |
-| updatedAt | Integer | Token metadata fetched timestamp in UNIX millis |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/TokenMeta.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">Token full name</td></tr>
+<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">Token contract address (native or not)</td></tr>
+<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Token symbol short name</td></tr>
+<tr ><td class="parameter-td td_text">logo</td><td class="type-td td_text">string</td><td class="description-td td_text">URL to the logo image</td></tr>
+<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">int32</td><td class="description-td td_text">Token decimals</td></tr>
+<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Token metadata fetched timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## OrdersHistory
@@ -692,18 +704,22 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter           | Type             | Description                                                                                                                               | Required |
-| ------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| subaccount_id       | String           | Filter by subaccount ID                                                                                                                   | No       |
-| market_ids          | String Array     | Filter by multiple market IDs                                                                                                             | No       |
-| order_types         | String Array     | The order types to be included (Should be one of: ["buy", "sell", "stop_buy", "stop_sell", "take_buy", "take_sell", "buy_po", "sell_po"]) | No       |
-| direction           | String           | Filter by order direction (Should be one of: ["buy", "sell"])                                                                             | No       |
-| state               | String           | The order state (Should be one of: ["booked", "partial_filled", "filled", "canceled"])                                                    | No       |
-| execution_types     | String Array     | The execution of the order (Should be one of: ["limit", "market"])                                                                        | No       |
-| trade_id            | String           | Filter by the trade's trade id                                                                                                            | No       |
-| active_markets_only | Bool             | Return only orders for active markets                                                                                                     | No       |
-| cid                 | String           | Filter by the custom client order id of the trade's order                                                                                 | No       |
-| pagination          | PaginationOption | Pagination configuration                                                                                                                  | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/OrdersHistoryRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">subaccount ID to filter orders for specific subaccount</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">Market ID to filter orders for specific market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">skip</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Skip will skip the first n item from the result</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">int32</td><td class="description-td td_text">Limit is used to specify the maximum number of items to be returned</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">order_types</td><td class="type-td td_text">string array</td><td class="description-td td_text">filter by order types</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">direction</td><td class="type-td td_text">string</td><td class="description-td td_text">order side filter</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">start_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">Search for orders which createdAt >= startTime, time in millisecond</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">end_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">Search for orders which createdAt <= endTime, time in millisecond</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by order state</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">execution_types</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">TradeId of the order we want to fetch</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">active_markets_only</td><td class="type-td td_text">bool</td><td class="description-td td_text">Return only orders for active markets</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">Client order ID</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -940,38 +956,45 @@ func main() {
 
 ```
 
-| Parameter | Type                   | Description               |
-| --------- | ---------------------- | ------------------------- |
-| orders    | SpotOrderHistory Array | List of prior spot orders |
-| paging    | Paging                 | Pagination of results     |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/OrdersHistoryResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">orders</td><td class="type-td td_text">SpotOrderHistory array</td><td class="description-td td_text">List of history spot orders</td></tr>
+<tr ><td class="parameter-td td_text">paging</td><td class="type-td td_text">Paging</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
+<br/>
 
 **SpotOrderHistory**
 
-| Parameter       | Type    | Description                                                                                                           |
-| --------------- | ------- | --------------------------------------------------------------------------------------------------------------------- |
-| order_hash      | String  | Hash of the order                                                                                                     |
-| market_id       | String  | ID of the spot market                                                                                                 |
-| is_active       | Boolean | Indicates if the order is active                                                                                      |
-| subaccount_id   | String  | ID of the subaccount that the order belongs to                                                                        |
-| execution_type  | String  | The type of the order (Should be one of: ["limit", "market"])                                                         |
-| order_type      | String  | Order type (Should be one of: ["buy", "sell", "stop_buy", "stop_sell", "take_buy", "take_sell", "buy_po", "sell_po"]) |
-| price           | String  | Price of the order                                                                                                    |
-| trigger_price   | String  | Trigger price used by stop/take orders                                                                                |
-| quantity        | String  | Quantity of the order                                                                                                 |
-| filled_quantity | String  | The amount of the quantity filled                                                                                     |
-| state           | String  | Order state (Should be one of: ["booked", "partial_filled", "filled", "canceled"])                                    |
-| created_at      | Integer | Order created timestamp in UNIX millis                                                                                |
-| updated_at      | Integer | Order updated timestamp in UNIX millis                                                                                |
-| direction       | String  | The direction of the order (Should be one of: ["buy", "sell"])                                                        |
-| tx_hash         | String  | Transaction hash in which the order was created (not all orders have this value)                                      |
-| cid             | String  | Identifier for the order specified by the user (up to 36 characters, like a UUID)                                     |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SpotOrderHistory.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">Hash of the order</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">Spot Market ID is keccak265(baseDenom + quoteDenom)</td></tr>
+<tr ><td class="parameter-td td_text">is_active</td><td class="type-td td_text">bool</td><td class="description-td td_text">active state of the order</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">The subaccountId that this order belongs to</td></tr>
+<tr ><td class="parameter-td td_text">execution_type</td><td class="type-td td_text">string</td><td class="description-td td_text">The execution type</td></tr>
+<tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">string</td><td class="description-td td_text">The side of the order</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">Price of the order</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">string</td><td class="description-td td_text">Trigger price</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Quantity of the order</td></tr>
+<tr ><td class="parameter-td td_text">filled_quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Filled amount</td></tr>
+<tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">string</td><td class="description-td td_text">Order state</td></tr>
+<tr ><td class="parameter-td td_text">created_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Order committed timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Order updated timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">direction</td><td class="type-td td_text">string</td><td class="description-td td_text">Order direction (order side)</td></tr>
+<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">Transaction Hash where order is created. Not all orders have this field</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">Custom client order ID</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Paging**
 
-| Parameter | Type    | Description                       |
-| --------- | ------- | --------------------------------- |
-| total     | Integer | Total number of available records |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/Paging.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">int64</td><td class="description-td td_text">total number of txs saved in database</td></tr>
+<tr ><td class="parameter-td td_text">from</td><td class="type-td td_text">int32</td><td class="description-td td_text">can be either block height or index num</td></tr>
+<tr ><td class="parameter-td td_text">to</td><td class="type-td td_text">int32</td><td class="description-td td_text">can be either block height or index num</td></tr>
+<tr ><td class="parameter-td td_text">count_by_subaccount</td><td class="type-td td_text">int64</td><td class="description-td td_text">count entries by subaccount, serving some places on helix</td></tr>
+<tr ><td class="parameter-td td_text">next</td><td class="type-td td_text">string array</td><td class="description-td td_text">array of tokens to navigate to the next pages</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## StreamOrdersHistory
@@ -1088,17 +1111,14 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter          | Type         | Description                                                                                                                     | Required |
-| ------------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| market_id          | String       | Filter by market ID                                                                                                             | No       |
-| subaccount_id      | String       | Filter by subaccount ID                                                                                                         | No       |
-| direction          | String       | Filter by direction (Should be one of: ["buy", "sell"])                                                                         | No       |
-| state              | String       | Filter by state (Should be one of: ["booked", "partial_filled", "filled", "canceled"])                                          | No       |
-| order_types        | String Array | Filter by order type (Should be one of: ["buy", "sell", "stop_buy", "stop_sell", "take_buy", "take_sell", "buy_po", "sell_po"]) | No       |
-| execution_types    | String Array | Filter by execution type (Should be one of: ["limit", "market"])                                                                | No       |
-| callback           | Function     | Function receiving one parameter (a stream event JSON dictionary) to process each new event                                     | Yes      |
-| on_end_callback    | Function     | Function with the logic to execute when the stream connection is interrupted                                                    | No       |
-| on_status_callback | Function     | Function receiving one parameter (the exception) with the logic to execute when an exception happens                            | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/StreamOrdersHistoryRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">subaccount ID to filter orders for specific subaccount</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">Market ID to filter orders for specific market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">order_types</td><td class="type-td td_text">string array</td><td class="description-td td_text">filter by order types</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">direction</td><td class="type-td td_text">string</td><td class="description-td td_text">order side filter</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by order state</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">execution_types</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -1169,32 +1189,34 @@ func main() {
 }
 ```
 
-| Parameter      | Type             | Description                                                                         |
-| -------------- | ---------------- | ----------------------------------------------------------------------------------- |
-| order          | SpotOrderHistory | Updated Order                                                                       |
-| operation_type | String           | Order update type (Should be one of: ["insert", "replace", "update", "invalidate"]) |
-| timestamp      | Integer          | Operation timestamp in UNIX millis                                                  |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/StreamOrdersHistoryResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">SpotOrderHistory</td><td class="description-td td_text">Updated order</td></tr>
+<tr ><td class="parameter-td td_text">operation_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Order update type</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Operation timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **SpotOrderHistory**
 
-| Parameter       | Type    | Description                                                                                                           |
-| --------------- | ------- | --------------------------------------------------------------------------------------------------------------------- |
-| order_hash      | String  | Hash of the order                                                                                                     |
-| market_id       | String  | ID of the spot market                                                                                                 |
-| is_active       | Boolean | Indicates if the order is active                                                                                      |
-| subaccount_id   | String  | ID of the subaccount that the order belongs to                                                                        |
-| execution_type  | String  | The type of the order (Should be one of: ["limit", "market"])                                                         |
-| order_type      | String  | Order type (Should be one of: ["buy", "sell", "stop_buy", "stop_sell", "take_buy", "take_sell", "buy_po", "sell_po"]) |
-| price           | String  | Price of the order                                                                                                    |
-| trigger_price   | String  | Trigger price used by stop/take orders                                                                                |
-| quantity        | String  | Quantity of the order                                                                                                 |
-| filled_quantity | String  | The amount of the quantity filled                                                                                     |
-| state           | String  | Order state (Should be one of: ["booked", "partial_filled", "filled", "canceled"])                                    |
-| created_at      | Integer | Order created timestamp in UNIX millis                                                                                |
-| updated_at      | Integer | Order updated timestamp in UNIX millis                                                                                |
-| direction       | String  | The direction of the order (Should be one of: ["buy", "sell"])                                                        |
-| tx_hash         | String  | Transaction hash in which the order was created (not all orders have this value)                                      |
-| cid             | String  | Identifier for the order specified by the user (up to 36 characters, like a UUID)                                     |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SpotOrderHistory.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">Hash of the order</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">Spot Market ID is keccak265(baseDenom + quoteDenom)</td></tr>
+<tr ><td class="parameter-td td_text">is_active</td><td class="type-td td_text">bool</td><td class="description-td td_text">active state of the order</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">The subaccountId that this order belongs to</td></tr>
+<tr ><td class="parameter-td td_text">execution_type</td><td class="type-td td_text">string</td><td class="description-td td_text">The execution type</td></tr>
+<tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">string</td><td class="description-td td_text">The side of the order</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">Price of the order</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">string</td><td class="description-td td_text">Trigger price</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Quantity of the order</td></tr>
+<tr ><td class="parameter-td td_text">filled_quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Filled amount</td></tr>
+<tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">string</td><td class="description-td td_text">Order state</td></tr>
+<tr ><td class="parameter-td td_text">created_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Order committed timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Order updated timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">direction</td><td class="type-td td_text">string</td><td class="description-td td_text">Order direction (order side)</td></tr>
+<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">Transaction Hash where order is created. Not all orders have this field</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">Custom client order ID</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## TradesV2
@@ -1290,17 +1312,23 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter       | Type             | Description                                                                                                                     | Required |
-| --------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| market_ids      | String Array     | Filter by multiple market IDs                                                                                                   | No       |
-| subaccount_ids  | String Array     | Filter by multiple subaccount IDs                                                                                               | No       |
-| execution_side  | String           | Filter by the execution side of the trade (Should be one of: ["maker", "taker"])                                                | No       |
-| direction       | String           | Filter by the direction of the trade (Should be one of: ["buy", "sell"])                                                        | No       |
-| execution_types | String Array     | Filter by the *trade execution type (Should be one of: ["market", "limitFill", "limitMatchRestingOrder", "limitMatchNewOrder"]) | No       |
-| trade_id        | String           | Filter by the trade id of the trade                                                                                             | No       |
-| account_address | String           | Filter by the account address                                                                                                   | No       |
-| cid             | String           | Filter by the custom client order id of the trade's order                                                                       | No       |
-| pagination      | PaginationOption | Pagination configuration                                                                                                        | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/TradesV2Request.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">MarketId of the market's orderbook we want to fetch</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by execution side of the trade</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">direction</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by direction the trade</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">SubaccountId of the trader we want to get the trades from</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">skip</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Skip will skip the first n item from the item result</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">int32</td><td class="description-td td_text">Limit is used to specify the maximum number of items to be returned.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">start_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">The starting timestamp in UNIX milliseconds that the trades must be equal or older than</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">end_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">The ending timestamp in UNIX milliseconds that the trades must be equal or younger than</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">MarketIds of the markets of which we want to get trades</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">Subaccount ids of traders we want to get trades</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">execution_types</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by the tradeId of the trade</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">account_address</td><td class="type-td td_text">string</td><td class="description-td td_text">Account address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">Client order ID</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">Fee recipient address</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -1514,42 +1542,51 @@ func main() {
 
 ```
 
-| Parameter | Type            | Description                        |
-| --------- | --------------- | ---------------------------------- |
-| trades    | SpotTrade Array | Trades of a particular spot market |
-| paging    | Paging          | Pagination of results              |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/TradesV2Response.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">trades</td><td class="type-td td_text">SpotTrade array</td><td class="description-td td_text">Trades of a Spot Market</td></tr>
+<tr ><td class="parameter-td td_text">paging</td><td class="type-td td_text">Paging</td><td class="description-td td_text">Paging indicates pages response is on</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **SpotTrade**
 
-| Parameter            | Type       | Description                                                                                                             |
-| -------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
-| order_hash           | String     | The order hash                                                                                                          |
-| subaccount_id        | String     | The subaccountId that executed the trade                                                                                |
-| market_id            | String     | The ID of the market that this trade is in                                                                              |
-| trade_execution_type | String     | Execution type of the trade (Should be one of: ["market", "limitFill", "limitMatchRestingOrder", "limitMatchNewOrder"]) |
-| trade_direction      | String     | Direction of the trade(Should be one of: ["buy", "sell"])                                                               |
-| price                | PriceLevel | Price level at which trade has been executed                                                                            |
-| fee                  | String     | The fee associated with the trade (quote asset denom)                                                                   |
-| executed_at          | Integer    | Timestamp of trade execution (on chain) in UNIX millis                                                                  |
-| fee_recipient        | String     | The address that received 40% of the fees                                                                               |
-| trade_id             | String     | Unique identifier to differentiate between trades                                                                       |
-| execution_side       | String     | Execution side of trade (Should be one of: ["maker", "taker"])                                                          |
-| cid                  | String     | Identifier for the order specified by the user (up to 36 characters, like a UUID)                                       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SpotTrade.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">Maker order hash.</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">The subaccountId that executed the trade</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">The ID of the market that this trade is in</td></tr>
+<tr ><td class="parameter-td td_text">trade_execution_type</td><td class="type-td td_text">string</td><td class="description-td td_text">The execution type of the trade</td></tr>
+<tr ><td class="parameter-td td_text">trade_direction</td><td class="type-td td_text">string</td><td class="description-td td_text">The direction the trade</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">PriceLevel</td><td class="description-td td_text">Price level at which trade has been executed</td></tr>
+<tr ><td class="parameter-td td_text">fee</td><td class="type-td td_text">string</td><td class="description-td td_text">The fee associated with the trade (quote asset denom)</td></tr>
+<tr ><td class="parameter-td td_text">executed_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Timestamp of trade execution in UNIX millis</td></tr>
+<tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">Fee recipient address</td></tr>
+<tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">A unique string that helps differentiate between trades</td></tr>
+<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Trade's execution side, marker/taker</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">Custom client order ID</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
+<br/>
 
 **PriceLevel**
 
-| Parameter | Type    | Description                                       |
-| --------- | ------- | ------------------------------------------------- |
-| price     | String  | Price number of the price level                   |
-| quantity  | String  | Quantity of the price level                       |
-| timestamp | Integer | Price level last updated timestamp in UNIX millis |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/PriceLevel.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">Price number of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Quantity of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Price level last updated timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Paging**
 
-| Parameter | Type    | Description                       |
-| --------- | ------- | --------------------------------- |
-| total     | Integer | Total number of records available |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/Paging.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">int64</td><td class="description-td td_text">total number of txs saved in database</td></tr>
+<tr ><td class="parameter-td td_text">from</td><td class="type-td td_text">int32</td><td class="description-td td_text">can be either block height or index num</td></tr>
+<tr ><td class="parameter-td td_text">to</td><td class="type-td td_text">int32</td><td class="description-td td_text">can be either block height or index num</td></tr>
+<tr ><td class="parameter-td td_text">count_by_subaccount</td><td class="type-td td_text">int64</td><td class="description-td td_text">count entries by subaccount, serving some places on helix</td></tr>
+<tr ><td class="parameter-td td_text">next</td><td class="type-td td_text">string array</td><td class="description-td td_text">array of tokens to navigate to the next pages</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## StreamTradesV2
@@ -1680,20 +1717,23 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter          | Type             | Description                                                                                                                     | Required |
-| ------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| market_ids         | String Array     | Filter by multiple market IDs                                                                                                   | No       |
-| subaccount_ids     | String Array     | Filter by multiple subaccount IDs                                                                                               | No       |
-| execution_side     | String           | Filter by the execution side of the trade (Should be one of: ["maker", "taker"])                                                | No       |
-| direction          | String           | Filter by the direction of the trade (Should be one of: ["buy", "sell"])                                                        | No       |
-| execution_types    | String Array     | Filter by the *trade execution type (Should be one of: ["market", "limitFill", "limitMatchRestingOrder", "limitMatchNewOrder"]) | No       |
-| trade_id           | String           | Filter by the trade's trade id                                                                                                  | No       |
-| account_address    | String           | Filter by the account address                                                                                                   | No       |
-| cid                | String           | Filter by the custom client order id of the trade's order                                                                       | No       |
-| pagination         | PaginationOption | Pagination configuration                                                                                                        | No       |
-| callback           | Function         | Function receiving one parameter (a stream event JSON dictionary) to process each new event                                     | Yes      |
-| on_end_callback    | Function         | Function with the logic to execute when the stream connection is interrupted                                                    | No       |
-| on_status_callback | Function         | Function receiving one parameter (the exception) with the logic to execute when an exception happens                            | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/StreamTradesV2Request.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">MarketId of the market's orderbook we want to fetch</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by execution side of the trade</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">direction</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by direction the trade</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">SubaccountId of the trader we want to get the trades from</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">skip</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Skip will skip the first n item from the item result</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">int32</td><td class="description-td td_text">Limit is used to specify the maximum number of items to be returned.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">start_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">The starting timestamp in UNIX milliseconds that the trades must be equal or older than</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">end_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">The ending timestamp in UNIX milliseconds that the trades must be equal or younger than</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">MarketIds of the markets of which we want to get trades</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">Subaccount ids of traders we want to get trades</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">execution_types</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by the tradeId of the trade</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">account_address</td><td class="type-td td_text">string</td><td class="description-td td_text">Account address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">Client order ID</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">Fee recipient address</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
 > Streaming Response Example:
@@ -1785,37 +1825,40 @@ func main() {
 }
 ```
 
-| Parameter      | Type      | Description                                                         |
-| -------------- | --------- | ------------------------------------------------------------------- |
-| trade          | SpotTrade | New spot market trade                                               |
-| operation_type | String    | Trade operation type (Should be one of: ["insert", "invalidate"])   |
-| timestamp      | Integer   | Timestamp the new trade is written into the database in UNIX millis |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/StreamTradesV2Response.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">trade</td><td class="type-td td_text">SpotTrade</td><td class="description-td td_text">New spot market trade</td></tr>
+<tr ><td class="parameter-td td_text">operation_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Executed trades update type</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Operation timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **SpotTrade**
 
-| Parameter            | Type       | Description                                                                                                             |
-| -------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
-| order_hash           | String     | The order hash                                                                                                          |
-| subaccount_id        | String     | The subaccountId that executed the trade                                                                                |
-| market_id            | String     | The ID of the market that this trade is in                                                                              |
-| trade_execution_type | String     | Execution type of the trade (Should be one of: ["market", "limitFill", "limitMatchRestingOrder", "limitMatchNewOrder"]) |
-| trade_direction      | String     | Direction of the trade(Should be one of: ["buy", "sell"])                                                               |
-| price                | PriceLevel | Price level at which trade has been executed                                                                            |
-| fee                  | String     | The fee associated with the trade (quote asset denom)                                                                   |
-| executed_at          | Integer    | Timestamp of trade execution (on chain) in UNIX millis                                                                  |
-| fee_recipient        | String     | The address that received 40% of the fees                                                                               |
-| trade_id             | String     | Unique identifier to differentiate between trades                                                                       |
-| execution_side       | String     | Execution side of trade (Should be one of: ["maker", "taker"])                                                          |
-| cid                  | String     | Identifier for the order specified by the user (up to 36 characters, like a UUID)                                       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SpotTrade.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">Maker order hash.</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">The subaccountId that executed the trade</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">The ID of the market that this trade is in</td></tr>
+<tr ><td class="parameter-td td_text">trade_execution_type</td><td class="type-td td_text">string</td><td class="description-td td_text">The execution type of the trade</td></tr>
+<tr ><td class="parameter-td td_text">trade_direction</td><td class="type-td td_text">string</td><td class="description-td td_text">The direction the trade</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">PriceLevel</td><td class="description-td td_text">Price level at which trade has been executed</td></tr>
+<tr ><td class="parameter-td td_text">fee</td><td class="type-td td_text">string</td><td class="description-td td_text">The fee associated with the trade (quote asset denom)</td></tr>
+<tr ><td class="parameter-td td_text">executed_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Timestamp of trade execution in UNIX millis</td></tr>
+<tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">Fee recipient address</td></tr>
+<tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">A unique string that helps differentiate between trades</td></tr>
+<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Trade's execution side, marker/taker</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">Custom client order ID</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
+<br/>
 
 **PriceLevel**
 
-| Parameter | Type    | Description                                       |
-| --------- | ------- | ------------------------------------------------- |
-| price     | String  | Price number of the price level                   |
-| quantity  | String  | Quantity of the price level                       |
-| timestamp | Integer | Price level last updated timestamp in UNIX millis |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/PriceLevel.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">Price number of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Quantity of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Price level last updated timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## OrderbooksV2
@@ -1891,7 +1934,7 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/OrderbooksV2Request.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/OrderbooksV2Request.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">MarketIds of the markets</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">depth</td><td class="type-td td_text">int32</td><td class="description-td td_text">Depth of the orderbook</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -1964,7 +2007,7 @@ func main() {
 
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/OrderbooksV2Response.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/OrderbooksV2Response.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">orderbooks</td><td class="type-td td_text">SingleSpotLimitOrderbookV2 array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1972,7 +2015,7 @@ func main() {
 
 **SingleSpotLimitOrderbookV2**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/SingleSpotLimitOrderbookV2.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SingleSpotLimitOrderbookV2.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market's ID</td></tr>
 <tr ><td class="parameter-td td_text">orderbook</td><td class="type-td td_text">SpotLimitOrderbookV2</td><td class="description-td td_text">Orderbook of the market</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -1981,7 +2024,7 @@ func main() {
 
 **SpotLimitOrderbookV2**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/SpotLimitOrderbookV2.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SpotLimitOrderbookV2.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">buys</td><td class="type-td td_text">PriceLevel array</td><td class="description-td td_text">Array of price levels for buys</td></tr>
 <tr ><td class="parameter-td td_text">sells</td><td class="type-td td_text">PriceLevel array</td><td class="description-td td_text">Array of price levels for sells</td></tr>
 <tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">market orderbook sequence</td></tr>
@@ -1993,7 +2036,7 @@ func main() {
 
 **PriceLevel**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/PriceLevel.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/PriceLevel.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">Price number of the price level.</td></tr>
 <tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Quantity of the price level.</td></tr>
 <tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Price level last updated timestamp in UNIX millis.</td></tr></tbody></table>
@@ -2104,7 +2147,7 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/StreamOrderbookV2Request.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/StreamOrderbookV2Request.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of market IDs for orderbook streaming, empty means 'ALL' spot markets</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -2152,7 +2195,7 @@ func main() {
 
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/StreamOrderbookV2Response.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/StreamOrderbookV2Response.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">orderbook</td><td class="type-td td_text">SpotLimitOrderbookV2</td><td class="description-td td_text">Orderbook of a Spot Market</td></tr>
 <tr ><td class="parameter-td td_text">operation_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Order update type</td></tr>
 <tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Operation timestamp in UNIX millis.</td></tr>
@@ -2163,7 +2206,7 @@ func main() {
 
 **SpotLimitOrderbookV2**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/SpotLimitOrderbookV2.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SpotLimitOrderbookV2.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">buys</td><td class="type-td td_text">PriceLevel array</td><td class="description-td td_text">Array of price levels for buys</td></tr>
 <tr ><td class="parameter-td td_text">sells</td><td class="type-td td_text">PriceLevel array</td><td class="description-td td_text">Array of price levels for sells</td></tr>
 <tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">market orderbook sequence</td></tr>
@@ -2175,7 +2218,7 @@ func main() {
 
 **PriceLevel**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer_new/injective_spot_exchange_rpc/PriceLevel.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/PriceLevel.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">Price number of the price level.</td></tr>
 <tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Quantity of the price level.</td></tr>
 <tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Price level last updated timestamp in UNIX millis.</td></tr></tbody></table>
@@ -2553,12 +2596,9 @@ func maintainOrderbook(orderbook map[bool]map[string]*spotExchangePB.PriceLevel)
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter          | Type         | Description                                                                                          | Required |
-| ------------------ | ------------ | ---------------------------------------------------------------------------------------------------- | -------- |
-| market_ids         | String Array | List of market IDs for orderbook streaming; empty means all spot markets                             | Yes      |
-| callback           | Function     | Function receiving one parameter (a stream event JSON dictionary) to process each new event          | Yes      |
-| on_end_callback    | Function     | Function with the logic to execute when the stream connection is interrupted                         | No       |
-| on_status_callback | Function     | Function receiving one parameter (the exception) with the logic to execute when an exception happens | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/StreamOrderbookUpdateRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">List of market IDs for orderbook streaming, empty means 'ALL' spot markets</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -2599,31 +2639,35 @@ price: 1E-15 | quantity: 17983000000000000000 | timestamp: 1675880932648
 
 ```
 
-| Parameter               | Type                  | Description                                                                         |
-| ----------------------- | --------------------- | ----------------------------------------------------------------------------------- |
-| orderbook_level_updates | OrderbookLevelUpdates | Orderbook level updates of a spot market                                            |
-| operation_type          | String                | Order update type (Should be one of: ["insert", "replace", "update", "invalidate"]) |
-| timestamp               | Integer               | Operation timestamp in UNIX millis                                                  |
-| market_id               | String                | ID of the market the orderbook belongs to                                           |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/StreamOrderbookUpdateResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">orderbook_level_updates</td><td class="type-td td_text">OrderbookLevelUpdates</td><td class="description-td td_text">Orderbook level updates of a Spot Market</td></tr>
+<tr ><td class="parameter-td td_text">operation_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Order update type</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Operation timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">MarketId of the market's orderbook</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **OrderbookLevelUpdates**
 
-| Parameter  | Type                   | Description                                                   |
-| ---------- | ---------------------- | ------------------------------------------------------------- |
-| market_id  | String                 | ID of the market the orderbook belongs to                     |
-| sequence   | Integer                | Orderbook update sequence number; increments by 1 each update |
-| buys       | PriceLevelUpdate Array | List of buy level updates                                     |
-| sells      | PriceLevelUpdate Array | List of sell level updates                                    |
-| updated_at | Integer                | Timestamp of the updates in UNIX millis                       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/OrderbookLevelUpdates.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market's ID</td></tr>
+<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">orderbook update sequence</td></tr>
+<tr ><td class="parameter-td td_text">buys</td><td class="type-td td_text">PriceLevelUpdate array</td><td class="description-td td_text">buy levels</td></tr>
+<tr ><td class="parameter-td td_text">sells</td><td class="type-td td_text">PriceLevelUpdate array</td><td class="description-td td_text">sell levels</td></tr>
+<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">updates timestamp</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **PriceLevelUpdate**
 
-| Parameter | Type    | Description                                       |
-| --------- | ------- | ------------------------------------------------- |
-| price     | String  | Price number of the price level                   |
-| quantity  | String  | Quantity of the price level                       |
-| is_active | Boolean | Price level status                                |
-| timestamp | Integer | Price level last updated timestamp in UNIX millis |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/PriceLevelUpdate.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">Price number of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Quantity of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">is_active</td><td class="type-td td_text">bool</td><td class="description-td td_text">Price level status.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Price level last updated timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## SubaccountOrdersList
@@ -2714,11 +2758,12 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter     | Type             | Description              | Required |
-| ------------- | ---------------- | ------------------------ | -------- |
-| subaccount_id | String           | Filter by subaccount ID  | Yes      |
-| market_id     | String           | Filter by market ID      | No       |
-| pagination    | PaginationOption | Pagination configuration | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SubaccountOrdersListRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">subaccount ID to filter orders for specific subaccount</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">Market ID to filter orders for specific market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">skip</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Skip will skip the first n item from the result</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">int32</td><td class="description-td td_text">Limit is used to specify the maximum number of items to be returned</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -2807,39 +2852,43 @@ func main() {
 }
 ```
 
-| Parameter | Type                 | Description                |
-| --------- | -------------------- | -------------------------- |
-| orders    | SpotLimitOrder Array | List of spot market orders |
-| paging    | Paging               | Pagination of results      |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SubaccountOrdersListResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">orders</td><td class="type-td td_text">SpotLimitOrder array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">paging</td><td class="type-td td_text">Paging</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
+<br/>
 
 **SpotLimitOrder**
 
-| Parameter         | Type    | Description                                                                                                 |
-| ----------------- | ------- | ----------------------------------------------------------------------------------------------------------- |
-| order_hash        | String  | Hash of the order                                                                                           |
-| order_side        | String  | The side of the order (Should be one of: ["buy", "sell", "stop_buy", "stop_sell", "take_buy", "take_sell"]) |
-| market_id         | String  | ID of the market the order belongs to                                                                       |
-| subaccount_id     | String  | The subaccount ID the order belongs to                                                                      |
-| price             | String  | The price of the order                                                                                      |
-| quantity          | String  | The quantity of the order                                                                                   |
-| unfilled_quantity | String  | The amount of the quantity remaining unfilled                                                               |
-| trigger_price     | String  | The price that triggers stop and take orders. If no price is set, the default is 0                          |
-| fee_recipient     | String  | The address that receives fees if the order is executed                                                     |
-| state             | String  | State of the order (Should be one of: ["booked", "partial_filled", "filled", "canceled"])                   |
-| created_at        | Integer | Order committed timestamp in UNIX millis                                                                    |
-| updated_at        | Integer | Order updated timestamp in UNIX millis                                                                      |
-| tx_hash           | String  | Transaction hash in which the order was created (not all orders have this value)                            |
-| cid               | String  | Identifier for the order specified by the user (up to 36 characters, like a UUID)                           |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SpotLimitOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">Hash of the order</td></tr>
+<tr ><td class="parameter-td td_text">order_side</td><td class="type-td td_text">string</td><td class="description-td td_text">The side of the order</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">Spot Market ID is keccak265(baseDenom + quoteDenom)</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">The subaccountId that this order belongs to</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">Price of the order</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Quantity of the order</td></tr>
+<tr ><td class="parameter-td td_text">unfilled_quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">The amount of the quantity remaining unfilled</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">string</td><td class="description-td td_text">Trigger price is the trigger price used by stop/take orders. 0 if the trigger price is not set.</td></tr>
+<tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">Fee recipient address</td></tr>
+<tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">string</td><td class="description-td td_text">Order state</td></tr>
+<tr ><td class="parameter-td td_text">created_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Order committed timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Order updated timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">Transaction Hash where order is created. Not all orders have this field</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">Custom client order ID</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
+<br/>
 
 **Paging**
 
-| Parameter | Type    | Description                                |
-| --------- | ------- | ------------------------------------------ |
-| total     | Integer | Total number of available records          |
-| from      | Integer | Lower bound of indices of records returned |
-| to        | integer | Upper bound of indices of records returned |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/Paging.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">int64</td><td class="description-td td_text">total number of txs saved in database</td></tr>
+<tr ><td class="parameter-td td_text">from</td><td class="type-td td_text">int32</td><td class="description-td td_text">can be either block height or index num</td></tr>
+<tr ><td class="parameter-td td_text">to</td><td class="type-td td_text">int32</td><td class="description-td td_text">can be either block height or index num</td></tr>
+<tr ><td class="parameter-td td_text">count_by_subaccount</td><td class="type-td td_text">int64</td><td class="description-td td_text">count entries by subaccount, serving some places on helix</td></tr>
+<tr ><td class="parameter-td td_text">next</td><td class="type-td td_text">string array</td><td class="description-td td_text">array of tokens to navigate to the next pages</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## SubaccountTradesList
@@ -2944,13 +2993,14 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter      | Type             | Description                                                                                                                             | Required |
-| -------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| subaccount_id  | String           | Filter by subaccount ID                                                                                                                 | Yes      |
-| market_id      | String           | Filter by market ID                                                                                                                     | No       |
-| execution_type | String           | Filter by the *execution type of the trades (Should be one of: ["market", "limitFill", "limitMatchRestingOrder", "limitMatchNewOrder"]) | No       |
-| direction      | String           | Filter by the direction of the trades (Should be one of: ["buy", "sell"])                                                               | No       |
-| pagination     | PaginationOption | Pagination configuration                                                                                                                | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SubaccountTradesListRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">SubaccountId of the trader we want to get the trades from</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter trades by market ID</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">execution_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by execution type of trades</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">direction</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by direction trades</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">skip</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Skip will skip the first n item from the result</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">int32</td><td class="description-td td_text">Limit is used to specify the maximum number of items to be returned</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
 > Response Example:
@@ -3054,32 +3104,35 @@ func main() {
 
 ```
 
-| Parameter | Type            | Description                |
-| --------- | --------------- | -------------------------- |
-| trades    | SpotTrade Array | List of spot market trades |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SubaccountTradesListResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">trades</td><td class="type-td td_text">SpotTrade array</td><td class="description-td td_text">List of spot market trades</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **SpotTrade**
 
-| Parameter            | Type       | Description                                                                                                             |
-| -------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
-| order_hash           | String     | The order hash                                                                                                          |
-| subaccount_id        | String     | The subaccountId that executed the trade                                                                                |
-| market_id            | String     | The ID of the market that this trade is in                                                                              |
-| trade_execution_type | String     | Execution type of the trade (Should be one of: ["market", "limitFill", "limitMatchRestingOrder", "limitMatchNewOrder"]) |
-| trade_direction      | String     | Direction of the trade(Should be one of: ["buy", "sell"])                                                               |
-| price                | PriceLevel | Price level at which trade has been executed                                                                            |
-| fee                  | String     | The fee associated with the trade (quote asset denom)                                                                   |
-| executed_at          | Integer    | Timestamp of trade execution (on chain) in UNIX millis                                                                  |
-| fee_recipient        | String     | The address that received 40% of the fees                                                                               |
-| trade_id             | String     | Unique identifier to differentiate between trades                                                                       |
-| execution_side       | String     | Execution side of trade (Should be one of: ["maker", "taker"])                                                          |
-| cid                  | String     | Identifier for the order specified by the user (up to 36 characters, like a UUID)                                       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/SpotTrade.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">Maker order hash.</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">The subaccountId that executed the trade</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">The ID of the market that this trade is in</td></tr>
+<tr ><td class="parameter-td td_text">trade_execution_type</td><td class="type-td td_text">string</td><td class="description-td td_text">The execution type of the trade</td></tr>
+<tr ><td class="parameter-td td_text">trade_direction</td><td class="type-td td_text">string</td><td class="description-td td_text">The direction the trade</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">PriceLevel</td><td class="description-td td_text">Price level at which trade has been executed</td></tr>
+<tr ><td class="parameter-td td_text">fee</td><td class="type-td td_text">string</td><td class="description-td td_text">The fee associated with the trade (quote asset denom)</td></tr>
+<tr ><td class="parameter-td td_text">executed_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Timestamp of trade execution in UNIX millis</td></tr>
+<tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">Fee recipient address</td></tr>
+<tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">A unique string that helps differentiate between trades</td></tr>
+<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Trade's execution side, marker/taker</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">Custom client order ID</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
+<br/>
 
 **PriceLevel**
 
-| Parameter | Type    | Description                                       |
-| --------- | ------- | ------------------------------------------------- |
-| price     | String  | Price number of the price level                   |
-| quantity  | String  | Quantity of the price level                       |
-| timestamp | Integer | Price level last updated timestamp in UNIX millis |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_spot_exchange_rpc/PriceLevel.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">Price number of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Quantity of the price level.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Price level last updated timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->

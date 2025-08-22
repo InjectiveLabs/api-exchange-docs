@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "basic",
+    "Type": "BasicAllowance",
+    "Description": "basic specifies a struct of `BasicAllowance`"
+  },
+  {
+    "Parameter": "period",
+    "Type": "time.Duration",
+    "Description": "period specifies the time duration in which period_spend_limit coins can be spent before that allowance is reset"
+  },
+  {
+    "Parameter": "period_spend_limit",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "period_spend_limit specifies the maximum number of coins that can be spent in the period"
+  },
+  {
+    "Parameter": "period_can_spend",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "period_can_spend is the number of coins left to be spent before the period_reset time"
+  },
+  {
+    "Parameter": "period_reset",
+    "Type": "time.Time",
+    "Description": "period_reset is the time at which this period resets and a new one begins, it is calculated from the start time of the first transaction after the last period ended"
+  }
+]

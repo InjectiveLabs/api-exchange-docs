@@ -20,6 +20,7 @@ A recommended health check frequency of once every 20-30 seconds is recommended.
 
 *lastBlock:* the latest synced block on the chain
 
+### Request Parameters
 > Request Example:
 
 
@@ -94,17 +95,23 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|s|String|Status of the response|
-|errmsg|String|Error message, if any|
-|data|HealthStatus|Height and time information for checking health|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/health/GetStatusResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">s</td><td class="type-td td_text">string</td><td class="description-td td_text">Status of the response.</td></tr>
+<tr ><td class="parameter-td td_text">errmsg</td><td class="type-td td_text">string</td><td class="description-td td_text">Error message.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">HealthStatus</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **HealthStatus**
 
-|Parameter|Type|Description|
-|----|----|----|
-|localHeight|Integer|Injective Indexer block height|
-|localTimestamp|Integer|Timestamp of localHeight|
-|horacleHeight|Integer|Height of the network according to the Injective height oracle|
-|horacleTimestamp|Integer|Timestamp of horacleHeight|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/health/HealthStatus.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">local_height</td><td class="type-td td_text">int32</td><td class="description-td td_text">Block height from local mongo exchange db.</td></tr>
+<tr ><td class="parameter-td td_text">local_timestamp</td><td class="type-td td_text">int32</td><td class="description-td td_text">block timestamp from local mongo exchange db.</td></tr>
+<tr ><td class="parameter-td td_text">horacle_height</td><td class="type-td td_text">int32</td><td class="description-td td_text">block height from Horacle service.</td></tr>
+<tr ><td class="parameter-td td_text">horacle_timestamp</td><td class="type-td td_text">int32</td><td class="description-td td_text">block timestamp from Horacle service.</td></tr>
+<tr ><td class="parameter-td td_text">migration_last_version</td><td class="type-td td_text">int32</td><td class="description-td td_text">Migration version of the database.</td></tr>
+<tr ><td class="parameter-td td_text">ep_height</td><td class="type-td td_text">int32</td><td class="description-td td_text">Block height from event provider service.</td></tr>
+<tr ><td class="parameter-td td_text">ep_timestamp</td><td class="type-td td_text">int32</td><td class="description-td td_text">Block UNIX timestamp from event provider service.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->

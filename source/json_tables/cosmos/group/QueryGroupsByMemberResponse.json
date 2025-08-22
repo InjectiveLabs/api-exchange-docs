@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "groups",
+    "Type": "GroupInfo array",
+    "Description": "groups are the groups info with the provided group member."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
+  }
+]

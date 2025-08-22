@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "proposal_id",
+    "Type": "uint64",
+    "Description": "proposal is the unique ID of the proposal."
+  }
+]

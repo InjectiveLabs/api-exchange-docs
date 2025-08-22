@@ -47,7 +47,7 @@ init_config() {
 
     # Indexer configuration
     INDEXER_API_PATH="$3/api/gen/grpc"
-    INDEXER_OUTPUT_DIR="$OUTPUT_BASE_DIR/indexer_new"
+    INDEXER_OUTPUT_DIR="$OUTPUT_BASE_DIR/indexer"
 
     # IBC Go configuration
     IBC_MODULES_PATH="$4/modules"
@@ -220,7 +220,7 @@ process_pb_file() {
         if [[ $line =~ ^type[[:space:]]+([[:alnum:]_]+)[[:space:]]+struct[[:space:]]+\{ ]]; then
             local new_type="${BASH_REMATCH[1]}"
             
-            if [ -n "$current_type" ] && [ ${#fields[@]} -gt 0 ] && [[ ! "$current_type" =~ ^Event ]]; then
+            if [ -n "$current_type" ] && [ ${#fields[@]} -gt 0 ] && [[ ! "$current_type" =~ ^Event.+ ]]; then
                 (IFS=$'\n'; echo "${fields[*]}") | jq -s '.' > "$output_dir/${current_type}.json"
                 echo "Generated $output_dir/${current_type}.json"
             fi
@@ -239,7 +239,7 @@ process_pb_file() {
         
         # Check if this line is a protobuf field definition
         if [[ $line =~ ^[[:space:]]*[A-Z][[:alnum:]]*[[:space:]] ]] && [[ $line =~ protobuf: ]]; then
-            if [ -n "$current_type" ] && [[ ! "$current_type" =~ ^Event ]]; then
+            if [ -n "$current_type" ] && [[ ! "$current_type" =~ ^Event.+ ]]; then
                 local proto_name
                 proto_name=$(get_proto_name "$line")
                 if [ -n "$proto_name" ]; then
@@ -277,7 +277,7 @@ process_pb_file() {
     done < "$pb_file"
 
     # Write the last type if it exists and has fields
-    if [ -n "$current_type" ] && [ ${#fields[@]} -gt 0 ] && [[ ! "$current_type" =~ ^Event ]]; then
+    if [ -n "$current_type" ] && [ ${#fields[@]} -gt 0 ] && [[ ! "$current_type" =~ ^Event.+ ]]; then
         (IFS=$'\n'; echo "${fields[*]}") | jq -s '.' > "$output_dir/${current_type}.json"
         echo "Generated $output_dir/${current_type}.json"
     fi
@@ -437,6 +437,13 @@ process_repository_modules() {
         
         if [ -d "$module_dir/types" ]; then
             process_types_directory "$module_dir/types" "$output_dir" "$module_name"
+        else
+            # Check if module has .pb.go files in the main directory
+            if compgen -G "$module_dir/*.pb.go" > /dev/null 2>&1; then
+                echo "Processing module with direct .pb.go files: $module_name"
+                mkdir -p "$output_dir/$module_name"
+                process_directory "$module_dir" "$output_dir/$module_name"
+            fi
         fi
     done
 }

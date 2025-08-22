@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "owner",
+    "Type": "string",
+    "Description": "owner is the owner address of the nft"
+  }
+]

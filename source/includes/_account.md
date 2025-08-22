@@ -1300,7 +1300,7 @@ if __name__ == "__main__":
 <tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">Float</td><td class="description-td td_text">The amount to transfer</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">maxFeePerGas</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The maxFeePerGas in Gwei</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">maxPriorityFeePerGas</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The maxPriorityFeePerGas in Gwei</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">peggo_abi</td><td class="type-td td_text">String</td><td class="description-td td_text">Peggo contract ABI|</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">peggo_abi</td><td class="type-td td_text">String</td><td class="description-td td_text">Peggo contract ABI</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">String</td><td class="description-td td_text">The body of the message to send to Injective chain to do the deposit</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of decimals in Injective chain of the token being transferred (default: 18)</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -2236,6 +2236,7 @@ txhash: A2B2B971C690AE7977451D24D6F450AECE6BCCB271E91E32C2563342DDA5254B
 
 **IP rate limit group:** `chain`
 
+### Request Parameters
 > Request Example:
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/2_StreamEventOrderFail.py) -->

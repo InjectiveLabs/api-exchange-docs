@@ -79,16 +79,37 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|sender|String|The Injective Chain address|Yes|
-|ticker|String|The name of the pair|Yes|
-|quote_denom|String|Coin denom used for the quote asset|Yes|
-|oracle_base|String|Oracle base currency|Yes|
-|oracle_quote|String|Oracle quote currency|Yes|
-|oracle_type|Integer|The oracle provider|Yes|
-|expiry|Integer|The expiry date|Yes|
-|initial_deposit|Integer|The initial deposit in the quote asset|Yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/insurance/MsgCreateInsuranceFund.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">Creator of the insurance fund.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">ticker</td><td class="type-td td_text">string</td><td class="description-td td_text">Ticker for the derivative market.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">quote_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin denom to use for the market quote denom</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_base</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle base currency of the derivative market OR the oracle symbol for the binary options market.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_quote</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle quote currency of the derivative market OR the oracle provider for the binary options market.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">types.OracleType</td><td class="description-td td_text">Oracle type of the binary options or derivative market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">expiry</td><td class="type-td td_text">int64</td><td class="description-td td_text">Expiration time of the derivative market. Should be -1 for perpetual or -2 for binary options markets.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">initial_deposit</td><td class="type-td td_text">types1.Coin</td><td class="description-td td_text">Initial deposit of the insurance fund</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OracleType**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/oracle/v1beta1/OracleType.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">Unspecified</td></tr>
+<tr ><td class="code-td td_num">1</td><td class="name-td td_text">Band</td></tr>
+<tr ><td class="code-td td_num">2</td><td class="name-td td_text">PriceFeed</td></tr>
+<tr ><td class="code-td td_num">3</td><td class="name-td td_text">Coinbase</td></tr>
+<tr ><td class="code-td td_num">4</td><td class="name-td td_text">Chainlink</td></tr>
+<tr ><td class="code-td td_num">5</td><td class="name-td td_text">Razor</td></tr>
+<tr ><td class="code-td td_num">6</td><td class="name-td td_text">Dia</td></tr>
+<tr ><td class="code-td td_num">7</td><td class="name-td td_text">API3</td></tr>
+<tr ><td class="code-td td_num">8</td><td class="name-td td_text">Uma</td></tr>
+<tr ><td class="code-td td_num">9</td><td class="name-td td_text">Pyth</td></tr>
+<tr ><td class="code-td td_num">10</td><td class="name-td td_text">BandIBC</td></tr>
+<tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr>
+<tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
 
 ### Response Parameters
 > Response Example:
@@ -214,13 +235,23 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|sender|String|The Injective Chain address|Yes|
-|market_id|String|The market ID|Yes|
-|quote_denom|String|Coin denom used for the quote asset|Yes|
-|amount|Integer|The amount to underwrite in the quote asset|Yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/insurance/MsgUnderwrite.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of the underwriter.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">MarketID of the insurance fund.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">deposit</td><td class="type-td td_text">types1.Coin</td><td class="description-td td_text">Amount of quote_denom to underwrite the insurance fund.</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
+<br/>
+
+**Coin**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/Coin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">cosmossdk_io_math.Int</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+### Response Parameters
 > Response Example:
 
 ```python
@@ -339,12 +370,21 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|sender|String|The Injective Chain address|Yes|
-|market_id|String|The market ID|Yes|
-|share_denom|String|Share denom used for the insurance fund|Yes|
-|amount|Integer|The amount to redeem in shares|Yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/insurance/MsgRequestRedemption.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of the underwriter requesting a redemption.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">MarketID of the insurance fund.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">types1.Coin</td><td class="description-td td_text">Insurance fund share token amount to be redeemed.</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**Coin**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/Coin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">cosmossdk_io_math.Int</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
 
 ### Response Parameters
 > Response Example:

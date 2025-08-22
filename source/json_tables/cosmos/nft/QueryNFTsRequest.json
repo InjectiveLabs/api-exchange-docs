@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "class_id",
+    "Type": "string",
+    "Description": "class_id associated with the nft",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "owner",
+    "Type": "string",
+    "Description": "owner is the owner address of the nft",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination defines an optional pagination for the request.",
+    "Required": "No"
+  }
+]

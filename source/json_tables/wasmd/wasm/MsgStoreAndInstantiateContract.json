@@ -1,0 +1,68 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "Authority is the address of the governance account.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "wasm_byte_code",
+    "Type": "byte array",
+    "Description": "WASMByteCode can be raw or gzip compressed",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "instantiate_permission",
+    "Type": "AccessConfig",
+    "Description": "InstantiatePermission to apply on contract creation, optional",
+    "Required": "No"
+  },
+  {
+    "Parameter": "unpin_code",
+    "Type": "bool",
+    "Description": "UnpinCode code on upload, optional. As default the uploaded contract is pinned to cache.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "Admin is an optional address that can execute migrations",
+    "Required": "No"
+  },
+  {
+    "Parameter": "label",
+    "Type": "string",
+    "Description": "Label is optional metadata to be stored with a constract instance.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "msg",
+    "Type": "RawContractMessage",
+    "Description": "Msg json encoded message to be passed to the contract on instantiation",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "funds",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "Funds coins that are transferred from the authority account to the contract on instantiation",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "source",
+    "Type": "string",
+    "Description": "Source is the URL where the code is hosted",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "builder",
+    "Type": "string",
+    "Description": "Builder is the docker image used to build the code deterministically, used for smart contract verification",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "code_hash",
+    "Type": "byte array",
+    "Description": "CodeHash is the SHA256 sum of the code outputted by builder, used for smart contract verification",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "Sender is the actor that signed the messages",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "wasm_byte_code",
+    "Type": "byte array",
+    "Description": "WASMByteCode can be raw or gzip compressed",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "instantiate_permission",
+    "Type": "AccessConfig",
+    "Description": "InstantiatePermission access control to apply on contract creation, optional",
+    "Required": "No"
+  }
+]

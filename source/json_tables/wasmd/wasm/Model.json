@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "key",
+    "Type": "github_com_cometbft_cometbft_libs_bytes.HexBytes",
+    "Description": "hex-encode key to read it better (this is often ascii)"
+  },
+  {
+    "Parameter": "value",
+    "Type": "byte array",
+    "Description": "base64-encode raw value"
+  }
+]

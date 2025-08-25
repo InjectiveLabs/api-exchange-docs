@@ -110,9 +110,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter | Type   | Description      | Required |
-| --------- | ------ | ---------------- | -------- |
-| address   | String | Contract address | Yes      |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryContractInfoRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">address is the address of the contract to query</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
 > Response Example:
@@ -148,27 +148,33 @@ func main() {
 
 ```
 
-| Parameter     | Type         | Description       |
-| ------------- | ------------ | ----------------- |
-| address       | String       | Contract address  |
-| contract_info | ContractInfo | Contract metadata |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryContractInfoResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">address is the address of the contract</td></tr>
+<tr ><td class="parameter-td td_text">contract_info</td><td class="type-td td_text">ContractInfo</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **ContractInfo**
 
-| Parameter   | Type               | Description                                    |
-| ----------- | ------------------ | ---------------------------------------------- |
-| code_id     | Int                | ID of the stored wasm code                     |
-| creator     | String             | Address that instantiated the contract         |
-| admin       | String             | Address that can execute migrations            |
-| label       | String             | Contract label                                 |
-| created     | AbsoluteTxPosition | Tx position when the contract was instantiated |
-| ibc_port_id | String             |                                                |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/ContractInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">code_id</td><td class="type-td td_text">uint64</td><td class="description-td td_text">CodeID is the reference to the stored Wasm code</td></tr>
+<tr ><td class="parameter-td td_text">creator</td><td class="type-td td_text">string</td><td class="description-td td_text">Creator address who initially instantiated the contract</td></tr>
+<tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">string</td><td class="description-td td_text">Admin is an optional address that can execute migrations</td></tr>
+<tr ><td class="parameter-td td_text">label</td><td class="type-td td_text">string</td><td class="description-td td_text">Label is optional metadata to be stored with a contract instance.</td></tr>
+<tr ><td class="parameter-td td_text">created</td><td class="type-td td_text">AbsoluteTxPosition</td><td class="description-td td_text">Created Tx position when the contract was instantiated.</td></tr>
+<tr ><td class="parameter-td td_text">ibc_port_id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">extension</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">Extension is an extension point to store custom metadata within the persistence model.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **AbsoluteTxPosition**
-| Parameter    | Type | Description                                      |
-| ------------ | ---- | ------------------------------------------------ |
-| block_height | Int  | Block number when the contract was created       |
-| tx_index     | Int  | Transaction index where the contract was created |
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/AbsoluteTxPosition.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">BlockHeight is the block the contract was created at</td></tr>
+<tr ><td class="parameter-td td_text">tx_index</td><td class="type-td td_text">uint64</td><td class="description-td td_text">TxIndex is a monotonic counter within the block (actual transaction index, or gas consumed)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## ContractHistory
@@ -286,10 +292,22 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
-| Parameter  | Type   | Description           | Required |
-| ---------- | ------ | --------------------- | -------- |
-| address    | String | Contract address      | Yes      |
-| pagination | Paging | Pagination of results | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryContractHistoryRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">address is the address of the contract to query</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination defines an optional pagination for the request.</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageRequest**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">uint64</td><td class="description-td td_text">offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">bool</td><td class="description-td td_text">count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">bool</td><td class="description-td td_text">reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -393,33 +411,50 @@ func main() {
 
 ```
 
-| Parameter  | Type                           | Description           |
-| ---------- | ------------------------------ | --------------------- |
-| entries    | ContractCodeHistoryEntry Array | Contract code history |
-| pagination | PageResponse                   | Pagination of results |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryContractHistoryResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">entries</td><td class="type-td td_text">ContractCodeHistoryEntry array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination defines the pagination in the response.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **ContractCodeHistoryEntry**
 
-| Parameter   | Type                             | Description                                    |
-| ----------- | -------------------------------- | ---------------------------------------------- |
-| operation   | ContractCodeHistoryOperationType | Contract creation operation type               |
-| code_id     | Int                              | ID of the store wasm code                      |
-| updated     | AbsoluteTxPosition               | Contract update info                           |
-| msg         | RawContractMessage               | Contract update message                        |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/ContractCodeHistoryEntry.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">operation</td><td class="type-td td_text">ContractCodeHistoryOperationType</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">code_id</td><td class="type-td td_text">uint64</td><td class="description-td td_text">CodeID is the reference to the stored WASM code</td></tr>
+<tr ><td class="parameter-td td_text">updated</td><td class="type-td td_text">AbsoluteTxPosition</td><td class="description-td td_text">Updated Tx position when the operation was executed.</td></tr>
+<tr ><td class="parameter-td td_text">msg</td><td class="type-td td_text">RawContractMessage</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-**AbsoluteTxPosition**
-| Parameter    | Type | Description                                      |
-| ------------ | ---- | ------------------------------------------------ |
-| block_height | Int  | Block number when the contract was created       |
-| tx_index     | Int  | Transaction index where the contract was created |
+<br/>
 
 **ContractCodeHistoryOperationType**
-| ID  | Type                                        |
-| --- | ------------------------------------------- |
-| 0   | ContractCodeHistoryOperationTypeUnspecified |
-| 1   | ContractCodeHistoryOperationTypeInit        |
-| 2   | ContractCodeHistoryOperationTypeMigrate     |
-| 3   | ContractCodeHistoryOperationTypeGenesis     |
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/cosmwasm/wasm/v1/ContractCodeHistoryOperationType.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">CONTRACT_CODE_HISTORY_OPERATION_TYPE_UNSPECIFIED</td></tr>
+<tr ><td class="code-td td_num">1</td><td class="name-td td_text">CONTRACT_CODE_HISTORY_OPERATION_TYPE_INIT</td></tr>
+<tr ><td class="code-td td_num">2</td><td class="name-td td_text">CONTRACT_CODE_HISTORY_OPERATION_TYPE_MIGRATE</td></tr>
+<tr ><td class="code-td td_num">3</td><td class="name-td td_text">CONTRACT_CODE_HISTORY_OPERATION_TYPE_GENESIS</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**AbsoluteTxPosition**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/AbsoluteTxPosition.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">BlockHeight is the block the contract was created at</td></tr>
+<tr ><td class="parameter-td td_text">tx_index</td><td class="type-td td_text">uint64</td><td class="description-td td_text">TxIndex is a monotonic counter within the block (actual transaction index, or gas consumed)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageResponse**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## ContractsByCode
@@ -537,10 +572,22 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
-| Parameter  | Type   | Description                | Required |
-| ---------- | ------ | -------------------------- | -------- |
-| code_id    | Int    | ID of the stored wasm code | Yes      |
-| pagination | Paging | Pagination of results      | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryContractsByCodeRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">code_id</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination defines an optional pagination for the request.</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageRequest**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">uint64</td><td class="description-td td_text">offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">bool</td><td class="description-td td_text">count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">bool</td><td class="description-td td_text">reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -572,10 +619,19 @@ func main() {
 
 ```
 
-| Parameter  | Type         | Description                  |
-| ---------- | ------------ | ---------------------------- |
-| contracts  | String Array | Array of contracts addresses |
-| pagination | PageResponse | Pagination of results        |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryContractsByCodeResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">contracts</td><td class="type-td td_text">string array</td><td class="description-td td_text">contracts are a set of contract addresses</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination defines the pagination in the response.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageResponse**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## AllContractState
@@ -693,10 +749,22 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
-| Parameter  | Type   | Description           | Required |
-| ---------- | ------ | --------------------- | -------- |
-| address    | String | Contract address      | Yes      |
-| pagination | Paging | Pagination of results | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryAllContractStateRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">address is the address of the contract</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination defines an optional pagination for the request.</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageRequest**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">uint64</td><td class="description-td td_text">offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">bool</td><td class="description-td td_text">count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">bool</td><td class="description-td td_text">reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -737,16 +805,28 @@ func main() {
 }
 ```
 
-| Parameter  | Type         | Description                |
-| ---------- | ------------ | -------------------------- |
-| models     | Model Array  | Array of contracts' models |
-| pagination | PageResponse | Pagination of results      |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryAllContractStateResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">models</td><td class="type-td td_text">Model array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination defines the pagination in the response.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Model**
-| Parameter | Type       | Description                                |
-| --------- | ---------- | ------------------------------------------ |
-| key       | String     | Hexadecimal representation of the byte key |
-| Value     | Byte Array | Raw value in base64 encoding               |
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/Model.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">github_com_cometbft_cometbft_libs_bytes.HexBytes</td><td class="description-td td_text">hex-encode key to read it better (this is often ascii)</td></tr>
+<tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">byte array</td><td class="description-td td_text">base64-encode raw value</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageResponse**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## RawContractState
@@ -857,10 +937,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter  | Type       | Description                 | Required |
-| ---------- | ---------- | --------------------------- | -------- |
-| address    | String     | Contract address            | Yes      |
-| query_data | Byte Array | Key of the data to retrieve | Yes      |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryRawContractStateRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">address is the address of the contract</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">query_data</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
 > Response Example:
@@ -871,9 +951,9 @@ func main() {
 ``` go
 ```
 
-| Parameter  | Type         | Description                 |
-| ---------- | ------------ | --------------------------- |
-| Data       | Byte Array   | Raw data in base64 encoding |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryRawContractStateResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">byte array</td><td class="description-td td_text">Data contains the raw store data</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## SmartContractState
@@ -984,10 +1064,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter  | Type       | Description                      | Required |
-| ---------- | ---------- | -------------------------------- | -------- |
-| address    | String     | Contract address                 | Yes      |
-| query_data | Byte Array | Query to execute in the contract | Yes      |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QuerySmartContractStateRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">address is the address of the contract</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">query_data</td><td class="type-td td_text">RawContractMessage</td><td class="description-td td_text">QueryData contains the query data passed to the contract</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
 > Response Example:
@@ -1004,9 +1084,9 @@ func main() {
 }
 ```
 
-| Parameter  | Type         | Description                 |
-| ---------- | ------------ | --------------------------- |
-| Data       | Byte Array   | Raw data in base64 encoding |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QuerySmartContractStateResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">RawContractMessage</td><td class="description-td td_text">Data contains the json data returned from the smart contract</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## Code
@@ -1120,9 +1200,9 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
-| Parameter  | Type       | Description                      | Required |
-| ---------- | ---------- | -------------------------------- | -------- |
-| code_id    | Int        | ID of the contract code          | Yes      |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryCodeRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">code_id</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -1157,35 +1237,9 @@ func main() {
 }
 ```
 
-| Parameter           | Type             | Description                 |
-| ------------------- | ---------------- | --------------------------- |
-| code_info_response | CodeInfoResponse | Contract code info          |
-| data                | Byte Array       | Raw data in base64 encoding |
-
-**CodeInfoResponse**
-
-| Parameter              | Type         | Description                       |
-| ---------------------- | ------------ | --------------------------------- |
-| code_id                | Int          | ID of the contract code           |
-| creator                | String       | Creator address                   |
-| data_hash              | String       | Contract code hash in hexadecimal |
-| instantiate_permission | AccessConfig | Access configuration              |
-
-**AccessConfig**
-
-| Parameter  | Type         | Description              |
-| ---------- | ------------ | ------------------------ |
-| permission | AccessType   | Permission configuration |
-| addresses  | String Array |                          |
-
-**AccessType**
-
-| ID  | Acces Type               |
-| --- | ------------------------ |
-| 0   | AccessTypeUnspecified    |
-| 1   | AccessTypeNobody         |
-| 3   | AccessTypeEverybody      |
-| 4   | AccessTypeAnyOfAddresses |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryCodeResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## Codes
@@ -1300,9 +1354,21 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter  | Type   | Description           | Required |
-| ---------- | ------ | --------------------- | -------- |
-| pagination | Paging | Pagination of results | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryCodesRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination defines an optional pagination for the request.</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageRequest**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">uint64</td><td class="description-td td_text">offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">bool</td><td class="description-td td_text">count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">bool</td><td class="description-td td_text">reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
 > Response Example:
@@ -1367,35 +1433,50 @@ func main() {
 
 ```
 
-| Parameter  | Type                   | Description           |
-| ---------- | ---------------------- | --------------------- |
-| code_infos | CodeInfoResponse Array | Contract code info    |
-| pagination | PageResponse           | Pagination of results |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryCodesResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">code_infos</td><td class="type-td td_text">CodeInfoResponse array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination defines the pagination in the response.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **CodeInfoResponse**
 
-| Parameter              | Type         | Description                       |
-| ---------------------- | ------------ | --------------------------------- |
-| code_id                | Int          | ID of the contract code           |
-| creator                | String       | Creator address                   |
-| data_hash              | String       | Contract code hash in hexadecimal |
-| instantiate_permission | AccessConfig | Access configuration              |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/CodeInfoResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">code_id</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">creator</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">data_hash</td><td class="type-td td_text">github_com_cometbft_cometbft_libs_bytes.HexBytes</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">instantiate_permission</td><td class="type-td td_text">AccessConfig</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **AccessConfig**
 
-| Parameter  | Type         | Description              |
-| ---------- | ------------ | ------------------------ |
-| permission | AccessType   | Permission configuration |
-| addresses  | String Array |                          |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/AccessConfig.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">permission</td><td class="type-td td_text">AccessType</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">addresses</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **AccessType**
 
-| ID  | Acces Type               |
-| --- | ------------------------ |
-| 0   | AccessTypeUnspecified    |
-| 1   | AccessTypeNobody         |
-| 3   | AccessTypeEverybody      |
-| 4   | AccessTypeAnyOfAddresses |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/cosmwasm/wasm/v1/AccessType.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">ACCESS_TYPE_UNSPECIFIED</td></tr>
+<tr ><td class="code-td td_num">1</td><td class="name-td td_text">ACCESS_TYPE_NOBODY</td></tr>
+<tr ><td class="code-td td_num">3</td><td class="name-td td_text">ACCESS_TYPE_EVERYBODY</td></tr>
+<tr ><td class="code-td td_num">4</td><td class="name-td td_text">ACCESS_TYPE_ANY_OF_ADDRESSES</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageResponse**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## PinnedCodes
@@ -1511,9 +1592,21 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
-| Parameter  | Type   | Description           | Required |
-| ---------- | ------ | --------------------- | -------- |
-| pagination | Paging | Pagination of results | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryPinnedCodesRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination defines an optional pagination for the request.</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageRequest**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">uint64</td><td class="description-td td_text">offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">bool</td><td class="description-td td_text">count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">bool</td><td class="description-td td_text">reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -1545,10 +1638,19 @@ func main() {
 
 ```
 
-| Parameter  | Type         | Description                |
-| ---------- | ------------ | -------------------------- |
-| code_ids   | Int Array    | Array of contract code IDs |
-| pagination | PageResponse | Pagination of results      |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryPinnedCodesResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">code_ids</td><td class="type-td td_text">uint64 array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination defines the pagination in the response.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageResponse**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## ContractsByCreator
@@ -1666,10 +1768,22 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
-| Parameter       | Type   | Description                     | Required |
-| --------------- | ------ | ------------------------------- | -------- |
-| creator_address | String | Address of the contract creator | Yes      |
-| pagination      | Paging | Pagination of results           | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryContractsByCreatorRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">creator_address</td><td class="type-td td_text">string</td><td class="description-td td_text">CreatorAddress is the address of contract creator</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">Pagination defines an optional pagination for the request.</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageRequest**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">uint64</td><td class="description-td td_text">offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">bool</td><td class="description-td td_text">count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">bool</td><td class="description-td td_text">reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -1697,10 +1811,19 @@ func main() {
 
 ```
 
-| Parameter          | Type         | Description                                                 |
-| ------------------ | ------------ | ----------------------------------------------------------- |
-| contract_addresses | String Array | Array of all the contracts created by the specified creator |
-| pagination         | PageResponse | Pagination of results                                       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/QueryContractsByCreatorResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">contract_addresses</td><td class="type-td td_text">string array</td><td class="description-td td_text">ContractAddresses result set</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">Pagination defines the pagination in the response.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageResponse**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## MsgExecuteContract
@@ -1788,20 +1911,21 @@ if __name__ == "__main__":
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
-| Parameter | Type       | Description                                                                                           | Required |
-|-----------|------------|-------------------------------------------------------------------------------------------------------|----------|
-| sender    | String     | The Injective Chain address of the sender                                                             | Yes      |
-| contract  | String     | The Injective Chain address of the contract                                                           | Yes      |
-| msg       | Bytes      | JSON encoded message to pass to the contract                                                          | Yes      |
-| funds     | Coin Array | List of Coins to be sent to the contract. Note that the coins must be alphabetically sorted by denoms | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/MsgExecuteContract.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">Sender is the that actor that signed the messages</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">contract</td><td class="type-td td_text">string</td><td class="description-td td_text">Contract is the address of the smart contract</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">msg</td><td class="type-td td_text">RawContractMessage</td><td class="description-td td_text">Msg json encoded message to be passed to the contract</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">funds</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_text">Funds coins that are transferred to the contract on execution</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
+<br/>
 
 **Coin**
 
-| Parameter | Type   | Description       |
-|-----------|--------|-------------------|
-| denom     | String | Denom of the Coin |
-| amount    | String | Amount of Coin    |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/Coin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">cosmossdk_io_math.Int</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 > Response Example:
 
@@ -1942,11 +2066,21 @@ if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(main())
 ```
 
-| Parameter | Type       | Description                                                                                           | Required |
-|-----------|------------|-------------------------------------------------------------------------------------------------------|----------|
-| sender    | String     | The Injective Chain address of the sender                                                             | Yes      |
-| contract  | String     | The Injective Chain address of the contract                                                           | Yes      |
-| msg       | Bytes      | JSON encoded message to pass to the contract                                                          | Yes      |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/wasmd/wasm/MsgExecuteContract.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">Sender is the that actor that signed the messages</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">contract</td><td class="type-td td_text">string</td><td class="description-td td_text">Contract is the address of the smart contract</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">msg</td><td class="type-td td_text">RawContractMessage</td><td class="description-td td_text">Msg json encoded message to be passed to the contract</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">funds</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_text">Funds coins that are transferred to the contract on execution</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**Coin**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/Coin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">cosmossdk_io_math.Int</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
 > Response Example:

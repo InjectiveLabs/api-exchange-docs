@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "messages",
+    "Type": "RawContractMessage array",
+    "Description": "Messages is the list of raw contract messages"
+  }
+]

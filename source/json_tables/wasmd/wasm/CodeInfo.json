@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "code_hash",
+    "Type": "byte array",
+    "Description": "CodeHash is the unique identifier created by wasmvm"
+  },
+  {
+    "Parameter": "creator",
+    "Type": "string",
+    "Description": "Creator address who initially stored the code"
+  },
+  {
+    "Parameter": "instantiate_config",
+    "Type": "AccessConfig",
+    "Description": "InstantiateConfig access control to apply on contract creation, optional"
+  }
+]

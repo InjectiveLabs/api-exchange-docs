@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "remaining",
+    "Type": "uint64",
+    "Description": "Remaining number that is decremented on each execution"
+  }
+]

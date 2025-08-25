@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "Sender is the actor that signed the messages",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "contract",
+    "Type": "string",
+    "Description": "Contract is the address of the smart contract",
+    "Required": "Yes"
+  }
+]

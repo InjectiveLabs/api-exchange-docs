@@ -5,7 +5,7 @@ set -euo pipefail
 
 # Script usage
 usage() {
-    echo "Usage: $0 <cosmos-sdk-path> <injective-core-path> <indexer-path> <ibc-go-path> <cometbft-path>"
+    echo "Usage: $0 <cosmos-sdk-path> <injective-core-path> <indexer-path> <ibc-go-path> <cometbft-path> <wasmd-path>"
     echo
     echo "Generate proto JSON files from repositories"
     echo
@@ -15,14 +15,15 @@ usage() {
     echo "  indexer-path         Path to the Indexer repository"
     echo "  ibc-go-path          Path to the IBC Go repository"
     echo "  cometbft-path        Path to the CometBFT repository"
+    echo "  wasmd-path           Path to the Wasmd repository"
     echo
     echo "Example:"
-    echo "  $0 /tmp/cosmos-sdk /tmp/injective-core /tmp/injective-indexer /tmp/ibc-go /tmp/cometbft"
+    echo "  $0 /tmp/cosmos-sdk /tmp/injective-core /tmp/injective-indexer /tmp/ibc-go /tmp/cometbft /tmp/wasmd"
     exit 1
 }
 
 # Check arguments
-if [ $# -ne 5 ]; then
+if [ $# -ne 6 ]; then
     usage
 fi
 
@@ -59,12 +60,18 @@ init_config() {
     COMETBFT_PROTO_PATH="$5/proto"
     COMETBFT_OUTPUT_DIR="$OUTPUT_BASE_DIR/cometbft"
 
+    # Wasmd configuration
+    WASMD_MODULES_PATH="$6/x"
+    WASMD_PROTO_PATH="$6/proto"
+    WASMD_OUTPUT_DIR="$OUTPUT_BASE_DIR/wasmd"
+
     # Export all variables
     export OUTPUT_BASE_DIR INJECTIVE_CHAIN_PATH INJECTIVE_MODULES_PATH INJECTIVE_TYPES_PATH \
            INJECTIVE_STREAM_PATH INJECTIVE_PROTO_PATH INJECTIVE_OUTPUT_DIR COSMOS_MODULES_PATH \
            COSMOS_CLIENT_GRPC_PATH COSMOS_PROTO_PATH COSMOS_OUTPUT_DIR INDEXER_API_PATH INDEXER_OUTPUT_DIR \
            IBC_MODULES_PATH IBC_PROTO_PATH IBC_OUTPUT_DIR \
-           COMETBFT_MODULES_PATH COMETBFT_PROTO_PATH COMETBFT_OUTPUT_DIR
+           COMETBFT_MODULES_PATH COMETBFT_PROTO_PATH COMETBFT_OUTPUT_DIR \
+           WASMD_MODULES_PATH WASMD_PROTO_PATH WASMD_OUTPUT_DIR
 }
 
 # Check required commands
@@ -596,13 +603,13 @@ process_cometbft_modules() {
 }
 
 # Initialize configuration with provided paths
-init_config "$1" "$2" "$3" "$4" "$5"
+init_config "$1" "$2" "$3" "$4" "$5" "$6"
 
 # Check requirements first
 check_requirements
 
 # Create base output directories
-mkdir -p "$INJECTIVE_OUTPUT_DIR" "$COSMOS_OUTPUT_DIR" "$INDEXER_OUTPUT_DIR" "$IBC_OUTPUT_DIR" "$COMETBFT_OUTPUT_DIR"
+mkdir -p "$INJECTIVE_OUTPUT_DIR" "$COSMOS_OUTPUT_DIR" "$INDEXER_OUTPUT_DIR" "$IBC_OUTPUT_DIR" "$COMETBFT_OUTPUT_DIR" "$WASMD_OUTPUT_DIR"
 
 # Process Injective modules
 echo "Processing Injective modules..."
@@ -641,5 +648,10 @@ echo "Processing IBC modules..."
 echo "Processing CometBFT modules..."
 [ -d "$COMETBFT_MODULES_PATH" ] && process_cometbft_modules "$COMETBFT_MODULES_PATH" "$COMETBFT_OUTPUT_DIR"
 [ -d "$COMETBFT_PROTO_PATH" ] && process_proto_directory "$COMETBFT_PROTO_PATH" "$COMETBFT_OUTPUT_DIR"
+
+# Process Wasmd modules
+echo "Processing Wasmd modules..."
+[ -d "$WASMD_MODULES_PATH" ] && process_repository_modules "$WASMD_MODULES_PATH" "$WASMD_OUTPUT_DIR"
+[ -d "$WASMD_PROTO_PATH" ] && process_proto_directory "$WASMD_PROTO_PATH" "$WASMD_OUTPUT_DIR"
 
 echo "Processing complete!" 

@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "creator_address",
+    "Type": "string",
+    "Description": "CreatorAddress is the address of contract creator",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "Pagination defines an optional pagination for the request.",
+    "Required": "No"
+  }
+]

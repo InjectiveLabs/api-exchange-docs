@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "channel",
+    "Type": "string",
+    "Description": "the channel by which the packet will be sent",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "timeout_height",
+    "Type": "uint64",
+    "Description": "Timeout height relative to the current block height. The timeout is disabled when set to 0.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "timeout_timestamp",
+    "Type": "uint64",
+    "Description": "Timeout timestamp (in nanoseconds) relative to the current block timestamp. The timeout is disabled when set to 0.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "Data is the payload to transfer. We must not make assumption what format or content is in here.",
+    "Required": "Yes"
+  }
+]

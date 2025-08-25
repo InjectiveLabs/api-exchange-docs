@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "Data contains same raw bytes returned as data from the wasm contract. (May be empty)"
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": "Title is a short summary"
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": "Description is a human readable text"
+  },
+  {
+    "Parameter": "run_as",
+    "Type": "string",
+    "Description": "RunAs is the address that is passed to the contract's environment as sender"
+  },
+  {
+    "Parameter": "wasm_byte_code",
+    "Type": "byte array",
+    "Description": "WASMByteCode can be raw or gzip compressed"
+  },
+  {
+    "Parameter": "instantiate_permission",
+    "Type": "AccessConfig",
+    "Description": "InstantiatePermission to apply on contract creation, optional"
+  },
+  {
+    "Parameter": "unpin_code",
+    "Type": "bool",
+    "Description": "UnpinCode code on upload, optional"
+  },
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "Admin is an optional address that can execute migrations"
+  },
+  {
+    "Parameter": "label",
+    "Type": "string",
+    "Description": "Label is optional metadata to be stored with a constract instance."
+  },
+  {
+    "Parameter": "msg",
+    "Type": "RawContractMessage",
+    "Description": "Msg json encoded message to be passed to the contract on instantiation"
+  },
+  {
+    "Parameter": "funds",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "Funds coins that are transferred to the contract on instantiation"
+  },
+  {
+    "Parameter": "source",
+    "Type": "string",
+    "Description": "Source is the URL where the code is hosted"
+  },
+  {
+    "Parameter": "builder",
+    "Type": "string",
+    "Description": "Builder is the docker image used to build the code deterministically, used for smart contract verification"
+  },
+  {
+    "Parameter": "code_hash",
+    "Type": "byte array",
+    "Description": "CodeHash is the SHA256 sum of the code outputted by builder, used for smart contract verification"
+  }
+]

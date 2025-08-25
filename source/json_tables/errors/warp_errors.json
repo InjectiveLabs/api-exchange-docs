@@ -1,0 +1,12 @@
+[
+  {
+    "module_name": "warp",
+    "error_code": 1,
+    "description": "not enough collateral"
+  },
+  {
+    "module_name": "warp",
+    "error_code": 2,
+    "description": "token not found"
+  }
+]

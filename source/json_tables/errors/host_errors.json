@@ -1,0 +1,17 @@
+[
+  {
+    "module_name": "host",
+    "error_code": 2,
+    "description": "invalid identifier"
+  },
+  {
+    "module_name": "host",
+    "error_code": 3,
+    "description": "invalid path"
+  },
+  {
+    "module_name": "host",
+    "error_code": 4,
+    "description": "invalid packet"
+  }
+]

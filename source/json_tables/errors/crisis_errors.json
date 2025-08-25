@@ -1,0 +1,12 @@
+[
+  {
+    "module_name": "crisis",
+    "error_code": 2,
+    "description": "sender address is empty"
+  },
+  {
+    "module_name": "crisis",
+    "error_code": 3,
+    "description": "unknown invariant"
+  }
+]

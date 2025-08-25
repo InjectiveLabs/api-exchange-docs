@@ -1,0 +1,92 @@
+[
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 2,
+    "description": "unknown data type"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 3,
+    "description": "account already exist"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 4,
+    "description": "port is already bound"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 5,
+    "description": "invalid message sent to channel end"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 6,
+    "description": "invalid outgoing data"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 7,
+    "description": "invalid route"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 8,
+    "description": "interchain account not found"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 9,
+    "description": "interchain account is already set"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 10,
+    "description": "active channel already set for this owner"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 11,
+    "description": "no active channel for this owner"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 12,
+    "description": "invalid interchain accounts version"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 13,
+    "description": "invalid account address"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 14,
+    "description": "interchain account does not support this action"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 15,
+    "description": "invalid controller port"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 16,
+    "description": "invalid host port"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 17,
+    "description": "timeout timestamp must be in the future"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 18,
+    "description": "codec is not supported"
+  },
+  {
+    "module_name": "interchainaccounts",
+    "error_code": 19,
+    "description": "invalid account reopening"
+  }
+]

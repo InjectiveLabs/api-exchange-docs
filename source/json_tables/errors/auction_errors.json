@@ -1,0 +1,12 @@
+[
+  {
+    "module_name": "auction",
+    "error_code": 1,
+    "description": "invalid bid denom"
+  },
+  {
+    "module_name": "auction",
+    "error_code": 2,
+    "description": "invalid bid round"
+  }
+]

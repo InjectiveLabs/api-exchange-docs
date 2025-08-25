@@ -54,10 +54,14 @@ refresh-examples:
 
 # Internal targets without repository management
 _update-errors:
-	@echo "Updating error documentation from repositories..."
-	@./scripts/extract_errors.sh $(COSMOS_SDK_DIR) $(INJECTIVE_CORE_DIR)
+	@echo "Cleaning existing errors directory..."
+	@rm -rf source/json_tables/errors
+	@mkdir -p source/json_tables/errors
+	@echo "Generating errors JSON files..."
+	@cd $(INJECTIVE_CORE_DIR) && go run scripts/docs/document_error_codes_script.go -dest $(CURDIR)/source/json_tables/errors
 	@echo "Generating markdown documentation..."
 	@./scripts/generate_errors_md.sh
+	@echo "Error documentation update complete!"
 
 _update-proto:
 	@echo "Generating proto JSON files..."

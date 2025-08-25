@@ -1,0 +1,37 @@
+[
+  {
+    "module_name": "capability",
+    "error_code": 2,
+    "description": "capability name not valid"
+  },
+  {
+    "module_name": "capability",
+    "error_code": 3,
+    "description": "provided capability is nil"
+  },
+  {
+    "module_name": "capability",
+    "error_code": 4,
+    "description": "capability name already taken"
+  },
+  {
+    "module_name": "capability",
+    "error_code": 5,
+    "description": "given owner already claimed capability"
+  },
+  {
+    "module_name": "capability",
+    "error_code": 6,
+    "description": "capability not owned by module"
+  },
+  {
+    "module_name": "capability",
+    "error_code": 7,
+    "description": "capability not found"
+  },
+  {
+    "module_name": "capability",
+    "error_code": 8,
+    "description": "owners not found for capability"
+  }
+]

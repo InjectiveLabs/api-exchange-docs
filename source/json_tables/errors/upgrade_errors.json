@@ -1,0 +1,27 @@
+[
+  {
+    "module_name": "upgrade",
+    "error_code": 2,
+    "description": "module version not found"
+  },
+  {
+    "module_name": "upgrade",
+    "error_code": 3,
+    "description": "upgrade plan not found"
+  },
+  {
+    "module_name": "upgrade",
+    "error_code": 4,
+    "description": "upgraded client not found"
+  },
+  {
+    "module_name": "upgrade",
+    "error_code": 5,
+    "description": "upgraded consensus state not found"
+  },
+  {
+    "module_name": "upgrade",
+    "error_code": 6,
+    "description": "expected authority account as only signer for proposal message"
+  }
+]

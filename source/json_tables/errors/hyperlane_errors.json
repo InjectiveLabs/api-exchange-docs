@@ -1,0 +1,17 @@
+[
+  {
+    "module_name": "hyperlane",
+    "error_code": 1,
+    "description": "no receiver ISM"
+  },
+  {
+    "module_name": "hyperlane",
+    "error_code": 2,
+    "description": "required hook not set"
+  },
+  {
+    "module_name": "hyperlane",
+    "error_code": 3,
+    "description": "default hook not set"
+  }
+]

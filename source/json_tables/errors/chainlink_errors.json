@@ -1,0 +1,117 @@
+[
+  {
+    "module_name": "chainlink",
+    "error_code": 1,
+    "description": "stale report"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 2,
+    "description": "incomplete proposal"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 3,
+    "description": "repeated oracle address"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 4,
+    "description": "too many signers"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 5,
+    "description": "incorrect config"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 6,
+    "description": "config digest doesn't match"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 7,
+    "description": "wrong number of signatures"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 8,
+    "description": "incorrect signature"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 9,
+    "description": "no transmitter specified"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 10,
+    "description": "incorrect transmission data"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 11,
+    "description": "no transmissions found"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 12,
+    "description": "median value is out of bounds"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 13,
+    "description": "LINK denom doesn't match"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 14,
+    "description": "Reward Pool doesn't exist"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 15,
+    "description": "wrong number of payees and transmitters"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 16,
+    "description": "action is restricted to the module admin"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 17,
+    "description": "feed already exists"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 19,
+    "description": "feed doesnt exists"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 20,
+    "description": "action is admin-restricted"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 21,
+    "description": "insufficient reward pool"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 22,
+    "description": "payee already set"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 23,
+    "description": "action is payee-restricted"
+  },
+  {
+    "module_name": "chainlink",
+    "error_code": 24,
+    "description": "feed config not found"
+  }
+]

@@ -1,0 +1,207 @@
+[
+  {
+    "module_name": "channel",
+    "error_code": 2,
+    "description": "channel already exists"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 3,
+    "description": "channel not found"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 4,
+    "description": "invalid channel"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 5,
+    "description": "invalid channel state"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 6,
+    "description": "invalid channel ordering"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 7,
+    "description": "invalid counterparty channel"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 8,
+    "description": "invalid channel capability"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 9,
+    "description": "channel capability not found"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 10,
+    "description": "sequence send not found"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 11,
+    "description": "sequence receive not found"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 12,
+    "description": "sequence acknowledgement not found"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 13,
+    "description": "invalid packet"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 14,
+    "description": "packet timeout"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 15,
+    "description": "too many connection hops"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 16,
+    "description": "invalid acknowledgement"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 17,
+    "description": "acknowledgement for packet already exists"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 18,
+    "description": "invalid channel identifier"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 19,
+    "description": "packet already received"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 20,
+    "description": "packet commitment not found"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 21,
+    "description": "packet sequence is out of order"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 22,
+    "description": "packet messages are redundant"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 23,
+    "description": "message is redundant, no-op will be performed"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 24,
+    "description": "invalid channel version"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 25,
+    "description": "packet has not been sent"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 26,
+    "description": "invalid packet timeout"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 27,
+    "description": "upgrade error receipt not found"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 28,
+    "description": "invalid upgrade"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 29,
+    "description": "invalid upgrade sequence"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 30,
+    "description": "upgrade not found"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 31,
+    "description": "incompatible counterparty upgrade"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 32,
+    "description": "invalid upgrade error"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 33,
+    "description": "restore failed"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 34,
+    "description": "upgrade timed-out"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 35,
+    "description": "upgrade timeout is invalid"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 36,
+    "description": "pending inflight packets exist"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 37,
+    "description": "upgrade timeout failed"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 38,
+    "description": "invalid pruning limit"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 39,
+    "description": "timeout not reached"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 40,
+    "description": "timeout elapsed"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 41,
+    "description": "pruning sequence start not found"
+  },
+  {
+    "module_name": "channel",
+    "error_code": 42,
+    "description": "recv start sequence not found"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "module_name": "permissions",
+    "error_code": 2,
+    "description": "attempting to create a namespace for denom that already exists"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 3,
+    "description": "unauthorized account"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 4,
+    "description": "invalid genesis"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 5,
+    "description": "invalid namespace"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 6,
+    "description": "invalid permissions"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 7,
+    "description": "unknown role"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 8,
+    "description": "unknown contract address"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 9,
+    "description": "restricted action"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 10,
+    "description": "invalid role"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 11,
+    "description": "namespace for denom does not exist"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 12,
+    "description": "wasm hook query error"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 13,
+    "description": "voucher was not found"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 14,
+    "description": "invalid contract hook"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 15,
+    "description": "unknown policy"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 16,
+    "description": "unauthorized policy change"
+  }
+]

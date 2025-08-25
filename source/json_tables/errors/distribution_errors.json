@@ -1,0 +1,62 @@
+[
+  {
+    "module_name": "distribution",
+    "error_code": 2,
+    "description": "delegator address is empty"
+  },
+  {
+    "module_name": "distribution",
+    "error_code": 3,
+    "description": "withdraw address is empty"
+  },
+  {
+    "module_name": "distribution",
+    "error_code": 4,
+    "description": "validator address is empty"
+  },
+  {
+    "module_name": "distribution",
+    "error_code": 5,
+    "description": "no delegation distribution info"
+  },
+  {
+    "module_name": "distribution",
+    "error_code": 6,
+    "description": "no validator distribution info"
+  },
+  {
+    "module_name": "distribution",
+    "error_code": 7,
+    "description": "no validator commission to withdraw"
+  },
+  {
+    "module_name": "distribution",
+    "error_code": 8,
+    "description": "set withdraw address disabled"
+  },
+  {
+    "module_name": "distribution",
+    "error_code": 9,
+    "description": "community pool does not have sufficient coins to distribute"
+  },
+  {
+    "module_name": "distribution",
+    "error_code": 10,
+    "description": "invalid community pool spend proposal amount"
+  },
+  {
+    "module_name": "distribution",
+    "error_code": 11,
+    "description": "invalid community pool spend proposal recipient"
+  },
+  {
+    "module_name": "distribution",
+    "error_code": 12,
+    "description": "validator does not exist"
+  },
+  {
+    "module_name": "distribution",
+    "error_code": 13,
+    "description": "delegation does not exist"
+  }
+]

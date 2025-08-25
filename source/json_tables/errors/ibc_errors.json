@@ -1,0 +1,82 @@
+[
+  {
+    "module_name": "ibc",
+    "error_code": 1,
+    "description": "invalid sequence"
+  },
+  {
+    "module_name": "ibc",
+    "error_code": 2,
+    "description": "unauthorized"
+  },
+  {
+    "module_name": "ibc",
+    "error_code": 3,
+    "description": "insufficient funds"
+  },
+  {
+    "module_name": "ibc",
+    "error_code": 4,
+    "description": "unknown request"
+  },
+  {
+    "module_name": "ibc",
+    "error_code": 5,
+    "description": "invalid address"
+  },
+  {
+    "module_name": "ibc",
+    "error_code": 6,
+    "description": "invalid coins"
+  },
+  {
+    "module_name": "ibc",
+    "error_code": 7,
+    "description": "out of gas"
+  },
+  {
+    "module_name": "ibc",
+    "error_code": 8,
+    "description": "invalid request"
+  },
+  {
+    "module_name": "ibc",
+    "error_code": 9,
+    "description": "invalid height"
+  },
+  {
+    "module_name": "ibc",
+    "error_code": 10,
+    "description": "invalid version"
+  },
+  {
+    "module_name": "ibc",
+    "error_code": 11,
+    "description": "invalid chain-id"
+  },
+  {
+    "module_name": "ibc",
+    "error_code": 12,
+    "description": "invalid type"
+  },
+  {
+    "module_name": "ibc",
+    "error_code": 13,
+    "description": "failed packing protobuf message to Any"
+  },
+  {
+    "module_name": "ibc",
+    "error_code": 14,
+    "description": "failed unpacking protobuf message from Any"
+  },
+  {
+    "module_name": "ibc",
+    "error_code": 15,
+    "description": "internal logic error"
+  },
+  {
+    "module_name": "ibc",
+    "error_code": 16,
+    "description": "not found"
+  }
+]

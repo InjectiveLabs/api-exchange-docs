@@ -1,0 +1,57 @@
+[
+  {
+    "module_name": "feeibc",
+    "error_code": 2,
+    "description": "invalid ICS29 middleware version"
+  },
+  {
+    "module_name": "feeibc",
+    "error_code": 3,
+    "description": "no account found for given refund address"
+  },
+  {
+    "module_name": "feeibc",
+    "error_code": 4,
+    "description": "balance not found for given account address"
+  },
+  {
+    "module_name": "feeibc",
+    "error_code": 5,
+    "description": "there is no fee escrowed for the given packetID"
+  },
+  {
+    "module_name": "feeibc",
+    "error_code": 6,
+    "description": "relayers must not be set. This feature is not supported"
+  },
+  {
+    "module_name": "feeibc",
+    "error_code": 7,
+    "description": "counterparty payee must not be empty"
+  },
+  {
+    "module_name": "feeibc",
+    "error_code": 8,
+    "description": "forward relayer address not found"
+  },
+  {
+    "module_name": "feeibc",
+    "error_code": 9,
+    "description": "fee module is not enabled for this channel. If this error occurs after channel setup, fee module may not be enabled"
+  },
+  {
+    "module_name": "feeibc",
+    "error_code": 10,
+    "description": "relayer address must be stored for async WriteAcknowledgement"
+  },
+  {
+    "module_name": "feeibc",
+    "error_code": 11,
+    "description": "the fee module is currently locked, a severe bug has been detected"
+  },
+  {
+    "module_name": "feeibc",
+    "error_code": 12,
+    "description": "unsupported action"
+  }
+]

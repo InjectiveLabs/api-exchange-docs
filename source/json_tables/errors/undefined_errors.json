@@ -1,0 +1,17 @@
+[
+  {
+    "module_name": "undefined",
+    "error_code": 1,
+    "description": "internal"
+  },
+  {
+    "module_name": "undefined",
+    "error_code": 2,
+    "description": "stop iterating"
+  },
+  {
+    "module_name": "undefined",
+    "error_code": 111222,
+    "description": "panic"
+  }
+]

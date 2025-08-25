@@ -1,0 +1,62 @@
+[
+  {
+    "module_name": "tokenfactory",
+    "error_code": 2,
+    "description": "attempting to create a denom that already exists (has bank metadata)"
+  },
+  {
+    "module_name": "tokenfactory",
+    "error_code": 3,
+    "description": "unauthorized account"
+  },
+  {
+    "module_name": "tokenfactory",
+    "error_code": 4,
+    "description": "invalid denom"
+  },
+  {
+    "module_name": "tokenfactory",
+    "error_code": 5,
+    "description": "invalid creator"
+  },
+  {
+    "module_name": "tokenfactory",
+    "error_code": 6,
+    "description": "invalid authority metadata"
+  },
+  {
+    "module_name": "tokenfactory",
+    "error_code": 7,
+    "description": "invalid genesis"
+  },
+  {
+    "module_name": "tokenfactory",
+    "error_code": 8,
+    "description": "subdenom too long, max length is 44 bytes"
+  },
+  {
+    "module_name": "tokenfactory",
+    "error_code": 9,
+    "description": "subdenom too short, min length is 1 bytes"
+  },
+  {
+    "module_name": "tokenfactory",
+    "error_code": 10,
+    "description": "nested subdenom too short, each one should have at least 1 bytes"
+  },
+  {
+    "module_name": "tokenfactory",
+    "error_code": 11,
+    "description": "creator too long, max length is 75 bytes"
+  },
+  {
+    "module_name": "tokenfactory",
+    "error_code": 12,
+    "description": "denom does not exist"
+  },
+  {
+    "module_name": "tokenfactory",
+    "error_code": 13,
+    "description": "amount has to be positive"
+  }
+]

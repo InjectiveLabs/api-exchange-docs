@@ -1,0 +1,27 @@
+[
+  {
+    "module_name": "post_dispatch",
+    "error_code": 1,
+    "description": "mailbox does not exist"
+  },
+  {
+    "module_name": "post_dispatch",
+    "error_code": 2,
+    "description": "sender is not designated mailbox"
+  },
+  {
+    "module_name": "post_dispatch",
+    "error_code": 3,
+    "description": "hook does not exist or isn't registered"
+  },
+  {
+    "module_name": "post_dispatch",
+    "error_code": 4,
+    "description": "unauthorized"
+  },
+  {
+    "module_name": "post_dispatch",
+    "error_code": 5,
+    "description": "invalid owner"
+  }
+]

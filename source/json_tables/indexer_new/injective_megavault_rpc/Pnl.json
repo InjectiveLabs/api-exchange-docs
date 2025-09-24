@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "value",
+    "Type": "string",
+    "Description": "PnL value"
+  },
+  {
+    "Parameter": "percentage",
+    "Type": "string",
+    "Description": "PnL percentage"
+  },
+  {
+    "Parameter": "total_amount_subscribed",
+    "Type": "string",
+    "Description": "Total amount subscribed"
+  },
+  {
+    "Parameter": "total_amount_redeemed",
+    "Type": "string",
+    "Description": "Total amount redeemed"
+  },
+  {
+    "Parameter": "current_amount",
+    "Type": "string",
+    "Description": "Current amount"
+  }
+]

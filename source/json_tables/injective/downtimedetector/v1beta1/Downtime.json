@@ -1,0 +1,102 @@
+[
+  {
+    "Code": "0",
+    "Name": "DURATION_30S"
+  },
+  {
+    "Code": "1",
+    "Name": "DURATION_1M"
+  },
+  {
+    "Code": "2",
+    "Name": "DURATION_2M"
+  },
+  {
+    "Code": "3",
+    "Name": "DURATION_3M"
+  },
+  {
+    "Code": "4",
+    "Name": "DURATION_4M"
+  },
+  {
+    "Code": "5",
+    "Name": "DURATION_5M"
+  },
+  {
+    "Code": "6",
+    "Name": "DURATION_10M"
+  },
+  {
+    "Code": "7",
+    "Name": "DURATION_20M"
+  },
+  {
+    "Code": "8",
+    "Name": "DURATION_30M"
+  },
+  {
+    "Code": "9",
+    "Name": "DURATION_40M"
+  },
+  {
+    "Code": "10",
+    "Name": "DURATION_50M"
+  },
+  {
+    "Code": "11",
+    "Name": "DURATION_1H"
+  },
+  {
+    "Code": "12",
+    "Name": "DURATION_1_5H"
+  },
+  {
+    "Code": "13",
+    "Name": "DURATION_2H"
+  },
+  {
+    "Code": "14",
+    "Name": "DURATION_2_5H"
+  },
+  {
+    "Code": "15",
+    "Name": "DURATION_3H"
+  },
+  {
+    "Code": "16",
+    "Name": "DURATION_4H"
+  },
+  {
+    "Code": "17",
+    "Name": "DURATION_5H"
+  },
+  {
+    "Code": "18",
+    "Name": "DURATION_6H"
+  },
+  {
+    "Code": "19",
+    "Name": "DURATION_9H"
+  },
+  {
+    "Code": "20",
+    "Name": "DURATION_12H"
+  },
+  {
+    "Code": "21",
+    "Name": "DURATION_18H"
+  },
+  {
+    "Code": "22",
+    "Name": "DURATION_24H"
+  },
+  {
+    "Code": "23",
+    "Name": "DURATION_36H"
+  },
+  {
+    "Code": "24",
+    "Name": "DURATION_48H"
+  }
+]

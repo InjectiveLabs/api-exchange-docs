@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "t",
+    "Type": "int32",
+    "Description": "Time, Unix timestamp in milliseconds (UTC)"
+  },
+  {
+    "Parameter": "v",
+    "Type": "string",
+    "Description": "PnL Value"
+  }
+]

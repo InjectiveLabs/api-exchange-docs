@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "unrealized",
+    "Type": "UnrealizedPnl",
+    "Description": "Unrealized PnL"
+  },
+  {
+    "Parameter": "all_time",
+    "Type": "Pnl",
+    "Description": "All-time PnL"
+  }
+]

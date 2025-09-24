@@ -18,5 +18,10 @@
     "Parameter": "timestamp",
     "Type": "int64",
     "Description": "Last update timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": "Block height at which the orderbook was last updated."
   }
 ]

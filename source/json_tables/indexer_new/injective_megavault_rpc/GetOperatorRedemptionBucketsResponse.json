@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "buckets",
+    "Type": "RedemptionBucket array",
+    "Description": "The redemption buckets"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "vault_address",
+    "Type": "string",
+    "Description": "Vault address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "operator_address",
+    "Type": "string",
+    "Description": "Operator address",
+    "Required": "Yes"
+  }
+]

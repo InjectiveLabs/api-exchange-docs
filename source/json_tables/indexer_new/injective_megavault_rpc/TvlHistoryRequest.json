@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "vault_address",
+    "Type": "string",
+    "Description": "Vault address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "since",
+    "Type": "int64",
+    "Description": "timestamp from which to start the query in milliseconds (UTC)",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "max_data_points",
+    "Type": "int32",
+    "Description": "amount of data points to return",
+    "Required": "Yes"
+  }
+]

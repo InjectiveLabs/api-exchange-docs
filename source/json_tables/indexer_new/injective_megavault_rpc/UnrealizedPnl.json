@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "value",
+    "Type": "string",
+    "Description": "Unrealized PnL value"
+  },
+  {
+    "Parameter": "percentage",
+    "Type": "string",
+    "Description": "Unrealized PnL percentage"
+  }
+]

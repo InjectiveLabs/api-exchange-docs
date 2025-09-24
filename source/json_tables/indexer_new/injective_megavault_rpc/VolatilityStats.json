@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "thirty_days",
+    "Type": "Volatility",
+    "Description": "30-days volatility"
+  }
+]

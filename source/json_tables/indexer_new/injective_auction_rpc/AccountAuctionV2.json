@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "id",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "round",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "amount_deposited",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "is_claimable",
+    "Type": "bool",
+    "Description": "Whether the auction rewards can be claimed."
+  },
+  {
+    "Parameter": "claimed_assets",
+    "Type": "ClaimedAssets array",
+    "Description": ""
+  }
+]

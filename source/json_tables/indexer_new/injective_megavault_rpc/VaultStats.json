@@ -1,0 +1,52 @@
+[
+  {
+    "Parameter": "total_subscribed_amount",
+    "Type": "string",
+    "Description": "Total subscribed amount in the vault"
+  },
+  {
+    "Parameter": "total_redeemed_amount",
+    "Type": "string",
+    "Description": "Total redeemed amount in the vault"
+  },
+  {
+    "Parameter": "current_amount",
+    "Type": "string",
+    "Description": "Current amount in the vault"
+  },
+  {
+    "Parameter": "current_amount_without_incentives",
+    "Type": "string",
+    "Description": "Current amount in the vault without taking into account the incentives"
+  },
+  {
+    "Parameter": "current_lp_amount",
+    "Type": "string",
+    "Description": "Current amount of LP tokens in the vault"
+  },
+  {
+    "Parameter": "current_lp_price",
+    "Type": "string",
+    "Description": "Current LP price"
+  },
+  {
+    "Parameter": "pnl",
+    "Type": "PnlStats",
+    "Description": "PnL statistics"
+  },
+  {
+    "Parameter": "volatility",
+    "Type": "VolatilityStats",
+    "Description": "Volatility statistics"
+  },
+  {
+    "Parameter": "apr",
+    "Type": "AprStats",
+    "Description": "APR statistics"
+  },
+  {
+    "Parameter": "max_drawdown",
+    "Type": "MaxDrawdown",
+    "Description": "Max drawdown"
+  }
+]

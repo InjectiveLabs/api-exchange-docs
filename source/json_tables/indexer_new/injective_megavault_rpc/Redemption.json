@@ -1,0 +1,57 @@
+[
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "Contract address"
+  },
+  {
+    "Parameter": "user",
+    "Type": "string",
+    "Description": "User"
+  },
+  {
+    "Parameter": "index",
+    "Type": "int64",
+    "Description": "Index number of the redemption"
+  },
+  {
+    "Parameter": "lp_amount",
+    "Type": "string",
+    "Description": "Amount of LP tokens given to the user for the redemption"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "string",
+    "Description": "Amount in USDT the user gave for the redemption"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Status of the subscription"
+  },
+  {
+    "Parameter": "due_at",
+    "Type": "int64",
+    "Description": "DueAt timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "created_height",
+    "Type": "int64",
+    "Description": "Block height when the subscription was created."
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "int64",
+    "Description": "CreatedAt timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "executed_height",
+    "Type": "int64",
+    "Description": "Block height when the subscription was executed."
+  },
+  {
+    "Parameter": "executed_at",
+    "Type": "int64",
+    "Description": "ExecutedAt timestamp in UNIX millis."
+  }
+]

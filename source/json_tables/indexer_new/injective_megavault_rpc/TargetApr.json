@@ -1,23 +1,23 @@
 [
   {
-    "Parameter": "address",
+    "Parameter": "apr",
     "Type": "string",
-    "Description": "Operator address"
+    "Description": "APR"
   },
   {
-    "Parameter": "total_amount",
+    "Parameter": "upper_threshold",
     "Type": "string",
-    "Description": "Total amount"
+    "Description": "Upper threshold"
   },
   {
-    "Parameter": "total_liquid_amount",
+    "Parameter": "lower_threshold",
     "Type": "string",
-    "Description": "Total liquid amount"
+    "Description": "Lower threshold"
   },
   {
     "Parameter": "updated_height",
     "Type": "int64",
-    "Description": "Block height when the operator was updated."
+    "Description": "Block height when the target APR was updated."
   },
   {
     "Parameter": "updated_at",

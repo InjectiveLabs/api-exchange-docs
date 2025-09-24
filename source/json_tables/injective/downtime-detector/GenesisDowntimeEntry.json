@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "duration",
+    "Type": "Downtime",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_downtime",
+    "Type": "time.Time",
+    "Description": ""
+  }
+]

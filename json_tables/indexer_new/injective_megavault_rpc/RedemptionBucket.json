@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "bucket",
+    "Type": "string",
+    "Description": "Bucket"
+  },
+  {
+    "Parameter": "lp_amount_to_redeem",
+    "Type": "string",
+    "Description": "Amount of LP tokens to redeem"
+  },
+  {
+    "Parameter": "needed_amount",
+    "Type": "string",
+    "Description": "Amount needed to cover all the redemptions in the bucket"
+  },
+  {
+    "Parameter": "missing_liquidity",
+    "Type": "string",
+    "Description": "Amount of liquidity missing needed to cover all the redemptions in the bucket"
+  }
+]

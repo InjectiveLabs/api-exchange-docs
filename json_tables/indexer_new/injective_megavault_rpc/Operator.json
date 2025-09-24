@@ -5,9 +5,14 @@
     "Description": "Operator address"
   },
   {
-    "Parameter": "amount",
+    "Parameter": "total_amount",
     "Type": "string",
-    "Description": "Contract name"
+    "Description": "Total amount"
+  },
+  {
+    "Parameter": "total_liquid_amount",
+    "Type": "string",
+    "Description": "Total liquid amount"
   },
   {
     "Parameter": "updated_height",

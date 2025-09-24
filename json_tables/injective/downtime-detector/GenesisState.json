@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "downtimes",
+    "Type": "GenesisDowntimeEntry array",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_block_time",
+    "Type": "time.Time",
+    "Description": ""
+  }
+]

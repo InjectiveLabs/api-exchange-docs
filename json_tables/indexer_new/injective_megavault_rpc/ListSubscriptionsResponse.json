@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "subscriptions",
+    "Type": "Subscription array",
+    "Description": "List of subscriptions"
+  },
+  {
+    "Parameter": "next",
+    "Type": "string array",
+    "Description": "Next tokens for pagination"
+  }
+]

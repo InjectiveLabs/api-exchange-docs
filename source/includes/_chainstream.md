@@ -200,68 +200,76 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountDepositsRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">subaccount</td><td class="type-td td_text">Subaccount</td><td class="description-td td_text">the subaccount details</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/StreamRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">bank_balances_filter</td><td class="type-td td_text">BankBalancesFilter</td><td class="description-td td_text">filter for bank balances events</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_deposits_filter</td><td class="type-td td_text">SubaccountDepositsFilter</td><td class="description-td td_text">filter for subaccount deposits events</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">spot_trades_filter</td><td class="type-td td_text">TradesFilter</td><td class="description-td td_text">filter for spot trades events</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">derivative_trades_filter</td><td class="type-td td_text">TradesFilter</td><td class="description-td td_text">filter for derivative trades events</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">spot_orders_filter</td><td class="type-td td_text">OrdersFilter</td><td class="description-td td_text">filter for spot orders events</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">derivative_orders_filter</td><td class="type-td td_text">OrdersFilter</td><td class="description-td td_text">filter for derivative orders events</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">spot_orderbooks_filter</td><td class="type-td td_text">OrderbookFilter</td><td class="description-td td_text">filter for spot orderbooks events</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">derivative_orderbooks_filter</td><td class="type-td td_text">OrderbookFilter</td><td class="description-td td_text">filter for derivative orderbooks events</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">positions_filter</td><td class="type-td td_text">PositionsFilter</td><td class="description-td td_text">filter for positions events</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">oracle_price_filter</td><td class="type-td td_text">OraclePriceFilter</td><td class="description-td td_text">filter for oracle prices events</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **BankBalancesFilter**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/BankBalancesFilter.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">accounts</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/BankBalancesFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">accounts</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of account addresses to filter by</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **SubaccountDepositsFilter**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/SubaccountDepositsFilter.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/SubaccountDepositsFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of subaccount IDs to filter by</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TradesFilter**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/TradesFilter.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/TradesFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of subaccount IDs to filter by</td></tr>
+<tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of market IDs to filter by</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OrdersFilter**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/OrdersFilter.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/OrdersFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of subaccount IDs to filter by</td></tr>
+<tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of market IDs to filter by</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OrderbookFilter**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/OrderbookFilter.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/OrderbookFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of market IDs to filter by</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **PositionsFilter**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/PositionsFilter.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/PositionsFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of subaccount IDs to filter by</td></tr>
+<tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of market IDs to filter by</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OraclePriceFilter**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/OraclePriceFilter.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/OraclePriceFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of symbol to filter by</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -269,51 +277,52 @@ func main() {
 The stream response is a stream of events that are sent to the client. 
 Each message contains a list of events that are filtered by the request parameters and it's identified by the block height.
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/StreamResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_height</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">block_time</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">bank_balances</td><td class="type-td td_text">BankBalance array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">subaccount_deposits</td><td class="type-td td_text">SubaccountDeposits array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">spot_trades</td><td class="type-td td_text">SpotTrade array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">derivative_trades</td><td class="type-td td_text">DerivativeTrade array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">spot_orders</td><td class="type-td td_text">SpotOrderUpdate array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">derivative_orders</td><td class="type-td td_text">DerivativeOrderUpdate array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">spot_orderbook_updates</td><td class="type-td td_text">OrderbookUpdate array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">derivative_orderbook_updates</td><td class="type-td td_text">OrderbookUpdate array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">positions</td><td class="type-td td_text">Position array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">oracle_prices</td><td class="type-td td_text">OraclePrice array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/StreamResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the block height</td></tr>
+<tr ><td class="parameter-td td_text">block_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">the block time</td></tr>
+<tr ><td class="parameter-td td_text">bank_balances</td><td class="type-td td_text">BankBalance array</td><td class="description-td td_text">list of bank balances updates</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_deposits</td><td class="type-td td_text">SubaccountDeposits array</td><td class="description-td td_text">list of subaccount deposits updates</td></tr>
+<tr ><td class="parameter-td td_text">spot_trades</td><td class="type-td td_text">SpotTrade array</td><td class="description-td td_text">list of spot trades updates</td></tr>
+<tr ><td class="parameter-td td_text">derivative_trades</td><td class="type-td td_text">DerivativeTrade array</td><td class="description-td td_text">list of derivative trades updates</td></tr>
+<tr ><td class="parameter-td td_text">spot_orders</td><td class="type-td td_text">SpotOrderUpdate array</td><td class="description-td td_text">list of spot orders updates</td></tr>
+<tr ><td class="parameter-td td_text">derivative_orders</td><td class="type-td td_text">DerivativeOrderUpdate array</td><td class="description-td td_text">list of derivative orders updates</td></tr>
+<tr ><td class="parameter-td td_text">spot_orderbook_updates</td><td class="type-td td_text">OrderbookUpdate array</td><td class="description-td td_text">list of spot orderbook updates</td></tr>
+<tr ><td class="parameter-td td_text">derivative_orderbook_updates</td><td class="type-td td_text">OrderbookUpdate array</td><td class="description-td td_text">list of derivative orderbook updates</td></tr>
+<tr ><td class="parameter-td td_text">positions</td><td class="type-td td_text">Position array</td><td class="description-td td_text">list of positions updates</td></tr>
+<tr ><td class="parameter-td td_text">oracle_prices</td><td class="type-td td_text">OraclePrice array</td><td class="description-td td_text">list of oracle prices updates</td></tr>
+<tr ><td class="parameter-td td_text">gas_price</td><td class="type-td td_text">string</td><td class="description-td td_text">the current gas price when the block was processed (in chain format)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **BankBalance**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/BankBalance.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">balances</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/BankBalance.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account</td><td class="type-td td_text">string</td><td class="description-td td_text">the account address</td></tr>
+<tr ><td class="parameter-td td_text">balances</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_text">list of account balances</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **SubaccountDeposits**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/SubaccountDeposit.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/SubaccountDeposit.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">deposit</td><td class="type-td td_text">types.Deposit</td><td class="description-td td_num"></td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">deposit</td><td class="type-td td_text">v2.Deposit</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **SpotTrade**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/SpotTrade.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/SpotTrade.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
 <tr ><td class="parameter-td td_text">is_buy</td><td class="type-td td_text">bool</td><td class="description-td td_text">whether the trade is a buy or sell</td></tr>
 <tr ><td class="parameter-td td_text">executionType</td><td class="type-td td_text">string</td><td class="description-td td_text">the execution type</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the quantity of the trade</td></tr>
-<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the price of the trade</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the quantity of the trade (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the price of the trade (in human readable format)</td></tr>
 <tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID that executed the trade</td></tr>
-<tr ><td class="parameter-td td_text">fee</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the fee of the trade</td></tr>
+<tr ><td class="parameter-td td_text">fee</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the fee of the trade (in human readable format)</td></tr>
 <tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash</td></tr>
 <tr ><td class="parameter-td td_text">fee_recipient_address</td><td class="type-td td_text">string</td><td class="description-td td_text">the fee recipient address</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID</td></tr>
@@ -324,14 +333,14 @@ Each message contains a list of events that are filtered by the request paramete
 
 **DerivativeTrade**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/DerivativeTrade.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/DerivativeTrade.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
 <tr ><td class="parameter-td td_text">is_buy</td><td class="type-td td_text">bool</td><td class="description-td td_text">whether the trade is a buy or sell</td></tr>
 <tr ><td class="parameter-td td_text">executionType</td><td class="type-td td_text">string</td><td class="description-td td_text">the execution type</td></tr>
 <tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td></tr>
-<tr ><td class="parameter-td td_text">position_delta</td><td class="type-td td_text">types.PositionDelta</td><td class="description-td td_text">the position delta of the trade</td></tr>
-<tr ><td class="parameter-td td_text">payout</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the payout of the trade</td></tr>
-<tr ><td class="parameter-td td_text">fee</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the fee of the trade</td></tr>
+<tr ><td class="parameter-td td_text">position_delta</td><td class="type-td td_text">v2.PositionDelta</td><td class="description-td td_text">the position delta of the trade (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">payout</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the payout of the trade (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">fee</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the fee of the trade (in human readable format)</td></tr>
 <tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash</td></tr>
 <tr ><td class="parameter-td td_text">fee_recipient_address</td><td class="type-td td_text">string</td><td class="description-td td_text">the fee recipient address</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID</td></tr>
@@ -342,55 +351,55 @@ Each message contains a list of events that are filtered by the request paramete
 
 **SpotOrderUpdate**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/SpotOrderUpdate.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">OrderUpdateStatus</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">SpotOrder</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/SpotOrderUpdate.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">OrderUpdateStatus</td><td class="description-td td_text">the status of the order</td></tr>
+<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID</td></tr>
+<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">SpotOrder</td><td class="description-td td_text">the order details</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **DerivativeOrderUpdate**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/DerivativeOrderUpdate.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">OrderUpdateStatus</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">DerivativeOrder</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/DerivativeOrderUpdate.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">OrderUpdateStatus</td><td class="description-td td_text">the status of the order</td></tr>
+<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID</td></tr>
+<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">DerivativeOrder</td><td class="description-td td_text">the order details</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OrderbookUpdate**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/OrderbookUpdate.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">seq</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">orderbook</td><td class="type-td td_text">Orderbook</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/OrderbookUpdate.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">seq</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the sequence number of the orderbook update</td></tr>
+<tr ><td class="parameter-td td_text">orderbook</td><td class="type-td td_text">Orderbook</td><td class="description-td td_text">the orderbook details</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Position**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/Position.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/Position.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
 <tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td></tr>
 <tr ><td class="parameter-td td_text">isLong</td><td class="type-td td_text">bool</td><td class="description-td td_text">whether the position is long or short</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the quantity of the position</td></tr>
-<tr ><td class="parameter-td td_text">entry_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the entry price of the position</td></tr>
-<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the margin of the position</td></tr>
-<tr ><td class="parameter-td td_text">cumulative_funding_entry</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the cumulative funding entry of the position</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the quantity of the position (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">entry_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the entry price of the position (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the margin of the position (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_funding_entry</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the cumulative funding entry of the position (in human readable format)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **OraclePrice**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/OraclePrice.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/OraclePrice.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">the symbol of the oracle price</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the updated price</td></tr>
+<tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">string</td><td class="description-td td_text">the oracle type</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -408,18 +417,18 @@ Each message contains a list of events that are filtered by the request paramete
 
 **SpotOrder**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/SpotOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">types.SpotLimitOrder</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/SpotOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
+<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">v2.SpotLimitOrder</td><td class="description-td td_text">the order details</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **DerivativeOrder**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/DerivativeOrder.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/DerivativeOrder.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
-<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">types.DerivativeLimitOrder</td><td class="description-td td_text">the derivative order details</td></tr>
+<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">v2.DerivativeLimitOrder</td><td class="description-td td_text">the order details</td></tr>
 <tr ><td class="parameter-td td_text">is_market</td><td class="type-td td_text">bool</td><td class="description-td td_text">whether the order is a market order</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -454,10 +463,10 @@ Each message contains a list of events that are filtered by the request paramete
 
 **Orderbook**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/Orderbook.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">buy_levels</td><td class="type-td td_text">types.Level array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">sell_levels</td><td class="type-td td_text">types.Level array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/Orderbook.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
+<tr ><td class="parameter-td td_text">buy_levels</td><td class="type-td td_text">v2.Level array</td><td class="description-td td_text">list of buy levels</td></tr>
+<tr ><td class="parameter-td td_text">sell_levels</td><td class="type-td td_text">v2.Level array</td><td class="description-td td_text">list of sell levels</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>

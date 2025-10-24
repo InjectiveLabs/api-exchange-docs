@@ -1,5 +1,14 @@
 [
   {
+<<<<<<< HEAD:source/json_tables/indexer/injective_megavault_rpc/TvlHistoryRequest.json
+=======
+    "Parameter": "vault_address",
+    "Type": "string",
+    "Description": "Vault address",
+    "Required": "Yes"
+  },
+  {
+>>>>>>> 067dc64fd197f6f54588ba45f57b192af7583431:source/json_tables/indexer_new/injective_megavault_rpc/TvlHistoryRequest.json
     "Parameter": "since",
     "Type": "int64",
     "Description": "timestamp from which to start the query in milliseconds (UTC)",

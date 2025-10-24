@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "value",
+    "Type": "string",
+    "Description": "APR value"
+  },
+  {
+    "Parameter": "original_lp_price",
+    "Type": "string",
+    "Description": "Original LP price"
+  },
+  {
+    "Parameter": "current_lp_price",
+    "Type": "string",
+    "Description": "Current LP price"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "downtime",
+    "Type": "Downtime",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "recovery",
+    "Type": "time.Duration",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

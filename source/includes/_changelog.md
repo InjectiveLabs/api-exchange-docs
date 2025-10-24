@@ -1,5 +1,10 @@
 # Change Log
 
+## 2025-09-24
+- Updated all messages to reflect the changes included in the chain version 1.16.4, and the Indexer for that chain version
+- Python SDK v1.11.2
+- Go SDK v1.58.3
+
 ## 2025-07-29
 - Updated all messages to reflect the changes included in the chain version 1.16, and the Indexer for that chain version
 - Added documentation for `erc20` modules endpoints

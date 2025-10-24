@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "user",
+    "Type": "User",
+    "Description": "The user"
+  }
+]

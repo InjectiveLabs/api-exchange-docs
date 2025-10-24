@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "Operator address"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "string",
+    "Description": "Amount"
+  },
+  {
+    "Parameter": "updated_height",
+    "Type": "int64",
+    "Description": "Block height when the target APR was updated."
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "UpdatedAt timestamp in UNIX millis."
+  }
+]

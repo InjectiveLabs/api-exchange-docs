@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "User address"
+  },
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "Contract address"
+  },
+  {
+    "Parameter": "stats",
+    "Type": "UserStats",
+    "Description": "User stats"
+  },
+  {
+    "Parameter": "updated_height",
+    "Type": "int64",
+    "Description": "Block height when the vault was updated."
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "UpdatedAt timestamp in UNIX millis."
+  }
+]

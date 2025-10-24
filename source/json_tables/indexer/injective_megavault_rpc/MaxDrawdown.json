@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "value",
+    "Type": "string",
+    "Description": "Max drawdown value"
+  },
+  {
+    "Parameter": "latest_pn_l_peak",
+    "Type": "string",
+    "Description": "Latest PnL peak"
+  }
+]

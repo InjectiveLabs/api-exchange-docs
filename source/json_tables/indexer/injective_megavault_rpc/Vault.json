@@ -30,18 +30,23 @@
     "Description": "Quote denom"
   },
   {
-    "Parameter": "total_amount",
-    "Type": "string",
-    "Description": "Total amount"
-  },
-  {
-    "Parameter": "total_lp_amount",
-    "Type": "string",
-    "Description": "Total amount of LP token"
-  },
-  {
     "Parameter": "operators",
     "Type": "Operator array",
+    "Description": "Operators"
+  },
+  {
+    "Parameter": "incentives",
+    "Type": "Incentives",
+    "Description": "Incentives"
+  },
+  {
+    "Parameter": "target_apr",
+    "Type": "TargetApr",
+    "Description": "TargetApr"
+  },
+  {
+    "Parameter": "stats",
+    "Type": "VaultStats",
     "Description": "Operators"
   },
   {

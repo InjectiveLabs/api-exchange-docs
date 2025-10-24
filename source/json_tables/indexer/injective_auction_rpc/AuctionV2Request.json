@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "round",
+    "Type": "int64",
+    "Description": "The auction round number.",
+    "Required": "Yes"
+  }
+]

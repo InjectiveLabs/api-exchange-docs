@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "apr",
+    "Type": "string",
+    "Description": "APR"
+  },
+  {
+    "Parameter": "upper_threshold",
+    "Type": "string",
+    "Description": "Upper threshold"
+  },
+  {
+    "Parameter": "lower_threshold",
+    "Type": "string",
+    "Description": "Lower threshold"
+  },
+  {
+    "Parameter": "updated_height",
+    "Type": "int64",
+    "Description": "Block height when the target APR was updated."
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "UpdatedAt timestamp in UNIX millis."
+  }
+]

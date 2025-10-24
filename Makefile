@@ -1,11 +1,11 @@
 # Repository versions and URLs
-COSMOS_SDK_VERSION := v0.50.13-evm-comet1-inj.4
+COSMOS_SDK_VERSION := v0.50.13-evm-comet1-inj.6
 COSMOS_SDK_REPO := https://github.com/InjectiveLabs/cosmos-sdk.git
 
 INJECTIVE_CORE_VERSION := master
 INJECTIVE_CORE_REPO := https://github.com/InjectiveLabs/injective-core.git
 
-INDEXER_VERSION := v1.16.75
+INDEXER_VERSION := v1.16.91
 INDEXER_REPO := https://github.com/InjectiveLabs/injective-indexer.git
 
 IBC_GO_VERSION := v8.7.0-evm-comet1-inj
@@ -17,10 +17,19 @@ COMETBFT_REPO := https://github.com/InjectiveLabs/cometbft.git
 WASMD_VERSION := v0.53.3-evm-comet1-inj
 WASMD_REPO := https://github.com/InjectiveLabs/wasmd.git
 
-PYTHON_SDK_VERSION := v1.11.0
+IBC_GO_VERSION := v8.7.0-evm-comet1-inj
+IBC_GO_REPO := https://github.com/InjectiveLabs/ibc-go.git
+
+COMETBFT_VERSION := v1.0.1-inj.2
+COMETBFT_REPO := https://github.com/InjectiveLabs/cometbft.git
+
+WASMD_VERSION := v0.53.3-evm-comet1-inj
+WASMD_REPO := https://github.com/InjectiveLabs/wasmd.git
+
+PYTHON_SDK_VERSION := v1.11.2
 PYTHON_SDK_REPO := https://github.com/InjectiveLabs/sdk-python.git
 
-GO_SDK_VERSION := v1.58.0
+GO_SDK_VERSION := v1.58.3
 GO_SDK_REPO := https://github.com/InjectiveLabs/sdk-go.git
 
 # Temporary directories

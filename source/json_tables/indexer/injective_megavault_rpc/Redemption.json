@@ -5,6 +5,7 @@
     "Description": "Contract address"
   },
   {
+<<<<<<< HEAD:source/json_tables/indexer/injective_megavault_rpc/Redemption.json
     "Parameter": "contract_name",
     "Type": "string",
     "Description": "Contract name"
@@ -15,6 +16,8 @@
     "Description": "Contract version"
   },
   {
+=======
+>>>>>>> 067dc64fd197f6f54588ba45f57b192af7583431:source/json_tables/indexer_new/injective_megavault_rpc/Redemption.json
     "Parameter": "user",
     "Type": "string",
     "Description": "User"

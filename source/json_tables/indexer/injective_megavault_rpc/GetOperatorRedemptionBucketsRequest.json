@@ -1,5 +1,14 @@
 [
   {
+<<<<<<< HEAD:source/json_tables/indexer/injective_megavault_rpc/GetOperatorRedemptionBucketsRequest.json
+=======
+    "Parameter": "vault_address",
+    "Type": "string",
+    "Description": "Vault address",
+    "Required": "Yes"
+  },
+  {
+>>>>>>> 067dc64fd197f6f54588ba45f57b192af7583431:source/json_tables/indexer_new/injective_megavault_rpc/GetOperatorRedemptionBucketsRequest.json
     "Parameter": "operator_address",
     "Type": "string",
     "Description": "Operator address",

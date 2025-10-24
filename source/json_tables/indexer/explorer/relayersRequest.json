@@ -1,3 +1,0 @@
-[
-    {"Parameter": "market_ids", "Type": "String Array", "Description": "List of Market IDs to query the relayers", "Required": "Yes"}
-]

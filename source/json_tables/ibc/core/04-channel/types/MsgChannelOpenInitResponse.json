@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "channel_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": ""
+  }
+]

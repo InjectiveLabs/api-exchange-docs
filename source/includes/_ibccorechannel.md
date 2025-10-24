@@ -117,9 +117,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryChannelRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel unique identifier</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryChannelRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel unique identifier</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -147,42 +147,44 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryChannelResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">channel</td><td class="type-td td_text">Channel</td><td class="description-td td_text">Channel details</td></tr>
-<tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Merkle proof of existence</td></tr>
-<tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">Height</td><td class="description-td td_text">Height at which the proof was retrieved</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryChannelResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">channel</td><td class="type-td td_text">Channel</td><td class="description-td td_text">channel associated with the request identifiers</td></tr>
+<tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">byte array</td><td class="description-td td_text">merkle proof of existence</td></tr>
+<tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">types.Height</td><td class="description-td td_text">height at which the proof was retrieved</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Channel**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/channel.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">State</td><td class="description-td td_text">Current state of the channel end</td></tr>
-<tr ><td class="parameter-td td_text">ordering</td><td class="type-td td_text">Order</td><td class="description-td td_text">Whether the channel is ordered or unordered</td></tr>
-<tr ><td class="parameter-td td_text">counterparty</td><td class="type-td td_text">Counterparty</td><td class="description-td td_text">Counterparty channel end</td></tr>
-<tr ><td class="parameter-td td_text">connection_hops</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of connection identifiers, in order, along which packets sent on this channel will travel</td></tr>
-<tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">String</td><td class="description-td td_text">Opaque channel version, which is agreed upon during the handshake</td></tr>
-<tr ><td class="parameter-td td_text">upgrade_sequence</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Indicates the latest upgrade attempt performed by this channel. The value of 0 indicates the channel has never been upgraded</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/Channel.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">State</td><td class="description-td td_text">current state of the channel end</td></tr>
+<tr ><td class="parameter-td td_text">ordering</td><td class="type-td td_text">Order</td><td class="description-td td_text">whether the channel is ordered or unordered</td></tr>
+<tr ><td class="parameter-td td_text">counterparty</td><td class="type-td td_text">Counterparty</td><td class="description-td td_text">counterparty channel end</td></tr>
+<tr ><td class="parameter-td td_text">connection_hops</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of connection identifiers, in order, along which packets sent on this channel will travel</td></tr>
+<tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">string</td><td class="description-td td_text">opaque channel version, which is agreed upon during the handshake</td></tr>
+<tr ><td class="parameter-td td_text">upgrade_sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">upgrade sequence indicates the latest upgrade attempt performed by this channel the value of 0 indicates the channel has never been upgraded</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **State**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/state.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/channel/v1/State.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">STATE_UNINITIALIZED_UNSPECIFIED</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">STATE_INIT</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">STATE_TRYOPEN</td></tr>
 <tr ><td class="code-td td_num">3</td><td class="name-td td_text">STATE_OPEN</td></tr>
-<tr ><td class="code-td td_num">4</td><td class="name-td td_text">STATE_CLOSED</td></tr></tbody></table>
+<tr ><td class="code-td td_num">4</td><td class="name-td td_text">STATE_CLOSED</td></tr>
+<tr ><td class="code-td td_num">5</td><td class="name-td td_text">STATE_FLUSHING</td></tr>
+<tr ><td class="code-td td_num">6</td><td class="name-td td_text">STATE_FLUSHCOMPLETE</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Order**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/order.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/channel/v1/Order.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">ORDER_NONE_UNSPECIFIED</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">ORDER_UNORDERED</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">ORDER_ORDERED</td></tr></tbody></table>
@@ -192,18 +194,18 @@ func main() {
 
 **Counterparty**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/counterparty.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port on the counterparty chain which owns the other end of the channel</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel end on the counterparty chain</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/Counterparty.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port on the counterparty chain which owns the other end of the channel.</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel end on the counterparty chain</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Height**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/height.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The revision that the client is currently on</td></tr>
-<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The height within the given revision</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/Height.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the revision that the client is currently on</td></tr>
+<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the height within the given revision</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -323,20 +325,20 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryChannelsRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageRequest</td><td class="description-td td_text">The optional pagination for the request</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryChannelsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination request</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **PageRequest**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/pageRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Total number of results to be returned in the result page</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">Set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. It is only respected when offset is used. It is ignored when key is set</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">Reverse is set to true if results are to be returned in the descending order</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">uint64</td><td class="description-td td_text">offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">bool</td><td class="description-td td_text">count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">bool</td><td class="description-td td_text">reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -413,44 +415,46 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryChannelsResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">channels</td><td class="type-td td_text">IdentifiedChannel Array</td><td class="description-td td_text">List of channels</td></tr>
-<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageResponse</td><td class="description-td td_text">Pagination information in the response</td></tr>
-<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Height</td><td class="description-td td_text">Query block height</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryChannelsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">channels</td><td class="type-td td_text">IdentifiedChannel array</td><td class="description-td td_text">list of stored channels of the chain.</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination response</td></tr>
+<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">types.Height</td><td class="description-td td_text">query block height</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **IdentifiedChannel**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/identifiedChannel.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">State</td><td class="description-td td_text">Current state of the channel end</td></tr>
-<tr ><td class="parameter-td td_text">ordering</td><td class="type-td td_text">Order</td><td class="description-td td_text">Whether the channel is ordered or unordered</td></tr>
-<tr ><td class="parameter-td td_text">counterparty</td><td class="type-td td_text">Counterparty</td><td class="description-td td_text">Counterparty channel end</td></tr>
-<tr ><td class="parameter-td td_text">connection_hops</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of connection identifiers, in order, along which packets sent on this channel will travel</td></tr>
-<tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">String</td><td class="description-td td_text">Opaque channel version, which is agreed upon during the handshake</td></tr>
-<tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port identifier</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel identifier</td></tr>
-<tr ><td class="parameter-td td_text">upgrade_sequence</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Indicates the latest upgrade attempt performed by this channel. The value of 0 indicates the channel has never been upgraded</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/IdentifiedChannel.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">State</td><td class="description-td td_text">current state of the channel end</td></tr>
+<tr ><td class="parameter-td td_text">ordering</td><td class="type-td td_text">Order</td><td class="description-td td_text">whether the channel is ordered or unordered</td></tr>
+<tr ><td class="parameter-td td_text">counterparty</td><td class="type-td td_text">Counterparty</td><td class="description-td td_text">counterparty channel end</td></tr>
+<tr ><td class="parameter-td td_text">connection_hops</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of connection identifiers, in order, along which packets sent on this channel will travel</td></tr>
+<tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">string</td><td class="description-td td_text">opaque channel version, which is agreed upon during the handshake</td></tr>
+<tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port identifier</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel identifier</td></tr>
+<tr ><td class="parameter-td td_text">upgrade_sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">upgrade sequence indicates the latest upgrade attempt performed by this channel the value of 0 indicates the channel has never been upgraded</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **State**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/state.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/channel/v1/State.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">STATE_UNINITIALIZED_UNSPECIFIED</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">STATE_INIT</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">STATE_TRYOPEN</td></tr>
 <tr ><td class="code-td td_num">3</td><td class="name-td td_text">STATE_OPEN</td></tr>
-<tr ><td class="code-td td_num">4</td><td class="name-td td_text">STATE_CLOSED</td></tr></tbody></table>
+<tr ><td class="code-td td_num">4</td><td class="name-td td_text">STATE_CLOSED</td></tr>
+<tr ><td class="code-td td_num">5</td><td class="name-td td_text">STATE_FLUSHING</td></tr>
+<tr ><td class="code-td td_num">6</td><td class="name-td td_text">STATE_FLUSHCOMPLETE</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Order**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/order.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/channel/v1/Order.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">ORDER_NONE_UNSPECIFIED</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">ORDER_UNORDERED</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">ORDER_ORDERED</td></tr></tbody></table>
@@ -460,27 +464,27 @@ func main() {
 
 **Counterparty**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/counterparty.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port on the counterparty chain which owns the other end of the channel</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel end on the counterparty chain</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/Counterparty.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port on the counterparty chain which owns the other end of the channel.</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel end on the counterparty chain</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **PageResponse**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/pageResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">The key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
-<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Height**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/height.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The revision that the client is currently on</td></tr>
-<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The height within the given revision</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/Height.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the revision that the client is currently on</td></tr>
+<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the height within the given revision</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -602,21 +606,21 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryConnectionChannelsRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">connection</td><td class="type-td td_text">String</td><td class="description-td td_text">Connection unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageRequest</td><td class="description-td td_text">The optional pagination for the request</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryConnectionChannelsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">connection</td><td class="type-td td_text">string</td><td class="description-td td_text">connection unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination request</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **PageRequest**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/pageRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Total number of results to be returned in the result page</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">Set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. It is only respected when offset is used. It is ignored when key is set</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">Reverse is set to true if results are to be returned in the descending order</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">uint64</td><td class="description-td td_text">offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">bool</td><td class="description-td td_text">count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">bool</td><td class="description-td td_text">reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -707,44 +711,46 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryConnectionChannelsResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">channels</td><td class="type-td td_text">IdentifiedChannel Array</td><td class="description-td td_text">List of channels</td></tr>
-<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageResponse</td><td class="description-td td_text">Pagination information in the response</td></tr>
-<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Height</td><td class="description-td td_text">Query block height</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryConnectionChannelsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">channels</td><td class="type-td td_text">IdentifiedChannel array</td><td class="description-td td_text">list of channels associated with a connection.</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination response</td></tr>
+<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">types.Height</td><td class="description-td td_text">query block height</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **IdentifiedChannel**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/identifiedChannel.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">State</td><td class="description-td td_text">Current state of the channel end</td></tr>
-<tr ><td class="parameter-td td_text">ordering</td><td class="type-td td_text">Order</td><td class="description-td td_text">Whether the channel is ordered or unordered</td></tr>
-<tr ><td class="parameter-td td_text">counterparty</td><td class="type-td td_text">Counterparty</td><td class="description-td td_text">Counterparty channel end</td></tr>
-<tr ><td class="parameter-td td_text">connection_hops</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of connection identifiers, in order, along which packets sent on this channel will travel</td></tr>
-<tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">String</td><td class="description-td td_text">Opaque channel version, which is agreed upon during the handshake</td></tr>
-<tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port identifier</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel identifier</td></tr>
-<tr ><td class="parameter-td td_text">upgrade_sequence</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Indicates the latest upgrade attempt performed by this channel. The value of 0 indicates the channel has never been upgraded</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/IdentifiedChannel.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">State</td><td class="description-td td_text">current state of the channel end</td></tr>
+<tr ><td class="parameter-td td_text">ordering</td><td class="type-td td_text">Order</td><td class="description-td td_text">whether the channel is ordered or unordered</td></tr>
+<tr ><td class="parameter-td td_text">counterparty</td><td class="type-td td_text">Counterparty</td><td class="description-td td_text">counterparty channel end</td></tr>
+<tr ><td class="parameter-td td_text">connection_hops</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of connection identifiers, in order, along which packets sent on this channel will travel</td></tr>
+<tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">string</td><td class="description-td td_text">opaque channel version, which is agreed upon during the handshake</td></tr>
+<tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port identifier</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel identifier</td></tr>
+<tr ><td class="parameter-td td_text">upgrade_sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">upgrade sequence indicates the latest upgrade attempt performed by this channel the value of 0 indicates the channel has never been upgraded</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **State**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/state.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/channel/v1/State.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">STATE_UNINITIALIZED_UNSPECIFIED</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">STATE_INIT</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">STATE_TRYOPEN</td></tr>
 <tr ><td class="code-td td_num">3</td><td class="name-td td_text">STATE_OPEN</td></tr>
-<tr ><td class="code-td td_num">4</td><td class="name-td td_text">STATE_CLOSED</td></tr></tbody></table>
+<tr ><td class="code-td td_num">4</td><td class="name-td td_text">STATE_CLOSED</td></tr>
+<tr ><td class="code-td td_num">5</td><td class="name-td td_text">STATE_FLUSHING</td></tr>
+<tr ><td class="code-td td_num">6</td><td class="name-td td_text">STATE_FLUSHCOMPLETE</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Order**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/order.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/channel/v1/Order.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">ORDER_NONE_UNSPECIFIED</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">ORDER_UNORDERED</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">ORDER_ORDERED</td></tr></tbody></table>
@@ -754,27 +760,27 @@ func main() {
 
 **Counterparty**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/counterparty.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port on the counterparty chain which owns the other end of the channel</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel end on the counterparty chain</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/Counterparty.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port on the counterparty chain which owns the other end of the channel.</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel end on the counterparty chain</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **PageResponse**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/pageResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">The key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
-<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Height**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/height.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The revision that the client is currently on</td></tr>
-<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The height within the given revision</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/Height.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the revision that the client is currently on</td></tr>
+<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the height within the given revision</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -891,9 +897,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryChannelClientStateRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel unique identifier</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryChannelClientStateRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel unique identifier</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -985,44 +991,46 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryChannelClientStateResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">identified_client_state</td><td class="type-td td_text">IdentifiedChannel</td><td class="description-td td_text">Client state associated with the channel</td></tr>
-<tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Merkle proof of existence</td></tr>
-<tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">Height</td><td class="description-td td_text">Height at which the proof was retrieved</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryChannelClientStateResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">identified_client_state</td><td class="type-td td_text">types.IdentifiedClientState</td><td class="description-td td_text">client state associated with the channel</td></tr>
+<tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">byte array</td><td class="description-td td_text">merkle proof of existence</td></tr>
+<tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">types.Height</td><td class="description-td td_text">height at which the proof was retrieved</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **IdentifiedChannel**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/identifiedChannel.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">State</td><td class="description-td td_text">Current state of the channel end</td></tr>
-<tr ><td class="parameter-td td_text">ordering</td><td class="type-td td_text">Order</td><td class="description-td td_text">Whether the channel is ordered or unordered</td></tr>
-<tr ><td class="parameter-td td_text">counterparty</td><td class="type-td td_text">Counterparty</td><td class="description-td td_text">Counterparty channel end</td></tr>
-<tr ><td class="parameter-td td_text">connection_hops</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of connection identifiers, in order, along which packets sent on this channel will travel</td></tr>
-<tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">String</td><td class="description-td td_text">Opaque channel version, which is agreed upon during the handshake</td></tr>
-<tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port identifier</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel identifier</td></tr>
-<tr ><td class="parameter-td td_text">upgrade_sequence</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Indicates the latest upgrade attempt performed by this channel. The value of 0 indicates the channel has never been upgraded</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/IdentifiedChannel.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">State</td><td class="description-td td_text">current state of the channel end</td></tr>
+<tr ><td class="parameter-td td_text">ordering</td><td class="type-td td_text">Order</td><td class="description-td td_text">whether the channel is ordered or unordered</td></tr>
+<tr ><td class="parameter-td td_text">counterparty</td><td class="type-td td_text">Counterparty</td><td class="description-td td_text">counterparty channel end</td></tr>
+<tr ><td class="parameter-td td_text">connection_hops</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of connection identifiers, in order, along which packets sent on this channel will travel</td></tr>
+<tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">string</td><td class="description-td td_text">opaque channel version, which is agreed upon during the handshake</td></tr>
+<tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port identifier</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel identifier</td></tr>
+<tr ><td class="parameter-td td_text">upgrade_sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">upgrade sequence indicates the latest upgrade attempt performed by this channel the value of 0 indicates the channel has never been upgraded</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **State**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/state.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/channel/v1/State.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">STATE_UNINITIALIZED_UNSPECIFIED</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">STATE_INIT</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">STATE_TRYOPEN</td></tr>
 <tr ><td class="code-td td_num">3</td><td class="name-td td_text">STATE_OPEN</td></tr>
-<tr ><td class="code-td td_num">4</td><td class="name-td td_text">STATE_CLOSED</td></tr></tbody></table>
+<tr ><td class="code-td td_num">4</td><td class="name-td td_text">STATE_CLOSED</td></tr>
+<tr ><td class="code-td td_num">5</td><td class="name-td td_text">STATE_FLUSHING</td></tr>
+<tr ><td class="code-td td_num">6</td><td class="name-td td_text">STATE_FLUSHCOMPLETE</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Order**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/order.json) -->
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/channel/v1/Order.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">ORDER_NONE_UNSPECIFIED</td></tr>
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">ORDER_UNORDERED</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">ORDER_ORDERED</td></tr></tbody></table>
@@ -1032,18 +1040,18 @@ func main() {
 
 **Counterparty**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/counterparty.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port on the counterparty chain which owns the other end of the channel</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel end on the counterparty chain</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/Counterparty.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port on the counterparty chain which owns the other end of the channel.</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel end on the counterparty chain</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Height**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/height.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The revision that the client is currently on</td></tr>
-<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The height within the given revision</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/Height.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the revision that the client is currently on</td></tr>
+<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the height within the given revision</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1166,11 +1174,11 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryChannelConsensusStateRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Revision number of the consensus state</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Revision height of the consensus state</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryChannelConsensusStateRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">uint64</td><td class="description-td td_text">revision number of the consensus state</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">revision height of the consensus state</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1195,20 +1203,20 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryChannelConsensusStateResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">consensus_state</td><td class="type-td td_text">Any</td><td class="description-td td_text">Consensus state associated with the channel</td></tr>
-<tr ><td class="parameter-td td_text">client_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Client ID associated with the consensus state</td></tr>
-<tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Merkle proof of existence</td></tr>
-<tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">Height</td><td class="description-td td_text">Height at which the proof was retrieved</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryChannelConsensusStateResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">consensus_state</td><td class="type-td td_text">types1.Any</td><td class="description-td td_text">consensus state associated with the channel</td></tr>
+<tr ><td class="parameter-td td_text">client_id</td><td class="type-td td_text">string</td><td class="description-td td_text">client ID associated with the consensus state</td></tr>
+<tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">byte array</td><td class="description-td td_text">merkle proof of existence</td></tr>
+<tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">types.Height</td><td class="description-td td_text">height at which the proof was retrieved</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Height**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/height.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The revision that the client is currently on</td></tr>
-<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The height within the given revision</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/Height.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the revision that the client is currently on</td></tr>
+<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the height within the given revision</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1329,10 +1337,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryPacketCommitmentRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Packet sequence</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryPacketCommitmentRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">packet sequence</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1349,19 +1357,19 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryPacketCommitmentResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">commitment</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Packet associated with the request fields</td></tr>
-<tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Merkle proof of existence</td></tr>
-<tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">Height</td><td class="description-td td_text">Height at which the proof was retrieved</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryPacketCommitmentResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">commitment</td><td class="type-td td_text">byte array</td><td class="description-td td_text">packet associated with the request fields</td></tr>
+<tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">byte array</td><td class="description-td td_text">merkle proof of existence</td></tr>
+<tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">types.Height</td><td class="description-td td_text">height at which the proof was retrieved</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Height**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/height.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The revision that the client is currently on</td></tr>
-<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The height within the given revision</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/Height.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the revision that the client is currently on</td></tr>
+<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the height within the given revision</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1489,10 +1497,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryPacketCommitmentsRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageRequest</td><td class="description-td td_text">The optional pagination for the request</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryPacketCommitmentsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination request</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1537,39 +1545,39 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryPacketCommitmentsResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">commitments</td><td class="type-td td_text">PacketState Array</td><td class="description-td td_text">Commitments information</td></tr>
-<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageResponse</td><td class="description-td td_text">Pagination information in the response</td></tr>
-<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Height</td><td class="description-td td_text">Query block height</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryPacketCommitmentsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">commitments</td><td class="type-td td_text">PacketState array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination response</td></tr>
+<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">types.Height</td><td class="description-td td_text">query block height</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **PacketState**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/packetState.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port identifier</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel identifier</td></tr>
-<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Packet sequence</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Embedded data that represents packet state</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/PacketState.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel port identifier.</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel unique identifier.</td></tr>
+<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">packet sequence.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">byte array</td><td class="description-td td_text">embedded data that represents packet state.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **PageResponse**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/pageResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">The key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
-<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Height**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/height.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The revision that the client is currently on</td></tr>
-<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The height within the given revision</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/Height.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the revision that the client is currently on</td></tr>
+<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the height within the given revision</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1690,10 +1698,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryPacketReceiptRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Packet sequence</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryPacketReceiptRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">packet sequence</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1710,19 +1718,19 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryPacketReceiptResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">received</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">Success flag to mark if the receipt exists</td></tr>
-<tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Merkle proof of existence</td></tr>
-<tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">Height</td><td class="description-td td_text">Height at which the proof was retrieved</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryPacketReceiptResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">received</td><td class="type-td td_text">bool</td><td class="description-td td_text">success flag for if receipt exists</td></tr>
+<tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">byte array</td><td class="description-td td_text">merkle proof of existence</td></tr>
+<tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">types.Height</td><td class="description-td td_text">height at which the proof was retrieved</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Height**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/height.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The revision that the client is currently on</td></tr>
-<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The height within the given revision</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/Height.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the revision that the client is currently on</td></tr>
+<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the height within the given revision</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1845,10 +1853,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryPacketAcknowledgementRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Packet sequence</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryPacketAcknowledgementRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">packet sequence</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1865,19 +1873,19 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryPacketAcknowledgementResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">acknowledgement</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Success flag to mark if the receipt exists</td></tr>
-<tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Merkle proof of existence</td></tr>
-<tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">Height</td><td class="description-td td_text">Height at which the proof was retrieved</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryPacketAcknowledgementResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">acknowledgement</td><td class="type-td td_text">byte array</td><td class="description-td td_text">packet associated with the request fields</td></tr>
+<tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">byte array</td><td class="description-td td_text">merkle proof of existence</td></tr>
+<tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">types.Height</td><td class="description-td td_text">height at which the proof was retrieved</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Height**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/height.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The revision that the client is currently on</td></tr>
-<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The height within the given revision</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/Height.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the revision that the client is currently on</td></tr>
+<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the height within the given revision</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -2008,23 +2016,23 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryPacketAcknowledgementsRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageRequest</td><td class="description-td td_text">The optional pagination for the request</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">packet_commitment_sequences</td><td class="type-td td_text">Integer Array</td><td class="description-td td_text">List of packet sequences</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryPacketAcknowledgementsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination request</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">packet_commitment_sequences</td><td class="type-td td_text">uint64 array</td><td class="description-td td_text">list of packet sequences</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **PageRequest**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/pageRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Total number of results to be returned in the result page</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">Set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. It is only respected when offset is used. It is ignored when key is set</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">Reverse is set to true if results are to be returned in the descending order</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">uint64</td><td class="description-td td_text">offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">bool</td><td class="description-td td_text">count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">bool</td><td class="description-td td_text">reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -2053,37 +2061,37 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryPacketAcknowledgementsResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">acknowledgements</td><td class="type-td td_text">PacketState Array</td><td class="description-td td_text">Acknowledgements details</td></tr>
-<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageResponse</td><td class="description-td td_text">Pagination information in the response</td></tr>
-<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Height</td><td class="description-td td_text">Query block height</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryPacketAcknowledgementsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">acknowledgements</td><td class="type-td td_text">PacketState array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination response</td></tr>
+<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">types.Height</td><td class="description-td td_text">query block height</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 **PacketState**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/packetState.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port identifier</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel identifier</td></tr>
-<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Packet sequence</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Embedded data that represents packet state</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/PacketState.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel port identifier.</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel unique identifier.</td></tr>
+<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">packet sequence.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">byte array</td><td class="description-td td_text">embedded data that represents packet state.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **PageResponse**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/pageResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">The key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
-<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Height**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/height.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The revision that the client is currently on</td></tr>
-<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The height within the given revision</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/Height.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the revision that the client is currently on</td></tr>
+<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the height within the given revision</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -2206,10 +2214,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryUnreceivedPacketsRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">packet_commitment_sequences</td><td class="type-td td_text">Integer Array</td><td class="description-td td_text">List of packet sequences</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryUnreceivedPacketsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">packet_commitment_sequences</td><td class="type-td td_text">uint64 array</td><td class="description-td td_text">list of packet sequences</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -2227,18 +2235,18 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryUnreceivedPacketsResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sequences</td><td class="type-td td_text">Integer Array</td><td class="description-td td_text">List of unreceived packet sequences</td></tr>
-<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Height</td><td class="description-td td_text">Query block height</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryUnreceivedPacketsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sequences</td><td class="type-td td_text">uint64 array</td><td class="description-td td_text">list of unreceived packet sequences</td></tr>
+<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">types.Height</td><td class="description-td td_text">query block height</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Height**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/height.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The revision that the client is currently on</td></tr>
-<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The height within the given revision</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/Height.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the revision that the client is currently on</td></tr>
+<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the height within the given revision</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -2361,10 +2369,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryUnreceivedAcksRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">packet_ack_sequences</td><td class="type-td td_text">Integer Array</td><td class="description-td td_text">List of acknowledgement sequences</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryUnreceivedAcksRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">packet_ack_sequences</td><td class="type-td td_text">uint64 array</td><td class="description-td td_text">list of acknowledgement sequences</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -2382,18 +2390,18 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryUnreceivedAcksResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sequences</td><td class="type-td td_text">Integer Array</td><td class="description-td td_text">List of unreceived packet sequences</td></tr>
-<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Height</td><td class="description-td td_text">Query block height</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryUnreceivedAcksResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sequences</td><td class="type-td td_text">uint64 array</td><td class="description-td td_text">list of unreceived acknowledgement sequences</td></tr>
+<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">types.Height</td><td class="description-td td_text">query block height</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Height**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/height.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The revision that the client is currently on</td></tr>
-<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The height within the given revision</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/Height.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the revision that the client is currently on</td></tr>
+<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the height within the given revision</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -2515,9 +2523,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryNextSequenceReceiveRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Port unique identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Channel unique identifier</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryNextSequenceReceiveRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">port_id</td><td class="type-td td_text">string</td><td class="description-td td_text">port unique identifier</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">channel_id</td><td class="type-td td_text">string</td><td class="description-td td_text">channel unique identifier</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -2534,17 +2542,17 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/channel/queryNextSequenceReceiveResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_sequence_receive</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Next sequence receive number</td></tr>
-<tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Merkle proof of existence</td></tr>
-<tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">Height</td><td class="description-td td_text">Height at which the proof was retrieved</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/04-channel/types/QueryNextSequenceReceiveResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_sequence_receive</td><td class="type-td td_text">uint64</td><td class="description-td td_text">next sequence receive number</td></tr>
+<tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">byte array</td><td class="description-td td_text">merkle proof of existence</td></tr>
+<tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">types.Height</td><td class="description-td td_text">height at which the proof was retrieved</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Height**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/ibc/core/height.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The revision that the client is currently on</td></tr>
-<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The height within the given revision</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/Height.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">revision_number</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the revision that the client is currently on</td></tr>
+<tr ><td class="parameter-td td_text">revision_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the height within the given revision</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->

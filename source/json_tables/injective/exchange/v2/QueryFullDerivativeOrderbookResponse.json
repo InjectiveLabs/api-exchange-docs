@@ -8,5 +8,10 @@
     "Parameter": "Asks",
     "Type": "TrimmedLimitOrder array",
     "Description": ""
+  },
+  {
+    "Parameter": "seq",
+    "Type": "uint64",
+    "Description": "the current orderbook sequence number"
   }
 ]

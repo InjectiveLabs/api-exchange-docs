@@ -58,5 +58,50 @@
     "Parameter": "failed_binary_options_orders_cids",
     "Type": "string array",
     "Description": ""
+  },
+  {
+    "Parameter": "spot_market_order_hashes",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "created_spot_market_orders_cids",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "failed_spot_market_orders_cids",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "derivative_market_order_hashes",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "created_derivative_market_orders_cids",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "failed_derivative_market_orders_cids",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "binary_options_market_order_hashes",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "created_binary_options_market_orders_cids",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "failed_binary_options_market_orders_cids",
+    "Type": "string array",
+    "Description": ""
   }
 ]

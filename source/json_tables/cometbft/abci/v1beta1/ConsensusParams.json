@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "block",
+    "Type": "BlockParams",
+    "Description": ""
+  },
+  {
+    "Parameter": "evidence",
+    "Type": "v1beta1.EvidenceParams",
+    "Description": ""
+  },
+  {
+    "Parameter": "validator",
+    "Type": "v1beta1.ValidatorParams",
+    "Description": ""
+  },
+  {
+    "Parameter": "version",
+    "Type": "v1beta1.VersionParams",
+    "Description": ""
+  }
+]

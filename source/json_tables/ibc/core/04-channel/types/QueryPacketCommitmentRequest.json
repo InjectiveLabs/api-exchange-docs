@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "port_id",
+    "Type": "string",
+    "Description": "port unique identifier",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "channel_id",
+    "Type": "string",
+    "Description": "channel unique identifier",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "sequence",
+    "Type": "uint64",
+    "Description": "packet sequence",
+    "Required": "Yes"
+  }
+]

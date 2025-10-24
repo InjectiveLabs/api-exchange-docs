@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "vote_extensions_enable_height",
+    "Type": "int64",
+    "Description": "vote_extensions_enable_height has been deprecated. Instead, use FeatureParams.vote_extensions_enable_height."
+  }
+]

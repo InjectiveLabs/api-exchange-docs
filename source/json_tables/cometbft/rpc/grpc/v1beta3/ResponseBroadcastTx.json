@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "check_tx",
+    "Type": "v1beta3.ResponseCheckTx",
+    "Description": ""
+  },
+  {
+    "Parameter": "tx_result",
+    "Type": "v1beta3.ExecTxResult",
+    "Description": ""
+  }
+]

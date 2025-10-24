@@ -2,6 +2,6 @@
   {
     "Parameter": "policy_manager_capabilities",
     "Type": "PolicyManagerCapability array",
-    "Description": ""
+    "Description": "List of policy manager capabilities"
   }
 ]

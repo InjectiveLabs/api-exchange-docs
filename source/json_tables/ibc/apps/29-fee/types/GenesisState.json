@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "identified_fees",
+    "Type": "IdentifiedPacketFees array",
+    "Description": "list of identified packet fees"
+  },
+  {
+    "Parameter": "fee_enabled_channels",
+    "Type": "FeeEnabledChannel array",
+    "Description": "list of fee enabled channels"
+  },
+  {
+    "Parameter": "registered_payees",
+    "Type": "RegisteredPayee array",
+    "Description": "list of registered payees"
+  },
+  {
+    "Parameter": "registered_counterparty_payees",
+    "Type": "RegisteredCounterpartyPayee array",
+    "Description": "list of registered counterparty payees"
+  },
+  {
+    "Parameter": "forward_relayers",
+    "Type": "ForwardRelayerAddress array",
+    "Description": "list of forward relayer addresses"
+  }
+]

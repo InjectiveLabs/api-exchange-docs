@@ -1,3 +1,0 @@
-[
-    {"Parameter": "client_id", "Type": "String", "Description": "Client unique identifier", "Required": "Yes"}
-]

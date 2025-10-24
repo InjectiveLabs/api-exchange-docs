@@ -1,0 +1,52 @@
+[
+  {
+    "module_name": "connection",
+    "error_code": 2,
+    "description": "connection already exists"
+  },
+  {
+    "module_name": "connection",
+    "error_code": 3,
+    "description": "connection not found"
+  },
+  {
+    "module_name": "connection",
+    "error_code": 4,
+    "description": "light client connection paths not found"
+  },
+  {
+    "module_name": "connection",
+    "error_code": 5,
+    "description": "connection path is not associated to the given light client"
+  },
+  {
+    "module_name": "connection",
+    "error_code": 6,
+    "description": "invalid connection state"
+  },
+  {
+    "module_name": "connection",
+    "error_code": 7,
+    "description": "invalid counterparty connection"
+  },
+  {
+    "module_name": "connection",
+    "error_code": 8,
+    "description": "invalid connection"
+  },
+  {
+    "module_name": "connection",
+    "error_code": 9,
+    "description": "invalid connection version"
+  },
+  {
+    "module_name": "connection",
+    "error_code": 10,
+    "description": "connection version negotiation failed"
+  },
+  {
+    "module_name": "connection",
+    "error_code": 11,
+    "description": "invalid connection identifier"
+  }
+]

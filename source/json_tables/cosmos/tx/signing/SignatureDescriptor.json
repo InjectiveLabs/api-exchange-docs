@@ -13,35 +13,5 @@
     "Parameter": "sequence",
     "Type": "uint64",
     "Description": "sequence is the sequence of the account, which describes the number of committed transactions signed by a given address. It is used to prevent replay attacks."
-  },
-  {
-    "Parameter": "single",
-    "Type": "SignatureDescriptor_Data_Single",
-    "Description": ""
-  },
-  {
-    "Parameter": "multi",
-    "Type": "SignatureDescriptor_Data_Multi",
-    "Description": ""
-  },
-  {
-    "Parameter": "mode",
-    "Type": "SignMode",
-    "Description": "mode is the signing mode of the single signer"
-  },
-  {
-    "Parameter": "signature",
-    "Type": "byte array",
-    "Description": "signature is the raw signature bytes"
-  },
-  {
-    "Parameter": "bitarray",
-    "Type": "types1.CompactBitArray",
-    "Description": "bitarray specifies which keys within the multisig are signing"
-  },
-  {
-    "Parameter": "signatures",
-    "Type": "SignatureDescriptor_Data array",
-    "Description": "signatures is the signatures of the multi-signature"
   }
 ]

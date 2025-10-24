@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "sequence",
+    "Type": "uint64",
+    "Description": "number corresponds to the order of sends and receives, where a Packet with an earlier sequence number must be sent and received before a Packet with a later sequence number."
+  },
+  {
+    "Parameter": "source_port",
+    "Type": "string",
+    "Description": "identifies the port on the sending chain."
+  },
+  {
+    "Parameter": "source_channel",
+    "Type": "string",
+    "Description": "identifies the channel end on the sending chain."
+  },
+  {
+    "Parameter": "destination_port",
+    "Type": "string",
+    "Description": "identifies the port on the receiving chain."
+  },
+  {
+    "Parameter": "destination_channel",
+    "Type": "string",
+    "Description": "identifies the channel end on the receiving chain."
+  },
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "actual opaque bytes transferred directly to the application module"
+  },
+  {
+    "Parameter": "timeout_height",
+    "Type": "types.Height",
+    "Description": "block height after which the packet times out"
+  },
+  {
+    "Parameter": "timeout_timestamp",
+    "Type": "uint64",
+    "Description": "block timestamp (in nanoseconds) after which the packet times out"
+  }
+]

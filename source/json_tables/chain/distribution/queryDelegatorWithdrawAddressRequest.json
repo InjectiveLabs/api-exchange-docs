@@ -1,3 +1,0 @@
-[
-    {"Parameter": "delegator_address", "Type": "String", "Description": "The delegator address to query for", "Required": "Yes"}
-]

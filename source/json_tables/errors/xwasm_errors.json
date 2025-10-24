@@ -1,0 +1,57 @@
+[
+  {
+    "module_name": "xwasm",
+    "error_code": 1,
+    "description": "invalid gas limit"
+  },
+  {
+    "module_name": "xwasm",
+    "error_code": 2,
+    "description": "invalid gas price"
+  },
+  {
+    "module_name": "xwasm",
+    "error_code": 3,
+    "description": "invalid contract address"
+  },
+  {
+    "module_name": "xwasm",
+    "error_code": 4,
+    "description": "contract already registered"
+  },
+  {
+    "module_name": "xwasm",
+    "error_code": 5,
+    "description": "duplicate contract"
+  },
+  {
+    "module_name": "xwasm",
+    "error_code": 6,
+    "description": "no contract addresses found"
+  },
+  {
+    "module_name": "xwasm",
+    "error_code": 7,
+    "description": "invalid code id"
+  },
+  {
+    "module_name": "xwasm",
+    "error_code": 8,
+    "description": "not possible to deduct gas fees"
+  },
+  {
+    "module_name": "xwasm",
+    "error_code": 9,
+    "description": "missing granter address"
+  },
+  {
+    "module_name": "xwasm",
+    "error_code": 10,
+    "description": "granter address does not exist"
+  },
+  {
+    "module_name": "xwasm",
+    "error_code": 11,
+    "description": "invalid funding mode"
+  }
+]

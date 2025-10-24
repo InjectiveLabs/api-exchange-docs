@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "power",
+    "Type": "int64",
+    "Description": "PubKey pub_key = 2 [(gogoproto.nullable)=false];"
+  }
+]

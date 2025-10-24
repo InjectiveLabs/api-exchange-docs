@@ -2,6 +2,6 @@
   {
     "Parameter": "role_managers",
     "Type": "RoleManager array",
-    "Description": ""
+    "Description": "List of role managers"
   }
 ]

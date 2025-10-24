@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "error",
+    "Type": "RemoteSignerError",
+    "Description": ""
+  },
+  {
+    "Parameter": "pub_key_bytes",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "pub_key_type",
+    "Type": "string",
+    "Description": ""
+  }
+]

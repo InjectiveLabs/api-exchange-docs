@@ -2,6 +2,6 @@
   {
     "Parameter": "wasm_hook_query_max_gas",
     "Type": "uint64",
-    "Description": ""
+    "Description": "Max amount of gas allowed for wasm hook queries"
   }
 ]

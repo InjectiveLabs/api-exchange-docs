@@ -1,3 +1,0 @@
-[
-    {"Parameter": "market_id", "Type": "String", "Description": "The marke ID to query for", "Required": "Yes"}
-]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "permission",
+    "Type": "AccessType",
+    "Description": ""
+  },
+  {
+    "Parameter": "addresses",
+    "Type": "string array",
+    "Description": ""
+  }
+]

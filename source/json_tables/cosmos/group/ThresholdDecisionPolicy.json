@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "threshold",
+    "Type": "string",
+    "Description": "threshold is the minimum weighted sum of `YES` votes that must be met or exceeded for a proposal to succeed."
+  },
+  {
+    "Parameter": "windows",
+    "Type": "DecisionPolicyWindows",
+    "Description": "windows defines the different windows for voting and execution."
+  }
+]

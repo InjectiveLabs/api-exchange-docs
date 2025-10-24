@@ -2,13 +2,13 @@
   {
     "Parameter": "denom",
     "Type": "string",
-    "Description": "",
+    "Description": "The token denom",
     "Required": "Yes"
   },
   {
     "Parameter": "manager",
     "Type": "string",
-    "Description": "",
+    "Description": "The manager Injective address",
     "Required": "Yes"
   }
 ]

@@ -1,3 +1,0 @@
-[
-    {"Parameter": "base_fee", "Type": "EipBaseFee", "Description": "The current chain gas price"}
-]

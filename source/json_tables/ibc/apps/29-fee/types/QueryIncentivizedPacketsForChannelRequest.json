@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination defines an optional pagination for the request.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "port_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "channel_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "query_height",
+    "Type": "uint64",
+    "Description": "Height to query at",
+    "Required": "Yes"
+  }
+]

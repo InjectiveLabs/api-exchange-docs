@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "hash",
+    "Type": "byte array",
+    "Description": "the hash of the block that this vote may be referring to"
+  },
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": "the height of the extended vote"
+  },
+  {
+    "Parameter": "time",
+    "Type": "time.Time",
+    "Description": "info of the block that this vote may be referring to"
+  },
+  {
+    "Parameter": "txs",
+    "Type": "][byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "proposed_last_commit",
+    "Type": "CommitInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "misbehavior",
+    "Type": "v1beta2.Misbehavior array",
+    "Description": ""
+  },
+  {
+    "Parameter": "next_validators_hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "proposer_address",
+    "Type": "byte array",
+    "Description": "address of the public key of the original proposer of the block."
+  }
+]

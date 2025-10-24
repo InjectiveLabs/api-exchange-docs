@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "data",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "app_version",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_block_height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_block_app_hash",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

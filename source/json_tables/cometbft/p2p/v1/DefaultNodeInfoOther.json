@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "tx_index",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "rpc_address",
+    "Type": "string",
+    "Description": ""
+  }
+]

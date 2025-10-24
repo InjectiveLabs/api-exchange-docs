@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "fields",
+    "Type": "UpgradeFields",
+    "Description": ""
+  },
+  {
+    "Parameter": "timeout",
+    "Type": "Timeout",
+    "Description": ""
+  },
+  {
+    "Parameter": "next_sequence_send",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

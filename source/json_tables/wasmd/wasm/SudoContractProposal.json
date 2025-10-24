@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": "Title is a short summary"
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": "Description is a human readable text"
+  },
+  {
+    "Parameter": "contract",
+    "Type": "string",
+    "Description": "Contract is the address of the smart contract"
+  },
+  {
+    "Parameter": "msg",
+    "Type": "RawContractMessage",
+    "Description": "Msg json encoded message to be passed to the contract as sudo"
+  }
+]

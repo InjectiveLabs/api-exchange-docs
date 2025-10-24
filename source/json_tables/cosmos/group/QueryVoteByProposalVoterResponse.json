@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "vote",
+    "Type": "Vote",
+    "Description": "vote is the vote with given proposal_id and voter."
+  }
+]

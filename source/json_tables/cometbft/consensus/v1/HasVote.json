@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "round",
+    "Type": "int32",
+    "Description": ""
+  },
+  {
+    "Parameter": "type",
+    "Type": "v1.SignedMsgType",
+    "Description": ""
+  },
+  {
+    "Parameter": "index",
+    "Type": "int32",
+    "Description": ""
+  }
+]

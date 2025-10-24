@@ -1,0 +1,18 @@
+[
+  {
+    "Code": "0",
+    "Name": "SIGNED_MSG_TYPE_UNKNOWN"
+  },
+  {
+    "Code": "1",
+    "Name": "SIGNED_MSG_TYPE_PREVOTE"
+  },
+  {
+    "Code": "2",
+    "Name": "SIGNED_MSG_TYPE_PRECOMMIT"
+  },
+  {
+    "Code": "32",
+    "Name": "SIGNED_MSG_TYPE_PROPOSAL"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "percentage",
+    "Type": "string",
+    "Description": "percentage is the minimum percentage of the weighted sum of `YES` votes must meet for a proposal to succeed."
+  },
+  {
+    "Parameter": "windows",
+    "Type": "DecisionPolicyWindows",
+    "Description": "windows defines the different windows for voting and execution."
+  }
+]

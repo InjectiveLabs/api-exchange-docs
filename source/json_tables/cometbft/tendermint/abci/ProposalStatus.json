@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "UNKNOWN"
+  },
+  {
+    "Code": "1",
+    "Name": "ACCEPT"
+  },
+  {
+    "Code": "2",
+    "Name": "REJECT"
+  }
+]

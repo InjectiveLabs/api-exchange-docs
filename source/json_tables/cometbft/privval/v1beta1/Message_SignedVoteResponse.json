@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "signed_vote_response",
+    "Type": "SignedVoteResponse",
+    "Description": ""
+  }
+]

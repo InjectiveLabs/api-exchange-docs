@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "deliver_txs",
+    "Type": "v1beta1.ResponseDeliverTx array",
+    "Description": ""
+  },
+  {
+    "Parameter": "end_block",
+    "Type": "v1beta1.ResponseEndBlock",
+    "Description": ""
+  },
+  {
+    "Parameter": "begin_block",
+    "Type": "v1beta1.ResponseBeginBlock",
+    "Description": ""
+  }
+]

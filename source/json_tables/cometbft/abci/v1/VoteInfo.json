@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "validator",
+    "Type": "Validator",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_id_flag",
+    "Type": "v1.BlockIDFlag",
+    "Description": ""
+  }
+]

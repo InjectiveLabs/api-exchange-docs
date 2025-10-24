@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "derivative_trade",
+    "Type": "DerivativeTrade",
+    "Description": "New derivative market trade"
+  }
+]

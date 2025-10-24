@@ -2,6 +2,6 @@
   {
     "Parameter": "role_manager",
     "Type": "RoleManager",
-    "Description": ""
+    "Description": "The role manager details"
   }
 ]

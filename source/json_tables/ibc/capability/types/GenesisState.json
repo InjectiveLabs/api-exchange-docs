@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "index",
+    "Type": "uint64",
+    "Description": "index is the capability global index."
+  },
+  {
+    "Parameter": "owners",
+    "Type": "GenesisOwners array",
+    "Description": "owners represents a map from index to owners of the capability index index key is string to allow amino marshalling."
+  }
+]

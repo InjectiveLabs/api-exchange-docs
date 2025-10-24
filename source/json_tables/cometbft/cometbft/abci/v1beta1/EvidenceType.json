@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "UNKNOWN"
+  },
+  {
+    "Code": "1",
+    "Name": "DUPLICATE_VOTE"
+  },
+  {
+    "Code": "2",
+    "Name": "LIGHT_CLIENT_ATTACK"
+  }
+]

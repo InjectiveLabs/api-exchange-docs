@@ -197,12 +197,11 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|granter|String|The INJ address authorizing a grantee|Yes|
-|grantee|String|The INJ address being authorized by the granter|Yes|
-|msg_type|String|The message type being authorized by the granter|Yes|
-|expire_in|Integer|The expiration time for the authorization|Yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/authz/MsgGrant.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">granter</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">grantee</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">grant</td><td class="type-td td_text">Grant</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 **Typed Authorization Messages**
 
@@ -510,10 +509,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|grantee|String|The INJ address of the grantee|Yes|
-|msgs|Array|The messages to be executed on behalf of the granter|Yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/authz/MsgExec.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">grantee</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">msgs</td><td class="type-td td_text">types.Any array</td><td class="description-td td_text">Execute Msg. The x/authz will try to find a grant matching (msg.signers[0], grantee, MsgTypeURL(msg)) triple and validate it.</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
 > Response Example:
@@ -744,11 +743,11 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|granter|String|The INJ address unauthorizing a grantee|Yes|
-|grantee|String|The INJ address being unauthorized by the granter|Yes|
-|msg_type|String|The message type being unauthorized by the granter|Yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/authz/MsgRevoke.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">granter</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">grantee</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">msg_type_url</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 > Response Example:
 
@@ -931,11 +930,12 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|granter|String|The account owner|Yes|
-|grantee|String|The authorized account|Yes|
-|msg_type_url|Integer|The authorized message type|No|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/authz/QueryGrantsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">granter</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">grantee</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">msg_type_url</td><td class="type-td td_text">string</td><td class="description-td td_text">Optional, msg_type_url, when set, will query only grants matching given msg type.</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination defines an pagination for the request.</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -957,26 +957,25 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|grants|Grants|Grants object|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/authz/QueryGrantsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">grants</td><td class="type-td td_text">Grant array</td><td class="description-td td_text">authorizations is a list of grants granted for grantee by granter.</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination defines an pagination for the response.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-**Grants**
+<br/>
 
-|Parameter|Type|Description|
-|----|----|----|
-|authorization|Authorization|Authorization object|
-|expiration|Expiration|Expiration object|
+**Grant**
 
-**Authorization**
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/authz/Grant.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">authorization</td><td class="type-td td_text">types.Any</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">expiration</td><td class="type-td td_text">time.Time</td><td class="description-td td_text">time when the grant will expire and will be pruned. If null, then the grant doesn't have a time expiration (other conditions  in `authorization` may apply to invalidate the grant)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|
-|----|----|----|
-|type_url|String|The authorization type|
-|value|String|The authorized message|
+<br/>
 
-**Expiration**
+**PageResponse**
 
-|Parameter|Type|Description|
-|----|----|----|
-|seconds|String|The expiration time for an authorization|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->

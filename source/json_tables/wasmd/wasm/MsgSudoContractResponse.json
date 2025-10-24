@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "Data contains bytes to returned from the contract"
+  }
+]

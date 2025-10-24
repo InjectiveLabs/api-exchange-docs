@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "allowance",
+    "Type": "types1.Any",
+    "Description": "allowance can be any of basic and periodic fee allowance."
+  },
+  {
+    "Parameter": "allowed_messages",
+    "Type": "string array",
+    "Description": "allowed_messages are the messages for which the grantee has the access."
+  }
+]

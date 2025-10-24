@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "time",
+    "Type": "time.Time",
+    "Description": ""
+  },
+  {
+    "Parameter": "msg",
+    "Type": "WALMessage",
+    "Description": ""
+  }
+]

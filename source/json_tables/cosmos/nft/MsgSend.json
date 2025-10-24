@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "class_id",
+    "Type": "string",
+    "Description": "class_id defines the unique identifier of the nft classification, similar to the contract address of ERC721",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "id",
+    "Type": "string",
+    "Description": "id defines the unique identification of nft",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "sender is the address of the owner of nft",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "receiver",
+    "Type": "string",
+    "Description": "receiver is the receiver address of nft",
+    "Required": "Yes"
+  }
+]

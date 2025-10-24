@@ -2,25 +2,25 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "The sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "denom",
     "Type": "string",
-    "Description": "",
+    "Description": "The namespace denom to which this updates are applied",
     "Required": "Yes"
   },
   {
     "Parameter": "role_actors_to_add",
     "Type": "RoleActors array",
-    "Description": "",
+    "Description": "The roles to add for given actors",
     "Required": "No"
   },
   {
     "Parameter": "role_actors_to_revoke",
     "Type": "RoleActors array",
-    "Description": "",
+    "Description": "The roles to revoke from given actors",
     "Required": "No"
   }
 ]

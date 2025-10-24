@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "round",
+    "Type": "int32",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_part_set_header",
+    "Type": "v1.PartSetHeader",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_parts",
+    "Type": "v11.BitArray",
+    "Description": ""
+  },
+  {
+    "Parameter": "is_commit",
+    "Type": "bool",
+    "Description": ""
+  }
+]

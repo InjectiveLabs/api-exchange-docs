@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "the forward relayer address"
+  },
+  {
+    "Parameter": "packet_id",
+    "Type": "types.PacketId",
+    "Description": "unique packet identifer comprised of the channel ID, port ID and sequence"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "validators",
+    "Type": "Validator array",
+    "Description": ""
+  },
+  {
+    "Parameter": "proposer",
+    "Type": "Validator",
+    "Description": ""
+  },
+  {
+    "Parameter": "total_voting_power",
+    "Type": "int64",
+    "Description": ""
+  }
+]

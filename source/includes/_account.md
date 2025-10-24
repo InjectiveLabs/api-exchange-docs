@@ -1155,11 +1155,11 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/peggy/msgSendToEth.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">The sender's address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">eth_dest</td><td class="type-td td_text">String</td><td class="description-td td_text">Destination Ethereum address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">Coin</td><td class="description-td td_text">The coin to send across the bridge (note the restriction that this is a single coin, not a set of coins)</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">bridge_fee</td><td class="type-td td_text">Coin</td><td class="description-td td_text">The fee paid for the bridge, distinct from the fee paid to the chain to actually send this message in the first place. So a successful send has two layers of fees for the user</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/peggy/MsgSendToEth.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">The sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">eth_dest</td><td class="type-td td_text">string</td><td class="description-td td_text">The Ethereum address to send the tokens to</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">types.Coin</td><td class="description-td td_text">The amount of tokens to send</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">bridge_fee</td><td class="type-td td_text">types.Coin</td><td class="description-td td_text">The fee paid for the bridge, distinct from the fee paid to the chain to actually send this message in the first place. So a successful send has two layers of fees for the user</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1300,7 +1300,7 @@ if __name__ == "__main__":
 <tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">Float</td><td class="description-td td_text">The amount to transfer</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">maxFeePerGas</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The maxFeePerGas in Gwei</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">maxPriorityFeePerGas</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The maxPriorityFeePerGas in Gwei</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">peggo_abi</td><td class="type-td td_text">String</td><td class="description-td td_text">Peggo contract ABI|</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">peggo_abi</td><td class="type-td td_text">String</td><td class="description-td td_text">Peggo contract ABI</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">String</td><td class="description-td td_text">The body of the message to send to Injective chain to do the deposit</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of decimals in Injective chain of the token being transferred (default: 18)</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -1423,8 +1423,8 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tx/getTxRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">String</td><td class="description-td td_text">The TX hash to query, encoded as a hex string</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/GetTxRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">string</td><td class="description-td td_text">hash is the tx hash to query, encoded as a hex string.</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -2113,70 +2113,74 @@ tx:
 txhash: A2B2B971C690AE7977451D24D6F450AECE6BCCB271E91E32C2563342DDA5254B
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tx/getTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Tx</td><td class="description-td td_text">Transaction details</td></tr>
-<tr ><td class="parameter-td td_text">tx_resposne</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">Transaction details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/GetTxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Tx</td><td class="description-td td_text">tx is the queried transaction.</td></tr>
+<tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Tx**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tx.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">body</td><td class="type-td td_text">TxBody</td><td class="description-td td_text">Body is the processable content of the transaction</td></tr>
-<tr ><td class="parameter-td td_text">auth_info</td><td class="type-td td_text">AuthInfo</td><td class="description-td td_text">Authorization related content of the transaction (specifically signers, signer modes and fee)</td></tr>
-<tr ><td class="parameter-td td_text">signatures</td><td class="type-td td_text">Bytes Array Array</td><td class="description-td td_text">List of signatures that matches the length and order of AuthInfo's signer_infos to allow connecting signature meta information like public key and signing mode by position</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/Tx.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">body</td><td class="type-td td_text">TxBody</td><td class="description-td td_text">body is the processable content of the transaction</td></tr>
+<tr ><td class="parameter-td td_text">auth_info</td><td class="type-td td_text">AuthInfo</td><td class="description-td td_text">auth_info is the authorization related content of the transaction, specifically signers, signer modes and fee</td></tr>
+<tr ><td class="parameter-td td_text">signatures</td><td class="type-td td_text">][byte array</td><td class="description-td td_text">signatures is a list of signatures that matches the length and order of AuthInfo's signer_infos to allow connecting signature meta information like public key and signing mode by position.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TxBody**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/txBody.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">messages</td><td class="type-td td_text">Any Array</td><td class="description-td td_text">List of messages to be executed. The required signers of those messages define the number and order of elements in AuthInfo's signer_infos and Tx's signatures. Each required signer address is added to the list only the first time it occurs. By convention, the first required signer (usually from the first message) is referred to as the primary signer and pays the fee for the whole transaction</td></tr>
-<tr ><td class="parameter-td td_text">memo</td><td class="type-td td_text">String</td><td class="description-td td_text">Memo is any arbitrary note/comment to be added to the transaction</td></tr>
-<tr ><td class="parameter-td td_text">timeout_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The block height after which this transaction will not be processed by the chain</td></tr>
-<tr ><td class="parameter-td td_text">extension_options</td><td class="type-td td_text">Any Array</td><td class="description-td td_text">These are arbitrary options that can be added by chains when the default options are not sufficient. If any of these are present and can't be handled, the transaction will be rejected</td></tr>
-<tr ><td class="parameter-td td_text">non_critical_extension_options</td><td class="type-td td_text">Any Array</td><td class="description-td td_text">These are arbitrary options that can be added by chains when the default options are not sufficient. If any of these are present and can't be handled, they will be ignored</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/TxBody.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">messages</td><td class="type-td td_text">types.Any array</td><td class="description-td td_text">messages is a list of messages to be executed. The required signers of those messages define the number and order of elements in AuthInfo's signer_infos and Tx's signatures. Each required signer address is added to the list only the first time it occurs. By convention, the first required signer (usually from the first message) is referred to as the primary signer and pays the fee for the whole transaction.</td></tr>
+<tr ><td class="parameter-td td_text">memo</td><td class="type-td td_text">string</td><td class="description-td td_text">memo is any arbitrary note/comment to be added to the transaction. WARNING: in clients, any publicly exposed text should not be called memo, but should be called `note` instead (see https://github.com/cosmos/cosmos-sdk/issues/9122).</td></tr>
+<tr ><td class="parameter-td td_text">timeout_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">timeout is the block height after which this transaction will not be processed by the chain</td></tr>
+<tr ><td class="parameter-td td_text">extension_options</td><td class="type-td td_text">types.Any array</td><td class="description-td td_text">extension_options are arbitrary options that can be added by chains when the default options are not sufficient. If any of these are present and can't be handled, the transaction will be rejected</td></tr>
+<tr ><td class="parameter-td td_text">non_critical_extension_options</td><td class="type-td td_text">types.Any array</td><td class="description-td td_text">extension_options are arbitrary options that can be added by chains when the default options are not sufficient. If any of these are present and can't be handled, they will be ignored</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **AuthInfo**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/authInfo.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">signer_infos</td><td class="type-td td_text">SignerInfo Array</td><td class="description-td td_text">Defines the signing modes for the required signers. The number and order of elements must match the required signers from TxBody's messages. The first element is the primary signer and the one which pays the fee</td></tr>
-<tr ><td class="parameter-td td_text">fee</td><td class="type-td td_text">Fee</td><td class="description-td td_text">Fee is the fee and gas limit for the transaction. The first signer is the primary signer and the one which pays the fee. The fee can be calculated based on the cost of evaluating the body and doing signature verification of the signers. This can be estimated via simulation</td></tr>
-<tr ><td class="parameter-td td_text">tip</td><td class="type-td td_text">Tip</td><td class="description-td td_text">Tip is the optional tip used for transactions fees paid in another denom (this field is ignored if the chain didn't enable tips, i.e. didn't add the `TipDecorator` in its posthandler)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/AuthInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">signer_infos</td><td class="type-td td_text">SignerInfo array</td><td class="description-td td_text">signer_infos defines the signing modes for the required signers. The number and order of elements must match the required signers from TxBody's messages. The first element is the primary signer and the one which pays the fee.</td></tr>
+<tr ><td class="parameter-td td_text">fee</td><td class="type-td td_text">Fee</td><td class="description-td td_text">Fee is the fee and gas limit for the transaction. The first signer is the primary signer and the one which pays the fee. The fee can be calculated based on the cost of evaluating the body and doing signature verification of the signers. This can be estimated via simulation.</td></tr>
+<tr ><td class="parameter-td td_text">tip</td><td class="type-td td_text">Tip</td><td class="description-td td_text">Tip is the optional tip used for transactions fees paid in another denom.  This field is ignored if the chain didn't enable tips, i.e. didn't add the `TipDecorator` in its posthandler.  Since: cosmos-sdk 0.46</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **SignerInfo**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/signerInfo.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">public_key</td><td class="type-td td_text">Any</td><td class="description-td td_text">Public key of the signer. It is optional for accounts that already exist in state. If unset, the verifier can use the required signer address for this position and lookup the public key</td></tr>
-<tr ><td class="parameter-td td_text">mode_info</td><td class="type-td td_text">ModeInfo</td><td class="description-td td_text">Describes the signing mode of the signer and is a nested structure to support nested multisig pubkey's</td></tr>
-<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The sequence of the account, which describes the number of committed transactions signed by a given address. It is used to prevent replay attacks</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/SignerInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">public_key</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">public_key is the public key of the signer. It is optional for accounts that already exist in state. If unset, the verifier can use the required \ signer address for this position and lookup the public key.</td></tr>
+<tr ><td class="parameter-td td_text">mode_info</td><td class="type-td td_text">ModeInfo</td><td class="description-td td_text">mode_info describes the signing mode of the signer and is a nested structure to support nested multisig pubkey's</td></tr>
+<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">sequence is the sequence of the account, which describes the number of committed transactions signed by a given address. It is used to prevent replay attacks.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ModeInfo**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/modeInfo.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sum</td><td class="type-td td_text">Signing mode</td><td class="description-td td_text">Types that are valid to be assigned to Sum: *ModeInfo_Single_, *ModeInfo_Multi_</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/ModeInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">single</td><td class="type-td td_text">ModeInfo_Single</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">multi</td><td class="type-td td_text">ModeInfo_Multi</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">mode</td><td class="type-td td_text">signing.SignMode</td><td class="description-td td_text">mode is the signing mode of the single signer</td></tr>
+<tr ><td class="parameter-td td_text">bitarray</td><td class="type-td td_text">types1.CompactBitArray</td><td class="description-td td_text">bitarray specifies which keys within the multisig are signing</td></tr>
+<tr ><td class="parameter-td td_text">mode_infos</td><td class="type-td td_text">ModeInfo array</td><td class="description-td td_text">mode_infos is the corresponding modes of the signers of the multisig which could include nested multisig public keys</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Fee**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/fee.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">Coin Array</td><td class="description-td td_text">Amount of coins to be paid as a fee</td></tr>
-<tr ><td class="parameter-td td_text">gas_limit</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Maximum gas that can be used in transaction processing before an out of gas error occurs</td></tr>
-<tr ><td class="parameter-td td_text">payer</td><td class="type-td td_text">String</td><td class="description-td td_text">If unset, the first signer is responsible for paying the fees. If set, the specified account must pay the fees. The payer must be a tx signer (and thus have signed this field in AuthInfo). Setting this field does *not* change the ordering of required signers for the transaction</td></tr>
-<tr ><td class="parameter-td td_text">granter</td><td class="type-td td_text">String</td><td class="description-td td_text">If set, the fee payer (either the first signer or the value of the payer field) requests that a fee grant be used to pay fees instead of the fee payer's own balance. If an appropriate fee grant does not exist or the chain does not support fee grants, this will fail</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/Fee.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_text">amount is the amount of coins to be paid as a fee</td></tr>
+<tr ><td class="parameter-td td_text">gas_limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">gas_limit is the maximum gas that can be used in transaction processing before an out of gas error occurs</td></tr>
+<tr ><td class="parameter-td td_text">payer</td><td class="type-td td_text">string</td><td class="description-td td_text">if unset, the first signer is responsible for paying the fees. If set, the specified account must pay the fees. the payer must be a tx signer (and thus have signed this field in AuthInfo). setting this field does *not* change the ordering of required signers for the transaction.</td></tr>
+<tr ><td class="parameter-td td_text">granter</td><td class="type-td td_text">string</td><td class="description-td td_text">if set, the fee payer (either the first signer or the value of the payer field) requests that a fee grant be used to pay fees instead of the fee payer's own balance. If an appropriate fee grant does not exist or the chain does not support fee grants, this will fail</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2192,9 +2196,9 @@ txhash: A2B2B971C690AE7977451D24D6F450AECE6BCCB271E91E32C2563342DDA5254B
 
 **Tip**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/tip.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">Coin Array</td><td class="description-td td_text">Amount of coins to be paid as a tip</td></tr>
-<tr ><td class="parameter-td td_text">tipper</td><td class="type-td td_text">String</td><td class="description-td td_text">Address of the account paying for the tip</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/Tip.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_text">amount is the amount of the tip</td></tr>
+<tr ><td class="parameter-td td_text">tipper</td><td class="type-td td_text">string</td><td class="description-td td_text">tipper is the address of the account paying for the tip</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2232,6 +2236,7 @@ txhash: A2B2B971C690AE7977451D24D6F450AECE6BCCB271E91E32C2563342DDA5254B
 
 **IP rate limit group:** `chain`
 
+### Request Parameters
 > Request Example:
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/2_StreamEventOrderFail.py) -->

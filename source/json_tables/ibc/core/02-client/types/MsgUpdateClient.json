@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "client unique identifier",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "client_message",
+    "Type": "types.Any",
+    "Description": "client message to update the light client",
+    "Required": "No"
+  },
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "signer address",
+    "Required": "Yes"
+  }
+]

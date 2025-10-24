@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": "version defines the ICS27 protocol version"
+  },
+  {
+    "Parameter": "controller_connection_id",
+    "Type": "string",
+    "Description": "controller_connection_id is the connection identifier associated with the controller chain"
+  },
+  {
+    "Parameter": "host_connection_id",
+    "Type": "string",
+    "Description": "host_connection_id is the connection identifier associated with the host chain"
+  },
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address defines the interchain account address to be fulfilled upon the OnChanOpenTry handshake step NOTE: the address field is empty on the OnChanOpenInit handshake step"
+  },
+  {
+    "Parameter": "encoding",
+    "Type": "string",
+    "Description": "encoding defines the supported codec format"
+  },
+  {
+    "Parameter": "tx_type",
+    "Type": "string",
+    "Description": "tx_type defines the type of transactions the interchain account can execute"
+  }
+]

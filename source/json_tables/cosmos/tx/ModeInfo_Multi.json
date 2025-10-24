@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "bitarray",
+    "Type": "types1.CompactBitArray",
+    "Description": "bitarray specifies which keys within the multisig are signing"
+  },
+  {
+    "Parameter": "mode_infos",
+    "Type": "ModeInfo array",
+    "Description": "mode_infos is the corresponding modes of the signers of the multisig which could include nested multisig public keys"
+  }
+]

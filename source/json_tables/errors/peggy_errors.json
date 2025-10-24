@@ -1,0 +1,77 @@
+[
+  {
+    "module_name": "peggy",
+    "error_code": 1,
+    "description": "internal"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 2,
+    "description": "duplicate"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 3,
+    "description": "invalid"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 4,
+    "description": "timeout"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 5,
+    "description": "unknown"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 6,
+    "description": "empty"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 7,
+    "description": "outdated"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 8,
+    "description": "unsupported"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 9,
+    "description": "non contiguous event nonce"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 10,
+    "description": "no unbatched txs found"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 11,
+    "description": "can not set orchestrator addresses more than once"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 12,
+    "description": "supply cannot exceed max ERC20 value"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 13,
+    "description": "invalid ethereum sender on claim"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 14,
+    "description": "invalid ethereum destination"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 15,
+    "description": "missing previous claim for validator"
+  }
+]

@@ -8,7 +8,7 @@ List all the insurance funds.
 
 **IP rate limit group:** `indexer`
 
-
+### Request Parameters
 > Request Example:
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/insurance_rpc/1_InsuranceFunds.py) -->
@@ -127,37 +127,41 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|funds|InsuranceFund Array|List of all insurance funds, including default and all funded accounts|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_insurance_rpc/FundsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">funds</td><td class="type-td td_text">InsuranceFund array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **InsuranceFund**
 
-|Parameter|Type|Description|
-|----|----|----|
-|oracle_type|String|The oracle provider|
-|pool_token_denom|String|Denom of the pool token for the given fund|
-|total_share|String|Total number of shares in the fund|
-|balance|String|The total balance of the fund|
-|oracle_base|String|Oracle base currency|
-|market_id|String|ID of the derivative market|
-|market_ticker|String|Ticker of the derivative market|
-|oracle_quote|String|Oracle quote currency|
-|redemption_notice_period_duration|Integer|The minimum notice period duration that must pass after an underwriter sends a redemption request before underwriter can claim tokens|
-|deposit_denom|String|Denom of the coin used to underwrite the insurance fund|
-|expiry|Integer|Insurance fund expiry time, if any (usually 0 for perp markets)
-|deposit_token_meta|TokenMeta|Token metadata for the deposit asset, only for Ethereum-based assets|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_insurance_rpc/InsuranceFund.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ticker</td><td class="type-td td_text">string</td><td class="description-td td_text">Ticker of the derivative market.</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">Derivative Market ID</td></tr>
+<tr ><td class="parameter-td td_text">deposit_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin denom used for the underwriting of the insurance fund.</td></tr>
+<tr ><td class="parameter-td td_text">pool_token_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Pool token denom</td></tr>
+<tr ><td class="parameter-td td_text">redemption_notice_period_duration</td><td class="type-td td_text">int64</td><td class="description-td td_text">Redemption notice period duration in seconds.</td></tr>
+<tr ><td class="parameter-td td_text">balance</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">total_share</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">oracle_base</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle base currency</td></tr>
+<tr ><td class="parameter-td td_text">oracle_quote</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle quote currency</td></tr>
+<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle Type</td></tr>
+<tr ><td class="parameter-td td_text">expiry</td><td class="type-td td_text">int64</td><td class="description-td td_text">Defines the expiry, if any</td></tr>
+<tr ><td class="parameter-td td_text">deposit_token_meta</td><td class="type-td td_text">TokenMeta</td><td class="description-td td_text">Token metadata for the deposit asset</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **TokenMeta**
 
-|Parameter|Type|Description|
-|----|----|----|
-|address|String|Token's Ethereum contract address|
-|decimals|Integer|Token decimals|
-|logo|String|URL to the logo image|
-|name|String|Token full name|
-|symbol|String|Token symbol short name|
-|updatedAt|Integer|Token metadata fetched timestamp in UNIX millis|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_insurance_rpc/TokenMeta.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">Token full name</td></tr>
+<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">Token contract address (native or not)</td></tr>
+<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Token symbol short name</td></tr>
+<tr ><td class="parameter-td td_text">logo</td><td class="type-td td_text">string</td><td class="description-td td_text">URL to the logo image</td></tr>
+<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">int32</td><td class="description-td td_text">Token decimals</td></tr>
+<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Token metadata fetched timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## Redemptions
@@ -234,11 +238,11 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter | Type   | Description                                                              | Required |
-| --------- | ------ | ------------------------------------------------------------------------ | -------- |
-| address   | String | Filter by address of the redeemer                                        | No       |
-| denom     | String | Filter by denom of the insurance pool token                              | No       |
-| status    | String | Filter by redemption status (Should be one of: ["disbursed", "pending"]) | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_insurance_rpc/RedemptionsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">redeemer</td><td class="type-td td_text">string</td><td class="description-td td_text">Account address of the redemption owner</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">redemption_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Denom of the insurance pool token.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">string</td><td class="description-td td_text">Status of the redemption. Either pending or disbursed.</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -291,21 +295,23 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|redemption_schedules|RedemptionSchedule Array|List of redemption schedules|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_insurance_rpc/RedemptionsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">redemption_schedules</td><td class="type-td td_text">RedemptionSchedule array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **RedemptionSchedule**
 
-|Parameter|Type|Description|
-|----|----|----|
-|claimable_redemption_time|Integer|Claimable redemption time in seconds|
-|redeemer|String|Account address of the redeemer|
-|redemption_denom|String|Pool token denom being redeemed|
-|requested_at|Integer|Redemption request time in unix milliseconds|
-|status|String|Status of the redemption (Should be one of: ["disbursed", "pending"])|
-|redemption_amount|String|Amount of pool tokens being redeemed|
-|redemption_id|Integer|ID of the redemption|
-|disbursed_amount|String|Amount of quote tokens disbursed|
-|disbursed_at|Integer|Redemption disbursement time in unix milliseconds|
-|disbursed_denom|String|Denom of the quote tokens disbursed|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_insurance_rpc/RedemptionSchedule.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">redemption_id</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Redemption ID.</td></tr>
+<tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">string</td><td class="description-td td_text">Status of the redemption. Either pending or disbursed.</td></tr>
+<tr ><td class="parameter-td td_text">redeemer</td><td class="type-td td_text">string</td><td class="description-td td_text">Account address of the redemption owner</td></tr>
+<tr ><td class="parameter-td td_text">claimable_redemption_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">Claimable redemption time in seconds</td></tr>
+<tr ><td class="parameter-td td_text">redemption_amount</td><td class="type-td td_text">string</td><td class="description-td td_text">Amount of pool tokens being redeemed.</td></tr>
+<tr ><td class="parameter-td td_text">redemption_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Pool token denom being redeemed.</td></tr>
+<tr ><td class="parameter-td td_text">requested_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Redemption request time in unix milliseconds.</td></tr>
+<tr ><td class="parameter-td td_text">disbursed_amount</td><td class="type-td td_text">string</td><td class="description-td td_text">Amount of quote tokens disbursed</td></tr>
+<tr ><td class="parameter-td td_text">disbursed_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Denom of the quote tokens disbursed</td></tr>
+<tr ><td class="parameter-td td_text">disbursed_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Redemption disbursement time in unix milliseconds.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->

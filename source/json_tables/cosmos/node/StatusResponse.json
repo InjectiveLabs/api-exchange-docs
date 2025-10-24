@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "earliest_store_height",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "height",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "time.Time",
+    "Description": ""
+  },
+  {
+    "Parameter": "app_hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "validator_hash",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

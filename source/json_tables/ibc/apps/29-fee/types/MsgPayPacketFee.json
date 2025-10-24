@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "fee",
+    "Type": "Fee",
+    "Description": "fee encapsulates the recv, ack and timeout fees associated with an IBC packet",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "source_port_id",
+    "Type": "string",
+    "Description": "the source port unique identifier",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "source_channel_id",
+    "Type": "string",
+    "Description": "the source channel unique identifer",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "account address to refund fee if necessary",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "relayers",
+    "Type": "string array",
+    "Description": "optional list of relayers permitted to the receive packet fees",
+    "Required": "No"
+  }
+]

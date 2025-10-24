@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "code_bytes",
+    "Type": "byte array",
+    "Description": "contract byte code"
+  }
+]

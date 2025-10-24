@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "consensus",
+    "Type": "v1.Consensus",
+    "Description": ""
+  },
+  {
+    "Parameter": "software",
+    "Type": "string",
+    "Description": ""
+  }
+]

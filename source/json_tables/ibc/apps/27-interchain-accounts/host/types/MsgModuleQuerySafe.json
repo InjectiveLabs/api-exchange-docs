@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "signer address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "requests",
+    "Type": "QueryRequest array",
+    "Description": "requests defines the module safe queries to execute.",
+    "Required": "No"
+  }
+]

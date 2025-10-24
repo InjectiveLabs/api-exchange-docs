@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "validator_set",
+    "Type": "v1beta11.ValidatorSet",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_height_changed",
+    "Type": "int64",
+    "Description": ""
+  }
+]

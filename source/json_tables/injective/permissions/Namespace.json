@@ -2,36 +2,36 @@
   {
     "Parameter": "denom",
     "Type": "string",
-    "Description": ""
+    "Description": "The tokenfactory denom to which this namespace applies to"
   },
   {
     "Parameter": "contract_hook",
     "Type": "string",
-    "Description": ""
+    "Description": "The address of smart contract to apply code-based restrictions"
   },
   {
     "Parameter": "role_permissions",
     "Type": "Role array",
-    "Description": ""
+    "Description": "permissions for each role"
   },
   {
     "Parameter": "actor_roles",
     "Type": "ActorRoles array",
-    "Description": ""
+    "Description": "roles for each actor"
   },
   {
     "Parameter": "role_managers",
     "Type": "RoleManager array",
-    "Description": ""
+    "Description": "managers for each role"
   },
   {
     "Parameter": "policy_statuses",
     "Type": "PolicyStatus array",
-    "Description": ""
+    "Description": "status for each policy"
   },
   {
     "Parameter": "policy_manager_capabilities",
     "Type": "PolicyManagerCapability array",
-    "Description": ""
+    "Description": "capabilities for each manager for each policy"
   }
 ]

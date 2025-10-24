@@ -73,5 +73,10 @@
     "Parameter": "ethereum_blacklist",
     "Type": "string array",
     "Description": ""
+  },
+  {
+    "Parameter": "rate_limits",
+    "Type": "RateLimit array",
+    "Description": ""
   }
 ]

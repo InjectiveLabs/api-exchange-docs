@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "granter",
+    "Type": "string",
+    "Description": "granter is the address of the user granting an allowance of their funds."
+  },
+  {
+    "Parameter": "grantee",
+    "Type": "string",
+    "Description": "grantee is the address of the user being granted an allowance of another user's funds."
+  },
+  {
+    "Parameter": "allowance",
+    "Type": "types1.Any",
+    "Description": "allowance can be any of basic, periodic, allowed fee allowance."
+  }
+]

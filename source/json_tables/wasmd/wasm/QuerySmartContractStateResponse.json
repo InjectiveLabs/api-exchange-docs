@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "data",
+    "Type": "RawContractMessage",
+    "Description": "Data contains the json data returned from the smart contract"
+  }
+]

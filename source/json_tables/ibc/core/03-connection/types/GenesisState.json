@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "connections",
+    "Type": "IdentifiedConnection array",
+    "Description": ""
+  },
+  {
+    "Parameter": "client_connection_paths",
+    "Type": "ConnectionPaths array",
+    "Description": ""
+  },
+  {
+    "Parameter": "next_connection_sequence",
+    "Type": "uint64",
+    "Description": "the sequence for the next generated connection identifier"
+  },
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": ""
+  }
+]

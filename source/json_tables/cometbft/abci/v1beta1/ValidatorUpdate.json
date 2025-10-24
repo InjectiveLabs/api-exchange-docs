@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "pub_key",
+    "Type": "v1.PublicKey",
+    "Description": ""
+  },
+  {
+    "Parameter": "power",
+    "Type": "int64",
+    "Description": ""
+  }
+]

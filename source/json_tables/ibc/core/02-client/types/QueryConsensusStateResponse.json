@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "consensus_state",
+    "Type": "types.Any",
+    "Description": "consensus state associated with the client identifier at the given height"
+  },
+  {
+    "Parameter": "proof",
+    "Type": "byte array",
+    "Description": "merkle proof of existence"
+  },
+  {
+    "Parameter": "proof_height",
+    "Type": "Height",
+    "Description": "height at which the proof was retrieved"
+  }
+]

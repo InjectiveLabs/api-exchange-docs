@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "status",
+    "Type": "ResponseVerifyVoteExtension_VerifyStatus",
+    "Description": ""
+  }
+]

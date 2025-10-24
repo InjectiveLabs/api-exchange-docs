@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "app",
+    "Type": "uint64",
+    "Description": "The ABCI application version.  It was named app_version in CometBFT 0.34."
+  }
+]

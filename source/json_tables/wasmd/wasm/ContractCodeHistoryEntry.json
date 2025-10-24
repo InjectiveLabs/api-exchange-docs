@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "operation",
+    "Type": "ContractCodeHistoryOperationType",
+    "Description": ""
+  },
+  {
+    "Parameter": "code_id",
+    "Type": "uint64",
+    "Description": "CodeID is the reference to the stored WASM code"
+  },
+  {
+    "Parameter": "updated",
+    "Type": "AbsoluteTxPosition",
+    "Description": "Updated Tx position when the operation was executed."
+  },
+  {
+    "Parameter": "msg",
+    "Type": "RawContractMessage",
+    "Description": ""
+  }
+]

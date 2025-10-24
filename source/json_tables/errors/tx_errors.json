@@ -1,0 +1,12 @@
+[
+  {
+    "module_name": "tx",
+    "error_code": 1,
+    "description": "tx parse error"
+  },
+  {
+    "module_name": "tx",
+    "error_code": 2,
+    "description": "unknown protobuf field"
+  }
+]

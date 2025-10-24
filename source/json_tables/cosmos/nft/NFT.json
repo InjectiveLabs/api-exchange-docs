@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "class_id",
+    "Type": "string",
+    "Description": "class_id associated with the NFT, similar to the contract address of ERC721"
+  },
+  {
+    "Parameter": "id",
+    "Type": "string",
+    "Description": "id is a unique identifier of the NFT"
+  },
+  {
+    "Parameter": "uri",
+    "Type": "string",
+    "Description": "uri for the NFT metadata stored off chain"
+  },
+  {
+    "Parameter": "uri_hash",
+    "Type": "string",
+    "Description": "uri_hash is a hash of the document pointed by uri"
+  },
+  {
+    "Parameter": "data",
+    "Type": "types.Any",
+    "Description": "data is an app specific data of the NFT. Optional"
+  }
+]

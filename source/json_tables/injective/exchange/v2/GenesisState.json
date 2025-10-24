@@ -140,9 +140,9 @@
     "Description": "spot_market_ids_scheduled_to_force_close defines the scheduled markets for forced closings at genesis"
   },
   {
-    "Parameter": "denom_decimals",
+    "Parameter": "auction_exchange_transfer_denom_decimals",
     "Type": "DenomDecimals array",
-    "Description": "denom_decimals defines the denom decimals for the exchange."
+    "Description": "auction_exchange_transfer_denom_decimals defines the denom decimals for the exchange."
   },
   {
     "Parameter": "conditional_derivative_orderbooks",

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "amount",
+    "Type": "uint64",
+    "Description": "amount is the number of all NFTs of a given class owned by the owner"
+  }
+]

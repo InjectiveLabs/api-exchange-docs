@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "result",
+    "Type": "ApplySnapshotChunkResult",
+    "Description": ""
+  },
+  {
+    "Parameter": "refetch_chunks",
+    "Type": "uint32 array",
+    "Description": ""
+  },
+  {
+    "Parameter": "reject_senders",
+    "Type": "string array",
+    "Description": ""
+  }
+]

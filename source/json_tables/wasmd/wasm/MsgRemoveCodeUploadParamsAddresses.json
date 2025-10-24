@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "Authority is the address of the governance account.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "addresses",
+    "Type": "string array",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "granter",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "grantee",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "msg_type_url",
+    "Type": "string",
+    "Description": "Optional, msg_type_url, when set, will query only grants matching given msg type.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination defines an pagination for the request.",
+    "Required": "No"
+  }
+]

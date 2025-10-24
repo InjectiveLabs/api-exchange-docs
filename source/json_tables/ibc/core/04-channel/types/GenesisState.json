@@ -1,0 +1,47 @@
+[
+  {
+    "Parameter": "channels",
+    "Type": "IdentifiedChannel array",
+    "Description": ""
+  },
+  {
+    "Parameter": "acknowledgements",
+    "Type": "PacketState array",
+    "Description": ""
+  },
+  {
+    "Parameter": "commitments",
+    "Type": "PacketState array",
+    "Description": ""
+  },
+  {
+    "Parameter": "receipts",
+    "Type": "PacketState array",
+    "Description": ""
+  },
+  {
+    "Parameter": "send_sequences",
+    "Type": "PacketSequence array",
+    "Description": ""
+  },
+  {
+    "Parameter": "recv_sequences",
+    "Type": "PacketSequence array",
+    "Description": ""
+  },
+  {
+    "Parameter": "ack_sequences",
+    "Type": "PacketSequence array",
+    "Description": ""
+  },
+  {
+    "Parameter": "next_channel_sequence",
+    "Type": "uint64",
+    "Description": "the sequence for the next generated channel identifier"
+  },
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": ""
+  }
+]

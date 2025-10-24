@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "minimum_gas_price",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "pruning_keep_recent",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "pruning_interval",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "halt_height",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

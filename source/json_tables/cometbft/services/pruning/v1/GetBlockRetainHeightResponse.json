@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "app_retain_height",
+    "Type": "uint64",
+    "Description": "The retain height set by the application."
+  },
+  {
+    "Parameter": "pruning_service_retain_height",
+    "Type": "uint64",
+    "Description": "The retain height set via the pruning service (e.g. by the data companion) specifically for blocks."
+  }
+]

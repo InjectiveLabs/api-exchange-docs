@@ -1,0 +1,32 @@
+[
+  {
+    "module_name": "store",
+    "error_code": 2,
+    "description": "invalid proof"
+  },
+  {
+    "module_name": "store",
+    "error_code": 3,
+    "description": "tx parse error"
+  },
+  {
+    "module_name": "store",
+    "error_code": 4,
+    "description": "unknown request"
+  },
+  {
+    "module_name": "store",
+    "error_code": 5,
+    "description": "internal logic error"
+  },
+  {
+    "module_name": "store",
+    "error_code": 6,
+    "description": "conflict"
+  },
+  {
+    "module_name": "store",
+    "error_code": 7,
+    "description": "invalid request"
+  }
+]

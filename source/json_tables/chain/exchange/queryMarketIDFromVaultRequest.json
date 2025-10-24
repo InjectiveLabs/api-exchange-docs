@@ -1,3 +1,0 @@
-[
-    {"Parameter": "vault_address", "Type": "String", "Description": "The vault address to query for", "Required": "Yes"}
-]

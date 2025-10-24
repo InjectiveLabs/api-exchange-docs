@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "paths",
+    "Type": "string array",
+    "Description": "list of connection paths"
+  }
+]

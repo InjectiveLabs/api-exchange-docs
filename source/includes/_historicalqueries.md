@@ -7,7 +7,7 @@ Publicly maintained nodes are being pruned every 5-10 days.
 To find the available chain queries visit Swagger for [Mainnet](https://sentry.lcd.injective.network/swagger/#/) and [Testnet](https://testnet.lcd.injective.network/swagger/).
 
 
-**Request Parameters**
+### Request Parameters
 > Request Example:
 
 ``` python

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "sequences",
+    "Type": "uint64 array",
+    "Description": "list of unreceived packet sequences"
+  },
+  {
+    "Parameter": "height",
+    "Type": "types.Height",
+    "Description": "query block height"
+  }
+]

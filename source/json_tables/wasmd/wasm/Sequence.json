@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "id_key",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "value",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

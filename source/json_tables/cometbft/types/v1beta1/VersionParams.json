@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "app",
+    "Type": "uint64",
+    "Description": "Was named app_version in Tendermint 0.34"
+  }
+]

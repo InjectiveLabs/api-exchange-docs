@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "code_id",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "creator",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "data_hash",
+    "Type": "github_com_cometbft_cometbft_libs_bytes.HexBytes",
+    "Description": ""
+  },
+  {
+    "Parameter": "instantiate_permission",
+    "Type": "AccessConfig",
+    "Description": ""
+  }
+]

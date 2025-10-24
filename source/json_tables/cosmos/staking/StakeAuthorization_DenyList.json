@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "deny_list",
+    "Type": "StakeAuthorization_Validators",
+    "Description": ""
+  }
+]

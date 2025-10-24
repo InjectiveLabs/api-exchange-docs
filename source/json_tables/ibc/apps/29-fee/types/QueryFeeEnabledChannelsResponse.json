@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "fee_enabled_channels",
+    "Type": "FeeEnabledChannel array",
+    "Description": "list of fee enabled channels"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
+  }
+]

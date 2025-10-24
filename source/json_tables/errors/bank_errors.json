@@ -1,0 +1,42 @@
+[
+  {
+    "module_name": "bank",
+    "error_code": 2,
+    "description": "no inputs to send transaction"
+  },
+  {
+    "module_name": "bank",
+    "error_code": 3,
+    "description": "no outputs to send transaction"
+  },
+  {
+    "module_name": "bank",
+    "error_code": 4,
+    "description": "sum inputs != sum outputs"
+  },
+  {
+    "module_name": "bank",
+    "error_code": 5,
+    "description": "send transactions are disabled"
+  },
+  {
+    "module_name": "bank",
+    "error_code": 6,
+    "description": "client denom metadata not found"
+  },
+  {
+    "module_name": "bank",
+    "error_code": 7,
+    "description": "invalid key"
+  },
+  {
+    "module_name": "bank",
+    "error_code": 8,
+    "description": "duplicate entry"
+  },
+  {
+    "module_name": "bank",
+    "error_code": 9,
+    "description": "multiple senders not allowed"
+  }
+]

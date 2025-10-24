@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "deliver_tx",
+    "Type": "v1beta1.RequestDeliverTx",
+    "Description": ""
+  }
+]

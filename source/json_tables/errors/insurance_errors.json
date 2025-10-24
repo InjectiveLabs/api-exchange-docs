@@ -1,0 +1,62 @@
+[
+  {
+    "module_name": "insurance",
+    "error_code": 1,
+    "description": "insurance fund already exists"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 2,
+    "description": "insurance fund not found"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 3,
+    "description": "redemption already exists"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 4,
+    "description": "invalid deposit amount"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 5,
+    "description": "invalid deposit denom"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 6,
+    "description": "insurance payout exceeds deposits"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 7,
+    "description": "invalid ticker"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 8,
+    "description": "invalid quote denom"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 9,
+    "description": "invalid oracle"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 10,
+    "description": "invalid expiration time"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 11,
+    "description": "invalid marketID"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 12,
+    "description": "invalid share denom"
+  }
+]

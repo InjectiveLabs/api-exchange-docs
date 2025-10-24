@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "path",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "prove",
+    "Type": "bool",
+    "Description": ""
+  }
+]

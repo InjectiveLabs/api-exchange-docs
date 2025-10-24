@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "type",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "key",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

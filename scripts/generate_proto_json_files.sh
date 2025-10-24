@@ -5,7 +5,7 @@ set -euo pipefail
 
 # Script usage
 usage() {
-    echo "Usage: $0 <cosmos-sdk-path> <injective-core-path> <indexer-path>"
+    echo "Usage: $0 <cosmos-sdk-path> <injective-core-path> <indexer-path> <ibc-go-path> <cometbft-path> <wasmd-path>"
     echo
     echo "Generate proto JSON files from repositories"
     echo
@@ -13,14 +13,17 @@ usage() {
     echo "  cosmos-sdk-path       Path to the Cosmos SDK repository"
     echo "  injective-core-path   Path to the Injective Core repository"
     echo "  indexer-path         Path to the Indexer repository"
+    echo "  ibc-go-path          Path to the IBC Go repository"
+    echo "  cometbft-path        Path to the CometBFT repository"
+    echo "  wasmd-path           Path to the Wasmd repository"
     echo
     echo "Example:"
-    echo "  $0 /tmp/cosmos-sdk /tmp/injective-core /tmp/injective-indexer"
+    echo "  $0 /tmp/cosmos-sdk /tmp/injective-core /tmp/injective-indexer /tmp/ibc-go /tmp/cometbft /tmp/wasmd"
     exit 1
 }
 
 # Check arguments
-if [ $# -ne 3 ]; then
+if [ $# -ne 6 ]; then
     usage
 fi
 
@@ -39,17 +42,36 @@ init_config() {
 
     # Cosmos SDK configuration
     COSMOS_MODULES_PATH="$1/x"
+    COSMOS_CLIENT_GRPC_PATH="$1/client/grpc"
     COSMOS_PROTO_PATH="$1/proto/cosmos"
     COSMOS_OUTPUT_DIR="$OUTPUT_BASE_DIR/cosmos"
 
     # Indexer configuration
     INDEXER_API_PATH="$3/api/gen/grpc"
-    INDEXER_OUTPUT_DIR="$OUTPUT_BASE_DIR/indexer_new"
+    INDEXER_OUTPUT_DIR="$OUTPUT_BASE_DIR/indexer"
+
+    # IBC Go configuration
+    IBC_MODULES_PATH="$4/modules"
+    IBC_PROTO_PATH="$4/proto/ibc"
+    IBC_OUTPUT_DIR="$OUTPUT_BASE_DIR/ibc"
+
+    # CometBFT configuration
+    COMETBFT_MODULES_PATH="$5/api/cometbft"
+    COMETBFT_PROTO_PATH="$5/proto"
+    COMETBFT_OUTPUT_DIR="$OUTPUT_BASE_DIR/cometbft"
+
+    # Wasmd configuration
+    WASMD_MODULES_PATH="$6/x"
+    WASMD_PROTO_PATH="$6/proto"
+    WASMD_OUTPUT_DIR="$OUTPUT_BASE_DIR/wasmd"
 
     # Export all variables
     export OUTPUT_BASE_DIR INJECTIVE_CHAIN_PATH INJECTIVE_MODULES_PATH INJECTIVE_TYPES_PATH \
            INJECTIVE_STREAM_PATH INJECTIVE_PROTO_PATH INJECTIVE_OUTPUT_DIR COSMOS_MODULES_PATH \
-           COSMOS_PROTO_PATH COSMOS_OUTPUT_DIR INDEXER_API_PATH INDEXER_OUTPUT_DIR
+           COSMOS_CLIENT_GRPC_PATH COSMOS_PROTO_PATH COSMOS_OUTPUT_DIR INDEXER_API_PATH INDEXER_OUTPUT_DIR \
+           IBC_MODULES_PATH IBC_PROTO_PATH IBC_OUTPUT_DIR \
+           COMETBFT_MODULES_PATH COMETBFT_PROTO_PATH COMETBFT_OUTPUT_DIR \
+           WASMD_MODULES_PATH WASMD_PROTO_PATH WASMD_OUTPUT_DIR
 }
 
 # Check required commands
@@ -202,10 +224,10 @@ process_pb_file() {
     declare -a comment_lines
     
     while IFS= read -r line || [ -n "$line" ]; do
-        if [[ $line =~ ^type[[:space:]]+([[:alnum:]]+)[[:space:]]+struct[[:space:]]+\{ ]]; then
+        if [[ $line =~ ^type[[:space:]]+([[:alnum:]_]+)[[:space:]]+struct[[:space:]]+\{ ]]; then
             local new_type="${BASH_REMATCH[1]}"
             
-            if [ -n "$current_type" ] && [ ${#fields[@]} -gt 0 ] && [[ ! "$current_type" =~ ^Event ]]; then
+            if [ -n "$current_type" ] && [ ${#fields[@]} -gt 0 ] && [[ ! "$current_type" =~ ^Event.+ ]]; then
                 (IFS=$'\n'; echo "${fields[*]}") | jq -s '.' > "$output_dir/${current_type}.json"
                 echo "Generated $output_dir/${current_type}.json"
             fi
@@ -224,7 +246,7 @@ process_pb_file() {
         
         # Check if this line is a protobuf field definition
         if [[ $line =~ ^[[:space:]]*[A-Z][[:alnum:]]*[[:space:]] ]] && [[ $line =~ protobuf: ]]; then
-            if [ -n "$current_type" ] && [[ ! "$current_type" =~ ^Event ]]; then
+            if [ -n "$current_type" ] && [[ ! "$current_type" =~ ^Event.+ ]]; then
                 local proto_name
                 proto_name=$(get_proto_name "$line")
                 if [ -n "$proto_name" ]; then
@@ -262,7 +284,7 @@ process_pb_file() {
     done < "$pb_file"
 
     # Write the last type if it exists and has fields
-    if [ -n "$current_type" ] && [ ${#fields[@]} -gt 0 ] && [[ ! "$current_type" =~ ^Event ]]; then
+    if [ -n "$current_type" ] && [ ${#fields[@]} -gt 0 ] && [[ ! "$current_type" =~ ^Event.+ ]]; then
         (IFS=$'\n'; echo "${fields[*]}") | jq -s '.' > "$output_dir/${current_type}.json"
         echo "Generated $output_dir/${current_type}.json"
     fi
@@ -422,6 +444,13 @@ process_repository_modules() {
         
         if [ -d "$module_dir/types" ]; then
             process_types_directory "$module_dir/types" "$output_dir" "$module_name"
+        else
+            # Check if module has .pb.go files in the main directory
+            if compgen -G "$module_dir/*.pb.go" > /dev/null 2>&1; then
+                echo "Processing module with direct .pb.go files: $module_name"
+                mkdir -p "$output_dir/$module_name"
+                process_directory "$module_dir" "$output_dir/$module_name"
+            fi
         fi
     done
 }
@@ -511,14 +540,76 @@ process_indexer_modules() {
     done
 }
 
+# Process IBC modules - recursively find and process all 'types' folders
+process_ibc_modules() {
+    local modules_path="$1"
+    local output_dir="$2"
+    
+    echo "Processing IBC modules..."
+    
+    # Process each module
+    for module_dir in "$modules_path"/*/; do
+        if [ -d "$module_dir" ]; then
+            module_name=$(basename "$module_dir")
+            echo "Processing IBC module: $module_name"
+            
+            # Find all 'types' directories within this module recursively
+            while IFS= read -r -d '' types_dir; do
+                # Get the relative path from the modules_path to preserve structure
+                local rel_path="${types_dir#$modules_path/}"
+                
+                # Create the corresponding output directory structure
+                local types_output_dir="$output_dir/$rel_path"
+                mkdir -p "$types_output_dir"
+                
+                echo "Processing types directory: $rel_path"
+                
+                # Process .pb.go files in this types directory
+                process_directory "$types_dir" "$types_output_dir"
+                
+            done < <(find "$module_dir" -type d -name "types" -print0)
+        fi
+    done
+}
+
+# Process CometBFT modules - recursively find and process all .pb.go files
+process_cometbft_modules() {
+    local modules_path="$1"
+    local output_dir="$2"
+    
+    echo "Processing CometBFT modules..."
+    
+    # Process each module
+    for module_dir in "$modules_path"/*/; do
+        if [ -d "$module_dir" ]; then
+            module_name=$(basename "$module_dir")
+            echo "Processing CometBFT module: $module_name"
+            
+            # Get the relative path from the modules_path to preserve structure
+            local rel_path="${module_dir#$modules_path/}"
+            # Remove trailing slash
+            rel_path="${rel_path%/}"
+            
+            # Create the corresponding output directory structure
+            local module_output_dir="$output_dir/$rel_path"
+            mkdir -p "$module_output_dir"
+            
+            echo "Processing CometBFT module directory: $rel_path"
+            
+            # Process all .pb.go files recursively in this module directory
+            process_directory_recursive "$module_dir" "$module_output_dir"
+        fi
+    done
+}
+
 # Initialize configuration with provided paths
-init_config "$1" "$2" "$3"
+init_config "$1" "$2" "$3" "$4" "$5" "$6"
 
 # Check requirements first
 check_requirements
 
 # Create base output directories
-mkdir -p "$INJECTIVE_OUTPUT_DIR" "$COSMOS_OUTPUT_DIR" "$INDEXER_OUTPUT_DIR"
+mkdir -p "$INJECTIVE_OUTPUT_DIR" "$COSMOS_OUTPUT_DIR" "$INDEXER_OUTPUT_DIR" "$IBC_OUTPUT_DIR" "$COMETBFT_OUTPUT_DIR" "$WASMD_OUTPUT_DIR"
 
 # Process Injective modules
 echo "Processing Injective modules..."
@@ -537,9 +628,30 @@ if [ -d "$1/types" ]; then
     process_cosmos_types_directory "$1/types" "$COSMOS_OUTPUT_DIR"
 fi
 
+# Process Cosmos SDK client/grpc directory and its subdirectories
+if [ -d "$COSMOS_CLIENT_GRPC_PATH" ]; then
+    echo "Processing Cosmos SDK client/grpc directory..."
+    process_directory_recursive "$COSMOS_CLIENT_GRPC_PATH" "$COSMOS_OUTPUT_DIR"
+fi
+
 [ -d "$COSMOS_PROTO_PATH" ] && process_proto_directory "$COSMOS_PROTO_PATH" "$COSMOS_OUTPUT_DIR"
 
 # Process Indexer modules
 [ -d "$INDEXER_API_PATH" ] && process_indexer_modules "$INDEXER_API_PATH" "$INDEXER_OUTPUT_DIR"
+
+# Process IBC modules
+echo "Processing IBC modules..."
+[ -d "$IBC_MODULES_PATH" ] && process_ibc_modules "$IBC_MODULES_PATH" "$IBC_OUTPUT_DIR"
+[ -d "$IBC_PROTO_PATH" ] && process_proto_directory "$IBC_PROTO_PATH" "$IBC_OUTPUT_DIR"
+
+# Process CometBFT modules
+echo "Processing CometBFT modules..."
+[ -d "$COMETBFT_MODULES_PATH" ] && process_cometbft_modules "$COMETBFT_MODULES_PATH" "$COMETBFT_OUTPUT_DIR"
+[ -d "$COMETBFT_PROTO_PATH" ] && process_proto_directory "$COMETBFT_PROTO_PATH" "$COMETBFT_OUTPUT_DIR"
+
+# Process Wasmd modules
+echo "Processing Wasmd modules..."
+[ -d "$WASMD_MODULES_PATH" ] && process_repository_modules "$WASMD_MODULES_PATH" "$WASMD_OUTPUT_DIR"
+[ -d "$WASMD_PROTO_PATH" ] && process_proto_directory "$WASMD_PROTO_PATH" "$WASMD_OUTPUT_DIR"
 
 echo "Processing complete!" 

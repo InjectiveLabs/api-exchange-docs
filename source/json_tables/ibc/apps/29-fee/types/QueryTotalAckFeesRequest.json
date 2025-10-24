@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "packet_id",
+    "Type": "types.PacketId",
+    "Description": "the packet identifier for the associated fees",
+    "Required": "Yes"
+  }
+]

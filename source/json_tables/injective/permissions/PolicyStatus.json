@@ -2,16 +2,16 @@
   {
     "Parameter": "action",
     "Type": "Action",
-    "Description": ""
+    "Description": "The action code number"
   },
   {
     "Parameter": "is_disabled",
     "Type": "bool",
-    "Description": ""
+    "Description": "Whether the policy is disabled"
   },
   {
     "Parameter": "is_sealed",
     "Type": "bool",
-    "Description": ""
+    "Description": "Whether the policy is sealed"
   }
 ]

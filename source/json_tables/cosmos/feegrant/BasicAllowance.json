@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "spend_limit",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "spend_limit specifies the maximum amount of coins that can be spent by this allowance and will be updated as coins are spent. If it is empty, there is no spend limit and any amount of coins can be spent."
+  },
+  {
+    "Parameter": "expiration",
+    "Type": "time.Time",
+    "Description": "expiration specifies an optional time when this allowance expires"
+  }
+]

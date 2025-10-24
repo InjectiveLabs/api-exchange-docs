@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "index",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "bytes",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "proof",
+    "Type": "v1.Proof",
+    "Description": ""
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "amounts",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "Amounts is the maximal amount of tokens transferable to the contract."
+  }
+]

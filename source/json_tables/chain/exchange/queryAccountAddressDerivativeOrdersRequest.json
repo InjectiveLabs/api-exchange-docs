@@ -1,4 +1,0 @@
-[
-    {"Parameter": "market_id", "Type": "String", "Description": "Market ID to request for", "Required": "Yes"},
-    {"Parameter": "account_address", "Type": "String", "Description": "Trader's account address", "Required": "Yes"}
-]

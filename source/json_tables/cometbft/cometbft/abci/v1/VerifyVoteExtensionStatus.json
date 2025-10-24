@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "VERIFY_VOTE_EXTENSION_STATUS_UNKNOWN"
+  },
+  {
+    "Code": "1",
+    "Name": "VERIFY_VOTE_EXTENSION_STATUS_ACCEPT"
+  },
+  {
+    "Code": "2",
+    "Name": "VERIFY_VOTE_EXTENSION_STATUS_REJECT"
+  }
+]

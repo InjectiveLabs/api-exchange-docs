@@ -1,3 +1,0 @@
-[
-    {"Parameter": "key_prefix", "Type": "Byte Array", "Description": "Merkle path prefixed to the key"}
-]

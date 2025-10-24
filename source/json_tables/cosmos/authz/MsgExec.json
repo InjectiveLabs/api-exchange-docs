@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "grantee",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "msgs",
+    "Type": "types.Any array",
+    "Description": "Execute Msg. The x/authz will try to find a grant matching (msg.signers[0], grantee, MsgTypeURL(msg)) triple and validate it.",
+    "Required": "No"
+  }
+]

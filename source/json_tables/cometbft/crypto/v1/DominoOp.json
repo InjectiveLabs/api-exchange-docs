@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "key",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "input",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "output",
+    "Type": "string",
+    "Description": ""
+  }
+]

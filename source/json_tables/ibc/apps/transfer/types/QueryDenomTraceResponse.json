@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "denom_trace",
+    "Type": "DenomTrace",
+    "Description": "denom_trace returns the requested denomination trace information."
+  }
+]

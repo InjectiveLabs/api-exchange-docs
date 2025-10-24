@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "contract_info",
+    "Type": "ContractInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "contract_state",
+    "Type": "Model array",
+    "Description": ""
+  },
+  {
+    "Parameter": "contract_code_history",
+    "Type": "ContractCodeHistoryEntry array",
+    "Description": ""
+  }
+]

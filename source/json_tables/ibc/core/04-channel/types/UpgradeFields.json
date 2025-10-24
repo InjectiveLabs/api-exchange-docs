@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "ordering",
+    "Type": "Order",
+    "Description": ""
+  },
+  {
+    "Parameter": "connection_hops",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": ""
+  }
+]

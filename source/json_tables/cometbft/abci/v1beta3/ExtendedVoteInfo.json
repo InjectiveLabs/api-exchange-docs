@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "validator",
+    "Type": "v1beta1.Validator",
+    "Description": "The validator that sent the vote."
+  },
+  {
+    "Parameter": "vote_extension",
+    "Type": "byte array",
+    "Description": "Non-deterministic extension provided by the sending validator's application."
+  },
+  {
+    "Parameter": "extension_signature",
+    "Type": "byte array",
+    "Description": "Vote extension signature created by CometBFT"
+  },
+  {
+    "Parameter": "block_id_flag",
+    "Type": "v1beta11.BlockIDFlag",
+    "Description": "block_id_flag indicates whether the validator voted for a block, nil, or did not vote at all"
+  }
+]

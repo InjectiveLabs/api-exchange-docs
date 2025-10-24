@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "MISBEHAVIOR_TYPE_UNKNOWN"
+  },
+  {
+    "Code": "1",
+    "Name": "MISBEHAVIOR_TYPE_DUPLICATE_VOTE"
+  },
+  {
+    "Code": "2",
+    "Name": "MISBEHAVIOR_TYPE_LIGHT_CLIENT_ATTACK"
+  }
+]

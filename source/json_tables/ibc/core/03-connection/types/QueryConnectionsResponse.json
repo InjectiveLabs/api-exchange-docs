@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "connections",
+    "Type": "IdentifiedConnection array",
+    "Description": "list of stored connections of the chain."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination response"
+  },
+  {
+    "Parameter": "height",
+    "Type": "types.Height",
+    "Description": "query block height"
+  }
+]

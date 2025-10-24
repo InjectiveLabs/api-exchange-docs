@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "hash",
+    "Type": "string",
+    "Description": "hash (in hex format) or denom (full denom with ibc prefix) of the denomination trace information.",
+    "Required": "Yes"
+  }
+]

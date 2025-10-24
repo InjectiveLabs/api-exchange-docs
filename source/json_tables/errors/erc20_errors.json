@@ -1,0 +1,52 @@
+[
+  {
+    "module_name": "erc20",
+    "error_code": 2,
+    "description": "attempting to create a token pair for bank denom that already has a pair associated"
+  },
+  {
+    "module_name": "erc20",
+    "error_code": 3,
+    "description": "unauthorized account"
+  },
+  {
+    "module_name": "erc20",
+    "error_code": 4,
+    "description": "invalid genesis"
+  },
+  {
+    "module_name": "erc20",
+    "error_code": 5,
+    "description": "invalid token pair"
+  },
+  {
+    "module_name": "erc20",
+    "error_code": 6,
+    "description": "invalid ERC20 contract address"
+  },
+  {
+    "module_name": "erc20",
+    "error_code": 7,
+    "description": "unknown bank denom or zero supply"
+  },
+  {
+    "module_name": "erc20",
+    "error_code": 8,
+    "description": "error uploading ERC20 contract"
+  },
+  {
+    "module_name": "erc20",
+    "error_code": 9,
+    "description": "invalid token factory denom"
+  },
+  {
+    "module_name": "erc20",
+    "error_code": 10,
+    "description": "respective erc20:... denom has existing supply"
+  },
+  {
+    "module_name": "erc20",
+    "error_code": 11,
+    "description": "invalid query request"
+  }
+]

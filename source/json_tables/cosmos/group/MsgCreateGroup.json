@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "admin is the account address of the group admin.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "members",
+    "Type": "MemberRequest array",
+    "Description": "members defines the group members.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "metadata",
+    "Type": "string",
+    "Description": "metadata is any arbitrary metadata to attached to the group.",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "module_name": "gov",
+    "error_code": 3,
+    "description": "inactive proposal"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 4,
+    "description": "proposal already active"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 5,
+    "description": "invalid proposal content"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 6,
+    "description": "invalid proposal type"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 7,
+    "description": "invalid vote option"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 8,
+    "description": "invalid genesis state"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 9,
+    "description": "no handler exists for proposal type"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 10,
+    "description": "proposal message not recognized by router"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 11,
+    "description": "no messages proposed"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 12,
+    "description": "invalid proposal message"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 13,
+    "description": "expected gov account as only signer for proposal message"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 15,
+    "description": "metadata too long"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 16,
+    "description": "minimum deposit is too small"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 18,
+    "description": "invalid proposer"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 20,
+    "description": "voting period already ended"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 21,
+    "description": "invalid proposal"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 22,
+    "description": "summary too long"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 23,
+    "description": "invalid deposit denom"
+  }
+]

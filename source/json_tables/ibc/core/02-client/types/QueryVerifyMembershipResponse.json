@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "success",
+    "Type": "bool",
+    "Description": "boolean indicating success or failure of proof verification."
+  }
+]

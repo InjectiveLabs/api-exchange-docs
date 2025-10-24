@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "info",
+    "Type": "GroupPolicyInfo",
+    "Description": "info is the GroupPolicyInfo of the group policy."
+  }
+]

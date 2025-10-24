@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address is the address of the contract",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination defines an optional pagination for the request.",
+    "Required": "No"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "module_name": "transfer",
+    "error_code": 2,
+    "description": "invalid packet timeout"
+  },
+  {
+    "module_name": "transfer",
+    "error_code": 3,
+    "description": "invalid denomination for cross-chain transfer"
+  },
+  {
+    "module_name": "transfer",
+    "error_code": 4,
+    "description": "invalid ICS20 version"
+  },
+  {
+    "module_name": "transfer",
+    "error_code": 5,
+    "description": "invalid token amount"
+  },
+  {
+    "module_name": "transfer",
+    "error_code": 6,
+    "description": "denomination trace not found"
+  },
+  {
+    "module_name": "transfer",
+    "error_code": 7,
+    "description": "fungible token transfers from this chain are disabled"
+  },
+  {
+    "module_name": "transfer",
+    "error_code": 8,
+    "description": "fungible token transfers to this chain are disabled"
+  },
+  {
+    "module_name": "transfer",
+    "error_code": 9,
+    "description": "max transfer channels"
+  },
+  {
+    "module_name": "transfer",
+    "error_code": 10,
+    "description": "invalid transfer authorization"
+  },
+  {
+    "module_name": "transfer",
+    "error_code": 11,
+    "description": "invalid memo"
+  }
+]

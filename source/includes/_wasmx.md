@@ -191,12 +191,12 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter | Type   | Description                                                                                                                                           | Required |
-| --------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| sender    | String | The Injective Chain address of the sender                                                                                                             | Yes      |
-| contract  | String | The Injective Chain address of the contract                                                                                                           | Yes      |
-| msg       | String | JSON encoded message to pass to the contract                                                                                                          | Yes      |
-| funds     | String | String with comma separated list of amounts and token denoms to transfer to the contract. Note that the coins must be alphabetically sorted by denoms | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/wasmx/MsgExecuteContractCompat.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">Sender is the that actor that signed the messages</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">contract</td><td class="type-td td_text">string</td><td class="description-td td_text">Contract is the address of the smart contract</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">msg</td><td class="type-td td_text">string</td><td class="description-td td_text">Msg json encoded message to be passed to the contract</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">funds</td><td class="type-td td_text">string</td><td class="description-td td_text">Funds coins that are transferred to the contract on execution</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
 > Response Example:

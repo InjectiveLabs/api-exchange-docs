@@ -1,8 +1,5 @@
 [
   {
-<<<<<<< HEAD:source/json_tables/indexer/injective_megavault_rpc/ListSubscriptionsRequest.json
-    "Parameter": "user",
-=======
     "Parameter": "vault_address",
     "Type": "string",
     "Description": "Vault address",
@@ -10,7 +7,6 @@
   },
   {
     "Parameter": "user_address",
->>>>>>> 067dc64fd197f6f54588ba45f57b192af7583431:source/json_tables/indexer_new/injective_megavault_rpc/ListSubscriptionsRequest.json
     "Type": "string",
     "Description": "User address",
     "Required": "Yes"

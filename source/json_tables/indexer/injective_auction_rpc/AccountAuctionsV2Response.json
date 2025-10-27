@@ -8,5 +8,10 @@
     "Parameter": "next",
     "Type": "string array",
     "Description": "Next tokens for pagination"
+  },
+  {
+    "Parameter": "total",
+    "Type": "int64",
+    "Description": "Total number of auctions"
   }
 ]

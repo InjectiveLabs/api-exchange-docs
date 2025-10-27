@@ -13,5 +13,10 @@
     "Parameter": "pnl",
     "Type": "PnlStats",
     "Description": "PnL statistics"
+  },
+  {
+    "Parameter": "deposited_value",
+    "Type": "string",
+    "Description": "Current deposisted value"
   }
 ]

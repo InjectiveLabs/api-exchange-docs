@@ -3171,6 +3171,21 @@ async def main() -> None:
         ),
     ]
 
+    derivative_market_orders_to_create = [
+        composer.derivative_order(
+            market_id=derivative_market_id_create,
+            subaccount_id=subaccount_id,
+            fee_recipient=fee_recipient,
+            price=Decimal(25100),
+            quantity=Decimal(0.1),
+            margin=composer.calculate_margin(
+                quantity=Decimal(0.1), price=Decimal(25100), leverage=Decimal(1), is_reduce_only=False
+            ),
+            order_type="BUY",
+            cid=str(uuid.uuid4()),
+        ),
+    ]
+
     spot_orders_to_create = [
         composer.spot_order(
             market_id=spot_market_id_create,
@@ -3192,6 +3207,18 @@ async def main() -> None:
         ),
     ]
 
+    spot_market_orders_to_create = [
+        composer.spot_order(
+            market_id=spot_market_id_create,
+            subaccount_id=subaccount_id,
+            fee_recipient=fee_recipient,
+            price=Decimal("3.5"),
+            quantity=Decimal("1"),
+            order_type="BUY",
+            cid=str(uuid.uuid4()),
+        ),
+    ]
+
     # prepare tx msg
     msg = composer.msg_batch_update_orders(
         sender=address.to_acc_bech32(),
@@ -3199,6 +3226,8 @@ async def main() -> None:
         spot_orders_to_create=spot_orders_to_create,
         derivative_orders_to_cancel=derivative_orders_to_cancel,
         spot_orders_to_cancel=spot_orders_to_cancel,
+        spot_market_orders_to_create=spot_market_orders_to_create,
+        derivative_market_orders_to_create=derivative_market_orders_to_create,
     )
 
     # broadcast the transaction
@@ -3310,6 +3339,18 @@ func main() {
 		},
 	)
 
+	spot_market_order := chainClient.CreateSpotOrderV2(
+		defaultSubaccountID,
+		&chainclient.SpotOrderData{
+			OrderType:    int32(exchangev2types.OrderType_BUY), //BUY SELL
+			Quantity:     decimal.NewFromFloat(0.1),
+			Price:        decimal.NewFromFloat(22),
+			FeeRecipient: senderAddress.String(),
+			MarketId:     smarketId,
+			Cid:          uuid.NewString(),
+		},
+	)
+
 	dmarketId := "0x4ca0f92fc28be0c9761326016b5a1a2177dd6375558365116b5bdda9abc229ce"
 	damount := decimal.NewFromFloat(0.01)
 	dprice := decimal.RequireFromString("31000") //31,000
@@ -3330,6 +3371,20 @@ func main() {
 		},
 	)
 
+	derivative_market_order := chainClient.CreateDerivativeOrderV2(
+		defaultSubaccountID,
+		&chainclient.DerivativeOrderData{
+			OrderType:    int32(exchangev2types.OrderType_BUY), //BUY SELL
+			Quantity:     decimal.NewFromFloat(0.01),
+			Price:        decimal.RequireFromString("33000"),
+			Leverage:     decimal.RequireFromString("2"),
+			FeeRecipient: senderAddress.String(),
+			MarketId:     dmarketId,
+			IsReduceOnly: false,
+			Cid:          uuid.NewString(),
+		},
+	)
+
 	msg := exchangev2types.MsgBatchUpdateOrders{
 		Sender:                         senderAddress.String(),
 		SubaccountId:                   defaultSubaccountID.Hex(),
@@ -3337,6 +3392,8 @@ func main() {
 		DerivativeOrdersToCreate:       []*exchangev2types.DerivativeOrder{derivative_order},
 		SpotMarketIdsToCancelAll:       smarketIds,
 		DerivativeMarketIdsToCancelAll: dmarketIds,
+		SpotMarketOrdersToCreate:       []*exchangev2types.SpotOrder{spot_market_order},
+		DerivativeMarketOrdersToCreate: []*exchangev2types.DerivativeOrder{derivative_market_order},
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg

@@ -43,5 +43,10 @@
     "Parameter": "end_timestamp",
     "Type": "uint64",
     "Description": "Auction end timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "max_round_allocation",
+    "Type": "string",
+    "Description": "Max round allocation of the auction"
   }
 ]

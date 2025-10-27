@@ -1319,7 +1319,8 @@ func main() {
 <tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">string</td><td class="description-td td_text">current market admin</td></tr>
 <tr ><td class="parameter-td td_text">admin_permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_text">level of admin permissions</td></tr>
 <tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">quote token decimals</td></tr>
-<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td></tr>
+<tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the maximum open notional for the market</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1352,6 +1353,30 @@ func main() {
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">Paused</td></tr>
 <tr ><td class="code-td td_num">3</td><td class="name-td td_text">Demolished</td></tr>
 <tr ><td class="code-td td_num">4</td><td class="name-td td_text">Expired</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCap_Uncapped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCap_Uncapped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">uncapped</td><td class="type-td td_text">OpenNotionalCapUncapped</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCap_Capped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCap_Capped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">capped</td><td class="type-td td_text">OpenNotionalCapCapped</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCapCapped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCapCapped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1624,7 +1649,8 @@ func main() {
 <tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">string</td><td class="description-td td_text">current market admin</td></tr>
 <tr ><td class="parameter-td td_text">admin_permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_text">level of admin permissions</td></tr>
 <tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">quote token decimals</td></tr>
-<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td></tr>
+<tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the maximum open notional for the market</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1666,6 +1692,30 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/PerpetualMarketState.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_info</td><td class="type-td td_text">PerpetualMarketInfo</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">funding_info</td><td class="type-td td_text">PerpetualMarketFunding</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCap_Uncapped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCap_Uncapped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">uncapped</td><td class="type-td td_text">OpenNotionalCapUncapped</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCap_Capped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCap_Capped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">capped</td><td class="type-td td_text">OpenNotionalCapCapped</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCapCapped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCapCapped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3419,6 +3469,7 @@ async def main() -> None:
         min_price_tick_size=Decimal("0.001"),
         min_quantity_tick_size=Decimal("0.01"),
         min_notional=Decimal("1"),
+        open_notional_cap=composer.uncapped_open_notional_cap(),
     )
 
     # broadcast the transaction
@@ -3525,6 +3576,9 @@ func main() {
 		ReduceMarginRatio:      math.LegacyMustNewDecFromStr("0.3"),
 		MinPriceTickSize:       minPriceTickSize,
 		MinQuantityTickSize:    minQuantityTickSize,
+		OpenNotionalCap: exchangev2types.OpenNotionalCap{
+			Cap: &exchangev2types.OpenNotionalCap_Uncapped{},
+		},
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
@@ -3559,7 +3613,8 @@ func main() {
 <tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_price_tick_size defines the minimum tick size of the order's price and margin (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_quantity_tick_size defines the minimum tick size of the order's quantity (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the cap on the open notional</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3580,6 +3635,30 @@ func main() {
 <tr ><td class="code-td td_num">10</td><td class="name-td td_text">BandIBC</td></tr>
 <tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr>
 <tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCap_Uncapped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCap_Uncapped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">uncapped</td><td class="type-td td_text">OpenNotionalCapUncapped</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCap_Capped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCap_Capped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">capped</td><td class="type-td td_text">OpenNotionalCapCapped</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCapCapped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCapCapped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -3694,6 +3773,7 @@ async def main() -> None:
         min_price_tick_size=Decimal("0.001"),
         min_quantity_tick_size=Decimal("0.01"),
         min_notional=Decimal("1"),
+        open_notional_cap=composer.uncapped_open_notional_cap(),
     )
 
     # broadcast the transaction
@@ -3801,6 +3881,9 @@ func main() {
 		ReduceMarginRatio:      math.LegacyMustNewDecFromStr("0.3"),
 		MinPriceTickSize:       minPriceTickSize,
 		MinQuantityTickSize:    minQuantityTickSize,
+		OpenNotionalCap: exchangev2types.OpenNotionalCap{
+			Cap: &exchangev2types.OpenNotionalCap_Uncapped{},
+		},
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
@@ -3837,7 +3920,8 @@ func main() {
 <tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_price_tick_size defines the minimum tick size of the order's price and margin</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_quantity_tick_size defines the minimum tick size of the order's quantity</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the cap on the open notional</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3858,6 +3942,30 @@ func main() {
 <tr ><td class="code-td td_num">10</td><td class="name-td td_text">BandIBC</td></tr>
 <tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr>
 <tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCap_Uncapped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCap_Uncapped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">uncapped</td><td class="type-td td_text">OpenNotionalCapUncapped</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCap_Capped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCap_Capped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">capped</td><td class="type-td td_text">OpenNotionalCapCapped</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCapCapped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCapCapped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -4906,6 +5014,21 @@ async def main() -> None:
         ),
     ]
 
+    derivative_market_orders_to_create = [
+        composer.derivative_order(
+            market_id=derivative_market_id_create,
+            subaccount_id=subaccount_id,
+            fee_recipient=fee_recipient,
+            price=Decimal(25100),
+            quantity=Decimal(0.1),
+            margin=composer.calculate_margin(
+                quantity=Decimal(0.1), price=Decimal(25100), leverage=Decimal(1), is_reduce_only=False
+            ),
+            order_type="BUY",
+            cid=str(uuid.uuid4()),
+        ),
+    ]
+
     spot_orders_to_create = [
         composer.spot_order(
             market_id=spot_market_id_create,
@@ -4927,6 +5050,18 @@ async def main() -> None:
         ),
     ]
 
+    spot_market_orders_to_create = [
+        composer.spot_order(
+            market_id=spot_market_id_create,
+            subaccount_id=subaccount_id,
+            fee_recipient=fee_recipient,
+            price=Decimal("3.5"),
+            quantity=Decimal("1"),
+            order_type="BUY",
+            cid=str(uuid.uuid4()),
+        ),
+    ]
+
     # prepare tx msg
     msg = composer.msg_batch_update_orders(
         sender=address.to_acc_bech32(),
@@ -4934,6 +5069,8 @@ async def main() -> None:
         spot_orders_to_create=spot_orders_to_create,
         derivative_orders_to_cancel=derivative_orders_to_cancel,
         spot_orders_to_cancel=spot_orders_to_cancel,
+        spot_market_orders_to_create=spot_market_orders_to_create,
+        derivative_market_orders_to_create=derivative_market_orders_to_create,
     )
 
     # broadcast the transaction
@@ -5045,6 +5182,18 @@ func main() {
 		},
 	)
 
+	spot_market_order := chainClient.CreateSpotOrderV2(
+		defaultSubaccountID,
+		&chainclient.SpotOrderData{
+			OrderType:    int32(exchangev2types.OrderType_BUY), //BUY SELL
+			Quantity:     decimal.NewFromFloat(0.1),
+			Price:        decimal.NewFromFloat(22),
+			FeeRecipient: senderAddress.String(),
+			MarketId:     smarketId,
+			Cid:          uuid.NewString(),
+		},
+	)
+
 	dmarketId := "0x4ca0f92fc28be0c9761326016b5a1a2177dd6375558365116b5bdda9abc229ce"
 	damount := decimal.NewFromFloat(0.01)
 	dprice := decimal.RequireFromString("31000") //31,000
@@ -5065,6 +5214,20 @@ func main() {
 		},
 	)
 
+	derivative_market_order := chainClient.CreateDerivativeOrderV2(
+		defaultSubaccountID,
+		&chainclient.DerivativeOrderData{
+			OrderType:    int32(exchangev2types.OrderType_BUY), //BUY SELL
+			Quantity:     decimal.NewFromFloat(0.01),
+			Price:        decimal.RequireFromString("33000"),
+			Leverage:     decimal.RequireFromString("2"),
+			FeeRecipient: senderAddress.String(),
+			MarketId:     dmarketId,
+			IsReduceOnly: false,
+			Cid:          uuid.NewString(),
+		},
+	)
+
 	msg := exchangev2types.MsgBatchUpdateOrders{
 		Sender:                         senderAddress.String(),
 		SubaccountId:                   defaultSubaccountID.Hex(),
@@ -5072,6 +5235,8 @@ func main() {
 		DerivativeOrdersToCreate:       []*exchangev2types.DerivativeOrder{derivative_order},
 		SpotMarketIdsToCancelAll:       smarketIds,
 		DerivativeMarketIdsToCancelAll: dmarketIds,
+		SpotMarketOrdersToCreate:       []*exchangev2types.SpotOrder{spot_market_order},
+		DerivativeMarketOrdersToCreate: []*exchangev2types.DerivativeOrder{derivative_market_order},
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
@@ -6119,6 +6284,7 @@ async def main() -> None:
         new_initial_margin_ratio=Decimal("0.40"),
         new_maintenance_margin_ratio=Decimal("0.085"),
         new_reduce_margin_ratio=Decimal("3.5"),
+        new_open_notional_cap=composer.uncapped_open_notional_cap(),
     )
 
     # broadcast the transaction
@@ -6220,6 +6386,13 @@ func main() {
 		NewInitialMarginRatio:     math.LegacyMustNewDecFromStr("0.4"),
 		NewMaintenanceMarginRatio: math.LegacyMustNewDecFromStr("0.085"),
 		NewReduceMarginRatio:      math.LegacyMustNewDecFromStr("0.3"),
+		NewOpenNotionalCap: exchangev2types.OpenNotionalCap{
+			Cap: &exchangev2types.OpenNotionalCap_Capped{
+				Capped: &exchangev2types.OpenNotionalCapCapped{
+					Value: math.LegacyMustNewDecFromStr("1000"),
+				},
+			},
+		},
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
@@ -6249,7 +6422,32 @@ func main() {
 <tr ><td class="parameter-td td_text">new_min_notional</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">(optional) updated min notional (in human readable format)</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">new_initial_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">(optional) updated value for initial_margin_ratio</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">new_maintenance_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">(optional) updated value for maintenance_margin_ratio</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">new_reduce_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">(optional) updated value for reduce_margin_ratio</td><td class="required-td td_text">No</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">new_reduce_margin_ratio</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">(optional) updated value for reduce_margin_ratio</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">new_open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">(optional) updated value for open_notional_cap</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCap_Uncapped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCap_Uncapped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">uncapped</td><td class="type-td td_text">OpenNotionalCapUncapped</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCap_Capped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCap_Capped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">capped</td><td class="type-td td_text">OpenNotionalCapCapped</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCapCapped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCapCapped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters

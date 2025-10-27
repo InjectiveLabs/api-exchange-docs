@@ -21,7 +21,7 @@
   },
   {
     "Parameter": "claimed_assets",
-    "Type": "ClaimedAssets array",
+    "Type": "CoinPrices array",
     "Description": ""
   }
 ]

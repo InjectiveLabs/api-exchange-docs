@@ -66,6 +66,12 @@ async def main() -> None:
         subaccount_ids=[subaccount_id], market_ids=[inj_usdt_perp_market]
     )
     oracle_price_filter = composer.chain_stream_oracle_price_filter(symbols=["INJ", "USDT"])
+    order_failures_filter = composer.chain_stream_order_failures_filter(
+        accounts=["inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r"]
+    )
+    conditional_order_trigger_failures_filter = composer.chain_stream_conditional_order_trigger_failures_filter(
+        subaccount_ids=[subaccount_id], market_ids=[inj_usdt_perp_market]
+    )
 
     task = asyncio.get_event_loop().create_task(
         client.listen_chain_stream_updates(
@@ -82,6 +88,8 @@ async def main() -> None:
             derivative_orderbooks_filter=derivative_orderbooks_filter,
             positions_filter=positions_filter,
             oracle_price_filter=oracle_price_filter,
+            order_failures_filter=order_failures_filter,
+            conditional_order_trigger_failures_filter=conditional_order_trigger_failures_filter,
         )
     )
 
@@ -174,6 +182,13 @@ func main() {
 		OraclePriceFilter: &chainstreamv2.OraclePriceFilter{
 			Symbol: []string{"INJ", "USDT"},
 		},
+		OrderFailuresFilter: &chainstreamv2.OrderFailuresFilter{
+			Accounts: []string{"*"},
+		},
+		ConditionalOrderTriggerFailuresFilter: &chainstreamv2.ConditionalOrderTriggerFailuresFilter{
+			SubaccountIds: []string{subaccountId},
+			MarketIds:     []string{injUsdtPerpMarket},
+		},
 	}
 
 	ctx := context.Background()
@@ -210,7 +225,9 @@ func main() {
 <tr ><td class="parameter-td td_text">spot_orderbooks_filter</td><td class="type-td td_text">OrderbookFilter</td><td class="description-td td_text">filter for spot orderbooks events</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">derivative_orderbooks_filter</td><td class="type-td td_text">OrderbookFilter</td><td class="description-td td_text">filter for derivative orderbooks events</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">positions_filter</td><td class="type-td td_text">PositionsFilter</td><td class="description-td td_text">filter for positions events</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">oracle_price_filter</td><td class="type-td td_text">OraclePriceFilter</td><td class="description-td td_text">filter for oracle prices events</td><td class="required-td td_text">No</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">oracle_price_filter</td><td class="type-td td_text">OraclePriceFilter</td><td class="description-td td_text">filter for oracle prices events</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">order_failures_filter</td><td class="type-td td_text">OrderFailuresFilter</td><td class="description-td td_text">filter for order failures events</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">conditional_order_trigger_failures_filter</td><td class="type-td td_text">ConditionalOrderTriggerFailuresFilter</td><td class="description-td td_text">filter for conditional order trigger failures events</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -269,7 +286,24 @@ func main() {
 **OraclePriceFilter**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/OraclePriceFilter.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of symbol to filter by</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of symbols to filter by</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OrderFailuresFilter**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/OrderFailuresFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">accounts</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of account addresses to filter by</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**ConditionalOrderTriggerFailuresFilter**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/ConditionalOrderTriggerFailuresFilter.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of subaccount IDs to filter by</td></tr>
+<tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of market IDs to filter by</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -290,7 +324,9 @@ Each message contains a list of events that are filtered by the request paramete
 <tr ><td class="parameter-td td_text">derivative_orderbook_updates</td><td class="type-td td_text">OrderbookUpdate array</td><td class="description-td td_text">list of derivative orderbook updates</td></tr>
 <tr ><td class="parameter-td td_text">positions</td><td class="type-td td_text">Position array</td><td class="description-td td_text">list of positions updates</td></tr>
 <tr ><td class="parameter-td td_text">oracle_prices</td><td class="type-td td_text">OraclePrice array</td><td class="description-td td_text">list of oracle prices updates</td></tr>
-<tr ><td class="parameter-td td_text">gas_price</td><td class="type-td td_text">string</td><td class="description-td td_text">the current gas price when the block was processed (in chain format)</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">gas_price</td><td class="type-td td_text">string</td><td class="description-td td_text">the current gas price when the block was processed (in chain format)</td></tr>
+<tr ><td class="parameter-td td_text">order_failures</td><td class="type-td td_text">OrderFailureUpdate array</td><td class="description-td td_text">list of order failures updates</td></tr>
+<tr ><td class="parameter-td td_text">conditional_order_trigger_failures</td><td class="type-td td_text">ConditionalOrderTriggerFailureUpdate array</td><td class="description-td td_text">list of conditional order trigger failures updates</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -400,6 +436,30 @@ Each message contains a list of events that are filtered by the request paramete
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">the symbol of the oracle price</td></tr>
 <tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the updated price</td></tr>
 <tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">string</td><td class="description-td td_text">the oracle type</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OrderFailureUpdate**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/OrderFailureUpdate.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account</td><td class="type-td td_text">string</td><td class="description-td td_text">the account address</td></tr>
+<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID</td></tr>
+<tr ><td class="parameter-td td_text">error_code</td><td class="type-td td_text">uint32</td><td class="description-td td_text">the error code</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**ConditionalOrderTriggerFailureUpdate**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/ConditionalOrderTriggerFailureUpdate.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
+<tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td></tr>
+<tr ><td class="parameter-td td_text">mark_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the mark price</td></tr>
+<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID</td></tr>
+<tr ><td class="parameter-td td_text">error_description</td><td class="type-td td_text">string</td><td class="description-td td_text">the error code</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>

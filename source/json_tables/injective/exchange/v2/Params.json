@@ -155,18 +155,18 @@
     "Description": "default_reduce_margin_ratio defines the default reduce margin ratio on a new derivative market"
   },
   {
-    "Parameter": "human_readable_upgrade_block_height",
-    "Type": "int64",
-    "Description": "DO NOT USE THIS FIELD. It was introduced for a temporary bug fix."
-  },
-  {
     "Parameter": "post_only_mode_blocks_amount",
     "Type": "uint64",
-    "Description": "post_only_mode_blocks_amount defines the amount of blocks the post only mode will be enabled"
+    "Description": "post_only_mode_blocks_amount defines the amount of blocks the post only mode will be enabled after a chain upgrade"
   },
   {
     "Parameter": "min_post_only_mode_downtime_duration",
     "Type": "string",
     "Description": "min_post_only_mode_downtime_duration defines the minimum downtime duration that must pass before the post only mode is automatically enabled. The accepted values are the Downtime enum values from the downtime_duration module"
+  },
+  {
+    "Parameter": "post_only_mode_blocks_amount_after_downtime",
+    "Type": "uint64",
+    "Description": "post_only_mode_blocks_amount defines the amount of blocks the post only mode will be enabled after the downtime-detector module detects a chain downtime"
   }
 ]

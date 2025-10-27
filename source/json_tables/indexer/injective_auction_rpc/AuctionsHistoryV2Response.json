@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "auctions",
-    "Type": "Auction array",
+    "Type": "AuctionV2Result array",
     "Description": "The historical auctions"
   },
   {

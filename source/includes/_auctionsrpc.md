@@ -157,7 +157,8 @@ func main() {
 <tr ><td class="parameter-td td_text">winning_bid_amount</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">round</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">end_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Auction end timestamp in UNIX millis.</td></tr>
-<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">UpdatedAt timestamp in UNIX millis.</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">UpdatedAt timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">contract</td><td class="type-td td_text">AuctionContract</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 </br>
@@ -372,7 +373,8 @@ No parameters
 <tr ><td class="parameter-td td_text">winning_bid_amount</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">round</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">end_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Auction end timestamp in UNIX millis.</td></tr>
-<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">UpdatedAt timestamp in UNIX millis.</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">UpdatedAt timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">contract</td><td class="type-td td_text">AuctionContract</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 </br>

@@ -1206,8 +1206,8 @@ Retrieves the number of decimals used for a denom
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/8_DenomDecimal.py) -->
-<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/8_DenomDecimal.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/8_AuctionExchangeTransferDenomDecimal.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/8_AuctionExchangeTransferDenomDecimal.py -->
 ```py
 import asyncio
 
@@ -1222,7 +1222,9 @@ async def main() -> None:
     # initialize grpc client
     client = AsyncClient(network)
 
-    deposits = await client.fetch_denom_decimal(denom="peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5")
+    deposits = await client.fetch_auction_exchange_transfer_denom_decimal(
+        denom="peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5"
+    )
     print(deposits)
 
 
@@ -1231,8 +1233,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/8_DenomDecimal/example.go) -->
-<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/8_DenomDecimal/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/8_AuctionExchangeTransferDenomDecimal/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/8_AuctionExchangeTransferDenomDecimal/example.go -->
 ```go
 package main
 
@@ -1296,7 +1298,7 @@ func main() {
 
 	denom := "peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5"
 
-	res, err := chainClient.FetchDenomDecimal(ctx, denom)
+	res, err := chainClient.FetchAuctionExchangeTransferDenomDecimal(ctx, denom)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -1335,8 +1337,8 @@ Retrieves the denom decimals for multiple denoms
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/9_DenomDecimals.py) -->
-<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/9_DenomDecimals.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/9_AuctionExchangeTransferDenomDecimals.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/9_AuctionExchangeTransferDenomDecimals.py -->
 ```py
 import asyncio
 
@@ -1351,7 +1353,9 @@ async def main() -> None:
     # initialize grpc client
     client = AsyncClient(network)
 
-    deposits = await client.fetch_denom_decimals(denoms=["inj", "peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5"])
+    deposits = await client.fetch_auction_exchange_transfer_denom_decimals(
+        denoms=["inj", "peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5"]
+    )
     print(deposits)
 
 
@@ -1360,8 +1364,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/9_DenomDecimals/example.go) -->
-<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/9_DenomDecimals/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/9_AuctionExchangeTransferDenomDecimals/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/9_AuctionExchangeTransferDenomDecimals/example.go -->
 ```go
 package main
 
@@ -1425,7 +1429,7 @@ func main() {
 
 	denoms := []string{"inj", "peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5"}
 
-	res, err := chainClient.FetchDenomDecimals(ctx, denoms)
+	res, err := chainClient.FetchAuctionExchangeTransferDenomDecimals(ctx, denoms)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -5576,6 +5580,143 @@ No parameters
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/DenomMinNotional.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">the denom of the token</td></tr>
 <tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the minimum notional value for the token (in human readable format)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+## OpenInterest
+
+Retrieves a market's open interest
+
+**IP rate limit group:** `chain`
+
+### Request Parameters
+> Request Example:
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/66_OpenInterest.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/66_OpenInterest.py -->
+```py
+import asyncio
+import json
+
+from pyinjective.async_client_v2 import AsyncClient
+from pyinjective.core.network import Network
+
+
+async def main() -> None:
+    """
+    Demonstrate fetching denom min notionals using AsyncClient.
+    """
+    # Select network: choose between Network.mainnet(), Network.testnet(), or Network.devnet()
+    network = Network.testnet()
+
+    # Initialize the Async Client
+    client = AsyncClient(network)
+
+    market_id = "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
+    open_interest = await client.fetch_open_interest(market_id=market_id)
+    print(json.dumps(open_interest, indent=2))
+
+
+if __name__ == "__main__":
+    asyncio.get_event_loop().run_until_complete(main())
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/66_OpenInterest/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/66_OpenInterest/example.go -->
+```go
+package main
+
+import (
+	"context"
+	"encoding/json"
+	"fmt"
+
+	"os"
+
+	"github.com/InjectiveLabs/sdk-go/client"
+	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
+	"github.com/InjectiveLabs/sdk-go/client/common"
+	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+)
+
+func main() {
+	network := common.LoadNetwork("testnet", "lb")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
+	if err != nil {
+		panic(err)
+	}
+
+	senderAddress, cosmosKeyring, err := chainclient.InitCosmosKeyring(
+		os.Getenv("HOME")+"/.injectived",
+		"injectived",
+		"file",
+		"inj-user",
+		"12345678",
+		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		false,
+	)
+
+	if err != nil {
+		panic(err)
+	}
+
+	clientCtx, err := chainclient.NewClientContext(
+		network.ChainId,
+		senderAddress.String(),
+		cosmosKeyring,
+	)
+
+	if err != nil {
+		panic(err)
+	}
+
+	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
+
+	chainClient, err := chainclient.NewChainClientV2(
+		clientCtx,
+		network,
+		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
+	)
+
+	if err != nil {
+		panic(err)
+	}
+
+	ctx := context.Background()
+
+	marketId := "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
+
+	res, err := chainClient.FetchOpenInterest(ctx, marketId)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	str, _ := json.MarshalIndent(res, "", "\t")
+	fmt.Print(string(str))
+
+}
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryOpenInterestRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market id</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### Response Parameters
+> Response Example:
+
+``` json
+{
+	"amount": {
+		"market_id": "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
+		"balance": "1020516.638732418776111164"
+	}
+}
+```
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryOpenInterestResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">OpenInterest</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 

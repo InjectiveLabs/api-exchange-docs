@@ -14,7 +14,7 @@
   {
     "Parameter": "quote_denom",
     "Type": "string",
-    "Description": "type of coin to use as the quote currency",
+    "Description": "type of coin to use as the base currency",
     "Required": "Yes"
   },
   {
@@ -30,45 +30,39 @@
     "Required": "Yes"
   },
   {
-    "Parameter": "oracle_type",
-    "Type": "types1.OracleType",
-    "Description": "Oracle type",
-    "Required": "Yes"
-  },
-  {
     "Parameter": "oracle_scale_factor",
     "Type": "uint32",
     "Description": "Scale factor for oracle prices.",
     "Required": "Yes"
   },
   {
-    "Parameter": "expiry",
-    "Type": "int64",
-    "Description": "Expiration time of the market",
+    "Parameter": "oracle_type",
+    "Type": "types1.OracleType",
+    "Description": "Oracle type",
     "Required": "Yes"
   },
   {
     "Parameter": "maker_fee_rate",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "maker_fee_rate defines the trade fee rate for makers on the expiry futures market",
+    "Description": "maker_fee_rate defines the trade fee rate for makers on the perpetual market",
     "Required": "Yes"
   },
   {
     "Parameter": "taker_fee_rate",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "taker_fee_rate defines the trade fee rate for takers on the expiry futures market",
+    "Description": "taker_fee_rate defines the trade fee rate for takers on the perpetual market",
     "Required": "Yes"
   },
   {
     "Parameter": "initial_margin_ratio",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "initial_margin_ratio defines the initial margin ratio for the derivative market",
+    "Description": "initial_margin_ratio defines the initial margin ratio for the perpetual market",
     "Required": "Yes"
   },
   {
     "Parameter": "maintenance_margin_ratio",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "maintenance_margin_ratio defines the maintenance margin ratio for the derivative market",
+    "Description": "maintenance_margin_ratio defines the maintenance margin ratio for the perpetual market",
     "Required": "Yes"
   },
   {
@@ -87,18 +81,6 @@
     "Parameter": "min_notional",
     "Type": "cosmossdk_io_math.LegacyDec",
     "Description": "min_notional defines the minimum notional (in quote asset) required for orders in the market",
-    "Required": "Yes"
-  },
-  {
-    "Parameter": "reduce_margin_ratio",
-    "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "reduce_margin_ratio defines the ratio of the margin that is reduced",
-    "Required": "Yes"
-  },
-  {
-    "Parameter": "open_notional_cap",
-    "Type": "OpenNotionalCap",
-    "Description": "open_notional_cap defines the cap on the open notional",
     "Required": "Yes"
   }
 ]

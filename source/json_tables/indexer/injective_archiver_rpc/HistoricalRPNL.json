@@ -8,5 +8,10 @@
     "Parameter": "v",
     "Type": "float64 array",
     "Description": "Realized Profit and Loss value"
+  },
+  {
+    "Parameter": "dv",
+    "Type": "HistoricalDetailedPNL array",
+    "Description": "Detailed Profit and Loss value"
   }
 ]

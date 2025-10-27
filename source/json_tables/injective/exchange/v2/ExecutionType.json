@@ -26,5 +26,9 @@
   {
     "Code": "6",
     "Name": "ExpiryMarketSettlement"
+  },
+  {
+    "Code": "7",
+    "Name": "OffsettingPosition"
   }
 ]

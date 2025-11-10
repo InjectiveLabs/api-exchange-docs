@@ -2,7 +2,13 @@
   {
     "Parameter": "hash",
     "Type": "string",
-    "Description": "",
+    "Description": "transaction hash",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "is_evm_hash",
+    "Type": "bool",
+    "Description": "Set to true if the provided hash may be an EVM tx hash",
     "Required": "Yes"
   }
 ]

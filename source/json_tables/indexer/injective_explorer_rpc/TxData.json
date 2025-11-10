@@ -68,5 +68,10 @@
     "Parameter": "block_unix_timestamp",
     "Type": "uint64",
     "Description": "Block timestamp in unix milli"
+  },
+  {
+    "Parameter": "ethereum_tx_hash_hex",
+    "Type": "string",
+    "Description": ""
   }
 ]

@@ -8,5 +8,10 @@
     "Parameter": "v",
     "Type": "float64 array",
     "Description": "Balance value"
+  },
+  {
+    "Parameter": "dv",
+    "Type": "HistoricalDetailedBalance array",
+    "Description": "Detailed Balance value"
   }
 ]

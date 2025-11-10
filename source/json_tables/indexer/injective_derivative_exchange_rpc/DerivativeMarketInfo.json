@@ -108,5 +108,10 @@
     "Parameter": "reduce_margin_ratio",
     "Type": "string",
     "Description": "Defines the reduce margin ratio of a derivative market"
+  },
+  {
+    "Parameter": "open_notional_cap",
+    "Type": "OpenNotionalCap",
+    "Description": "The open notional cap of the market, if any"
   }
 ]

@@ -69,7 +69,7 @@ func main() {
 	}
 
 	ctx := context.Background()
-	hash := "6C6DA1FEFF83570C467951D9E002543115C0C4672DA14813E92BD5C6A6CD318B"
+	hash := "E5DCF04CC670A0567F58683409F7DAFC49754278DAAD507FE6EB40DFBFD71830"
 	res, err := explorerClient.GetTxByTxHash(ctx, hash)
 	if err != nil {
 		fmt.Println(err)
@@ -82,7 +82,8 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetTxByTxHashRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">string</td><td class="description-td td_text">transaction hash</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">is_evm_hash</td><td class="type-td td_text">bool</td><td class="description-td td_text">Set to true if the provided hash may be an EVM tx hash</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -357,14 +358,14 @@ import (
 )
 
 func main() {
-	network := common.LoadNetwork("mainnet", "lb")
+	network := common.LoadNetwork("testnet", "lb")
 	explorerClient, err := explorerclient.NewExplorerClient(network)
 	if err != nil {
 		panic(err)
 	}
 
-	address := "inj1ghlynf7z25zql6kpu958wqlvmlwrhpp0a4cu9p"
-	after := uint64(137677300)
+	address := "inj1akxycslq8cjt0uffw4rjmfm3echchptu52a2dq"
+	after := uint64(14112176)
 
 	req := explorerPB.GetAccountTxsRequest{
 		After:   after,
@@ -1107,7 +1108,8 @@ func main() {
 <tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">byte array</td><td class="description-td td_text">transaction event logs</td></tr>
 <tr ><td class="parameter-td td_text">claim_ids</td><td class="type-td td_text">int64 array</td><td class="description-td td_text">peggy bridge claim id, non-zero if tx contains MsgDepositClaim</td></tr>
 <tr ><td class="parameter-td td_text">signatures</td><td class="type-td td_text">Signature array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp in unix milli</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp in unix milli</td></tr>
+<tr ><td class="parameter-td td_text">ethereum_tx_hash_hex</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1346,7 +1348,8 @@ func main() {
 <tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">byte array</td><td class="description-td td_text">transaction event logs</td></tr>
 <tr ><td class="parameter-td td_text">claim_ids</td><td class="type-td td_text">int64 array</td><td class="description-td td_text">peggy bridge claim id, non-zero if tx contains MsgDepositClaim</td></tr>
 <tr ><td class="parameter-td td_text">signatures</td><td class="type-td td_text">Signature array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp in unix milli</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp in unix milli</td></tr>
+<tr ><td class="parameter-td td_text">ethereum_tx_hash_hex</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>

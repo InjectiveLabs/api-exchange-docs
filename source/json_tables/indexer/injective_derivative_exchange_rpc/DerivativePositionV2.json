@@ -53,5 +53,15 @@
     "Parameter": "denom",
     "Type": "string",
     "Description": "Market quote denom"
+  },
+  {
+    "Parameter": "funding_last",
+    "Type": "string",
+    "Description": "Last funding fees since position opened"
+  },
+  {
+    "Parameter": "funding_sum",
+    "Type": "string",
+    "Description": "Net funding fees since position opened"
   }
 ]

@@ -53,5 +53,15 @@
     "Parameter": "created_at",
     "Type": "int64",
     "Description": "Position created timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "funding_last",
+    "Type": "string",
+    "Description": "Last funding fees since position opened"
+  },
+  {
+    "Parameter": "funding_sum",
+    "Type": "string",
+    "Description": "Net funding fees since position opened"
   }
 ]

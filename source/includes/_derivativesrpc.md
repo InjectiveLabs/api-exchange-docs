@@ -192,7 +192,8 @@ func main() {
 <tr ><td class="parameter-td td_text">perpetual_market_funding</td><td class="type-td td_text">PerpetualMarketFunding</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">expiry_futures_market_info</td><td class="type-td td_text">ExpiryFuturesMarketInfo</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">string</td><td class="description-td td_text">Minimum notional value for the order</td></tr>
-<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the reduce margin ratio of a derivative market</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the reduce margin ratio of a derivative market</td></tr>
+<tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">The open notional cap of the market, if any</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -517,7 +518,8 @@ func main() {
 <tr ><td class="parameter-td td_text">perpetual_market_funding</td><td class="type-td td_text">PerpetualMarketFunding</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">expiry_futures_market_info</td><td class="type-td td_text">ExpiryFuturesMarketInfo</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">string</td><td class="description-td td_text">Minimum notional value for the order</td></tr>
-<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the reduce margin ratio of a derivative market</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the reduce margin ratio of a derivative market</td></tr>
+<tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">The open notional cap of the market, if any</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -798,7 +800,8 @@ func main() {
 <tr ><td class="parameter-td td_text">perpetual_market_funding</td><td class="type-td td_text">PerpetualMarketFunding</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">expiry_futures_market_info</td><td class="type-td td_text">ExpiryFuturesMarketInfo</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">string</td><td class="description-td td_text">Minimum notional value for the order</td></tr>
-<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the reduce margin ratio of a derivative market</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">string</td><td class="description-td td_text">Defines the reduce margin ratio of a derivative market</td></tr>
+<tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">The open notional cap of the market, if any</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2517,7 +2520,9 @@ func main() {
 <tr ><td class="parameter-td td_text">liquidation_price</td><td class="type-td td_text">string</td><td class="description-td td_text">LiquidationPrice of the position</td></tr>
 <tr ><td class="parameter-td td_text">mark_price</td><td class="type-td td_text">string</td><td class="description-td td_text">MarkPrice of the position</td></tr>
 <tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Position updated timestamp in UNIX millis.</td></tr>
-<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Market quote denom</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Market quote denom</td></tr>
+<tr ><td class="parameter-td td_text">funding_last</td><td class="type-td td_text">string</td><td class="description-td td_text">Last funding fees since position opened</td></tr>
+<tr ><td class="parameter-td td_text">funding_sum</td><td class="type-td td_text">string</td><td class="description-td td_text">Net funding fees since position opened</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2757,7 +2762,9 @@ func main() {
 <tr ><td class="parameter-td td_text">liquidation_price</td><td class="type-td td_text">string</td><td class="description-td td_text">LiquidationPrice of the position</td></tr>
 <tr ><td class="parameter-td td_text">mark_price</td><td class="type-td td_text">string</td><td class="description-td td_text">MarkPrice of the position</td></tr>
 <tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Position updated timestamp in UNIX millis.</td></tr>
-<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Market quote denom</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Market quote denom</td></tr>
+<tr ><td class="parameter-td td_text">funding_last</td><td class="type-td td_text">string</td><td class="description-td td_text">Last funding fees since position opened</td></tr>
+<tr ><td class="parameter-td td_text">funding_sum</td><td class="type-td td_text">string</td><td class="description-td td_text">Net funding fees since position opened</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -3072,7 +3079,9 @@ func main() {
 <tr ><td class="parameter-td td_text">mark_price</td><td class="type-td td_text">string</td><td class="description-td td_text">MarkPrice of the position</td></tr>
 <tr ><td class="parameter-td td_text">aggregate_reduce_only_quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Aggregate Quantity of the Reduce Only orders associated with the position</td></tr>
 <tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Position updated timestamp in UNIX millis.</td></tr>
-<tr ><td class="parameter-td td_text">created_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Position created timestamp in UNIX millis.</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">created_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Position created timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">funding_last</td><td class="type-td td_text">string</td><td class="description-td td_text">Last funding fees since position opened</td></tr>
+<tr ><td class="parameter-td td_text">funding_sum</td><td class="type-td td_text">string</td><td class="description-td td_text">Net funding fees since position opened</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 

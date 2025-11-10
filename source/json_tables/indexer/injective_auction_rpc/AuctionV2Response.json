@@ -33,5 +33,10 @@
     "Parameter": "contract",
     "Type": "AuctionContract",
     "Description": ""
+  },
+  {
+    "Parameter": "winning_bid_amount_usd",
+    "Type": "string",
+    "Description": ""
   }
 ]

@@ -23,5 +23,15 @@
     "Parameter": "updated_at",
     "Type": "int64",
     "Description": "UpdatedAt timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "percentage",
+    "Type": "string",
+    "Description": "Percentage of the operator"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "Subaccount ID of the operator"
   }
 ]

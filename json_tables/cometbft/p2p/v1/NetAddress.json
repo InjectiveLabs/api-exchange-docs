@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "ip",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "port",
+    "Type": "uint32",
+    "Description": ""
+  }
+]

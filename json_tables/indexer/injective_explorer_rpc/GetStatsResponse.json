@@ -1,0 +1,47 @@
+[
+  {
+    "Parameter": "addresses",
+    "Type": "uint64",
+    "Description": "Total of unique addresses"
+  },
+  {
+    "Parameter": "assets",
+    "Type": "uint64",
+    "Description": "Total number of assets"
+  },
+  {
+    "Parameter": "inj_supply",
+    "Type": "uint64",
+    "Description": "Total circulating supply of INJ"
+  },
+  {
+    "Parameter": "txs_ps24_h",
+    "Type": "uint64",
+    "Description": "Avg of TX per second in the past 24hs"
+  },
+  {
+    "Parameter": "txs_ps100_b",
+    "Type": "uint64",
+    "Description": "Avg of TX per second in the 100 blocks"
+  },
+  {
+    "Parameter": "txs_total",
+    "Type": "uint64",
+    "Description": "Total number of TXs"
+  },
+  {
+    "Parameter": "txs24_h",
+    "Type": "uint64",
+    "Description": "Total number of TXs in the past 24hs"
+  },
+  {
+    "Parameter": "txs30_d",
+    "Type": "uint64",
+    "Description": "Total number of TXs in the past 30 days"
+  },
+  {
+    "Parameter": "block_count24_h",
+    "Type": "uint64",
+    "Description": "Number of blocks produced in the past 24hs"
+  }
+]

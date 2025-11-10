@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "port_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "denom_traces",
+    "Type": "Traces",
+    "Description": ""
+  },
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": ""
+  },
+  {
+    "Parameter": "total_escrowed",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "total_escrowed contains the total amount of tokens escrowed by the transfer module"
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "market_ids",
+    "Type": "string array",
+    "Description": "marketIDs to stream price for, empty to listen for all prices",
+    "Required": "Yes"
+  }
+]

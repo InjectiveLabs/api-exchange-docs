@@ -2,49 +2,43 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "The sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "denom",
     "Type": "string",
-    "Description": "",
+    "Description": "denom whose namespace updates are to be applied",
     "Required": "Yes"
   },
   {
     "Parameter": "contract_hook",
     "Type": "MsgUpdateNamespace_SetContractHook",
-    "Description": "",
+    "Description": "address of smart contract to apply code-based restrictions",
     "Required": "No"
   },
   {
     "Parameter": "role_permissions",
     "Type": "Role array",
-    "Description": "",
+    "Description": "role permissions to update",
     "Required": "No"
   },
   {
     "Parameter": "role_managers",
     "Type": "RoleManager array",
-    "Description": "",
+    "Description": "role managers to update",
     "Required": "No"
   },
   {
     "Parameter": "policy_statuses",
     "Type": "PolicyStatus array",
-    "Description": "",
+    "Description": "policy statuses to update",
     "Required": "No"
   },
   {
     "Parameter": "policy_manager_capabilities",
     "Type": "PolicyManagerCapability array",
-    "Description": "",
+    "Description": "policy manager capabilities to update",
     "Required": "No"
-  },
-  {
-    "Parameter": "new_value",
-    "Type": "string",
-    "Description": "",
-    "Required": "Yes"
   }
 ]

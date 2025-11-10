@@ -1,0 +1,50 @@
+[
+  {
+    "Error Code": 2,
+    "Description": "delegator address is empty"
+  },
+  {
+    "Error Code": 3,
+    "Description": "withdraw address is empty"
+  },
+  {
+    "Error Code": 4,
+    "Description": "validator address is empty"
+  },
+  {
+    "Error Code": 5,
+    "Description": "no delegation distribution info"
+  },
+  {
+    "Error Code": 6,
+    "Description": "no validator distribution info"
+  },
+  {
+    "Error Code": 7,
+    "Description": "no validator commission to withdraw"
+  },
+  {
+    "Error Code": 8,
+    "Description": "set withdraw address disabled"
+  },
+  {
+    "Error Code": 9,
+    "Description": "community pool does not have sufficient coins to distribute"
+  },
+  {
+    "Error Code": 10,
+    "Description": "invalid community pool spend proposal amount"
+  },
+  {
+    "Error Code": 11,
+    "Description": "invalid community pool spend proposal recipient"
+  },
+  {
+    "Error Code": 12,
+    "Description": "validator does not exist"
+  },
+  {
+    "Error Code": 13,
+    "Description": "delegation does not exist"
+  }
+]

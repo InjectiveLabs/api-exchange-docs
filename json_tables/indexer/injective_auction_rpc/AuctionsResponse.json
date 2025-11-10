@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "auctions",
+    "Type": "Auction array",
+    "Description": "The historical auctions"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "client unique identifier",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "misbehaviour",
+    "Type": "types.Any",
+    "Description": "misbehaviour used for freezing the light client",
+    "Required": "No"
+  },
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "signer address",
+    "Required": "Yes"
+  }
+]

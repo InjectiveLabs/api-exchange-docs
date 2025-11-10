@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "protocol",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "software",
+    "Type": "string",
+    "Description": ""
+  }
+]

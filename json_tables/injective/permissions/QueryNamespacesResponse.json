@@ -2,6 +2,6 @@
   {
     "Parameter": "namespaces",
     "Type": "Namespace array",
-    "Description": ""
+    "Description": "List of namespaces"
   }
 ]

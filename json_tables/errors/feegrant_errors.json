@@ -1,0 +1,32 @@
+[
+  {
+    "module_name": "feegrant",
+    "error_code": 2,
+    "description": "fee limit exceeded"
+  },
+  {
+    "module_name": "feegrant",
+    "error_code": 3,
+    "description": "fee allowance expired"
+  },
+  {
+    "module_name": "feegrant",
+    "error_code": 4,
+    "description": "invalid duration"
+  },
+  {
+    "module_name": "feegrant",
+    "error_code": 5,
+    "description": "no allowance"
+  },
+  {
+    "module_name": "feegrant",
+    "error_code": 6,
+    "description": "allowed messages are empty"
+  },
+  {
+    "module_name": "feegrant",
+    "error_code": 7,
+    "description": "message not allowed"
+  }
+]

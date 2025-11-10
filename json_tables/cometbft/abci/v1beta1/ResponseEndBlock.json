@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "validator_updates",
+    "Type": "ValidatorUpdate array",
+    "Description": ""
+  },
+  {
+    "Parameter": "consensus_param_updates",
+    "Type": "ConsensusParams",
+    "Description": ""
+  },
+  {
+    "Parameter": "events",
+    "Type": "Event array",
+    "Description": ""
+  }
+]

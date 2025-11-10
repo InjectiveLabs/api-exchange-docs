@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "code",
+    "Type": "int32",
+    "Description": ""
+  },
+  {
+    "Parameter": "log",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "info",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "gas_wanted",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "gas_used",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "events",
+    "Type": "ABCIEvent array",
+    "Description": ""
+  },
+  {
+    "Parameter": "codespace",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "tx_hash",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

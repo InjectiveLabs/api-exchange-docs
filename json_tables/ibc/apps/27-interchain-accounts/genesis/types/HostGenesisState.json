@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "active_channels",
+    "Type": "ActiveChannel array",
+    "Description": ""
+  },
+  {
+    "Parameter": "interchain_accounts",
+    "Type": "RegisteredInterchainAccount array",
+    "Description": ""
+  },
+  {
+    "Parameter": "port",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "params",
+    "Type": "types1.Params",
+    "Description": ""
+  }
+]

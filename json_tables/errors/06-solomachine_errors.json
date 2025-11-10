@@ -1,0 +1,27 @@
+[
+  {
+    "module_name": "06-solomachine",
+    "error_code": 2,
+    "description": "invalid header"
+  },
+  {
+    "module_name": "06-solomachine",
+    "error_code": 3,
+    "description": "invalid sequence"
+  },
+  {
+    "module_name": "06-solomachine",
+    "error_code": 4,
+    "description": "invalid signature and data"
+  },
+  {
+    "module_name": "06-solomachine",
+    "error_code": 5,
+    "description": "signature verification failed"
+  },
+  {
+    "module_name": "06-solomachine",
+    "error_code": 6,
+    "description": "invalid solo machine proof"
+  }
+]

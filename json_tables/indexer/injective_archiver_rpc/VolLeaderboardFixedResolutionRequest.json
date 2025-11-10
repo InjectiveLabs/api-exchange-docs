@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "resolution",
+    "Type": "string",
+    "Description": "Leaderboard resolution. Possible resolutions are 1D,1W,1M,6M,ALL",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "Number of leaderboard entries to return",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "account",
+    "Type": "string",
+    "Description": "Account address that's querying the leaderboard",
+    "Required": "Yes"
+  }
+]

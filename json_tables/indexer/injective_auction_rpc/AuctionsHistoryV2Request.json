@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "per_page",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "Pagination token",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "end_time",
+    "Type": "int64",
+    "Description": "The ending timestamp in UNIX milliseconds to filter the auctions",
+    "Required": "Yes"
+  }
+]

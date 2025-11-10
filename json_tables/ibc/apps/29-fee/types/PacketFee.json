@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "fee",
+    "Type": "Fee",
+    "Description": "fee encapsulates the recv, ack and timeout fees associated with an IBC packet"
+  },
+  {
+    "Parameter": "refund_address",
+    "Type": "string",
+    "Description": "the refund address for unspent fees"
+  },
+  {
+    "Parameter": "relayers",
+    "Type": "string array",
+    "Description": "optional list of relayers permitted to receive fees"
+  }
+]

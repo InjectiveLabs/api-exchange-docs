@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "orderbook",
+    "Type": "SpotLimitOrderbookV2",
+    "Description": "Orderbook of a particular spot market"
+  }
+]

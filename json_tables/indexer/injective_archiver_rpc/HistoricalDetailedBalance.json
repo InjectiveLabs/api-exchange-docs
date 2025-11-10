@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "spot",
+    "Type": "float64",
+    "Description": "Spot amount value"
+  },
+  {
+    "Parameter": "perp",
+    "Type": "float64",
+    "Description": "Perpetual amount value"
+  }
+]

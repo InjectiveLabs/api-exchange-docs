@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "sequence",
+    "Type": "uint64",
+    "Description": "the channel upgrade sequence"
+  },
+  {
+    "Parameter": "message",
+    "Type": "string",
+    "Description": "the error message detailing the cause of failure"
+  }
+]

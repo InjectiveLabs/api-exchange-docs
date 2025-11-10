@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "app_acknowledgement",
+    "Type": "byte array",
+    "Description": "the underlying app acknowledgement bytes"
+  },
+  {
+    "Parameter": "forward_relayer_address",
+    "Type": "string",
+    "Description": "the relayer address which submits the recv packet message"
+  },
+  {
+    "Parameter": "underlying_app_success",
+    "Type": "bool",
+    "Description": "success flag of the base application callback"
+  }
+]

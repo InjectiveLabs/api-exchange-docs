@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "market_ids",
+    "Type": "string array",
+    "Description": "MarketIds of the markets",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "depth",
+    "Type": "int32",
+    "Description": "Depth of the orderbook",
+    "Required": "Yes"
+  }
+]

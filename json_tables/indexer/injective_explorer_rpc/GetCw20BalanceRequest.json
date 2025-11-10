@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address to list balance of",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

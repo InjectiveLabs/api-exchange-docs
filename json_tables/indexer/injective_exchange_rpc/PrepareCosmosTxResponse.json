@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "tx",
+    "Type": "byte array",
+    "Description": "proto encoded tx"
+  },
+  {
+    "Parameter": "sign_mode",
+    "Type": "string",
+    "Description": "Sign mode for the resulting tx"
+  },
+  {
+    "Parameter": "pub_key_type",
+    "Type": "string",
+    "Description": "Specify proto-URL of a public key, which defines the signature format"
+  },
+  {
+    "Parameter": "fee_payer",
+    "Type": "string",
+    "Description": "Fee payer address provided by service"
+  },
+  {
+    "Parameter": "fee_payer_sig",
+    "Type": "string",
+    "Description": "Hex-encoded ethsecp256k1 signature bytes from fee payer"
+  },
+  {
+    "Parameter": "fee_payer_pub_key",
+    "Type": "CosmosPubKey",
+    "Description": "ethsecp256k1 feePayer pubkey"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Code": "0",
+    "Name": "APPLY_SNAPSHOT_CHUNK_RESULT_UNKNOWN"
+  },
+  {
+    "Code": "1",
+    "Name": "APPLY_SNAPSHOT_CHUNK_RESULT_ACCEPT"
+  },
+  {
+    "Code": "2",
+    "Name": "APPLY_SNAPSHOT_CHUNK_RESULT_ABORT"
+  },
+  {
+    "Code": "3",
+    "Name": "APPLY_SNAPSHOT_CHUNK_RESULT_RETRY"
+  },
+  {
+    "Code": "4",
+    "Name": "APPLY_SNAPSHOT_CHUNK_RESULT_RETRY_SNAPSHOT"
+  },
+  {
+    "Code": "5",
+    "Name": "APPLY_SNAPSHOT_CHUNK_RESULT_REJECT_SNAPSHOT"
+  }
+]

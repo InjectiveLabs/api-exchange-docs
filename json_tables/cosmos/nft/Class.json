@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "id",
+    "Type": "string",
+    "Description": "id defines the unique identifier of the NFT classification, similar to the contract address of ERC721"
+  },
+  {
+    "Parameter": "name",
+    "Type": "string",
+    "Description": "name defines the human-readable name of the NFT classification. Optional"
+  },
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": "symbol is an abbreviated name for nft classification. Optional"
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": "description is a brief description of nft classification. Optional"
+  },
+  {
+    "Parameter": "uri",
+    "Type": "string",
+    "Description": "uri for the class metadata stored off chain. It can define schema for Class and NFT `Data` attributes. Optional"
+  },
+  {
+    "Parameter": "uri_hash",
+    "Type": "string",
+    "Description": "uri_hash is a hash of the document pointed by uri. Optional"
+  },
+  {
+    "Parameter": "data",
+    "Type": "types.Any",
+    "Description": "data is the app specific metadata of the NFT class. Optional"
+  }
+]

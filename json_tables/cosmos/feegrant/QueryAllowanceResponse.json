@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "allowance",
+    "Type": "Grant",
+    "Description": "allowance is a allowance granted for grantee by granter."
+  }
+]

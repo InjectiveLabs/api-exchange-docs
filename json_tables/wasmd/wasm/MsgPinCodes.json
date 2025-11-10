@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "Authority is the address of the governance account.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "code_ids",
+    "Type": "uint64 array",
+    "Description": "CodeIDs references the new WASM codes",
+    "Required": "Yes"
+  }
+]

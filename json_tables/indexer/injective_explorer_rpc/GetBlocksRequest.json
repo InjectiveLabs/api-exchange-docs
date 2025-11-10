@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "before",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "after",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "from",
+    "Type": "uint64",
+    "Description": "Unix timestamp (UTC) in milliseconds",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "to",
+    "Type": "uint64",
+    "Description": "Unix timestamp (UTC) in milliseconds",
+    "Required": "Yes"
+  }
+]

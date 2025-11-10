@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "vote",
+    "Type": "v11.Vote",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

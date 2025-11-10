@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "block_height",
+    "Type": "uint64",
+    "Description": "BlockHeight is the block the contract was created at"
+  },
+  {
+    "Parameter": "tx_index",
+    "Type": "uint64",
+    "Description": "TxIndex is a monotonic counter within the block (actual transaction index, or gas consumed)"
+  }
+]

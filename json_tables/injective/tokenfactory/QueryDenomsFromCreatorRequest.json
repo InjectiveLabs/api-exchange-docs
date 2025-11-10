@@ -2,7 +2,7 @@
   {
     "Parameter": "creator",
     "Type": "string",
-    "Description": "",
+    "Description": "The creator's Injective address",
     "Required": "Yes"
   }
 ]

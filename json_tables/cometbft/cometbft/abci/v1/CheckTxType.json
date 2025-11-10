@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "CHECK_TX_TYPE_UNKNOWN"
+  },
+  {
+    "Code": "1",
+    "Name": "CHECK_TX_TYPE_RECHECK"
+  },
+  {
+    "Code": "2",
+    "Name": "CHECK_TX_TYPE_CHECK"
+  }
+]

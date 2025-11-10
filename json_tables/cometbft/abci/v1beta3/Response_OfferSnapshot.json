@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "offer_snapshot",
+    "Type": "v1beta1.ResponseOfferSnapshot",
+    "Description": ""
+  }
+]

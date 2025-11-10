@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "Account address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "usd",
+    "Type": "bool",
+    "Description": "Whether to return USD values for the balances",
+    "Required": "Yes"
+  }
+]

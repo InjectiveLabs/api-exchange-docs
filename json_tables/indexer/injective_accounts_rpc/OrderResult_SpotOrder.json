@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "spot_order",
+    "Type": "SpotLimitOrder",
+    "Description": "Updated spot market order"
+  }
+]

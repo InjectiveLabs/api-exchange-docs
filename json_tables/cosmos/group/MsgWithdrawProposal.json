@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "proposal_id",
+    "Type": "uint64",
+    "Description": "proposal is the unique ID of the proposal.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address is the admin of the group policy or one of the proposer of the proposal.",
+    "Required": "Yes"
+  }
+]

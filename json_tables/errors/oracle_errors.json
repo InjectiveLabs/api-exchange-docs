@@ -1,0 +1,217 @@
+[
+  {
+    "module_name": "oracle",
+    "error_code": 1,
+    "description": "relayer address is empty"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 2,
+    "description": "bad rates count"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 3,
+    "description": "bad resolve times"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 4,
+    "description": "bad request ID"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 5,
+    "description": "relayer not authorized"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 6,
+    "description": "bad price feed base count"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 7,
+    "description": "bad price feed quote count"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 8,
+    "description": "unsupported oracle type"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 9,
+    "description": "bad messages count"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 10,
+    "description": "bad Coinbase message"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 11,
+    "description": "bad Ethereum signature"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 12,
+    "description": "bad Coinbase message timestamp"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 13,
+    "description": "Coinbase price not found"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 14,
+    "description": "Prices must be positive"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 15,
+    "description": "Prices must be less than 10 million."
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 16,
+    "description": "Invalid Band IBC Request"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 17,
+    "description": "sample error"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 18,
+    "description": "invalid packet timeout"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 19,
+    "description": "invalid symbols count"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 20,
+    "description": "could not claim port capability"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 21,
+    "description": "invalid IBC Port ID"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 22,
+    "description": "invalid IBC Channel ID"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 23,
+    "description": "invalid Band IBC request interval"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 24,
+    "description": "Invalid Band IBC Update Request Proposal"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 25,
+    "description": "Band IBC Oracle Request not found"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 26,
+    "description": "Base Info is empty"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 27,
+    "description": "provider is empty"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 28,
+    "description": "invalid provider name"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 29,
+    "description": "invalid symbol"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 30,
+    "description": "relayer already exists"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 31,
+    "description": "provider price not found"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 32,
+    "description": "invalid oracle request"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 33,
+    "description": "no price for oracle was found"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 34,
+    "description": "no address for Pyth contract found"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 35,
+    "description": "unauthorized Pyth price relay"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 36,
+    "description": "unauthorized Pyth price relay"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 37,
+    "description": "unauthorized Pyth price relay"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 38,
+    "description": "unauthorized Pyth price relay"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 39,
+    "description": "empty price attestations"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 40,
+    "description": "bad Stork message timestamp"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 41,
+    "description": "sender stork is empty"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 42,
+    "description": "invalid stork signature"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 43,
+    "description": "stork asset id not unique"
+  }
+]

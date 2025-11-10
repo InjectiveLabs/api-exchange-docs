@@ -2,19 +2,19 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "The sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "amount",
     "Type": "types.Coin",
-    "Description": "",
+    "Description": "The amount of tokens to burn",
     "Required": "Yes"
   },
   {
     "Parameter": "burnFromAddress",
     "Type": "string",
-    "Description": "",
+    "Description": "The Injective address to burn the tokens from",
     "Required": "Yes"
   }
 ]

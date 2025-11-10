@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "The account's portfolio address"
+  },
+  {
+    "Parameter": "bank_balances",
+    "Type": "Coin array",
+    "Description": "Account available bank balances"
+  },
+  {
+    "Parameter": "subaccounts",
+    "Type": "SubaccountBalanceV2 array",
+    "Description": "Subaccounts list"
+  },
+  {
+    "Parameter": "total_usd",
+    "Type": "string",
+    "Description": "USD value of the portfolio"
+  }
+]

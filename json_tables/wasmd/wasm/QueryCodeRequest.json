@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "code_id",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

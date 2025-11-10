@@ -1,0 +1,18 @@
+[
+  {
+    "Code": "0",
+    "Name": "RESPONSE_RESULT_TYPE_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "RESPONSE_RESULT_TYPE_NOOP"
+  },
+  {
+    "Code": "2",
+    "Name": "RESPONSE_RESULT_TYPE_SUCCESS"
+  },
+  {
+    "Code": "3",
+    "Name": "RESPONSE_RESULT_TYPE_FAILURE"
+  }
+]

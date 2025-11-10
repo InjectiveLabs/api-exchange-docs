@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "protocol_version",
+    "Type": "ProtocolVersion",
+    "Description": ""
+  },
+  {
+    "Parameter": "default_node_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "listen_addr",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "network",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "channels",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "moniker",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "other",
+    "Type": "DefaultNodeInfoOther",
+    "Description": ""
+  }
+]

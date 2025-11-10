@@ -2,13 +2,13 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "The sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "metadata",
     "Type": "types1.Metadata",
-    "Description": "",
+    "Description": "The metadata",
     "Required": "Yes"
   },
   {
@@ -16,11 +16,5 @@
     "Type": "MsgSetDenomMetadata_AdminBurnDisabled",
     "Description": "",
     "Required": "No"
-  },
-  {
-    "Parameter": "should_disable",
-    "Type": "bool",
-    "Description": "true if the admin burn capability should be disabled",
-    "Required": "Yes"
   }
 ]

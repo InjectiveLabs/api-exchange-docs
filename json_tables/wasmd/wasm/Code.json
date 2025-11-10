@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "code_id",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "code_info",
+    "Type": "CodeInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "code_bytes",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "pinned",
+    "Type": "bool",
+    "Description": "Pinned to wasmvm cache"
+  }
+]

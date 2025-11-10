@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "proposal",
+    "Type": "v11.Proposal",
+    "Description": ""
+  },
+  {
+    "Parameter": "error",
+    "Type": "RemoteSignerError",
+    "Description": ""
+  }
+]

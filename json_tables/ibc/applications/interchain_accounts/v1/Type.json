@@ -1,0 +1,10 @@
+[
+  {
+    "Code": "0",
+    "Name": "TYPE_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "TYPE_EXECUTE_TX"
+  }
+]

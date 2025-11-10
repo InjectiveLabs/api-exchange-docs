@@ -78,5 +78,10 @@
     "Parameter": "min_notional",
     "Type": "cosmossdk_io_math.LegacyDec",
     "Description": "min_notional defines the minimum notional (in quote asset) required for orders in the market"
+  },
+  {
+    "Parameter": "open_notional_cap",
+    "Type": "OpenNotionalCap",
+    "Description": "open_notional_cap defines the maximum open notional for the market"
   }
 ]

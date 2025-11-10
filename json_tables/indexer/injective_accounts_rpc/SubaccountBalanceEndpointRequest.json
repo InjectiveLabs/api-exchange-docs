@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "SubaccountId of the trader we want to get the trades from",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "Specify denom to get balance",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "plan",
+    "Type": "types1.Plan",
+    "Description": ""
+  },
+  {
+    "Parameter": "upgraded_client_state",
+    "Type": "types.Any",
+    "Description": "An UpgradedClientState must be provided to perform an IBC breaking upgrade. This will make the chain commit to the correct upgraded (self) client state before the upgrade occurs, so that connecting chains can verify that the new upgraded client is valid by verifying a proof on the previous version of the chain. This will allow IBC connections to persist smoothly across planned chain upgrades"
+  }
+]

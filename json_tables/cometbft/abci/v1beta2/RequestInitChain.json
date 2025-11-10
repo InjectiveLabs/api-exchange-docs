@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "time",
+    "Type": "time.Time",
+    "Description": ""
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "consensus_params",
+    "Type": "v1beta2.ConsensusParams",
+    "Description": ""
+  },
+  {
+    "Parameter": "validators",
+    "Type": "v1beta1.ValidatorUpdate array",
+    "Description": ""
+  },
+  {
+    "Parameter": "app_state_bytes",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "initial_height",
+    "Type": "int64",
+    "Description": ""
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Error Code": 1,
+    "Description": "invalid bid denom"
+  },
+  {
+    "Error Code": 2,
+    "Description": "invalid bid round"
+  }
+]

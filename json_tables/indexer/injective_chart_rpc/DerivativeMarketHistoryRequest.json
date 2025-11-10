@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": "Specify unique ticker to search.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "As an alternative is possible to provide a marketId",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "resolution",
+    "Type": "string",
+    "Description": "Symbol resolution. Possible resolutions are daily (D or 1D, 2D ... ), weekly (1W, 2W ...), monthly (1M, 2M...) and an intra-day resolution – minutes(1, 2 ...).",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "from",
+    "Type": "int32",
+    "Description": "Unix timestamp (UTC) of the leftmost required bar, including from",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "to",
+    "Type": "int32",
+    "Description": "Unix timestamp (UTC) of the rightmost required bar, including to. It can be in the future. In this case, the rightmost required bar is the latest available bar.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "countback",
+    "Type": "int32",
+    "Description": "Number of bars (higher priority than from) starting with to. If countback is set, from should be ignored.",
+    "Required": "Yes"
+  }
+]

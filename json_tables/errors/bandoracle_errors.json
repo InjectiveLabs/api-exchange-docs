@@ -1,0 +1,232 @@
+[
+  {
+    "module_name": "bandoracle",
+    "error_code": 1,
+    "description": "owasm compilation failed"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 2,
+    "description": "bad wasm execution"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 3,
+    "description": "data source not found"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 4,
+    "description": "oracle script not found"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 5,
+    "description": "request not found"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 6,
+    "description": "raw request not found"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 7,
+    "description": "reporter not found"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 8,
+    "description": "result not found"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 9,
+    "description": "reporter already exists"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 10,
+    "description": "validator not requested"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 11,
+    "description": "validator already reported"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 12,
+    "description": "invalid report size"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 13,
+    "description": "reporter not authorized"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 14,
+    "description": "editor not authorized"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 16,
+    "description": "validator already active"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 17,
+    "description": "too soon to activate"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 18,
+    "description": "too long name"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 19,
+    "description": "too long description"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 20,
+    "description": "empty executable"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 21,
+    "description": "empty wasm code"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 22,
+    "description": "too large executable"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 23,
+    "description": "too large wasm code"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 24,
+    "description": "invalid min count"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 25,
+    "description": "invalid ask count"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 26,
+    "description": "too large calldata"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 27,
+    "description": "too long client id"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 28,
+    "description": "empty raw requests"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 29,
+    "description": "empty report"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 30,
+    "description": "duplicate external id"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 31,
+    "description": "too long schema"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 32,
+    "description": "too long url"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 33,
+    "description": "too large raw report data"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 34,
+    "description": "insufficient available validators"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 35,
+    "description": "cannot create with [do-not-modify] content"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 36,
+    "description": "cannot reference self as reporter"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 37,
+    "description": "obi decode failed"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 38,
+    "description": "uncompression failed"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 39,
+    "description": "request already expired"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 40,
+    "description": "bad drbg initialization"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 41,
+    "description": "max oracle channels"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 42,
+    "description": "invalid ICS20 version"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 43,
+    "description": "not enough fee"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 44,
+    "description": "invalid owasm gas"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 45,
+    "description": "sending oracle request via IBC is disabled"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 46,
+    "description": "invalid request key"
+  },
+  {
+    "module_name": "bandoracle",
+    "error_code": 47,
+    "description": "too long request key"
+  }
+]

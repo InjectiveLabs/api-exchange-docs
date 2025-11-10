@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "vault_address",
+    "Type": "string",
+    "Description": "Vault address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "user_address",
+    "Type": "string",
+    "Description": "User address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Status of the redemption",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "per_page",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

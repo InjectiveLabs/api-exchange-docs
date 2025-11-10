@@ -2,6 +2,6 @@
   {
     "Parameter": "actors",
     "Type": "string array",
-    "Description": ""
+    "Description": "List of actors' Injective addresses"
   }
 ]

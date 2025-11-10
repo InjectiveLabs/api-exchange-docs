@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "market_i_ds",
+    "Type": "string array",
+    "Description": "Specify multiple marketIDs to search.",
+    "Required": "Yes"
+  }
+]

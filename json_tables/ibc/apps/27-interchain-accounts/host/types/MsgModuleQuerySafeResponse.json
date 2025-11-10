@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "uint64",
+    "Description": "height at which the responses were queried"
+  },
+  {
+    "Parameter": "responses",
+    "Type": "][byte array",
+    "Description": "protobuf encoded responses for each query"
+  }
+]

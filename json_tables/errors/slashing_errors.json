@@ -1,0 +1,42 @@
+[
+  {
+    "module_name": "slashing",
+    "error_code": 2,
+    "description": "address is not associated with any known validator"
+  },
+  {
+    "module_name": "slashing",
+    "error_code": 3,
+    "description": "validator does not exist for that address"
+  },
+  {
+    "module_name": "slashing",
+    "error_code": 4,
+    "description": "validator still jailed; cannot be unjailed"
+  },
+  {
+    "module_name": "slashing",
+    "error_code": 5,
+    "description": "validator not jailed; cannot be unjailed"
+  },
+  {
+    "module_name": "slashing",
+    "error_code": 6,
+    "description": "validator has no self-delegation; cannot be unjailed"
+  },
+  {
+    "module_name": "slashing",
+    "error_code": 7,
+    "description": "validator's self delegation less than minimum; cannot be unjailed"
+  },
+  {
+    "module_name": "slashing",
+    "error_code": 8,
+    "description": "no validator signing info found"
+  },
+  {
+    "module_name": "slashing",
+    "error_code": 9,
+    "description": "validator already tombstoned"
+  }
+]

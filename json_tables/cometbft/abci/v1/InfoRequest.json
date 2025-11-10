@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "block_version",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "p2p_version",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "abci_version",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

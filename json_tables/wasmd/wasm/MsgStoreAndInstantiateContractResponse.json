@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "Address is the bech32 address of the new contract instance."
+  },
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "Data contains bytes to returned from the contract"
+  }
+]

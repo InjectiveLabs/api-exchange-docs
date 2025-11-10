@@ -1,0 +1,32 @@
+[
+  {
+    "module_name": "params",
+    "error_code": 2,
+    "description": "unknown subspace"
+  },
+  {
+    "module_name": "params",
+    "error_code": 3,
+    "description": "failed to set parameter"
+  },
+  {
+    "module_name": "params",
+    "error_code": 4,
+    "description": "submitted parameter changes are empty"
+  },
+  {
+    "module_name": "params",
+    "error_code": 5,
+    "description": "parameter subspace is empty"
+  },
+  {
+    "module_name": "params",
+    "error_code": 6,
+    "description": "parameter key is empty"
+  },
+  {
+    "module_name": "params",
+    "error_code": 7,
+    "description": "parameter value is empty"
+  }
+]

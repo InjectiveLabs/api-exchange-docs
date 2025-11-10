@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "events",
+    "Type": "Event array",
+    "Description": "set of block events emitted as part of executing the block"
+  },
+  {
+    "Parameter": "tx_results",
+    "Type": "ExecTxResult array",
+    "Description": "the result of executing each transaction including the events the particular transaction emitted. This should match the order of the transactions delivered in the block itself"
+  },
+  {
+    "Parameter": "validator_updates",
+    "Type": "ValidatorUpdate array",
+    "Description": "a list of updates to the validator set. These will reflect the validator set at current height + 2."
+  },
+  {
+    "Parameter": "consensus_param_updates",
+    "Type": "v1.ConsensusParams",
+    "Description": "updates to the consensus params, if any."
+  },
+  {
+    "Parameter": "app_hash",
+    "Type": "byte array",
+    "Description": "app_hash is the hash of the applications' state which is used to confirm that execution of the transactions was deterministic. It is up to the application to decide which algorithm to use."
+  }
+]

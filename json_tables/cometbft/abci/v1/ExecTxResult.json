@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "code",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "log",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "info",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "gas_wanted",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "gas_used",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "events",
+    "Type": "Event array",
+    "Description": ""
+  },
+  {
+    "Parameter": "codespace",
+    "Type": "string",
+    "Description": ""
+  }
+]

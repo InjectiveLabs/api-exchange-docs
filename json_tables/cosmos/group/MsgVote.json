@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "proposal_id",
+    "Type": "uint64",
+    "Description": "proposal is the unique ID of the proposal.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "voter",
+    "Type": "string",
+    "Description": "voter is the voter account address.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "option",
+    "Type": "VoteOption",
+    "Description": "option is the voter's choice on the proposal.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "metadata",
+    "Type": "string",
+    "Description": "metadata is any arbitrary metadata attached to the vote.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "exec",
+    "Type": "Exec",
+    "Description": "exec defines whether the proposal should be executed immediately after voting or not.",
+    "Required": "Yes"
+  }
+]

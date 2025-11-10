@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "trades",
+    "Type": "SpotTrade array",
+    "Description": "Trades of a Spot Market"
+  },
+  {
+    "Parameter": "paging",
+    "Type": "Paging",
+    "Description": "Paging indicates pages response is on"
+  }
+]

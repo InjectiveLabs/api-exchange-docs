@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "extend_vote",
+    "Type": "RequestExtendVote",
+    "Description": ""
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "proposer",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "moniker",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_hash",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "parent_hash",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "num_pre_commits",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "num_txs",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "txs",
+    "Type": "TxDataRPC array",
+    "Description": ""
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_unix_timestamp",
+    "Type": "uint64",
+    "Description": "Block timestamp in unix milli"
+  }
+]

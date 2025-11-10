@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "first_date",
+    "Type": "string",
+    "Description": "First date of snapshots used for the leaderboard period"
+  },
+  {
+    "Parameter": "last_date",
+    "Type": "string",
+    "Description": "Last date of snapshots used for the leaderboard period"
+  },
+  {
+    "Parameter": "leaders",
+    "Type": "LeaderboardRow array",
+    "Description": "Leaderboard entries"
+  },
+  {
+    "Parameter": "account_row",
+    "Type": "LeaderboardRow",
+    "Description": "Leaderboard entry for the querying account"
+  }
+]

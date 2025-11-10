@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "proposal",
+    "Type": "v1.Proposal",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

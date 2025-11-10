@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "signed_header",
+    "Type": "SignedHeader",
+    "Description": ""
+  },
+  {
+    "Parameter": "validator_set",
+    "Type": "ValidatorSet",
+    "Description": ""
+  }
+]

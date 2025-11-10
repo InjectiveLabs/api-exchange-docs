@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "referrer_address",
+    "Type": "string",
+    "Description": "Address of the referrer",
+    "Required": "Yes"
+  }
+]

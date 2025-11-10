@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "value",
+    "Type": "string",
+    "Description": "Volatility value"
+  }
+]

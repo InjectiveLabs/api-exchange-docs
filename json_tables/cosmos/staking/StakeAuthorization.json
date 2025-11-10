@@ -8,20 +8,5 @@
     "Parameter": "authorization_type",
     "Type": "AuthorizationType",
     "Description": "authorization_type defines one of AuthorizationType."
-  },
-  {
-    "Parameter": "allow_list",
-    "Type": "StakeAuthorization_Validators",
-    "Description": ""
-  },
-  {
-    "Parameter": "deny_list",
-    "Type": "StakeAuthorization_Validators",
-    "Description": ""
-  },
-  {
-    "Parameter": "address",
-    "Type": "string array",
-    "Description": ""
   }
 ]

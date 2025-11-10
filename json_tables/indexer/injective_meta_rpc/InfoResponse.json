@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "timestamp",
+    "Type": "int64",
+    "Description": "The original timestamp value in millis."
+  },
+  {
+    "Parameter": "server_time",
+    "Type": "int64",
+    "Description": "UNIX time on the server in millis."
+  },
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": "injective-exchange code version."
+  },
+  {
+    "Parameter": "build",
+    "Type": "map[string]string",
+    "Description": "Additional build meta info."
+  },
+  {
+    "Parameter": "region",
+    "Type": "string",
+    "Description": "Server's location region"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "channel_id",
+    "Type": "int32",
+    "Description": ""
+  },
+  {
+    "Parameter": "eof",
+    "Type": "bool",
+    "Description": ""
+  },
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

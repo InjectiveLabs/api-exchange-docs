@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "invitees",
+    "Type": "ReferralInvitee array",
+    "Description": "List of invitees"
+  },
+  {
+    "Parameter": "total_commission",
+    "Type": "string",
+    "Description": "Total commission earned"
+  },
+  {
+    "Parameter": "total_trading_volume",
+    "Type": "string",
+    "Description": "Total trading volume"
+  },
+  {
+    "Parameter": "referrer_code",
+    "Type": "string",
+    "Description": "Referrer code"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "vote_extensions_enable_height",
+    "Type": "types.Int64Value",
+    "Description": "Height during which vote extensions will be enabled.  A value of 0 means vote extensions are disabled. A value > 0 denotes the height at which vote extensions will be (or have been) enabled.  During the specified height, and for all subsequent heights, precommit messages that do not contain valid extension data will be considered invalid. Prior to this height, or when this height is set to 0, vote extensions will not be used or accepted by validators on the network.  Once enabled, vote extensions will be created by the application in ExtendVote, validated by the application in VerifyVoteExtension, and used by the application in PrepareProposal, when proposing the next block.  Cannot be set to heights lower or equal to the current blockchain height."
+  },
+  {
+    "Parameter": "pbts_enable_height",
+    "Type": "types.Int64Value",
+    "Description": "Height at which Proposer-Based Timestamps (PBTS) will be enabled.  A value of 0 means PBTS is disabled. A value > 0 denotes the height at which PBTS will be (or has been) enabled.  From the specified height, and for all subsequent heights, the PBTS algorithm will be used to produce and validate block timestamps. Prior to this height, or when this height is set to 0, the legacy BFT Time algorithm is used to produce and validate timestamps.  Cannot be set to heights lower or equal to the current blockchain height."
+  }
+]

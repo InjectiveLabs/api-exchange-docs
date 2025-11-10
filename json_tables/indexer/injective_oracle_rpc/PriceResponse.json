@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "price",
+    "Type": "string",
+    "Description": "The price of the oracle asset"
+  }
+]

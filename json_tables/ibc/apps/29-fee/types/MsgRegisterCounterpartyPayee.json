@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "port_id",
+    "Type": "string",
+    "Description": "unique port identifier",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "channel_id",
+    "Type": "string",
+    "Description": "unique channel identifier",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "relayer",
+    "Type": "string",
+    "Description": "the relayer address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "counterparty_payee",
+    "Type": "string",
+    "Description": "the counterparty payee address",
+    "Required": "Yes"
+  }
+]

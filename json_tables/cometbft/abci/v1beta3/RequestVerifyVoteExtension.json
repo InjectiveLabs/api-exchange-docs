@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "hash",
+    "Type": "byte array",
+    "Description": "the hash of the block that this received vote corresponds to"
+  },
+  {
+    "Parameter": "validator_address",
+    "Type": "byte array",
+    "Description": "the validator that signed the vote extension"
+  },
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "vote_extension",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

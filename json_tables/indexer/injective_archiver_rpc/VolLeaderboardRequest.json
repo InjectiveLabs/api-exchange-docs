@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "start_date",
+    "Type": "int64",
+    "Description": "Start date of the leaderboard period in unix time (ms)",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "end_date",
+    "Type": "int64",
+    "Description": "End date of the leaderboard period in unix time (ms)",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "int32",
+    "Description": "Number of leaderboard entries to return",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "account",
+    "Type": "string",
+    "Description": "Account address that's querying the leaderboard",
+    "Required": "Yes"
+  }
+]

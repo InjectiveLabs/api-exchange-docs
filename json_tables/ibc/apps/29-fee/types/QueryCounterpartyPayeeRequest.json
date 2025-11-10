@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "channel_id",
+    "Type": "string",
+    "Description": "unique channel identifier",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "relayer",
+    "Type": "string",
+    "Description": "the relayer address to which the counterparty is registered",
+    "Required": "Yes"
+  }
+]

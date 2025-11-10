@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "connection_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "port_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": ""
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "module_name": "wasm",
+    "error_code": 2,
+    "description": "create wasm contract failed"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 3,
+    "description": "contract account already exists"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 4,
+    "description": "instantiate wasm contract failed"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 5,
+    "description": "execute wasm contract failed"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 6,
+    "description": "insufficient gas"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 7,
+    "description": "invalid genesis"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 8,
+    "description": "not found"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 9,
+    "description": "query wasm contract failed"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 10,
+    "description": "invalid CosmosMsg from the contract"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 11,
+    "description": "migrate wasm contract failed"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 12,
+    "description": "empty"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 13,
+    "description": "exceeds limit"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 14,
+    "description": "invalid"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 15,
+    "description": "duplicate"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 16,
+    "description": "max transfer channels"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 17,
+    "description": "unsupported for this contract"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 18,
+    "description": "pinning contract failed"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 19,
+    "description": "unpinning contract failed"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 20,
+    "description": "unknown message from the contract"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 21,
+    "description": "invalid event"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 22,
+    "description": "no such contract"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 27,
+    "description": "max query stack size exceeded"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 28,
+    "description": "no such code"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 29,
+    "description": "wasmvm error"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 30,
+    "description": "max call depth exceeded"
+  }
+]

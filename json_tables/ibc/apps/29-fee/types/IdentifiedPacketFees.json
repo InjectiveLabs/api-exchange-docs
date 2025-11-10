@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "packet_id",
+    "Type": "types1.PacketId",
+    "Description": "unique packet identifier comprised of the channel ID, port ID and sequence"
+  },
+  {
+    "Parameter": "packet_fees",
+    "Type": "PacketFee array",
+    "Description": "list of packet fees"
+  }
+]

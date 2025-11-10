@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "index",
+    "Type": "uint64",
+    "Description": "index is the index of the capability owner."
+  },
+  {
+    "Parameter": "index_owners",
+    "Type": "CapabilityOwners",
+    "Description": "index_owners are the owners at the given index."
+  }
+]

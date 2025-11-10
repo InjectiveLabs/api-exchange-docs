@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "The ID of the market"
+  },
+  {
+    "Parameter": "average_entry_price",
+    "Type": "string",
+    "Description": "The average entry price for the spot market"
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "string",
+    "Description": "The total quantity held in the spot market"
+  },
+  {
+    "Parameter": "usd_value",
+    "Type": "string",
+    "Description": "The USD value of the total quantity held in the spot market"
+  }
+]

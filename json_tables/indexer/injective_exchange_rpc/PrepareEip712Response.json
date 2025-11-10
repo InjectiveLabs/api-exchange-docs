@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "data",
+    "Type": "string",
+    "Description": "EIP712-compatible message suitable for signing with eth_signTypedData_v4"
+  }
+]

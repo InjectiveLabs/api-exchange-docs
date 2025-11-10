@@ -1,0 +1,67 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "SpotMarket ID is keccak265(baseDenom || quoteDenom)"
+  },
+  {
+    "Parameter": "market_status",
+    "Type": "string",
+    "Description": "The status of the market"
+  },
+  {
+    "Parameter": "ticker",
+    "Type": "string",
+    "Description": "A name of the pair in format AAA/BBB, where AAA is base asset, BBB is quote asset."
+  },
+  {
+    "Parameter": "base_denom",
+    "Type": "string",
+    "Description": "Coin denom used for the base asset."
+  },
+  {
+    "Parameter": "base_token_meta",
+    "Type": "TokenMeta",
+    "Description": "Token metadata for base asset"
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "Coin denom used for the quote asset."
+  },
+  {
+    "Parameter": "quote_token_meta",
+    "Type": "TokenMeta",
+    "Description": "Token metadata for quote asset"
+  },
+  {
+    "Parameter": "maker_fee_rate",
+    "Type": "string",
+    "Description": "Defines the fee percentage makers pay when trading (in quote asset)"
+  },
+  {
+    "Parameter": "taker_fee_rate",
+    "Type": "string",
+    "Description": "Defines the fee percentage takers pay when trading (in quote asset)"
+  },
+  {
+    "Parameter": "service_provider_fee",
+    "Type": "string",
+    "Description": "Percentage of the transaction fee shared with the service provider"
+  },
+  {
+    "Parameter": "min_price_tick_size",
+    "Type": "string",
+    "Description": "Defines the minimum required tick size for the order's price"
+  },
+  {
+    "Parameter": "min_quantity_tick_size",
+    "Type": "string",
+    "Description": "Defines the minimum required tick size for the order's quantity"
+  },
+  {
+    "Parameter": "min_notional",
+    "Type": "string",
+    "Description": "Minimum notional value for the market"
+  }
+]

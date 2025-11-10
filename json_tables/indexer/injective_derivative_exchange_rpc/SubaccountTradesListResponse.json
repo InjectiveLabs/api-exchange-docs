@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "trades",
+    "Type": "DerivativeTrade array",
+    "Description": "List of derivative market trades"
+  }
+]

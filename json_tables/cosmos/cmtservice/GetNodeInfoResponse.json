@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "default_node_info",
+    "Type": "v11.DefaultNodeInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "application_version",
+    "Type": "VersionInfo",
+    "Description": ""
+  }
+]

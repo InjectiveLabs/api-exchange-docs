@@ -2,7 +2,7 @@
   {
     "Parameter": "denom",
     "Type": "string",
-    "Description": "",
+    "Description": "The token denom",
     "Required": "Yes"
   }
 ]

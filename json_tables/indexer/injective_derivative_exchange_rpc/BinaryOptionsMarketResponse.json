@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "market",
+    "Type": "BinaryOptionsMarketInfo",
+    "Description": "Info about particular derivative market"
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "pruner",
+    "Type": "string",
+    "Description": "pruner is the address of the user pruning expired allowances.",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "channel",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

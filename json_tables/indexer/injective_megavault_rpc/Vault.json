@@ -1,0 +1,72 @@
+[
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "Contract address"
+  },
+  {
+    "Parameter": "contract_name",
+    "Type": "string",
+    "Description": "Contract name"
+  },
+  {
+    "Parameter": "contract_version",
+    "Type": "string",
+    "Description": "Contract version"
+  },
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "Admin"
+  },
+  {
+    "Parameter": "lp_denom",
+    "Type": "string",
+    "Description": "LP denom"
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "Quote denom"
+  },
+  {
+    "Parameter": "operators",
+    "Type": "Operator array",
+    "Description": "Operators"
+  },
+  {
+    "Parameter": "incentives",
+    "Type": "Incentives",
+    "Description": "Incentives"
+  },
+  {
+    "Parameter": "target_apr",
+    "Type": "TargetApr",
+    "Description": "TargetApr"
+  },
+  {
+    "Parameter": "stats",
+    "Type": "VaultStats",
+    "Description": "Operators"
+  },
+  {
+    "Parameter": "created_height",
+    "Type": "int64",
+    "Description": "Block height when the vault was created."
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "int64",
+    "Description": "CreatedAt timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "updated_height",
+    "Type": "int64",
+    "Description": "Block height when the vault was updated."
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "UpdatedAt timestamp in UNIX millis."
+  }
+]

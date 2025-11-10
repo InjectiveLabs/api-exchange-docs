@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "block_id",
+    "Type": "BlockID",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_size",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "header",
+    "Type": "Header",
+    "Description": ""
+  },
+  {
+    "Parameter": "num_txs",
+    "Type": "int64",
+    "Description": ""
+  }
+]

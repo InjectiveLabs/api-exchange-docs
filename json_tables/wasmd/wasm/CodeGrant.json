@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "code_hash",
+    "Type": "byte array",
+    "Description": "CodeHash is the unique identifier created by wasmvm Wildcard \"*\" is used to specify any kind of grant."
+  },
+  {
+    "Parameter": "instantiate_permission",
+    "Type": "AccessConfig",
+    "Description": "InstantiatePermission is the superset access control to apply on contract creation. Optional"
+  }
+]

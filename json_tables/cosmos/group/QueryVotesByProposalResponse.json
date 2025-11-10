@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "votes",
+    "Type": "Vote array",
+    "Description": "votes are the list of votes for given proposal_id."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "sequence",
+    "Type": "uint64",
+    "Description": "Sequence number of the IBC packet sent"
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address is the address of the contract to query",
+    "Required": "Yes"
+  }
+]

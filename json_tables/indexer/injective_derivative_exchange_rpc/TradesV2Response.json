@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "trades",
+    "Type": "DerivativeTrade array",
+    "Description": "Trades of a Derivative Market"
+  },
+  {
+    "Parameter": "paging",
+    "Type": "Paging",
+    "Description": ""
+  }
+]

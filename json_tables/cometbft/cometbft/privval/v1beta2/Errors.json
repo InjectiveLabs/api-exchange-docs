@@ -1,0 +1,26 @@
+[
+  {
+    "Code": "0",
+    "Name": "ERRORS_UNKNOWN"
+  },
+  {
+    "Code": "1",
+    "Name": "ERRORS_UNEXPECTED_RESPONSE"
+  },
+  {
+    "Code": "2",
+    "Name": "ERRORS_NO_CONNECTION"
+  },
+  {
+    "Code": "3",
+    "Name": "ERRORS_CONNECTION_TIMEOUT"
+  },
+  {
+    "Code": "4",
+    "Name": "ERRORS_READ_TIMEOUT"
+  },
+  {
+    "Code": "5",
+    "Name": "ERRORS_WRITE_TIMEOUT"
+  }
+]

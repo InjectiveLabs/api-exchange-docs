@@ -1,0 +1,17 @@
+[
+  {
+    "module_name": "txfees",
+    "error_code": 1,
+    "description": "invalid fee token"
+  },
+  {
+    "module_name": "txfees",
+    "error_code": 2,
+    "description": "more than one coin in fee"
+  },
+  {
+    "module_name": "txfees",
+    "error_code": 3,
+    "description": "unsupported query param"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Code": "0",
+    "Name": "ACCESS_TYPE_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "ACCESS_TYPE_NOBODY"
+  },
+  {
+    "Code": "3",
+    "Name": "ACCESS_TYPE_EVERYBODY"
+  },
+  {
+    "Code": "4",
+    "Name": "ACCESS_TYPE_ANY_OF_ADDRESSES"
+  }
+]

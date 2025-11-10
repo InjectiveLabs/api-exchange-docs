@@ -2,6 +2,6 @@
   {
     "Parameter": "roles",
     "Type": "string array",
-    "Description": ""
+    "Description": "List of roles"
   }
 ]

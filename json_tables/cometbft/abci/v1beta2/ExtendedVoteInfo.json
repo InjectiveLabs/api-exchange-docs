@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "validator",
+    "Type": "v1beta1.Validator",
+    "Description": "The validator that sent the vote."
+  },
+  {
+    "Parameter": "signed_last_block",
+    "Type": "bool",
+    "Description": "Indicates whether the validator signed the last block, allowing for rewards based on validator availability."
+  },
+  {
+    "Parameter": "vote_extension",
+    "Type": "byte array",
+    "Description": "Non-deterministic extension provided by the sending validator's application."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageRequest",
+    "Description": "pagination defines an optional pagination for the request.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "query_height",
+    "Type": "uint64",
+    "Description": "block height at which to query",
+    "Required": "Yes"
+  }
+]

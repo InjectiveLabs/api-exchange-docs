@@ -1,0 +1,117 @@
+[
+  {
+    "module_name": "evm",
+    "error_code": 2,
+    "description": "invalid storage state"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 3,
+    "description": "execution reverted"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 4,
+    "description": "chain configuration not found"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 5,
+    "description": "invalid chain configuration"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 6,
+    "description": "invalid zero address"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 7,
+    "description": "empty hash"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 8,
+    "description": "block bloom not found"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 9,
+    "description": "transaction receipt not found"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 10,
+    "description": "EVM Create operation is disabled"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 11,
+    "description": "EVM Call operation is disabled"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 12,
+    "description": "invalid transaction amount"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 13,
+    "description": "invalid gas price"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 14,
+    "description": "invalid gas fee"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 15,
+    "description": "evm transaction execution failed"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 16,
+    "description": "invalid gas refund amount"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 17,
+    "description": "inconsistent gas"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 18,
+    "description": "invalid gas cap"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 19,
+    "description": "invalid base fee"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 20,
+    "description": "gas computation overflow/underflow"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 21,
+    "description": "account type is not a valid ethereum account"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 22,
+    "description": "invalid gas limit"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 23,
+    "description": "failed to apply state override"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 24,
+    "description": "EVM Create operation is not authorized for user"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "redeemer",
+    "Type": "string",
+    "Description": "Account address of the redemption owner",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "redemption_denom",
+    "Type": "string",
+    "Description": "Denom of the insurance pool token.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Status of the redemption. Either pending or disbursed.",
+    "Required": "Yes"
+  }
+]

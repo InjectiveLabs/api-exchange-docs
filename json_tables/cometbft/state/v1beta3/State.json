@@ -1,0 +1,72 @@
+[
+  {
+    "Parameter": "version",
+    "Type": "v1beta11.Version",
+    "Description": ""
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "string",
+    "Description": "immutable"
+  },
+  {
+    "Parameter": "initial_height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_block_height",
+    "Type": "int64",
+    "Description": "LastBlockHeight=0 at genesis (ie. block(H=0) does not exist)"
+  },
+  {
+    "Parameter": "last_block_id",
+    "Type": "v1beta12.BlockID",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_block_time",
+    "Type": "time.Time",
+    "Description": ""
+  },
+  {
+    "Parameter": "next_validators",
+    "Type": "v1beta12.ValidatorSet",
+    "Description": "LastValidators is used to validate block.LastCommit. Validators are persisted to the database separately every time they change, so we can query for historical validator sets. Note that if s.LastBlockHeight causes a valset change, we set s.LastHeightValidatorsChanged = s.LastBlockHeight + 1 + 1 Extra +1 due to nextValSet delay."
+  },
+  {
+    "Parameter": "validators",
+    "Type": "v1beta12.ValidatorSet",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_validators",
+    "Type": "v1beta12.ValidatorSet",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_height_validators_changed",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "consensus_params",
+    "Type": "v1.ConsensusParams",
+    "Description": "Consensus parameters used for validating blocks. Changes returned by EndBlock and updated after Commit."
+  },
+  {
+    "Parameter": "last_height_consensus_params_changed",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_results_hash",
+    "Type": "byte array",
+    "Description": "Merkle root of the results from executing prev block"
+  },
+  {
+    "Parameter": "app_hash",
+    "Type": "byte array",
+    "Description": "the latest AppHash we've received from calling abci.Commit()"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "module_name": "commitment",
+    "error_code": 2,
+    "description": "invalid proof"
+  },
+  {
+    "module_name": "commitment",
+    "error_code": 3,
+    "description": "invalid prefix"
+  },
+  {
+    "module_name": "commitment",
+    "error_code": 4,
+    "description": "invalid merkle proof"
+  }
+]

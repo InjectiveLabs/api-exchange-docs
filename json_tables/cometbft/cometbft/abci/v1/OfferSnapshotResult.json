@@ -1,0 +1,26 @@
+[
+  {
+    "Code": "0",
+    "Name": "OFFER_SNAPSHOT_RESULT_UNKNOWN"
+  },
+  {
+    "Code": "1",
+    "Name": "OFFER_SNAPSHOT_RESULT_ACCEPT"
+  },
+  {
+    "Code": "2",
+    "Name": "OFFER_SNAPSHOT_RESULT_ABORT"
+  },
+  {
+    "Code": "3",
+    "Name": "OFFER_SNAPSHOT_RESULT_REJECT"
+  },
+  {
+    "Code": "4",
+    "Name": "OFFER_SNAPSHOT_RESULT_REJECT_FORMAT"
+  },
+  {
+    "Code": "5",
+    "Name": "OFFER_SNAPSHOT_RESULT_REJECT_SENDER"
+  }
+]

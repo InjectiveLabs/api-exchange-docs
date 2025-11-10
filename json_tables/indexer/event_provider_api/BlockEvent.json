@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "type_url",
+    "Type": "string",
+    "Description": "Event type"
+  },
+  {
+    "Parameter": "value",
+    "Type": "byte array",
+    "Description": "Event data"
+  },
+  {
+    "Parameter": "tx_hash",
+    "Type": "byte array",
+    "Description": "TX hash"
+  },
+  {
+    "Parameter": "mode",
+    "Type": "string",
+    "Description": "Set only if it's a BeginBlock or EndBlock event"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "begin_block",
+    "Type": "ResponseBeginBlock",
+    "Description": ""
+  }
+]

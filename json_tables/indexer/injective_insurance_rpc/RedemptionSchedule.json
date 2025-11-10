@@ -1,0 +1,52 @@
+[
+  {
+    "Parameter": "redemption_id",
+    "Type": "uint64",
+    "Description": "Redemption ID."
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Status of the redemption. Either pending or disbursed."
+  },
+  {
+    "Parameter": "redeemer",
+    "Type": "string",
+    "Description": "Account address of the redemption owner"
+  },
+  {
+    "Parameter": "claimable_redemption_time",
+    "Type": "int64",
+    "Description": "Claimable redemption time in seconds"
+  },
+  {
+    "Parameter": "redemption_amount",
+    "Type": "string",
+    "Description": "Amount of pool tokens being redeemed."
+  },
+  {
+    "Parameter": "redemption_denom",
+    "Type": "string",
+    "Description": "Pool token denom being redeemed."
+  },
+  {
+    "Parameter": "requested_at",
+    "Type": "int64",
+    "Description": "Redemption request time in unix milliseconds."
+  },
+  {
+    "Parameter": "disbursed_amount",
+    "Type": "string",
+    "Description": "Amount of quote tokens disbursed"
+  },
+  {
+    "Parameter": "disbursed_denom",
+    "Type": "string",
+    "Description": "Denom of the quote tokens disbursed"
+  },
+  {
+    "Parameter": "disbursed_at",
+    "Type": "int64",
+    "Description": "Redemption disbursement time in unix milliseconds."
+  }
+]

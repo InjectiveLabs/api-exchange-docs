@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "pubkey",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "sequence",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "signature",
+    "Type": "string",
+    "Description": ""
+  }
+]

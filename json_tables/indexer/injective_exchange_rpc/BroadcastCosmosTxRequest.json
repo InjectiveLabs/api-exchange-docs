@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "tx",
+    "Type": "byte array",
+    "Description": "proto encoded tx",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "pub_key",
+    "Type": "CosmosPubKey",
+    "Description": "Specify ethsecp256k1 sender pubkey",
+    "Required": "No"
+  },
+  {
+    "Parameter": "signature",
+    "Type": "string",
+    "Description": "Hex-encoded ethsecp256k1 sender signature bytes",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "sender_address",
+    "Type": "string",
+    "Description": "sender address",
+    "Required": "Yes"
+  }
+]

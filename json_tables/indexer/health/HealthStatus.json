@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "local_height",
+    "Type": "int32",
+    "Description": "Block height from local mongo exchange db."
+  },
+  {
+    "Parameter": "local_timestamp",
+    "Type": "int32",
+    "Description": "block timestamp from local mongo exchange db."
+  },
+  {
+    "Parameter": "horacle_height",
+    "Type": "int32",
+    "Description": "block height from Horacle service."
+  },
+  {
+    "Parameter": "horacle_timestamp",
+    "Type": "int32",
+    "Description": "block timestamp from Horacle service."
+  },
+  {
+    "Parameter": "migration_last_version",
+    "Type": "int32",
+    "Description": "Migration version of the database."
+  },
+  {
+    "Parameter": "ep_height",
+    "Type": "int32",
+    "Description": "Block height from event provider service."
+  },
+  {
+    "Parameter": "ep_timestamp",
+    "Type": "int32",
+    "Description": "Block UNIX timestamp from event provider service."
+  }
+]

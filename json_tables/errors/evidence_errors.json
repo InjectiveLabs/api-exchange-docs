@@ -1,0 +1,17 @@
+[
+  {
+    "module_name": "evidence",
+    "error_code": 2,
+    "description": "unregistered handler for evidence type"
+  },
+  {
+    "module_name": "evidence",
+    "error_code": 3,
+    "description": "invalid evidence"
+  },
+  {
+    "module_name": "evidence",
+    "error_code": 5,
+    "description": "evidence already exists"
+  }
+]

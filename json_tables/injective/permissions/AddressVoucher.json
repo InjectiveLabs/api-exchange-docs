@@ -2,11 +2,11 @@
   {
     "Parameter": "address",
     "Type": "string",
-    "Description": ""
+    "Description": "The Injective address that the voucher is for"
   },
   {
     "Parameter": "voucher",
     "Type": "github_com_cosmos_cosmos_sdk_types.Coin",
-    "Description": ""
+    "Description": "The voucher amount"
   }
 ]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "holders",
+    "Type": "Holder array",
+    "Description": ""
+  },
+  {
+    "Parameter": "next",
+    "Type": "string array",
+    "Description": "Next tokens for pagination"
+  },
+  {
+    "Parameter": "total",
+    "Type": "int32",
+    "Description": "Total number of holders"
+  }
+]

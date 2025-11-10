@@ -1,0 +1,10 @@
+[
+  {
+    "Error Code": 2,
+    "Description": "sender address is empty"
+  },
+  {
+    "Error Code": 3,
+    "Description": "unknown invariant"
+  }
+]

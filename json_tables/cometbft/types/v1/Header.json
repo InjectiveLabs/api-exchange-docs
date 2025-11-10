@@ -1,0 +1,72 @@
+[
+  {
+    "Parameter": "version",
+    "Type": "v11.Consensus",
+    "Description": "basic block info"
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "time",
+    "Type": "time.Time",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_block_id",
+    "Type": "BlockID",
+    "Description": "prev block info"
+  },
+  {
+    "Parameter": "last_commit_hash",
+    "Type": "byte array",
+    "Description": "hashes of block data"
+  },
+  {
+    "Parameter": "data_hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "validators_hash",
+    "Type": "byte array",
+    "Description": "hashes from the app output from the prev block"
+  },
+  {
+    "Parameter": "next_validators_hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "consensus_hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "app_hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_results_hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "evidence_hash",
+    "Type": "byte array",
+    "Description": "consensus info"
+  },
+  {
+    "Parameter": "proposer_address",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

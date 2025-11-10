@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "snapshot",
+    "Type": "Snapshot",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "app_hash",
+    "Type": "byte array",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

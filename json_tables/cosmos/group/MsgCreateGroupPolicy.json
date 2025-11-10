@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "admin is the account address of the group admin.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "group_id",
+    "Type": "uint64",
+    "Description": "group_id is the unique ID of the group.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "metadata",
+    "Type": "string",
+    "Description": "metadata is any arbitrary metadata attached to the group policy.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "decision_policy",
+    "Type": "types.Any",
+    "Description": "decision_policy specifies the group policy's decision policy.",
+    "Required": "No"
+  }
+]

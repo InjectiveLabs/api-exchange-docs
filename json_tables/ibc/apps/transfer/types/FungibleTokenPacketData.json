@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "the token denomination to be transferred"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "string",
+    "Description": "the token amount to be transferred"
+  },
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender address"
+  },
+  {
+    "Parameter": "receiver",
+    "Type": "string",
+    "Description": "the recipient address on the destination chain"
+  },
+  {
+    "Parameter": "memo",
+    "Type": "string",
+    "Description": "optional memo"
+  }
+]

@@ -50,8 +50,8 @@
     "Description": ""
   },
   {
-    "Parameter": "denom_decimals_update_proposal",
-    "Type": "UpdateDenomDecimalsProposal",
+    "Parameter": "auction_exchange_transfer_denom_decimals_update_proposal",
+    "Type": "UpdateAuctionExchangeTransferDenomDecimalsProposal",
     "Description": ""
   },
   {

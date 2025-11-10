@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "client state unique identifier",
+    "Required": "Yes"
+  }
+]

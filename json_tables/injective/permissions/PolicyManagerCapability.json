@@ -2,21 +2,21 @@
   {
     "Parameter": "manager",
     "Type": "string",
-    "Description": ""
+    "Description": "The manager name"
   },
   {
     "Parameter": "action",
     "Type": "Action",
-    "Description": ""
+    "Description": "The action code number"
   },
   {
     "Parameter": "can_disable",
     "Type": "bool",
-    "Description": ""
+    "Description": "Whether the manager can disable the policy"
   },
   {
     "Parameter": "can_seal",
     "Type": "bool",
-    "Description": ""
+    "Description": "Whether the manager can seal the policy"
   }
 ]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "round",
+    "Type": "int32",
+    "Description": ""
+  },
+  {
+    "Parameter": "votes",
+    "Type": "v1beta1.VoteInfo array",
+    "Description": ""
+  }
+]

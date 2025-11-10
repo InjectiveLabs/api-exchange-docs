@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "txs",
+    "Type": "][byte array",
+    "Description": "Txs that will be applied by state @ block.Height+1. NOTE: not all txs here are valid.  We're just agreeing on the order first. This means that block.AppHash does not include these txs."
+  }
+]

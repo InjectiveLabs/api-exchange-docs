@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market identifier."
+  },
+  {
+    "Parameter": "resolution",
+    "Type": "string",
+    "Description": "Symbol resolution"
+  },
+  {
+    "Parameter": "t",
+    "Type": "int32 array",
+    "Description": "Bar time, Unix timestamp (UTC). Daily bars should only have the date part, time should be 0."
+  },
+  {
+    "Parameter": "o",
+    "Type": "float64 array",
+    "Description": "Open price."
+  },
+  {
+    "Parameter": "h",
+    "Type": "float64 array",
+    "Description": "High price."
+  },
+  {
+    "Parameter": "l",
+    "Type": "float64 array",
+    "Description": "Low price."
+  },
+  {
+    "Parameter": "c",
+    "Type": "float64 array",
+    "Description": "Close price."
+  },
+  {
+    "Parameter": "v",
+    "Type": "float64 array",
+    "Description": "Volume."
+  }
+]

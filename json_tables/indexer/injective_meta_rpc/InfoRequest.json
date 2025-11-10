@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "timestamp",
+    "Type": "int64",
+    "Description": "Provide current system UNIX timestamp in millis",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "client_state",
+    "Type": "types.Any",
+    "Description": "client state associated with the request identifier"
+  },
+  {
+    "Parameter": "proof",
+    "Type": "byte array",
+    "Description": "merkle proof of existence"
+  },
+  {
+    "Parameter": "proof_height",
+    "Type": "Height",
+    "Description": "height at which the proof was retrieved"
+  }
+]

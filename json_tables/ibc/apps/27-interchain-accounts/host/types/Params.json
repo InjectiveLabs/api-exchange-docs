@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "host_enabled",
+    "Type": "bool",
+    "Description": "host_enabled enables or disables the host submodule."
+  },
+  {
+    "Parameter": "allow_messages",
+    "Type": "string array",
+    "Description": "allow_messages defines a list of sdk message typeURLs allowed to be executed on a host chain."
+  }
+]

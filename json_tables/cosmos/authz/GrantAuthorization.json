@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "granter",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "grantee",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "authorization",
+    "Type": "types.Any",
+    "Description": ""
+  },
+  {
+    "Parameter": "expiration",
+    "Type": "time.Time",
+    "Description": ""
+  }
+]

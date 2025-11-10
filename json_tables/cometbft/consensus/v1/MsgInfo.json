@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "msg",
+    "Type": "Message",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "peer_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "receive_time",
+    "Type": "time.Time",
+    "Description": "",
+    "Required": "No"
+  }
+]

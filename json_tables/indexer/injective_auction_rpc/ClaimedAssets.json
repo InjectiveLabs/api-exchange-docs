@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "amount",
+    "Type": "string",
+    "Description": ""
+  }
+]

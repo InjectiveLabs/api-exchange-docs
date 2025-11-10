@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "format",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "chunks",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "metadata",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

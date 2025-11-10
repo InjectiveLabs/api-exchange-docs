@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "Authority is the address of the governance account.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "wasm_byte_code",
+    "Type": "byte array",
+    "Description": "WASMByteCode can be raw or gzip compressed",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "instantiate_permission",
+    "Type": "AccessConfig",
+    "Description": "InstantiatePermission to apply on contract creation, optional",
+    "Required": "No"
+  },
+  {
+    "Parameter": "contract",
+    "Type": "string",
+    "Description": "Contract is the address of the smart contract",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "msg",
+    "Type": "RawContractMessage",
+    "Description": "Msg json encoded message to be passed to the contract on migration",
+    "Required": "Yes"
+  }
+]

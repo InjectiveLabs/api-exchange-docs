@@ -1,0 +1,42 @@
+[
+  {
+    "Code": "0",
+    "Name": "DATA_TYPE_UNINITIALIZED_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "DATA_TYPE_CLIENT_STATE"
+  },
+  {
+    "Code": "2",
+    "Name": "DATA_TYPE_CONSENSUS_STATE"
+  },
+  {
+    "Code": "3",
+    "Name": "DATA_TYPE_CONNECTION_STATE"
+  },
+  {
+    "Code": "4",
+    "Name": "DATA_TYPE_CHANNEL_STATE"
+  },
+  {
+    "Code": "5",
+    "Name": "DATA_TYPE_PACKET_COMMITMENT"
+  },
+  {
+    "Code": "6",
+    "Name": "DATA_TYPE_PACKET_ACKNOWLEDGEMENT"
+  },
+  {
+    "Code": "7",
+    "Name": "DATA_TYPE_PACKET_RECEIPT_ABSENCE"
+  },
+  {
+    "Code": "8",
+    "Name": "DATA_TYPE_NEXT_SEQUENCE_RECV"
+  },
+  {
+    "Code": "9",
+    "Name": "DATA_TYPE_HEADER"
+  }
+]

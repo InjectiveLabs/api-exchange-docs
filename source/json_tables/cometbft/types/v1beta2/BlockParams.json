@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "max_bytes",
+    "Type": "int64",
+    "Description": "Max block size, in bytes. Note: must be greater than 0"
+  },
+  {
+    "Parameter": "max_gas",
+    "Type": "int64",
+    "Description": "Max gas per block. Note: must be greater or equal to -1"
+  }
+]

@@ -2,13 +2,13 @@
   {
     "Parameter": "denom",
     "Type": "string",
-    "Description": "",
+    "Description": "The token denom",
     "Required": "Yes"
   },
   {
     "Parameter": "role",
     "Type": "string",
-    "Description": "",
+    "Description": "The role to query actors for",
     "Required": "Yes"
   }
 ]

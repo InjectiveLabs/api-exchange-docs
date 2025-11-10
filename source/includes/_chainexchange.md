@@ -322,9 +322,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/querySubaccountDepositRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The subaccount ID</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">String</td><td class="description-td td_text">The token denom</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountDepositRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">the token denom</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -339,8 +339,8 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/QuerySubaccountDepositResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">deposits</td><td class="type-td td_text">Deposit</td><td class="description-td td_text">The subaccount's deposits for the specified token</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountDepositResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">deposits</td><td class="type-td td_text">Deposit</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -480,18 +480,18 @@ No parameters
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryExchangeBalancesResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">balances</td><td class="type-td td_text">Balance Array</td><td class="description-td td_text">List of all accounts' balances</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryExchangeBalancesResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">balances</td><td class="type-td td_text">Balance array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Balance**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/balance.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The subaccount ID</td></tr>
-<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">String</td><td class="description-td td_text">The token denom</td></tr>
-<tr ><td class="parameter-td td_text">deposits</td><td class="type-td td_text">Deposit</td><td class="description-td td_text">The token deposit details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/Balance.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td></tr>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">the denom of the balance</td></tr>
+<tr ><td class="parameter-td td_text">deposits</td><td class="type-td td_text">Deposit</td><td class="description-td td_text">the token deposits details</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -641,8 +641,8 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryAggregateVolumeRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account</td><td class="type-td td_text">String</td><td class="description-td td_text">Account address or subaccount id</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryAggregateVolumeRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account</td><td class="type-td td_text">string</td><td class="description-td td_text">can either be an address or a subaccount</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -676,26 +676,26 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryAggregateVolumeResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">aggregated_volumes</td><td class="type-td td_text">MarketVolume Array</td><td class="description-td td_text">Volume information. If an address is specified, then the aggregate_volumes will aggregate the volumes across all subaccounts for the address</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryAggregateVolumeResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">aggregate_volumes</td><td class="type-td td_text">MarketVolume array</td><td class="description-td td_text">if an address is specified, then the aggregate_volumes will aggregate the volumes across all subaccounts for the address</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **MarketVolume**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/marketVolume.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The market ID</td></tr>
-<tr ><td class="parameter-td td_text">volume</td><td class="type-td td_text">VolumeRecord</td><td class="description-td td_text">The volume for a particular market</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MarketVolume.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
+<tr ><td class="parameter-td td_text">volume</td><td class="type-td td_text">VolumeRecord</td><td class="description-td td_text">the market volume</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **VolumeRecord**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/volumeRecord.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">maker_volume</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The maker volume (in human redable format)</td></tr>
-<tr ><td class="parameter-td td_text">taker_volume</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The taker volume (in human redable format)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/VolumeRecord.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">maker_volume</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the market's maker volume (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">taker_volume</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the market's taker volume (in human readable format)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -827,9 +827,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryAggregateVolumesRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">accounts</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of account addresses and/or subaccount IDs to query for</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of market IDs to query for</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryAggregateVolumesRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">accounts</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -863,36 +863,36 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryAggregateVolumesResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">aggregated_account_volumes</td><td class="type-td td_text">AggregateAccountVolumeRecord Array</td><td class="description-td td_text">The aggregate volume records for the accounts specified</td></tr>
-<tr ><td class="parameter-td td_text">aggregated_market_volumes</td><td class="type-td td_text">MarketVolume Array</td><td class="description-td td_text">The aggregate volumes for the markets specified</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryAggregateVolumesResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">aggregate_account_volumes</td><td class="type-td td_text">AggregateAccountVolumeRecord array</td><td class="description-td td_text">the aggregate volume records for the accounts specified</td></tr>
+<tr ><td class="parameter-td td_text">aggregate_market_volumes</td><td class="type-td td_text">MarketVolume array</td><td class="description-td td_text">the aggregate volumes for the markets specified</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **AggregateAccountVolumeRecord**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/aggregateAccountVolumeRecord.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account</td><td class="type-td td_text">String</td><td class="description-td td_text">Account the volume belongs to</td></tr>
-<tr ><td class="parameter-td td_text">market_volumes</td><td class="type-td td_text">MarketVolume Array</td><td class="description-td td_text">The aggregate volumes for each market</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/AggregateAccountVolumeRecord.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account</td><td class="type-td td_text">string</td><td class="description-td td_text">account the volume belongs to</td></tr>
+<tr ><td class="parameter-td td_text">market_volumes</td><td class="type-td td_text">MarketVolume array</td><td class="description-td td_text">the aggregate volumes for each market</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **MarketVolume**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/marketVolume.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The market ID</td></tr>
-<tr ><td class="parameter-td td_text">volume</td><td class="type-td td_text">VolumeRecord</td><td class="description-td td_text">The volume for a particular market</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MarketVolume.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
+<tr ><td class="parameter-td td_text">volume</td><td class="type-td td_text">VolumeRecord</td><td class="description-td td_text">the market volume</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **VolumeRecord**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/volumeRecord.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">maker_volume</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The maker volume (in human redable format)</td></tr>
-<tr ><td class="parameter-td td_text">taker_volume</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The taker volume (in human redable format)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/VolumeRecord.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">maker_volume</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the market's maker volume (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">taker_volume</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the market's taker volume (in human readable format)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1010,8 +1010,8 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryAggregateMarketVolumeRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The market ID</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryAggregateMarketVolumeRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1026,17 +1026,17 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryAggregateMarketVolumeResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">volume</td><td class="type-td td_text">VolumeRecord</td><td class="description-td td_text">The aggregated market volume information</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryAggregateMarketVolumeResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">volume</td><td class="type-td td_text">VolumeRecord</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **VolumeRecord**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/volumeRecord.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">maker_volume</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The maker volume (in human redable format)</td></tr>
-<tr ><td class="parameter-td td_text">taker_volume</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The taker volume (in human redable format)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/VolumeRecord.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">maker_volume</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the market's maker volume (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">taker_volume</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the market's taker volume (in human readable format)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1153,8 +1153,8 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryAggregateMarketVolumesRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of market IDs to query volume for</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryAggregateMarketVolumesRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1174,30 +1174,30 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryAggregateMarketVolumesResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">volumes</td><td class="type-td td_text">MarketVolume Array</td><td class="description-td td_text">The markets volume information</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryAggregateMarketVolumesResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">volumes</td><td class="type-td td_text">MarketVolume array</td><td class="description-td td_text">the aggregate volumes for the entire market</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **MarketVolume**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/marketVolume.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The market ID</td></tr>
-<tr ><td class="parameter-td td_text">volume</td><td class="type-td td_text">VolumeRecord</td><td class="description-td td_text">The volume for a particular market</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MarketVolume.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
+<tr ><td class="parameter-td td_text">volume</td><td class="type-td td_text">VolumeRecord</td><td class="description-td td_text">the market volume</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **VolumeRecord**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/volumeRecord.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">maker_volume</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The maker volume (in human redable format)</td></tr>
-<tr ><td class="parameter-td td_text">taker_volume</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The taker volume (in human redable format)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/VolumeRecord.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">maker_volume</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the market's maker volume (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">taker_volume</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the market's taker volume (in human readable format)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
-## DenomDecimal
+## AuctionExchangeTransferDenomDecimal
 
 Retrieves the number of decimals used for a denom
 
@@ -1206,8 +1206,8 @@ Retrieves the number of decimals used for a denom
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/8_DenomDecimal.py) -->
-<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/8_DenomDecimal.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/8_AuctionExchangeTransferDenomDecimal.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/8_AuctionExchangeTransferDenomDecimal.py -->
 ```py
 import asyncio
 
@@ -1222,7 +1222,9 @@ async def main() -> None:
     # initialize grpc client
     client = AsyncClient(network)
 
-    deposits = await client.fetch_denom_decimal(denom="peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5")
+    deposits = await client.fetch_auction_exchange_transfer_denom_decimal(
+        denom="peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5"
+    )
     print(deposits)
 
 
@@ -1231,8 +1233,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/8_DenomDecimal/example.go) -->
-<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/8_DenomDecimal/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/8_AuctionExchangeTransferDenomDecimal/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/8_AuctionExchangeTransferDenomDecimal/example.go -->
 ```go
 package main
 
@@ -1296,7 +1298,7 @@ func main() {
 
 	denom := "peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5"
 
-	res, err := chainClient.FetchDenomDecimal(ctx, denom)
+	res, err := chainClient.FetchAuctionExchangeTransferDenomDecimal(ctx, denom)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -1308,8 +1310,8 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryDenomDecimalRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">String</td><td class="description-td td_text">The asset denom</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryAuctionExchangeTransferDenomDecimalRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1321,12 +1323,12 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryDenomDecimalResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">decimal</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of decimals used for the asset</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryAuctionExchangeTransferDenomDecimalResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">decimal</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
-## DenomDecimals
+## AuctionExchangeTransferDenomDecimals
 
 Retrieves the denom decimals for multiple denoms
 
@@ -1335,8 +1337,8 @@ Retrieves the denom decimals for multiple denoms
 ### Request Parameters
 > Request Example:
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/9_DenomDecimals.py) -->
-<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/9_DenomDecimals.py -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/9_AuctionExchangeTransferDenomDecimals.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/9_AuctionExchangeTransferDenomDecimals.py -->
 ```py
 import asyncio
 
@@ -1351,7 +1353,9 @@ async def main() -> None:
     # initialize grpc client
     client = AsyncClient(network)
 
-    deposits = await client.fetch_denom_decimals(denoms=["inj", "peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5"])
+    deposits = await client.fetch_auction_exchange_transfer_denom_decimals(
+        denoms=["inj", "peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5"]
+    )
     print(deposits)
 
 
@@ -1360,8 +1364,8 @@ if __name__ == "__main__":
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/9_DenomDecimals/example.go) -->
-<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/9_DenomDecimals/example.go -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/9_AuctionExchangeTransferDenomDecimals/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/9_AuctionExchangeTransferDenomDecimals/example.go -->
 ```go
 package main
 
@@ -1425,7 +1429,7 @@ func main() {
 
 	denoms := []string{"inj", "peggy0x87aB3B4C8661e07D6372361211B96ed4Dc36B1B5"}
 
-	res, err := chainClient.FetchDenomDecimals(ctx, denoms)
+	res, err := chainClient.FetchAuctionExchangeTransferDenomDecimals(ctx, denoms)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -1437,8 +1441,8 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryDenomDecimalsRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denoms</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of asset denoms</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryAuctionExchangeTransferDenomDecimalsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denoms</td><td class="type-td td_text">string array</td><td class="description-td td_text">denoms can be empty to query all denom decimals</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1459,17 +1463,17 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryDenomDecimalsResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom_decimals</td><td class="type-td td_text">DenomDecimals Array</td><td class="description-td td_text">List of decimals for the queried denoms</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryAuctionExchangeTransferDenomDecimalsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom_decimals</td><td class="type-td td_text">DenomDecimals array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **DenomDecimals**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/denomDecimals.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">String</td><td class="description-td td_text">The asset denom</td></tr>
-<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of decimals</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/DenomDecimals.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">the denom of the token</td></tr>
+<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">uint64</td><td class="description-td td_text">the decimals of the token</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1603,9 +1607,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/querySubaccountOrdersRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The subaccount ID</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Market ID to request for</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountOrdersRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1622,29 +1626,29 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/querySubaccountOrdersResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">buy_orders</td><td class="type-td td_text">SubaccountOrderData Array</td><td class="description-td td_text">Buy orders info</td></tr>
-<tr ><td class="parameter-td td_text">sell_orders</td><td class="type-td td_text">SubaccountOrderData Array</td><td class="description-td td_text">Sell orders info</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountOrdersResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">buy_orders</td><td class="type-td td_text">SubaccountOrderData array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">sell_orders</td><td class="type-td td_text">SubaccountOrderData array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **SubaccountOrderData**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/subaccountOrderData.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">SubaccountOrder</td><td class="description-td td_text">Order info</td></tr>
-<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">Bytes</td><td class="description-td td_text">Order hash</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/SubaccountOrderData.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">SubaccountOrder</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **SubaccountOrder**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/subaccountOrder.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Order price</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The amount of the order quantity remaining fillable</td></tr>
-<tr ><td class="parameter-td td_text">is_reduce_only</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">True if the order is a reduce only order</td></tr>
-<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">String</td><td class="description-td td_text">The client order ID provided by the creator</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/SubaccountOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">price of the order</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the amount of the quantity remaining fillable</td></tr>
+<tr ><td class="parameter-td td_text">isReduceOnly</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1776,8 +1780,8 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/querySubaccountTradeNonceRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The subaccount ID to query for</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountTradeNonceRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1789,8 +1793,8 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/querySubaccountTradeNonceResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">nonce</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The nonce number</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountTradeNonceResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">nonce</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1921,8 +1925,8 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/querySubaccountOrderMetadataRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The subaccount ID to query for</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountOrderMetadataRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1959,31 +1963,31 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/querySubaccountOrderMetadataResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">metadata</td><td class="type-td td_text">SubaccountOrderbookMetadataWithMarket Array</td><td class="description-td td_text">List of subaccount's orderbook metadata information</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountOrderMetadataResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">metadata</td><td class="type-td td_text">SubaccountOrderbookMetadataWithMarket array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **SubaccountOrderbookMetadataWithMarket**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/subaccountOrderbookMetadataWithMarket.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">metadata</td><td class="type-td td_text">SubaccountOrderbookMetadata</td><td class="description-td td_text">Orderbook metadata</td></tr>
-<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The orderbook's market ID</td></tr>
-<tr ><td class="parameter-td td_text">is_buy</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">True for buy. False for sell</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/SubaccountOrderbookMetadataWithMarket.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">metadata</td><td class="type-td td_text">SubaccountOrderbookMetadata</td><td class="description-td td_text">the subaccount orderbook details</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
+<tr ><td class="parameter-td td_text">isBuy</td><td class="type-td td_text">bool</td><td class="description-td td_text">true if the orderbook is for a buy orders</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **SubaccountOrderbookMetadata**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/subaccountOrderbookMetadata.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">vanilla_limit_order_count</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of vanilla limit orders</td></tr>
-<tr ><td class="parameter-td td_text">reduce_only_limit_order_count</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of reduce only limit orders</td></tr>
-<tr ><td class="parameter-td td_text">aggregate_reduce_only_quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Aggregate fillable quantity of the subaccount's reduce-only limit orders in the given direction</td></tr>
-<tr ><td class="parameter-td td_text">aggregate_vanilla_quantity</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Aggregate fillable quantity of the subaccount's vanilla limit orders in the given direction</td></tr>
-<tr ><td class="parameter-td td_text">vanilla_conditional_order_count</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of vanilla conditional orders</td></tr>
-<tr ><td class="parameter-td td_text">reduce_only_conditional_order_count</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of reduce only conditional orders</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/SubaccountOrderbookMetadata.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">vanilla_limit_order_count</td><td class="type-td td_text">uint32</td><td class="description-td td_text">The number of vanilla limit orders</td></tr>
+<tr ><td class="parameter-td td_text">reduce_only_limit_order_count</td><td class="type-td td_text">uint32</td><td class="description-td td_text">The number of reduce-only limit orders</td></tr>
+<tr ><td class="parameter-td td_text">aggregate_reduce_only_quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">The aggregate quantity of the subaccount's reduce-only limit orders (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">aggregate_vanilla_quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">The aggregate quantity of the subaccount's vanilla limit orders (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">vanilla_conditional_order_count</td><td class="type-td td_text">uint32</td><td class="description-td td_text">The number of vanilla conditional orders</td></tr>
+<tr ><td class="parameter-td td_text">reduce_only_conditional_order_count</td><td class="type-td td_text">uint32</td><td class="description-td td_text">The number of reduce-only conditional orders</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -2112,9 +2116,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryTradeRewardPointsRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">accounts</td><td class="type-td td_text">String List</td><td class="description-td td_text">List of account addresses to query for</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">pending_pool_timestamp</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Rewards pool timestamp</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryTradeRewardPointsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">accounts</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">pending_pool_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -2128,8 +2132,8 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryTradeRewardPointsResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account_trade_reward_points</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Number of points</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryTradeRewardPointsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account_trade_reward_points</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -2258,9 +2262,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryTradeRewardPointsRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">accounts</td><td class="type-td td_text">String List</td><td class="description-td td_text">List of account addresses to query for</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">pending_pool_timestamp</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Rewards pool timestamp</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryTradeRewardPointsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">accounts</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">pending_pool_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -2274,8 +2278,8 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryTradeRewardPointsResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account_trade_reward_points</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Number of points</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryTradeRewardPointsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account_trade_reward_points</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -2420,52 +2424,52 @@ No parameters
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryTradeRewardCampaignResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">trading_reward_campaign_info</td><td class="type-td td_text">TradingRewardCampaignInfo</td><td class="description-td td_text">Campaign information</td></tr>
-<tr ><td class="parameter-td td_text">trading_reward_pool_campaign_schedule</td><td class="type-td td_text">CampaignRewardPool Array</td><td class="description-td td_text">Campaign schedules</td></tr>
-<tr ><td class="parameter-td td_text">total_trade_reward_points</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Trade reward points</td></tr>
-<tr ><td class="parameter-td td_text">pending_trading_reward_pool_campaign_schedule</td><td class="type-td td_text">CampaignRewardPool Array</td><td class="description-td td_text">Pending campaigns schedules</td></tr>
-<tr ><td class="parameter-td td_text">pending_total_trade_reward_points</td><td class="type-td td_text">Decimal Array</td><td class="description-td td_text">Pending campaigns points</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryTradeRewardCampaignResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">trading_reward_campaign_info</td><td class="type-td td_text">TradingRewardCampaignInfo</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">trading_reward_pool_campaign_schedule</td><td class="type-td td_text">CampaignRewardPool array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">total_trade_reward_points</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">pending_trading_reward_pool_campaign_schedule</td><td class="type-td td_text">CampaignRewardPool array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">pending_total_trade_reward_points</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TradingRewardCampaignInfo**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/tradingRewardCampaignInfo.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">campaign_duration_seconds</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Campaign duration in seconds</td></tr>
-<tr ><td class="parameter-td td_text">quote_denoms</td><td class="type-td td_text">String Array</td><td class="description-td td_text">The trading fee quote denoms which will be counted for the rewards</td></tr>
-<tr ><td class="parameter-td td_text">trading_reward_boost_info</td><td class="type-td td_text">TradingRewardCampaignBoostInfo</td><td class="description-td td_text">Boost information</td></tr>
-<tr ><td class="parameter-td td_text">disqualified_market_ids</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of disqualified marked IDs</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/TradingRewardCampaignInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">campaign_duration_seconds</td><td class="type-td td_text">int64</td><td class="description-td td_text">number of seconds of the duration of each campaign</td></tr>
+<tr ><td class="parameter-td td_text">quote_denoms</td><td class="type-td td_text">string array</td><td class="description-td td_text">the trading fee quote denoms which will be counted for the rewards</td></tr>
+<tr ><td class="parameter-td td_text">trading_reward_boost_info</td><td class="type-td td_text">TradingRewardCampaignBoostInfo</td><td class="description-td td_text">the optional boost info for markets</td></tr>
+<tr ><td class="parameter-td td_text">disqualified_market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">the marketIDs which are disqualified from being rewarded</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **CampaignRewardPool**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/campaignRewardPool.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">start_timestamp</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Campaign start timestamp in seconds</td></tr>
-<tr ><td class="parameter-td td_text">max_campaign_rewards</td><td class="type-td td_text">Decimal Array</td><td class="description-td td_text">Maximum reward amounts to be disbursed at the end of the campaign</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/CampaignRewardPool.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">start_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">the campaign start timestamp in seconds</td></tr>
+<tr ><td class="parameter-td td_text">max_campaign_rewards</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_text">max_campaign_rewards are the maximum reward amounts to be disbursed at the end of the campaign</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TradingRewardCampaignBoostInfo**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/tradingRewardCampaignBoostInfo.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">boosted_spot_market_ids</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of spot market IDs</td></tr>
-<tr ><td class="parameter-td td_text">spot_market_multipliers</td><td class="type-td td_text">PointsMultiplier Array</td><td class="description-td td_text">List of boost information for each spot market</td></tr>
-<tr ><td class="parameter-td td_text">boosted_derivative_market_ids</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of derivative market IDs</td></tr>
-<tr ><td class="parameter-td td_text">derivative_market_multipliers</td><td class="type-td td_text">PointsMultiplier Array</td><td class="description-td td_text">List of bood information for each derivative market</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/TradingRewardCampaignBoostInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">boosted_spot_market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">spot_market_multipliers</td><td class="type-td td_text">PointsMultiplier array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">boosted_derivative_market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">derivative_market_multipliers</td><td class="type-td td_text">PointsMultiplier array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **PointsMultiplier**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/pointsMultiplier.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">maker_points_multiplier</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Multiplier for maker trades</td></tr>
-<tr ><td class="parameter-td td_text">taker_points_multiplier</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Multiplier for taker trades</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/PointsMultiplier.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">maker_points_multiplier</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">taker_points_multiplier</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -2961,8 +2965,8 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryBalanceMismatchesRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">dust_factor</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Difference treshold to query with</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryBalanceMismatchesRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">dust_factor</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -3092,22 +3096,22 @@ func main() {
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryBalanceMismatchesResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">balance_mismatches</td><td class="type-td td_text">BalanceMismatch Array</td><td class="description-td td_text">List of balance mismatches</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryBalanceMismatchesResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">balance_mismatches</td><td class="type-td td_text">BalanceMismatch array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **BalanceMismatch**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/balanceMismatch.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The subaccount ID the balance belongs to</td></tr>
-<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">String</td><td class="description-td td_text">The token denom</td></tr>
-<tr ><td class="parameter-td td_text">available</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The available balance</td></tr>
-<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The total balance</td></tr>
-<tr ><td class="parameter-td td_text">balance_hold</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The balance on hold</td></tr>
-<tr ><td class="parameter-td td_text">expected_total</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The expected total balance</td></tr>
-<tr ><td class="parameter-td td_text">difference</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">Balance difference</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/BalanceMismatch.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccountId</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td></tr>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">the denom of the balance</td></tr>
+<tr ><td class="parameter-td td_text">available</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the available balance</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the total balance</td></tr>
+<tr ><td class="parameter-td td_text">balance_hold</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the balance hold</td></tr>
+<tr ><td class="parameter-td td_text">expected_total</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the expected total balance</td></tr>
+<tr ><td class="parameter-td td_text">difference</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the difference between the total balance and the expected total balance</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -3245,20 +3249,20 @@ No parameters
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryBalanceWithBalanceHoldsResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">balance_with_balance_holds</td><td class="type-td td_text">BalanceWithMarginHold Array</td><td class="description-td td_text">List of balances with hold</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryBalanceWithBalanceHoldsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">balance_with_balance_holds</td><td class="type-td td_text">BalanceWithMarginHold array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **BalanceWithMarginHold**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/balanceWithMarginHold.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The subaccount ID the balance belongs to</td></tr>
-<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">String</td><td class="description-td td_text">The token denom</td></tr>
-<tr ><td class="parameter-td td_text">available</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The available balance</td></tr>
-<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The total balance</td></tr>
-<tr ><td class="parameter-td td_text">balance_hold</td><td class="type-td td_text">Decimal</td><td class="description-td td_text">The balance on hold</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/BalanceWithMarginHold.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccountId</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td></tr>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">the denom of the balance</td></tr>
+<tr ><td class="parameter-td td_text">available</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the available balance</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the total balance</td></tr>
+<tr ><td class="parameter-td td_text">balance_hold</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the balance on hold</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -3418,17 +3422,17 @@ No parameters
 }
 ```
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryFeeDiscountTierStatisticsResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">statistics</td><td class="type-td td_text">TierStatistic Array</td><td class="description-td td_text">List of tier statistics</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryFeeDiscountTierStatisticsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">statistics</td><td class="type-td td_text">TierStatistic array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TierStatistic**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/tierStatistic.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tier</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Tier number</td></tr>
-<tr ><td class="parameter-td td_text">count</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The tier count</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/TierStatistic.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tier</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">count</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -4267,20 +4271,20 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/queryMarketVolatilityRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">The market ID to query for</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">trade_history_options</td><td class="type-td td_text">TradeHistoryOptions</td><td class="description-td td_text">Extra query options</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryMarketVolatilityRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID to query volatility for</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">trade_history_options</td><td class="type-td td_text">TradeHistoryOptions</td><td class="description-td td_text">the trade history options</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TradeHistoryOptions**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/chain/exchange/tradeHistoryOptions.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">trade_grouping_sec</td><td class="type-td td_text">Integer</td><td class="description-td td_text">0 means use the chain's default grouping</td></tr>
-<tr ><td class="parameter-td td_text">max_age</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Restricts the trade records oldest age in seconds from the current block time to consider. A value of 0 means use all the records present on the chain</td></tr>
-<tr ><td class="parameter-td td_text">include_raw_history</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">If True, the raw underlying data used for the computation is included in the response</td></tr>
-<tr ><td class="parameter-td td_text">include_metadata</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">If True, metadata on the computation is included in the response</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/TradeHistoryOptions.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">trade_grouping_sec</td><td class="type-td td_text">uint64</td><td class="description-td td_text">TradeGroupingSec of 0 means use the chain's default grouping</td></tr>
+<tr ><td class="parameter-td td_text">max_age</td><td class="type-td td_text">uint64</td><td class="description-td td_text">MaxAge restricts the trade records oldest age in seconds from the current block time to consider. A value of 0 means use all the records present on the chain.</td></tr>
+<tr ><td class="parameter-td td_text">include_raw_history</td><td class="type-td td_text">bool</td><td class="description-td td_text">If IncludeRawHistory is true, the raw underlying data used for the computation is included in the response</td></tr>
+<tr ><td class="parameter-td td_text">include_metadata</td><td class="type-td td_text">bool</td><td class="description-td td_text">If IncludeMetadata is true, metadata on the computation is included in the response</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -5576,6 +5580,143 @@ No parameters
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/DenomMinNotional.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">the denom of the token</td></tr>
 <tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the minimum notional value for the token (in human readable format)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+## OpenInterest
+
+Retrieves a market's open interest
+
+**IP rate limit group:** `chain`
+
+### Request Parameters
+> Request Example:
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/query/66_OpenInterest.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/query/66_OpenInterest.py -->
+```py
+import asyncio
+import json
+
+from pyinjective.async_client_v2 import AsyncClient
+from pyinjective.core.network import Network
+
+
+async def main() -> None:
+    """
+    Demonstrate fetching denom min notionals using AsyncClient.
+    """
+    # Select network: choose between Network.mainnet(), Network.testnet(), or Network.devnet()
+    network = Network.testnet()
+
+    # Initialize the Async Client
+    client = AsyncClient(network)
+
+    market_id = "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
+    open_interest = await client.fetch_open_interest(market_id=market_id)
+    print(json.dumps(open_interest, indent=2))
+
+
+if __name__ == "__main__":
+    asyncio.get_event_loop().run_until_complete(main())
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/query/66_OpenInterest/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/query/66_OpenInterest/example.go -->
+```go
+package main
+
+import (
+	"context"
+	"encoding/json"
+	"fmt"
+
+	"os"
+
+	"github.com/InjectiveLabs/sdk-go/client"
+	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
+	"github.com/InjectiveLabs/sdk-go/client/common"
+	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+)
+
+func main() {
+	network := common.LoadNetwork("testnet", "lb")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
+	if err != nil {
+		panic(err)
+	}
+
+	senderAddress, cosmosKeyring, err := chainclient.InitCosmosKeyring(
+		os.Getenv("HOME")+"/.injectived",
+		"injectived",
+		"file",
+		"inj-user",
+		"12345678",
+		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		false,
+	)
+
+	if err != nil {
+		panic(err)
+	}
+
+	clientCtx, err := chainclient.NewClientContext(
+		network.ChainId,
+		senderAddress.String(),
+		cosmosKeyring,
+	)
+
+	if err != nil {
+		panic(err)
+	}
+
+	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
+
+	chainClient, err := chainclient.NewChainClientV2(
+		clientCtx,
+		network,
+		common.OptionGasPrices(client.DefaultGasPriceWithDenom),
+	)
+
+	if err != nil {
+		panic(err)
+	}
+
+	ctx := context.Background()
+
+	marketId := "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
+
+	res, err := chainClient.FetchOpenInterest(ctx, marketId)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	str, _ := json.MarshalIndent(res, "", "\t")
+	fmt.Print(string(str))
+
+}
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryOpenInterestRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market id</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### Response Parameters
+> Response Example:
+
+``` json
+{
+	"amount": {
+		"market_id": "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6",
+		"balance": "1020516.638732418776111164"
+	}
+}
+```
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QueryOpenInterestResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">OpenInterest</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 

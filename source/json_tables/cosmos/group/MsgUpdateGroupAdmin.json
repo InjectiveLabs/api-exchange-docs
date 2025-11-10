@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "admin is the current account address of the group admin.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "group_id",
+    "Type": "uint64",
+    "Description": "group_id is the unique ID of the group.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "new_admin",
+    "Type": "string",
+    "Description": "new_admin is the group new admin account address.",
+    "Required": "Yes"
+  }
+]

@@ -8,5 +8,10 @@
     "Parameter": "sells_price_level",
     "Type": "Level array",
     "Description": ""
+  },
+  {
+    "Parameter": "seq",
+    "Type": "uint64",
+    "Description": "the current orderbook sequence number"
   }
 ]

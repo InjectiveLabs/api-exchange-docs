@@ -1,0 +1,57 @@
+[
+  {
+    "module_name": "ism",
+    "error_code": 1,
+    "description": "unexpected error"
+  },
+  {
+    "module_name": "ism",
+    "error_code": 2,
+    "description": "invalid multisig configuration"
+  },
+  {
+    "module_name": "ism",
+    "error_code": 3,
+    "description": "invalid announce"
+  },
+  {
+    "module_name": "ism",
+    "error_code": 4,
+    "description": "mailbox does not exist"
+  },
+  {
+    "module_name": "ism",
+    "error_code": 5,
+    "description": "invalid signature"
+  },
+  {
+    "module_name": "ism",
+    "error_code": 6,
+    "description": "invalid ism type"
+  },
+  {
+    "module_name": "ism",
+    "error_code": 7,
+    "description": "unknown ism id"
+  },
+  {
+    "module_name": "ism",
+    "error_code": 8,
+    "description": "no route found"
+  },
+  {
+    "module_name": "ism",
+    "error_code": 9,
+    "description": "unauthorized"
+  },
+  {
+    "module_name": "ism",
+    "error_code": 10,
+    "description": "invalid owner"
+  },
+  {
+    "module_name": "ism",
+    "error_code": 11,
+    "description": "route for domain already exists"
+  }
+]

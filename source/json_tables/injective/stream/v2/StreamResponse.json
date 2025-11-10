@@ -63,5 +63,15 @@
     "Parameter": "gas_price",
     "Type": "string",
     "Description": "the current gas price when the block was processed (in chain format)"
+  },
+  {
+    "Parameter": "order_failures",
+    "Type": "OrderFailureUpdate array",
+    "Description": "list of order failures updates"
+  },
+  {
+    "Parameter": "conditional_order_trigger_failures",
+    "Type": "ConditionalOrderTriggerFailureUpdate array",
+    "Description": "list of conditional order trigger failures updates"
   }
 ]

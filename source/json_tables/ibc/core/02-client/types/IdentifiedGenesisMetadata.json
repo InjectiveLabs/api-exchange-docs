@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "client_metadata",
+    "Type": "GenesisMetadata array",
+    "Description": ""
+  }
+]

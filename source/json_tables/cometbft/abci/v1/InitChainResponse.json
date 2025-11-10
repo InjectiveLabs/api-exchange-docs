@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "consensus_params",
+    "Type": "v1.ConsensusParams",
+    "Description": ""
+  },
+  {
+    "Parameter": "validators",
+    "Type": "ValidatorUpdate array",
+    "Description": ""
+  },
+  {
+    "Parameter": "app_hash",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "rpnl",
+    "Type": "float64",
+    "Description": "Realized Profit and Loss value"
+  },
+  {
+    "Parameter": "upnl",
+    "Type": "float64",
+    "Description": "Unrealized Profit and Loss value"
+  }
+]

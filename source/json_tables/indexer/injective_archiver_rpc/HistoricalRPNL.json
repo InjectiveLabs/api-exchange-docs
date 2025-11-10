@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "t",
+    "Type": "int32 array",
+    "Description": "Time, Unix timestamp (UTC)"
+  },
+  {
+    "Parameter": "v",
+    "Type": "float64 array",
+    "Description": "Realized Profit and Loss value"
+  },
+  {
+    "Parameter": "dv",
+    "Type": "HistoricalDetailedPNL array",
+    "Description": "Detailed Profit and Loss value"
+  }
+]

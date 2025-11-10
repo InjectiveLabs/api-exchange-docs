@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "port_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "channel_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_init",
+    "Type": "byte array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_height",
+    "Type": "types.Height",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "counterparty_upgrade_sequence",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

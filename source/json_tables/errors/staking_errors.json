@@ -1,0 +1,227 @@
+[
+  {
+    "module_name": "staking",
+    "error_code": 2,
+    "description": "empty validator address"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 3,
+    "description": "validator does not exist"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 4,
+    "description": "validator already exist for this operator address; must use new validator operator address"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 5,
+    "description": "validator already exist for this pubkey; must use new validator pubkey"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 6,
+    "description": "validator pubkey type is not supported"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 7,
+    "description": "validator for this address is currently jailed"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 8,
+    "description": "failed to remove validator"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 9,
+    "description": "commission must be positive"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 10,
+    "description": "commission cannot be more than 100%"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 11,
+    "description": "commission cannot be more than the max rate"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 12,
+    "description": "commission cannot be changed more than once in 24h"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 13,
+    "description": "commission change rate must be positive"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 14,
+    "description": "commission change rate cannot be more than the max rate"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 15,
+    "description": "commission cannot be changed more than max change rate"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 16,
+    "description": "validator's self delegation must be greater than their minimum self delegation"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 17,
+    "description": "minimum self delegation cannot be decrease"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 18,
+    "description": "empty delegator address"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 19,
+    "description": "no delegation for (address, validator) tuple"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 20,
+    "description": "delegator does not exist with address"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 21,
+    "description": "delegator does not contain delegation"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 22,
+    "description": "insufficient delegation shares"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 23,
+    "description": "cannot delegate to an empty validator"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 24,
+    "description": "not enough delegation shares"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 25,
+    "description": "entry not mature"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 26,
+    "description": "no unbonding delegation found"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 27,
+    "description": "too many unbonding delegation entries for (delegator, validator) tuple"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 28,
+    "description": "no redelegation found"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 29,
+    "description": "cannot redelegate to the same validator"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 30,
+    "description": "too few tokens to redelegate (truncates to zero tokens)"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 31,
+    "description": "redelegation destination validator not found"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 32,
+    "description": "redelegation to this validator already in progress; first redelegation to this validator must complete before next redelegation"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 33,
+    "description": "too many redelegation entries for (delegator, src-validator, dst-validator) tuple"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 34,
+    "description": "cannot delegate to validators with invalid (zero) ex-rate"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 35,
+    "description": "both shares amount and shares percent provided"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 36,
+    "description": "neither shares amount nor shares percent provided"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 37,
+    "description": "invalid historical info"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 38,
+    "description": "no historical info found"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 39,
+    "description": "empty validator public key"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 40,
+    "description": "commission cannot be less than min rate"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 41,
+    "description": "unbonding operation not found"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 42,
+    "description": "cannot un-hold unbonding operation that is not on hold"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 43,
+    "description": "expected authority account as only signer for proposal message"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 44,
+    "description": "redelegation source validator not found"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 45,
+    "description": "unbonding type not found"
+  },
+  {
+    "module_name": "staking",
+    "error_code": 70,
+    "description": "commission rate too small"
+  }
+]

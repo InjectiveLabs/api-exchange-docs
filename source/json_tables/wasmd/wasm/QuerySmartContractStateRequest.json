@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address is the address of the contract",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "query_data",
+    "Type": "RawContractMessage",
+    "Description": "QueryData contains the query data passed to the contract",
+    "Required": "Yes"
+  }
+]

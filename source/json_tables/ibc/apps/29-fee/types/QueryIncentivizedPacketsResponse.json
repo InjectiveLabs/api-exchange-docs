@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "incentivized_packets",
+    "Type": "IdentifiedPacketFees array",
+    "Description": "list of identified fees for incentivized packets"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
+  }
+]

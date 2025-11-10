@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "group_policies",
+    "Type": "GroupPolicyInfo array",
+    "Description": "group_policies are the group policies info with provided admin."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
+  }
+]

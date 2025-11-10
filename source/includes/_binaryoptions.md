@@ -193,7 +193,8 @@ func main() {
 <tr ><td class="parameter-td td_text">settlement_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">settlement_price defines the settlement price of the binary options market (in human readable format)</td></tr>
 <tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market (in human readable format)</td></tr>
 <tr ><td class="parameter-td td_text">admin_permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_text">level of admin permissions</td></tr>
-<tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">quote token decimals</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">quote token decimals</td></tr>
+<tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the maximum open notional for the market</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -227,6 +228,30 @@ func main() {
 <tr ><td class="code-td td_num">8</td><td class="name-td td_text">Min Notional Permission</td></tr>
 <tr ><td class="code-td td_num">16</td><td class="name-td td_text">Initial Margin Ratio Permission</td></tr>
 <tr ><td class="code-td td_num">32</td><td class="name-td td_text">Maintenance Margin Ratio Permission</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCap_Uncapped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCap_Uncapped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">uncapped</td><td class="type-td td_text">OpenNotionalCapUncapped</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCap_Capped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCap_Capped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">capped</td><td class="type-td td_text">OpenNotionalCapCapped</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCapCapped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCapCapped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -325,6 +350,9 @@ func main() {
 		QuoteDenom:          "peggy0xdAC17F958D2ee523a2206206994597C13D831ec7",
 		MinPriceTickSize:    minPriceTickSize,
 		MinQuantityTickSize: minQuantityTickSize,
+		OpenNotionalCap: exchangev2types.OpenNotionalCap{
+			Cap: &exchangev2types.OpenNotionalCap_Uncapped{},
+		},
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
@@ -360,7 +388,8 @@ func main() {
 <tr ><td class="parameter-td td_text">quote_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of the quote currency denomination for the binary options contract</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_price_tick_size defines the minimum tick size that the price and margin required for orders in the market (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_quantity_tick_size defines the minimum tick size of the quantity required for orders in the market (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market (in human readable format)</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the cap on the open notional</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -381,6 +410,30 @@ func main() {
 <tr ><td class="code-td td_num">10</td><td class="name-td td_text">BandIBC</td></tr>
 <tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr>
 <tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCap_Uncapped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCap_Uncapped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">uncapped</td><td class="type-td td_text">OpenNotionalCapUncapped</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCap_Capped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCap_Capped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">capped</td><td class="type-td td_text">OpenNotionalCapCapped</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OpenNotionalCapCapped**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCapCapped.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1234,6 +1287,21 @@ async def main() -> None:
         ),
     ]
 
+    derivative_market_orders_to_create = [
+        composer.derivative_order(
+            market_id=derivative_market_id_create,
+            subaccount_id=subaccount_id,
+            fee_recipient=fee_recipient,
+            price=Decimal(25100),
+            quantity=Decimal(0.1),
+            margin=composer.calculate_margin(
+                quantity=Decimal(0.1), price=Decimal(25100), leverage=Decimal(1), is_reduce_only=False
+            ),
+            order_type="BUY",
+            cid=str(uuid.uuid4()),
+        ),
+    ]
+
     spot_orders_to_create = [
         composer.spot_order(
             market_id=spot_market_id_create,
@@ -1255,6 +1323,18 @@ async def main() -> None:
         ),
     ]
 
+    spot_market_orders_to_create = [
+        composer.spot_order(
+            market_id=spot_market_id_create,
+            subaccount_id=subaccount_id,
+            fee_recipient=fee_recipient,
+            price=Decimal("3.5"),
+            quantity=Decimal("1"),
+            order_type="BUY",
+            cid=str(uuid.uuid4()),
+        ),
+    ]
+
     # prepare tx msg
     msg = composer.msg_batch_update_orders(
         sender=address.to_acc_bech32(),
@@ -1262,6 +1342,8 @@ async def main() -> None:
         spot_orders_to_create=spot_orders_to_create,
         derivative_orders_to_cancel=derivative_orders_to_cancel,
         spot_orders_to_cancel=spot_orders_to_cancel,
+        spot_market_orders_to_create=spot_market_orders_to_create,
+        derivative_market_orders_to_create=derivative_market_orders_to_create,
     )
 
     # broadcast the transaction
@@ -1373,6 +1455,18 @@ func main() {
 		},
 	)
 
+	spot_market_order := chainClient.CreateSpotOrderV2(
+		defaultSubaccountID,
+		&chainclient.SpotOrderData{
+			OrderType:    int32(exchangev2types.OrderType_BUY), //BUY SELL
+			Quantity:     decimal.NewFromFloat(0.1),
+			Price:        decimal.NewFromFloat(22),
+			FeeRecipient: senderAddress.String(),
+			MarketId:     smarketId,
+			Cid:          uuid.NewString(),
+		},
+	)
+
 	dmarketId := "0x4ca0f92fc28be0c9761326016b5a1a2177dd6375558365116b5bdda9abc229ce"
 	damount := decimal.NewFromFloat(0.01)
 	dprice := decimal.RequireFromString("31000") //31,000
@@ -1393,6 +1487,20 @@ func main() {
 		},
 	)
 
+	derivative_market_order := chainClient.CreateDerivativeOrderV2(
+		defaultSubaccountID,
+		&chainclient.DerivativeOrderData{
+			OrderType:    int32(exchangev2types.OrderType_BUY), //BUY SELL
+			Quantity:     decimal.NewFromFloat(0.01),
+			Price:        decimal.RequireFromString("33000"),
+			Leverage:     decimal.RequireFromString("2"),
+			FeeRecipient: senderAddress.String(),
+			MarketId:     dmarketId,
+			IsReduceOnly: false,
+			Cid:          uuid.NewString(),
+		},
+	)
+
 	msg := exchangev2types.MsgBatchUpdateOrders{
 		Sender:                         senderAddress.String(),
 		SubaccountId:                   defaultSubaccountID.Hex(),
@@ -1400,6 +1508,8 @@ func main() {
 		DerivativeOrdersToCreate:       []*exchangev2types.DerivativeOrder{derivative_order},
 		SpotMarketIdsToCancelAll:       smarketIds,
 		DerivativeMarketIdsToCancelAll: dmarketIds,
+		SpotMarketOrdersToCreate:       []*exchangev2types.SpotOrder{spot_market_order},
+		DerivativeMarketOrdersToCreate: []*exchangev2types.DerivativeOrder{derivative_market_order},
 	}
 
 	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
@@ -1431,7 +1541,10 @@ func main() {
 <tr ><td class="parameter-td td_text">derivative_orders_to_create</td><td class="type-td td_text">DerivativeOrder array</td><td class="description-td td_text">the derivative orders to create</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">binary_options_orders_to_cancel</td><td class="type-td td_text">OrderData array</td><td class="description-td td_text">the binary options orders to cancel</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">binary_options_market_ids_to_cancel_all</td><td class="type-td td_text">string array</td><td class="description-td td_text">the market IDs to cancel all binary options orders for (optional)</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">binary_options_orders_to_create</td><td class="type-td td_text">DerivativeOrder array</td><td class="description-td td_text">the binary options orders to create</td><td class="required-td td_text">No</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">binary_options_orders_to_create</td><td class="type-td td_text">DerivativeOrder array</td><td class="description-td td_text">the binary options orders to create</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">spot_market_orders_to_create</td><td class="type-td td_text">SpotOrder array</td><td class="description-td td_text">the spot market orders to create</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">derivative_market_orders_to_create</td><td class="type-td td_text">DerivativeOrder array</td><td class="description-td td_text">the derivative market orders to create</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">binary_options_market_orders_to_create</td><td class="type-td td_text">DerivativeOrder array</td><td class="description-td td_text">the binary options market orders to create</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>

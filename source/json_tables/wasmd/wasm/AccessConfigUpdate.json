@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "code_id",
+    "Type": "uint64",
+    "Description": "CodeID is the reference to the stored WASM code to be updated"
+  },
+  {
+    "Parameter": "instantiate_permission",
+    "Type": "AccessConfig",
+    "Description": "InstantiatePermission to apply to the set of code ids"
+  }
+]

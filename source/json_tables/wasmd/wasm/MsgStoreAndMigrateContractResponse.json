@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "code_id",
+    "Type": "uint64",
+    "Description": "CodeID is the reference to the stored WASM code"
+  },
+  {
+    "Parameter": "checksum",
+    "Type": "byte array",
+    "Description": "Checksum is the sha256 hash of the stored code"
+  },
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "Data contains bytes to returned from the contract"
+  }
+]

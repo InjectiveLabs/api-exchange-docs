@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "allowances",
+    "Type": "Grant array",
+    "Description": "allowances that have been issued by the granter."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines an pagination for the response."
+  }
+]

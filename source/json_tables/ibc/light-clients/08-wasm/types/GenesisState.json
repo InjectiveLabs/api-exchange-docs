@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "contracts",
+    "Type": "Contract array",
+    "Description": "uploaded light client wasm contracts"
+  }
+]

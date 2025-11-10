@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "signer address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "checksum",
+    "Type": "byte array",
+    "Description": "checksum is the sha256 hash to be removed from the store",
+    "Required": "Yes"
+  }
+]

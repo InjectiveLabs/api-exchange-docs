@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "sequence",
+    "Type": "uint64",
+    "Description": "sequence number of the transfer packet sent"
+  }
+]

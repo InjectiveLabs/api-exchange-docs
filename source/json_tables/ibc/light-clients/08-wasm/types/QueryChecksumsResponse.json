@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "checksums",
+    "Type": "string array",
+    "Description": "checksums is a list of the hex encoded checksums of all wasm codes stored."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "code_upload_access",
+    "Type": "AccessConfig",
+    "Description": ""
+  },
+  {
+    "Parameter": "instantiate_default_permission",
+    "Type": "AccessType",
+    "Description": ""
+  }
+]

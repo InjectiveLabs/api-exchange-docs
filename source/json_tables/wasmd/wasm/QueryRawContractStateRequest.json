@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address is the address of the contract",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "query_data",
+    "Type": "byte array",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

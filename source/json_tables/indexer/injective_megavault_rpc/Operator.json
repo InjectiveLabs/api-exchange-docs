@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "Operator address"
+  },
+  {
+    "Parameter": "total_amount",
+    "Type": "string",
+    "Description": "Total amount"
+  },
+  {
+    "Parameter": "total_liquid_amount",
+    "Type": "string",
+    "Description": "Total liquid amount"
+  },
+  {
+    "Parameter": "updated_height",
+    "Type": "int64",
+    "Description": "Block height when the operator was updated."
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "UpdatedAt timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "percentage",
+    "Type": "string",
+    "Description": "Percentage of the operator"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "Subaccount ID of the operator"
+  }
+]

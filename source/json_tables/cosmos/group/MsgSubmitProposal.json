@@ -1,0 +1,44 @@
+[
+  {
+    "Parameter": "group_policy_address",
+    "Type": "string",
+    "Description": "group_policy_address is the account address of group policy.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proposers",
+    "Type": "string array",
+    "Description": "proposers are the account addresses of the proposers. Proposers signatures will be counted as yes votes.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "metadata",
+    "Type": "string",
+    "Description": "metadata is any arbitrary metadata attached to the proposal.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "messages",
+    "Type": "types.Any array",
+    "Description": "messages is a list of `sdk.Msg`s that will be executed if the proposal passes.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "exec",
+    "Type": "Exec",
+    "Description": "exec defines the mode of execution of the proposal, whether it should be executed immediately on creation or not. If so, proposers signatures are considered as Yes votes.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": "title is the title of the proposal.  Since: cosmos-sdk 0.47",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "summary",
+    "Type": "string",
+    "Description": "summary is the summary of the proposal.  Since: cosmos-sdk 0.47",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "admin is the account address of the group and group policy admin.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "members",
+    "Type": "MemberRequest array",
+    "Description": "members defines the group members.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "group_metadata",
+    "Type": "string",
+    "Description": "group_metadata is any arbitrary metadata attached to the group.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "group_policy_metadata",
+    "Type": "string",
+    "Description": "group_policy_metadata is any arbitrary metadata attached to the group policy.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "group_policy_as_admin",
+    "Type": "bool",
+    "Description": "group_policy_as_admin is a boolean field, if set to true, the group policy account address will be used as group and group policy admin.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "decision_policy",
+    "Type": "types.Any",
+    "Description": "decision_policy specifies the group policy's decision policy.",
+    "Required": "No"
+  }
+]

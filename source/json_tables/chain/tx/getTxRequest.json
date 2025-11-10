@@ -1,3 +1,0 @@
-[
-    {"Parameter": "hash", "Type": "String", "Description": "The TX hash to query, encoded as a hex string", "Required": "Yes"}
-]

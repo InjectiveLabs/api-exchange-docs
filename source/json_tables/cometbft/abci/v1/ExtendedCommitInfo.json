@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "round",
+    "Type": "int32",
+    "Description": "The round at which the block proposer decided in the previous height."
+  },
+  {
+    "Parameter": "votes",
+    "Type": "ExtendedVoteInfo array",
+    "Description": "List of validators' addresses in the last validator set with their voting information, including vote extensions."
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "group_id",
+    "Type": "uint64",
+    "Description": "group_id is the unique ID of the group."
+  },
+  {
+    "Parameter": "member",
+    "Type": "Member",
+    "Description": "member is the member data."
+  }
+]

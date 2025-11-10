@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "port_id",
+    "Type": "string",
+    "Description": "channel port identifier."
+  },
+  {
+    "Parameter": "channel_id",
+    "Type": "string",
+    "Description": "channel unique identifier."
+  },
+  {
+    "Parameter": "sequence",
+    "Type": "uint64",
+    "Description": "packet sequence."
+  },
+  {
+    "Parameter": "data",
+    "Type": "byte array",
+    "Description": "embedded data that represents packet state."
+  }
+]

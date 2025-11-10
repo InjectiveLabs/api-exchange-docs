@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "round",
+    "Type": "int32",
+    "Description": ""
+  },
+  {
+    "Parameter": "type",
+    "Type": "v1beta1.SignedMsgType",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_id",
+    "Type": "v1beta1.BlockID",
+    "Description": ""
+  },
+  {
+    "Parameter": "votes",
+    "Type": "v1.BitArray",
+    "Description": ""
+  }
+]

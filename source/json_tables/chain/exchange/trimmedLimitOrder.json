@@ -1,6 +1,0 @@
-[
-    {"Parameter": "price", "Type": "Decimal", "Description": "Order price (in human redable format)"},
-    {"Parameter": "quantity", "Type": "Decimal", "Description": "Order quantity (in human redable format)"},
-    {"Parameter": "order_hash", "Type": "String", "Description": "The order hash"},
-    {"Parameter": "subaccount_id", "Type": "String", "Description": "Subaccount ID that created the order"}
-]

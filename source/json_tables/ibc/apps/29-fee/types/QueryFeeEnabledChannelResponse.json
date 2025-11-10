@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "fee_enabled",
+    "Type": "bool",
+    "Description": "boolean flag representing the fee enabled channel status"
+  }
+]

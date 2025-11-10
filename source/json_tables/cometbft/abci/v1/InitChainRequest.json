@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "time",
+    "Type": "time.Time",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "consensus_params",
+    "Type": "v1.ConsensusParams",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "validators",
+    "Type": "ValidatorUpdate array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "app_state_bytes",
+    "Type": "byte array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "initial_height",
+    "Type": "int64",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

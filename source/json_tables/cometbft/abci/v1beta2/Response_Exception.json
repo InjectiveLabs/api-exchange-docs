@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "exception",
+    "Type": "v1beta1.ResponseException",
+    "Description": ""
+  }
+]

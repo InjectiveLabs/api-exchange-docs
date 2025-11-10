@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "vote_a",
+    "Type": "Vote",
+    "Description": ""
+  },
+  {
+    "Parameter": "vote_b",
+    "Type": "Vote",
+    "Description": ""
+  },
+  {
+    "Parameter": "total_voting_power",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "validator_power",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "time.Time",
+    "Description": ""
+  }
+]

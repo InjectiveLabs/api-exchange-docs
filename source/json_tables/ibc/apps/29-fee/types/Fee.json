@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "recv_fee",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "the packet receive fee"
+  },
+  {
+    "Parameter": "ack_fee",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "the packet acknowledgement fee"
+  },
+  {
+    "Parameter": "timeout_fee",
+    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Description": "the packet timeout fee"
+  }
+]

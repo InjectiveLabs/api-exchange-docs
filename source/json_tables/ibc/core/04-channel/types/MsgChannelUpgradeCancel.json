@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "port_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "channel_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "error_receipt",
+    "Type": "ErrorReceipt",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_error_receipt",
+    "Type": "byte array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_height",
+    "Type": "types.Height",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

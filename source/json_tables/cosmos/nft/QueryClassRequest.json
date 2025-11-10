@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "class_id",
+    "Type": "string",
+    "Description": "class_id associated with the nft",
+    "Required": "Yes"
+  }
+]

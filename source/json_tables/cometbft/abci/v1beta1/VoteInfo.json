@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "validator",
+    "Type": "Validator",
+    "Description": ""
+  },
+  {
+    "Parameter": "signed_last_block",
+    "Type": "bool",
+    "Description": ""
+  }
+]

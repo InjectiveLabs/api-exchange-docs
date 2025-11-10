@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "name",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "app_name",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "git_commit",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "build_tags",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "go_version",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "build_deps",
+    "Type": "Module array",
+    "Description": ""
+  },
+  {
+    "Parameter": "cosmos_sdk_version",
+    "Type": "string",
+    "Description": "Since: cosmos-sdk 0.43"
+  }
+]

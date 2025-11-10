@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "Sender is the that actor that signed the messages",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "new_admin",
+    "Type": "string",
+    "Description": "NewAdmin address to be set",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "contract",
+    "Type": "string",
+    "Description": "Contract is the address of the smart contract",
+    "Required": "Yes"
+  }
+]

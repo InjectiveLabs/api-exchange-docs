@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address is the account address of group policy."
+  },
+  {
+    "Parameter": "group_id",
+    "Type": "uint64",
+    "Description": "group_id is the unique ID of the group."
+  },
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "admin is the account address of the group admin."
+  },
+  {
+    "Parameter": "metadata",
+    "Type": "string",
+    "Description": "metadata is any arbitrary metadata attached to the group policy. the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#decision-policy-1"
+  },
+  {
+    "Parameter": "version",
+    "Type": "uint64",
+    "Description": "version is used to track changes to a group's GroupPolicyInfo structure that would create a different result on a running proposal."
+  },
+  {
+    "Parameter": "decision_policy",
+    "Type": "types.Any",
+    "Description": "decision_policy specifies the group policy's decision policy."
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "time.Time",
+    "Description": "created_at is a timestamp specifying when a group policy was created."
+  }
+]

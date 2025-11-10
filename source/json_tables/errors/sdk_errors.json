@@ -1,0 +1,202 @@
+[
+  {
+    "module_name": "sdk",
+    "error_code": 2,
+    "description": "tx parse error"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 3,
+    "description": "invalid sequence"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 4,
+    "description": "unauthorized"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 5,
+    "description": "insufficient funds"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 6,
+    "description": "unknown request"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 7,
+    "description": "invalid address"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 8,
+    "description": "invalid pubkey"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 9,
+    "description": "unknown address"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 10,
+    "description": "invalid coins"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 11,
+    "description": "out of gas"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 12,
+    "description": "memo too large"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 13,
+    "description": "insufficient fee"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 14,
+    "description": "maximum number of signatures exceeded"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 15,
+    "description": "no signatures supplied"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 16,
+    "description": "failed to marshal JSON bytes"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 17,
+    "description": "failed to unmarshal JSON bytes"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 18,
+    "description": "invalid request"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 19,
+    "description": "tx already in mempool"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 20,
+    "description": "mempool is full"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 21,
+    "description": "tx too large"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 22,
+    "description": "key not found"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 23,
+    "description": "invalid account password"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 24,
+    "description": "tx intended signer does not match the given signer"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 25,
+    "description": "invalid gas adjustment"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 26,
+    "description": "invalid height"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 27,
+    "description": "invalid version"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 28,
+    "description": "invalid chain-id"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 29,
+    "description": "invalid type"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 30,
+    "description": "tx timeout height"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 31,
+    "description": "unknown extension options"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 32,
+    "description": "incorrect account sequence"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 33,
+    "description": "failed packing protobuf message to Any"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 34,
+    "description": "failed unpacking protobuf message from Any"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 35,
+    "description": "internal logic error"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 36,
+    "description": "conflict"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 37,
+    "description": "feature not supported"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 38,
+    "description": "not found"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 39,
+    "description": "Internal IO error"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 40,
+    "description": "error in app.toml"
+  },
+  {
+    "module_name": "sdk",
+    "error_code": 41,
+    "description": "invalid gas limit"
+  }
+]

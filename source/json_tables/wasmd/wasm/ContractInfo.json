@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "code_id",
+    "Type": "uint64",
+    "Description": "CodeID is the reference to the stored Wasm code"
+  },
+  {
+    "Parameter": "creator",
+    "Type": "string",
+    "Description": "Creator address who initially instantiated the contract"
+  },
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "Admin is an optional address that can execute migrations"
+  },
+  {
+    "Parameter": "label",
+    "Type": "string",
+    "Description": "Label is optional metadata to be stored with a contract instance."
+  },
+  {
+    "Parameter": "created",
+    "Type": "AbsoluteTxPosition",
+    "Description": "Created Tx position when the contract was instantiated."
+  },
+  {
+    "Parameter": "ibc_port_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "extension",
+    "Type": "types.Any",
+    "Description": "Extension is an extension point to store custom metadata within the persistence model."
+  }
+]

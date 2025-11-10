@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "admin",
+    "Type": "string",
+    "Description": "admin is the account address of the group admin.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "group_id",
+    "Type": "uint64",
+    "Description": "group_id is the unique ID of the group.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "member_updates",
+    "Type": "MemberRequest array",
+    "Description": "member_updates is the list of members to update, set weight to 0 to remove a member.",
+    "Required": "Yes"
+  }
+]

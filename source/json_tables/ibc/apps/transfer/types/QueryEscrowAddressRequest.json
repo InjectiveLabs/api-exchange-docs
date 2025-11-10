@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "port_id",
+    "Type": "string",
+    "Description": "unique port identifier",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "channel_id",
+    "Type": "string",
+    "Description": "unique channel identifier",
+    "Required": "Yes"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "path",
+    "Type": "string",
+    "Description": "path defines the chain of port/channel identifiers used for tracing the source of the fungible token."
+  },
+  {
+    "Parameter": "base_denom",
+    "Type": "string",
+    "Description": "base denomination of the relayed fungible token."
+  }
+]

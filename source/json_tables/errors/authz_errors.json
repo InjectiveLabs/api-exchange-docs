@@ -1,0 +1,42 @@
+[
+  {
+    "module_name": "authz",
+    "error_code": 2,
+    "description": "authorization not found"
+  },
+  {
+    "module_name": "authz",
+    "error_code": 3,
+    "description": "expiration time of authorization should be more than current time"
+  },
+  {
+    "module_name": "authz",
+    "error_code": 4,
+    "description": "unknown authorization type"
+  },
+  {
+    "module_name": "authz",
+    "error_code": 5,
+    "description": "grant key not found"
+  },
+  {
+    "module_name": "authz",
+    "error_code": 6,
+    "description": "authorization expired"
+  },
+  {
+    "module_name": "authz",
+    "error_code": 7,
+    "description": "grantee and granter should be different"
+  },
+  {
+    "module_name": "authz",
+    "error_code": 9,
+    "description": "authorization can be given to msg with only one signer"
+  },
+  {
+    "module_name": "authz",
+    "error_code": 12,
+    "description": "max tokens should be positive"
+  }
+]

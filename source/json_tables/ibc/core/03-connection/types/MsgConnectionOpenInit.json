@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "counterparty",
+    "Type": "Counterparty",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "version",
+    "Type": "Version",
+    "Description": "",
+    "Required": "No"
+  },
+  {
+    "Parameter": "delay_period",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

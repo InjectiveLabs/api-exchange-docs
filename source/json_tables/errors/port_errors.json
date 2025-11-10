@@ -1,0 +1,22 @@
+[
+  {
+    "module_name": "port",
+    "error_code": 2,
+    "description": "port is already binded"
+  },
+  {
+    "module_name": "port",
+    "error_code": 3,
+    "description": "port not found"
+  },
+  {
+    "module_name": "port",
+    "error_code": 4,
+    "description": "invalid port"
+  },
+  {
+    "module_name": "port",
+    "error_code": 5,
+    "description": "route not found"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "title",
+    "Type": "string",
+    "Description": "Title is a short summary"
+  },
+  {
+    "Parameter": "description",
+    "Type": "string",
+    "Description": "Description is a human readable text"
+  },
+  {
+    "Parameter": "code_ids",
+    "Type": "uint64 array",
+    "Description": "CodeIDs references the WASM codes"
+  }
+]

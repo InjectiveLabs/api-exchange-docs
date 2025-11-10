@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "group_seq",
+    "Type": "uint64",
+    "Description": "group_seq is the group table orm.Sequence, it is used to get the next group ID."
+  },
+  {
+    "Parameter": "groups",
+    "Type": "GroupInfo array",
+    "Description": "groups is the list of groups info."
+  },
+  {
+    "Parameter": "group_members",
+    "Type": "GroupMember array",
+    "Description": "group_members is the list of groups members."
+  },
+  {
+    "Parameter": "group_policy_seq",
+    "Type": "uint64",
+    "Description": "group_policy_seq is the group policy table orm.Sequence, it is used to generate the next group policy account address."
+  },
+  {
+    "Parameter": "group_policies",
+    "Type": "GroupPolicyInfo array",
+    "Description": "group_policies is the list of group policies info."
+  },
+  {
+    "Parameter": "proposal_seq",
+    "Type": "uint64",
+    "Description": "proposal_seq is the proposal table orm.Sequence, it is used to get the next proposal ID."
+  },
+  {
+    "Parameter": "proposals",
+    "Type": "Proposal array",
+    "Description": "proposals is the list of proposals."
+  },
+  {
+    "Parameter": "votes",
+    "Type": "Vote array",
+    "Description": "votes is the list of votes."
+  }
+]

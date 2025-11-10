@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "contract_addresses",
+    "Type": "string array",
+    "Description": "ContractAddresses result set"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "Pagination defines the pagination in the response."
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "total_burnt",
+    "Type": "string",
+    "Description": "Total cumulative amount of INJ burnt in auctions"
+  },
+  {
+    "Parameter": "total_usd_value",
+    "Type": "string",
+    "Description": "Total cumulative historical basket value in USD of all auctions"
+  }
+]

@@ -1,3 +1,0 @@
-[
-    {"Parameter": "creator", "Type": "String", "Description": "The denom creator address", "Required": "Yes"}
-]

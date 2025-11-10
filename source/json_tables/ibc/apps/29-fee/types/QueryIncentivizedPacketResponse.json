@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "incentivized_packet",
+    "Type": "IdentifiedPacketFees",
+    "Description": "the identified fees for the incentivized packet"
+  }
+]

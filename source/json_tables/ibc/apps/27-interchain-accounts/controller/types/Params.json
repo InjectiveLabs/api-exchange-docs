@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "controller_enabled",
+    "Type": "bool",
+    "Description": "controller_enabled enables or disables the controller submodule."
+  }
+]

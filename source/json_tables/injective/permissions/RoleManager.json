@@ -2,11 +2,11 @@
   {
     "Parameter": "manager",
     "Type": "string",
-    "Description": ""
+    "Description": "The manager name"
   },
   {
     "Parameter": "roles",
     "Type": "string array",
-    "Description": ""
+    "Description": "List of roles associated with the manager"
   }
 ]

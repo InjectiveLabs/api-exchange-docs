@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "hash",
+    "Type": "string",
+    "Description": "hash (in hex format) of the denomination trace information."
+  }
+]

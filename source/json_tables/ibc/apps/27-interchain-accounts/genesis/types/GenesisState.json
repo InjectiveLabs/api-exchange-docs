@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "controller_genesis_state",
+    "Type": "ControllerGenesisState",
+    "Description": ""
+  },
+  {
+    "Parameter": "host_genesis_state",
+    "Type": "HostGenesisState",
+    "Description": ""
+  }
+]

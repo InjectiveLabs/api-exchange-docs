@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "msg",
+    "Type": "string",
+    "Description": "Msg, identified by it's type URL, to grant unrestricted permissions to execute"
+  }
+]

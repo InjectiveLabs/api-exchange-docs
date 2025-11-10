@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "finalize_block",
+    "Type": "ResponseFinalizeBlock",
+    "Description": ""
+  }
+]

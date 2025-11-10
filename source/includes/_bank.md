@@ -173,12 +173,11 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|from_address|String|The Injective Chain address of the sender|Yes|
-|to_address|String| The Injective Chain address of the receiver|Yes|
-|amount|Integer|The amount of tokens to send|Yes|
-|denom|String|The token denom|Yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/MsgSend.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">from_address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">to_address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -367,26 +366,28 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|Inputs|Input|Inputs|Yes|
-|Outputs|Output|Outputs|Yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/MsgMultiSend.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">inputs</td><td class="type-td td_text">Input array</td><td class="description-td td_text">Inputs, despite being `repeated`, only allows one sender input. This is checked in MsgMultiSend's ValidateBasic.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">outputs</td><td class="type-td td_text">Output array</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 ***Input***
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|address|String|The Injective Chain address of the sender|Yes|
-|amount|Integer|The amount of tokens to send|Yes|
-|denom|String|The token denom|Yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/Input.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">coins</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 ***Output***
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|address|String|The Injective Chain address of the receiver|Yes|
-|amount|Integer|The amount of tokens to send|Yes|
-|denom|String|The token denom|Yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/Output.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">coins</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 
@@ -404,6 +405,41 @@ DEBU[0003] nonce incremented to 31                       fn=func1 src="client/ch
 DEBU[0003] gas wanted:  152844                           fn=func1 src="client/chain/chain.go:656"
 gas fee: 0.000076422 INJ
 ```
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**TxResponse**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/TxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">The block height</td></tr>
+<tr ><td class="parameter-td td_text">txhash</td><td class="type-td td_text">string</td><td class="description-td td_text">The transaction hash.</td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_text">Namespace for the Code</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Response code.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">string</td><td class="description-td td_text">Result bytes, if any.</td></tr>
+<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">string</td><td class="description-td td_text">The output of the application's logger (raw string). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLogs</td><td class="description-td td_text">The output of the application's logger (typed). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**ABCIMessageLog**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/ABCIMessageLog.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvents</td><td class="description-td td_text">Events contains a slice of Event objects that were emitted during some execution.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
 
 ## QueryAllBalances
 
@@ -514,9 +550,23 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|address|String|The Injective Chain address|Yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QueryAllBalancesRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">address is the address to query balances for.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination defines an optional pagination for the request.</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">resolve_denom</td><td class="type-td td_text">bool</td><td class="description-td td_text">resolve_denom is the flag to resolve the denom into a human-readable form from the metadata.  Since: cosmos-sdk 0.50</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageRequest**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">uint64</td><td class="description-td td_text">offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">bool</td><td class="description-td td_text">count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">bool</td><td class="description-td td_text">reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -587,23 +637,28 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|balances|Balances|Balances object|
-|pagination|Pagination|Pagination object|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QueryAllBalancesResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">balances</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_text">balances is the balances of all the coins.</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination defines the pagination in the response.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-**Balances**
+<br/>
 
-|Parameter|Type|Description|
-|----|----|----|
-|denom|String|Token denom|
-|amount|String|Token amount|
+**Coin**
 
-**Pagination**
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/Coin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">cosmossdk_io_math.Int</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|
-|----|----|----|
-|total|Integer|Total denoms|
+<br/>
+
+**PageResponse**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## QueryBalance
@@ -718,10 +773,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|address|String|The Injective Chain address|Yes|
-|denom|String|The token denom|Yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QueryBalanceRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">address is the address to query balances for.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">denom is the coin denom to query balances for.</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -745,16 +800,18 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|balance|Balance|Balance object|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QueryBalanceResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">balance</td><td class="type-td td_text">types.Coin</td><td class="description-td td_text">balance is the balance of the coin.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Balance**
 
-|Parameter|Type|Description|
-|----|----|----|
-|denom|String|Token denom|
-|amount|String|Token amount|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/Balance.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">address is the address of the balance holder.</td></tr>
+<tr ><td class="parameter-td td_text">coins</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_text">coins defines the different coins this balance holds.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## SpendableBalances
@@ -869,10 +926,22 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter  | Type   | Description                             | Required |
-| ---------- | ------ | --------------------------------------- | -------- |
-| address    | String | Address to query spendable balances for | Yes      |
-| pagination | Paging | Pagination of results                   | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QuerySpendableBalancesRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">address is the address to query spendable balances for.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination defines an optional pagination for the request.</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageRequest**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">uint64</td><td class="description-td td_text">offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">bool</td><td class="description-td td_text">count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">bool</td><td class="description-td td_text">reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -984,17 +1053,37 @@ func main() {
 
 ```
 
-| Parameter  | Type         | Description           |
-| ---------- | ------------ | --------------------- |
-| balances   | Coin Array   | Balance object        |
-| pagination | PageResponse | Pagination of results |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QuerySpendableBalancesResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">balances</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_text">balances is the spendable balances of all the coins.</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination defines the pagination in the response.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Coin**
 
-| Parameter | Type   | Description  |
-| --------- | ------ | ------------ |
-| denom     | String | Token denom  |
-| amount    | String | Token amount |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/Coin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">cosmossdk_io_math.Int</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**Coin**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/Coin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">cosmossdk_io_math.Int</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageResponse**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## SpendableBalancesByDenom
@@ -1108,10 +1197,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter | Type   | Description                             | Required |
-| --------- | ------ | --------------------------------------- | -------- |
-| address   | String | Address to query spendable balances for | Yes      |
-| denom     | String | The token denom                         | Yes      |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QuerySpendableBalanceByDenomRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">address is the address to query balances for.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">denom is the coin denom to query balances for.</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -1136,16 +1225,18 @@ func main() {
 
 ```
 
-| Parameter | Type | Description    |
-| --------- | ---- | -------------- |
-| balance   | Coin | Balance object |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QuerySpendableBalanceByDenomResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">balance</td><td class="type-td td_text">types.Coin</td><td class="description-td td_text">balance is the balance of the coin.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Coin**
 
-| Parameter | Type   | Description  |
-| --------- | ------ | ------------ |
-| denom     | String | Token denom  |
-| amount    | String | Token amount |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/Coin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">cosmossdk_io_math.Int</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## TotalSupply
@@ -1261,9 +1352,21 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter  | Type   | Description           | Required |
-| ---------- | ------ | --------------------- | -------- |
-| pagination | Paging | Pagination of results | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QueryTotalSupplyRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination defines an optional pagination for the request.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageRequest**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">uint64</td><td class="description-td td_text">offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">bool</td><td class="description-td td_text">count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">bool</td><td class="description-td td_text">reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -1371,17 +1474,28 @@ func main() {
 
 ```
 
-| Parameter  | Type         | Description                    |
-| ---------- | ------------ | ------------------------------ |
-| supply     | Coin Array   | Array of supply for each token |
-| pagination | PageResponse | Pagination of results          |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QueryTotalSupplyResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">supply</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_text">supply is the supply of the coins</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination defines the pagination in the response.  Since: cosmos-sdk 0.43</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Coin**
 
-| Parameter | Type   | Description  |
-| --------- | ------ | ------------ |
-| denom     | String | Token denom  |
-| amount    | String | Token amount |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/Coin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">cosmossdk_io_math.Int</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageResponse**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## SupplyOf
@@ -1492,9 +1606,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter | Type   | Description | Required |
-| --------- | ------ | ----------- | -------- |
-| denom     | String | Token denom | Yes      |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QuerySupplyOfRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">denom is the coin denom to query balances for.</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -1514,16 +1628,18 @@ func main() {
 
 ```
 
-| Parameter  | Type         | Description           |
-| ---------- | ------------ | --------------------- |
-| amount     | Coin         | Supply for the token  |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QuerySupplyOfResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">types.Coin</td><td class="description-td td_text">amount is the supply of the coin.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Coin**
 
-| Parameter | Type   | Description  |
-| --------- | ------ | ------------ |
-| denom     | String | Token denom  |
-| amount    | String | Token amount |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/Coin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">cosmossdk_io_math.Int</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## DenomMetadata
@@ -1635,9 +1751,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter | Type   | Description | Required |
-| --------- | ------ | ----------- | -------- |
-| denom     | String | Token denom | Yes      |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QueryDenomMetadataRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">denom is the coin denom to query the metadata for.</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -1680,22 +1796,35 @@ func main() {
 
 ```
 
-| Parameter | Type     | Description       |
-| --------- | -------- | ----------------- |
-| metadata  | Metadata | Token information |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QueryDenomMetadataResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">metadata</td><td class="type-td td_text">Metadata</td><td class="description-td td_text">metadata describes and provides all the client information for the requested token.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Metadata**
 
-| Parameter   | Type            | Description                                                |
-| ----------- | --------------- | ---------------------------------------------------------- |
-| description | String          | Token description                                          |
-| denom_units | DenomUnit Array | DenomUnits                                                 |
-| base        | String          | Token denom                                                |
-| display     | String          | Token display name                                         |
-| name        | String          | Token name                                                 |
-| symbol      | String          | Token symbol                                               |
-| uri         | String          | In general a URI to a document with additional information |
-| uri_hash    | String          | SHA256 hash of a document pointed by URI                   |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/Metadata.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">description</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">denom_units</td><td class="type-td td_text">DenomUnit array</td><td class="description-td td_text">denom_units represents the list of DenomUnit's for a given coin</td></tr>
+<tr ><td class="parameter-td td_text">base</td><td class="type-td td_text">string</td><td class="description-td td_text">base represents the base denom (should be the DenomUnit with exponent = 0).</td></tr>
+<tr ><td class="parameter-td td_text">display</td><td class="type-td td_text">string</td><td class="description-td td_text">display indicates the suggested denom that should be displayed in clients.</td></tr>
+<tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">name defines the name of the token (eg: Cosmos Atom)  Since: cosmos-sdk 0.43</td></tr>
+<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">symbol is the token symbol usually shown on exchanges (eg: ATOM). This can be the same as the display.  Since: cosmos-sdk 0.43</td></tr>
+<tr ><td class="parameter-td td_text">uri</td><td class="type-td td_text">string</td><td class="description-td td_text">URI to a document (on or off-chain) that contains additional information. Optional.  Since: cosmos-sdk 0.46</td></tr>
+<tr ><td class="parameter-td td_text">uri_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">URIHash is a sha256 hash of a document pointed by URI. It's used to verify that the document didn't change. Optional.  Since: cosmos-sdk 0.46</td></tr>
+<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Decimals represent the number of decimals use to represent token amount on chain  Since: cosmos-sdk 0.50</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**DenomUnit**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/DenomUnit.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">denom represents the string name of the given denom unit (e.g uatom).</td></tr>
+<tr ><td class="parameter-td td_text">exponent</td><td class="type-td td_text">uint32</td><td class="description-td td_text">exponent represents power of 10 exponent that one must raise the base_denom to in order to equal the given DenomUnit's denom 1 denom = 10^exponent base_denom (e.g. with a base_denom of uatom, one can create a DenomUnit of 'atom' with exponent = 6, thus: 1 atom = 10^6 uatom).</td></tr>
+<tr ><td class="parameter-td td_text">aliases</td><td class="type-td td_text">string array</td><td class="description-td td_text">aliases is a list of string aliases for the given denom</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## DenomsMetadata
@@ -1811,9 +1940,21 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter  | Type   | Description           | Required |
-| ---------- | ------ | --------------------- | -------- |
-| pagination | Paging | Pagination of results | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QueryDenomsMetadataRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination defines an optional pagination for the request.</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageRequest**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">uint64</td><td class="description-td td_text">offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">bool</td><td class="description-td td_text">count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">bool</td><td class="description-td td_text">reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -2100,23 +2241,45 @@ func main() {
 }
 ```
 
-| Parameter  | Type           | Description        |
-| ---------- | -------------- | ------------------ |
-| metadatas  | Metadata Array | Tokens information |
-| pagination | Pagination     | Pagination object  |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QueryDenomsMetadataResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">metadatas</td><td class="type-td td_text">Metadata array</td><td class="description-td td_text">metadata provides the client information for all the registered tokens.</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination defines the pagination in the response.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Metadata**
 
-| Parameter   | Type            | Description                                                |
-| ----------- | --------------- | ---------------------------------------------------------- |
-| description | String          | Token description                                          |
-| denom_units | DenomUnit Array | DenomUnits                                                 |
-| base        | String          | Token denom                                                |
-| display     | String          | Token display name                                         |
-| name        | String          | Token name                                                 |
-| symbol      | String          | Token symbol                                               |
-| uri         | String          | In general a URI to a document with additional information |
-| uri_hash    | String          | SHA256 hash of a document pointed by URI                   |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/Metadata.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">description</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">denom_units</td><td class="type-td td_text">DenomUnit array</td><td class="description-td td_text">denom_units represents the list of DenomUnit's for a given coin</td></tr>
+<tr ><td class="parameter-td td_text">base</td><td class="type-td td_text">string</td><td class="description-td td_text">base represents the base denom (should be the DenomUnit with exponent = 0).</td></tr>
+<tr ><td class="parameter-td td_text">display</td><td class="type-td td_text">string</td><td class="description-td td_text">display indicates the suggested denom that should be displayed in clients.</td></tr>
+<tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">name defines the name of the token (eg: Cosmos Atom)  Since: cosmos-sdk 0.43</td></tr>
+<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">symbol is the token symbol usually shown on exchanges (eg: ATOM). This can be the same as the display.  Since: cosmos-sdk 0.43</td></tr>
+<tr ><td class="parameter-td td_text">uri</td><td class="type-td td_text">string</td><td class="description-td td_text">URI to a document (on or off-chain) that contains additional information. Optional.  Since: cosmos-sdk 0.46</td></tr>
+<tr ><td class="parameter-td td_text">uri_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">URIHash is a sha256 hash of a document pointed by URI. It's used to verify that the document didn't change. Optional.  Since: cosmos-sdk 0.46</td></tr>
+<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Decimals represent the number of decimals use to represent token amount on chain  Since: cosmos-sdk 0.50</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**DenomUnit**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/DenomUnit.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">denom represents the string name of the given denom unit (e.g uatom).</td></tr>
+<tr ><td class="parameter-td td_text">exponent</td><td class="type-td td_text">uint32</td><td class="description-td td_text">exponent represents power of 10 exponent that one must raise the base_denom to in order to equal the given DenomUnit's denom 1 denom = 10^exponent base_denom (e.g. with a base_denom of uatom, one can create a DenomUnit of 'atom' with exponent = 6, thus: 1 atom = 10^6 uatom).</td></tr>
+<tr ><td class="parameter-td td_text">aliases</td><td class="type-td td_text">string array</td><td class="description-td td_text">aliases is a list of string aliases for the given denom</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageResponse**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## DenomsOwners
@@ -2233,10 +2396,22 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter  | Type   | Description           | Required |
-| ---------- | ------ | --------------------- | -------- |
-| denom      | String | Token denom           | Yes      |
-| pagination | Paging | Pagination of results | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QueryDenomOwnersRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">denom defines the coin denomination to query all account holders for.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination defines an optional pagination for the request.</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageRequest**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">uint64</td><td class="description-td td_text">offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">bool</td><td class="description-td td_text">count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">bool</td><td class="description-td td_text">reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -2338,24 +2513,37 @@ func main() {
 }
 ```
 
-| Parameter    | Type             | Description       |
-| ------------ | ---------------- | ----------------- |
-| denom_owners | DenomOwner Array | Token owners      |
-| pagination   | Pagination       | Pagination object |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QueryDenomOwnersResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom_owners</td><td class="type-td td_text">DenomOwner array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination defines the pagination in the response.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **DenomOwner**
 
-| Parameter | Type   | Description     |
-| --------- | ------ | --------------- |
-| address   | String | Account address |
-| balance   | Coin   | Token amount    |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/DenomOwner.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">address defines the address that owns a particular denomination.</td></tr>
+<tr ><td class="parameter-td td_text">balance</td><td class="type-td td_text">types.Coin</td><td class="description-td td_text">balance is the balance of the denominated coin for an account.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Coin**
 
-| Parameter | Type   | Description  |
-| --------- | ------ | ------------ |
-| denom     | String | Token denom  |
-| amount    | String | Token amount |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/Coin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">cosmossdk_io_math.Int</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageResponse**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## SendEnabled
@@ -2473,10 +2661,22 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter  | Type         | Description           | Required |
-| ---------- | ------------ | --------------------- | -------- |
-| denom      | String Array | Token denoms          | No       |
-| pagination | Paging       | Pagination of results | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QuerySendEnabledRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denoms</td><td class="type-td td_text">string array</td><td class="description-td td_text">denoms is the specific denoms you want look up. Leave empty to get all entries.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination defines an optional pagination for the request. This field is only read if the denoms field is empty.</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageRequest**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">offset</td><td class="type-td td_text">uint64</td><td class="description-td td_text">offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">uint64</td><td class="description-td td_text">limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">count_total</td><td class="type-td td_text">bool</td><td class="description-td td_text">count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">reverse</td><td class="type-td td_text">bool</td><td class="description-td td_text">reverse is set to true if results are to be returned in the descending order.  Since: cosmos-sdk 0.43</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -2488,14 +2688,25 @@ func main() {
 ``` go
 ```
 
-| Parameter    | Type              | Description             |
-| ------------ | ----------------- | ----------------------- |
-| send_enabled | SendEnabled Array | SendEnabled information |
-| pagination   | Pagination        | Pagination object       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/QuerySendEnabledResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">send_enabled</td><td class="type-td td_text">SendEnabled array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination defines the pagination in the response. This field is only populated if the denoms field in the request is empty.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **SendEnabled**
 
-| Parameter | Type   | Description   |
-| --------- | ------ | ------------- |
-| denom     | String | Token denom   |
-| enabled   | Bool   | True or False |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/bank/SendEnabled.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">enabled</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**PageResponse**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/query/PageResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next_key</td><td class="type-td td_text">byte array</td><td class="description-td td_text">next_key is the key to be passed to PageRequest.key to query the next page most efficiently. It will be empty if there are no more results.</td></tr>
+<tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">uint64</td><td class="description-td td_text">total is total number of results available if PageRequest.count_total was set, its value is undefined otherwise</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->

@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "client unique identifier",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "client_state",
+    "Type": "types.Any",
+    "Description": "upgraded client state",
+    "Required": "No"
+  },
+  {
+    "Parameter": "consensus_state",
+    "Type": "types.Any",
+    "Description": "upgraded consensus state, only contains enough information to serve as a basis of trust in update logic",
+    "Required": "No"
+  },
+  {
+    "Parameter": "proof_upgrade_client",
+    "Type": "byte array",
+    "Description": "proof that old chain committed to new client",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_upgrade_consensus_state",
+    "Type": "byte array",
+    "Description": "proof that old chain committed to new consensus state",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "signer address",
+    "Required": "Yes"
+  }
+]

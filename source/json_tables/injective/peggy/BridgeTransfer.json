@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "amount",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": "quantity that was bridged (chain format)"
+  },
+  {
+    "Parameter": "block_number",
+    "Type": "uint64",
+    "Description": "the Injective block at which this amount was bridged"
+  },
+  {
+    "Parameter": "is_deposit",
+    "Type": "bool",
+    "Description": "type of transfer (withdrawal/deposit)"
+  }
+]

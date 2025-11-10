@@ -1,3 +1,0 @@
-[
-    {"Parameter": "validator_address", "Type": "String", "Description": "The validator address to query for", "Required": "Yes"}
-]

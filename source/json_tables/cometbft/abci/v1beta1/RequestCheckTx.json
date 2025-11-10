@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "tx",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "type",
+    "Type": "CheckTxType",
+    "Description": ""
+  }
+]

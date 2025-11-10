@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "signer address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "the client id of the contract",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "checksum",
+    "Type": "byte array",
+    "Description": "checksum is the sha256 hash of the new wasm byte code for the contract",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "msg",
+    "Type": "byte array",
+    "Description": "the json encoded message to be passed to the contract on migration",
+    "Required": "Yes"
+  }
+]

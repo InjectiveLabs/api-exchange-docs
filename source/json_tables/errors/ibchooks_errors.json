@@ -1,0 +1,7 @@
+[
+  {
+    "module_name": "ibchooks",
+    "error_code": 2,
+    "description": "error in wasmhook message validation"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "code_hash",
+    "Type": "string",
+    "Description": "CodeHash is the hash of the code",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "creator_address",
+    "Type": "string",
+    "Description": "CreatorAddress is the address of the contract instantiator",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "salt",
+    "Type": "string",
+    "Description": "Salt is a hex encoded salt",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "init_args",
+    "Type": "byte array",
+    "Description": "InitArgs are optional json encoded init args to be used in contract address building if provided",
+    "Required": "No"
+  }
+]

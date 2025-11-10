@@ -1,3 +1,0 @@
-[
-    {"Parameter": "sender", "Type": "String", "Description": "The sender's address", "Required": "Yes"}
-]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "path",
+    "Type": "string",
+    "Description": "module path"
+  },
+  {
+    "Parameter": "version",
+    "Type": "string",
+    "Description": "module version"
+  },
+  {
+    "Parameter": "sum",
+    "Type": "string",
+    "Description": "checksum"
+  }
+]

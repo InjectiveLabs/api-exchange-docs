@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "index",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "tx",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "result",
+    "Type": "ResponseDeliverTx",
+    "Description": ""
+  }
+]

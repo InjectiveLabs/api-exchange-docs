@@ -4,17 +4,16 @@
 set -e
 
 OUTPUT_FILE="source/includes/_errors.md"
-COSMOS_ERRORS_DIR="source/json_tables/errors"
-INJECTIVE_ERRORS_DIR="source/json_tables/chain/errors"
+ERRORS_DIR="source/json_tables/errors"
 
 # Function to add a module's errors to the markdown file
 add_module_errors() {
     local file=$1
-    local prefix=$2
     local module_name=$(basename "$file" .json)
     
-    # Just capitalize the first letter
-    local capitalized_name=$(echo "$module_name" | perl -pe 's/^(.)/\u$1/')
+    # Remove "_errors" suffix and capitalize the first letter
+    local clean_name=$(echo "$module_name" | sed 's/_errors$//')
+    local capitalized_name=$(echo "$clean_name" | perl -pe 's/^(.)/\u$1/')
     
     echo "## ${capitalized_name} module" >> "$OUTPUT_FILE"
     echo >> "$OUTPUT_FILE"
@@ -26,23 +25,18 @@ add_module_errors() {
 # Remove existing file if it exists
 rm -f "$OUTPUT_FILE"
 
-# Add Cosmos SDK section
-if [ -d "$COSMOS_ERRORS_DIR" ]; then
-    echo "# Cosmos SDK errors" >> "$OUTPUT_FILE"
-    echo >> "$OUTPUT_FILE"
-    for file in "$COSMOS_ERRORS_DIR"/*.json; do
-        [ -f "$file" ] || continue
-        add_module_errors "$file" "Cosmos SDK"
-    done
-fi
+# Add header
+echo "# Error Codes" >> "$OUTPUT_FILE"
+echo >> "$OUTPUT_FILE"
+echo "This section lists all error codes from various modules in the Injective ecosystem." >> "$OUTPUT_FILE"
+echo >> "$OUTPUT_FILE"
 
-# Add Injective section
-if [ -d "$INJECTIVE_ERRORS_DIR" ]; then
-    echo "# Injective errors" >> "$OUTPUT_FILE"
-    echo >> "$OUTPUT_FILE"
-    for file in "$INJECTIVE_ERRORS_DIR"/*.json; do
+# Process all error files in the errors directory
+if [ -d "$ERRORS_DIR" ]; then
+    # Sort files alphabetically for consistent output
+    for file in $(ls "$ERRORS_DIR"/*.json 2>/dev/null | sort); do
         [ -f "$file" ] || continue
-        add_module_errors "$file" "Injective"
+        add_module_errors "$file"
     done
 fi
 

@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "port_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "channel_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "fields",
+    "Type": "UpgradeFields",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

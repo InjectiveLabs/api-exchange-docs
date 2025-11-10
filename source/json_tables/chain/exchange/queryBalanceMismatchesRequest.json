@@ -1,3 +1,0 @@
-[
-    {"Parameter": "dust_factor", "Type": "Integer", "Description": "Difference treshold to query with", "Required": "Yes"}
-]

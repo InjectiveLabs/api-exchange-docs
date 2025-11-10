@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "clients",
+    "Type": "IdentifiedClientStates",
+    "Description": "client states with their corresponding identifiers"
+  },
+  {
+    "Parameter": "clients_consensus",
+    "Type": "ClientsConsensusStates",
+    "Description": "consensus states from each client"
+  },
+  {
+    "Parameter": "clients_metadata",
+    "Type": "IdentifiedGenesisMetadata array",
+    "Description": "metadata from each client"
+  },
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": ""
+  },
+  {
+    "Parameter": "create_localhost",
+    "Type": "bool",
+    "Description": "Deprecated: create_localhost has been deprecated. The localhost client is automatically created at genesis."
+  },
+  {
+    "Parameter": "next_client_sequence",
+    "Type": "uint64",
+    "Description": "the sequence for the next generated client identifier"
+  }
+]

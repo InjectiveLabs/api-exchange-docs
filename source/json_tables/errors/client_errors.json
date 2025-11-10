@@ -1,0 +1,157 @@
+[
+  {
+    "module_name": "client",
+    "error_code": 2,
+    "description": "light client already exists"
+  },
+  {
+    "module_name": "client",
+    "error_code": 3,
+    "description": "light client is invalid"
+  },
+  {
+    "module_name": "client",
+    "error_code": 4,
+    "description": "light client not found"
+  },
+  {
+    "module_name": "client",
+    "error_code": 5,
+    "description": "light client is frozen due to misbehaviour"
+  },
+  {
+    "module_name": "client",
+    "error_code": 6,
+    "description": "invalid client metadata"
+  },
+  {
+    "module_name": "client",
+    "error_code": 7,
+    "description": "consensus state not found"
+  },
+  {
+    "module_name": "client",
+    "error_code": 8,
+    "description": "invalid consensus state"
+  },
+  {
+    "module_name": "client",
+    "error_code": 9,
+    "description": "client type not found"
+  },
+  {
+    "module_name": "client",
+    "error_code": 10,
+    "description": "invalid client type"
+  },
+  {
+    "module_name": "client",
+    "error_code": 11,
+    "description": "commitment root not found"
+  },
+  {
+    "module_name": "client",
+    "error_code": 12,
+    "description": "invalid client header"
+  },
+  {
+    "module_name": "client",
+    "error_code": 13,
+    "description": "invalid light client misbehaviour"
+  },
+  {
+    "module_name": "client",
+    "error_code": 14,
+    "description": "client state verification failed"
+  },
+  {
+    "module_name": "client",
+    "error_code": 15,
+    "description": "client consensus state verification failed"
+  },
+  {
+    "module_name": "client",
+    "error_code": 16,
+    "description": "connection state verification failed"
+  },
+  {
+    "module_name": "client",
+    "error_code": 17,
+    "description": "channel state verification failed"
+  },
+  {
+    "module_name": "client",
+    "error_code": 18,
+    "description": "packet commitment verification failed"
+  },
+  {
+    "module_name": "client",
+    "error_code": 19,
+    "description": "packet acknowledgement verification failed"
+  },
+  {
+    "module_name": "client",
+    "error_code": 20,
+    "description": "packet receipt verification failed"
+  },
+  {
+    "module_name": "client",
+    "error_code": 21,
+    "description": "next sequence receive verification failed"
+  },
+  {
+    "module_name": "client",
+    "error_code": 22,
+    "description": "self consensus state not found"
+  },
+  {
+    "module_name": "client",
+    "error_code": 23,
+    "description": "unable to update light client"
+  },
+  {
+    "module_name": "client",
+    "error_code": 24,
+    "description": "invalid recovery client"
+  },
+  {
+    "module_name": "client",
+    "error_code": 25,
+    "description": "invalid client upgrade"
+  },
+  {
+    "module_name": "client",
+    "error_code": 26,
+    "description": "invalid height"
+  },
+  {
+    "module_name": "client",
+    "error_code": 27,
+    "description": "invalid client state substitute"
+  },
+  {
+    "module_name": "client",
+    "error_code": 28,
+    "description": "invalid upgrade proposal"
+  },
+  {
+    "module_name": "client",
+    "error_code": 29,
+    "description": "client state is not active"
+  },
+  {
+    "module_name": "client",
+    "error_code": 30,
+    "description": "membership verification failed"
+  },
+  {
+    "module_name": "client",
+    "error_code": 31,
+    "description": "non-membership verification failed"
+  },
+  {
+    "module_name": "client",
+    "error_code": 32,
+    "description": "client type not supported"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "PROCESS_PROPOSAL_STATUS_UNKNOWN"
+  },
+  {
+    "Code": "1",
+    "Name": "PROCESS_PROPOSAL_STATUS_ACCEPT"
+  },
+  {
+    "Code": "2",
+    "Name": "PROCESS_PROPOSAL_STATUS_REJECT"
+  }
+]

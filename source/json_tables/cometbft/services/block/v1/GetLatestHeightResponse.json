@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": "The height of the latest committed block. Will be 0 if no data has been committed yet."
+  }
+]

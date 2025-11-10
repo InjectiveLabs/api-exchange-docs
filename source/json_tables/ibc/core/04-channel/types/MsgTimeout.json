@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "packet",
+    "Type": "Packet",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_unreceived",
+    "Type": "byte array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_height",
+    "Type": "types.Height",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "next_sequence_recv",
+    "Type": "uint64",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

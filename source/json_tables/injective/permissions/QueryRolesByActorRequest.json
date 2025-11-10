@@ -2,13 +2,13 @@
   {
     "Parameter": "denom",
     "Type": "string",
-    "Description": "",
+    "Description": "The token denom",
     "Required": "Yes"
   },
   {
     "Parameter": "actor",
     "Type": "string",
-    "Description": "",
+    "Description": "The actor's Injective address",
     "Required": "Yes"
   }
 ]

@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "connection_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_ack",
+    "Type": "byte array",
+    "Description": "proof for the change of the connection state on Chain A: `INIT -> OPEN`",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "proof_height",
+    "Type": "types1.Height",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

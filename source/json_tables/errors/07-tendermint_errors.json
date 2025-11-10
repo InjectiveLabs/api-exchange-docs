@@ -1,0 +1,67 @@
+[
+  {
+    "module_name": "07-tendermint",
+    "error_code": 2,
+    "description": "invalid chain-id"
+  },
+  {
+    "module_name": "07-tendermint",
+    "error_code": 3,
+    "description": "invalid trusting period"
+  },
+  {
+    "module_name": "07-tendermint",
+    "error_code": 4,
+    "description": "invalid unbonding period"
+  },
+  {
+    "module_name": "07-tendermint",
+    "error_code": 5,
+    "description": "invalid header height"
+  },
+  {
+    "module_name": "07-tendermint",
+    "error_code": 6,
+    "description": "invalid header"
+  },
+  {
+    "module_name": "07-tendermint",
+    "error_code": 7,
+    "description": "invalid max clock drift"
+  },
+  {
+    "module_name": "07-tendermint",
+    "error_code": 8,
+    "description": "processed time not found"
+  },
+  {
+    "module_name": "07-tendermint",
+    "error_code": 9,
+    "description": "processed height not found"
+  },
+  {
+    "module_name": "07-tendermint",
+    "error_code": 10,
+    "description": "packet-specified delay period has not been reached"
+  },
+  {
+    "module_name": "07-tendermint",
+    "error_code": 11,
+    "description": "time since latest trusted state has passed the trusting period"
+  },
+  {
+    "module_name": "07-tendermint",
+    "error_code": 12,
+    "description": "time since latest trusted state has passed the unbonding period"
+  },
+  {
+    "module_name": "07-tendermint",
+    "error_code": 13,
+    "description": "invalid proof specs"
+  },
+  {
+    "module_name": "07-tendermint",
+    "error_code": 14,
+    "description": "invalid validator set"
+  }
+]

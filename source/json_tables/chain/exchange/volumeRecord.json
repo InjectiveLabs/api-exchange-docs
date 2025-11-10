@@ -1,4 +1,0 @@
-[
-    {"Parameter": "maker_volume", "Type": "Decimal", "Description": "The maker volume (in human redable format)"},
-    {"Parameter": "taker_volume", "Type": "Decimal", "Description": "The taker volume (in human redable format)"}
-]

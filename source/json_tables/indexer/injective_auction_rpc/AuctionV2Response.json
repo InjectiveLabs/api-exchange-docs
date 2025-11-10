@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "winner",
+    "Type": "string",
+    "Description": "Account address of the auction winner"
+  },
+  {
+    "Parameter": "basket",
+    "Type": "CoinPrices array",
+    "Description": "Coins in the basket"
+  },
+  {
+    "Parameter": "winning_bid_amount",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "round",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "end_timestamp",
+    "Type": "int64",
+    "Description": "Auction end timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "UpdatedAt timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "contract",
+    "Type": "AuctionContract",
+    "Description": ""
+  },
+  {
+    "Parameter": "winning_bid_amount_usd",
+    "Type": "string",
+    "Description": ""
+  }
+]

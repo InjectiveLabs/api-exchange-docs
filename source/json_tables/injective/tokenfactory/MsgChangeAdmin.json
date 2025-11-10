@@ -2,19 +2,19 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "The sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "denom",
     "Type": "string",
-    "Description": "",
+    "Description": "The denom",
     "Required": "Yes"
   },
   {
     "Parameter": "new_admin",
     "Type": "string",
-    "Description": "",
+    "Description": "The new admin's Injective address",
     "Required": "Yes"
   }
 ]

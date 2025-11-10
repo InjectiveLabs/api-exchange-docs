@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "upgrade",
+    "Type": "Upgrade",
+    "Description": ""
+  },
+  {
+    "Parameter": "upgrade_sequence",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "code",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "log",
+    "Type": "string",
+    "Description": "bytes data = 2;"
+  },
+  {
+    "Parameter": "info",
+    "Type": "string",
+    "Description": ""
+  }
+]

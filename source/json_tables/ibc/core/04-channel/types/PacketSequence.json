@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "port_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "channel_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "sequence",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

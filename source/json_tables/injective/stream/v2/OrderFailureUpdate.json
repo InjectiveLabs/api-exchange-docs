@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "account",
+    "Type": "string",
+    "Description": "the account address"
+  },
+  {
+    "Parameter": "order_hash",
+    "Type": "string",
+    "Description": "the order hash"
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "the client order ID"
+  },
+  {
+    "Parameter": "error_code",
+    "Type": "uint32",
+    "Description": "the error code"
+  }
+]

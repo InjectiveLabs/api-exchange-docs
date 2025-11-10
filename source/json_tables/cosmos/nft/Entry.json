@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "owner",
+    "Type": "string",
+    "Description": "owner is the owner address of the following nft"
+  },
+  {
+    "Parameter": "nfts",
+    "Type": "NFT array",
+    "Description": "nfts is a group of nfts of the same owner"
+  }
+]

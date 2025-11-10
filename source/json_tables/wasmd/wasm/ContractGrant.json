@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "contract",
+    "Type": "string",
+    "Description": "Contract is the bech32 address of the smart contract"
+  },
+  {
+    "Parameter": "limit",
+    "Type": "types.Any",
+    "Description": "Limit defines execution limits that are enforced and updated when the grant is applied. When the limit lapsed the grant is removed."
+  },
+  {
+    "Parameter": "filter",
+    "Type": "types.Any",
+    "Description": "Filter define more fine-grained control on the message payload passed to the contract in the operation. When no filter applies on execution, the operation is prohibited."
+  }
+]

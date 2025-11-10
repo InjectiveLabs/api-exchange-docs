@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "type",
+    "Type": "SignedMsgType",
+    "Description": ""
+  },
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "round",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "pol_round",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_id",
+    "Type": "CanonicalBlockID",
+    "Description": ""
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "time.Time",
+    "Description": ""
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "string",
+    "Description": ""
+  }
+]

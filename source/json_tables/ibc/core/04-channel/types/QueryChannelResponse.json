@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "channel",
+    "Type": "Channel",
+    "Description": "channel associated with the request identifiers"
+  },
+  {
+    "Parameter": "proof",
+    "Type": "byte array",
+    "Description": "merkle proof of existence"
+  },
+  {
+    "Parameter": "proof_height",
+    "Type": "types.Height",
+    "Description": "height at which the proof was retrieved"
+  }
+]

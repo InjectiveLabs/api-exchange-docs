@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "escrow_address",
+    "Type": "string",
+    "Description": "the escrow account address"
+  }
+]

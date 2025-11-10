@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "Sender is the that actor that signed the messages",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "contract",
+    "Type": "string",
+    "Description": "Contract is the address of the smart contract",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "code_id",
+    "Type": "uint64",
+    "Description": "CodeID references the new WASM code",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "msg",
+    "Type": "RawContractMessage",
+    "Description": "Msg json encoded message to be passed to the contract on migration",
+    "Required": "Yes"
+  }
+]

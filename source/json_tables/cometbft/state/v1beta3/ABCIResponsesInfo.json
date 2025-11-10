@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "legacy_abci_responses",
+    "Type": "LegacyABCIResponses",
+    "Description": "Retains the responses of the legacy ABCI calls during block processing."
+  },
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "response_finalize_block",
+    "Type": "v1beta3.ResponseFinalizeBlock",
+    "Description": ""
+  }
+]

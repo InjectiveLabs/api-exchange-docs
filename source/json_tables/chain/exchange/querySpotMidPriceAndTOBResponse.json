@@ -1,5 +1,0 @@
-[
-    {"Parameter": "mid_price", "Type": "Decimal", "Description": "Market's mid price (in human redable format)"},
-    {"Parameter": "best_buy_price", "Type": "Decimal", "Description": "Market's bet bid price (in human redable format)"},
-    {"Parameter": "best_sell_price", "Type": "Decimal", "Description": "Market's bet ask price (in human redable format)"}
-]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "auctions",
+    "Type": "AccountAuctionV2 array",
+    "Description": "The historical auctions"
+  },
+  {
+    "Parameter": "next",
+    "Type": "string array",
+    "Description": "Next tokens for pagination"
+  },
+  {
+    "Parameter": "total",
+    "Type": "int64",
+    "Description": "Total number of auctions"
+  }
+]

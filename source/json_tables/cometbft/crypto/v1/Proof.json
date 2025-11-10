@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "total",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "index",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "leaf_hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "aunts",
+    "Type": "][byte array",
+    "Description": ""
+  }
+]

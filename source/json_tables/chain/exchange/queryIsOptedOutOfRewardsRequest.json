@@ -1,3 +1,0 @@
-[
-    {"Parameter": "account", "Type": "String", "Description": "The account's address to query for", "Required": "Yes"}
-]

@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "message",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

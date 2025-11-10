@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "header",
+    "Type": "v1beta11.Header",
+    "Description": ""
+  },
+  {
+    "Parameter": "last_commit_info",
+    "Type": "CommitInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "byzantine_validators",
+    "Type": "Misbehavior array",
+    "Description": ""
+  }
+]

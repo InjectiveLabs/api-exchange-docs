@@ -1,0 +1,18 @@
+[
+  {
+    "Code": "0",
+    "Name": "CONTRACT_CODE_HISTORY_OPERATION_TYPE_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "CONTRACT_CODE_HISTORY_OPERATION_TYPE_INIT"
+  },
+  {
+    "Code": "2",
+    "Name": "CONTRACT_CODE_HISTORY_OPERATION_TYPE_MIGRATE"
+  },
+  {
+    "Code": "3",
+    "Name": "CONTRACT_CODE_HISTORY_OPERATION_TYPE_GENESIS"
+  }
+]

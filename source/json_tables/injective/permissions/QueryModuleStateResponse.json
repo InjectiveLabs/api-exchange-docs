@@ -2,6 +2,6 @@
   {
     "Parameter": "state",
     "Type": "GenesisState",
-    "Description": ""
+    "Description": "The module state"
   }
 ]

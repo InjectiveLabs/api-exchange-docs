@@ -2,19 +2,19 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "The sender's Injective address",
     "Required": "Yes"
   },
   {
     "Parameter": "amount",
     "Type": "types.Coin",
-    "Description": "",
+    "Description": "The amount of tokens to mint",
     "Required": "Yes"
   },
   {
     "Parameter": "receiver",
     "Type": "string",
-    "Description": "",
+    "Description": "The Injective address to receive the tokens",
     "Required": "Yes"
   }
 ]

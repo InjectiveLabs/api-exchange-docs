@@ -8,7 +8,7 @@ Get a list of all oracles.
 
 **IP rate limit group:** `indexer`
 
-
+### Request Parameters
 > Request Example:
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/oracle_rpc/3_OracleList.py) -->
@@ -149,19 +149,21 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|oracles|Oracle Array|List of oracles|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_oracle_rpc/OracleListResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">oracles</td><td class="type-td td_text">Oracle array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Oracle**
 
-|Parameter|Type|Description|
-|----|----|----|
-|symbol|String|The symbol of the oracle asset|
-|base_symbol|String|Oracle base currency|
-|quote_symbol|String|Oracle quote currency. If no quote symbol is returned, USD is the default.|
-|oracle_base|String|Oracle base currency|
-|price|String|The price of the asset|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_oracle_rpc/Oracle.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">The symbol of the oracle asset.</td></tr>
+<tr ><td class="parameter-td td_text">base_symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle base currency</td></tr>
+<tr ><td class="parameter-td td_text">quote_symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle quote currency</td></tr>
+<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle Type</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">The price of the oracle asset</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## Price
@@ -169,7 +171,6 @@ func main() {
 Get the oracle price of an asset.
 
 **IP rate limit group:** `indexer`
-
 
 ### Request Parameters
 > Request Example:
@@ -306,12 +307,12 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|base_symbol|String|Oracle base currency|Yes|
-|quote_symbol|String|Oracle quote currency|Yes|
-|oracle_type|String|The oracle provider|Yes|
-|oracle_scale_factor|Integer|Oracle scale factor for the quote asset|Yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_oracle_rpc/PriceRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">base_symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle base currency</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">quote_symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle quote currency</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle Type</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_scale_factor</td><td class="type-td td_text">uint32</td><td class="description-td td_text">OracleScaleFactor</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -327,9 +328,9 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|price|String|The price of the oracle asset|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_oracle_rpc/PriceResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">The price of the oracle asset</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## StreamPrices
@@ -337,7 +338,6 @@ func main() {
 Stream new price changes for a specified oracle. If no oracles are provided, all price changes are streamed.
 
 **IP rate limit group:** `indexer`
-
 
 ### Request Parameters
 > Request Example:
@@ -508,14 +508,11 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter          | Type     | Description                                                                                          | Required |
-| ------------------ | -------- | ---------------------------------------------------------------------------------------------------- | -------- |
-| base_symbol        | String   | Oracle base currency                                                                                 | No      |
-| quote_symbol       | String   | Oracle quote currency                                                                                | No      |
-| oracle_type        | String   | The oracle provider                                                                                  | No      |
-| callback           | Function | Function receiving one parameter (a stream event JSON dictionary) to process each new event          | Yes      |
-| on_end_callback    | Function | Function with the logic to execute when the stream connection is interrupted                         | No       |
-| on_status_callback | Function | Function receiving one parameter (the exception) with the logic to execute when an exception happens | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_oracle_rpc/StreamPricesRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">base_symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle base currency</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">quote_symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle quote currency</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle Type</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -535,7 +532,7 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|price|String|The price of the oracle asset|
-|timestamp|Integer|Operation timestamp in UNIX millis.|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_oracle_rpc/StreamPricesResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">The price of the oracle asset</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Operation timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->

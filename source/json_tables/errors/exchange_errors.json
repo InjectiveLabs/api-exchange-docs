@@ -1,0 +1,557 @@
+[
+  {
+    "module_name": "exchange",
+    "error_code": 1,
+    "description": "failed to validate order"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 2,
+    "description": "spot market not found"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 3,
+    "description": "spot market exists"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 4,
+    "description": "struct field error"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 5,
+    "description": "failed to validate market"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 6,
+    "description": "subaccount has insufficient deposits"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 7,
+    "description": "unrecognized order type"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 8,
+    "description": "position quantity insufficient for order"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 9,
+    "description": "order hash is not valid"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 10,
+    "description": "subaccount id is not valid"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 11,
+    "description": "invalid ticker"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 12,
+    "description": "invalid base denom"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 13,
+    "description": "invalid quote denom"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 14,
+    "description": "invalid oracle"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 15,
+    "description": "invalid expiry"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 16,
+    "description": "invalid price"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 17,
+    "description": "invalid quantity"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 18,
+    "description": "unsupported oracle type"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 19,
+    "description": "order doesnt exist"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 20,
+    "description": "spot limit orderbook fill invalid"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 21,
+    "description": "perpetual market exists"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 22,
+    "description": "expiry futures market exists"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 23,
+    "description": "expiry futures market expired"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 24,
+    "description": "no liquidity on the orderbook!"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 25,
+    "description": "orderbook liquidity cannot satisfy current worst price"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 26,
+    "description": "insufficient margin"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 27,
+    "description": "derivative market not found"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 28,
+    "description": "position not found"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 29,
+    "description": "position direction does not oppose the reduce-only order"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 30,
+    "description": "price Surpasses Bankruptcy Price"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 31,
+    "description": "position not liquidable"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 32,
+    "description": "invalid trigger price"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 33,
+    "description": "invalid oracle type"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 34,
+    "description": "invalid minimum price tick size"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 35,
+    "description": "invalid minimum quantity tick size"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 36,
+    "description": "invalid minimum order margin"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 37,
+    "description": "exceeds order side count"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 38,
+    "description": "subaccount cannot place a market order when a market order in the same market was already placed in same block"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 39,
+    "description": "cannot place a conditional market order when a conditional market order in same relative direction already exists"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 40,
+    "description": "equivalent market launch proposal already exists"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 41,
+    "description": "invalid market status"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 42,
+    "description": "base denom cannot be same with quote denom"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 43,
+    "description": "oracle base cannot be same with oracle quote"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 44,
+    "description": "makerFeeRate does not match TakerFeeRate requirements"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 45,
+    "description": "ensure that MaintenanceMarginRatio < InitialMarginRatio <= ReduceMarginRatio"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 46,
+    "description": "oracleScaleFactor cannot be greater than MaxOracleScaleFactor"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 47,
+    "description": "spot exchange is not enabled yet"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 48,
+    "description": "derivatives exchange is not enabled yet"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 49,
+    "description": "oracle price delta exceeds threshold"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 50,
+    "description": "invalid hourly interest rate"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 51,
+    "description": "invalid hourly funding rate cap"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 52,
+    "description": "only perpetual markets can update funding parameters"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 53,
+    "description": "invalid trading reward campaign"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 54,
+    "description": "invalid fee discount schedule"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 55,
+    "description": "invalid liquidation order"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 56,
+    "description": "unknown error happened for campaign distributions"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 57,
+    "description": "invalid trading reward points update"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 58,
+    "description": "invalid batch msg update"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 59,
+    "description": "post-only order exceeds top of book price"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 60,
+    "description": "order type not supported for given message"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 61,
+    "description": "sender must match dmm account"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 62,
+    "description": "already opted out of rewards"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 63,
+    "description": "invalid margin ratio"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 64,
+    "description": "provided funds are below minimum"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 65,
+    "description": "position is below initial margin requirement"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 66,
+    "description": "pool has non-positive total lp token supply"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 67,
+    "description": "passed lp token burn amount is greater than total lp token supply"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 68,
+    "description": "unsupported action"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 69,
+    "description": "position quantity cannot be negative"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 70,
+    "description": "binary options market exists"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 71,
+    "description": "binary options market not found"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 72,
+    "description": "invalid settlement"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 73,
+    "description": "account doesnt exist"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 74,
+    "description": "sender should be a market admin"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 75,
+    "description": "market is already scheduled to settle"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 76,
+    "description": "market not found"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 77,
+    "description": "denom decimal should be greater than 0 and not greater than max scale factor"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 78,
+    "description": "state is invalid"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 79,
+    "description": "transient orders up to cancellation not supported"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 80,
+    "description": "invalid trade"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 81,
+    "description": "no margin locked in subaccount"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 82,
+    "description": "invalid access level to perform action"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 83,
+    "description": "invalid address"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 84,
+    "description": "invalid argument"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 85,
+    "description": "invalid funds direction"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 86,
+    "description": "no funds provided"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 87,
+    "description": "invalid signature"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 88,
+    "description": "no funds to unlock"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 89,
+    "description": "no msgs provided"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 90,
+    "description": "no msg provided"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 91,
+    "description": "invalid amount"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 92,
+    "description": "The current feature has been disabled"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 93,
+    "description": "order has too much margin"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 94,
+    "description": "subaccount nonce is invalid"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 95,
+    "description": "insufficient funds"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 96,
+    "description": "exchange is in post-only mode"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 97,
+    "description": "client order id already exists"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 98,
+    "description": "client order id is invalid. Max length is 36 chars"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 99,
+    "description": "market cannot be settled in emergency mode"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 100,
+    "description": "invalid notional"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 101,
+    "description": "stale oracle price"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 102,
+    "description": "invalid stake grant"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 103,
+    "description": "insufficient stake for grant"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 104,
+    "description": "invalid permissions"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 105,
+    "description": "the decimals specified for the denom is incorrect"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 106,
+    "description": "insufficient market balance"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 107,
+    "description": "invalid expiration block"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 108,
+    "description": "v1 perpetual and expiry market launch proposal is not supported"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 109,
+    "description": "position not offsettable"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 110,
+    "description": "offsetting subaccount IDs cannot be empty"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 111,
+    "description": "invalid open notional cap"
+  }
+]

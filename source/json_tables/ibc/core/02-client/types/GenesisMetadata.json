@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "key",
+    "Type": "byte array",
+    "Description": "store key of metadata without clientID-prefix"
+  },
+  {
+    "Parameter": "value",
+    "Type": "byte array",
+    "Description": "metadata value"
+  }
+]

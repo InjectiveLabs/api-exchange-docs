@@ -1,4 +1,0 @@
-[
-    {"Parameter": "type", "Type": "String", "Description": "Event type"},
-    {"Parameter": "attributes", "Type": "Map", "Description": "Event details. Attributes are key-value pairs"}
-]

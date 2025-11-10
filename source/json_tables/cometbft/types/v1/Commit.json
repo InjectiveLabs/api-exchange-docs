@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "round",
+    "Type": "int32",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_id",
+    "Type": "BlockID",
+    "Description": ""
+  },
+  {
+    "Parameter": "signatures",
+    "Type": "CommitSig array",
+    "Description": ""
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "max_age_num_blocks",
+    "Type": "int64",
+    "Description": "Maximum age of evidence, in blocks.  The recommended formula for calculating it is max_age_duration / {average block time}."
+  },
+  {
+    "Parameter": "max_age_duration",
+    "Type": "time.Duration",
+    "Description": "Maximum age of evidence, in time.  The recommended value of is should correspond to the application's \"unbonding period\" or other similar mechanism for handling Nothing-At-Stake attacks. See: https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQ#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed."
+  },
+  {
+    "Parameter": "max_bytes",
+    "Type": "int64",
+    "Description": "Maximum size in bytes of evidence allowed to be included in a block.  It should fall comfortably under the maximum size of a block."
+  }
+]

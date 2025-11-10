@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "type",
+    "Type": "SignedMsgType",
+    "Description": ""
+  },
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "round",
+    "Type": "int32",
+    "Description": ""
+  },
+  {
+    "Parameter": "block_id",
+    "Type": "BlockID",
+    "Description": ""
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "time.Time",
+    "Description": ""
+  },
+  {
+    "Parameter": "validator_address",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "validator_index",
+    "Type": "int32",
+    "Description": ""
+  },
+  {
+    "Parameter": "signature",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

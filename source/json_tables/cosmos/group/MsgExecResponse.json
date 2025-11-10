@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "result",
+    "Type": "ProposalExecutorResult",
+    "Description": "result is the final result of the proposal execution."
+  }
+]

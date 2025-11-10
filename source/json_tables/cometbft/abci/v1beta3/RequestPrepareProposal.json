@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "max_tx_bytes",
+    "Type": "int64",
+    "Description": "the modified transactions cannot exceed this size."
+  },
+  {
+    "Parameter": "txs",
+    "Type": "][byte array",
+    "Description": "txs is an array of transactions that will be included in a block, sent to the app for possible modifications."
+  },
+  {
+    "Parameter": "local_last_commit",
+    "Type": "ExtendedCommitInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "misbehavior",
+    "Type": "v1beta2.Misbehavior array",
+    "Description": ""
+  },
+  {
+    "Parameter": "height",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "time",
+    "Type": "time.Time",
+    "Description": ""
+  },
+  {
+    "Parameter": "next_validators_hash",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "proposer_address",
+    "Type": "byte array",
+    "Description": "address of the public key of the validator proposing the block."
+  }
+]

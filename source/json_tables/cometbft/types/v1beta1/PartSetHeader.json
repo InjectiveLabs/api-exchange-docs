@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "total",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "hash",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

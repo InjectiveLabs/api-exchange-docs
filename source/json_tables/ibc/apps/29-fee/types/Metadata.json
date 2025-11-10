@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "fee_version",
+    "Type": "string",
+    "Description": "fee_version defines the ICS29 fee version"
+  },
+  {
+    "Parameter": "app_version",
+    "Type": "string",
+    "Description": "app_version defines the underlying application version, which may or may not be a JSON encoded bytestring"
+  }
+]

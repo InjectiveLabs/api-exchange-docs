@@ -2,7 +2,7 @@
   {
     "Parameter": "sender",
     "Type": "string",
-    "Description": "",
+    "Description": "The sender's Injective address",
     "Required": "Yes"
   },
   {
@@ -14,19 +14,19 @@
   {
     "Parameter": "name",
     "Type": "string",
-    "Description": "",
+    "Description": "The name",
     "Required": "Yes"
   },
   {
     "Parameter": "symbol",
     "Type": "string",
-    "Description": "",
+    "Description": "The symbol",
     "Required": "Yes"
   },
   {
     "Parameter": "decimals",
     "Type": "uint32",
-    "Description": "",
+    "Description": "The number of decimals",
     "Required": "Yes"
   },
   {

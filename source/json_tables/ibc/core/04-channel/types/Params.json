@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "upgrade_timeout",
+    "Type": "Timeout",
+    "Description": "the relative timeout after which channel upgrades will time out."
+  }
+]

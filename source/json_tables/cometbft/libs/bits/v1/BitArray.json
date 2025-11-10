@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "bits",
+    "Type": "int64",
+    "Description": ""
+  },
+  {
+    "Parameter": "elems",
+    "Type": "uint64 array",
+    "Description": ""
+  }
+]

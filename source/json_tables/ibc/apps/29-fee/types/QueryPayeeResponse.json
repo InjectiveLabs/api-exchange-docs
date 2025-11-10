@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "payee_address",
+    "Type": "string",
+    "Description": "the payee address to which packet fees are paid out"
+  }
+]

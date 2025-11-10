@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "t",
+    "Type": "int32 array",
+    "Description": "Time, Unix timestamp (UTC)"
+  },
+  {
+    "Parameter": "v",
+    "Type": "float64 array",
+    "Description": "Balance value"
+  },
+  {
+    "Parameter": "dv",
+    "Type": "HistoricalDetailedBalance array",
+    "Description": "Detailed Balance value"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "yes_count",
+    "Type": "string",
+    "Description": "yes_count is the weighted sum of yes votes."
+  },
+  {
+    "Parameter": "abstain_count",
+    "Type": "string",
+    "Description": "abstain_count is the weighted sum of abstainers."
+  },
+  {
+    "Parameter": "no_count",
+    "Type": "string",
+    "Description": "no_count is the weighted sum of no votes."
+  },
+  {
+    "Parameter": "no_with_veto_count",
+    "Type": "string",
+    "Description": "no_with_veto_count is the weighted sum of veto."
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "address is the account address of the newly created group policy."
+  }
+]

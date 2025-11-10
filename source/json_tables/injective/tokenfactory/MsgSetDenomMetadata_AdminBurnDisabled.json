@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "should_disable",
+    "Type": "bool",
+    "Description": "true if the admin burn capability should be disabled",
+    "Required": "Yes"
+  }
+]

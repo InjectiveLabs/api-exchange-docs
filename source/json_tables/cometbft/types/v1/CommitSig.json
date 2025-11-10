@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "block_id_flag",
+    "Type": "BlockIDFlag",
+    "Description": ""
+  },
+  {
+    "Parameter": "validator_address",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "time.Time",
+    "Description": ""
+  },
+  {
+    "Parameter": "signature",
+    "Type": "byte array",
+    "Description": ""
+  }
+]

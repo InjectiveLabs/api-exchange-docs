@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "members",
+    "Type": "GroupMember array",
+    "Description": "members are the members of the group with given group_id."
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "query.PageResponse",
+    "Description": "pagination defines the pagination in the response."
+  }
+]

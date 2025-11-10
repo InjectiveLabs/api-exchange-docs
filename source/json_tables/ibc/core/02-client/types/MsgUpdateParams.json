@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "signer",
+    "Type": "string",
+    "Description": "signer address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "params",
+    "Type": "Params",
+    "Description": "params defines the client parameters to update.  NOTE: All parameters must be supplied.",
+    "Required": "Yes"
+  }
+]

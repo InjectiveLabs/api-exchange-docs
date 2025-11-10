@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "total_pruned_sequences",
+    "Type": "uint64",
+    "Description": "Number of sequences pruned (includes both packet acknowledgements and packet receipts where appropriate)."
+  },
+  {
+    "Parameter": "total_remaining_sequences",
+    "Type": "uint64",
+    "Description": "Number of sequences left after pruning."
+  }
+]

@@ -2,16 +2,16 @@
   {
     "Parameter": "name",
     "Type": "string",
-    "Description": ""
+    "Description": "The role name"
   },
   {
     "Parameter": "role_id",
     "Type": "uint32",
-    "Description": ""
+    "Description": "The role ID"
   },
   {
     "Parameter": "permissions",
     "Type": "uint32",
-    "Description": ""
+    "Description": "Integer representing the bitwise combination of all actions assigned to the role"
   }
 ]

@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "allocations",
+    "Type": "Allocation array",
+    "Description": "port and channel amounts"
+  }
+]

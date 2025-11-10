@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "grants",
+    "Type": "CodeGrant array",
+    "Description": "Grants for code upload"
+  }
+]

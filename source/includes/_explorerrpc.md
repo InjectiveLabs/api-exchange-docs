@@ -62,7 +62,7 @@ import (
 )
 
 func main() {
-	network := common.LoadNetwork("mainnet", "sentry")
+	network := common.LoadNetwork("mainnet", "lb")
 	explorerClient, err := explorerclient.NewExplorerClient(network)
 	if err != nil {
 		panic(err)
@@ -81,9 +81,10 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|Required|
-|----|----|----|----|
-|tx_hash|String|The transaction hash|Yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetTxByTxHashRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">string</td><td class="description-td td_text">transaction hash</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">is_evm_hash</td><td class="type-td td_text">bool</td><td class="description-td td_text">Set to true if the provided hash may be an EVM tx hash</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -213,53 +214,79 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|s|String|Status of the response|
-|errmsg|String|Error message, if any|
-|data|TxDetailData|Tx detail information|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetTxByTxHashResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">s</td><td class="type-td td_text">string</td><td class="description-td td_text">Status of the response.</td></tr>
+<tr ><td class="parameter-td td_text">errmsg</td><td class="type-td td_text">string</td><td class="description-td td_text">Error message.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">TxDetailData</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **TxDetailData**
 
-|Parameter|Type|Description|
-|----|----|----|
-|block_number|Integer|The block at which the transaction was executed|
-|block_timestamp|String|The timestamp of the block (yyyy-MM-dd HH:mm:ss.SSS ZZZZ zzz, e.g. 2022-11-14 13:16:18.946 +0000 UTC)|
-|hash|String|The transaction hash|
-|data|bytes|The raw data in bytes|
-|gas_wanted|Integer|The gas wanted for this transaction|
-|gas_used|Integer|The gas used for this transaction|
-|gas_fee|GasFee|Gas fee information|
-|tx_type|String|The transaction type|
-|messages|String|The messages included in this transaction|
-|signatures|Signatures Array|List of signatures|
-|tx_number|Integer|Monotonic index of the tx in database|
-|block_unix_timestamp|Integer|The timestamp of the block in UNIX millis|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/TxDetailData.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_timestamp</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_fee</td><td class="type-td td_text">GasFee</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_type</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">messages</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">signatures</td><td class="type-td td_text">Signature array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">memo</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp in unix milli</td></tr>
+<tr ><td class="parameter-td td_text">error_log</td><td class="type-td td_text">string</td><td class="description-td td_text">Transaction log indicating errors</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">byte array</td><td class="description-td td_text">transaction event logs</td></tr>
+<tr ><td class="parameter-td td_text">claim_ids</td><td class="type-td td_text">int64 array</td><td class="description-td td_text">peggy bridge claim id, non-zero if tx contains MsgDepositClaim</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **GasFee**
 
-|Parameter|Type|Description|
-|----|----|----|
-|amount|CosmosCoin Array|List of coins with denom and amount|
-|gas_limit|Integer|The gas limit for the transaction|
-|payer|String|The Injective Chain address paying the gas fee|
-|granter|String|Address of granter of the tx|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GasFee.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">CosmosCoin array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_limit</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">payer</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">granter</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**Event**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Event.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">map[string]string</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**Signature**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Signature.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pubkey</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">signature</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **CosmosCoin**
 
-|Parameter|Type|Description|
-|----|----|----|
-|denom|String|Coin denom|
-|amount|String|Coin amount|
-
-**Signatures**
-
-|Parameter|Type|Description|
-|----|----|----|
-|pubkey|String|The public key of the block proposer|
-|address|String|The transaction sender address|
-|sequence|Integer|The sequence number of the sender's address|
-|signature|String|The signature|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/CosmosCoin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin denominator</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin amount (big int)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## AccountTxs
@@ -357,17 +384,14 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter    | Type             | Description                                     | Required |
-| ------------ | ---------------- | ----------------------------------------------- | -------- |
-| address      | String           | The Injective Chain address                     | Yes      |
-| before       | Integer          | Filter transactions before a given block height | No       |
-| after        | Integer          | Filter transactions after a given block height  | No       |
-| message_type | String           | Filter by message type                          | No       |
-| module       | String           | Filter by module                                | No       |
-| from_number  | Integer          | Filter from transaction number                  | No       |
-| to_number    | Integer          | Filter to transaction number                    | No       |
-| status       | String           | Filter by transaction status                    | No       |
-| pagination   | PaginationOption | Pagination configuration                        | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetAccountTxsV2Request.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of account</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">string</td><td class="description-td td_text">Comma-separated list of msg types</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">start_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">The starting timestamp in UNIX milliseconds that the txs must be equal or older than</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">end_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">The ending timestamp in UNIX milliseconds that the txs must be equal or younger than</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">per_page</td><td class="type-td td_text">int32</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">token</td><td class="type-td td_text">string</td><td class="description-td td_text">Pagination token</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -630,58 +654,77 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|data|TxDetailData Array|TxDetailData object|
-|paging|Paging|Pagination of results|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetAccountTxsV2Response.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">paging</td><td class="type-td td_text">Cursor</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">TxDetailData array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-**Paging**
+<br/>
 
-|Parameter|Type|Description|
-|----|----|----|
-|total|Integer|Total number of records available|
+**TxDetailData**
 
-**Data**
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/TxDetailData.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_timestamp</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_fee</td><td class="type-td td_text">GasFee</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_type</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">messages</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">signatures</td><td class="type-td td_text">Signature array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">memo</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp in unix milli</td></tr>
+<tr ><td class="parameter-td td_text">error_log</td><td class="type-td td_text">string</td><td class="description-td td_text">Transaction log indicating errors</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">byte array</td><td class="description-td td_text">transaction event logs</td></tr>
+<tr ><td class="parameter-td td_text">claim_ids</td><td class="type-td td_text">int64 array</td><td class="description-td td_text">peggy bridge claim id, non-zero if tx contains MsgDepositClaim</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-|Parameter|Type|Description|
-|----|----|----|
-|block_number|Integer|The block at which the transaction was executed|
-|block_timestamp|String|The timestamp of the block (yyyy-MM-dd HH:mm:ss.SSS ZZZZ zzz, e.g. 2022-11-14 13:16:18.946 +0000 UTC)|
-|hash|String|The transaction hash|
-|data|bytes|The raw data in bytes|
-|gas_wanted|Integer|The gas wanted for this transaction|
-|gas_used|Integer|The gas used for this transaction|
-|gas_fee|GasFee|GasFee object|
-|tx_type|String|The transaction type|
-|messages|String|The messages included in this transaction|
-|signatures|Signatures Array|List of signatures|
-|tx_number|Integer|Monotonic index of the tx in database|
-|block_unix_timestamp|Integer|The timestamp of the block in UNIX millis|
+<br/>
 
 **GasFee**
 
-|Parameter|Type|Description|
-|----|----|----|
-|amount|CosmosCoin Array|List of coins with denom and amount|
-|gas_limit|Integer|The gas limit for the transaction|
-|payer|String|The Injective Chain address paying the gas fee|
-|granter|String|Address of granter of the tx|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GasFee.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">CosmosCoin array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_limit</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">payer</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">granter</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-**CosmosCoin**
-
-|Parameter|Type|Description|
-|----|----|----|
-|denom|String|Coin denom|
-|amount|String|Coin amount|
+<br/>
 
 **Signatures**
 
-|Parameter|Type|Description|
-|----|----|----|
-|pubkey|String|The public key of the block proposer|
-|address|String|The transaction sender address|
-|sequence|Integer|The sequence number of the sender's address|
-|signature|String|The signature|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Signature.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pubkey</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">signature</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**CosmosCoin**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_exchange_rpc/CosmosCoin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin denominator</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin amount (big int)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**Cursor**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Cursor.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next</td><td class="type-td td_text">string array</td><td class="description-td td_text">array of tokens to navigate to the next pages</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## Blocks
@@ -752,11 +795,13 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter  | Type             | Description                                     | Required |
-| ---------- | ---------------- | ----------------------------------------------- | -------- |
-| before     | Integer          | Filter transactions before a given block height | No       |
-| after      | Integer          | Filter transactions after a given block height  | No       |
-| pagination | PaginationOption | Pagination configuration                        | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetBlocksRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">before</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">after</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">int32</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">from</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Unix timestamp (UTC) in milliseconds</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">to</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Unix timestamp (UTC) in milliseconds</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -831,27 +876,56 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|data|BlockInfo|Block data|
-|paging|Paging|Pagination of results|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetBlocksResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">paging</td><td class="type-td td_text">Paging</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">BlockInfo array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-**Paging**
-
-|Parameter|Type|Description|
-|----|----|----|
-|total|Integer|Total number of records available|
+<br/>
 
 **BlockInfo**
 
-|Parameter|Type|Description|
-|----|----|----|
-|height|Integer|The block height|
-|proposer|String|The block proposer|
-|moniker|String|The validator moniker|
-|block_hash|String|The hash of the block|
-|parent_hash|String|The parent hash of the block|
-|timestamp|String|The timestamp of the block (yyyy-MM-dd HH:mm:ss.SSS ZZZZ zzz, e.g. 2022-11-14 13:16:18.946 +0000 UTC)|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/BlockInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">proposer</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">moniker</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">parent_hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">num_pre_commits</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">num_txs</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">txs</td><td class="type-td td_text">TxDataRPC array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp in unix milli</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**TxDataRPC**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/TxDataRPC.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_timestamp</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">messages</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">error_log</td><td class="type-td td_text">string</td><td class="description-td td_text">Transaction log indicating errors</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">claim_ids</td><td class="type-td td_text">int64 array</td><td class="description-td td_text">peggy bridge claim id, non-zero if tx contains MsgDepositClaim</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**Paging**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Paging.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">int64</td><td class="description-td td_text">total number of txs saved in database</td></tr>
+<tr ><td class="parameter-td td_text">from</td><td class="type-td td_text">int32</td><td class="description-td td_text">can be either block height or index num</td></tr>
+<tr ><td class="parameter-td td_text">to</td><td class="type-td td_text">int32</td><td class="description-td td_text">can be either block height or index num</td></tr>
+<tr ><td class="parameter-td td_text">count_by_subaccount</td><td class="type-td td_text">int64</td><td class="description-td td_text">count entries by subaccount, serving some places on helix</td></tr>
+<tr ><td class="parameter-td td_text">next</td><td class="type-td td_text">string array</td><td class="description-td td_text">array of tokens to navigate to the next pages</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## Block
@@ -921,9 +995,9 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter | Type   | Description  | Required |
-| --------- | ------ | ------------ | -------- |
-| block_id  | String | Block height | Yes      |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetBlockRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -992,34 +1066,51 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|s|String|Status of the response|
-|errmsg|String|Error message, if any|
-|data|BlockDetailInfo|Detailed info on the block|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetBlockResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">s</td><td class="type-td td_text">string</td><td class="description-td td_text">Status of the response.</td></tr>
+<tr ><td class="parameter-td td_text">errmsg</td><td class="type-td td_text">string</td><td class="description-td td_text">Error message.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">BlockDetailInfo</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **BlockDetailInfo**
 
-|Parameter|Type|Description|
-|----|----|----|
-|height|Integer|The block height|
-|proposer|String|The block proposer|
-|moniker|String|The block proposer's moniker|
-|block_hash|String|The hash of the block|
-|parent_hash|String|The parent hash of the block|
-|num_txs|Integer|Number of transactions in the block|
-|txs|TxData Array|List of transactions|
-|timestamp|String|The timestamp of the block (yyyy-MM-dd HH:mm:ss.SSS ZZZZ zzz, e.g. 2022-11-14 13:16:18.946 +0000 UTC)|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/BlockDetailInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">proposer</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">moniker</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">parent_hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">num_pre_commits</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">num_txs</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">total_txs</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">txs</td><td class="type-td td_text">TxData array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp in unix milli</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **TxData**
 
-|Parameter|Type|Description|
-|----|----|----|
-|block_number|String|The block number|
-|block_timestamp|String|The timestamp of the block (yyyy-MM-dd HH:mm:ss.SSS ZZZZ zzz, e.g. 2022-11-14 13:16:18.946 +0000 UTC)|
-|hash|String|Transaction hash|
-|messages|bytes|Messages byte data of the transaction|
-|tx_number|Integer|Transaction number|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/TxData.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_timestamp</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">messages</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">error_log</td><td class="type-td td_text">string</td><td class="description-td td_text">Transaction log indicating errors</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_msg_types</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">byte array</td><td class="description-td td_text">transaction event logs</td></tr>
+<tr ><td class="parameter-td td_text">claim_ids</td><td class="type-td td_text">int64 array</td><td class="description-td td_text">peggy bridge claim id, non-zero if tx contains MsgDepositClaim</td></tr>
+<tr ><td class="parameter-td td_text">signatures</td><td class="type-td td_text">Signature array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp in unix milli</td></tr>
+<tr ><td class="parameter-td td_text">ethereum_tx_hash_hex</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## Txs
@@ -1099,16 +1190,19 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter    | Type             | Description                                     | Required |
-| ------------ | ---------------- | ----------------------------------------------- | -------- |
-| before       | Integer          | Filter transactions before a given block height | No       |
-| after        | Integer          | Filter transactions after a given block height  | No       |
-| message_type | String           | Filter by message type                          | No       |
-| module       | String           | Filter by module                                | No       |
-| from_number  | Integer          | Filter from transaction number                  | No       |
-| to_number    | Integer          | Filter to transaction number                    | No       |
-| status       | String           | Filter by transaction status                    | No       |
-| pagination   | PaginationOption | Pagination configuration                        | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetTxsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">before</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">after</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">int32</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">skip</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">module</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">from_number</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">to_number</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">start_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">The starting timestamp in UNIX milliseconds that the txs must be equal or older than</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">end_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">The ending timestamp in UNIX milliseconds that the txs must be equal or younger than</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">string</td><td class="description-td td_text">The status of the txs to be returned</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -1231,27 +1325,44 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|data|TxData Array|Transactions data|
-|paging|Paging|Pagination of results|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetTxsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">paging</td><td class="type-td td_text">Paging</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">TxData array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-**Paging**
-
-|Parameter|Type|Description|
-|----|----|----|
-|total|Integer|Total number of records available|
+<br/>
 
 **TxData**
 
-|Parameter|Type|Description|
-|----|----|----|
-|block_number|Integer|The block at which the transaction was executed|
-|block_timestamp|String|The timestamp of the block (yyyy-MM-dd HH:mm:ss.SSS ZZZZ zzz, e.g. 2022-11-14 13:16:18.946 +0000 UTC)|
-|hash|String|The transaction hash|
-|messages|bytes|The raw data in bytes|
-|tx_number|Integer|The transaction number|
-|error_log|String|Logged errors, if any|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/TxData.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_timestamp</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">messages</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">error_log</td><td class="type-td td_text">string</td><td class="description-td td_text">Transaction log indicating errors</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_msg_types</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">byte array</td><td class="description-td td_text">transaction event logs</td></tr>
+<tr ><td class="parameter-td td_text">claim_ids</td><td class="type-td td_text">int64 array</td><td class="description-td td_text">peggy bridge claim id, non-zero if tx contains MsgDepositClaim</td></tr>
+<tr ><td class="parameter-td td_text">signatures</td><td class="type-td td_text">Signature array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp in unix milli</td></tr>
+<tr ><td class="parameter-td td_text">ethereum_tx_hash_hex</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**Paging**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Paging.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">int64</td><td class="description-td td_text">total number of txs saved in database</td></tr>
+<tr ><td class="parameter-td td_text">from</td><td class="type-td td_text">int32</td><td class="description-td td_text">can be either block height or index num</td></tr>
+<tr ><td class="parameter-td td_text">to</td><td class="type-td td_text">int32</td><td class="description-td td_text">can be either block height or index num</td></tr>
+<tr ><td class="parameter-td td_text">count_by_subaccount</td><td class="type-td td_text">int64</td><td class="description-td td_text">count entries by subaccount, serving some places on helix</td></tr>
+<tr ><td class="parameter-td td_text">next</td><td class="type-td td_text">string array</td><td class="description-td td_text">array of tokens to navigate to the next pages</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## StreamTxs
@@ -1260,6 +1371,7 @@ Stream transactions.
 
 **IP rate limit group:** `indexer`
 
+### Request Parameters
 > Request Example:
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/6_StreamTxs.py) -->
@@ -1352,11 +1464,7 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter          | Type     | Description                                                                                          | Required |
-| ------------------ | -------- | ---------------------------------------------------------------------------------------------------- | -------- |
-| callback           | Function | Function receiving one parameter (a stream event JSON dictionary) to process each new event          | Yes      |
-| on_end_callback    | Function | Function with the logic to execute when the stream connection is interrupted                         | No       |
-| on_status_callback | Function | Function receiving one parameter (the exception) with the logic to execute when an exception happens | No       |
+No parameters
 
 
 ### Response Parameters
@@ -1437,14 +1545,18 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|block_number|Integer|The block at which the transaction was executed|
-|block_timestamp|String|The timestamp of the block (yyyy-MM-dd HH:mm:ss.SSS ZZZZ zzz, e.g. 2022-11-14 13:16:18.946 +0000 UTC)|
-|hash|String|The transaction hash|
-|messages|bytes|The raw data in bytes|
-|tx_number|Integer|The transaction number|
-|error_log|String|Logged errors, if any|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/StreamTxsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_timestamp</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">messages</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">error_log</td><td class="type-td td_text">string</td><td class="description-td td_text">Transaction log indicating errors</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">claim_ids</td><td class="type-td td_text">int64 array</td><td class="description-td td_text">peggy bridge claim id, non-zero if tx contains MsgDepositClaim</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## StreamBlocks
@@ -1453,6 +1565,7 @@ Stream blocks.
 
 **IP rate limit group:** `indexer`
 
+### Request Parameters
 > Request Example:
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/7_StreamBlocks.py) -->
@@ -1545,11 +1658,7 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter          | Type     | Description                                                                                          | Required |
-| ------------------ | -------- | ---------------------------------------------------------------------------------------------------- | -------- |
-| callback           | Function | Function receiving one parameter (a stream event JSON dictionary) to process each new event          | Yes      |
-| on_end_callback    | Function | Function with the logic to execute when the stream connection is interrupted                         | No       |
-| on_status_callback | Function | Function receiving one parameter (the exception) with the logic to execute when an exception happens | No       |
+No parameters
 
 
 ### Response Parameters
@@ -1615,15 +1724,35 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|height|Integer|The block height|
-|proposer|String|The block proposer|
-|moniker|String|The block proposer's moniker|
-|block_hash|String|The block hash|
-|parent_hash|String|The parent hash|
-|num_txs|Integer|The number of transactions in the block|
-|timestamp|String|The block's timestamp (yyyy-MM-dd HH:mm:ss.SSS ZZZZ zzz, e.g. 2022-11-14 13:16:18.946 +0000 UTC)|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/StreamBlocksResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">proposer</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">moniker</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">parent_hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">num_pre_commits</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">num_txs</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">txs</td><td class="type-td td_text">TxDataRPC array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp in unix milli</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**TxDataRPC**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/TxDataRPC.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_timestamp</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">messages</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">error_log</td><td class="type-td td_text">string</td><td class="description-td td_text">Transaction log indicating errors</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">claim_ids</td><td class="type-td td_text">int64 array</td><td class="description-td td_text">peggy bridge claim id, non-zero if tx contains MsgDepositClaim</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## PeggyDeposits
@@ -1702,11 +1831,12 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter  | Type             | Description                | Required |
-| ---------- | ---------------- | -------------------------- | -------- |
-| sender     | String           | Filter by sender address   | No       |
-| receiver   | String           | Filter by receiver address | No       |
-| pagination | PaginationOption | Pagination configuration   | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetPeggyDepositTxsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">Sender address of deposit request</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">receiver</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of receiveer upon deposit</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">int32</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">skip</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -1805,26 +1935,28 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|field|PeggyDepositTx Array|List of peggy deposits|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetPeggyDepositTxsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">field</td><td class="type-td td_text">PeggyDepositTx array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **PeggyDepositTx**
 
-|Parameter|Type|Description|
-|----|----|----|
-|sender|String|The sender address|
-|receiver|String|The receiver address|
-|event_nonce|Integer|The event nonce|
-|event_height|Integer|The event height|
-|amount|String|The deposited amount|
-|denom|Integer|The token denom|
-|orchestrator_address|String|The orchestrator address|
-|state|String|Transaction state|
-|claim_type|Integer|Claim type of the deposit, always equal to 1|
-|tx_hashes|String Array|List of transaction hashes|
-|created_at|Integer|The timestamp of the tx creation (yyyy-MM-dd HH:mm:ss.SSS ZZZZ zzz, e.g. 2022-11-14 13:16:18.946 +0000 UTC)|
-|updated_at|String|The timestamp of the tx update (yyyy-MM-dd HH:mm:ss.SSS ZZZZ zzz, e.g. 2022-11-14 13:16:18.946 +0000 UTC)|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/PeggyDepositTx.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">Sender address of deposit request</td></tr>
+<tr ><td class="parameter-td td_text">receiver</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of receiveer upon deposit</td></tr>
+<tr ><td class="parameter-td td_text">event_nonce</td><td class="type-td td_text">uint64</td><td class="description-td td_text">The event nonce of WithdrawalClaim event emitted by Ethereum chain upon deposit</td></tr>
+<tr ><td class="parameter-td td_text">event_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">The block height of WithdrawalClaim event emitted by Ethereum chain upon deposit</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">string</td><td class="description-td td_text">Amount of tokens being deposited</td></tr>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Denom of tokens being deposited</td></tr>
+<tr ><td class="parameter-td td_text">orchestrator_address</td><td class="type-td td_text">string</td><td class="description-td td_text">orchestratorAddress who created batch request</td></tr>
+<tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">claim_type</td><td class="type-td td_text">int32</td><td class="description-td td_text">The claimType will be DepoistClaim for Deposits</td></tr>
+<tr ><td class="parameter-td td_text">tx_hashes</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">created_at</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## PeggyWithdrawals
@@ -1905,11 +2037,12 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter  | Type             | Description                | Required |
-| ---------- | ---------------- | -------------------------- | -------- |
-| sender     | String           | Filter by sender address   | No       |
-| receiver   | String           | Filter by receiver address | No       |
-| pagination | PaginationOption | Pagination configuration   | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetPeggyWithdrawalTxsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">Sender address of withdrawal request</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">receiver</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of receiveer upon withdrawal</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">int32</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">skip</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
 > Response Example:
@@ -2023,30 +2156,32 @@ func main() {
 ```
 
 
-|Parameter|Type|Description|
-|----|----|----|
-|field|PeggyWithdrawalTx Array|List of peggy withdrawals|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetPeggyWithdrawalTxsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">field</td><td class="type-td td_text">PeggyWithdrawalTx array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **PeggyWithdrawalTx**
 
-|Parameter|Type|Description|
-|----|----|----|
-|sender|String|The sender address|
-|receiver|String|The receiver address|
-|amount|String|The amount withdrawn|
-|denom|Integer|The token denom|
-|bridge_fee|String|The bridge fee|
-|outgoing_tx_id|Integer|The tx nonce|
-|batch_timeout|Integer|The timestamp after which batch request will be discarded if not processed already|
-|BatchNonce|Integer|An auto incremented unique ID representing the Withdrawal Batches|
-|orchestrator_address|String|Address that created batch request|
-|event_nonce|Integer|The event nonce of WithdrawalClaim event emitted by Ethereum chain upon batch withdrawal|
-|event_height|Integer|The block height of WithdrawalClaim event emitted by Ethereum chain upon batch withdrawal|
-|state|String|Transaction state|
-|claim_type|Integer|Claim type of the transaction, always equal to 2|
-|tx_hashes|String Array|List of transaction hashes|
-|created_at|Integer|The timestamp of the tx creation (yyyy-MM-dd HH:mm:ss.SSS ZZZZ zzz, e.g. 2022-11-14 13:16:18.946 +0000 UTC)|
-|updated_at|String|The timestamp of the tx update (yyyy-MM-dd HH:mm:ss.SSS ZZZZ zzz, e.g. 2022-11-14 13:16:18.946 +0000 UTC)|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/PeggyWithdrawalTx.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">Sender address of withdrawal request</td></tr>
+<tr ><td class="parameter-td td_text">receiver</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of receiveer upon withdrawal</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">string</td><td class="description-td td_text">Amount of tokens being withdrawan</td></tr>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Denom of tokens being withdrawan</td></tr>
+<tr ><td class="parameter-td td_text">bridge_fee</td><td class="type-td td_text">string</td><td class="description-td td_text">The bridge fee paid by sender for withdrawal</td></tr>
+<tr ><td class="parameter-td td_text">outgoing_tx_id</td><td class="type-td td_text">uint64</td><td class="description-td td_text">A auto incremented unique ID representing the withdrawal request</td></tr>
+<tr ><td class="parameter-td td_text">batch_timeout</td><td class="type-td td_text">uint64</td><td class="description-td td_text">The timestamp after which Batch request will be discarded if not processed already</td></tr>
+<tr ><td class="parameter-td td_text">batch_nonce</td><td class="type-td td_text">uint64</td><td class="description-td td_text">A auto incremented unique ID representing the Withdrawal Batches</td></tr>
+<tr ><td class="parameter-td td_text">orchestrator_address</td><td class="type-td td_text">string</td><td class="description-td td_text">orchestratorAddress who created batch request</td></tr>
+<tr ><td class="parameter-td td_text">event_nonce</td><td class="type-td td_text">uint64</td><td class="description-td td_text">The event nonce of WithdrawalClaim event emitted by Ethereum chain upon batch withdrawal</td></tr>
+<tr ><td class="parameter-td td_text">event_height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">The block height of WithdrawalClaim event emitted by Ethereum chain upon batch withdrawal</td></tr>
+<tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">claim_type</td><td class="type-td td_text">int32</td><td class="description-td td_text">The claimType will be WithdrawalClaim for Batch Withdrawals</td></tr>
+<tr ><td class="parameter-td td_text">tx_hashes</td><td class="type-td td_text">string array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">created_at</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## IBCTransfers
@@ -2141,15 +2276,16 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter    | Type             | Description                                   | Required |
-| ------------ | ---------------- | --------------------------------------------- | -------- |
-| sender       | String           | Filter transfers based on sender address      | No       |
-| receiver     | String           | Filter transfers based on receiver address    | No       |
-| src_channel  | String           | Filter transfers based on source channel      | No       |
-| src_port     | String           | Filter transfers based on source port         | No       |
-| dest_channel | String           | Filter transfers based on destination channel | No       |
-| dest_port    | String           | Filter transfers based on destination port    | No       |
-| pagination   | PaginationOption | Pagination configuration                      | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetIBCTransferTxsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">receiver</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">src_channel</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">src_port</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">dest_channel</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">dest_port</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">int32</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">skip</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ### Response Parameters
@@ -2230,30 +2366,32 @@ func main() {
 }
 ```
 
-|Parameter|Type|Description|
-|----|----|----|
-|field|IBCTransferTx Array|List of IBC transfers|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetIBCTransferTxsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">field</td><td class="type-td td_text">IBCTransferTx array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **IBCTransferTx**
 
-|Parameter|Type|Description|
-|----|----|----|
-|sender|String|Sender address|
-|receiver|String|Receiver address|
-|source_channel|String|Source channel|
-|source_port|String|Source port|
-|destination_channel|String|Destination channel|
-|destination_port|String|Destination port|
-|amount|String|Transfer amount|
-|denom|String|Token denom|
-|timeout_height|Integer|Timeout height relative to the current block height. Timeout disabled if set to 0|
-|timeout_timestamp|Integer|Timeout timestamp (in nanoseconds) relative to the current block timestamp|
-|packet_sequence|String|Corresponds to the order of sends and receives, where a Packet with an earlier sequence number must be sent and received before a Packet with a later sequence number|
-|data_hex|String|IBC request data in hex format|
-|state|String|Transaction state|
-|tx_hashes|String Array|List of transaction hashes|
-|created_at|Integer|The timestamp of the tx creation (yyyy-MM-dd HH:mm:ss.SSS ZZZZ zzz, e.g. 2022-11-14 13:16:18.946 +0000 UTC)|
-|updated_at|String|The timestamp of the tx update (yyyy-MM-dd HH:mm:ss.SSS ZZZZ zzz, e.g. 2022-11-14 13:16:18.946 +0000 UTC)|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/IBCTransferTx.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">the sender address</td></tr>
+<tr ><td class="parameter-td td_text">receiver</td><td class="type-td td_text">string</td><td class="description-td td_text">the recipient address on the destination chain</td></tr>
+<tr ><td class="parameter-td td_text">source_port</td><td class="type-td td_text">string</td><td class="description-td td_text">the port on which the packet will be sent</td></tr>
+<tr ><td class="parameter-td td_text">source_channel</td><td class="type-td td_text">string</td><td class="description-td td_text">the channel by which the packet will be sent</td></tr>
+<tr ><td class="parameter-td td_text">destination_port</td><td class="type-td td_text">string</td><td class="description-td td_text">identifies the port on the receiving chain</td></tr>
+<tr ><td class="parameter-td td_text">destination_channel</td><td class="type-td td_text">string</td><td class="description-td td_text">identifies the channel end on the receiving chain</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">string</td><td class="description-td td_text">transfer amount</td></tr>
+<tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">transafer denom</td></tr>
+<tr ><td class="parameter-td td_text">timeout_height</td><td class="type-td td_text">string</td><td class="description-td td_text">Timeout height relative to the current block height. The timeout is disabled when set to 0</td></tr>
+<tr ><td class="parameter-td td_text">timeout_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Timeout timestamp (in nanoseconds) relative to the current block timestamp</td></tr>
+<tr ><td class="parameter-td td_text">packet_sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_text">number corresponds to the order of sends and receives, where a Packet with an earlier sequence number must be sent and received before a Packet with a later sequence number</td></tr>
+<tr ><td class="parameter-td td_text">data_hex</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_hashes</td><td class="type-td td_text">string array</td><td class="description-td td_text">it's injective chain tx hash array</td></tr>
+<tr ><td class="parameter-td td_text">created_at</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## GetWasmCodes
@@ -2262,6 +2400,7 @@ List all cosmwasm code on injective chain. Results are paginated.
 
 **IP rate limit group:** `indexer`
 
+### Request Parameters
 > Request Example:
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/15_GetWasmCodes.py) -->
@@ -2340,6 +2479,14 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetWasmCodesRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">int32</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">from_number</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">to_number</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+### Response Parameters
 > Response Example:
 
 ```go
@@ -2424,58 +2571,60 @@ func main() {
 }
 ```
 
-### Request Parameters
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetWasmCodesResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">paging</td><td class="type-td td_text">Paging</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">WasmCode array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-| Parameter   |Type|Description|Required|
-|-------------|----|-----------|--------|
-| limit       |Integer|Limit number of codes to return|No|
-| from_number |Integer|List all codes whose number (code_id) is not lower than from_number|No|
-| to_number   |Integer|List all codes whose number (code_id) is not greater than to_number|No|
-
-### Response Parameters
-
-| Parameter | Type           | Description                               |
-|-----------|----------------|-------------------------------------------|
-| paging    | Paging         | Pagination of results                     |
-| data      | WasmCode Array | List of WasmCodes, after applying filters |
-
-**Paging**
-
-|Parameter|Type|Description|
-|----|----|----|
-|total|Integer|Total number of records available|
+<br/>
 
 **WasmCode**
 
-| Parameter     | Type               | Description                                                    |
-|---------------|--------------------|----------------------------------------------------------------|
-| code_id       | Integer            | ID of stored wasm code, sorted in descending order             |
-| tx_hash       | String             | Tx hash of store code transaction                              |
-| checksum      | Checksum           | Checksum of the cosmwasm code                                  |
-| created_at    | Integer            | Block time when the code is stored, in millisecond             |
-| contract_type | String             | Contract type of the wasm code                                 |
-| version       | String             | Version of the wasm code                                       |
-| permission    | ContractPermission | Describes instantiation permissions                            |
-| code_schema   | String             | Code schema preview (to be supported)                          |
-| code_view     | String             | Code repo preview, may contain schema folder (to be supported) |
-| instantiates  | Integer            | Number of contract instantiations from this code               |
-| creator       | String             | Creator of this code                                           |
-| code_number   | Integer            | Monotonic order of the code stored                             |
-| proposal_id   | Integer            | ID of the proposal that store this code                        |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/WasmCode.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">code_id</td><td class="type-td td_text">uint64</td><td class="description-td td_text">ID of stored wasmcode, sorted in descending order</td></tr>
+<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">Tx hash of store code transaction</td></tr>
+<tr ><td class="parameter-td td_text">checksum</td><td class="type-td td_text">Checksum</td><td class="description-td td_text">Checksum of the cosmwasm code</td></tr>
+<tr ><td class="parameter-td td_text">created_at</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block time when the code is stored, in millisecond</td></tr>
+<tr ><td class="parameter-td td_text">contract_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Contract type of the wasm code</td></tr>
+<tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">string</td><td class="description-td td_text">version string of the wasm code</td></tr>
+<tr ><td class="parameter-td td_text">permission</td><td class="type-td td_text">ContractPermission</td><td class="description-td td_text">describe instantiate permission</td></tr>
+<tr ><td class="parameter-td td_text">code_schema</td><td class="type-td td_text">string</td><td class="description-td td_text">code schema preview</td></tr>
+<tr ><td class="parameter-td td_text">code_view</td><td class="type-td td_text">string</td><td class="description-td td_text">code repo preview, may contain schema folder</td></tr>
+<tr ><td class="parameter-td td_text">instantiates</td><td class="type-td td_text">uint64</td><td class="description-td td_text">count number of contract instantiation from this code</td></tr>
+<tr ><td class="parameter-td td_text">creator</td><td class="type-td td_text">string</td><td class="description-td td_text">creator of this code</td></tr>
+<tr ><td class="parameter-td td_text">code_number</td><td class="type-td td_text">int64</td><td class="description-td td_text">monotonic order of the code stored</td></tr>
+<tr ><td class="parameter-td td_text">proposal_id</td><td class="type-td td_text">int64</td><td class="description-td td_text">id of the proposal that store this code</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-**ContractPermission**
-
-|Parameter|Type|Description|
-|-----|----|-----------|
-|access_type|Integer|Access type of instantiation|
-|address|Integer|Account address|
+<br/>
 
 **Checksum**
 
-| Parameter | Type   | Description                   |
-|-----------|--------|-------------------------------|
-| algorithm | String | Hash function algorithm       |
-| hash      | String | Hash of the cosmwasm bytecode |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Checksum.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">algorithm</td><td class="type-td td_text">string</td><td class="description-td td_text">Algorithm of hash function</td></tr>
+<tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">string</td><td class="description-td td_text">Hash if apply algorithm to the cosmwasm bytecode</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**ContractPermission**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/ContractPermission.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">access_type</td><td class="type-td td_text">int32</td><td class="description-td td_text">Access type of instantiation</td></tr>
+<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">Account address</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**Paging**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Paging.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">int64</td><td class="description-td td_text">total number of txs saved in database</td></tr>
+<tr ><td class="parameter-td td_text">from</td><td class="type-td td_text">int32</td><td class="description-td td_text">can be either block height or index num</td></tr>
+<tr ><td class="parameter-td td_text">to</td><td class="type-td td_text">int32</td><td class="description-td td_text">can be either block height or index num</td></tr>
+<tr ><td class="parameter-td td_text">count_by_subaccount</td><td class="type-td td_text">int64</td><td class="description-td td_text">count entries by subaccount, serving some places on helix</td></tr>
+<tr ><td class="parameter-td td_text">next</td><td class="type-td td_text">string array</td><td class="description-td td_text">array of tokens to navigate to the next pages</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## GetWasmCodeByID
@@ -2484,6 +2633,7 @@ Get cosmwasm code by its code ID
 
 **IP rate limit group:** `indexer`
 
+### Request Parameters
 > Request Example:
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/16_GetWasmCodeById.py) -->
@@ -2556,6 +2706,12 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetWasmCodeByIDRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">code_id</td><td class="type-td td_text">int64</td><td class="description-td td_text">Code ID of the code</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### Response Parameters
+
 > Response Example:
 
 ```go
@@ -2573,43 +2729,40 @@ func main() {
 }
 ```
 
-### Request Parameters
 
-| Parameter | Type    | Description    | Required |
-|-----------|---------|----------------|----------|
-| code_id   | Integer | ID of the code | Yes      |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetWasmCodeByIDResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">code_id</td><td class="type-td td_text">uint64</td><td class="description-td td_text">ID of stored wasmcode, sorted in descending order</td></tr>
+<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">Tx hash of store code transaction</td></tr>
+<tr ><td class="parameter-td td_text">checksum</td><td class="type-td td_text">Checksum</td><td class="description-td td_text">Checksum of the cosmwasm code</td></tr>
+<tr ><td class="parameter-td td_text">created_at</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block time when the code is stored, in millisecond</td></tr>
+<tr ><td class="parameter-td td_text">contract_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Contract type of the wasm code</td></tr>
+<tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">string</td><td class="description-td td_text">version string of the wasm code</td></tr>
+<tr ><td class="parameter-td td_text">permission</td><td class="type-td td_text">ContractPermission</td><td class="description-td td_text">describe instantiate permission</td></tr>
+<tr ><td class="parameter-td td_text">code_schema</td><td class="type-td td_text">string</td><td class="description-td td_text">code schema preview</td></tr>
+<tr ><td class="parameter-td td_text">code_view</td><td class="type-td td_text">string</td><td class="description-td td_text">code repo preview, may contain schema folder</td></tr>
+<tr ><td class="parameter-td td_text">instantiates</td><td class="type-td td_text">uint64</td><td class="description-td td_text">count number of contract instantiation from this code</td></tr>
+<tr ><td class="parameter-td td_text">creator</td><td class="type-td td_text">string</td><td class="description-td td_text">creator of this code</td></tr>
+<tr ><td class="parameter-td td_text">code_number</td><td class="type-td td_text">int64</td><td class="description-td td_text">monotonic order of the code stored</td></tr>
+<tr ><td class="parameter-td td_text">proposal_id</td><td class="type-td td_text">int64</td><td class="description-td td_text">id of the proposal that store this code</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-### Response Parameters
-
-| Parameter     | Type               | Description                                                    |
-|---------------|--------------------|----------------------------------------------------------------|
-| code_id       | Integer            | ID of stored wasm code, sorted in descending order             |
-| tx_hash       | String             | Tx hash of store code transaction                              |
-| checksum      | Checksum           | Checksum of the cosmwasm code                                  |
-| created_at    | Integer            | Block time when the code is stored, in millisecond             |
-| contract_type | String             | Contract type of the wasm code                                 |
-| version       | String             | Version of the wasm code                                       |
-| permission    | ContractPermission | Describes instantiation permissions                            |
-| code_schema   | String             | Code schema preview (to be supported)                          |
-| code_view     | String             | Code repo preview, may contain schema folder (to be supported) |
-| instantiates  | Integer            | Number of contract instantiations from this code               |
-| creator       | String             | Creator of this code                                           |
-| code_number   | Integer            | Monotonic order of the code stored                             |
-| proposal_id   | Integer            | ID of the proposal that store this code                        |
-
-**ContractPermission**
-
-|Parameter|Type|Description|
-|-----|----|-----------|
-|access_type|Integer|Access type of instantiation|
-|address|Integer|Account address|
+<br/>
 
 **Checksum**
 
-| Parameter     | Type   | Description                   |
-|-----------|--------|-------------------------------|
-| algorithm | String | Hash function algorithm       |
-| hash      | String | Hash of the cosmwasm bytecode |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Checksum.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">algorithm</td><td class="type-td td_text">string</td><td class="description-td td_text">Algorithm of hash function</td></tr>
+<tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">string</td><td class="description-td td_text">Hash if apply algorithm to the cosmwasm bytecode</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**ContractPermission**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/ContractPermission.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">access_type</td><td class="type-td td_text">int32</td><td class="description-td td_text">Access type of instantiation</td></tr>
+<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">Account address</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## GetWasmContracts
@@ -2618,6 +2771,7 @@ Get cosmwasm instantiated contracts on injective-chain. Results are paginated.
 
 **IP rate limit group:** `indexer`
 
+### Request Parameters
 > Request Example:
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/17_GetWasmContracts.py) -->
@@ -2693,6 +2847,21 @@ func main() {
 }
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetWasmContractsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">int32</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">code_id</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">from_number</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">to_number</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">assets_only</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">skip</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">label</td><td class="type-td td_text">string</td><td class="description-td td_text">Label of the contract</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">token</td><td class="type-td td_text">string</td><td class="description-td td_text">Token name or symbol to filter by</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">lookup</td><td class="type-td td_text">string</td><td class="description-td td_text">Text to lookup by</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+### Response Parameters
 
 > Response Example:
 
@@ -2782,82 +2951,87 @@ func main() {
 }
 ```
 
-### Request Parameters
 
-| Parameter       | Type    | Description                                                                                            | Required |
-|-------------|---------|--------------------------------------------------------------------------------------------------------|----------|
-| limit       | Integer | Max number of items to be returned, defaults to 100                                                    | No       |
-| code_id     | Integer | Contract's code ID to be filtered                                                                      | No       |
-| from_number | Integer | List all contracts whose number is not lower than from_number                                          | No       |
-| to_number   | Integer | List all contracts whose number is not greater than to_number                                          | No       |
-| assets_only | Boolean | Filter only CW20 contracts                                                                             | No       |
-| skip        | Integer | Skip the first *n* cosmwasm contracts. This can be used to fetch all results since the API caps at 100 | No       |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetWasmContractsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">paging</td><td class="type-td td_text">Paging</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">WasmContract array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-### Response Parameters
-
-| Parameter  | Type               | Description                           |
-|--------|--------------------|---------------------------------------|
-| paging | Paging             | Pagination of results                 |
-| data   | WasmContract Array | List of WasmContracts after filtering |
-
-**Paging**
-
-|Parameter|Type|Description|
-|-----|----|-----------|
-|total|Integer|Total number of records available|
+<br/>
 
 **WasmContract**
 
-| Parameter                   | Type               | Description                                                    |
-|-------------------------|--------------------|----------------------------------------------------------------|
-| label                   | String             | General name of the contract                                   |
-| address                 | String             | Address of the contract                                        |
-| tx_hash                 | String             | Hash of the instantiate transaction                            |
-| creator                 | String             | Address of the contract creator                                |
-| executes                | Integer            | Number of times call to execute contract                       |
-| instantiated_at         | Integer            | Block timestamp that contract was instantiated, in UNIX millis |
-| init_message            | String             | Init message when this contract was instantiated               |
-| last_executed_at        | Integer            | Block timestamp that contract was last called, in UNIX millis  |
-| funds                   | ContractFund Array | List of contract funds                                         |
-| code_id                 | Integer            | Code ID of the contract                                        |
-| admin                   | String             | Admin of the contract                                          |
-| current_migrate_message | String             | Latest migrate message of the contract                         |
-| contract_number         | Integer            | Monotonic contract number in database                          |
-| version                 | String             | Contract version                                               |
-| type                    | String             | Contract type                                                  |
-| cw20_metadata           | Cw20Metadata       | Metadata of the CW20 contract                                  |
-| proposal_id             | Integer            | ID of the proposal that instantiates this contract             |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/WasmContract.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">label</td><td class="type-td td_text">string</td><td class="description-td td_text">General name of the contract</td></tr>
+<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of the contract</td></tr>
+<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">hash of the instantiate transaction</td></tr>
+<tr ><td class="parameter-td td_text">creator</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of the contract creator</td></tr>
+<tr ><td class="parameter-td td_text">executes</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Number of times call to execute contract</td></tr>
+<tr ><td class="parameter-td td_text">instantiated_at</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp that contract was instantiated, in millisecond</td></tr>
+<tr ><td class="parameter-td td_text">init_message</td><td class="type-td td_text">string</td><td class="description-td td_text">init message when this contract was instantiated</td></tr>
+<tr ><td class="parameter-td td_text">last_executed_at</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp that contract was called, in millisecond</td></tr>
+<tr ><td class="parameter-td td_text">funds</td><td class="type-td td_text">ContractFund array</td><td class="description-td td_text">Contract funds</td></tr>
+<tr ><td class="parameter-td td_text">code_id</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Code id of the contract</td></tr>
+<tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">string</td><td class="description-td td_text">Admin of the contract</td></tr>
+<tr ><td class="parameter-td td_text">current_migrate_message</td><td class="type-td td_text">string</td><td class="description-td td_text">Latest migrate message of the contract</td></tr>
+<tr ><td class="parameter-td td_text">contract_number</td><td class="type-td td_text">int64</td><td class="description-td td_text">Monotonic contract number in database</td></tr>
+<tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">string</td><td class="description-td td_text">Contract version string</td></tr>
+<tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">string</td><td class="description-td td_text">Contract type</td></tr>
+<tr ><td class="parameter-td td_text">cw20_metadata</td><td class="type-td td_text">Cw20Metadata</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">proposal_id</td><td class="type-td td_text">int64</td><td class="description-td td_text">id of the proposal that instantiate this contract</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **ContractFund**
 
-|Parameter|Type|Description|
-|-----|----|-----------|
-|denom|String|Denominator|
-|amount|String|Amount of denom|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/ContractFund.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Denominator</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">string</td><td class="description-td td_text">Amount of denom</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Cw20Metadata**
 
-|Parameter|Type|Description|
-|-----|----|-----------|
-|token_info|Cw20TokenInfo|CW20 token info structure|
-|marketing_info|Cw20MarketingInfo|Marketing info structure|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Cw20Metadata.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">token_info</td><td class="type-td td_text">Cw20TokenInfo</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">marketing_info</td><td class="type-td td_text">Cw20MarketingInfo</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Cw20TokenInfo**
 
-|Parameter|Type|Description|
-|-----|----|-----------|
-|name|String|General name of the token|
-|symbol|String|Symbol of the token|
-|decimals|Integer|Decimal places of token|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Cw20TokenInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">General name of the token</td></tr>
+<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Symbol of then token</td></tr>
+<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">int64</td><td class="description-td td_text">Decimal places of token</td></tr>
+<tr ><td class="parameter-td td_text">total_supply</td><td class="type-td td_text">string</td><td class="description-td td_text">Token's total supply</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Cw20MarketingInfo**
 
-|Parameter|Type|Description|
-|-----|----|-----------|
-|project|String|Project information|
-|description|String|Token&#39;s description|
-|logo|String|Logo (url/embedded)|
-|marketing|Bytes Array|Address that can update the contract's marketing info|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Cw20MarketingInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">project</td><td class="type-td td_text">string</td><td class="description-td td_text">Project information</td></tr>
+<tr ><td class="parameter-td td_text">description</td><td class="type-td td_text">string</td><td class="description-td td_text">Token's description</td></tr>
+<tr ><td class="parameter-td td_text">logo</td><td class="type-td td_text">string</td><td class="description-td td_text">logo (url/embedded)</td></tr>
+<tr ><td class="parameter-td td_text">marketing</td><td class="type-td td_text">byte array</td><td class="description-td td_text">A random field for additional marketing info</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**Paging**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Paging.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">total</td><td class="type-td td_text">int64</td><td class="description-td td_text">total number of txs saved in database</td></tr>
+<tr ><td class="parameter-td td_text">from</td><td class="type-td td_text">int32</td><td class="description-td td_text">can be either block height or index num</td></tr>
+<tr ><td class="parameter-td td_text">to</td><td class="type-td td_text">int32</td><td class="description-td td_text">can be either block height or index num</td></tr>
+<tr ><td class="parameter-td td_text">count_by_subaccount</td><td class="type-td td_text">int64</td><td class="description-td td_text">count entries by subaccount, serving some places on helix</td></tr>
+<tr ><td class="parameter-td td_text">next</td><td class="type-td td_text">string array</td><td class="description-td td_text">array of tokens to navigate to the next pages</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## GetWasmContractByAddress
@@ -2866,6 +3040,7 @@ Get cosmwasm contract by its address
 
 **IP rate limit group:** `indexer`
 
+### Request Parameters
 > Request Example:
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/18_GetWasmContractByAddress.py) -->
@@ -2935,6 +3110,13 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetWasmContractByAddressRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">contract_address</td><td class="type-td td_text">string</td><td class="description-td td_text">Contract address</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+### Response Parameters
+
 > Response Example:
 
 ```go
@@ -2953,64 +3135,66 @@ func main() {
 }
 ```
 
-### Request Parameters
 
-|Parameter|Type|Description|Required|
-|-----|----|-----------|--------|
-|contract_address|String|Contract address|Yes|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetWasmContractByAddressResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">label</td><td class="type-td td_text">string</td><td class="description-td td_text">General name of the contract</td></tr>
+<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of the contract</td></tr>
+<tr ><td class="parameter-td td_text">tx_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">hash of the instantiate transaction</td></tr>
+<tr ><td class="parameter-td td_text">creator</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of the contract creator</td></tr>
+<tr ><td class="parameter-td td_text">executes</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Number of times call to execute contract</td></tr>
+<tr ><td class="parameter-td td_text">instantiated_at</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp that contract was instantiated, in millisecond</td></tr>
+<tr ><td class="parameter-td td_text">init_message</td><td class="type-td td_text">string</td><td class="description-td td_text">init message when this contract was instantiated</td></tr>
+<tr ><td class="parameter-td td_text">last_executed_at</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp that contract was called, in millisecond</td></tr>
+<tr ><td class="parameter-td td_text">funds</td><td class="type-td td_text">ContractFund array</td><td class="description-td td_text">Contract funds</td></tr>
+<tr ><td class="parameter-td td_text">code_id</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Code id of the contract</td></tr>
+<tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">string</td><td class="description-td td_text">Admin of the contract</td></tr>
+<tr ><td class="parameter-td td_text">current_migrate_message</td><td class="type-td td_text">string</td><td class="description-td td_text">Latest migrate message of the contract</td></tr>
+<tr ><td class="parameter-td td_text">contract_number</td><td class="type-td td_text">int64</td><td class="description-td td_text">Monotonic contract number in database</td></tr>
+<tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">string</td><td class="description-td td_text">Contract version string</td></tr>
+<tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">string</td><td class="description-td td_text">Contract type</td></tr>
+<tr ><td class="parameter-td td_text">cw20_metadata</td><td class="type-td td_text">Cw20Metadata</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">proposal_id</td><td class="type-td td_text">int64</td><td class="description-td td_text">id of the proposal that instantiate this contract</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-### Response Parameters
-
-| Parameter                   | Type               | Description                                                    |
-|-------------------------|--------------------|----------------------------------------------------------------|
-| label                   | String             | General name of the contract                                   |
-| address                 | String             | Address of the contract                                        |
-| tx_hash                 | String             | Hash of the instantiate transaction                            |
-| creator                 | String             | Address of the contract creator                                |
-| executes                | Integer            | Number of times call to execute contract                       |
-| instantiated_at         | Integer            | Block timestamp that contract was instantiated, in UNIX millis |
-| init_message            | String             | Init message when this contract was instantiated               |
-| last_executed_at        | Integer            | Block timestamp that contract was last called, in UNIX millis  |
-| funds                   | ContractFund Array | List of contract funds                                         |
-| code_id                 | Integer            | Code ID of the contract                                        |
-| admin                   | String             | Admin of the contract                                          |
-| current_migrate_message | String             | Latest migrate message of the contract                         |
-| contract_number         | Integer            | Monotonic contract number in database                          |
-| version                 | String             | Contract version                                               |
-| type                    | String             | Contract type                                                  |
-| cw20_metadata           | Cw20Metadata       | Metadata of the CW20 contract                                  |
-| proposal_id             | Integer            | ID of the proposal that instantiates this contract             |
+<br/>
 
 **ContractFund**
 
-|Parameter|Type|Description|
-|-----|----|-----------|
-|denom|String|Denominator|
-|amount|String|Amount of denom|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/ContractFund.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Denominator</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">string</td><td class="description-td td_text">Amount of denom</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Cw20Metadata**
 
-|Parameter|Type|Description|
-|-----|----|-----------|
-|token_info|Cw20TokenInfo|CW20 token info structure|
-|marketing_info|Cw20MarketingInfo|Marketing info structure|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Cw20Metadata.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">token_info</td><td class="type-td td_text">Cw20TokenInfo</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">marketing_info</td><td class="type-td td_text">Cw20MarketingInfo</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Cw20TokenInfo**
 
-|Parameter|Type|Description|
-|-----|----|-----------|
-|name|String|General name of the token|
-|symbol|String|Symbol of the token|
-|decimals|Integer|Decimal places of token|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Cw20TokenInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">General name of the token</td></tr>
+<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Symbol of then token</td></tr>
+<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">int64</td><td class="description-td td_text">Decimal places of token</td></tr>
+<tr ><td class="parameter-td td_text">total_supply</td><td class="type-td td_text">string</td><td class="description-td td_text">Token's total supply</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Cw20MarketingInfo**
 
-|Parameter|Type|Description|
-|-----|----|-----------|
-|project|String|Project information|
-|description|String|Token&#39;s description|
-|logo|String|Logo (url/embedded)|
-|marketing|Bytes Array|Address that can update the contract's marketing info|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Cw20MarketingInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">project</td><td class="type-td td_text">string</td><td class="description-td td_text">Project information</td></tr>
+<tr ><td class="parameter-td td_text">description</td><td class="type-td td_text">string</td><td class="description-td td_text">Token's description</td></tr>
+<tr ><td class="parameter-td td_text">logo</td><td class="type-td td_text">string</td><td class="description-td td_text">logo (url/embedded)</td></tr>
+<tr ><td class="parameter-td td_text">marketing</td><td class="type-td td_text">byte array</td><td class="description-td td_text">A random field for additional marketing info</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## GetCw20Balance
@@ -3019,6 +3203,7 @@ Get CW20 balances of an injective account across all instantiated CW20 contracts
 
 **IP rate limit group:** `indexer`
 
+### Request Parameters
 > Request Example:
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/explorer_rpc/19_GetCw20Balance.py) -->
@@ -3088,6 +3273,14 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetCw20BalanceRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">address to list balance of</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">int32</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+### Response Parameters
+
 > Response Example:
 
 ```go
@@ -3114,52 +3307,53 @@ func main() {
 }
 ```
 
-### Request Parameters
 
-|Parameter|Type|Description|Required|
-|-----|----|-----------|--------|
-|address|String|Address to list balance of|Yes|
-|limit|Integer|Limit number of balances to return|No|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetCw20BalanceResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">field</td><td class="type-td td_text">WasmCw20Balance array</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
-### Response Parameters
-
-|Parameter|Type|Description|
-|-----|----|-----------|
-|Parameter|WasmCw20Balance Array|CW20 balance array|
+<br/>
 
 **WasmCw20Balance**
 
-| Parameter            | Type         | Description                     |
-|------------------|--------------|---------------------------------|
-| contract_address | String       | Address of CW20 contract        |
-| account          | String       | Account address                 |
-| balance          | String       | Account balance                 |
-| updated_at       | Integer      | Update timestamp in UNIX millis |
-| cw20_metadata    | Cw20Metadata | Metadata of the CW20 contract   |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/WasmCw20Balance.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">contract_address</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of CW20 contract</td></tr>
+<tr ><td class="parameter-td td_text">account</td><td class="type-td td_text">string</td><td class="description-td td_text">Account address</td></tr>
+<tr ><td class="parameter-td td_text">balance</td><td class="type-td td_text">string</td><td class="description-td td_text">Account balance</td></tr>
+<tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">update timestamp in milisecond</td></tr>
+<tr ><td class="parameter-td td_text">cw20_metadata</td><td class="type-td td_text">Cw20Metadata</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Cw20Metadata**
 
-|Parameter|Type|Description|
-|-----|----|-----------|
-|token_info|Cw20TokenInfo|CW20 token info|
-|marketing_info|Cw20MarketingInfo|Marketing info|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Cw20Metadata.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">token_info</td><td class="type-td td_text">Cw20TokenInfo</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">marketing_info</td><td class="type-td td_text">Cw20MarketingInfo</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Cw20TokenInfo**
 
-|Parameter|Type|Description|
-|-----|----|-----------|
-|name|String|General name of the token|
-|symbol|String|Symbol of the token|
-|decimals|Integer|Decimal places of token|
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Cw20TokenInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">General name of the token</td></tr>
+<tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Symbol of then token</td></tr>
+<tr ><td class="parameter-td td_text">decimals</td><td class="type-td td_text">int64</td><td class="description-td td_text">Decimal places of token</td></tr>
+<tr ><td class="parameter-td td_text">total_supply</td><td class="type-td td_text">string</td><td class="description-td td_text">Token's total supply</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
 
 **Cw20MarketingInfo**
 
-| Parameter       | Type        | Description                                           |
-|-------------|-------------|-------------------------------------------------------|
-| project     | String      | Project information                                   |
-| description | String      | Token&#39;s description                               |
-| logo        | String      | Logo (url/embedded)                                   |
-| marketing   | Bytes Array | Address that can update the contract's marketing info |
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Cw20MarketingInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">project</td><td class="type-td td_text">string</td><td class="description-td td_text">Project information</td></tr>
+<tr ><td class="parameter-td td_text">description</td><td class="type-td td_text">string</td><td class="description-td td_text">Token's description</td></tr>
+<tr ><td class="parameter-td td_text">logo</td><td class="type-td td_text">string</td><td class="description-td td_text">logo (url/embedded)</td></tr>
+<tr ><td class="parameter-td td_text">marketing</td><td class="type-td td_text">byte array</td><td class="description-td td_text">A random field for additional marketing info</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 ## GetContractTxs
@@ -3225,12 +3419,12 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/getContractTxsRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">String</td><td class="description-td td_text">The contract's Injective address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Max number of items to be returned, defaults to 100</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">skip</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Skip the first N results. This can be used to fetch all results since the API caps at 100</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">from_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">List all contracts whose number is not lower than from_number</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">to_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">List all contracts whose number is not greater than to_number</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetContractTxsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of contract</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">int32</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">skip</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">from_number</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">to_number</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -3564,86 +3758,86 @@ func main() {
 ```
 
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/getContractTxsResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">paging</td><td class="type-td td_text">Paging</td><td class="description-td td_text">Pagination details of the response's result set</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">TxDetailData</td><td class="description-td td_text">Transaction details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetContractTxsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">paging</td><td class="type-td td_text">Paging</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">TxDetailData array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Paging**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/getContractTxsResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">paging</td><td class="type-td td_text">Paging</td><td class="description-td td_text">Pagination details of the response's result set</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">TxDetailData</td><td class="description-td td_text">Transaction details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetContractTxsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">paging</td><td class="type-td td_text">Paging</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">TxDetailData array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TxDetailData**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/txDetailData.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction ID</td></tr>
-<tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of the block that included the transaction</td></tr>
-<tr ><td class="parameter-td td_text">block_timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Timestamp of the block that included the transaction</td></tr>
-<tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction hash</td></tr>
-<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Transaction result code</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Transaction data</td></tr>
-<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction information</td></tr>
-<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas sent by the user to process the transaction</td></tr>
-<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas used by the chain to process the transaction</td></tr>
-<tr ><td class="parameter-td td_text">gas_fee</td><td class="type-td td_text">GasFee</td><td class="description-td td_text">Fee paid for the gas consumption</td></tr>
-<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction codespace</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event Array</td><td class="description-td td_text">List of events associated with the transaction</td></tr>
-<tr ><td class="parameter-td td_text">tx_type</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction type</td></tr>
-<tr ><td class="parameter-td td_text">messages</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Transaction messages</td></tr>
-<tr ><td class="parameter-td td_text">signatures</td><td class="type-td td_text">Signature Array</td><td class="description-td td_text">Transaction signature</td></tr>
-<tr ><td class="parameter-td td_text">memo</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction memo</td></tr>
-<tr ><td class="parameter-td td_text">tx_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Transaction number</td></tr>
-<tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Timestamp of the block including the transaction, in Unix format in milliseconds</td></tr>
-<tr ><td class="parameter-td td_text">errorLog</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction error logs</td></tr>
-<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Transaction log</td></tr>
-<tr ><td class="parameter-td td_text">claim_ids</td><td class="type-td td_text">Integer Array</td><td class="description-td td_text">Peggy bridge claim id, non-zero if tx contains MsgDepositClaim</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/TxDetailData.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_timestamp</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_fee</td><td class="type-td td_text">GasFee</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_type</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">messages</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">signatures</td><td class="type-td td_text">Signature array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">memo</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp in unix milli</td></tr>
+<tr ><td class="parameter-td td_text">error_log</td><td class="type-td td_text">string</td><td class="description-td td_text">Transaction log indicating errors</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">byte array</td><td class="description-td td_text">transaction event logs</td></tr>
+<tr ><td class="parameter-td td_text">claim_ids</td><td class="type-td td_text">int64 array</td><td class="description-td td_text">peggy bridge claim id, non-zero if tx contains MsgDepositClaim</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **GasFee**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/gasFee.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">CosmosCoin</td><td class="description-td td_text">Fee amount</td></tr>
-<tr ><td class="parameter-td td_text">gas_limit</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Gas limit</td></tr>
-<tr ><td class="parameter-td td_text">payer</td><td class="type-td td_text">String</td><td class="description-td td_text">Payer's Injective address</td></tr>
-<tr ><td class="parameter-td td_text">granter</td><td class="type-td td_text">String</td><td class="description-td td_text">Granter's Injective address</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GasFee.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">CosmosCoin array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_limit</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">payer</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">granter</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Event**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/event.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">Map</td><td class="description-td td_text">Event details. Attributes are key-value pairs</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Event.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">map[string]string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Signature**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/signature.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pubkey</td><td class="type-td td_text">String</td><td class="description-td td_text">Public key</td></tr>
-<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">String</td><td class="description-td td_text">Injective address</td></tr>
-<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Sinature sequence number</td></tr>
-<tr ><td class="parameter-td td_text">signature</td><td class="type-td td_text">String</td><td class="description-td td_text">Signature</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Signature.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pubkey</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">signature</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **CosmosCoin**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/cosmosCoin.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">String</td><td class="description-td td_text">Token denom</td></tr>
-<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">String</td><td class="description-td td_text">Token amount</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/CosmosCoin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin denominator</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin amount (big int)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -3764,13 +3958,14 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/getContractTxsV2Request.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">String</td><td class="description-td td_text">The contract's Injective address</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Transaction height</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">from</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Unix timestamp (UTC) in milliseconds</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">to</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Unix timestamp (UTC) in milliseconds</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Max number of items to be returned, defaults to 100</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">token</td><td class="type-td td_text">String</td><td class="description-td td_text">Pagination token</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetContractTxsV2Request.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of contract</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Height of the block</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">from</td><td class="type-td td_text">int64</td><td class="description-td td_text">Unix timestamp (UTC) in milliseconds</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">to</td><td class="type-td td_text">int64</td><td class="description-td td_text">Unix timestamp (UTC) in milliseconds</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">per_page</td><td class="type-td td_text">int32</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">token</td><td class="type-td td_text">string</td><td class="description-td td_text">Pagination token</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">string</td><td class="description-td td_text">The status of the txs to be returned</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -4106,77 +4301,77 @@ func main() {
 ```
 
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/getContractTxsV2Response.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">next</td><td class="type-td td_text">String Array</td><td class="description-td td_text">Pagination details of the response's result set</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">TxDetailData</td><td class="description-td td_text">Transaction details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetContractTxsV2Response.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">paging</td><td class="type-td td_text">Cursor</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">TxDetailData array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **TxDetailData**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/txDetailData.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction ID</td></tr>
-<tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of the block that included the transaction</td></tr>
-<tr ><td class="parameter-td td_text">block_timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Timestamp of the block that included the transaction</td></tr>
-<tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction hash</td></tr>
-<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Transaction result code</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Transaction data</td></tr>
-<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction information</td></tr>
-<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas sent by the user to process the transaction</td></tr>
-<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Amount of gas used by the chain to process the transaction</td></tr>
-<tr ><td class="parameter-td td_text">gas_fee</td><td class="type-td td_text">GasFee</td><td class="description-td td_text">Fee paid for the gas consumption</td></tr>
-<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction codespace</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event Array</td><td class="description-td td_text">List of events associated with the transaction</td></tr>
-<tr ><td class="parameter-td td_text">tx_type</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction type</td></tr>
-<tr ><td class="parameter-td td_text">messages</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Transaction messages</td></tr>
-<tr ><td class="parameter-td td_text">signatures</td><td class="type-td td_text">Signature Array</td><td class="description-td td_text">Transaction signature</td></tr>
-<tr ><td class="parameter-td td_text">memo</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction memo</td></tr>
-<tr ><td class="parameter-td td_text">tx_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Transaction number</td></tr>
-<tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Timestamp of the block including the transaction, in Unix format in milliseconds</td></tr>
-<tr ><td class="parameter-td td_text">errorLog</td><td class="type-td td_text">String</td><td class="description-td td_text">Transaction error logs</td></tr>
-<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">Byte Array</td><td class="description-td td_text">Transaction log</td></tr>
-<tr ><td class="parameter-td td_text">claim_ids</td><td class="type-td td_text">Integer Array</td><td class="description-td td_text">Peggy bridge claim id, non-zero if tx contains MsgDepositClaim</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/TxDetailData.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_timestamp</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">hash</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_fee</td><td class="type-td td_text">GasFee</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_type</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">messages</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">signatures</td><td class="type-td td_text">Signature array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">memo</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tx_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp in unix milli</td></tr>
+<tr ><td class="parameter-td td_text">error_log</td><td class="type-td td_text">string</td><td class="description-td td_text">Transaction log indicating errors</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">byte array</td><td class="description-td td_text">transaction event logs</td></tr>
+<tr ><td class="parameter-td td_text">claim_ids</td><td class="type-td td_text">int64 array</td><td class="description-td td_text">peggy bridge claim id, non-zero if tx contains MsgDepositClaim</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **GasFee**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/gasFee.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">CosmosCoin</td><td class="description-td td_text">Fee amount</td></tr>
-<tr ><td class="parameter-td td_text">gas_limit</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Gas limit</td></tr>
-<tr ><td class="parameter-td td_text">payer</td><td class="type-td td_text">String</td><td class="description-td td_text">Payer's Injective address</td></tr>
-<tr ><td class="parameter-td td_text">granter</td><td class="type-td td_text">String</td><td class="description-td td_text">Granter's Injective address</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GasFee.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">CosmosCoin array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">gas_limit</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">payer</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">granter</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Event**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/event.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">String</td><td class="description-td td_text">Event type</td></tr>
-<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">Map</td><td class="description-td td_text">Event details. Attributes are key-value pairs</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Event.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">attributes</td><td class="type-td td_text">map[string]string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Signature**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/signature.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pubkey</td><td class="type-td td_text">String</td><td class="description-td td_text">Public key</td></tr>
-<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">String</td><td class="description-td td_text">Injective address</td></tr>
-<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Sinature sequence number</td></tr>
-<tr ><td class="parameter-td td_text">signature</td><td class="type-td td_text">String</td><td class="description-td td_text">Signature</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Signature.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pubkey</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">sequence</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">signature</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **CosmosCoin**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/cosmosCoin.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">String</td><td class="description-td td_text">Token denom</td></tr>
-<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">String</td><td class="description-td td_text">Token amount</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/CosmosCoin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin denominator</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">string</td><td class="description-td td_text">Coin amount (big int)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -4327,62 +4522,62 @@ No parameters
 ```
 
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/getValidatorsResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">s</td><td class="type-td td_text">String</td><td class="description-td td_text">Status of the response</td></tr>
-<tr ><td class="parameter-td td_text">errmsg</td><td class="type-td td_text">String</td><td class="description-td td_text">Error message</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">Validator</td><td class="description-td td_text">Validator details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetValidatorsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">s</td><td class="type-td td_text">string</td><td class="description-td td_text">Status of the response.</td></tr>
+<tr ><td class="parameter-td td_text">errmsg</td><td class="type-td td_text">string</td><td class="description-td td_text">Error message.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">Validator array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Validator**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/validator.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">String</td><td class="description-td td_text">Validator ID</td></tr>
-<tr ><td class="parameter-td td_text">moniker</td><td class="type-td td_text">String</td><td class="description-td td_text">Validator's moniker</td></tr>
-<tr ><td class="parameter-td td_text">operator_address</td><td class="type-td td_text">String</td><td class="description-td td_text">Injective address</td></tr>
-<tr ><td class="parameter-td td_text">consensus_address</td><td class="type-td td_text">String</td><td class="description-td td_text">Consensus Injective address</td></tr>
-<tr ><td class="parameter-td td_text">jailed</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">Validator's jain status</td></tr>
-<tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Validator's status</td></tr>
-<tr ><td class="parameter-td td_text">tokens</td><td class="type-td td_text">String</td><td class="description-td td_text">Amount of tokens</td></tr>
-<tr ><td class="parameter-td td_text">delegator_shares</td><td class="type-td td_text">String</td><td class="description-td td_text">Amount of shares</td></tr>
-<tr ><td class="parameter-td td_text">description</td><td class="type-td td_text">ValidatorDescription</td><td class="description-td td_text">Validator's description</td></tr>
-<tr ><td class="parameter-td td_text">unbonding_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Unbonding height</td></tr>
-<tr ><td class="parameter-td td_text">unbonding_time</td><td class="type-td td_text">String</td><td class="description-td td_text">Unbonding timestamp</td></tr>
-<tr ><td class="parameter-td td_text">commission_rate</td><td class="type-td td_text">String</td><td class="description-td td_text">The commission rate</td></tr>
-<tr ><td class="parameter-td td_text">commission_max_rate</td><td class="type-td td_text">String</td><td class="description-td td_text">The max commission rate</td></tr>
-<tr ><td class="parameter-td td_text">commission_max_change_rate</td><td class="type-td td_text">String</td><td class="description-td td_text">Max change rate</td></tr>
-<tr ><td class="parameter-td td_text">commission_update_time</td><td class="type-td td_text">String</td><td class="description-td td_text">Commission update timestamp</td></tr>
-<tr ><td class="parameter-td td_text">proposed</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of proposed blocks</td></tr>
-<tr ><td class="parameter-td td_text">signed</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of blocks signed</td></tr>
-<tr ><td class="parameter-td td_text">missed</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of missed blocks</td></tr>
-<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Timestamp</td></tr>
-<tr ><td class="parameter-td td_text">uptimes</td><td class="type-td td_text">ValidatorUptime</td><td class="description-td td_text">Validator uptime</td></tr>
-<tr ><td class="parameter-td td_text">slashing_events</td><td class="type-td td_text">SlashingEvent</td><td class="description-td td_text">Slashing event details</td></tr>
-<tr ><td class="parameter-td td_text">uptime_percentage</td><td class="type-td td_text">Float</td><td class="description-td td_text">Uptime percentage base on latest 10k block</td></tr>
-<tr ><td class="parameter-td td_text">image_url</td><td class="type-td td_text">String</td><td class="description-td td_text">URL of the validator's logo</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Validator.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">moniker</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">operator_address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">consensus_address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">jailed</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">int32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tokens</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">delegator_shares</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">description</td><td class="type-td td_text">ValidatorDescription</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">unbonding_height</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">unbonding_time</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">commission_rate</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">commission_max_rate</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">commission_max_change_rate</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">commission_update_time</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">proposed</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">signed</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">missed</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">uptimes</td><td class="type-td td_text">ValidatorUptime array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">slashing_events</td><td class="type-td td_text">SlashingEvent array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">uptime_percentage</td><td class="type-td td_text">float64</td><td class="description-td td_text">uptime percentage base on latest 10k block</td></tr>
+<tr ><td class="parameter-td td_text">image_url</td><td class="type-td td_text">string</td><td class="description-td td_text">URL of the validator logo</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ValidatorDescription**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/validatorDescription.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">moniker</td><td class="type-td td_text">String</td><td class="description-td td_text">Validator's moniker</td></tr>
-<tr ><td class="parameter-td td_text">identity</td><td class="type-td td_text">String</td><td class="description-td td_text">Validator's ID</td></tr>
-<tr ><td class="parameter-td td_text">website</td><td class="type-td td_text">String</td><td class="description-td td_text">Validator's website URL</td></tr>
-<tr ><td class="parameter-td td_text">security_contact</td><td class="type-td td_text">String</td><td class="description-td td_text">Contact data</td></tr>
-<tr ><td class="parameter-td td_text">details</td><td class="type-td td_text">String</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">image_url</td><td class="type-td td_text">String</td><td class="description-td td_text">URL of the validator's logo</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/ValidatorDescription.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">moniker</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">identity</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">website</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">security_contact</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">details</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">image_url</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ValidatorUptime**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/validatorUptime.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">blockNumber</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Block number</td></tr>
-<tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">String</td><td class="description-td td_text">Status</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/ValidatorUptime.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -4472,8 +4667,8 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/getValidatorRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">String</td><td class="description-td td_text">Validator Injective address</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetValidatorRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -4508,62 +4703,62 @@ func main() {
 ```
 
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/getValidatorResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">s</td><td class="type-td td_text">String</td><td class="description-td td_text">Status of the response</td></tr>
-<tr ><td class="parameter-td td_text">errmsg</td><td class="type-td td_text">String</td><td class="description-td td_text">Error message</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">Validator</td><td class="description-td td_text">Validator details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetValidatorResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">s</td><td class="type-td td_text">string</td><td class="description-td td_text">Status of the response.</td></tr>
+<tr ><td class="parameter-td td_text">errmsg</td><td class="type-td td_text">string</td><td class="description-td td_text">Error message.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">Validator</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Validator**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/validator.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">String</td><td class="description-td td_text">Validator ID</td></tr>
-<tr ><td class="parameter-td td_text">moniker</td><td class="type-td td_text">String</td><td class="description-td td_text">Validator's moniker</td></tr>
-<tr ><td class="parameter-td td_text">operator_address</td><td class="type-td td_text">String</td><td class="description-td td_text">Injective address</td></tr>
-<tr ><td class="parameter-td td_text">consensus_address</td><td class="type-td td_text">String</td><td class="description-td td_text">Consensus Injective address</td></tr>
-<tr ><td class="parameter-td td_text">jailed</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">Validator's jain status</td></tr>
-<tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Validator's status</td></tr>
-<tr ><td class="parameter-td td_text">tokens</td><td class="type-td td_text">String</td><td class="description-td td_text">Amount of tokens</td></tr>
-<tr ><td class="parameter-td td_text">delegator_shares</td><td class="type-td td_text">String</td><td class="description-td td_text">Amount of shares</td></tr>
-<tr ><td class="parameter-td td_text">description</td><td class="type-td td_text">ValidatorDescription</td><td class="description-td td_text">Validator's description</td></tr>
-<tr ><td class="parameter-td td_text">unbonding_height</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Unbonding height</td></tr>
-<tr ><td class="parameter-td td_text">unbonding_time</td><td class="type-td td_text">String</td><td class="description-td td_text">Unbonding timestamp</td></tr>
-<tr ><td class="parameter-td td_text">commission_rate</td><td class="type-td td_text">String</td><td class="description-td td_text">The commission rate</td></tr>
-<tr ><td class="parameter-td td_text">commission_max_rate</td><td class="type-td td_text">String</td><td class="description-td td_text">The max commission rate</td></tr>
-<tr ><td class="parameter-td td_text">commission_max_change_rate</td><td class="type-td td_text">String</td><td class="description-td td_text">Max change rate</td></tr>
-<tr ><td class="parameter-td td_text">commission_update_time</td><td class="type-td td_text">String</td><td class="description-td td_text">Commission update timestamp</td></tr>
-<tr ><td class="parameter-td td_text">proposed</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of proposed blocks</td></tr>
-<tr ><td class="parameter-td td_text">signed</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of blocks signed</td></tr>
-<tr ><td class="parameter-td td_text">missed</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of missed blocks</td></tr>
-<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Timestamp</td></tr>
-<tr ><td class="parameter-td td_text">uptimes</td><td class="type-td td_text">ValidatorUptime</td><td class="description-td td_text">Validator uptime</td></tr>
-<tr ><td class="parameter-td td_text">slashing_events</td><td class="type-td td_text">SlashingEvent</td><td class="description-td td_text">Slashing event details</td></tr>
-<tr ><td class="parameter-td td_text">uptime_percentage</td><td class="type-td td_text">Float</td><td class="description-td td_text">Uptime percentage base on latest 10k block</td></tr>
-<tr ><td class="parameter-td td_text">image_url</td><td class="type-td td_text">String</td><td class="description-td td_text">URL of the validator's logo</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Validator.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">moniker</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">operator_address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">consensus_address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">jailed</td><td class="type-td td_text">bool</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">int32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">tokens</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">delegator_shares</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">description</td><td class="type-td td_text">ValidatorDescription</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">unbonding_height</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">unbonding_time</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">commission_rate</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">commission_max_rate</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">commission_max_change_rate</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">commission_update_time</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">proposed</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">signed</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">missed</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">uptimes</td><td class="type-td td_text">ValidatorUptime array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">slashing_events</td><td class="type-td td_text">SlashingEvent array</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">uptime_percentage</td><td class="type-td td_text">float64</td><td class="description-td td_text">uptime percentage base on latest 10k block</td></tr>
+<tr ><td class="parameter-td td_text">image_url</td><td class="type-td td_text">string</td><td class="description-td td_text">URL of the validator logo</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ValidatorDescription**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/validatorDescription.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">moniker</td><td class="type-td td_text">String</td><td class="description-td td_text">Validator's moniker</td></tr>
-<tr ><td class="parameter-td td_text">identity</td><td class="type-td td_text">String</td><td class="description-td td_text">Validator's ID</td></tr>
-<tr ><td class="parameter-td td_text">website</td><td class="type-td td_text">String</td><td class="description-td td_text">Validator's website URL</td></tr>
-<tr ><td class="parameter-td td_text">security_contact</td><td class="type-td td_text">String</td><td class="description-td td_text">Contact data</td></tr>
-<tr ><td class="parameter-td td_text">details</td><td class="type-td td_text">String</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">image_url</td><td class="type-td td_text">String</td><td class="description-td td_text">URL of the validator's logo</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/ValidatorDescription.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">moniker</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">identity</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">website</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">security_contact</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">details</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">image_url</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ValidatorUptime**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/validatorUptime.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">blockNumber</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Block number</td></tr>
-<tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">String</td><td class="description-td td_text">Status</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/ValidatorUptime.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -4653,8 +4848,8 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/getValidatorUptimeRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">String</td><td class="description-td td_text">Validator Injective address</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetValidatorUptimeRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -5070,19 +5265,19 @@ func main() {
 ```
 
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/getValidatorUptimeResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">s</td><td class="type-td td_text">String</td><td class="description-td td_text">Status of the response</td></tr>
-<tr ><td class="parameter-td td_text">errmsg</td><td class="type-td td_text">String</td><td class="description-td td_text">Error message</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">ValidatorUptime Array</td><td class="description-td td_text">Validator uptime details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetValidatorUptimeResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">s</td><td class="type-td td_text">string</td><td class="description-td td_text">Status of the response.</td></tr>
+<tr ><td class="parameter-td td_text">errmsg</td><td class="type-td td_text">string</td><td class="description-td td_text">Error message.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">ValidatorUptime array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **ValidatorUptime**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/validatorUptime.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">blockNumber</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Block number</td></tr>
-<tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">String</td><td class="description-td td_text">Status</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/ValidatorUptime.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -5170,8 +5365,8 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/relayersRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of Market IDs to query the relayers</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/RelayersRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_i_ds</td><td class="type-td td_text">string array</td><td class="description-td td_text">Specify multiple marketIDs to search.</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -5183,26 +5378,26 @@ func main() {
 ```
 
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/relayersResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">field</td><td class="type-td td_text">RelayerMarkets Array</td><td class="description-td td_text">Relayers information</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/RelayersResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">field</td><td class="type-td td_text">RelayerMarkets array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **RelayerMarkets**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/relayerMarkets.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">String</td><td class="description-td td_text">Market identifier</td></tr>
-<tr ><td class="parameter-td td_text">relayers</td><td class="type-td td_text">Relayer Array</td><td class="description-td td_text">Market relayers list</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/RelayerMarkets.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">Market ID of the market</td></tr>
+<tr ><td class="parameter-td td_text">relayers</td><td class="type-td td_text">Relayer array</td><td class="description-td td_text">Relayers list for specified market</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Relayer**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/relayer.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">String</td><td class="description-td td_text">Relayer's identifier</td></tr>
-<tr ><td class="parameter-td td_text">cta</td><td class="type-td td_text">String</td><td class="description-td td_text">Call to action. A link to the relayer</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Relayer.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">name</td><td class="type-td td_text">string</td><td class="description-td td_text">Relayer identifier</td></tr>
+<tr ><td class="parameter-td td_text">cta</td><td class="type-td td_text">string</td><td class="description-td td_text">Call to action. A link to the relayer</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -5291,17 +5486,17 @@ func main() {
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/getBankTransfersRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">senders</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of senders' Injective address</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">recipients</td><td class="type-td td_text">String Array</td><td class="description-td td_text">List of recipients' Injective address</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">is_community_pool_related</td><td class="type-td td_text">Boolean</td><td class="description-td td_text">Returns transfers with the community pool address as either sender or recipient</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Max number of items to be returned, defaults to 100</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">skip</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Skip the first N results. This can be used to fetch all results since the API caps at 100</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">start_time</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The starting timestamp in UNIX milliseconds that the transfers must be equal or older than</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">end_time</td><td class="type-td td_text">Integer</td><td class="description-td td_text">The ending timestamp in UNIX milliseconds that the transfers must be equal or younger than</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">String Array</td><td class="description-td td_text">Transfers where either the sender or the recipient is one of the addresses</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">per_page</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of results to include per page</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">token</td><td class="type-td td_text">String</td><td class="description-td td_text">Token specifying the next page of results to get</td><td class="required-td td_text">No</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetBankTransfersRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">senders</td><td class="type-td td_text">string array</td><td class="description-td td_text">Transfer sender address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">recipients</td><td class="type-td td_text">string array</td><td class="description-td td_text">Transfer recipient address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">is_community_pool_related</td><td class="type-td td_text">bool</td><td class="description-td td_text">Returns transfers with the community pool address as either sender or recipient</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">limit</td><td class="type-td td_text">int32</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">skip</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">start_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">The starting timestamp in UNIX milliseconds that the transfers must be equal or older than</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">end_time</td><td class="type-td td_text">int64</td><td class="description-td td_text">The ending timestamp in UNIX milliseconds that the transfers must be equal or younger than</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string array</td><td class="description-td td_text">Transfers where either the sender or the recipient is one of the addresses</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">per_page</td><td class="type-td td_text">int32</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">token</td><td class="type-td td_text">string</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -5313,28 +5508,29 @@ func main() {
 ```
 
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/getBankTransfersResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">paging</td><td class="type-td td_text">Paging</td><td class="description-td td_text">Pagination details of the response's result set</td></tr>
-<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">BankTransfer Array</td><td class="description-td td_text">List of bank transfers details</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/GetBankTransfersResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">paging</td><td class="type-td td_text">Paging</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">BankTransfer array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **BankTransfer**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/bankTransfer.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">String</td><td class="description-td td_text">Transfer sender Injective address</td></tr>
-<tr ><td class="parameter-td td_text">recipient</td><td class="type-td td_text">String</td><td class="description-td td_text">Transfer recipient Injective address</td></tr>
-<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">Coin Array</td><td class="description-td td_text">Transfer amounts</td></tr>
-<tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">Integer</td><td class="description-td td_text">Number of the block the transfer was included in</td></tr>
-<tr ><td class="parameter-td td_text">block_timestamp</td><td class="type-td td_text">String</td><td class="description-td td_text">Timestamp of the block the transfer was included in</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/BankTransfer.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">recipient</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">amounts</td><td class="type-td td_text">Coin array</td><td class="description-td td_text">Amounts transferred</td></tr>
+<tr ><td class="parameter-td td_text">block_number</td><td class="type-td td_text">uint64</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block_timestamp</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
 
 **Coin**
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/explorer/coin.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">String</td><td class="description-td td_text">Token denomination</td></tr>
-<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">String</td><td class="description-td td_text">Token amount</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_explorer_rpc/Coin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Denom of the coin</td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">usd_value</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->

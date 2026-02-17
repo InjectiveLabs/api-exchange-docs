@@ -1,5 +1,11 @@
 # Change Log
 
+## 2026-02-19
+- Updated all messages to reflect the changes included in the chain version v1.18.0, and the Indexer for that chain version
+- Added documentation for the new websocket for exchange module events available on the chain nodes
+- Python SDK v1.13.0
+- Go SDK v1.60.0
+
 ## 2025-11-10
 - Updated all messages to reflect the changes included in the chain version 1.17.0, and the Indexer for that chain version
 - Python SDK v1.12.0

@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "message_type",
+    "Type": "string",
+    "Description": "Type: 'request', 'quote_ack', 'error', 'pong'"
+  },
+  {
+    "Parameter": "request",
+    "Type": "RFQRequestType",
+    "Description": "RFQ request from taker"
+  },
+  {
+    "Parameter": "quote_ack",
+    "Type": "StreamAck",
+    "Description": "Acknowledgment for quote submission"
+  },
+  {
+    "Parameter": "error",
+    "Type": "StreamError",
+    "Description": "Error message"
+  }
+]

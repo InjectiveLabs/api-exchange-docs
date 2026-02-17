@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "EVM address of the contract"
+  },
+  {
+    "Parameter": "pause_event_signature",
+    "Type": "string",
+    "Description": "Pause event signature for the contract (e.g. \"Pause()\", or \"Pause(address)\"). If left empty, it will default to \"Pause()\"."
+  }
+]

@@ -553,5 +553,15 @@
     "module_name": "exchange",
     "error_code": 111,
     "description": "invalid open notional cap"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 112,
+    "description": "open notional cap breached"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 113,
+    "description": "no valid offsetting positions found"
   }
 ]

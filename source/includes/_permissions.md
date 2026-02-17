@@ -573,12 +573,13 @@ No parameters
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Namespace.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The tokenfactory denom to which this namespace applies to</td></tr>
-<tr ><td class="parameter-td td_text">contract_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of smart contract to apply code-based restrictions</td></tr>
+<tr ><td class="parameter-td td_text">wasm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of cosmwasm contract to apply code-based restrictions</td></tr>
 <tr ><td class="parameter-td td_text">role_permissions</td><td class="type-td td_text">Role array</td><td class="description-td td_text">permissions for each role</td></tr>
 <tr ><td class="parameter-td td_text">actor_roles</td><td class="type-td td_text">ActorRoles array</td><td class="description-td td_text">roles for each actor</td></tr>
 <tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">managers for each role</td></tr>
 <tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">status for each policy</td></tr>
-<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr>
+<tr ><td class="parameter-td td_text">evm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to map code-based permissions</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1095,12 +1096,13 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Namespace.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The tokenfactory denom to which this namespace applies to</td></tr>
-<tr ><td class="parameter-td td_text">contract_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of smart contract to apply code-based restrictions</td></tr>
+<tr ><td class="parameter-td td_text">wasm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of cosmwasm contract to apply code-based restrictions</td></tr>
 <tr ><td class="parameter-td td_text">role_permissions</td><td class="type-td td_text">Role array</td><td class="description-td td_text">permissions for each role</td></tr>
 <tr ><td class="parameter-td td_text">actor_roles</td><td class="type-td td_text">ActorRoles array</td><td class="description-td td_text">roles for each actor</td></tr>
 <tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">managers for each role</td></tr>
 <tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">status for each policy</td></tr>
-<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr>
+<tr ><td class="parameter-td td_text">evm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to map code-based permissions</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2849,7 +2851,8 @@ No parameters
 **Params**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Params.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">wasm_hook_query_max_gas</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Max amount of gas allowed for wasm hook queries</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">contract_hook_max_gas</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Max amount of gas allowed for contract hook queries</td></tr>
+<tr ><td class="parameter-td td_text">enforced_restrictions_contracts</td><td class="type-td td_text">string array</td><td class="description-td td_text">EVM addresses of contracts that will not bypass module-to-module transfers</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2858,12 +2861,13 @@ No parameters
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Namespace.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The tokenfactory denom to which this namespace applies to</td></tr>
-<tr ><td class="parameter-td td_text">contract_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of smart contract to apply code-based restrictions</td></tr>
+<tr ><td class="parameter-td td_text">wasm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of cosmwasm contract to apply code-based restrictions</td></tr>
 <tr ><td class="parameter-td td_text">role_permissions</td><td class="type-td td_text">Role array</td><td class="description-td td_text">permissions for each role</td></tr>
 <tr ><td class="parameter-td td_text">actor_roles</td><td class="type-td td_text">ActorRoles array</td><td class="description-td td_text">roles for each actor</td></tr>
 <tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">managers for each role</td></tr>
 <tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">status for each policy</td></tr>
-<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr>
+<tr ><td class="parameter-td td_text">evm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to map code-based permissions</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3058,12 +3062,13 @@ async def main() -> None:
     message = composer.msg_create_namespace(
         sender=address.to_acc_bech32(),
         denom=denom,
-        contract_hook="",
+        wasm_hook="",
         role_permissions=[role1, role2, role3],
         actor_roles=[actor_role1, actor_role2],
         role_managers=[role_manager],
         policy_statuses=[policy_status1, policy_status2],
         policy_manager_capabilities=[policy_manager_capability],
+        evm_hook="",
     )
 
     # broadcast the transaction
@@ -3206,12 +3211,13 @@ func main() {
 
 	namespace := permissionstypes.Namespace{
 		Denom:                     denom,
-		ContractHook:              "",
+		WasmHook:                  "",
 		RolePermissions:           []*permissionstypes.Role{&role1, &role2, &role3},
 		ActorRoles:                []*permissionstypes.ActorRoles{&actor_role1, &actor_role2},
 		RoleManagers:              []*permissionstypes.RoleManager{&role_manager},
 		PolicyStatuses:            []*permissionstypes.PolicyStatus{&policy_status1, &policy_status2},
 		PolicyManagerCapabilities: []*permissionstypes.PolicyManagerCapability{&policy_manager_capability},
+		EvmHook:                   "",
 	}
 
 	msg := &permissionstypes.MsgCreateNamespace{
@@ -3249,12 +3255,13 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Namespace.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">The tokenfactory denom to which this namespace applies to</td></tr>
-<tr ><td class="parameter-td td_text">contract_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of smart contract to apply code-based restrictions</td></tr>
+<tr ><td class="parameter-td td_text">wasm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of cosmwasm contract to apply code-based restrictions</td></tr>
 <tr ><td class="parameter-td td_text">role_permissions</td><td class="type-td td_text">Role array</td><td class="description-td td_text">permissions for each role</td></tr>
 <tr ><td class="parameter-td td_text">actor_roles</td><td class="type-td td_text">ActorRoles array</td><td class="description-td td_text">roles for each actor</td></tr>
 <tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">managers for each role</td></tr>
 <tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">status for each policy</td></tr>
-<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr>
+<tr ><td class="parameter-td td_text">evm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to map code-based permissions</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3454,11 +3461,12 @@ async def main() -> None:
     message = composer.msg_update_namespace(
         sender=address.to_acc_bech32(),
         denom=denom,
-        contract_hook="inj19ld6swyldyujcn72j7ugnu9twafhs9wxlyye5m",
+        wasm_hook="inj19ld6swyldyujcn72j7ugnu9twafhs9wxlyye5m",
         role_permissions=[role1, role2],
         role_managers=[role_manager],
         policy_statuses=[policy_status1, policy_status2],
         policy_manager_capabilities=[policy_manager_capability],
+        evm_hook="",
     )
 
     # broadcast the transaction
@@ -3585,7 +3593,7 @@ func main() {
 	msg := &permissionstypes.MsgUpdateNamespace{
 		Sender:                    senderAddress.String(),
 		Denom:                     denom,
-		ContractHook:              &permissionstypes.MsgUpdateNamespace_SetContractHook{NewValue: "inj19ld6swyldyujcn72j7ugnu9twafhs9wxlyye5m"},
+		WasmHook:                  &permissionstypes.MsgUpdateNamespace_SetContractHook{NewValue: "inj19ld6swyldyujcn72j7ugnu9twafhs9wxlyye5m"},
 		RolePermissions:           []*permissionstypes.Role{&role1, &role2},
 		RoleManagers:              []*permissionstypes.RoleManager{&role_manager},
 		PolicyStatuses:            []*permissionstypes.PolicyStatus{&policy_status1, &policy_status2},
@@ -3614,11 +3622,12 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/MsgUpdateNamespace.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">The sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">denom whose namespace updates are to be applied</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">contract_hook</td><td class="type-td td_text">MsgUpdateNamespace_SetContractHook</td><td class="description-td td_text">address of smart contract to apply code-based restrictions</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">wasm_hook</td><td class="type-td td_text">MsgUpdateNamespace_SetContractHook</td><td class="description-td td_text">address of wasm smart contract to apply code-based restrictions</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">role_permissions</td><td class="type-td td_text">Role array</td><td class="description-td td_text">role permissions to update</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">role managers to update</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">policy statuses to update</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">policy manager capabilities to update</td><td class="required-td td_text">No</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">policy manager capabilities to update</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">evm_hook</td><td class="type-td td_text">MsgUpdateNamespace_SetContractHook</td><td class="description-td td_text">address of EVM smart contract to apply code-based restrictions</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>

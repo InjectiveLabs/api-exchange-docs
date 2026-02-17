@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "feed_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "report_price",
+    "Type": "cosmossdk_io_math.Int",
+    "Description": ""
+  },
+  {
+    "Parameter": "valid_from_timestamp",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "observations_timestamp",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "price_state",
+    "Type": "PriceState",
+    "Description": ""
+  }
+]

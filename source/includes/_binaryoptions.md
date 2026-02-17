@@ -194,7 +194,9 @@ func main() {
 <tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market (in human readable format)</td></tr>
 <tr ><td class="parameter-td td_text">admin_permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_text">level of admin permissions</td></tr>
 <tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">quote token decimals</td></tr>
-<tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the maximum open notional for the market</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the maximum open notional for the market</td></tr>
+<tr ><td class="parameter-td td_text">has_disabled_minimal_protocol_fee</td><td class="type-td td_text">bool</td><td class="description-td td_text">has_disabled_minimal_protocol_fee indicates whether the minimal protocol fee is disabled for the market</td></tr>
+<tr ><td class="parameter-td td_text">force_paused_info</td><td class="type-td td_text">ForcePausedInfo</td><td class="description-td td_text">force_paused_info defines additional info for force paused markets, only set when status == ForcePaused</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -214,7 +216,8 @@ func main() {
 <tr ><td class="code-td td_num">9</td><td class="name-td td_text">Pyth</td></tr>
 <tr ><td class="code-td td_num">10</td><td class="name-td td_text">BandIBC</td></tr>
 <tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr>
-<tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr></tbody></table>
+<tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr>
+<tr ><td class="code-td td_num">13</td><td class="name-td td_text">ChainlinkDataStreams</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -252,6 +255,23 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCapCapped.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**ForcePausedInfo**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/ForcePausedInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">reason</td><td class="type-td td_text">ForcePausedReason</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">mark_price_at_pausing</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**ForcePausedReason**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/ForcePausedReason.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">QuoteDenomPaused</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -409,7 +429,8 @@ func main() {
 <tr ><td class="code-td td_num">9</td><td class="name-td td_text">Pyth</td></tr>
 <tr ><td class="code-td td_num">10</td><td class="name-td td_text">BandIBC</td></tr>
 <tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr>
-<tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr></tbody></table>
+<tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr>
+<tr ><td class="code-td td_num">13</td><td class="name-td td_text">ChainlinkDataStreams</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -728,10 +749,8 @@ async def main() -> None:
         subaccount_id=subaccount_id,
         fee_recipient=fee_recipient,
         price=Decimal("0.5"),
-        quantity=Decimal(1),
-        margin=composer.calculate_margin(
-            quantity=Decimal(1), price=Decimal("0.5"), leverage=Decimal(1), is_reduce_only=False
-        ),
+        quantity=Decimal("1"),
+        margin=Decimal("0.5"),
         cid=str(uuid.uuid4()),
     )
 
@@ -1062,7 +1081,7 @@ async def main() -> None:
     # prepare trade info
     market_id = "0xfafec40a7b93331c1fc89c23f66d11fbb48f38dfdd78f7f4fc4031fad90f6896"
     status = "Demolished"
-    settlement_price = Decimal(1)
+    settlement_price = Decimal("1")
     expiration_timestamp = 1685460582
     settlement_timestamp = 1690730982
 
@@ -1110,7 +1129,8 @@ if __name__ == "__main__":
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">Active</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">Paused</td></tr>
 <tr ><td class="code-td td_num">3</td><td class="name-td td_text">Demolished</td></tr>
-<tr ><td class="code-td td_num">4</td><td class="name-td td_text">Expired</td></tr></tbody></table>
+<tr ><td class="code-td td_num">4</td><td class="name-td td_text">Expired</td></tr>
+<tr ><td class="code-td td_num">5</td><td class="name-td td_text">ForcePaused</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1265,11 +1285,9 @@ async def main() -> None:
             market_id=derivative_market_id_create,
             subaccount_id=subaccount_id,
             fee_recipient=fee_recipient,
-            price=Decimal(25000),
-            quantity=Decimal(0.1),
-            margin=composer.calculate_margin(
-                quantity=Decimal(0.1), price=Decimal(25000), leverage=Decimal(1), is_reduce_only=False
-            ),
+            price=Decimal("25000"),
+            quantity=Decimal("0.1"),
+            margin=Decimal("2500"),
             order_type="BUY",
             cid=str(uuid.uuid4()),
         ),
@@ -1277,11 +1295,9 @@ async def main() -> None:
             market_id=derivative_market_id_create,
             subaccount_id=subaccount_id,
             fee_recipient=fee_recipient,
-            price=Decimal(50000),
-            quantity=Decimal(0.01),
-            margin=composer.calculate_margin(
-                quantity=Decimal(0.01), price=Decimal(50000), leverage=Decimal(1), is_reduce_only=False
-            ),
+            price=Decimal("50000"),
+            quantity=Decimal("0.01"),
+            margin=Decimal("500"),
             order_type="SELL",
             cid=str(uuid.uuid4()),
         ),
@@ -1292,11 +1308,9 @@ async def main() -> None:
             market_id=derivative_market_id_create,
             subaccount_id=subaccount_id,
             fee_recipient=fee_recipient,
-            price=Decimal(25100),
-            quantity=Decimal(0.1),
-            margin=composer.calculate_margin(
-                quantity=Decimal(0.1), price=Decimal(25100), leverage=Decimal(1), is_reduce_only=False
-            ),
+            price=Decimal("25100"),
+            quantity=Decimal("0.1"),
+            margin=Decimal("2510"),
             order_type="BUY",
             cid=str(uuid.uuid4()),
         ),

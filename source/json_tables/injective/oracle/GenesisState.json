@@ -83,5 +83,10 @@
     "Parameter": "stork_publishers",
     "Type": "string array",
     "Description": ""
+  },
+  {
+    "Parameter": "chainlink_data_streams_price_states",
+    "Type": "ChainlinkDataStreamsPriceState array",
+    "Description": ""
   }
 ]

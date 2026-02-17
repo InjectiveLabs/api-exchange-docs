@@ -107,7 +107,8 @@ if __name__ == "__main__":
 <tr ><td class="code-td td_num">9</td><td class="name-td td_text">Pyth</td></tr>
 <tr ><td class="code-td td_num">10</td><td class="name-td td_text">BandIBC</td></tr>
 <tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr>
-<tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr></tbody></table>
+<tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr>
+<tr ><td class="code-td td_num">13</td><td class="name-td td_text">ChainlinkDataStreams</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 

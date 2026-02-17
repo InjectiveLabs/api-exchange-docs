@@ -2522,7 +2522,9 @@ func main() {
 <tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Position updated timestamp in UNIX millis.</td></tr>
 <tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Market quote denom</td></tr>
 <tr ><td class="parameter-td td_text">funding_last</td><td class="type-td td_text">string</td><td class="description-td td_text">Last funding fees since position opened</td></tr>
-<tr ><td class="parameter-td td_text">funding_sum</td><td class="type-td td_text">string</td><td class="description-td td_text">Net funding fees since position opened</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">funding_sum</td><td class="type-td td_text">string</td><td class="description-td td_text">Net funding fees since position opened</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Cumulative funding entry of the position</td></tr>
+<tr ><td class="parameter-td td_text">effective_cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Effective cumulative funding entry of the position</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2764,7 +2766,9 @@ func main() {
 <tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Position updated timestamp in UNIX millis.</td></tr>
 <tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Market quote denom</td></tr>
 <tr ><td class="parameter-td td_text">funding_last</td><td class="type-td td_text">string</td><td class="description-td td_text">Last funding fees since position opened</td></tr>
-<tr ><td class="parameter-td td_text">funding_sum</td><td class="type-td td_text">string</td><td class="description-td td_text">Net funding fees since position opened</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">funding_sum</td><td class="type-td td_text">string</td><td class="description-td td_text">Net funding fees since position opened</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Cumulative funding entry of the position</td></tr>
+<tr ><td class="parameter-td td_text">effective_cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Effective cumulative funding entry of the position</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -3081,7 +3085,9 @@ func main() {
 <tr ><td class="parameter-td td_text">updated_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Position updated timestamp in UNIX millis.</td></tr>
 <tr ><td class="parameter-td td_text">created_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Position created timestamp in UNIX millis.</td></tr>
 <tr ><td class="parameter-td td_text">funding_last</td><td class="type-td td_text">string</td><td class="description-td td_text">Last funding fees since position opened</td></tr>
-<tr ><td class="parameter-td td_text">funding_sum</td><td class="type-td td_text">string</td><td class="description-td td_text">Net funding fees since position opened</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">funding_sum</td><td class="type-td td_text">string</td><td class="description-td td_text">Net funding fees since position opened</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Cumulative funding entry of the position</td></tr>
+<tr ><td class="parameter-td td_text">effective_cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Effective cumulative funding entry of the position</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 

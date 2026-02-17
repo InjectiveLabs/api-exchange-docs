@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "message_type",
+    "Type": "string",
+    "Description": "Type: 'request', 'ping'",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "request",
+    "Type": "CreateRFQRequestType",
+    "Description": "RFQ request to create",
+    "Required": "No"
+  }
+]

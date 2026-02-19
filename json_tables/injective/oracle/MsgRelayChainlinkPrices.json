@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "reports",
+    "Type": "ChainlinkReport array",
+    "Description": "",
+    "Required": "No"
+  }
+]

@@ -30,5 +30,9 @@
   {
     "Code": "7",
     "Name": "OffsettingPosition"
+  },
+  {
+    "Code": "8",
+    "Name": "Synthetic"
   }
 ]

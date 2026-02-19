@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "addresses",
+    "Type": "string array",
+    "Description": "Filter by addresses",
+    "Required": "Yes"
+  }
+]

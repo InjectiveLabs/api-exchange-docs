@@ -17,11 +17,21 @@
   {
     "Parameter": "expiration_twap_start_price_cumulative",
     "Type": "cosmossdk_io_math.LegacyDec",
-    "Description": "expiration_twap_start_price_cumulative defines the cumulative price for the start of the TWAP window (in human readable format)"
+    "Description": "expiration_twap_start_price_cumulative defines the cumulative price for the start of the TWAP window (in human readable format) Deprecated: For correctly calculating the expiration price using TWAP, we need to keep the cumulative price at the start of TWAP calculation separately for the base asset and the quote asset. Use expiration_twap_start_base_cumulative_price and expiration_twap_start_quote_cumulative_price instead."
   },
   {
     "Parameter": "settlement_price",
     "Type": "cosmossdk_io_math.LegacyDec",
     "Description": "settlement_price defines the settlement price for a time expiry futures market (in human readable format)"
+  },
+  {
+    "Parameter": "expiration_twap_start_base_cumulative_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "expiration_twap_start_base_cumulative_price defines the cumulative price for the base asset at the start of the TWAP calculation window (in human readable format)"
+  },
+  {
+    "Parameter": "expiration_twap_start_quote_cumulative_price",
+    "Type": "cosmossdk_io_math.LegacyDec",
+    "Description": "expiration_twap_start_quote_cumulative_price defines the cumulative price for the quote asset at the start of the TWAP calculation window (in human readable format)"
   }
 ]

@@ -12,9 +12,9 @@
     "Required": "Yes"
   },
   {
-    "Parameter": "contract_hook",
+    "Parameter": "wasm_hook",
     "Type": "MsgUpdateNamespace_SetContractHook",
-    "Description": "address of smart contract to apply code-based restrictions",
+    "Description": "address of wasm smart contract to apply code-based restrictions",
     "Required": "No"
   },
   {
@@ -39,6 +39,12 @@
     "Parameter": "policy_manager_capabilities",
     "Type": "PolicyManagerCapability array",
     "Description": "policy manager capabilities to update",
+    "Required": "No"
+  },
+  {
+    "Parameter": "evm_hook",
+    "Type": "MsgUpdateNamespace_SetContractHook",
+    "Description": "address of EVM smart contract to apply code-based restrictions",
     "Required": "No"
   }
 ]

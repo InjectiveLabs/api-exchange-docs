@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "quotes",
+    "Type": "RFQQuoteType array",
+    "Description": "List of pending quotes"
+  }
+]

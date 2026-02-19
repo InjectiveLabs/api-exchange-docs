@@ -2,6 +2,11 @@
   {
     "Parameter": "oracles",
     "Type": "Oracle array",
-    "Description": ""
+    "Description": "List of oracles"
+  },
+  {
+    "Parameter": "next",
+    "Type": "string array",
+    "Description": "Next tokens for pagination"
   }
 ]

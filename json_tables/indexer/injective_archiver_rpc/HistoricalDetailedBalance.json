@@ -8,5 +8,10 @@
     "Parameter": "perp",
     "Type": "float64",
     "Description": "Perpetual amount value"
+  },
+  {
+    "Parameter": "staking",
+    "Type": "float64",
+    "Description": "Staking amount value"
   }
 ]

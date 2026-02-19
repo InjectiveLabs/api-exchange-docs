@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "code",
+    "Type": "string",
+    "Description": "Error code"
+  }
+]

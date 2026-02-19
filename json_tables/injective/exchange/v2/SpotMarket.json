@@ -73,5 +73,10 @@
     "Parameter": "quote_decimals",
     "Type": "uint32",
     "Description": "quote token decimals"
+  },
+  {
+    "Parameter": "has_disabled_minimal_protocol_fee",
+    "Type": "bool",
+    "Description": "has_disabled_minimal_protocol_fee indicates whether the minimal protocol fee is disabled for the market"
   }
 ]

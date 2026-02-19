@@ -73,5 +73,15 @@
     "module_name": "peggy",
     "error_code": 15,
     "description": "missing previous claim for validator"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 16,
+    "description": "eth address already in use"
+  },
+  {
+    "module_name": "peggy",
+    "error_code": 17,
+    "description": "validator is unbonded"
   }
 ]

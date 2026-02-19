@@ -1,7 +1,12 @@
 [
   {
-    "Parameter": "wasm_hook_query_max_gas",
+    "Parameter": "contract_hook_max_gas",
     "Type": "uint64",
-    "Description": "Max amount of gas allowed for wasm hook queries"
+    "Description": "Max amount of gas allowed for contract hook queries"
+  },
+  {
+    "Parameter": "enforced_restrictions_contracts",
+    "Type": "string array",
+    "Description": "EVM addresses of contracts that will not bypass module-to-module transfers"
   }
 ]

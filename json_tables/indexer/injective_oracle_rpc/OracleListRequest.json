@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": "Filter by oracle symbol",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "string",
+    "Description": "Filter by oracle type",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "per_page",
+    "Type": "int32",
+    "Description": "Number of results per page",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "Pagination token from previous response",
+    "Required": "Yes"
+  }
+]

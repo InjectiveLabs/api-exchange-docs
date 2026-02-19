@@ -1,0 +1,92 @@
+[
+  {
+    "Parameter": "chain_id",
+    "Type": "string",
+    "Description": "Chain ID"
+  },
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "Contract address"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID"
+  },
+  {
+    "Parameter": "rfq_id",
+    "Type": "uint64",
+    "Description": "RFQ ID"
+  },
+  {
+    "Parameter": "taker_direction",
+    "Type": "string",
+    "Description": "Taker direction (long/short)"
+  },
+  {
+    "Parameter": "margin",
+    "Type": "string",
+    "Description": "Margin amount"
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "string",
+    "Description": "Quantity"
+  },
+  {
+    "Parameter": "price",
+    "Type": "string",
+    "Description": "Price"
+  },
+  {
+    "Parameter": "expiry",
+    "Type": "uint64",
+    "Description": "Expiry timestamp"
+  },
+  {
+    "Parameter": "maker",
+    "Type": "string",
+    "Description": "Maker address"
+  },
+  {
+    "Parameter": "taker",
+    "Type": "string",
+    "Description": "Taker address"
+  },
+  {
+    "Parameter": "signature",
+    "Type": "string",
+    "Description": "Signature"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Status (pending, accepted, rejected, expired)"
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "int64",
+    "Description": "Creation timestamp"
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "Last update timestamp"
+  },
+  {
+    "Parameter": "height",
+    "Type": "uint64",
+    "Description": "Block height"
+  },
+  {
+    "Parameter": "event_time",
+    "Type": "uint64",
+    "Description": "Event time timestamp"
+  },
+  {
+    "Parameter": "transaction_time",
+    "Type": "uint64",
+    "Description": "Transaction time timestamp"
+  }
+]

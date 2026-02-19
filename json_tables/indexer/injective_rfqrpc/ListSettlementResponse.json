@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "settlements",
+    "Type": "RFQSettlementType array",
+    "Description": "List of RFQ settlements"
+  },
+  {
+    "Parameter": "total",
+    "Type": "int64",
+    "Description": "Total count of records"
+  }
+]

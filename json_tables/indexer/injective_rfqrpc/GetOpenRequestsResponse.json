@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "requests",
+    "Type": "RFQRequestType array",
+    "Description": "List of open requests"
+  }
+]

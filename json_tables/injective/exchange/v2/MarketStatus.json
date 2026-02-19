@@ -18,5 +18,9 @@
   {
     "Code": "4",
     "Name": "Expired"
+  },
+  {
+    "Code": "5",
+    "Name": "ForcePaused"
   }
 ]

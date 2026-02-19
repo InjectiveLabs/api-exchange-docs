@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "NoUpdate"
+  },
+  {
+    "Code": "1",
+    "Name": "False"
+  },
+  {
+    "Code": "2",
+    "Name": "True"
+  }
+]

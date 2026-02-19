@@ -4,5 +4,11 @@
     "Type": "string",
     "Description": "Account address",
     "Required": "Yes"
+  },
+  {
+    "Parameter": "period",
+    "Type": "string",
+    "Description": "Time period filter for pnl and volume.",
+    "Required": "Yes"
   }
 ]

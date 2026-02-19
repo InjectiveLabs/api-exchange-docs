@@ -63,5 +63,15 @@
     "Parameter": "funding_sum",
     "Type": "string",
     "Description": "Net funding fees since position opened"
+  },
+  {
+    "Parameter": "cumulative_funding_entry",
+    "Type": "string",
+    "Description": "Cumulative funding entry of the position"
+  },
+  {
+    "Parameter": "effective_cumulative_funding_entry",
+    "Type": "string",
+    "Description": "Effective cumulative funding entry of the position"
   }
 ]

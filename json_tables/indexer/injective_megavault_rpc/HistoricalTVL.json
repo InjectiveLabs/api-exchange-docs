@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "t",
-    "Type": "int32",
+    "Type": "int64",
     "Description": "Time, Unix timestamp in milliseconds (UTC)"
   },
   {

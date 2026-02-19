@@ -1,0 +1,62 @@
+[
+  {
+    "Parameter": "rfq_id",
+    "Type": "uint64",
+    "Description": "RFQ ID"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID"
+  },
+  {
+    "Parameter": "direction",
+    "Type": "string",
+    "Description": "Direction (long/short)"
+  },
+  {
+    "Parameter": "margin",
+    "Type": "string",
+    "Description": "Margin amount"
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "string",
+    "Description": "Quantity"
+  },
+  {
+    "Parameter": "worst_price",
+    "Type": "string",
+    "Description": "Worst acceptable price"
+  },
+  {
+    "Parameter": "expiry",
+    "Type": "uint64",
+    "Description": "Expiry timestamp"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Status (open, cancelled, completed)"
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "int64",
+    "Description": "Creation timestamp"
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "Last update timestamp"
+  },
+  {
+    "Parameter": "transaction_time",
+    "Type": "uint64",
+    "Description": "Transaction time timestamp"
+  },
+  {
+    "Parameter": "height",
+    "Type": "uint64",
+    "Description": "Block height"
+  }
+]

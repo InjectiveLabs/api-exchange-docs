@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "request",
+    "Type": "RFQRequestType",
+    "Description": "RFQ request update"
+  },
+  {
+    "Parameter": "stream_operation",
+    "Type": "string",
+    "Description": "Operation type (insert, update, delete)"
+  }
+]

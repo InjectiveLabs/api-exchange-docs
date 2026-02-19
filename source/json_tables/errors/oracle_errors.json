@@ -213,5 +213,15 @@
     "module_name": "oracle",
     "error_code": 43,
     "description": "stork asset id not unique"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 44,
+    "description": "chainlink report verification failed"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 45,
+    "description": "Band oracle is deprecated and no longer supported"
   }
 ]

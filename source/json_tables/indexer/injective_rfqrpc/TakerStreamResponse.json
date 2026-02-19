@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "message_type",
+    "Type": "string",
+    "Description": "Type: 'quote', 'request_ack', 'error', 'pong'"
+  },
+  {
+    "Parameter": "quote",
+    "Type": "RFQQuoteType",
+    "Description": "Quote from market maker"
+  },
+  {
+    "Parameter": "request_ack",
+    "Type": "StreamAck",
+    "Description": "Acknowledgment for request creation"
+  },
+  {
+    "Parameter": "error",
+    "Type": "StreamError",
+    "Description": "Error message"
+  }
+]

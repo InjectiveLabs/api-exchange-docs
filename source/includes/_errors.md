@@ -50,57 +50,6 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">authz</td><td class="error-code-td td_num">12</td><td class="description-td td_text">max tokens should be positive</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## Bandoracle module
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/bandoracle_errors.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="module-name-th">module_name</th><th class="error-code-th">error_code</th><th class="description-th">description</th></tr></thead><tbody ><tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">1</td><td class="description-td td_text">owasm compilation failed</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">2</td><td class="description-td td_text">bad wasm execution</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">3</td><td class="description-td td_text">data source not found</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">4</td><td class="description-td td_text">oracle script not found</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">5</td><td class="description-td td_text">request not found</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">6</td><td class="description-td td_text">raw request not found</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">7</td><td class="description-td td_text">reporter not found</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">8</td><td class="description-td td_text">result not found</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">9</td><td class="description-td td_text">reporter already exists</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">10</td><td class="description-td td_text">validator not requested</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">11</td><td class="description-td td_text">validator already reported</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">12</td><td class="description-td td_text">invalid report size</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">13</td><td class="description-td td_text">reporter not authorized</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">14</td><td class="description-td td_text">editor not authorized</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">16</td><td class="description-td td_text">validator already active</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">17</td><td class="description-td td_text">too soon to activate</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">18</td><td class="description-td td_text">too long name</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">19</td><td class="description-td td_text">too long description</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">20</td><td class="description-td td_text">empty executable</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">21</td><td class="description-td td_text">empty wasm code</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">22</td><td class="description-td td_text">too large executable</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">23</td><td class="description-td td_text">too large wasm code</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">24</td><td class="description-td td_text">invalid min count</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">25</td><td class="description-td td_text">invalid ask count</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">26</td><td class="description-td td_text">too large calldata</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">27</td><td class="description-td td_text">too long client id</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">28</td><td class="description-td td_text">empty raw requests</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">29</td><td class="description-td td_text">empty report</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">30</td><td class="description-td td_text">duplicate external id</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">31</td><td class="description-td td_text">too long schema</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">32</td><td class="description-td td_text">too long url</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">33</td><td class="description-td td_text">too large raw report data</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">34</td><td class="description-td td_text">insufficient available validators</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">35</td><td class="description-td td_text">cannot create with [do-not-modify] content</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">36</td><td class="description-td td_text">cannot reference self as reporter</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">37</td><td class="description-td td_text">obi decode failed</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">38</td><td class="description-td td_text">uncompression failed</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">39</td><td class="description-td td_text">request already expired</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">40</td><td class="description-td td_text">bad drbg initialization</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">41</td><td class="description-td td_text">max oracle channels</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">42</td><td class="description-td td_text">invalid ICS20 version</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">43</td><td class="description-td td_text">not enough fee</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">44</td><td class="description-td td_text">invalid owasm gas</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">45</td><td class="description-td td_text">sending oracle request via IBC is disabled</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">46</td><td class="description-td td_text">invalid request key</td></tr>
-<tr ><td class="module-name-td td_text">bandoracle</td><td class="error-code-td td_num">47</td><td class="description-td td_text">too long request key</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
 ## Bank module
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/bank_errors.json) -->
@@ -295,7 +244,8 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">erc20</td><td class="error-code-td td_num">8</td><td class="description-td td_text">error uploading ERC20 contract</td></tr>
 <tr ><td class="module-name-td td_text">erc20</td><td class="error-code-td td_num">9</td><td class="description-td td_text">invalid token factory denom</td></tr>
 <tr ><td class="module-name-td td_text">erc20</td><td class="error-code-td td_num">10</td><td class="description-td td_text">respective erc20:... denom has existing supply</td></tr>
-<tr ><td class="module-name-td td_text">erc20</td><td class="error-code-td td_num">11</td><td class="description-td td_text">invalid query request</td></tr></tbody></table>
+<tr ><td class="module-name-td td_text">erc20</td><td class="error-code-td td_num">11</td><td class="description-td td_text">invalid query request</td></tr>
+<tr ><td class="module-name-td td_text">erc20</td><td class="error-code-td td_num">12</td><td class="description-td td_text">can't charge denom creation fee</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Evidence module
@@ -447,7 +397,9 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">108</td><td class="description-td td_text">v1 perpetual and expiry market launch proposal is not supported</td></tr>
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">109</td><td class="description-td td_text">position not offsettable</td></tr>
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">110</td><td class="description-td td_text">offsetting subaccount IDs cannot be empty</td></tr>
-<tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">111</td><td class="description-td td_text">invalid open notional cap</td></tr></tbody></table>
+<tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">111</td><td class="description-td td_text">invalid open notional cap</td></tr>
+<tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">112</td><td class="description-td td_text">open notional cap breached</td></tr>
+<tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">113</td><td class="description-td td_text">no valid offsetting positions found</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Feegrant module
@@ -662,7 +614,9 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">40</td><td class="description-td td_text">bad Stork message timestamp</td></tr>
 <tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">41</td><td class="description-td td_text">sender stork is empty</td></tr>
 <tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">42</td><td class="description-td td_text">invalid stork signature</td></tr>
-<tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">43</td><td class="description-td td_text">stork asset id not unique</td></tr></tbody></table>
+<tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">43</td><td class="description-td td_text">stork asset id not unique</td></tr>
+<tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">44</td><td class="description-td td_text">chainlink report verification failed</td></tr>
+<tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">45</td><td class="description-td td_text">Band oracle is deprecated and no longer supported</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Params module
@@ -693,7 +647,9 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">peggy</td><td class="error-code-td td_num">12</td><td class="description-td td_text">supply cannot exceed max ERC20 value</td></tr>
 <tr ><td class="module-name-td td_text">peggy</td><td class="error-code-td td_num">13</td><td class="description-td td_text">invalid ethereum sender on claim</td></tr>
 <tr ><td class="module-name-td td_text">peggy</td><td class="error-code-td td_num">14</td><td class="description-td td_text">invalid ethereum destination</td></tr>
-<tr ><td class="module-name-td td_text">peggy</td><td class="error-code-td td_num">15</td><td class="description-td td_text">missing previous claim for validator</td></tr></tbody></table>
+<tr ><td class="module-name-td td_text">peggy</td><td class="error-code-td td_num">15</td><td class="description-td td_text">missing previous claim for validator</td></tr>
+<tr ><td class="module-name-td td_text">peggy</td><td class="error-code-td td_num">16</td><td class="description-td td_text">eth address already in use</td></tr>
+<tr ><td class="module-name-td td_text">peggy</td><td class="error-code-td td_num">17</td><td class="description-td td_text">validator is unbonded</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Permissions module
@@ -709,11 +665,13 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">permissions</td><td class="error-code-td td_num">9</td><td class="description-td td_text">restricted action</td></tr>
 <tr ><td class="module-name-td td_text">permissions</td><td class="error-code-td td_num">10</td><td class="description-td td_text">invalid role</td></tr>
 <tr ><td class="module-name-td td_text">permissions</td><td class="error-code-td td_num">11</td><td class="description-td td_text">namespace for denom does not exist</td></tr>
-<tr ><td class="module-name-td td_text">permissions</td><td class="error-code-td td_num">12</td><td class="description-td td_text">wasm hook query error</td></tr>
+<tr ><td class="module-name-td td_text">permissions</td><td class="error-code-td td_num">12</td><td class="description-td td_text">contract hook query error</td></tr>
 <tr ><td class="module-name-td td_text">permissions</td><td class="error-code-td td_num">13</td><td class="description-td td_text">voucher was not found</td></tr>
-<tr ><td class="module-name-td td_text">permissions</td><td class="error-code-td td_num">14</td><td class="description-td td_text">invalid contract hook</td></tr>
+<tr ><td class="module-name-td td_text">permissions</td><td class="error-code-td td_num">14</td><td class="description-td td_text">invalid wasm hook</td></tr>
 <tr ><td class="module-name-td td_text">permissions</td><td class="error-code-td td_num">15</td><td class="description-td td_text">unknown policy</td></tr>
-<tr ><td class="module-name-td td_text">permissions</td><td class="error-code-td td_num">16</td><td class="description-td td_text">unauthorized policy change</td></tr></tbody></table>
+<tr ><td class="module-name-td td_text">permissions</td><td class="error-code-td td_num">16</td><td class="description-td td_text">unauthorized policy change</td></tr>
+<tr ><td class="module-name-td td_text">permissions</td><td class="error-code-td td_num">17</td><td class="description-td td_text">invalid evm hook</td></tr>
+<tr ><td class="module-name-td td_text">permissions</td><td class="error-code-td td_num">18</td><td class="description-td td_text">invalid erc20 denom</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Port module

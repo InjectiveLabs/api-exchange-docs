@@ -311,7 +311,8 @@ func main() {
 <tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">string</td><td class="description-td td_text">current market admin</td></tr>
 <tr ><td class="parameter-td td_text">admin_permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_text">level of admin permissions</td></tr>
 <tr ><td class="parameter-td td_text">base_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">base token decimals</td></tr>
-<tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">quote token decimals</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">quote token decimals</td></tr>
+<tr ><td class="parameter-td td_text">has_disabled_minimal_protocol_fee</td><td class="type-td td_text">bool</td><td class="description-td td_text">has_disabled_minimal_protocol_fee indicates whether the minimal protocol fee is disabled for the market</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -323,7 +324,8 @@ func main() {
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">Active</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">Paused</td></tr>
 <tr ><td class="code-td td_num">3</td><td class="name-td td_text">Demolished</td></tr>
-<tr ><td class="code-td td_num">4</td><td class="name-td td_text">Expired</td></tr></tbody></table>
+<tr ><td class="code-td td_num">4</td><td class="name-td td_text">Expired</td></tr>
+<tr ><td class="code-td td_num">5</td><td class="name-td td_text">ForcePaused</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -503,7 +505,8 @@ func main() {
 <tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">string</td><td class="description-td td_text">current market admin</td></tr>
 <tr ><td class="parameter-td td_text">admin_permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_text">level of admin permissions</td></tr>
 <tr ><td class="parameter-td td_text">base_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">base token decimals</td></tr>
-<tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">quote token decimals</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">quote token decimals</td></tr>
+<tr ><td class="parameter-td td_text">has_disabled_minimal_protocol_fee</td><td class="type-td td_text">bool</td><td class="description-td td_text">has_disabled_minimal_protocol_fee indicates whether the minimal protocol fee is disabled for the market</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -515,7 +518,8 @@ func main() {
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">Active</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">Paused</td></tr>
 <tr ><td class="code-td td_num">3</td><td class="name-td td_text">Demolished</td></tr>
-<tr ><td class="code-td td_num">4</td><td class="name-td td_text">Expired</td></tr></tbody></table>
+<tr ><td class="code-td td_num">4</td><td class="name-td td_text">Expired</td></tr>
+<tr ><td class="code-td td_num">5</td><td class="name-td td_text">ForcePaused</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -719,7 +723,8 @@ func main() {
 <tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">string</td><td class="description-td td_text">current market admin</td></tr>
 <tr ><td class="parameter-td td_text">admin_permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_text">level of admin permissions</td></tr>
 <tr ><td class="parameter-td td_text">base_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">base token decimals</td></tr>
-<tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">quote token decimals</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">quote token decimals</td></tr>
+<tr ><td class="parameter-td td_text">has_disabled_minimal_protocol_fee</td><td class="type-td td_text">bool</td><td class="description-td td_text">has_disabled_minimal_protocol_fee indicates whether the minimal protocol fee is disabled for the market</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -731,7 +736,8 @@ func main() {
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">Active</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">Paused</td></tr>
 <tr ><td class="code-td td_num">3</td><td class="name-td td_text">Demolished</td></tr>
-<tr ><td class="code-td td_num">4</td><td class="name-td td_text">Expired</td></tr></tbody></table>
+<tr ><td class="code-td td_num">4</td><td class="name-td td_text">Expired</td></tr>
+<tr ><td class="code-td td_num">5</td><td class="name-td td_text">ForcePaused</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -940,7 +946,8 @@ func main() {
 <tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">string</td><td class="description-td td_text">current market admin</td></tr>
 <tr ><td class="parameter-td td_text">admin_permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_text">level of admin permissions</td></tr>
 <tr ><td class="parameter-td td_text">base_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">base token decimals</td></tr>
-<tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">quote token decimals</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">quote token decimals</td></tr>
+<tr ><td class="parameter-td td_text">has_disabled_minimal_protocol_fee</td><td class="type-td td_text">bool</td><td class="description-td td_text">has_disabled_minimal_protocol_fee indicates whether the minimal protocol fee is disabled for the market</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -952,7 +959,8 @@ func main() {
 <tr ><td class="code-td td_num">1</td><td class="name-td td_text">Active</td></tr>
 <tr ><td class="code-td td_num">2</td><td class="name-td td_text">Paused</td></tr>
 <tr ><td class="code-td td_num">3</td><td class="name-td td_text">Demolished</td></tr>
-<tr ><td class="code-td td_num">4</td><td class="name-td td_text">Expired</td></tr></tbody></table>
+<tr ><td class="code-td td_num">4</td><td class="name-td td_text">Expired</td></tr>
+<tr ><td class="code-td td_num">5</td><td class="name-td td_text">ForcePaused</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3149,11 +3157,9 @@ async def main() -> None:
             market_id=derivative_market_id_create,
             subaccount_id=subaccount_id,
             fee_recipient=fee_recipient,
-            price=Decimal(25000),
-            quantity=Decimal(0.1),
-            margin=composer.calculate_margin(
-                quantity=Decimal(0.1), price=Decimal(25000), leverage=Decimal(1), is_reduce_only=False
-            ),
+            price=Decimal("25000"),
+            quantity=Decimal("0.1"),
+            margin=Decimal("2500"),
             order_type="BUY",
             cid=str(uuid.uuid4()),
         ),
@@ -3161,11 +3167,9 @@ async def main() -> None:
             market_id=derivative_market_id_create,
             subaccount_id=subaccount_id,
             fee_recipient=fee_recipient,
-            price=Decimal(50000),
-            quantity=Decimal(0.01),
-            margin=composer.calculate_margin(
-                quantity=Decimal(0.01), price=Decimal(50000), leverage=Decimal(1), is_reduce_only=False
-            ),
+            price=Decimal("50000"),
+            quantity=Decimal("0.01"),
+            margin=Decimal("500"),
             order_type="SELL",
             cid=str(uuid.uuid4()),
         ),
@@ -3176,11 +3180,9 @@ async def main() -> None:
             market_id=derivative_market_id_create,
             subaccount_id=subaccount_id,
             fee_recipient=fee_recipient,
-            price=Decimal(25100),
-            quantity=Decimal(0.1),
-            margin=composer.calculate_margin(
-                quantity=Decimal(0.1), price=Decimal(25100), leverage=Decimal(1), is_reduce_only=False
-            ),
+            price=Decimal("25100"),
+            quantity=Decimal("0.1"),
+            margin=Decimal("2510"),
             order_type="BUY",
             cid=str(uuid.uuid4()),
         ),
@@ -3907,11 +3909,9 @@ async def main() -> None:
             market_id=deriv_market_id,
             subaccount_id=subaccount_id,
             fee_recipient=fee_recipient,
-            price=Decimal(10500),
-            quantity=Decimal(0.01),
-            margin=composer.calculate_margin(
-                quantity=Decimal(0.01), price=Decimal(10500), leverage=Decimal(2), is_reduce_only=False
-            ),
+            price=Decimal("10500"),
+            quantity=Decimal("0.01"),
+            margin=Decimal("52.5"),
             order_type="BUY",
             cid=str(uuid.uuid4()),
         ),
@@ -3919,11 +3919,9 @@ async def main() -> None:
             market_id=deriv_market_id,
             subaccount_id=subaccount_id,
             fee_recipient=fee_recipient,
-            price=Decimal(65111),
-            quantity=Decimal(0.01),
-            margin=composer.calculate_margin(
-                quantity=Decimal(0.01), price=Decimal(65111), leverage=Decimal(2), is_reduce_only=False
-            ),
+            price=Decimal("65111"),
+            quantity=Decimal("0.01"),
+            margin=Decimal("325.555"),
             order_type="SELL",
             cid=str(uuid.uuid4()),
         ),
@@ -4044,11 +4042,9 @@ async def main() -> None:
             market_id=deriv_market_id,
             subaccount_id=subaccount_id_2,
             fee_recipient=fee_recipient,
-            price=Decimal(25111),
-            quantity=Decimal(0.01),
-            margin=composer.calculate_margin(
-                quantity=Decimal(0.01), price=Decimal(25111), leverage=Decimal("1.5"), is_reduce_only=False
-            ),
+            price=Decimal("25111"),
+            quantity=Decimal("0.01"),
+            margin=Decimal("167.406666666666666667"),
             order_type="BUY",
             cid=str(uuid.uuid4()),
         ),
@@ -4056,11 +4052,9 @@ async def main() -> None:
             market_id=deriv_market_id,
             subaccount_id=subaccount_id_2,
             fee_recipient=fee_recipient,
-            price=Decimal(65111),
-            quantity=Decimal(0.01),
-            margin=composer.calculate_margin(
-                quantity=Decimal(0.01), price=Decimal(25111), leverage=Decimal(2), is_reduce_only=False
-            ),
+            price=Decimal("65111"),
+            quantity=Decimal("0.01"),
+            margin=Decimal("125.555"),
             order_type="SELL",
             cid=str(uuid.uuid4()),
         ),

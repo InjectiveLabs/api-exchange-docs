@@ -48,5 +48,10 @@
     "Parameter": "max_round_allocation",
     "Type": "string",
     "Description": "Max round allocation of the auction"
+  },
+  {
+    "Parameter": "is_bid_placed",
+    "Type": "bool",
+    "Description": "Whether any bid has been placed in the auction."
   }
 ]

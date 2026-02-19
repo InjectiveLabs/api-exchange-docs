@@ -52,7 +52,7 @@
   {
     "module_name": "permissions",
     "error_code": 12,
-    "description": "wasm hook query error"
+    "description": "contract hook query error"
   },
   {
     "module_name": "permissions",
@@ -62,7 +62,7 @@
   {
     "module_name": "permissions",
     "error_code": 14,
-    "description": "invalid contract hook"
+    "description": "invalid wasm hook"
   },
   {
     "module_name": "permissions",
@@ -73,5 +73,15 @@
     "module_name": "permissions",
     "error_code": 16,
     "description": "unauthorized policy change"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 17,
+    "description": "invalid evm hook"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 18,
+    "description": "invalid erc20 denom"
   }
 ]

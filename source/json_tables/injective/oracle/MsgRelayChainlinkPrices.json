@@ -6,9 +6,9 @@
     "Required": "Yes"
   },
   {
-    "Parameter": "request_id",
-    "Type": "uint64",
+    "Parameter": "reports",
+    "Type": "ChainlinkReport array",
     "Description": "",
-    "Required": "Yes"
+    "Required": "No"
   }
 ]

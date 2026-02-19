@@ -28,5 +28,10 @@
     "Parameter": "block_hash",
     "Type": "byte array",
     "Description": "include the block hash for json-rpc to use"
+  },
+  {
+    "Parameter": "execution_gas_used",
+    "Type": "uint64",
+    "Description": "execution_gas_used specifies the actual gas consumed during EVM execution. This is used for accurate gas estimation."
   }
 ]

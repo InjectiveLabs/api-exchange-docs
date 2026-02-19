@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Status of the subscription at this log entry"
+  },
+  {
+    "Parameter": "tx_hash",
+    "Type": "string",
+    "Description": "Transaction hash associated with this log entry"
+  },
+  {
+    "Parameter": "block_height",
+    "Type": "int64",
+    "Description": "Block height when this log entry occurred"
+  },
+  {
+    "Parameter": "block_time",
+    "Type": "int64",
+    "Description": "Timestamp when this log entry occurred in UNIX millis."
+  }
+]

@@ -18,5 +18,10 @@
     "Parameter": "in_sync",
     "Type": "bool",
     "Description": "Indicates whether the block is the latest one available in the event provider"
+  },
+  {
+    "Parameter": "time",
+    "Type": "int64",
+    "Description": "Block timestamp in UNIX millis."
   }
 ]

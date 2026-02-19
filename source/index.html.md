@@ -51,6 +51,7 @@ includes:
   - txfees
   - wasm
   - wasmx
+  - websocket
   - historicalqueries
   - healthapi
   - glossary

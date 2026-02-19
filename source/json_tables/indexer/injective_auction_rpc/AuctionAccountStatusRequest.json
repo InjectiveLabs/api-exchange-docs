@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "round",
+    "Type": "int64",
+    "Description": "The auction round number",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "Address of account",
+    "Required": "Yes"
+  }
+]

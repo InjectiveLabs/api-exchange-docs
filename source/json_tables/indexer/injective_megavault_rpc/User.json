@@ -15,6 +15,16 @@
     "Description": "User stats"
   },
   {
+    "Parameter": "created_height",
+    "Type": "int64",
+    "Description": "Block height when the vault was created."
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "int64",
+    "Description": "CreatedAt timestamp in UNIX millis."
+  },
+  {
     "Parameter": "updated_height",
     "Type": "int64",
     "Description": "Block height when the vault was updated."

@@ -25,7 +25,7 @@ async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
     client = IndexerClient(network)
-    oracle_list = await client.fetch_oracle_list()
+    oracle_list = await client.fetch_oracle_list(symbol="TIA", oracle_type="provider")
     print(json.dumps(oracle_list, indent=2))
 
 
@@ -55,8 +55,11 @@ func main() {
 		panic(err)
 	}
 
+	symbol := "PYTH/USDT"
+	oracleType := "pricefeed"
+
 	ctx := context.Background()
-	res, err := exchangeClient.GetOracleList(ctx)
+	res, err := exchangeClient.GetOracleList(ctx, symbol, oracleType, "", 0)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -65,6 +68,22 @@ func main() {
 	fmt.Print(string(str))
 }
 ```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_oracle_rpc/OracleListRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by oracle symbol</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by oracle type</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">per_page</td><td class="type-td td_text">int32</td><td class="description-td td_text">Number of results per page</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">token</td><td class="type-td td_text">string</td><td class="description-td td_text">Pagination token from previous response</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**Coin**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/Coin.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">cosmossdk_io_math.Int</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -150,7 +169,8 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_oracle_rpc/OracleListResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">oracles</td><td class="type-td td_text">Oracle array</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">oracles</td><td class="type-td td_text">Oracle array</td><td class="description-td td_text">List of oracles</td></tr>
+<tr ><td class="parameter-td td_text">next</td><td class="type-td td_text">string array</td><td class="description-td td_text">Next tokens for pagination</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>

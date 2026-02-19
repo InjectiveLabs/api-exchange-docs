@@ -53,5 +53,10 @@
     "Parameter": "executed_at",
     "Type": "int64",
     "Description": "ExecutedAt timestamp in UNIX millis."
+  },
+  {
+    "Parameter": "log",
+    "Type": "OperationStatusLogEntry array",
+    "Description": "Redemption status log"
   }
 ]

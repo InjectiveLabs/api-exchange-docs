@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "settlement",
+    "Type": "RFQSettlementType",
+    "Description": "RFQ settlement update"
+  },
+  {
+    "Parameter": "stream_operation",
+    "Type": "string",
+    "Description": "Operation type (insert, update, delete)"
+  }
+]

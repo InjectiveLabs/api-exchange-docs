@@ -13,5 +13,10 @@
     "Parameter": "volume",
     "Type": "float64",
     "Description": "Trade volume (USD)"
+  },
+  {
+    "Parameter": "stake",
+    "Type": "string",
+    "Description": "Staking amount (INJ)"
   }
 ]

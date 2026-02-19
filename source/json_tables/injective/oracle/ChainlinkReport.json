@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "feed_id",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "full_report",
+    "Type": "byte array",
+    "Description": ""
+  },
+  {
+    "Parameter": "valid_from_timestamp",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "observations_timestamp",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

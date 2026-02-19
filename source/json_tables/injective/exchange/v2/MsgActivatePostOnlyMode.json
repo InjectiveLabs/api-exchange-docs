@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "blocks_amount",
+    "Type": "uint32",
+    "Description": "the number of blocks to activate post-only mode for",
+    "Required": "Yes"
+  }
+]

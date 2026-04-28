@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "EVM address of the contract"
+  },
+  {
+    "Parameter": "pause_event_signature",
+    "Type": "string",
+    "Description": "Pause event signature for the contract (e.g. \"Pause()\")"
+  },
+  {
+    "Parameter": "unpause_event_signature",
+    "Type": "string",
+    "Description": "Unpause event signature for the contract (e.g. \"Unpause()\")"
+  },
+  {
+    "Parameter": "blacklist_event_signature",
+    "Type": "string",
+    "Description": "Blacklist event signature for the contract (e.g. Blacklisted(address)\")"
+  },
+  {
+    "Parameter": "unblacklist_event_signature",
+    "Type": "string",
+    "Description": "UnBlacklist event signature for the contract (e.g. \"UnBlacklisted(address)\")"
+  }
+]

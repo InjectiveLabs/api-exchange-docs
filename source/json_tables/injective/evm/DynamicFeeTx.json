@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "chain_id",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "chain_id of the destination EVM chain"
   },
   {
@@ -11,12 +11,12 @@
   },
   {
     "Parameter": "gas_tip_cap",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "gas_tip_cap defines the max value for the gas tip"
   },
   {
     "Parameter": "gas_fee_cap",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "gas_fee_cap defines the max value for the gas fee"
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "Parameter": "value",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "value defines the the transaction amount."
   },
   {

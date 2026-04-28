@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "net_granted_stake",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": ""
   },
   {

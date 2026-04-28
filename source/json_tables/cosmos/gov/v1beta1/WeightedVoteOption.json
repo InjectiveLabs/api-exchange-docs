@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "weight",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "weight is the vote weight associated with the vote option."
   }
 ]

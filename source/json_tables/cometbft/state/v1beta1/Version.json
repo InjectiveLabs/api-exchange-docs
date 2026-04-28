@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "consensus",
-    "Type": "v1.Consensus",
+    "Type": "Consensus",
     "Description": ""
   },
   {

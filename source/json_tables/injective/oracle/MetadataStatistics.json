@@ -11,12 +11,12 @@
   },
   {
     "Parameter": "mean",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "Mean refers to the arithmetic mean For trades, the mean is the VWAP computed over the grouped trade records ∑ (price * quantity) / ∑ quantity For oracle prices, the mean is computed over the price records ∑ (price) / prices_count"
   },
   {
     "Parameter": "twap",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "TWAP refers to the time-weighted average price which equals ∑ (price_i * ∆t_i) / ∑ ∆t_i where ∆t_i = t_i - t_{i-1}"
   },
   {
@@ -31,17 +31,17 @@
   },
   {
     "Parameter": "min_price",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "MinPrice refers to the smallest individual raw price considered"
   },
   {
     "Parameter": "max_price",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "MaxPrice refers to the largest individual raw price considered"
   },
   {
     "Parameter": "median_price",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "MedianPrice refers to the median individual raw price considered"
   }
 ]

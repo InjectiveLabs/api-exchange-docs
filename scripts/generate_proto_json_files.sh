@@ -135,7 +135,10 @@ get_type() {
         if [[ $type =~ ^\[(.*)\](.*)$ ]]; then
             local base_type="${BASH_REMATCH[1]}"
             local remaining="${BASH_REMATCH[2]}"
+            remaining="${remaining##*.}"
             type="$base_type$remaining array"
+        else
+            type="${type##*.}"
         fi
     fi
     echo "$type"
@@ -444,13 +447,13 @@ process_repository_modules() {
         
         if [ -d "$module_dir/types" ]; then
             process_types_directory "$module_dir/types" "$output_dir" "$module_name"
-        else
-            # Check if module has .pb.go files in the main directory
-            if compgen -G "$module_dir/*.pb.go" > /dev/null 2>&1; then
-                echo "Processing module with direct .pb.go files: $module_name"
-                mkdir -p "$output_dir/$module_name"
-                process_directory "$module_dir" "$output_dir/$module_name"
-            fi
+        elif compgen -G "$module_dir/*.pb.go" > /dev/null 2>&1; then
+            echo "Processing module with direct .pb.go files: $module_name"
+            mkdir -p "$output_dir/$module_name"
+            process_directory "$module_dir" "$output_dir/$module_name"
+        elif find "$module_dir" -name "*.pb.go" -type f | head -1 | grep -q .; then
+            echo "Processing namespace directory: $module_name"
+            process_repository_modules "$module_dir" "$output_dir/$module_name"
         fi
     done
 }

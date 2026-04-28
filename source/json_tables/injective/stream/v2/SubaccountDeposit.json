@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "deposit",
-    "Type": "v2.Deposit",
+    "Type": "Deposit",
     "Description": ""
   }
 ]

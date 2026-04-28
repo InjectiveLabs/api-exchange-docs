@@ -26,7 +26,7 @@
   },
   {
     "Parameter": "created_at",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "created_at is a timestamp specifying when a group was created."
   }
 ]

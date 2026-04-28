@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "amount",
-    "Type": "types.Coin array",
+    "Type": "Coin array",
     "Description": "amount to be deposited by depositor."
   }
 ]

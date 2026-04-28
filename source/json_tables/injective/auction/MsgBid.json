@@ -7,7 +7,7 @@
   },
   {
     "Parameter": "bid_amount",
-    "Type": "types.Coin",
+    "Type": "Coin",
     "Description": "amount of the bid in INJ tokens",
     "Required": "Yes"
   },

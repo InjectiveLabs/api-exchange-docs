@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "proposals",
-    "Type": "types.StoreCodeProposal array",
+    "Type": "StoreCodeProposal array",
     "Description": ""
   }
 ]

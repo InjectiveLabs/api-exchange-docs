@@ -7,7 +7,7 @@
   },
   {
     "Parameter": "amount",
-    "Type": "types.Coin",
+    "Type": "Coin",
     "Description": "The amount of tokens to burn",
     "Required": "Yes"
   },

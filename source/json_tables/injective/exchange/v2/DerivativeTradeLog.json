@@ -11,12 +11,12 @@
   },
   {
     "Parameter": "payout",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   },
   {
     "Parameter": "fee",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   },
   {
@@ -36,7 +36,7 @@
   },
   {
     "Parameter": "pnl",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   }
 ]

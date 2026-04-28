@@ -21,7 +21,7 @@
   },
   {
     "Parameter": "timestamp",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": ""
   }
 ]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "orders",
+    "Type": "TCDerivativeOrderHistoryType array",
+    "Description": "List of TC order history entries"
+  },
+  {
+    "Parameter": "next",
+    "Type": "string array",
+    "Description": "Next tokens for pagination"
+  }
+]

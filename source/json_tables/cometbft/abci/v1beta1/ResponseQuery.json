@@ -31,7 +31,7 @@
   },
   {
     "Parameter": "proof_ops",
-    "Type": "v1.ProofOps",
+    "Type": "ProofOps",
     "Description": ""
   },
   {

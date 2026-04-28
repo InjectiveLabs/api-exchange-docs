@@ -48,6 +48,7 @@ import (
 	"fmt"
 
 	"github.com/InjectiveLabs/sdk-go/client"
+	"github.com/joho/godotenv"
 
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
@@ -57,6 +58,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -69,7 +71,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -204,7 +206,7 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/QueryClientStateResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">client_state</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">client state associated with the request identifier</td></tr>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">client_state</td><td class="type-td td_text">Any</td><td class="description-td td_text">client state associated with the request identifier</td></tr>
 <tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">byte array</td><td class="description-td td_text">merkle proof of existence</td></tr>
 <tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">Height</td><td class="description-td td_text">height at which the proof was retrieved</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -266,6 +268,7 @@ import (
 	"fmt"
 
 	"github.com/cosmos/cosmos-sdk/types/query"
+	"github.com/joho/godotenv"
 
 	"github.com/InjectiveLabs/sdk-go/client"
 
@@ -277,6 +280,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -289,7 +293,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -334,7 +338,7 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/QueryClientStatesRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination request</td><td class="required-td td_text">No</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageRequest</td><td class="description-td td_text">pagination request</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -885,7 +889,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/QueryClientStatesResponse.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">client_states</td><td class="type-td td_text">IdentifiedClientStates</td><td class="description-td td_text">list of stored ClientStates of the chain.</td></tr>
-<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination response</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageResponse</td><td class="description-td td_text">pagination response</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -894,7 +898,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/IdentifiedClientState.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">client_id</td><td class="type-td td_text">string</td><td class="description-td td_text">client identifier</td></tr>
-<tr ><td class="parameter-td td_text">client_state</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">client state</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">client_state</td><td class="type-td td_text">Any</td><td class="description-td td_text">client state</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -948,6 +952,7 @@ import (
 	"fmt"
 
 	"github.com/InjectiveLabs/sdk-go/client"
+	"github.com/joho/godotenv"
 
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
@@ -957,6 +962,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -969,7 +975,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -1046,7 +1052,7 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/QueryConsensusStateResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">consensus_state</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">consensus state associated with the client identifier at the given height</td></tr>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">consensus_state</td><td class="type-td td_text">Any</td><td class="description-td td_text">consensus state associated with the client identifier at the given height</td></tr>
 <tr ><td class="parameter-td td_text">proof</td><td class="type-td td_text">byte array</td><td class="description-td td_text">merkle proof of existence</td></tr>
 <tr ><td class="parameter-td td_text">proof_height</td><td class="type-td td_text">Height</td><td class="description-td td_text">height at which the proof was retrieved</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -1109,6 +1115,7 @@ import (
 	"fmt"
 
 	"github.com/cosmos/cosmos-sdk/types/query"
+	"github.com/joho/godotenv"
 
 	"github.com/InjectiveLabs/sdk-go/client"
 
@@ -1120,6 +1127,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -1132,7 +1140,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -1179,7 +1187,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/QueryConsensusStatesRequest.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">client_id</td><td class="type-td td_text">string</td><td class="description-td td_text">client identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination request</td><td class="required-td td_text">No</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageRequest</td><td class="description-td td_text">pagination request</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1254,7 +1262,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/QueryConsensusStatesResponse.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">consensus_states</td><td class="type-td td_text">ConsensusStateWithHeight array</td><td class="description-td td_text">consensus states associated with the identifier</td></tr>
-<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination response</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageResponse</td><td class="description-td td_text">pagination response</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1263,7 +1271,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/ConsensusStateWithHeight.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">Height</td><td class="description-td td_text">consensus state height</td></tr>
-<tr ><td class="parameter-td td_text">consensus_state</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">consensus state</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">consensus_state</td><td class="type-td td_text">Any</td><td class="description-td td_text">consensus state</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1324,6 +1332,7 @@ import (
 	"fmt"
 
 	"github.com/cosmos/cosmos-sdk/types/query"
+	"github.com/joho/godotenv"
 
 	"github.com/InjectiveLabs/sdk-go/client"
 
@@ -1335,6 +1344,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -1347,7 +1357,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -1394,7 +1404,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/QueryConsensusStateHeightsRequest.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">client_id</td><td class="type-td td_text">string</td><td class="description-td td_text">client identifier</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination request</td><td class="required-td td_text">No</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageRequest</td><td class="description-td td_text">pagination request</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -1429,7 +1439,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/QueryConsensusStateHeightsResponse.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">consensus_state_heights</td><td class="type-td td_text">Height array</td><td class="description-td td_text">consensus state heights</td></tr>
-<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination response</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageResponse</td><td class="description-td td_text">pagination response</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1489,6 +1499,7 @@ import (
 	"fmt"
 
 	"github.com/InjectiveLabs/sdk-go/client"
+	"github.com/joho/godotenv"
 
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
@@ -1498,6 +1509,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -1510,7 +1522,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -1618,6 +1630,7 @@ import (
 	"fmt"
 
 	"github.com/InjectiveLabs/sdk-go/client"
+	"github.com/joho/godotenv"
 
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
@@ -1627,6 +1640,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -1639,7 +1653,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -1757,6 +1771,7 @@ import (
 	"fmt"
 
 	"github.com/InjectiveLabs/sdk-go/client"
+	"github.com/joho/godotenv"
 
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
@@ -1766,6 +1781,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -1778,7 +1794,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -1832,7 +1848,7 @@ No parameters
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/QueryUpgradedClientStateResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">upgraded_client_state</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">client state associated with the request identifier</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">upgraded_client_state</td><td class="type-td td_text">Any</td><td class="description-td td_text">client state associated with the request identifier</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1881,6 +1897,7 @@ import (
 	"fmt"
 
 	"github.com/InjectiveLabs/sdk-go/client"
+	"github.com/joho/godotenv"
 
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
@@ -1890,6 +1907,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -1902,7 +1920,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -1956,5 +1974,5 @@ No parameters
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/ibc/core/02-client/types/QueryUpgradedConsensusStateResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">upgraded_consensus_state</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">Consensus state associated with the request identifier</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">upgraded_consensus_state</td><td class="type-td td_text">Any</td><td class="description-td td_text">Consensus state associated with the request identifier</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->

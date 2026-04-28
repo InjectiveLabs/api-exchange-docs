@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "total_fees",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": ""
   }
 ]

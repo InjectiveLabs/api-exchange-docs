@@ -19,13 +19,13 @@
   },
   {
     "Parameter": "limit_cumulative_notional",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "limits the number of entries to return per side based on the cumulative notional (in human readable format)",
     "Required": "No"
   },
   {
     "Parameter": "limit_cumulative_quantity",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "limits the number of entries to return per side based on the cumulative quantity (in human readable format)",
     "Required": "No"
   }

@@ -64,6 +64,7 @@ import (
 	"os"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 
 	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -71,6 +72,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -83,7 +85,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -210,6 +212,7 @@ import (
 	"os"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 
 	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -217,6 +220,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -229,7 +233,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -355,6 +359,7 @@ import (
 	"os"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 
 	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -362,6 +367,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -374,7 +380,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -498,6 +504,7 @@ import (
 	"os"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 
 	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -505,6 +512,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -517,7 +525,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -642,6 +650,7 @@ import (
 	"os"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 
 	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -649,6 +658,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -661,7 +671,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -787,6 +797,7 @@ import (
 	"os"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 
 	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -794,6 +805,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -806,7 +818,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -927,6 +939,7 @@ import (
 	"os"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 
 	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -934,6 +947,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -946,7 +960,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -1000,7 +1014,7 @@ No parameters
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/evm/QueryBaseFeeResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">base_fee</td><td class="type-td td_text">cosmossdk_io_math.Int</td><td class="description-td td_text">base_fee is the EIP1559 base fee</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">base_fee</td><td class="type-td td_text">Int</td><td class="description-td td_text">base_fee is the EIP1559 base fee</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1097,6 +1111,7 @@ import (
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
+	"github.com/joho/godotenv"
 
 	erc20types "github.com/InjectiveLabs/sdk-go/chain/erc20/types"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -1104,6 +1119,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -1116,7 +1132,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -1201,7 +1217,7 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1219,9 +1235,9 @@ func main() {
 <tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
 <tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
 <tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
 <tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1327,6 +1343,7 @@ import (
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
+	"github.com/joho/godotenv"
 
 	erc20types "github.com/InjectiveLabs/sdk-go/chain/erc20/types"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -1334,6 +1351,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -1346,7 +1364,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -1433,7 +1451,7 @@ gas fee: 0.000066807 INJ
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1451,9 +1469,9 @@ gas fee: 0.000066807 INJ
 <tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
 <tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
 <tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
 <tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>

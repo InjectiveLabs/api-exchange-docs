@@ -7,7 +7,7 @@
   },
   {
     "Parameter": "pagination",
-    "Type": "query.PageRequest",
+    "Type": "PageRequest",
     "Description": "pagination defines an optional pagination for the request. This field is only read if the denoms field is empty.",
     "Required": "No"
   }

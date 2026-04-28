@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "time is the equivocation time."
   },
   {

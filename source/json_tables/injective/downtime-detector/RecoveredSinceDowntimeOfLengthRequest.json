@@ -7,7 +7,7 @@
   },
   {
     "Parameter": "recovery",
-    "Type": "time.Duration",
+    "Type": "Duration",
     "Description": "",
     "Required": "Yes"
   }

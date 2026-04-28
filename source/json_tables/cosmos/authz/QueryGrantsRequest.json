@@ -19,7 +19,7 @@
   },
   {
     "Parameter": "pagination",
-    "Type": "query.PageRequest",
+    "Type": "PageRequest",
     "Description": "pagination defines an pagination for the request.",
     "Required": "No"
   }

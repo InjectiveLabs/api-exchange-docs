@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "inflation",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "inflation is the current minting inflation value."
   }
 ]

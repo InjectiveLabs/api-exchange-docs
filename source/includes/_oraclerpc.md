@@ -83,7 +83,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/Coin.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">cosmossdk_io_math.Int</td><td class="description-td td_num"></td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">amount</td><td class="type-td td_text">Int</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -242,6 +242,7 @@ import (
 	"os"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 
 	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -251,6 +252,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -263,7 +265,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -390,13 +392,14 @@ async def main() -> None:
     # select network: local, testnet, mainnet
     network = Network.testnet()
     client = IndexerClient(network)
-    market = (await client.all_derivative_markets())[
-        "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
-    ]
+    market_response = await client.fetch_derivative_market(
+        market_id="0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
+    )
+    market = market_response["market"]
 
-    base_symbol = market.oracle_base
-    quote_symbol = market.oracle_quote
-    oracle_type = market.oracle_type.lower()
+    base_symbol = market["oracleBase"]
+    quote_symbol = market["oracleQuote"]
+    oracle_type = market["oracleType"].lower()
 
     task = asyncio.get_event_loop().create_task(
         client.listen_oracle_prices_updates(
@@ -431,6 +434,7 @@ import (
 	"strings"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 
 	"github.com/InjectiveLabs/sdk-go/client"
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
@@ -440,6 +444,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -452,7 +457,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -555,4 +560,266 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_oracle_rpc/StreamPricesResponse.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">The price of the oracle asset</td></tr>
 <tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Operation timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+## StreamOracleList
+
+Stream individual symbol's prices, by oracle type.
+
+**IP rate limit group:** `indexer`
+
+### Request Parameters
+> Request Example:
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/oracle_rpc/5_StreamOracleList.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/oracle_rpc/5_StreamOracleList.py -->
+```py
+import asyncio
+from typing import Any, Dict
+
+from grpc import RpcError
+
+from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
+
+
+async def oracle_list_event_processor(event: Dict[str, Any]):
+    print(event)
+
+
+def stream_error_processor(exception: RpcError):
+    print(f"There was an error listening to oracle list updates ({exception})")
+
+
+def stream_closed_processor():
+    print("The oracle list updates stream has been closed")
+
+
+async def main() -> None:
+    network = Network.testnet()
+    client = IndexerClient(network)
+
+    task = asyncio.get_event_loop().create_task(
+        client.listen_oracle_list_updates(
+            callback=oracle_list_event_processor,
+            on_end_callback=stream_closed_processor,
+            on_status_callback=stream_error_processor,
+            oracle_type="provider",
+            symbols=["TIA"],
+        )
+    )
+
+    await asyncio.sleep(delay=60)
+    task.cancel()
+
+
+if __name__ == "__main__":
+    asyncio.get_event_loop().run_until_complete(main())
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/oracle/5_StreamOracleList/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/oracle/5_StreamOracleList/example.go -->
+```go
+package main
+
+import (
+	"context"
+	"encoding/json"
+	"fmt"
+
+	"github.com/InjectiveLabs/sdk-go/client/common"
+	exchangeclient "github.com/InjectiveLabs/sdk-go/client/exchange"
+)
+
+func main() {
+	network := common.LoadNetwork("testnet", "lb")
+	exchangeClient, err := exchangeclient.NewExchangeClient(network)
+	if err != nil {
+		panic(err)
+	}
+
+	ctx := context.Background()
+
+	// Filter by oracle type; pass nil or empty slice for symbols to receive all symbols of this type.
+	oracleType := "pricefeed"
+	symbols := []string{"BTC/USDT", "ETH/USDT"}
+
+	stream, err := exchangeClient.StreamOracleList(ctx, oracleType, symbols)
+	if err != nil {
+		panic(err)
+	}
+
+	for {
+		select {
+		case <-ctx.Done():
+			return
+		default:
+			res, err := stream.Recv()
+			if err != nil {
+				fmt.Println(err)
+				return
+			}
+			str, _ := json.MarshalIndent(res, "", "\t")
+			fmt.Print(string(str))
+		}
+	}
+}
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_oracle_rpc/StreamOracleListRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Filter by oracle type</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">symbols</td><td class="type-td td_text">string array</td><td class="description-td td_text">Oracle symbols to stream; empty streams all symbols for the given oracle type</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+### Response Parameters
+> Streaming Response Example:
+
+``` python
+
+```
+
+``` go
+
+```
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_oracle_rpc/StreamOracleListResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">The symbol of the oracle asset</td></tr>
+<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle type</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">The price of the oracle asset</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Operation timestamp in UNIX millis.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+## StreamPricesByMarket
+
+Stream new price changes for the specified markets.
+
+**IP rate limit group:** `indexer`
+
+### Request Parameters
+> Request Example:
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/exchange_client/oracle_rpc/6_StreamPricesByMarkets.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/exchange_client/oracle_rpc/6_StreamPricesByMarkets.py -->
+```py
+import asyncio
+from typing import Any, Dict
+
+from grpc import RpcError
+
+from pyinjective.core.network import Network
+from pyinjective.indexer_client import IndexerClient
+
+
+async def price_event_processor(event: Dict[str, Any]):
+    print(event)
+
+
+def stream_error_processor(exception: RpcError):
+    print(f"There was an error listening to oracle prices by markets updates ({exception})")
+
+
+def stream_closed_processor():
+    print("The oracle prices by markets updates stream has been closed")
+
+
+async def main() -> None:
+    network = Network.testnet()
+    client = IndexerClient(network)
+    market_id = "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
+
+    task = asyncio.get_event_loop().create_task(
+        client.listen_oracle_prices_by_markets_updates(
+            market_ids=[market_id],
+            callback=price_event_processor,
+            on_end_callback=stream_closed_processor,
+            on_status_callback=stream_error_processor,
+        )
+    )
+
+    await asyncio.sleep(delay=60)
+    task.cancel()
+
+
+if __name__ == "__main__":
+    asyncio.get_event_loop().run_until_complete(main())
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/exchange/oracle/6_StreamPricesByMarkets/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/exchange/oracle/6_StreamPricesByMarkets/example.go -->
+```go
+package main
+
+import (
+	"context"
+	"encoding/json"
+	"fmt"
+
+	"github.com/InjectiveLabs/sdk-go/client/common"
+	exchangeclient "github.com/InjectiveLabs/sdk-go/client/exchange"
+)
+
+func main() {
+	network := common.LoadNetwork("testnet", "lb")
+	exchangeClient, err := exchangeclient.NewExchangeClient(network)
+	if err != nil {
+		panic(err)
+	}
+
+	ctx := context.Background()
+
+	// Pass an empty slice to receive price updates for all markets.
+	marketIds := []string{
+		"0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6", // INJ/USDT perp
+		"0x54d4505adef6a5cef26bc403a33d595620ded4e15b9e2bc3dd489b714813366a", // BTC/USDT perp
+	}
+
+	stream, err := exchangeClient.StreamPricesByMarkets(ctx, marketIds)
+	if err != nil {
+		panic(err)
+	}
+
+	for {
+		select {
+		case <-ctx.Done():
+			return
+		default:
+			res, err := stream.Recv()
+			if err != nil {
+				fmt.Println(err)
+				return
+			}
+			str, _ := json.MarshalIndent(res, "", "\t")
+			fmt.Print(string(str))
+		}
+	}
+}
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_oracle_rpc/StreamPricesByMarketsRequest.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_ids</td><td class="type-td td_text">string array</td><td class="description-td td_text">marketIDs to stream price for, empty to listen for all prices</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+### Response Parameters
+> Streaming Response Example:
+
+``` python
+
+```
+
+``` go
+
+```
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/indexer/injective_oracle_rpc/StreamPricesByMarketsResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">string</td><td class="description-td td_text">The price of the oracle asset</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">Operation timestamp in UNIX millis.</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">marketID that the price has been updated</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->

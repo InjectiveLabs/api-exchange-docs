@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "annual_provisions",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "annual_provisions is the current minting annual provisions value."
   }
 ]

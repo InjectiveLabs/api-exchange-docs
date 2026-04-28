@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "prepare_proposal",
-    "Type": "v1beta2.ResponsePrepareProposal",
+    "Type": "ResponsePrepareProposal",
     "Description": ""
   }
 ]

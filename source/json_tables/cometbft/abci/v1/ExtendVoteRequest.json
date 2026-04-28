@@ -13,7 +13,7 @@
   },
   {
     "Parameter": "time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "info of the block that this vote may be referring to",
     "Required": "Yes"
   },

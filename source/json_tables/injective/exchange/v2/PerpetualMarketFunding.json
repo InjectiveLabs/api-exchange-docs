@@ -1,12 +1,12 @@
 [
   {
     "Parameter": "cumulative_funding",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "cumulative_funding defines the cumulative funding of a perpetual market."
   },
   {
     "Parameter": "cumulative_price",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "cumulative_price defines the running time-integral of the perp premium ((VWAP - mark_price) / mark_price) i.e., sum(premium * seconds) used to compute the interval’s average premium for funding"
   },
   {

@@ -6,17 +6,17 @@
   },
   {
     "Parameter": "completion_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "completion_time is the unix time for unbonding completion."
   },
   {
     "Parameter": "initial_balance",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "initial_balance defines the tokens initially scheduled to receive at completion."
   },
   {
     "Parameter": "balance",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "balance defines the tokens to receive at completion."
   },
   {

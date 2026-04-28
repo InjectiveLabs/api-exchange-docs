@@ -10,11 +10,6 @@
     "Description": ""
   },
   {
-    "Parameter": "accept_unverified_chainlink_data_streams_reports",
-    "Type": "bool",
-    "Description": ""
-  },
-  {
     "Parameter": "chainlink_data_streams_verification_gas_limit",
     "Type": "uint64",
     "Description": ""

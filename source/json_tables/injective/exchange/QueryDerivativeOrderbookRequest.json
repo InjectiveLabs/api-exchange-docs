@@ -13,7 +13,7 @@
   },
   {
     "Parameter": "limit_cumulative_notional",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "",
     "Required": "No"
   }

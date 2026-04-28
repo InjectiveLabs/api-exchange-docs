@@ -52,9 +52,11 @@ import (
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -67,7 +69,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -177,21 +179,21 @@ func main() {
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">ticker</td><td class="type-td td_text">string</td><td class="description-td td_text">Ticker for the derivative contract.</td></tr>
 <tr ><td class="parameter-td td_text">oracle_symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle symbol</td></tr>
 <tr ><td class="parameter-td td_text">oracle_provider</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle Provider</td></tr>
-<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">types.OracleType</td><td class="description-td td_text">Oracle type</td></tr>
+<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">OracleType</td><td class="description-td td_text">Oracle type</td></tr>
 <tr ><td class="parameter-td td_text">oracle_scale_factor</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Scale factor for oracle prices.</td></tr>
 <tr ><td class="parameter-td td_text">expiration_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration timestamp</td></tr>
 <tr ><td class="parameter-td td_text">settlement_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration timestamp</td></tr>
 <tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">string</td><td class="description-td td_text">admin of the market</td></tr>
 <tr ><td class="parameter-td td_text">quote_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of the quote currency denomination for the binary options contract</td></tr>
 <tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">Unique market ID.</td></tr>
-<tr ><td class="parameter-td td_text">maker_fee_rate</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">maker_fee_rate defines the maker fee rate of a binary options market</td></tr>
-<tr ><td class="parameter-td td_text">taker_fee_rate</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">taker_fee_rate defines the taker fee rate of a derivative market</td></tr>
-<tr ><td class="parameter-td td_text">relayer_fee_share_rate</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">relayer_fee_share_rate defines the percentage of the transaction fee shared with the relayer in a derivative market</td></tr>
+<tr ><td class="parameter-td td_text">maker_fee_rate</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">maker_fee_rate defines the maker fee rate of a binary options market</td></tr>
+<tr ><td class="parameter-td td_text">taker_fee_rate</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">taker_fee_rate defines the taker fee rate of a derivative market</td></tr>
+<tr ><td class="parameter-td td_text">relayer_fee_share_rate</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">relayer_fee_share_rate defines the percentage of the transaction fee shared with the relayer in a derivative market</td></tr>
 <tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">MarketStatus</td><td class="description-td td_text">Status of the market</td></tr>
-<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_price_tick_size defines the minimum tick size that the price and margin required for orders in the market (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_quantity_tick_size defines the minimum tick size of the quantity required for orders in the market (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">settlement_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">settlement_price defines the settlement price of the binary options market (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">min_price_tick_size defines the minimum tick size that the price and margin required for orders in the market (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">min_quantity_tick_size defines the minimum tick size of the quantity required for orders in the market (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">settlement_price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">settlement_price defines the settlement price of the binary options market (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market (in human readable format)</td></tr>
 <tr ><td class="parameter-td td_text">admin_permissions</td><td class="type-td td_text">uint32</td><td class="description-td td_text">level of admin permissions</td></tr>
 <tr ><td class="parameter-td td_text">quote_decimals</td><td class="type-td td_text">uint32</td><td class="description-td td_text">quote token decimals</td></tr>
 <tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the maximum open notional for the market</td></tr>
@@ -254,7 +256,7 @@ func main() {
 **OpenNotionalCapCapped**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCapCapped.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -263,7 +265,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/ForcePausedInfo.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">reason</td><td class="type-td td_text">ForcePausedReason</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">mark_price_at_pausing</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">mark_price_at_pausing</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -296,6 +298,7 @@ import (
 
 	"cosmossdk.io/math"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 
 	exchangev2types "github.com/InjectiveLabs/sdk-go/chain/exchange/types/v2"
 	oracletypes "github.com/InjectiveLabs/sdk-go/chain/oracle/types"
@@ -304,6 +307,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -316,7 +320,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -398,17 +402,17 @@ func main() {
 <tr ><td class="parameter-td td_text">ticker</td><td class="type-td td_text">string</td><td class="description-td td_text">Ticker for the derivative contract.</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">oracle_symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle symbol</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">oracle_provider</td><td class="type-td td_text">string</td><td class="description-td td_text">Oracle Provider</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">types1.OracleType</td><td class="description-td td_text">Oracle type</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">oracle_type</td><td class="type-td td_text">OracleType</td><td class="description-td td_text">Oracle type</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">oracle_scale_factor</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Scale factor for oracle prices.</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">maker_fee_rate</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">maker_fee_rate defines the trade fee rate for makers on the perpetual market</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">taker_fee_rate</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">taker_fee_rate defines the trade fee rate for takers on the perpetual market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">maker_fee_rate</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">maker_fee_rate defines the trade fee rate for makers on the perpetual market</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">taker_fee_rate</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">taker_fee_rate defines the trade fee rate for takers on the perpetual market</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">expiration_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration timestamp</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">settlement_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration timestamp</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">admin</td><td class="type-td td_text">string</td><td class="description-td td_text">admin of the market</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">quote_denom</td><td class="type-td td_text">string</td><td class="description-td td_text">Address of the quote currency denomination for the binary options contract</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_price_tick_size defines the minimum tick size that the price and margin required for orders in the market (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_quantity_tick_size defines the minimum tick size of the quantity required for orders in the market (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">min_price_tick_size</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">min_price_tick_size defines the minimum tick size that the price and margin required for orders in the market (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">min_quantity_tick_size defines the minimum tick size of the quantity required for orders in the market (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the cap on the open notional</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -454,7 +458,7 @@ func main() {
 **OpenNotionalCapCapped**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OpenNotionalCapCapped.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">value</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### Response Parameters
@@ -465,7 +469,7 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -483,9 +487,9 @@ func main() {
 <tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
 <tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
 <tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
 <tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -597,8 +601,8 @@ if __name__ == "__main__":
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market_id represents the unique ID of the market</td></tr>
 <tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">order_info contains the information of the order</td></tr>
 <tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">order types</td></tr>
-<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">margin is the margin used by the limit order (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">margin is the margin used by the limit order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)</td></tr>
 <tr ><td class="parameter-td td_text">expiration_block</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration block is the block number at which the order will expire</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -609,8 +613,8 @@ if __name__ == "__main__":
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderInfo.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">bytes32 subaccount ID that created the order</td></tr>
 <tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">address fee_recipient address that will receive fees for the order</td></tr>
-<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">price of the order (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">quantity of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">price of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">quantity of the order (in human readable format)</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID (optional)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -652,7 +656,7 @@ gas fee: 0.0000606245 INJ
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -670,9 +674,9 @@ gas fee: 0.0000606245 INJ
 <tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
 <tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
 <tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
 <tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -783,8 +787,8 @@ if __name__ == "__main__":
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market_id represents the unique ID of the market</td></tr>
 <tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">order_info contains the information of the order</td></tr>
 <tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">order types</td></tr>
-<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">margin is the margin used by the limit order (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">margin is the margin used by the limit order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)</td></tr>
 <tr ><td class="parameter-td td_text">expiration_block</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration block is the block number at which the order will expire</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -795,8 +799,8 @@ if __name__ == "__main__":
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderInfo.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">bytes32 subaccount ID that created the order</td></tr>
 <tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">address fee_recipient address that will receive fees for the order</td></tr>
-<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">price of the order (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">quantity of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">price of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">quantity of the order (in human readable format)</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID (optional)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -838,7 +842,7 @@ gas fee: 0.0000539515 INJ
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -856,9 +860,9 @@ gas fee: 0.0000539515 INJ
 <tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
 <tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
 <tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
 <tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -994,7 +998,7 @@ gas fee: 0.0000556515 INJ
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1012,9 +1016,9 @@ gas fee: 0.0000556515 INJ
 <tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
 <tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
 <tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
 <tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1114,7 +1118,7 @@ if __name__ == "__main__":
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MsgAdminUpdateBinaryOptionsMarket.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">The sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">The market ID</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">settlement_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">new price at which market will be settled</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">settlement_price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">new price at which market will be settled</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">expiration_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration timestamp</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">settlement_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration timestamp</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">status</td><td class="type-td td_text">MarketStatus</td><td class="description-td td_text">Status of the market</td><td class="required-td td_text">Yes</td></tr></tbody></table>
@@ -1150,7 +1154,7 @@ gas fee: 0.0000556515 INJ
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1168,9 +1172,9 @@ gas fee: 0.0000556515 INJ
 <tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
 <tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
 <tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
 <tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1391,6 +1395,7 @@ import (
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 	"github.com/google/uuid"
+	"github.com/joho/godotenv"
 	"github.com/shopspring/decimal"
 
 	exchangev2types "github.com/InjectiveLabs/sdk-go/chain/exchange/types/v2"
@@ -1399,6 +1404,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -1411,7 +1417,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -1581,7 +1587,7 @@ func main() {
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market_id represents the unique ID of the market</td></tr>
 <tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">order_info contains the information of the order</td></tr>
 <tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">order types</td></tr>
-<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)</td></tr>
 <tr ><td class="parameter-td td_text">expiration_block</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration block is the block number at which the order will expire</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1593,8 +1599,8 @@ func main() {
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market_id represents the unique ID of the market</td></tr>
 <tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">order_info contains the information of the order</td></tr>
 <tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">order types</td></tr>
-<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">margin is the margin used by the limit order (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">margin is the margin used by the limit order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)</td></tr>
 <tr ><td class="parameter-td td_text">expiration_block</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration block is the block number at which the order will expire</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1620,8 +1626,8 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderInfo.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">bytes32 subaccount ID that created the order</td></tr>
 <tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">address fee_recipient address that will receive fees for the order</td></tr>
-<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">price of the order (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">quantity of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">price of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">quantity of the order (in human readable format)</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID (optional)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1676,7 +1682,7 @@ gas fee: 0.000329546 INJ
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">types.TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1694,9 +1700,9 @@ gas fee: 0.000329546 INJ
 <tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
 <tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
 <tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
-<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">types.Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
 <tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
-<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">v1.Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>

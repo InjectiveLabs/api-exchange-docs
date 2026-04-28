@@ -34,5 +34,11 @@
     "Type": "int32",
     "Description": "Number of bars (higher priority than from) starting with to. If countback is set, from should be ignored.",
     "Required": "Yes"
+  },
+  {
+    "Parameter": "use_oracle_prices",
+    "Type": "bool",
+    "Description": "Use oracle prices as fallback for missing derivative candles.",
+    "Required": "Yes"
   }
 ]

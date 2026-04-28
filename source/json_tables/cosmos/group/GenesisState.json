@@ -2,7 +2,7 @@
   {
     "Parameter": "group_seq",
     "Type": "uint64",
-    "Description": "group_seq is the group table orm.Sequence, it is used to get the next group ID."
+    "Description": "group_seq is the group table sequence, it is used to get the next group ID."
   },
   {
     "Parameter": "groups",
@@ -17,7 +17,7 @@
   {
     "Parameter": "group_policy_seq",
     "Type": "uint64",
-    "Description": "group_policy_seq is the group policy table orm.Sequence, it is used to generate the next group policy account address."
+    "Description": "group_policy_seq is the group policy table sequence, it is used to generate the next group policy account address."
   },
   {
     "Parameter": "group_policies",
@@ -27,7 +27,7 @@
   {
     "Parameter": "proposal_seq",
     "Type": "uint64",
-    "Description": "proposal_seq is the proposal table orm.Sequence, it is used to get the next proposal ID."
+    "Description": "proposal_seq is the proposal table sequence, it is used to get the next proposal ID."
   },
   {
     "Parameter": "proposals",

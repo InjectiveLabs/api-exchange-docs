@@ -13,7 +13,7 @@
   },
   {
     "Parameter": "decision_policy",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "decision_policy is the updated group policy's decision policy.",
     "Required": "No"
   }

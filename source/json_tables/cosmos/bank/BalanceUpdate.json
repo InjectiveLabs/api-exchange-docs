@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "amt",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "the latest amount"
   }
 ]

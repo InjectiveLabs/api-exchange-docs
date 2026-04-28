@@ -6,17 +6,17 @@
   },
   {
     "Parameter": "completion_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "completion_time defines the unix time for redelegation completion."
   },
   {
     "Parameter": "initial_balance",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "initial_balance defines the initial balance when redelegation started."
   },
   {
     "Parameter": "shares_dst",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "shares_dst is the amount of destination-validator shares created by redelegation."
   },
   {

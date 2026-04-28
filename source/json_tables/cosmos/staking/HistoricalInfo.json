@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "header",
-    "Type": "v1.Header",
+    "Type": "Header",
     "Description": ""
   },
   {

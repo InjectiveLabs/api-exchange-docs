@@ -1,0 +1,82 @@
+[
+  {
+    "Parameter": "rfq_id",
+    "Type": "uint64",
+    "Description": "RFQ ID"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID"
+  },
+  {
+    "Parameter": "taker",
+    "Type": "string",
+    "Description": "Taker address"
+  },
+  {
+    "Parameter": "direction",
+    "Type": "string",
+    "Description": "Direction (long/short)"
+  },
+  {
+    "Parameter": "margin",
+    "Type": "string",
+    "Description": "Margin amount"
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "string",
+    "Description": "Quantity"
+  },
+  {
+    "Parameter": "worst_price",
+    "Type": "string",
+    "Description": "Worst acceptable price"
+  },
+  {
+    "Parameter": "unfilled_action",
+    "Type": "RFQSettlementUnfilledActionType",
+    "Description": "Unfilled action details"
+  },
+  {
+    "Parameter": "fallback_quantity",
+    "Type": "string",
+    "Description": "Fallback quantity"
+  },
+  {
+    "Parameter": "fallback_margin",
+    "Type": "string",
+    "Description": "Fallback margin"
+  },
+  {
+    "Parameter": "transaction_time",
+    "Type": "uint64",
+    "Description": "Transaction time timestamp"
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "int64",
+    "Description": "Creation timestamp"
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "Last update timestamp"
+  },
+  {
+    "Parameter": "event_time",
+    "Type": "uint64",
+    "Description": "Event time timestamp"
+  },
+  {
+    "Parameter": "height",
+    "Type": "uint64",
+    "Description": "Block height"
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "Settlement CID"
+  }
+]

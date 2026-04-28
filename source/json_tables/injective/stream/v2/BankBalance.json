@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "balances",
-    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Type": "Coins",
     "Description": "list of account balances"
   }
 ]

@@ -78,5 +78,15 @@
     "Parameter": "rate_limits",
     "Type": "RateLimit array",
     "Description": ""
+  },
+  {
+    "Parameter": "rate_limit_transfers",
+    "Type": "RateLimitTransfers array",
+    "Description": ""
+  },
+  {
+    "Parameter": "mint_amounts",
+    "Type": "MintAmount array",
+    "Description": ""
   }
 ]

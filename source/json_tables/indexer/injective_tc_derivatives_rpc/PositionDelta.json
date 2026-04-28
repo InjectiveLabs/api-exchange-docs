@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "trade_direction",
+    "Type": "string",
+    "Description": "The direction the trade"
+  },
+  {
+    "Parameter": "execution_price",
+    "Type": "string",
+    "Description": "Execution Price of the trade."
+  },
+  {
+    "Parameter": "execution_quantity",
+    "Type": "string",
+    "Description": "Execution Quantity of the trade."
+  },
+  {
+    "Parameter": "execution_margin",
+    "Type": "string",
+    "Description": "Execution Margin of the trade."
+  }
+]

@@ -6,17 +6,17 @@
   },
   {
     "Parameter": "evidence",
-    "Type": "v1beta1.EvidenceParams",
+    "Type": "EvidenceParams",
     "Description": ""
   },
   {
     "Parameter": "validator",
-    "Type": "v1beta1.ValidatorParams",
+    "Type": "ValidatorParams",
     "Description": ""
   },
   {
     "Parameter": "version",
-    "Type": "v1beta1.VersionParams",
+    "Type": "VersionParams",
     "Description": ""
   }
 ]

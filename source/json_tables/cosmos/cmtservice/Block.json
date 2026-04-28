@@ -6,17 +6,17 @@
   },
   {
     "Parameter": "data",
-    "Type": "v1.Data",
+    "Type": "Data",
     "Description": ""
   },
   {
     "Parameter": "evidence",
-    "Type": "v1.EvidenceList",
+    "Type": "EvidenceList",
     "Description": ""
   },
   {
     "Parameter": "last_commit",
-    "Type": "v1.Commit",
+    "Type": "Commit",
     "Description": ""
   }
 ]

@@ -7,7 +7,7 @@
   },
   {
     "Parameter": "pagination",
-    "Type": "query.PageRequest",
+    "Type": "PageRequest",
     "Description": "pagination defines an optional pagination for the request.",
     "Required": "No"
   }

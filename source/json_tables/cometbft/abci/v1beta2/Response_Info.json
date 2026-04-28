@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "info",
-    "Type": "v1beta1.ResponseInfo",
+    "Type": "ResponseInfo",
     "Description": ""
   }
 ]

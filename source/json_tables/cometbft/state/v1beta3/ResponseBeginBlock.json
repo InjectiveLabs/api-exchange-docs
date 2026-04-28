@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "events",
-    "Type": "v1beta2.Event array",
+    "Type": "Event array",
     "Description": ""
   }
 ]

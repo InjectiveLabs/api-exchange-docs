@@ -1,12 +1,12 @@
 [
   {
     "Parameter": "consensus_params",
-    "Type": "v1beta2.ConsensusParams",
+    "Type": "ConsensusParams",
     "Description": ""
   },
   {
     "Parameter": "validators",
-    "Type": "v1beta1.ValidatorUpdate array",
+    "Type": "ValidatorUpdate array",
     "Description": ""
   },
   {

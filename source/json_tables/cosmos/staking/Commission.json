@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "update_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "update_time is the last time the commission rate was changed."
   }
 ]

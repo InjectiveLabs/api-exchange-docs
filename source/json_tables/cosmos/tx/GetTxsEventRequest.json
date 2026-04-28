@@ -7,7 +7,7 @@
   },
   {
     "Parameter": "pagination",
-    "Type": "query.PageRequest",
+    "Type": "PageRequest",
     "Description": "pagination defines a pagination for the request. Deprecated post v0.46.x: use page and limit instead.",
     "Required": "No"
   },

@@ -7,7 +7,7 @@
   },
   {
     "Parameter": "metadata",
-    "Type": "types1.Metadata",
+    "Type": "Metadata",
     "Description": "The metadata",
     "Required": "Yes"
   },

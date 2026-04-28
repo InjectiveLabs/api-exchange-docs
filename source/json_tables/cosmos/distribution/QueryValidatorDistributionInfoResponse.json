@@ -6,12 +6,12 @@
   },
   {
     "Parameter": "self_bond_rewards",
-    "Type": "github_com_cosmos_cosmos_sdk_types.DecCoins",
+    "Type": "DecCoins",
     "Description": "self_bond_rewards defines the self delegations rewards."
   },
   {
     "Parameter": "commission",
-    "Type": "github_com_cosmos_cosmos_sdk_types.DecCoins",
+    "Type": "DecCoins",
     "Description": "commission defines the commission the validator received."
   }
 ]

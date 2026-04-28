@@ -11,12 +11,12 @@
   },
   {
     "Parameter": "events",
-    "Type": "v1.Event array",
+    "Type": "Event array",
     "Description": "Events contains a slice of Event objects that were emitted during message or handler execution."
   },
   {
     "Parameter": "msg_responses",
-    "Type": "types.Any array",
+    "Type": "Any array",
     "Description": "msg_responses contains the Msg handler responses type packed in Anys.  Since: cosmos-sdk 0.46"
   }
 ]

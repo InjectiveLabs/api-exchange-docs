@@ -11,17 +11,17 @@
   },
   {
     "Parameter": "available",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the available balance"
   },
   {
     "Parameter": "total",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the total balance"
   },
   {
     "Parameter": "balance_hold",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the balance on hold"
   }
 ]

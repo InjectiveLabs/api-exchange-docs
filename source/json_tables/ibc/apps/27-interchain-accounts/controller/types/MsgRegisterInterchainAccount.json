@@ -19,7 +19,7 @@
   },
   {
     "Parameter": "ordering",
-    "Type": "types.Order",
+    "Type": "Order",
     "Description": "",
     "Required": "Yes"
   }

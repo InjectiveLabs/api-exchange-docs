@@ -16,7 +16,7 @@
   },
   {
     "Parameter": "reward_amount",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": ""
   },
   {

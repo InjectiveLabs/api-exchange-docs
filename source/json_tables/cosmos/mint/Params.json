@@ -6,22 +6,22 @@
   },
   {
     "Parameter": "inflation_rate_change",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "maximum annual change in inflation rate"
   },
   {
     "Parameter": "inflation_max",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "maximum inflation rate"
   },
   {
     "Parameter": "inflation_min",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "minimum inflation rate"
   },
   {
     "Parameter": "goal_bonded",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "goal of percent bonded atoms"
   },
   {

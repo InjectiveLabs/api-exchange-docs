@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "client_state",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "client state associated with the request identifier"
   },
   {

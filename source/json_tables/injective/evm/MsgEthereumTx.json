@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "data",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "data is inner transaction data of the Ethereum transaction",
     "Required": "No"
   },

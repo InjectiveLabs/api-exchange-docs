@@ -13,13 +13,13 @@
   },
   {
     "Parameter": "base_amount",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the base amount to cancel (free up)",
     "Required": "Yes"
   },
   {
     "Parameter": "quote_amount",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the quote amount to cancel (free up)",
     "Required": "Yes"
   },
@@ -31,7 +31,7 @@
   },
   {
     "Parameter": "reference_price",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "The reference price for the cancellation strategy, e.g. mid price or mark price",
     "Required": "No"
   }

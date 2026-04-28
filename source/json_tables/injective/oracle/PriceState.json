@@ -1,12 +1,12 @@
 [
   {
     "Parameter": "price",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   },
   {
     "Parameter": "cumulative_price",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   },
   {

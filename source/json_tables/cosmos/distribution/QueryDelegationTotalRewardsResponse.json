@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "total",
-    "Type": "github_com_cosmos_cosmos_sdk_types.DecCoins",
+    "Type": "DecCoins",
     "Description": "total defines the sum of all the rewards."
   }
 ]

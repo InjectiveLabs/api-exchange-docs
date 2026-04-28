@@ -31,7 +31,7 @@
   },
   {
     "Parameter": "oracle_type",
-    "Type": "types.OracleType",
+    "Type": "OracleType",
     "Description": "Oracle type of the binary options or derivative market",
     "Required": "Yes"
   },
@@ -43,7 +43,7 @@
   },
   {
     "Parameter": "initial_deposit",
-    "Type": "types1.Coin",
+    "Type": "Coin",
     "Description": "Initial deposit of the insurance fund",
     "Required": "Yes"
   }

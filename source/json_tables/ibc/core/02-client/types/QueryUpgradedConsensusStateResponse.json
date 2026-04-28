@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "upgraded_consensus_state",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "Consensus state associated with the request identifier"
   }
 ]

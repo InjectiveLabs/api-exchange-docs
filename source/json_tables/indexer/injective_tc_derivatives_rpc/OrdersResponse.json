@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "orders",
+    "Type": "DerivativeLimitOrder array",
+    "Description": "List of derivative limit orders"
+  },
+  {
+    "Parameter": "next",
+    "Type": "string array",
+    "Description": "Next tokens for pagination"
+  }
+]

@@ -11,17 +11,17 @@
   },
   {
     "Parameter": "redemption_notice_period_duration",
-    "Type": "time.Duration",
+    "Type": "Duration",
     "Description": "redemption_notice_period_duration defines the minimum notice period duration that must pass after an underwriter sends a redemption request before the underwriter can claim his tokens"
   },
   {
     "Parameter": "balance",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "balance of fund"
   },
   {
     "Parameter": "total_share",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "total share tokens minted"
   },
   {
@@ -46,7 +46,7 @@
   },
   {
     "Parameter": "oracle_type",
-    "Type": "types.OracleType",
+    "Type": "OracleType",
     "Description": "Oracle type of the binary options or derivative market"
   },
   {

@@ -21,7 +21,7 @@
   },
   {
     "Parameter": "data",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "data is an app specific data of the NFT. Optional"
   }
 ]

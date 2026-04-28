@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "amount",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "Amount of tokens withdrawn to Ethereum"
   }
 ]

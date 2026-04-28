@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "gas_price",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "gas_price defines the value for each gas unit"
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "Parameter": "value",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "value defines the unsigned integer value of the transaction amount."
   },
   {

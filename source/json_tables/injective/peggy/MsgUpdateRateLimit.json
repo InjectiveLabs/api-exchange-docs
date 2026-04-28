@@ -19,7 +19,7 @@
   },
   {
     "Parameter": "new_rate_limit_usd",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "new_rate_limit_usd is the new notional limit (on withdrawals) in USD",
     "Required": "Yes"
   },

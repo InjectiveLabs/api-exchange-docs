@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "Required. The token denom to look up.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "Required. The bech32 address of the voucher holder.",
+    "Required": "Yes"
+  }
+]

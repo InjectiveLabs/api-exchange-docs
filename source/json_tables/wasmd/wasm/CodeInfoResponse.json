@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "data_hash",
-    "Type": "github_com_cometbft_cometbft_libs_bytes.HexBytes",
+    "Type": "HexBytes",
     "Description": ""
   },
   {

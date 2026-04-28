@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "consensus_state",
-    "Type": "types1.Any",
+    "Type": "Any",
     "Description": "consensus state associated with the channel"
   },
   {
@@ -16,7 +16,7 @@
   },
   {
     "Parameter": "proof_height",
-    "Type": "types.Height",
+    "Type": "Height",
     "Description": "height at which the proof was retrieved"
   }
 ]

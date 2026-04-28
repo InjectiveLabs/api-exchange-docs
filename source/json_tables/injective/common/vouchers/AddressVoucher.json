@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "The bech32 address of the voucher holder."
+  },
+  {
+    "Parameter": "voucher",
+    "Type": "Coin",
+    "Description": "The outstanding voucher coin."
+  }
+]

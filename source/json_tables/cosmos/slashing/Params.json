@@ -6,22 +6,22 @@
   },
   {
     "Parameter": "min_signed_per_window",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   },
   {
     "Parameter": "downtime_jail_duration",
-    "Type": "time.Duration",
+    "Type": "Duration",
     "Description": ""
   },
   {
     "Parameter": "slash_fraction_double_sign",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   },
   {
     "Parameter": "slash_fraction_downtime",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   }
 ]

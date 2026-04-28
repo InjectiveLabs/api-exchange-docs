@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "message_type",
+    "Type": "string",
+    "Description": "Type: 'request', 'ping', 'conditional_order'",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "request",
+    "Type": "CreateRFQRequestType",
+    "Description": "RFQ request to create",
+    "Required": "No"
+  },
+  {
+    "Parameter": "conditional_order",
+    "Type": "ConditionalOrderInput",
+    "Description": "Conditional order to create",
+    "Required": "No"
+  },
+  {
+    "Parameter": "conditional_order_signature",
+    "Type": "string",
+    "Description": "Signature for the conditional order",
+    "Required": "Yes"
+  }
+]

@@ -11,12 +11,12 @@
   },
   {
     "Parameter": "type",
-    "Type": "v1beta1.SignedMsgType",
+    "Type": "SignedMsgType",
     "Description": ""
   },
   {
     "Parameter": "block_id",
-    "Type": "v1beta1.BlockID",
+    "Type": "BlockID",
     "Description": ""
   }
 ]

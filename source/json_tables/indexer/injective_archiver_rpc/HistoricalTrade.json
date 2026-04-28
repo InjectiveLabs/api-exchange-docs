@@ -47,7 +47,7 @@
   {
     "Parameter": "execution_side",
     "Type": "string",
-    "Description": "Trade's execution side, maker/taker"
+    "Description": "Trade's execution side, maker,taker,n/a (n/a = not applicable)"
   },
   {
     "Parameter": "usd_value",
@@ -68,5 +68,20 @@
     "Parameter": "trade_id",
     "Type": "string",
     "Description": "Unique trade ID"
+  },
+  {
+    "Parameter": "execution_type",
+    "Type": "string",
+    "Description": "The execution type of the trade"
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "Client-provided unique identifier for the order"
+  },
+  {
+    "Parameter": "funding_rate",
+    "Type": "string",
+    "Description": "The funding rate at the time of the trade execution, applicable only for derivative trades"
   }
 ]

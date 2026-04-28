@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "proposals",
-    "Type": "types1.CommunityPoolSpendProposal array",
+    "Type": "CommunityPoolSpendProposal array",
     "Description": ""
   }
 ]

@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "denom filter; empty string returns all vouchers",
+    "Required": "Yes"
+  }
+]

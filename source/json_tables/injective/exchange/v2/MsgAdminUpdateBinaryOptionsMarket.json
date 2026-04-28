@@ -13,7 +13,7 @@
   },
   {
     "Parameter": "settlement_price",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "new price at which market will be settled",
     "Required": "No"
   },

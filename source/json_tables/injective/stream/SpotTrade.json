@@ -16,12 +16,12 @@
   },
   {
     "Parameter": "quantity",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the quantity of the trade"
   },
   {
     "Parameter": "price",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the price of the trade"
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "Parameter": "fee",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the fee of the trade"
   },
   {

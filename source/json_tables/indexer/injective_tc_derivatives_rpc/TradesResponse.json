@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "trades",
+    "Type": "TCDerivativeTrade array",
+    "Description": "Trades of TC Derivative Markets"
+  },
+  {
+    "Parameter": "next",
+    "Type": "string array",
+    "Description": "Next tokens for pagination"
+  }
+]

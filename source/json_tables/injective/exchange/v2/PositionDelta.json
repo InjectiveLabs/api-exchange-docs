@@ -6,17 +6,17 @@
   },
   {
     "Parameter": "execution_quantity",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   },
   {
     "Parameter": "execution_margin",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   },
   {
     "Parameter": "execution_price",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   }
 ]

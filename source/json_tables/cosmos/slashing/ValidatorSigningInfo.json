@@ -16,7 +16,7 @@
   },
   {
     "Parameter": "jailed_until",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "Timestamp until which the validator is jailed due to liveness downtime."
   },
   {

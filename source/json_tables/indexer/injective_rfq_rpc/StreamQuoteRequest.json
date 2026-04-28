@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "addresses",
+    "Type": "string array",
+    "Description": "Filter by addresses",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_ids",
+    "Type": "string array",
+    "Description": "Filter by market IDs",
+    "Required": "Yes"
+  }
+]

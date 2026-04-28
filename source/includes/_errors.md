@@ -75,34 +75,6 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">capability</td><td class="error-code-td td_num">8</td><td class="description-td td_text">owners not found for capability</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## Chainlink module
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/chainlink_errors.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="module-name-th">module_name</th><th class="error-code-th">error_code</th><th class="description-th">description</th></tr></thead><tbody ><tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">1</td><td class="description-td td_text">stale report</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">2</td><td class="description-td td_text">incomplete proposal</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">3</td><td class="description-td td_text">repeated oracle address</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">4</td><td class="description-td td_text">too many signers</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">5</td><td class="description-td td_text">incorrect config</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">6</td><td class="description-td td_text">config digest doesn't match</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">7</td><td class="description-td td_text">wrong number of signatures</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">8</td><td class="description-td td_text">incorrect signature</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">9</td><td class="description-td td_text">no transmitter specified</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">10</td><td class="description-td td_text">incorrect transmission data</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">11</td><td class="description-td td_text">no transmissions found</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">12</td><td class="description-td td_text">median value is out of bounds</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">13</td><td class="description-td td_text">LINK denom doesn't match</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">14</td><td class="description-td td_text">Reward Pool doesn't exist</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">15</td><td class="description-td td_text">wrong number of payees and transmitters</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">16</td><td class="description-td td_text">action is restricted to the module admin</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">17</td><td class="description-td td_text">feed already exists</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">19</td><td class="description-td td_text">feed doesnt exists</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">20</td><td class="description-td td_text">action is admin-restricted</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">21</td><td class="description-td td_text">insufficient reward pool</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">22</td><td class="description-td td_text">payee already set</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">23</td><td class="description-td td_text">action is payee-restricted</td></tr>
-<tr ><td class="module-name-td td_text">chainlink</td><td class="error-code-td td_num">24</td><td class="description-td td_text">feed config not found</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
 ## Channel module
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/channel_errors.json) -->
@@ -281,7 +253,8 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">evm</td><td class="error-code-td td_num">21</td><td class="description-td td_text">account type is not a valid ethereum account</td></tr>
 <tr ><td class="module-name-td td_text">evm</td><td class="error-code-td td_num">22</td><td class="description-td td_text">invalid gas limit</td></tr>
 <tr ><td class="module-name-td td_text">evm</td><td class="error-code-td td_num">23</td><td class="description-td td_text">failed to apply state override</td></tr>
-<tr ><td class="module-name-td td_text">evm</td><td class="error-code-td td_num">24</td><td class="description-td td_text">EVM Create operation is not authorized for user</td></tr></tbody></table>
+<tr ><td class="module-name-td td_text">evm</td><td class="error-code-td td_num">24</td><td class="description-td td_text">EVM Create operation is not authorized for user</td></tr>
+<tr ><td class="module-name-td td_text">evm</td><td class="error-code-td td_num">25</td><td class="description-td td_text">address is not allowed to receive funds</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Exchange module
@@ -306,7 +279,6 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">17</td><td class="description-td td_text">invalid quantity</td></tr>
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">18</td><td class="description-td td_text">unsupported oracle type</td></tr>
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">19</td><td class="description-td td_text">order doesnt exist</td></tr>
-<tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">20</td><td class="description-td td_text">spot limit orderbook fill invalid</td></tr>
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">21</td><td class="description-td td_text">perpetual market exists</td></tr>
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">22</td><td class="description-td td_text">expiry futures market exists</td></tr>
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">23</td><td class="description-td td_text">expiry futures market expired</td></tr>
@@ -881,6 +853,12 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">upgrade</td><td class="error-code-td td_num">4</td><td class="description-td td_text">upgraded client not found</td></tr>
 <tr ><td class="module-name-td td_text">upgrade</td><td class="error-code-td td_num">5</td><td class="description-td td_text">upgraded consensus state not found</td></tr>
 <tr ><td class="module-name-td td_text">upgrade</td><td class="error-code-td td_num">6</td><td class="description-td td_text">expected authority account as only signer for proposal message</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+## Vouchers module
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/vouchers_errors.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="module-name-th">module_name</th><th class="error-code-th">error_code</th><th class="description-th">description</th></tr></thead><tbody ><tr ><td class="module-name-td td_text">vouchers</td><td class="error-code-td td_num">1</td><td class="description-td td_text">voucher not found</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Warp module

@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "version",
-    "Type": "v11.Consensus",
+    "Type": "Consensus",
     "Description": "basic block info"
   },
   {
@@ -16,7 +16,7 @@
   },
   {
     "Parameter": "time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": ""
   },
   {

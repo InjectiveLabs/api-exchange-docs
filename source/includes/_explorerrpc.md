@@ -1109,7 +1109,8 @@ func main() {
 <tr ><td class="parameter-td td_text">claim_ids</td><td class="type-td td_text">int64 array</td><td class="description-td td_text">peggy bridge claim id, non-zero if tx contains MsgDepositClaim</td></tr>
 <tr ><td class="parameter-td td_text">signatures</td><td class="type-td td_text">Signature array</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp in unix milli</td></tr>
-<tr ><td class="parameter-td td_text">ethereum_tx_hash_hex</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">ethereum_tx_hash_hex</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">memo</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -1349,7 +1350,8 @@ func main() {
 <tr ><td class="parameter-td td_text">claim_ids</td><td class="type-td td_text">int64 array</td><td class="description-td td_text">peggy bridge claim id, non-zero if tx contains MsgDepositClaim</td></tr>
 <tr ><td class="parameter-td td_text">signatures</td><td class="type-td td_text">Signature array</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">block_unix_timestamp</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Block timestamp in unix milli</td></tr>
-<tr ><td class="parameter-td td_text">ethereum_tx_hash_hex</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">ethereum_tx_hash_hex</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">memo</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>

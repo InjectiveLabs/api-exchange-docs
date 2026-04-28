@@ -7,7 +7,7 @@
   },
   {
     "Parameter": "evidence",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "evidence defines the evidence of misbehavior.",
     "Required": "No"
   }

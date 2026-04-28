@@ -6,12 +6,12 @@
   },
   {
     "Parameter": "buy_levels",
-    "Type": "v2.Level array",
+    "Type": "Level array",
     "Description": "list of buy levels"
   },
   {
     "Parameter": "sell_levels",
-    "Type": "v2.Level array",
+    "Type": "Level array",
     "Description": "list of sell levels"
   }
 ]

@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "last_block_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": ""
   }
 ]

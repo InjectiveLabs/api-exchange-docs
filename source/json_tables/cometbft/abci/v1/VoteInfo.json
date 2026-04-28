@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "block_id_flag",
-    "Type": "v1.BlockIDFlag",
+    "Type": "BlockIDFlag",
     "Description": ""
   }
 ]

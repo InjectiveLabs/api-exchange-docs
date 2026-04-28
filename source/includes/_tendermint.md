@@ -49,9 +49,11 @@ import (
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -64,7 +66,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -158,7 +160,7 @@ No parameters
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/cmtservice/GetNodeInfoResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">default_node_info</td><td class="type-td td_text">v11.DefaultNodeInfo</td><td class="description-td td_num"></td></tr>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">default_node_info</td><td class="type-td td_text">DefaultNodeInfo</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">application_version</td><td class="type-td td_text">VersionInfo</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -269,9 +271,11 @@ import (
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -284,7 +288,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -393,9 +397,11 @@ import (
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("devnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -408,7 +414,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -619,8 +625,8 @@ No parameters
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/cmtservice/GetLatestBlockResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_id</td><td class="type-td td_text">v1.BlockID</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">block</td><td class="type-td td_text">v1.Block</td><td class="description-td td_text">Deprecated: please use `sdk_block` instead</td></tr>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_id</td><td class="type-td td_text">BlockID</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block</td><td class="type-td td_text">Block</td><td class="description-td td_text">Deprecated: please use `sdk_block` instead</td></tr>
 <tr ><td class="parameter-td td_text">sdk_block</td><td class="type-td td_text">Block</td><td class="description-td td_text">Since: cosmos-sdk 0.47</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -658,10 +664,10 @@ No parameters
 **Header**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cometbft/types/v1beta1/Header.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">v11.Consensus</td><td class="description-td td_text">basic block info</td></tr>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">Consensus</td><td class="description-td td_text">basic block info</td></tr>
 <tr ><td class="parameter-td td_text">chain_id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">time</td><td class="type-td td_text">time.Time</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">time</td><td class="type-td td_text">Time</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">last_block_id</td><td class="type-td td_text">BlockID</td><td class="description-td td_text">prev block info</td></tr>
 <tr ><td class="parameter-td td_text">last_commit_hash</td><td class="type-td td_text">byte array</td><td class="description-td td_text">hashes of block data</td></tr>
 <tr ><td class="parameter-td td_text">data_hash</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
@@ -717,7 +723,7 @@ No parameters
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cometbft/types/v1beta1/CommitSig.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_id_flag</td><td class="type-td td_text">BlockIDFlag</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">validator_address</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">time.Time</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">Time</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">signature</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -780,9 +786,11 @@ import (
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -795,7 +803,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -1033,8 +1041,8 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/cmtservice/GetBlockByHeightResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_id</td><td class="type-td td_text">v1.BlockID</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">block</td><td class="type-td td_text">v1.Block</td><td class="description-td td_text">Deprecated: please use `sdk_block` instead</td></tr>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_id</td><td class="type-td td_text">BlockID</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">block</td><td class="type-td td_text">Block</td><td class="description-td td_text">Deprecated: please use `sdk_block` instead</td></tr>
 <tr ><td class="parameter-td td_text">sdk_block</td><td class="type-td td_text">Block</td><td class="description-td td_text">Since: cosmos-sdk 0.47</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1072,10 +1080,10 @@ func main() {
 **Header**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cometbft/types/v1beta1/Header.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">v11.Consensus</td><td class="description-td td_text">basic block info</td></tr>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">version</td><td class="type-td td_text">Consensus</td><td class="description-td td_text">basic block info</td></tr>
 <tr ><td class="parameter-td td_text">chain_id</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">time</td><td class="type-td td_text">time.Time</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">time</td><td class="type-td td_text">Time</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">last_block_id</td><td class="type-td td_text">BlockID</td><td class="description-td td_text">prev block info</td></tr>
 <tr ><td class="parameter-td td_text">last_commit_hash</td><td class="type-td td_text">byte array</td><td class="description-td td_text">hashes of block data</td></tr>
 <tr ><td class="parameter-td td_text">data_hash</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
@@ -1131,7 +1139,7 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cometbft/types/v1beta1/CommitSig.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_id_flag</td><td class="type-td td_text">BlockIDFlag</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">validator_address</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">time.Time</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">Time</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">signature</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1196,9 +1204,11 @@ import (
 	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
 	"github.com/InjectiveLabs/sdk-go/client/common"
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -1211,7 +1221,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -1255,7 +1265,7 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/cmtservice/GetLatestValidatorSetRequest.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination defines an pagination for the request.</td><td class="required-td td_text">No</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageRequest</td><td class="description-td td_text">pagination defines an pagination for the request.</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1325,7 +1335,7 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/cmtservice/GetLatestValidatorSetResponse.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_height</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">validators</td><td class="type-td td_text">Validator array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination defines an pagination for the response.</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageResponse</td><td class="description-td td_text">pagination defines an pagination for the response.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1334,7 +1344,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/cmtservice/Validator.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">pub_key</td><td class="type-td td_text">types.Any</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">pub_key</td><td class="type-td td_text">Any</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">voting_power</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">proposer_priority</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -1396,6 +1406,7 @@ import (
 	"fmt"
 
 	"github.com/cosmos/cosmos-sdk/types/query"
+	"github.com/joho/godotenv"
 
 	"os"
 
@@ -1406,6 +1417,7 @@ import (
 )
 
 func main() {
+	_ = godotenv.Load()
 	network := common.LoadNetwork("testnet", "lb")
 	tmClient, err := rpchttp.New(network.TmEndpoint)
 	if err != nil {
@@ -1418,7 +1430,7 @@ func main() {
 		"file",
 		"inj-user",
 		"12345678",
-		"5d386fbdbf11f1141010f81a46b40f94887367562bd33b452bbaa6ce1cd1381e", // keyring will be used if pk not provided
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
 		false,
 	)
 
@@ -1465,7 +1477,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/cmtservice/GetValidatorSetByHeightRequest.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageRequest</td><td class="description-td td_text">pagination defines an pagination for the request.</td><td class="required-td td_text">No</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageRequest</td><td class="description-td td_text">pagination defines an pagination for the request.</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1535,7 +1547,7 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/cmtservice/GetValidatorSetByHeightResponse.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">block_height</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">validators</td><td class="type-td td_text">Validator array</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">query.PageResponse</td><td class="description-td td_text">pagination defines an pagination for the response.</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">pagination</td><td class="type-td td_text">PageResponse</td><td class="description-td td_text">pagination defines an pagination for the response.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1544,7 +1556,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/cmtservice/Validator.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">address</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">pub_key</td><td class="type-td td_text">types.Any</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">pub_key</td><td class="type-td td_text">Any</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">voting_power</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">proposer_priority</td><td class="type-td td_text">int64</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->

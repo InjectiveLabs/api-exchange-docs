@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "The sender's Injective address.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "denom",
+    "Type": "string",
+    "Description": "The token denom of the voucher to claim.",
+    "Required": "Yes"
+  }
+]

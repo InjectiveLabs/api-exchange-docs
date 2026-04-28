@@ -13,7 +13,7 @@
   },
   {
     "Parameter": "proposer_address",
-    "Type": "github_com_cosmos_cosmos_sdk_types.ConsAddress",
+    "Type": "ConsAddress",
     "Description": "proposer_address of the requested block in hex format",
     "Required": "Yes"
   },
@@ -37,7 +37,7 @@
   },
   {
     "Parameter": "block_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "block_time of requested transaction",
     "Required": "Yes"
   },

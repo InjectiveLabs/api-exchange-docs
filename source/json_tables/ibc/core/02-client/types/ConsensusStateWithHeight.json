@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "consensus_state",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "consensus state"
   }
 ]

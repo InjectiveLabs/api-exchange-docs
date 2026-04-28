@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "validator_set",
-    "Type": "v11.ValidatorSet",
+    "Type": "ValidatorSet",
     "Description": ""
   },
   {

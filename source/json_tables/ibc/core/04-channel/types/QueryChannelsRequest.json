@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "pagination",
-    "Type": "query.PageRequest",
+    "Type": "PageRequest",
     "Description": "pagination request",
     "Required": "No"
   }

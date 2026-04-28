@@ -1,0 +1,52 @@
+[
+  {
+    "Parameter": "maker",
+    "Type": "string",
+    "Description": "Maker address"
+  },
+  {
+    "Parameter": "price",
+    "Type": "string",
+    "Description": "Price"
+  },
+  {
+    "Parameter": "quoted_margin",
+    "Type": "string",
+    "Description": "Quoted margin amount"
+  },
+  {
+    "Parameter": "quoted_quantity",
+    "Type": "string",
+    "Description": "Quoted quantity"
+  },
+  {
+    "Parameter": "executed_margin",
+    "Type": "string",
+    "Description": "Executed margin amount"
+  },
+  {
+    "Parameter": "executed_quantity",
+    "Type": "string",
+    "Description": "Executed quantity"
+  },
+  {
+    "Parameter": "expiry",
+    "Type": "RFQExpiryType",
+    "Description": "Expiry timestamp and height"
+  },
+  {
+    "Parameter": "signature",
+    "Type": "string",
+    "Description": "Signature"
+  },
+  {
+    "Parameter": "nonce",
+    "Type": "uint64",
+    "Description": "Nonce"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Quote status (accepted, rejected, expired)"
+  }
+]

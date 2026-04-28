@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "balance",
-    "Type": "types.Coin",
+    "Type": "Coin",
     "Description": "balance is the balance of the coin."
   }
 ]

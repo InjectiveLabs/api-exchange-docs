@@ -10,5 +10,11 @@
     "Type": "int32",
     "Description": "",
     "Required": "Yes"
+  },
+  {
+    "Parameter": "events",
+    "Type": "string",
+    "Description": "Comma separated list of events to get",
+    "Required": "Yes"
   }
 ]

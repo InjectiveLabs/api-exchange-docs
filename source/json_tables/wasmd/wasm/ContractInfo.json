@@ -31,7 +31,7 @@
   },
   {
     "Parameter": "extension",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "Extension is an extension point to store custom metadata within the persistence model."
   }
 ]

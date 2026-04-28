@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "finalize_block",
-    "Type": "v1.FinalizeBlockResponse",
+    "Type": "FinalizeBlockResponse",
     "Description": ""
   }
 ]

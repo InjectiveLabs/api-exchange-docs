@@ -113,5 +113,10 @@
     "module_name": "evm",
     "error_code": 24,
     "description": "EVM Create operation is not authorized for user"
+  },
+  {
+    "module_name": "evm",
+    "error_code": 25,
+    "description": "address is not allowed to receive funds"
   }
 ]

@@ -26,12 +26,12 @@
   },
   {
     "Parameter": "decision_policy",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "decision_policy specifies the group policy's decision policy."
   },
   {
     "Parameter": "created_at",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "created_at is a timestamp specifying when a group policy was created."
   }
 ]

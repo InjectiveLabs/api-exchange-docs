@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "fee_multiplier",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   }
 ]

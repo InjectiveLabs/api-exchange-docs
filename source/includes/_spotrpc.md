@@ -1562,7 +1562,7 @@ func main() {
 <tr ><td class="parameter-td td_text">executed_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Timestamp of trade execution in UNIX millis</td></tr>
 <tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">Fee recipient address</td></tr>
 <tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">A unique string that helps differentiate between trades</td></tr>
-<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Trade's execution side, marker/taker</td></tr>
+<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Trade's execution side, maker,taker,n/a (n/a = not applicable)</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">Custom client order ID</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -1846,7 +1846,7 @@ func main() {
 <tr ><td class="parameter-td td_text">executed_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Timestamp of trade execution in UNIX millis</td></tr>
 <tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">Fee recipient address</td></tr>
 <tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">A unique string that helps differentiate between trades</td></tr>
-<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Trade's execution side, marker/taker</td></tr>
+<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Trade's execution side, maker,taker,n/a (n/a = not applicable)</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">Custom client order ID</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -3123,7 +3123,7 @@ func main() {
 <tr ><td class="parameter-td td_text">executed_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Timestamp of trade execution in UNIX millis</td></tr>
 <tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">Fee recipient address</td></tr>
 <tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">A unique string that helps differentiate between trades</td></tr>
-<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Trade's execution side, marker/taker</td></tr>
+<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Trade's execution side, maker,taker,n/a (n/a = not applicable)</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">Custom client order ID</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 

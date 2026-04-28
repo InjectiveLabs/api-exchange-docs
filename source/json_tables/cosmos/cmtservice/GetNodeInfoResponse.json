@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "default_node_info",
-    "Type": "v11.DefaultNodeInfo",
+    "Type": "DefaultNodeInfo",
     "Description": ""
   },
   {

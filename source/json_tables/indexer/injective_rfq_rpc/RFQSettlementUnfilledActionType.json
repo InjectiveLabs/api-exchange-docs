@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "limit",
+    "Type": "RFQSettlementLimitActionType",
+    "Description": "Limit order action"
+  },
+  {
+    "Parameter": "market",
+    "Type": "RFQSettlementMarketActionType",
+    "Description": "Market order action"
+  }
+]

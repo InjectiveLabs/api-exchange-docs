@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "order",
-    "Type": "types.SpotLimitOrder",
+    "Type": "SpotLimitOrder",
     "Description": ""
   }
 ]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "orders",
+    "Type": "ConditionalOrderResponseType array",
+    "Description": "List of conditional orders"
+  },
+  {
+    "Parameter": "next",
+    "Type": "string array",
+    "Description": "Next tokens for pagination"
+  }
+]

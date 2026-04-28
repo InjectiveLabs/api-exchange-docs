@@ -31,7 +31,7 @@
   },
   {
     "Parameter": "timeout_height",
-    "Type": "types.Height",
+    "Type": "Height",
     "Description": "block height after which the packet times out"
   },
   {

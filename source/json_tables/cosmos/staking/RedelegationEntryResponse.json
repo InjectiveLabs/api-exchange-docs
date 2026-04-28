@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "balance",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": ""
   }
 ]

@@ -21,17 +21,17 @@
   },
   {
     "Parameter": "position_delta",
-    "Type": "v2.PositionDelta",
+    "Type": "PositionDelta",
     "Description": "the position delta of the trade (in human readable format)"
   },
   {
     "Parameter": "payout",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the payout of the trade (in human readable format)"
   },
   {
     "Parameter": "fee",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the fee of the trade (in human readable format)"
   },
   {

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "contract address of the erc20 on Ethereum"
+  },
+  {
+    "Parameter": "inflows",
+    "Type": "BlockTransferRecord array",
+    "Description": "records of deposit transfers across blocks"
+  },
+  {
+    "Parameter": "outflows",
+    "Type": "BlockTransferRecord array",
+    "Description": "records of withdrawal transfers across blocks"
+  }
+]

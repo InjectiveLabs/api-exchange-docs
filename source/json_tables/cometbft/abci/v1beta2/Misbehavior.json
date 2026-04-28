@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "validator",
-    "Type": "v1beta1.Validator",
+    "Type": "Validator",
     "Description": "The offending validator"
   },
   {
@@ -16,7 +16,7 @@
   },
   {
     "Parameter": "time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "The corresponding time where the offense occurred"
   },
   {

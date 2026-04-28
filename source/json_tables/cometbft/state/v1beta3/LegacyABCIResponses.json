@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "deliver_txs",
-    "Type": "v1beta3.ExecTxResult array",
+    "Type": "ExecTxResult array",
     "Description": ""
   },
   {

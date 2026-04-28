@@ -16,7 +16,7 @@
   },
   {
     "Parameter": "total_escrowed",
-    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Type": "Coins",
     "Description": "total_escrowed contains the total amount of tokens escrowed by the transfer module"
   }
 ]

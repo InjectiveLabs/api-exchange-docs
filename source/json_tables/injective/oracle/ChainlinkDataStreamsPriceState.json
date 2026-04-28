@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "report_price",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": ""
   },
   {
@@ -22,6 +22,11 @@
   {
     "Parameter": "price_state",
     "Type": "PriceState",
+    "Description": ""
+  },
+  {
+    "Parameter": "expires_at",
+    "Type": "uint64",
     "Description": ""
   }
 ]

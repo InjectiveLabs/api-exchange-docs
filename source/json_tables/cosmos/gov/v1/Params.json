@@ -1,17 +1,17 @@
 [
   {
     "Parameter": "min_deposit",
-    "Type": "types.Coin array",
+    "Type": "Coin array",
     "Description": "Minimum deposit for a proposal to enter voting period."
   },
   {
     "Parameter": "max_deposit_period",
-    "Type": "time.Duration",
+    "Type": "Duration",
     "Description": "Maximum period for Atom holders to deposit on a proposal. Initial value: 2 months."
   },
   {
     "Parameter": "voting_period",
-    "Type": "time.Duration",
+    "Type": "Duration",
     "Description": "Duration of the voting period."
   },
   {
@@ -46,7 +46,7 @@
   },
   {
     "Parameter": "expedited_voting_period",
-    "Type": "time.Duration",
+    "Type": "Duration",
     "Description": "Duration of the voting period of an expedited proposal.  Since: cosmos-sdk 0.50"
   },
   {
@@ -56,7 +56,7 @@
   },
   {
     "Parameter": "expedited_min_deposit",
-    "Type": "types.Coin array",
+    "Type": "Coin array",
     "Description": "Minimum expedited deposit for a proposal to enter voting period."
   },
   {

@@ -96,11 +96,6 @@
   },
   {
     "module_name": "exchange",
-    "error_code": 20,
-    "description": "spot limit orderbook fill invalid"
-  },
-  {
-    "module_name": "exchange",
     "error_code": 21,
     "description": "perpetual market exists"
   },

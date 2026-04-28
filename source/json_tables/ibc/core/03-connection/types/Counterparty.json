@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "prefix",
-    "Type": "types.MerklePrefix",
+    "Type": "MerklePrefix",
     "Description": "commitment merkle prefix of the counterparty chain."
   }
 ]

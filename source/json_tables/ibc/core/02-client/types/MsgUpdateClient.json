@@ -7,7 +7,7 @@
   },
   {
     "Parameter": "client_message",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "client message to update the light client",
     "Required": "No"
   },

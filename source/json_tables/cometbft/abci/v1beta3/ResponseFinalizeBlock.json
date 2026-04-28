@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "events",
-    "Type": "v1beta2.Event array",
+    "Type": "Event array",
     "Description": "set of block events emitted as part of executing the block"
   },
   {
@@ -11,12 +11,12 @@
   },
   {
     "Parameter": "validator_updates",
-    "Type": "v1beta1.ValidatorUpdate array",
+    "Type": "ValidatorUpdate array",
     "Description": "a list of updates to the validator set. These will reflect the validator set at current height + 2."
   },
   {
     "Parameter": "consensus_param_updates",
-    "Type": "v1.ConsensusParams",
+    "Type": "ConsensusParams",
     "Description": "updates to the consensus params, if any."
   },
   {

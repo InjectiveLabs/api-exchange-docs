@@ -11,17 +11,17 @@
   },
   {
     "Parameter": "type",
-    "Type": "v1.SignedMsgType",
+    "Type": "SignedMsgType",
     "Description": ""
   },
   {
     "Parameter": "block_id",
-    "Type": "v1.BlockID",
+    "Type": "BlockID",
     "Description": ""
   },
   {
     "Parameter": "votes",
-    "Type": "v11.BitArray",
+    "Type": "BitArray",
     "Description": ""
   }
 ]

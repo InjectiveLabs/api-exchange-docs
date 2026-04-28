@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "mark_price",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the mark price"
   },
   {

@@ -1850,7 +1850,7 @@ func main() {
 <tr ><td class="parameter-td td_text">executed_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Timestamp of trade execution in UNIX millis</td></tr>
 <tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">Fee recipient address</td></tr>
 <tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">A unique string that helps differentiate between trades</td></tr>
-<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Trade's execution side, marker/taker</td></tr>
+<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Trade's execution side, maker,taker,n/a (n/a = not applicable)</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">Custom client order ID</td></tr>
 <tr ><td class="parameter-td td_text">pnl</td><td class="type-td td_text">string</td><td class="description-td td_text">Profit and loss of the trade</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -2188,7 +2188,7 @@ func main() {
 <tr ><td class="parameter-td td_text">executed_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Timestamp of trade execution in UNIX millis</td></tr>
 <tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">Fee recipient address</td></tr>
 <tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">A unique string that helps differentiate between trades</td></tr>
-<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Trade's execution side, marker/taker</td></tr>
+<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Trade's execution side, maker,taker,n/a (n/a = not applicable)</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">Custom client order ID</td></tr>
 <tr ><td class="parameter-td td_text">pnl</td><td class="type-td td_text">string</td><td class="description-td td_text">Profit and loss of the trade</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -2524,7 +2524,8 @@ func main() {
 <tr ><td class="parameter-td td_text">funding_last</td><td class="type-td td_text">string</td><td class="description-td td_text">Last funding fees since position opened</td></tr>
 <tr ><td class="parameter-td td_text">funding_sum</td><td class="type-td td_text">string</td><td class="description-td td_text">Net funding fees since position opened</td></tr>
 <tr ><td class="parameter-td td_text">cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Cumulative funding entry of the position</td></tr>
-<tr ><td class="parameter-td td_text">effective_cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Effective cumulative funding entry of the position</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">effective_cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Effective cumulative funding entry of the position</td></tr>
+<tr ><td class="parameter-td td_text">upnl</td><td class="type-td td_text">string</td><td class="description-td td_text">Unrealized profit and loss of the position (only present when requested with with_upnl=true)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2768,7 +2769,8 @@ func main() {
 <tr ><td class="parameter-td td_text">funding_last</td><td class="type-td td_text">string</td><td class="description-td td_text">Last funding fees since position opened</td></tr>
 <tr ><td class="parameter-td td_text">funding_sum</td><td class="type-td td_text">string</td><td class="description-td td_text">Net funding fees since position opened</td></tr>
 <tr ><td class="parameter-td td_text">cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Cumulative funding entry of the position</td></tr>
-<tr ><td class="parameter-td td_text">effective_cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Effective cumulative funding entry of the position</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">effective_cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Effective cumulative funding entry of the position</td></tr>
+<tr ><td class="parameter-td td_text">upnl</td><td class="type-td td_text">string</td><td class="description-td td_text">Unrealized profit and loss of the position (only present when requested with with_upnl=true)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -4405,7 +4407,7 @@ func main() {
 <tr ><td class="parameter-td td_text">executed_at</td><td class="type-td td_text">int64</td><td class="description-td td_text">Timestamp of trade execution in UNIX millis</td></tr>
 <tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">Fee recipient address</td></tr>
 <tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">A unique string that helps differentiate between trades</td></tr>
-<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Trade's execution side, marker/taker</td></tr>
+<tr ><td class="parameter-td td_text">execution_side</td><td class="type-td td_text">string</td><td class="description-td td_text">Trade's execution side, maker,taker,n/a (n/a = not applicable)</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">Custom client order ID</td></tr>
 <tr ><td class="parameter-td td_text">pnl</td><td class="type-td td_text">string</td><td class="description-td td_text">Profit and loss of the trade</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->

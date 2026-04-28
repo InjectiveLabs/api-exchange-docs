@@ -16,7 +16,7 @@
   },
   {
     "Parameter": "claim",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": ""
   }
 ]

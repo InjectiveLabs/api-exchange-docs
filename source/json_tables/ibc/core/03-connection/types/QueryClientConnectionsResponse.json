@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "proof_height",
-    "Type": "types.Height",
+    "Type": "Height",
     "Description": "height at which the proof was generated"
   }
 ]

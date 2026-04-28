@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "account",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "account defines the account of the corresponding address."
   }
 ]

@@ -23,5 +23,10 @@
     "Parameter": "last_auction_result",
     "Type": "LastAuctionResult",
     "Description": "last auction result"
+  },
+  {
+    "Parameter": "vouchers",
+    "Type": "AddressVoucher array",
+    "Description": "outstanding vouchers (failed basket deliveries)"
   }
 ]

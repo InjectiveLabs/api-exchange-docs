@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "part",
-    "Type": "v1.Part",
+    "Type": "Part",
     "Description": ""
   }
 ]

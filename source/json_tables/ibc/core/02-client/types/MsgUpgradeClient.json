@@ -7,13 +7,13 @@
   },
   {
     "Parameter": "client_state",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "upgraded client state",
     "Required": "No"
   },
   {
     "Parameter": "consensus_state",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "upgraded consensus state, only contains enough information to serve as a basis of trust in update logic",
     "Required": "No"
   },

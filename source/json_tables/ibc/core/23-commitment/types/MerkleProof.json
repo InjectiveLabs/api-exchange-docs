@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "proofs",
-    "Type": "_go.CommitmentProof array",
+    "Type": "CommitmentProof array",
     "Description": ""
   }
 ]

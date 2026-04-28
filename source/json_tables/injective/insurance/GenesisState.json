@@ -23,5 +23,20 @@
     "Parameter": "next_redemption_schedule_id",
     "Type": "uint64",
     "Description": "next_redemption_schedule_id describes next redemption schedule id to be used for next schedule incremented by 1 per redemption request"
+  },
+  {
+    "Parameter": "failed_redemption_schedules",
+    "Type": "FailedRedemptionSchedule array",
+    "Description": "failed_redemption_schedules describes redemptions that failed during settlement and are preserved for manual resolution"
+  },
+  {
+    "Parameter": "next_failed_redemption_schedule_id",
+    "Type": "uint64",
+    "Description": "next_failed_redemption_schedule_id describes the next id for failed redemption schedules, incremented by 1 per failed settlement"
+  },
+  {
+    "Parameter": "vouchers",
+    "Type": "AddressVoucher array",
+    "Description": "outstanding vouchers (failed redemption deliveries)"
   }
 ]

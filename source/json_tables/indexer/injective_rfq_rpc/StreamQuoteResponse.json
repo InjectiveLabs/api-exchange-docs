@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "quote",
+    "Type": "RFQProcessedQuoteType",
+    "Description": "RFQ quote update"
+  },
+  {
+    "Parameter": "stream_operation",
+    "Type": "string",
+    "Description": "Operation type (insert, update, delete)"
+  }
+]

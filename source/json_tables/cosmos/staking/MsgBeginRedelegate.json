@@ -19,7 +19,7 @@
   },
   {
     "Parameter": "amount",
-    "Type": "types1.Coin",
+    "Type": "Coin",
     "Description": "",
     "Required": "Yes"
   }

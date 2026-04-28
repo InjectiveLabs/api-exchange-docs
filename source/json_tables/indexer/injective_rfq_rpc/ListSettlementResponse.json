@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "settlements",
+    "Type": "RFQSettlementType array",
+    "Description": "List of RFQ settlements"
+  },
+  {
+    "Parameter": "next",
+    "Type": "string array",
+    "Description": "Next tokens for pagination"
+  }
+]

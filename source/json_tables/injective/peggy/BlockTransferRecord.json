@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "block_number",
+    "Type": "uint64",
+    "Description": "block number at which the transfers occurred"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "Int",
+    "Description": "sum amount of transfers that happened in that block"
+  }
+]

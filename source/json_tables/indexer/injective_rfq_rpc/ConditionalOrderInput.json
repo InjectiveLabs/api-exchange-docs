@@ -1,0 +1,102 @@
+[
+  {
+    "Parameter": "version",
+    "Type": "uint32",
+    "Description": "Protocol version"
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "string",
+    "Description": "Chain ID (e.g. injective-1)"
+  },
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "RFQ contract address"
+  },
+  {
+    "Parameter": "taker",
+    "Type": "string",
+    "Description": "Taker address (bech32)"
+  },
+  {
+    "Parameter": "epoch",
+    "Type": "uint64",
+    "Description": "Taker's current epoch (replay protection)"
+  },
+  {
+    "Parameter": "rfq_id",
+    "Type": "uint64",
+    "Description": "Unique RFQ order ID"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Derivative market ID"
+  },
+  {
+    "Parameter": "subaccount_nonce",
+    "Type": "uint32",
+    "Description": "Taker subaccount index"
+  },
+  {
+    "Parameter": "lane_version",
+    "Type": "uint64",
+    "Description": "Lane version (replay + OCO protection)"
+  },
+  {
+    "Parameter": "deadline_ms",
+    "Type": "uint64",
+    "Description": "Expiry timestamp in milliseconds"
+  },
+  {
+    "Parameter": "direction",
+    "Type": "string",
+    "Description": "Trade direction"
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "string",
+    "Description": "FPDecimal quantity (e.g. \"1\", \"4.9\")"
+  },
+  {
+    "Parameter": "margin",
+    "Type": "string",
+    "Description": "Collateral amount as FPDecimal"
+  },
+  {
+    "Parameter": "worst_price",
+    "Type": "string",
+    "Description": "FPDecimal worst acceptable price"
+  },
+  {
+    "Parameter": "min_total_fill_quantity",
+    "Type": "string",
+    "Description": "FPDecimal minimum total fill quantity"
+  },
+  {
+    "Parameter": "trigger_type",
+    "Type": "string",
+    "Description": "Trigger condition type"
+  },
+  {
+    "Parameter": "trigger_price",
+    "Type": "string",
+    "Description": "Mark price threshold for the trigger condition"
+  },
+  {
+    "Parameter": "unfilled_action",
+    "Type": "string",
+    "Description": "Post-unfilled action JSON (optional)"
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "Optional client ID"
+  },
+  {
+    "Parameter": "allowed_relayer",
+    "Type": "string",
+    "Description": "Optional relayer restriction"
+  }
+]

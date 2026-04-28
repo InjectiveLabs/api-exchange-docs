@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "amount",
-    "Type": "types.Coin",
+    "Type": "Coin",
     "Description": "amount is the supply of the coin."
   }
 ]

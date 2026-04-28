@@ -335,7 +335,7 @@ Each message contains a list of events that are filtered by the request paramete
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/BankBalance.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">account</td><td class="type-td td_text">string</td><td class="description-td td_text">the account address</td></tr>
-<tr ><td class="parameter-td td_text">balances</td><td class="type-td td_text">github_com_cosmos_cosmos_sdk_types.Coins</td><td class="description-td td_text">list of account balances</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">balances</td><td class="type-td td_text">Coins</td><td class="description-td td_text">list of account balances</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -344,7 +344,7 @@ Each message contains a list of events that are filtered by the request paramete
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/SubaccountDeposit.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">denom</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">deposit</td><td class="type-td td_text">v2.Deposit</td><td class="description-td td_num"></td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">deposit</td><td class="type-td td_text">Deposit</td><td class="description-td td_num"></td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -355,10 +355,10 @@ Each message contains a list of events that are filtered by the request paramete
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
 <tr ><td class="parameter-td td_text">is_buy</td><td class="type-td td_text">bool</td><td class="description-td td_text">whether the trade is a buy or sell</td></tr>
 <tr ><td class="parameter-td td_text">executionType</td><td class="type-td td_text">string</td><td class="description-td td_text">the execution type</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the quantity of the trade (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the price of the trade (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">the quantity of the trade (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">the price of the trade (in human readable format)</td></tr>
 <tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID that executed the trade</td></tr>
-<tr ><td class="parameter-td td_text">fee</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the fee of the trade (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">fee</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">the fee of the trade (in human readable format)</td></tr>
 <tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash</td></tr>
 <tr ><td class="parameter-td td_text">fee_recipient_address</td><td class="type-td td_text">string</td><td class="description-td td_text">the fee recipient address</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID</td></tr>
@@ -374,9 +374,9 @@ Each message contains a list of events that are filtered by the request paramete
 <tr ><td class="parameter-td td_text">is_buy</td><td class="type-td td_text">bool</td><td class="description-td td_text">whether the trade is a buy or sell</td></tr>
 <tr ><td class="parameter-td td_text">executionType</td><td class="type-td td_text">string</td><td class="description-td td_text">the execution type</td></tr>
 <tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td></tr>
-<tr ><td class="parameter-td td_text">position_delta</td><td class="type-td td_text">v2.PositionDelta</td><td class="description-td td_text">the position delta of the trade (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">payout</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the payout of the trade (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">fee</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the fee of the trade (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">position_delta</td><td class="type-td td_text">PositionDelta</td><td class="description-td td_text">the position delta of the trade (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">payout</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">the payout of the trade (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">fee</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">the fee of the trade (in human readable format)</td></tr>
 <tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash</td></tr>
 <tr ><td class="parameter-td td_text">fee_recipient_address</td><td class="type-td td_text">string</td><td class="description-td td_text">the fee recipient address</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID</td></tr>
@@ -422,10 +422,10 @@ Each message contains a list of events that are filtered by the request paramete
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
 <tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td></tr>
 <tr ><td class="parameter-td td_text">isLong</td><td class="type-td td_text">bool</td><td class="description-td td_text">whether the position is long or short</td></tr>
-<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the quantity of the position (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">entry_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the entry price of the position (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the margin of the position (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">cumulative_funding_entry</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the cumulative funding entry of the position (in human readable format)</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">the quantity of the position (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">entry_price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">the entry price of the position (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">the margin of the position (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_funding_entry</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">the cumulative funding entry of the position (in human readable format)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -434,7 +434,7 @@ Each message contains a list of events that are filtered by the request paramete
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/OraclePrice.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">the symbol of the oracle price</td></tr>
-<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the updated price</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">the updated price</td></tr>
 <tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">string</td><td class="description-td td_text">the oracle type</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -456,7 +456,7 @@ Each message contains a list of events that are filtered by the request paramete
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/ConditionalOrderTriggerFailureUpdate.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
 <tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID</td></tr>
-<tr ><td class="parameter-td td_text">mark_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the mark price</td></tr>
+<tr ><td class="parameter-td td_text">mark_price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">the mark price</td></tr>
 <tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID</td></tr>
 <tr ><td class="parameter-td td_text">error_description</td><td class="type-td td_text">string</td><td class="description-td td_text">the error code</td></tr></tbody></table>
@@ -479,7 +479,7 @@ Each message contains a list of events that are filtered by the request paramete
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/SpotOrder.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
-<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">v2.SpotLimitOrder</td><td class="description-td td_text">the order details</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">SpotLimitOrder</td><td class="description-td td_text">the order details</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -488,7 +488,7 @@ Each message contains a list of events that are filtered by the request paramete
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/DerivativeOrder.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
-<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">v2.DerivativeLimitOrder</td><td class="description-td td_text">the order details</td></tr>
+<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">DerivativeLimitOrder</td><td class="description-td td_text">the order details</td></tr>
 <tr ><td class="parameter-td td_text">is_market</td><td class="type-td td_text">bool</td><td class="description-td td_text">whether the order is a market order</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -499,8 +499,8 @@ Each message contains a list of events that are filtered by the request paramete
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/SpotLimitOrder.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">order_info contains the information of the order</td></tr>
 <tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">order types</td></tr>
-<tr ><td class="parameter-td td_text">fillable</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the amount of the quantity remaining fillable</td></tr>
-<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders</td></tr>
+<tr ><td class="parameter-td td_text">fillable</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">the amount of the quantity remaining fillable</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders</td></tr>
 <tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">byte array</td><td class="description-td td_text">order hash</td></tr>
 <tr ><td class="parameter-td td_text">expiration_block</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration block is the block number at which the order will expire</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -512,9 +512,9 @@ Each message contains a list of events that are filtered by the request paramete
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/DerivativeLimitOrder.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">order_info contains the information of the order</td></tr>
 <tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">order types</td></tr>
-<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">margin is the margin used by the limit order</td></tr>
-<tr ><td class="parameter-td td_text">fillable</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">the amount of the quantity remaining fillable</td></tr>
-<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">margin is the margin used by the limit order</td></tr>
+<tr ><td class="parameter-td td_text">fillable</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">the amount of the quantity remaining fillable</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders</td></tr>
 <tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">byte array</td><td class="description-td td_num"></td></tr>
 <tr ><td class="parameter-td td_text">expiration_block</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration block is the block number at which the order will expire</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -525,8 +525,8 @@ Each message contains a list of events that are filtered by the request paramete
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/Orderbook.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the market ID</td></tr>
-<tr ><td class="parameter-td td_text">buy_levels</td><td class="type-td td_text">v2.Level array</td><td class="description-td td_text">list of buy levels</td></tr>
-<tr ><td class="parameter-td td_text">sell_levels</td><td class="type-td td_text">v2.Level array</td><td class="description-td td_text">list of sell levels</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">buy_levels</td><td class="type-td td_text">Level array</td><td class="description-td td_text">list of buy levels</td></tr>
+<tr ><td class="parameter-td td_text">sell_levels</td><td class="type-td td_text">Level array</td><td class="description-td td_text">list of sell levels</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -534,6 +534,6 @@ Each message contains a list of events that are filtered by the request paramete
 **Level**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/Level.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">p</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">price (in human readable format)</td></tr>
-<tr ><td class="parameter-td td_text">q</td><td class="type-td td_text">cosmossdk_io_math.LegacyDec</td><td class="description-td td_text">quantity (in human readable format)</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">p</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">price (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">q</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">quantity (in human readable format)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->

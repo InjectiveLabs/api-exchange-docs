@@ -19,7 +19,7 @@
   },
   {
     "Parameter": "merkle_path",
-    "Type": "types1.MerklePath",
+    "Type": "MerklePath",
     "Description": "the commitment key path.",
     "Required": "Yes"
   },

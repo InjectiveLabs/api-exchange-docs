@@ -11,12 +11,12 @@
   },
   {
     "Parameter": "authorization",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": ""
   },
   {
     "Parameter": "expiration",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": ""
   }
 ]

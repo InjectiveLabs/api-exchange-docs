@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "rfq_id",
+    "Type": "uint64",
+    "Description": "RFQ ID"
+  },
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "Client ID"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Status of the operation"
+  }
+]

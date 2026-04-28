@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "commit",
-    "Type": "v1beta1.RequestCommit",
+    "Type": "RequestCommit",
     "Description": ""
   }
 ]

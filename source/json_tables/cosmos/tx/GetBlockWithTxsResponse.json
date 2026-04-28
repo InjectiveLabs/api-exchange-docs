@@ -6,17 +6,17 @@
   },
   {
     "Parameter": "block_id",
-    "Type": "v1.BlockID",
+    "Type": "BlockID",
     "Description": ""
   },
   {
     "Parameter": "block",
-    "Type": "v1.Block",
+    "Type": "Block",
     "Description": ""
   },
   {
     "Parameter": "pagination",
-    "Type": "query.PageResponse",
+    "Type": "PageResponse",
     "Description": "pagination defines a pagination for the response."
   }
 ]

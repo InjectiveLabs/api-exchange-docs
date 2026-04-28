@@ -1,0 +1,52 @@
+[
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "Client ID"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID"
+  },
+  {
+    "Parameter": "direction",
+    "Type": "string",
+    "Description": "Direction (long/short)"
+  },
+  {
+    "Parameter": "margin",
+    "Type": "string",
+    "Description": "Margin amount"
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "string",
+    "Description": "Quantity"
+  },
+  {
+    "Parameter": "worst_price",
+    "Type": "string",
+    "Description": "Worst acceptable price"
+  },
+  {
+    "Parameter": "request_address",
+    "Type": "string",
+    "Description": "Requester address"
+  },
+  {
+    "Parameter": "expiry",
+    "Type": "uint64",
+    "Description": "Expiry timestamp in milliseconds"
+  },
+  {
+    "Parameter": "transaction_time",
+    "Type": "uint64",
+    "Description": "Transaction time timestamp"
+  },
+  {
+    "Parameter": "price_check",
+    "Type": "bool",
+    "Description": "Whether the request is for price check only"
+  }
+]

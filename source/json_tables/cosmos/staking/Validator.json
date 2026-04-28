@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "consensus_pubkey",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "consensus_pubkey is the consensus public key of the validator, as a Protobuf Any."
   },
   {
@@ -21,12 +21,12 @@
   },
   {
     "Parameter": "tokens",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "tokens define the delegated tokens (incl. self-delegation)."
   },
   {
     "Parameter": "delegator_shares",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "delegator_shares defines total shares issued to a validator's delegators."
   },
   {
@@ -41,7 +41,7 @@
   },
   {
     "Parameter": "unbonding_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "unbonding_time defines, if unbonding, the min time for the validator to complete unbonding."
   },
   {
@@ -51,7 +51,7 @@
   },
   {
     "Parameter": "min_self_delegation",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "min_self_delegation is the validator's self declared minimum self delegation.  Since: cosmos-sdk 0.46"
   },
   {

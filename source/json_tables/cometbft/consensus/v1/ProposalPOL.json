@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "proposal_pol",
-    "Type": "v11.BitArray",
+    "Type": "BitArray",
     "Description": ""
   }
 ]

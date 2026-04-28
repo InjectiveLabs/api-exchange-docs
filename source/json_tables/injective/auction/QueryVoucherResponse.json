@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "voucher",
+    "Type": "Coin",
+    "Description": "The outstanding voucher coin for the requested denom and address."
+  }
+]

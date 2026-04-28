@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "misbehavior",
-    "Type": "v1beta2.Misbehavior array",
+    "Type": "Misbehavior array",
     "Description": ""
   },
   {
@@ -26,7 +26,7 @@
   },
   {
     "Parameter": "time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": ""
   },
   {

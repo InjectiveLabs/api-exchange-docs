@@ -6,12 +6,12 @@
   },
   {
     "Parameter": "min_next_bid_increment_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "min_next_bid_increment_rate defines the minimum increment rate for new bids"
   },
   {
     "Parameter": "inj_basket_max_cap",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "inj_basket_max_cap defines the maximum cap for INJ contained in an auction basket"
   },
   {

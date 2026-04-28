@@ -1,0 +1,56 @@
+[
+  {
+    "Parameter": "market_ids",
+    "Type": "string array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "direction",
+    "Type": "string",
+    "Description": "Filter by direction the trade",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "filter by account address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "per_page",
+    "Type": "int32",
+    "Description": "Number of results per page",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "Pagination token",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "sort_by",
+    "Type": "string",
+    "Description": "Field to sort by",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "sort_direction",
+    "Type": "string",
+    "Description": "Sort direction",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "start_time",
+    "Type": "int64",
+    "Description": "The starting timestamp in UNIX milliseconds that the trades must be equal or older than",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "end_time",
+    "Type": "int64",
+    "Description": "The ending timestamp in UNIX milliseconds that the trades must be equal or younger than",
+    "Required": "Yes"
+  }
+]

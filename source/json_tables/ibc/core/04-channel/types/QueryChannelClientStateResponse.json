@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "identified_client_state",
-    "Type": "types.IdentifiedClientState",
+    "Type": "IdentifiedClientState",
     "Description": "client state associated with the channel"
   },
   {
@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "proof_height",
-    "Type": "types.Height",
+    "Type": "Height",
     "Description": "height at which the proof was retrieved"
   }
 ]

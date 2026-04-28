@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "balance",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the open interest of the market"
   }
 ]

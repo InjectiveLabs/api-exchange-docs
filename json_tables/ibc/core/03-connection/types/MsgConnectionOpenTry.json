@@ -13,7 +13,7 @@
   },
   {
     "Parameter": "client_state",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "",
     "Required": "No"
   },
@@ -37,7 +37,7 @@
   },
   {
     "Parameter": "proof_height",
-    "Type": "types1.Height",
+    "Type": "Height",
     "Description": "",
     "Required": "Yes"
   },
@@ -61,7 +61,7 @@
   },
   {
     "Parameter": "consensus_height",
-    "Type": "types1.Height",
+    "Type": "Height",
     "Description": "",
     "Required": "Yes"
   },

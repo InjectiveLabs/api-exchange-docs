@@ -1,0 +1,127 @@
+[
+  {
+    "Parameter": "error",
+    "Type": "string",
+    "Description": "Error message if quote is rejected"
+  },
+  {
+    "Parameter": "executed_quantity",
+    "Type": "string",
+    "Description": "Executed quantity for the quote, if successful"
+  },
+  {
+    "Parameter": "executed_margin",
+    "Type": "string",
+    "Description": "Executed margin for the quote, if successful"
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "string",
+    "Description": "Chain ID"
+  },
+  {
+    "Parameter": "contract_address",
+    "Type": "string",
+    "Description": "Contract address"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID"
+  },
+  {
+    "Parameter": "rfq_id",
+    "Type": "uint64",
+    "Description": "RFQ ID"
+  },
+  {
+    "Parameter": "taker_direction",
+    "Type": "string",
+    "Description": "Taker direction (long/short)"
+  },
+  {
+    "Parameter": "margin",
+    "Type": "string",
+    "Description": "Margin amount"
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "string",
+    "Description": "Quantity"
+  },
+  {
+    "Parameter": "price",
+    "Type": "string",
+    "Description": "Price"
+  },
+  {
+    "Parameter": "expiry",
+    "Type": "RFQExpiryType",
+    "Description": "Expiry timestamp and height"
+  },
+  {
+    "Parameter": "maker",
+    "Type": "string",
+    "Description": "Maker address"
+  },
+  {
+    "Parameter": "taker",
+    "Type": "string",
+    "Description": "Taker address"
+  },
+  {
+    "Parameter": "signature",
+    "Type": "string",
+    "Description": "Signature"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Status (pending, accepted, rejected, expired)"
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "int64",
+    "Description": "Creation timestamp"
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "Last update timestamp"
+  },
+  {
+    "Parameter": "height",
+    "Type": "uint64",
+    "Description": "Block height"
+  },
+  {
+    "Parameter": "event_time",
+    "Type": "uint64",
+    "Description": "Event time timestamp"
+  },
+  {
+    "Parameter": "transaction_time",
+    "Type": "uint64",
+    "Description": "Transaction time timestamp"
+  },
+  {
+    "Parameter": "maker_subaccount_nonce",
+    "Type": "uint64",
+    "Description": "Maker subaccount nonce used in quote signature"
+  },
+  {
+    "Parameter": "min_fill_quantity",
+    "Type": "string",
+    "Description": "Optional minimum fill quantity used in quote signature"
+  },
+  {
+    "Parameter": "price_check",
+    "Type": "bool",
+    "Description": "Whether the quote is for price check only"
+  },
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "Client ID from the originating request"
+  }
+]

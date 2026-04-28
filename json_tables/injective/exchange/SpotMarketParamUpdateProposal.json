@@ -16,27 +16,27 @@
   },
   {
     "Parameter": "maker_fee_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "maker_fee_rate defines the trade fee rate for makers on the spot market"
   },
   {
     "Parameter": "taker_fee_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "taker_fee_rate defines the trade fee rate for takers on the spot market"
   },
   {
     "Parameter": "relayer_fee_share_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "relayer_fee_share_rate defines the relayer fee share rate for the spot market"
   },
   {
     "Parameter": "min_price_tick_size",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "min_price_tick_size defines the minimum tick size of the order's price and margin"
   },
   {
     "Parameter": "min_quantity_tick_size",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "min_quantity_tick_size defines the minimum tick size of the order's quantity"
   },
   {
@@ -51,7 +51,7 @@
   },
   {
     "Parameter": "min_notional",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "min_notional defines the minimum notional (in quote asset) required for orders in the market"
   },
   {

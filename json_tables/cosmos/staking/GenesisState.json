@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "last_total_power",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "last_total_power tracks the total amounts of bonded tokens recorded during the previous end block."
   },
   {

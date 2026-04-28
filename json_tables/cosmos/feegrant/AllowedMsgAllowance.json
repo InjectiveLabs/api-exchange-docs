@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "allowance",
-    "Type": "types1.Any",
+    "Type": "Any",
     "Description": "allowance can be any of basic and periodic fee allowance."
   },
   {

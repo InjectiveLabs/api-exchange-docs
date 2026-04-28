@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "canceled_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "canceled_time is the time when proposal is canceled."
   },
   {

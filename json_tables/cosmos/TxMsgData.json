@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "msg_responses",
-    "Type": "types.Any array",
+    "Type": "Any array",
     "Description": "msg_responses contains the Msg handler responses packed into Anys.  Since: cosmos-sdk 0.46"
   }
 ]

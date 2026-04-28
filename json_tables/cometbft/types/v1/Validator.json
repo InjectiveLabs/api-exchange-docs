@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "pub_key",
-    "Type": "v1.PublicKey",
+    "Type": "PublicKey",
     "Description": ""
   },
   {

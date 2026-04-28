@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "balance",
-    "Type": "types1.Coin",
+    "Type": "Coin",
     "Description": ""
   }
 ]

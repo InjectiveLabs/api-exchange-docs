@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "address of the erc20 bridged in"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "Int",
+    "Description": "amount currently minted on chain"
+  }
+]

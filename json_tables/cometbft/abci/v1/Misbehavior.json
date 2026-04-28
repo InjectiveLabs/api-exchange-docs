@@ -16,7 +16,7 @@
   },
   {
     "Parameter": "time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "The corresponding time where the offense occurred"
   },
   {

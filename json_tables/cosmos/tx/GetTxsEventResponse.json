@@ -6,12 +6,12 @@
   },
   {
     "Parameter": "tx_responses",
-    "Type": "types.TxResponse array",
+    "Type": "TxResponse array",
     "Description": "tx_responses is the list of queried TxResponses."
   },
   {
     "Parameter": "pagination",
-    "Type": "query.PageResponse",
+    "Type": "PageResponse",
     "Description": "pagination defines a pagination for the response. Deprecated post v0.46.x: use total instead."
   },
   {

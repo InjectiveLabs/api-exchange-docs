@@ -1,42 +1,42 @@
 [
   {
     "Parameter": "spot_market_instant_listing_fee",
-    "Type": "types.Coin",
+    "Type": "Coin",
     "Description": "spot_market_instant_listing_fee defines the expedited fee in INJ required to create a spot market by bypassing governance"
   },
   {
     "Parameter": "derivative_market_instant_listing_fee",
-    "Type": "types.Coin",
+    "Type": "Coin",
     "Description": "derivative_market_instant_listing_fee defines the expedited fee in INJ required to create a derivative market by bypassing governance"
   },
   {
     "Parameter": "default_spot_maker_fee_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "default_spot_maker_fee defines the default exchange trade fee for makers on a spot market"
   },
   {
     "Parameter": "default_spot_taker_fee_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "default_spot_taker_fee_rate defines the default exchange trade fee rate for takers on a new spot market"
   },
   {
     "Parameter": "default_derivative_maker_fee_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "default_derivative_maker_fee defines the default exchange trade fee for makers on a new derivative market"
   },
   {
     "Parameter": "default_derivative_taker_fee_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "default_derivative_taker_fee defines the default exchange trade fee for takers on a new derivative market"
   },
   {
     "Parameter": "default_initial_margin_ratio",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "default_initial_margin_ratio defines the default initial margin ratio on a new derivative market"
   },
   {
     "Parameter": "default_maintenance_margin_ratio",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "default_maintenance_margin_ratio defines the default maintenance margin ratio on a new derivative market"
   },
   {
@@ -51,17 +51,17 @@
   },
   {
     "Parameter": "relayer_fee_share_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "relayer_fee_share_rate defines the trade fee share percentage that goes to relayers"
   },
   {
     "Parameter": "default_hourly_funding_rate_cap",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "default_hourly_funding_rate_cap defines the default maximum absolute value of the hourly funding rate"
   },
   {
     "Parameter": "default_hourly_interest_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "hourly_interest_rate defines the hourly interest rate"
   },
   {
@@ -71,7 +71,7 @@
   },
   {
     "Parameter": "inj_reward_staked_requirement_threshold",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "inj_reward_staked_requirement_threshold defines the threshold on INJ rewards after which one also needs staked INJ to receive more"
   },
   {
@@ -81,12 +81,12 @@
   },
   {
     "Parameter": "liquidator_reward_share_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "liquidator_reward_share_rate defines the ratio of the split of the surplus collateral that goes to the liquidator"
   },
   {
     "Parameter": "binary_options_market_instant_listing_fee",
-    "Type": "types.Coin",
+    "Type": "Coin",
     "Description": "binary_options_market_instant_listing_fee defines the expedited fee in INJ required to create a derivative market by bypassing governance"
   },
   {
@@ -96,22 +96,22 @@
   },
   {
     "Parameter": "spot_atomic_market_order_fee_multiplier",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "spot_atomic_market_order_fee_multiplier defines the default multiplier for executing atomic market orders in spot markets"
   },
   {
     "Parameter": "derivative_atomic_market_order_fee_multiplier",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "derivative_atomic_market_order_fee_multiplier defines the default multiplier for executing atomic market orders in derivative markets"
   },
   {
     "Parameter": "binary_options_atomic_market_order_fee_multiplier",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "binary_options_atomic_market_order_fee_multiplier defines the default multiplier for executing atomic market orders in binary markets"
   },
   {
     "Parameter": "minimal_protocol_fee_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "minimal_protocol_fee_rate defines the minimal protocol fee rate"
   },
   {
@@ -136,8 +136,8 @@
   },
   {
     "Parameter": "inj_auction_max_cap",
-    "Type": "cosmossdk_io_math.Int",
-    "Description": "inj_auction_max_cap defines the maximum cap for INJ sent to auction"
+    "Type": "Int",
+    "Description": "inj_auction_max_cap defines the maximum cap for INJ sent to auction. Deprecated: the cap is now driven by the auction module's InjBasketMaxCap; this field is ignored."
   },
   {
     "Parameter": "fixed_gas_enabled",
@@ -151,7 +151,7 @@
   },
   {
     "Parameter": "default_reduce_margin_ratio",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "default_reduce_margin_ratio defines the default reduce margin ratio on a new derivative market"
   },
   {
@@ -170,8 +170,18 @@
     "Description": "post_only_mode_blocks_amount defines the amount of blocks the post only mode will be enabled after the downtime-detector module detects a chain downtime"
   },
   {
-    "Parameter": "enforced_restrictions_contracts",
+    "Parameter": "deprecated_enforced_restrictions_contracts",
     "Type": "EnforcedRestrictionsContract array",
-    "Description": "Contracts that exchange will be listening to pause markets denominated in respective erc20: denoms, with their pause event signatures"
+    "Description": "DEPRECATED, left for upgrade purposes Contracts that exchange will be listening to pause markets denominated in respective erc20: denoms, with their pause event signatures"
+  },
+  {
+    "Parameter": "white_knight_liquidators",
+    "Type": "string array",
+    "Description": "white_knight_liquidators defines addresses that can liquidate positions with a dedicated white-knight reward share in positive payout liquidations"
+  },
+  {
+    "Parameter": "white_knight_liquidator_reward_share_rate",
+    "Type": "LegacyDec",
+    "Description": "white_knight_liquidator_reward_share_rate defines the ratio of the split of the surplus collateral that goes to a white knight liquidator"
   }
 ]

@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "proposal",
-    "Type": "v1beta1.Proposal",
+    "Type": "Proposal",
     "Description": ""
   }
 ]

@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "updates",
-    "Type": "v11.ValidatorUpdate array",
+    "Type": "ValidatorUpdate array",
     "Description": ""
   }
 ]

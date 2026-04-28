@@ -13,7 +13,7 @@
   },
   {
     "Parameter": "deposit",
-    "Type": "types1.Coin",
+    "Type": "Coin",
     "Description": "Amount of quote_denom to underwrite the insurance fund.",
     "Required": "Yes"
   }

@@ -13,7 +13,7 @@
   },
   {
     "Parameter": "min_self_delegation",
-    "Type": "cosmossdk_io_math.Int",
+    "Type": "Int",
     "Description": "",
     "Required": "Yes"
   },
@@ -31,13 +31,13 @@
   },
   {
     "Parameter": "pubkey",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "",
     "Required": "No"
   },
   {
     "Parameter": "value",
-    "Type": "types1.Coin",
+    "Type": "Coin",
     "Description": "",
     "Required": "Yes"
   }

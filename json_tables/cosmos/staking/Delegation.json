@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "shares",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "shares define the delegation shares received."
   }
 ]

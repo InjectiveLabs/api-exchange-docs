@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "request",
+    "Type": "RFQGwPrepareAutoSignRequestType",
+    "Description": "",
+    "Required": "No"
+  }
+]

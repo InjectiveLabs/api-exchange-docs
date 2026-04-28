@@ -13,7 +13,7 @@
   },
   {
     "Parameter": "amount",
-    "Type": "types.Coin",
+    "Type": "Coin",
     "Description": "the amount of the deposit (in chain format)",
     "Required": "Yes"
   }

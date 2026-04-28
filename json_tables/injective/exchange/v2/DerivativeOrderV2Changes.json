@@ -11,27 +11,27 @@
   },
   {
     "Parameter": "p",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "price of the order"
   },
   {
     "Parameter": "q",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "quantity of the order"
   },
   {
     "Parameter": "m",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "margin of the order"
   },
   {
     "Parameter": "f",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the amount of the quantity remaining fillable"
   },
   {
     "Parameter": "tp",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "trigger price of the order"
   }
 ]

@@ -16,12 +16,12 @@
   },
   {
     "Parameter": "expiration_twap_start_price_cumulative",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "expiration_twap_start_price_cumulative defines the cumulative price for the start of the TWAP window (in chain format)"
   },
   {
     "Parameter": "settlement_price",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "settlement_price defines the settlement price for a time expiry futures market (in chain format)"
   }
 ]

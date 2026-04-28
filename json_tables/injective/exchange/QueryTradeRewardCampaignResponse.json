@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "total_trade_reward_points",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "Parameter": "pending_total_trade_reward_points",
-    "Type": "cosmossdk_io_math.LegacyDec array",
+    "Type": "LegacyDec array",
     "Description": ""
   }
 ]

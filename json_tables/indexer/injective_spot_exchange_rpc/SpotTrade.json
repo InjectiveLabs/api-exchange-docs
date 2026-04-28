@@ -52,7 +52,7 @@
   {
     "Parameter": "execution_side",
     "Type": "string",
-    "Description": "Trade's execution side, marker/taker"
+    "Description": "Trade's execution side, maker,taker,n/a (n/a = not applicable)"
   },
   {
     "Parameter": "cid",

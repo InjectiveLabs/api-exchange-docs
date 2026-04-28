@@ -5,8 +5,13 @@
     "Description": "Max amount of gas allowed for contract hook queries"
   },
   {
-    "Parameter": "enforced_restrictions_contracts",
+    "Parameter": "deprecated_enforced_restrictions_contracts",
     "Type": "string array",
-    "Description": "EVM addresses of contracts that will not bypass module-to-module transfers"
+    "Description": "DEPRECATED in favor of enforced_restrictions_evm_contracts, but left for compatibility and upgrade purposes  EVM addresses of contracts that will not bypass module-to-module transfers"
+  },
+  {
+    "Parameter": "enforced_restrictions_evm_contracts",
+    "Type": "EnforcedRestrictionsEVMContract array",
+    "Description": "EVM Contracts that module will be listening to sync permissions stored inside namespace on every update inside smart contract state"
   }
 ]

@@ -21,27 +21,27 @@
   },
   {
     "Parameter": "last_block_id",
-    "Type": "v1beta11.BlockID",
+    "Type": "BlockID",
     "Description": ""
   },
   {
     "Parameter": "last_block_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": ""
   },
   {
     "Parameter": "next_validators",
-    "Type": "v1beta11.ValidatorSet",
+    "Type": "ValidatorSet",
     "Description": "LastValidators is used to validate block.LastCommit. Validators are persisted to the database separately every time they change, so we can query for historical validator sets. Note that if s.LastBlockHeight causes a valset change, we set s.LastHeightValidatorsChanged = s.LastBlockHeight + 1 + 1 Extra +1 due to nextValSet delay."
   },
   {
     "Parameter": "validators",
-    "Type": "v1beta11.ValidatorSet",
+    "Type": "ValidatorSet",
     "Description": ""
   },
   {
     "Parameter": "last_validators",
-    "Type": "v1beta11.ValidatorSet",
+    "Type": "ValidatorSet",
     "Description": ""
   },
   {
@@ -51,7 +51,7 @@
   },
   {
     "Parameter": "consensus_params",
-    "Type": "v1beta11.ConsensusParams",
+    "Type": "ConsensusParams",
     "Description": "Consensus parameters used for validating blocks. Changes returned by EndBlock and updated after Commit."
   },
   {

@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "messages",
-    "Type": "types1.Any array",
+    "Type": "Any array",
     "Description": "messages are the arbitrary messages to be executed if the proposal passes."
   },
   {
@@ -21,27 +21,27 @@
   },
   {
     "Parameter": "submit_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "submit_time is the time of proposal submission."
   },
   {
     "Parameter": "deposit_end_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "deposit_end_time is the end time for deposition."
   },
   {
     "Parameter": "total_deposit",
-    "Type": "types.Coin array",
+    "Type": "Coin array",
     "Description": "total_deposit is the total deposit on the proposal."
   },
   {
     "Parameter": "voting_start_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "voting_start_time is the starting time to vote on a proposal."
   },
   {
     "Parameter": "voting_end_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "voting_end_time is the end time of voting on a proposal."
   },
   {

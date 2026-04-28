@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "value",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the value of the price scaled by 1e18"
   },
   {

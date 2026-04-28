@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "height",
-    "Type": "types.Height",
+    "Type": "Height",
     "Description": "query block height"
   }
 ]

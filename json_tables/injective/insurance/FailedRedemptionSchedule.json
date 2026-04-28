@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "id",
+    "Type": "uint64",
+    "Description": "id of the failed redemption"
+  },
+  {
+    "Parameter": "schedule",
+    "Type": "RedemptionSchedule",
+    "Description": "the original redemption schedule that failed to execute"
+  },
+  {
+    "Parameter": "err",
+    "Type": "string",
+    "Description": "the error message from the failed withdrawal attempt"
+  }
+]

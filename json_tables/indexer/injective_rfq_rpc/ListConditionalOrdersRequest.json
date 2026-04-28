@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "request_address",
+    "Type": "string",
+    "Description": "Taker address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string array",
+    "Description": "Filter by one or more statuses; empty means no filter",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Filter by market ID",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "per_page",
+    "Type": "int32",
+    "Description": "Number of records per page",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "Pagination token",
+    "Required": "Yes"
+  }
+]

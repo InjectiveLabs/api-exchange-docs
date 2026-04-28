@@ -51,22 +51,22 @@
   },
   {
     "Parameter": "slash_fraction_valset",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   },
   {
     "Parameter": "slash_fraction_batch",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   },
   {
     "Parameter": "slash_fraction_claim",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   },
   {
     "Parameter": "slash_fraction_conflicting_claim",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   },
   {
@@ -76,7 +76,7 @@
   },
   {
     "Parameter": "slash_fraction_bad_eth_signature",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   },
   {
@@ -101,7 +101,7 @@
   },
   {
     "Parameter": "valset_reward",
-    "Type": "types.Coin",
+    "Type": "Coin",
     "Description": ""
   },
   {

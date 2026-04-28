@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "accounts",
-    "Type": "types.Any array",
+    "Type": "Any array",
     "Description": "accounts are the accounts present at genesis."
   }
 ]

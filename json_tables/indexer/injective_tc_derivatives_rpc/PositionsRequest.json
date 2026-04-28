@@ -1,0 +1,44 @@
+[
+  {
+    "Parameter": "market_ids",
+    "Type": "string array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "direction",
+    "Type": "string",
+    "Description": "order side filter",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "filter by account address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "with_count",
+    "Type": "bool",
+    "Description": "Return the total number of matching records alongside results",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "per_page",
+    "Type": "int32",
+    "Description": "Number of results per page",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "Pagination token",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "with_upnl",
+    "Type": "bool",
+    "Description": "Include unrealized PnL in the response",
+    "Required": "Yes"
+  }
+]

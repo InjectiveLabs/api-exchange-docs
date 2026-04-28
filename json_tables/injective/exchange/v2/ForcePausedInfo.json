@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "mark_price_at_pausing",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   }
 ]

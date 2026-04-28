@@ -1,12 +1,12 @@
 [
   {
     "Parameter": "volatility",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": ""
   },
   {
     "Parameter": "history_metadata",
-    "Type": "types.MetadataStatistics",
+    "Type": "MetadataStatistics",
     "Description": ""
   },
   {

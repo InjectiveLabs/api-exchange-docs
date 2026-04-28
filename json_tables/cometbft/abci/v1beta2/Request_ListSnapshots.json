@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "list_snapshots",
-    "Type": "v1beta1.RequestListSnapshots",
+    "Type": "RequestListSnapshots",
     "Description": ""
   }
 ]

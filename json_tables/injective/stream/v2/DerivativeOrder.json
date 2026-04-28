@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "order",
-    "Type": "v2.DerivativeLimitOrder",
+    "Type": "DerivativeLimitOrder",
     "Description": "the order details"
   },
   {

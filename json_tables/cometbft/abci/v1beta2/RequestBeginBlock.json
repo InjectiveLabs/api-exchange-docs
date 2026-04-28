@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "header",
-    "Type": "v1beta11.Header",
+    "Type": "Header",
     "Description": ""
   },
   {

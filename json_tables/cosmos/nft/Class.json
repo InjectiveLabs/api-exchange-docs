@@ -31,7 +31,7 @@
   },
   {
     "Parameter": "data",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "data is the app specific metadata of the NFT class. Optional"
   }
 ]

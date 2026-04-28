@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "maker",
+    "Type": "string",
+    "Description": "Maker address"
+  },
+  {
+    "Parameter": "price",
+    "Type": "string",
+    "Description": "Quote price"
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "string",
+    "Description": "Quote quantity"
+  },
+  {
+    "Parameter": "margin",
+    "Type": "string",
+    "Description": "Quote margin"
+  }
+]

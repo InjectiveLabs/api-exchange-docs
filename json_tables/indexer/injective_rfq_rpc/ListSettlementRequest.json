@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "addresses",
+    "Type": "string array",
+    "Description": "Filter by taker addresses",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "per_page",
+    "Type": "int32",
+    "Description": "Number of records per page",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "Pagination token",
+    "Required": "Yes"
+  }
+]

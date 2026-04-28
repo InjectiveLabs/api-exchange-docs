@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "prices",
-    "Type": "cosmossdk_io_math.LegacyDec array",
+    "Type": "LegacyDec array",
     "Description": ""
   },
   {

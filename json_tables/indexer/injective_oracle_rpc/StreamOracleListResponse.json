@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": "The symbol of the oracle asset"
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "string",
+    "Description": "Oracle type"
+  },
+  {
+    "Parameter": "price",
+    "Type": "string",
+    "Description": "The price of the oracle asset"
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "int64",
+    "Description": "Operation timestamp in UNIX millis."
+  }
+]

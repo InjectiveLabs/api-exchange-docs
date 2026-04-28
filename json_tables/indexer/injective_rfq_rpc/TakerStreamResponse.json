@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "message_type",
+    "Type": "string",
+    "Description": "Type: 'quote', 'request_ack', 'error', 'pong', 'conditional_order_ack', 'conditional_order_update'"
+  },
+  {
+    "Parameter": "quote",
+    "Type": "RFQQuoteType",
+    "Description": "Quote from market maker"
+  },
+  {
+    "Parameter": "request_ack",
+    "Type": "RequestStreamAck",
+    "Description": "Acknowledgment for request creation"
+  },
+  {
+    "Parameter": "error",
+    "Type": "StreamError",
+    "Description": "Error message"
+  },
+  {
+    "Parameter": "conditional_order_ack",
+    "Type": "ConditionalOrderAck",
+    "Description": "Acknowledgment for conditional order creation"
+  },
+  {
+    "Parameter": "conditional_order",
+    "Type": "ConditionalOrderResponseType",
+    "Description": "Conditional order lifecycle update"
+  }
+]

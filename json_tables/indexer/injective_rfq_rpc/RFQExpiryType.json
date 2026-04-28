@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "timestamp",
+    "Type": "uint64",
+    "Description": "Expiry timestamp in milliseconds"
+  },
+  {
+    "Parameter": "height",
+    "Type": "uint64",
+    "Description": "Expiry block height"
+  }
+]

@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "echo",
-    "Type": "v1beta1.RequestEcho",
+    "Type": "RequestEcho",
     "Description": ""
   }
 ]

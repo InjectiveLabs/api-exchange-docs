@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "pub_key",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": ""
   },
   {

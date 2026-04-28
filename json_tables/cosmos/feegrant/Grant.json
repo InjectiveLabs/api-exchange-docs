@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "allowance",
-    "Type": "types1.Any",
+    "Type": "Any",
     "Description": "allowance can be any of basic, periodic, allowed fee allowance."
   }
 ]

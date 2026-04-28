@@ -40,5 +40,11 @@
     "Type": "string",
     "Description": "Account address",
     "Required": "Yes"
+  },
+  {
+    "Parameter": "execution_types",
+    "Type": "string array",
+    "Description": "Filter by execution type of trades",
+    "Required": "Yes"
   }
 ]

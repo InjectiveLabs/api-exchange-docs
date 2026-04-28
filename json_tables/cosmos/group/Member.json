@@ -16,7 +16,7 @@
   },
   {
     "Parameter": "added_at",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "added_at is a timestamp specifying when a member was added."
   }
 ]

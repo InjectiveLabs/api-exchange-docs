@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "content",
-    "Type": "types1.Any",
+    "Type": "Any",
     "Description": "content is the proposal's content."
   },
   {
@@ -21,27 +21,27 @@
   },
   {
     "Parameter": "submit_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "submit_time is the time of proposal submission."
   },
   {
     "Parameter": "deposit_end_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "deposit_end_time is the end time for deposition."
   },
   {
     "Parameter": "total_deposit",
-    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Type": "Coins",
     "Description": "total_deposit is the total deposit on the proposal."
   },
   {
     "Parameter": "voting_start_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "voting_start_time is the starting time to vote on a proposal."
   },
   {
     "Parameter": "voting_end_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "voting_end_time is the end time of voting on a proposal."
   }
 ]

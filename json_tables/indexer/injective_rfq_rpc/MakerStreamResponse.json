@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "message_type",
+    "Type": "string",
+    "Description": "Type: 'request', 'quote_ack', 'quote_update', 'settlement_update', 'error', 'pong'"
+  },
+  {
+    "Parameter": "request",
+    "Type": "RFQRequestType",
+    "Description": "RFQ request from taker"
+  },
+  {
+    "Parameter": "quote_ack",
+    "Type": "QuoteStreamAck",
+    "Description": "Acknowledgment for quote submission"
+  },
+  {
+    "Parameter": "error",
+    "Type": "StreamError",
+    "Description": "Error message"
+  },
+  {
+    "Parameter": "processed_quote",
+    "Type": "RFQProcessedQuoteType",
+    "Description": "Processed quote update for maker"
+  },
+  {
+    "Parameter": "settlement",
+    "Type": "RFQSettlementMakerUpdate",
+    "Description": "Settlement update for maker"
+  }
+]

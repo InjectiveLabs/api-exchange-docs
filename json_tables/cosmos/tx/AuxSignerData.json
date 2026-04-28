@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "mode",
-    "Type": "signing.SignMode",
+    "Type": "SignMode",
     "Description": "mode is the signing mode of the single signer."
   },
   {

@@ -6,12 +6,12 @@
   },
   {
     "Parameter": "hourly_funding_rate_cap",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "hourly_funding_rate_cap defines the maximum absolute value of the hourly funding rate"
   },
   {
     "Parameter": "hourly_interest_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "hourly_interest_rate defines the hourly interest rate"
   },
   {

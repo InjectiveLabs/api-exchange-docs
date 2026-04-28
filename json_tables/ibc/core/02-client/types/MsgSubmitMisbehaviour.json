@@ -7,7 +7,7 @@
   },
   {
     "Parameter": "misbehaviour",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "misbehaviour used for freezing the light client",
     "Required": "No"
   },

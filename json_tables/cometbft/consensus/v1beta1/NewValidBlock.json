@@ -11,12 +11,12 @@
   },
   {
     "Parameter": "block_part_set_header",
-    "Type": "v1beta1.PartSetHeader",
+    "Type": "PartSetHeader",
     "Description": ""
   },
   {
     "Parameter": "block_parts",
-    "Type": "v1.BitArray",
+    "Type": "BitArray",
     "Description": ""
   },
   {

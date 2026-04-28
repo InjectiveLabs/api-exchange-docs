@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "unbonding_time",
-    "Type": "time.Duration",
+    "Type": "Duration",
     "Description": "unbonding_time is the time duration of unbonding."
   },
   {
@@ -26,7 +26,7 @@
   },
   {
     "Parameter": "min_commission_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "min_commission_rate is the chain-wide minimum commission rate that a validator can charge their delegators"
   }
 ]

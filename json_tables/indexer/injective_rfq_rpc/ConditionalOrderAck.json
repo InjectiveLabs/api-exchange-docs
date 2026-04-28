@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "order",
+    "Type": "ConditionalOrderResponseType",
+    "Description": "Created conditional order"
+  }
+]

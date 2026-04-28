@@ -36,7 +36,7 @@
   },
   {
     "Parameter": "oracle_type",
-    "Type": "types.OracleType",
+    "Type": "OracleType",
     "Description": "Oracle type"
   },
   {
@@ -46,37 +46,37 @@
   },
   {
     "Parameter": "initial_margin_ratio",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "initial_margin_ratio defines the initial margin ratio for the derivative market"
   },
   {
     "Parameter": "maintenance_margin_ratio",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "maintenance_margin_ratio defines the maintenance margin ratio for the derivative market"
   },
   {
     "Parameter": "maker_fee_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "maker_fee_rate defines the exchange trade fee for makers for the derivative market"
   },
   {
     "Parameter": "taker_fee_rate",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "taker_fee_rate defines the exchange trade fee for takers for the derivative market"
   },
   {
     "Parameter": "min_price_tick_size",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "min_price_tick_size defines the minimum tick size of the order's price and margin"
   },
   {
     "Parameter": "min_quantity_tick_size",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "min_quantity_tick_size defines the minimum tick size of the order's quantity"
   },
   {
     "Parameter": "min_notional",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "min_notional defines the minimum notional (in quote asset) required for orders in the market"
   },
   {
@@ -86,7 +86,7 @@
   },
   {
     "Parameter": "reduce_margin_ratio",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "reduce_margin_ratio defines the ratio of the margin that is reduced"
   },
   {

@@ -13,13 +13,13 @@
   },
   {
     "Parameter": "amount",
-    "Type": "types.Coin",
+    "Type": "Coin",
     "Description": "The amount of tokens to send",
     "Required": "Yes"
   },
   {
     "Parameter": "bridge_fee",
-    "Type": "types.Coin",
+    "Type": "Coin",
     "Description": "The fee paid for the bridge, distinct from the fee paid to the chain to actually send this message in the first place. So a successful send has two layers of fees for the user",
     "Required": "Yes"
   }

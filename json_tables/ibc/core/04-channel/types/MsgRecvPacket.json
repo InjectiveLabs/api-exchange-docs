@@ -13,7 +13,7 @@
   },
   {
     "Parameter": "proof_height",
-    "Type": "types.Height",
+    "Type": "Height",
     "Description": "",
     "Required": "Yes"
   },

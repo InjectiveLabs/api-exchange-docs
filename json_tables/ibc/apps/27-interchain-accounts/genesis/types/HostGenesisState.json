@@ -16,7 +16,7 @@
   },
   {
     "Parameter": "params",
-    "Type": "types1.Params",
+    "Type": "Params",
     "Description": ""
   }
 ]

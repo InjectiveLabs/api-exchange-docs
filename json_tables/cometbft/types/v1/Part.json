@@ -11,7 +11,7 @@
   },
   {
     "Parameter": "proof",
-    "Type": "v1.Proof",
+    "Type": "Proof",
     "Description": ""
   }
 ]

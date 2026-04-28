@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "packet_id",
-    "Type": "types.PacketId",
+    "Type": "PacketId",
     "Description": "the packet identifier for the associated fees",
     "Required": "Yes"
   }

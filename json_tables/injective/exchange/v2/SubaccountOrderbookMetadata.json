@@ -11,12 +11,12 @@
   },
   {
     "Parameter": "aggregate_reduce_only_quantity",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "The aggregate quantity of the subaccount's reduce-only limit orders (in human readable format)"
   },
   {
     "Parameter": "aggregate_vanilla_quantity",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "The aggregate quantity of the subaccount's vanilla limit orders (in human readable format)"
   },
   {

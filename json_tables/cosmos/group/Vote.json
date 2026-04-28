@@ -21,7 +21,7 @@
   },
   {
     "Parameter": "submit_time",
-    "Type": "time.Time",
+    "Type": "Time",
     "Description": "submit_time is the timestamp when the vote was submitted."
   }
 ]

@@ -16,7 +16,7 @@
   },
   {
     "Parameter": "oracle_type",
-    "Type": "types.OracleType",
+    "Type": "OracleType",
     "Description": "Oracle type"
   }
 ]

@@ -26,7 +26,7 @@
   },
   {
     "Parameter": "funds",
-    "Type": "github_com_cosmos_cosmos_sdk_types.Coins",
+    "Type": "Coins",
     "Description": "Funds coins that are transferred to the contract on instantiation"
   }
 ]

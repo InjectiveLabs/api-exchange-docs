@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "votes",
-    "Type": "v1beta1.VoteInfo array",
+    "Type": "VoteInfo array",
     "Description": ""
   }
 ]

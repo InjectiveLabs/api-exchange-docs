@@ -1,13 +1,13 @@
 [
   {
     "Parameter": "client_state",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "light client state",
     "Required": "No"
   },
   {
     "Parameter": "consensus_state",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "consensus state associated with the client that corresponds to a given height.",
     "Required": "No"
   },

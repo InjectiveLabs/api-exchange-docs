@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "new_points",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "new_points overwrites the current trading reward points for the account"
   }
 ]

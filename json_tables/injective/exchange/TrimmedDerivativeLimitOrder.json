@@ -1,22 +1,22 @@
 [
   {
     "Parameter": "price",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "price of the order (in chain format)"
   },
   {
     "Parameter": "quantity",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "quantity of the order (in chain format)"
   },
   {
     "Parameter": "margin",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "margin of the order (in chain format)"
   },
   {
     "Parameter": "fillable",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the amount of the quantity remaining fillable (in chain format)"
   },
   {

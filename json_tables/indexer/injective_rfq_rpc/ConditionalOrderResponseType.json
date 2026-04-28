@@ -1,0 +1,82 @@
+[
+  {
+    "Parameter": "rfq_id",
+    "Type": "uint64",
+    "Description": "RFQ order ID"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Derivative market ID"
+  },
+  {
+    "Parameter": "direction",
+    "Type": "string",
+    "Description": "Exit direction (long/short)"
+  },
+  {
+    "Parameter": "margin",
+    "Type": "string",
+    "Description": "Collateral amount"
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "string",
+    "Description": "Contract quantity"
+  },
+  {
+    "Parameter": "worst_price",
+    "Type": "string",
+    "Description": "Worst acceptable price"
+  },
+  {
+    "Parameter": "request_address",
+    "Type": "string",
+    "Description": "Taker address"
+  },
+  {
+    "Parameter": "trigger_price",
+    "Type": "string",
+    "Description": "Mark price threshold"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Order status"
+  },
+  {
+    "Parameter": "created_at",
+    "Type": "int64",
+    "Description": "Creation timestamp in milliseconds"
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "Last update timestamp in milliseconds"
+  },
+  {
+    "Parameter": "expires_at",
+    "Type": "int64",
+    "Description": "Expiry timestamp in milliseconds"
+  },
+  {
+    "Parameter": "trigger_type",
+    "Type": "string",
+    "Description": "Trigger condition (mark_price_gte, mark_price_lte)"
+  },
+  {
+    "Parameter": "min_total_fill_quantity",
+    "Type": "string",
+    "Description": "Minimum total fill quantity"
+  },
+  {
+    "Parameter": "event_time",
+    "Type": "uint64",
+    "Description": "Event time timestamp in milliseconds (streaming only)"
+  },
+  {
+    "Parameter": "error",
+    "Type": "string",
+    "Description": "Last error message, if any"
+  }
+]

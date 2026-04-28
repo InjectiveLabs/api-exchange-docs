@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "pagination",
-    "Type": "query.PageResponse",
+    "Type": "PageResponse",
     "Description": "pagination defines the pagination in the response."
   }
 ]

@@ -13,7 +13,7 @@
   },
   {
     "Parameter": "token",
-    "Type": "types.Coin",
+    "Type": "Coin",
     "Description": "the tokens to be transferred",
     "Required": "Yes"
   },
@@ -31,7 +31,7 @@
   },
   {
     "Parameter": "timeout_height",
-    "Type": "types1.Height",
+    "Type": "Height",
     "Description": "Timeout height relative to the current block height. The timeout is disabled when set to 0.",
     "Required": "Yes"
   },

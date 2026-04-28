@@ -6,12 +6,12 @@
   },
   {
     "Parameter": "price",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the price of the trade (in chain format)"
   },
   {
     "Parameter": "quantity",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the quantity of the trade (in chain format)"
   }
 ]

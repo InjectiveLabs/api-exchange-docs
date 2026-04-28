@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "public_key",
-    "Type": "types.Any",
+    "Type": "Any",
     "Description": "public_key is the public key of the signing account."
   },
   {

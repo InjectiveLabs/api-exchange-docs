@@ -6,7 +6,7 @@
   },
   {
     "Parameter": "min_notional",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "the minimum notional value for the token (in chain format)"
   }
 ]

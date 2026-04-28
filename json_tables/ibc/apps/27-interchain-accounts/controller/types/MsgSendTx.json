@@ -13,7 +13,7 @@
   },
   {
     "Parameter": "packet_data",
-    "Type": "types1.InterchainAccountPacketData",
+    "Type": "InterchainAccountPacketData",
     "Description": "",
     "Required": "Yes"
   },

@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "oracle_type",
+    "Type": "string",
+    "Description": "Filter by oracle type",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "symbols",
+    "Type": "string array",
+    "Description": "Oracle symbols to stream; empty streams all symbols for the given oracle type",
+    "Required": "Yes"
+  }
+]

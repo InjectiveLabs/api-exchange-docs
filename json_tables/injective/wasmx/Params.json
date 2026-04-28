@@ -21,7 +21,7 @@
   },
   {
     "Parameter": "register_contract_access",
-    "Type": "types.AccessConfig",
+    "Type": "AccessConfig",
     "Description": ""
   }
 ]

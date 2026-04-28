@@ -1,7 +1,7 @@
 [
   {
     "Parameter": "duration",
-    "Type": "time.Duration",
+    "Type": "Duration",
     "Description": ""
   },
   {

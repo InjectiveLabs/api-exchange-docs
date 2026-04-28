@@ -6,22 +6,22 @@
   },
   {
     "Parameter": "quantity",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "The quantity of the position (in human readable format)"
   },
   {
     "Parameter": "entry_price",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "The entry price of the position (in human readable format)"
   },
   {
     "Parameter": "margin",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "The margin of the position (in human readable format)"
   },
   {
     "Parameter": "cumulative_funding_entry",
-    "Type": "cosmossdk_io_math.LegacyDec",
+    "Type": "LegacyDec",
     "Description": "The cumulative funding"
   }
 ]

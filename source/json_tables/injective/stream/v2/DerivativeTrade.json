@@ -53,5 +53,10 @@
     "Parameter": "trade_id",
     "Type": "string",
     "Description": "the trade ID"
+  },
+  {
+    "Parameter": "is_liquidation",
+    "Type": "bool",
+    "Description": "whether the trade resulted from a liquidation"
   }
 ]

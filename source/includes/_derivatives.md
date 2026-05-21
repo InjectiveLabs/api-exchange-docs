@@ -1338,7 +1338,8 @@ func main() {
 <tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td></tr>
 <tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the maximum open notional for the market</td></tr>
 <tr ><td class="parameter-td td_text">has_disabled_minimal_protocol_fee</td><td class="type-td td_text">bool</td><td class="description-td td_text">has_disabled_minimal_protocol_fee indicates whether the minimal protocol fee is disabled for the market</td></tr>
-<tr ><td class="parameter-td td_text">force_paused_info</td><td class="type-td td_text">ForcePausedInfo</td><td class="description-td td_text">force_paused_info defines additional info for force paused markets, only set when status == ForcePaused</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">force_paused_info</td><td class="type-td td_text">ForcePausedInfo</td><td class="description-td td_text">force_paused_info defines additional info for force paused markets, only set when status == ForcePaused</td></tr>
+<tr ><td class="parameter-td td_text">cross_margin_eligible</td><td class="type-td td_text">bool</td><td class="description-td td_text">cross_margin_eligible marks the market as eligible for cross-margin pool participation. Default false means markets are ineligible until explicitly enabled at launch or toggled via governance proposal.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1359,7 +1360,9 @@ func main() {
 <tr ><td class="code-td td_num">10</td><td class="name-td td_text">BandIBC</td></tr>
 <tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr>
 <tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr>
-<tr ><td class="code-td td_num">13</td><td class="name-td td_text">ChainlinkDataStreams</td></tr></tbody></table>
+<tr ><td class="code-td td_num">13</td><td class="name-td td_text">ChainlinkDataStreams</td></tr>
+<tr ><td class="code-td td_num">14</td><td class="name-td td_text">PythPro</td></tr>
+<tr ><td class="code-td td_num">15</td><td class="name-td td_text">SedaFast</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1693,7 +1696,8 @@ func main() {
 <tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td></tr>
 <tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the maximum open notional for the market</td></tr>
 <tr ><td class="parameter-td td_text">has_disabled_minimal_protocol_fee</td><td class="type-td td_text">bool</td><td class="description-td td_text">has_disabled_minimal_protocol_fee indicates whether the minimal protocol fee is disabled for the market</td></tr>
-<tr ><td class="parameter-td td_text">force_paused_info</td><td class="type-td td_text">ForcePausedInfo</td><td class="description-td td_text">force_paused_info defines additional info for force paused markets, only set when status == ForcePaused</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">force_paused_info</td><td class="type-td td_text">ForcePausedInfo</td><td class="description-td td_text">force_paused_info defines additional info for force paused markets, only set when status == ForcePaused</td></tr>
+<tr ><td class="parameter-td td_text">cross_margin_eligible</td><td class="type-td td_text">bool</td><td class="description-td td_text">cross_margin_eligible marks the market as eligible for cross-margin pool participation. Default false means markets are ineligible until explicitly enabled at launch or toggled via governance proposal.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1714,7 +1718,9 @@ func main() {
 <tr ><td class="code-td td_num">10</td><td class="name-td td_text">BandIBC</td></tr>
 <tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr>
 <tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr>
-<tr ><td class="code-td td_num">13</td><td class="name-td td_text">ChainlinkDataStreams</td></tr></tbody></table>
+<tr ><td class="code-td td_num">13</td><td class="name-td td_text">ChainlinkDataStreams</td></tr>
+<tr ><td class="code-td td_num">14</td><td class="name-td td_text">PythPro</td></tr>
+<tr ><td class="code-td td_num">15</td><td class="name-td td_text">SedaFast</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2299,7 +2305,8 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountPositionInMarketResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">Position</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">Position</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">risk_mode</td><td class="type-td td_text">RiskMode</td><td class="description-td td_text">The risk mode of the subaccount (ISOLATED or CROSS). For CROSS mode, the position's margin is an accounting value; actual collateral is pooled. Use CrossMarginPoolSnapshot for pool-level health.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2692,7 +2699,8 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountPositionInMarketResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">Position</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">Position</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">risk_mode</td><td class="type-td td_text">RiskMode</td><td class="description-td td_text">The risk mode of the subaccount (ISOLATED or CROSS). For CROSS mode, the position's margin is an accounting value; actual collateral is pooled. Use CrossMarginPoolSnapshot for pool-level health.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2860,7 +2868,8 @@ func main() {
 ```
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountEffectivePositionInMarketResponse.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">EffectivePosition</td><td class="description-td td_num"></td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">EffectivePosition</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">risk_mode</td><td class="type-td td_text">RiskMode</td><td class="description-td td_text">The risk mode of the subaccount (ISOLATED or CROSS). For CROSS mode, effective_margin reflects position value but liquidation is determined at pool level. Use CrossMarginPoolSnapshot for pool health.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3556,6 +3565,7 @@ async def main() -> None:
         min_quantity_tick_size=Decimal("0.01"),
         min_notional=Decimal("1"),
         open_notional_cap=composer.uncapped_open_notional_cap(),
+        cross_margin_eligible=False,
     )
 
     # broadcast the transaction
@@ -3702,7 +3712,8 @@ func main() {
 <tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">min_quantity_tick_size defines the minimum tick size of the order's quantity (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the cap on the open notional</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the cap on the open notional</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">cross_margin_eligible</td><td class="type-td td_text">bool</td><td class="description-td td_text">cross_margin_eligible marks the market as eligible for cross-margin</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3723,7 +3734,9 @@ func main() {
 <tr ><td class="code-td td_num">10</td><td class="name-td td_text">BandIBC</td></tr>
 <tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr>
 <tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr>
-<tr ><td class="code-td td_num">13</td><td class="name-td td_text">ChainlinkDataStreams</td></tr></tbody></table>
+<tr ><td class="code-td td_num">13</td><td class="name-td td_text">ChainlinkDataStreams</td></tr>
+<tr ><td class="code-td td_num">14</td><td class="name-td td_text">PythPro</td></tr>
+<tr ><td class="code-td td_num">15</td><td class="name-td td_text">SedaFast</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3859,10 +3872,12 @@ async def main() -> None:
         taker_fee_rate=Decimal("0.001"),
         initial_margin_ratio=Decimal("0.33"),
         maintenance_margin_ratio=Decimal("0.095"),
+        reduce_margin_ratio=Decimal("3"),
         min_price_tick_size=Decimal("0.001"),
         min_quantity_tick_size=Decimal("0.01"),
         min_notional=Decimal("1"),
         open_notional_cap=composer.uncapped_open_notional_cap(),
+        cross_margin_eligible=False,
     )
 
     # broadcast the transaction
@@ -4012,7 +4027,8 @@ func main() {
 <tr ><td class="parameter-td td_text">min_quantity_tick_size</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">min_quantity_tick_size defines the minimum tick size of the order's quantity</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the cap on the open notional</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the cap on the open notional</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">cross_margin_eligible</td><td class="type-td td_text">bool</td><td class="description-td td_text">cross_margin_eligible marks the market as eligible for cross-margin</td><td class="required-td td_text">Yes</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -4033,7 +4049,9 @@ func main() {
 <tr ><td class="code-td td_num">10</td><td class="name-td td_text">BandIBC</td></tr>
 <tr ><td class="code-td td_num">11</td><td class="name-td td_text">Provider</td></tr>
 <tr ><td class="code-td td_num">12</td><td class="name-td td_text">Stork</td></tr>
-<tr ><td class="code-td td_num">13</td><td class="name-td td_text">ChainlinkDataStreams</td></tr></tbody></table>
+<tr ><td class="code-td td_num">13</td><td class="name-td td_text">ChainlinkDataStreams</td></tr>
+<tr ><td class="code-td td_num">14</td><td class="name-td td_text">PythPro</td></tr>
+<tr ><td class="code-td td_num">15</td><td class="name-td td_text">SedaFast</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -5822,6 +5840,334 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
+## MsgBatchLiquidatePositions
+
+This message is sent to the chain to liquidate more than one position with a single message. For more details about liquidation check [MsgLiquidatePosition](#chain-exchange-for-derivatives-msgliquidateposition).
+The batch message always succeeds, even if all the liquidation actions it contains fail. That means that a failure in a liquidation action does not invalidate the other actions in the message.
+
+**IP rate limit group:** `chain`
+
+### Request Parameters
+> Request Example:
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-python-sdk/examples/chain_client/exchange/31_MsgBatchLiquidatePositions.py) -->
+<!-- The below code snippet is automatically added from ../../tmp-python-sdk/examples/chain_client/exchange/31_MsgBatchLiquidatePositions.py -->
+```py
+import asyncio
+import json
+import os
+import uuid
+from decimal import Decimal
+
+import dotenv
+
+from pyinjective.async_client_v2 import AsyncClient
+from pyinjective.core.broadcaster import MsgBroadcasterWithPk
+from pyinjective.core.network import Network
+from pyinjective.wallet import PrivateKey
+
+
+async def main() -> None:
+    dotenv.load_dotenv()
+    private_key_in_hexa = os.getenv("INJECTIVE_PRIVATE_KEY")
+
+    # select network: local, testnet, mainnet
+    network = Network.testnet()
+
+    # initialize grpc client
+    client = AsyncClient(network)
+    composer = await client.composer()
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+
+    message_broadcaster = MsgBroadcasterWithPk.new_using_gas_heuristics(
+        network=network,
+        private_key=private_key_in_hexa,
+        gas_price=gas_price,
+        client=client,
+        composer=composer,
+    )
+
+    priv_key = PrivateKey.from_hex(private_key_in_hexa)
+    pub_key = priv_key.to_public_key()
+    address = pub_key.to_address()
+    subaccount_id = address.get_subaccount_id(index=0)
+
+    market_id = "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
+    fee_recipient = "inj1hkhdaj2a2clmq5jq6mspsggqs32vynpk228q3r"
+    cid = str(uuid.uuid4())
+
+    order = composer.derivative_order(
+        market_id=market_id,
+        subaccount_id=subaccount_id,
+        fee_recipient=fee_recipient,
+        price=Decimal("39.01"),  # This should be the liquidation price
+        quantity=Decimal("0.147"),
+        margin=Decimal("5.73447"),
+        order_type="SELL",
+        cid=cid,
+    )
+
+    # Build individual liquidation entries; order is optional per-entry
+    liquidation_with_order = composer.liquidate_position_data(
+        subaccount_id="0x156df4d5bc8e7dd9191433e54bd6a11eeb390921000000000000000000000000",
+        market_id=market_id,
+        order=order,
+    )
+    liquidation_without_order = composer.liquidate_position_data(
+        subaccount_id="0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1000000000000000000000000",
+        market_id=market_id,
+    )
+
+    # prepare tx msg
+    msg = composer.msg_batch_liquidate_positions(
+        sender=address.to_acc_bech32(),
+        liquidations=[liquidation_with_order, liquidation_without_order],
+    )
+
+    # broadcast the transaction
+    result = await message_broadcaster.broadcast([msg])
+    print("---Transaction Response---")
+    print(json.dumps(result, indent=2))
+
+    gas_price = await client.current_chain_gas_price()
+    # adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+    gas_price = int(gas_price * 1.1)
+    message_broadcaster.update_gas_price(gas_price=gas_price)
+
+
+if __name__ == "__main__":
+    asyncio.get_event_loop().run_until_complete(main())
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=../../tmp-go-sdk/examples/chain/exchange/31_MsgBatchLiquidatePositions/example.go) -->
+<!-- The below code snippet is automatically added from ../../tmp-go-sdk/examples/chain/exchange/31_MsgBatchLiquidatePositions/example.go -->
+```go
+package main
+
+import (
+	"context"
+	"encoding/json"
+	"fmt"
+	"os"
+	"time"
+
+	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	"github.com/google/uuid"
+	"github.com/joho/godotenv"
+	"github.com/shopspring/decimal"
+
+	exchangev2types "github.com/InjectiveLabs/sdk-go/chain/exchange/types/v2"
+	chainclient "github.com/InjectiveLabs/sdk-go/client/chain"
+	"github.com/InjectiveLabs/sdk-go/client/common"
+)
+
+func main() {
+	_ = godotenv.Load()
+	network := common.LoadNetwork("testnet", "lb")
+	tmClient, err := rpchttp.New(network.TmEndpoint)
+	if err != nil {
+		panic(err)
+	}
+
+	senderAddress, cosmosKeyring, err := chainclient.InitCosmosKeyring(
+		os.Getenv("HOME")+"/.injectived",
+		"injectived",
+		"file",
+		"inj-user",
+		"12345678",
+		os.Getenv("INJECTIVE_PRIVATE_KEY"), // keyring will be used if pk not provided
+		false,
+	)
+
+	if err != nil {
+		panic(err)
+	}
+
+	clientCtx, err := chainclient.NewClientContext(
+		network.ChainId,
+		senderAddress.String(),
+		cosmosKeyring,
+	)
+
+	if err != nil {
+		panic(err)
+	}
+
+	clientCtx = clientCtx.WithNodeURI(network.TmEndpoint).WithClient(tmClient)
+
+	chainClient, err := chainclient.NewChainClientV2(
+		clientCtx,
+		network,
+	)
+
+	if err != nil {
+		panic(err)
+	}
+
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	gasPrice := chainClient.CurrentChainGasPrice(ctx)
+	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+	gasPrice = int64(float64(gasPrice) * 1.1)
+	chainClient.SetGasPrice(gasPrice)
+
+	defaultSubaccountID := chainClient.DefaultSubaccount(senderAddress)
+
+	marketId := "0x17ef48032cb24375ba7c2e39f384e56433bcab20cbee9a7357e4cba2eb00abe6"
+
+	firstOrder := chainClient.CreateDerivativeOrderV2(
+		defaultSubaccountID,
+		&chainclient.DerivativeOrderData{
+			OrderType:    int32(exchangev2types.OrderType_SELL),
+			Quantity:     decimal.NewFromFloat(0.147),
+			Price:        decimal.RequireFromString("39.01"),
+			Leverage:     decimal.RequireFromString("1"),
+			FeeRecipient: senderAddress.String(),
+			MarketId:     marketId,
+			Cid:          uuid.NewString(),
+		},
+	)
+
+	msg := &exchangev2types.MsgBatchLiquidatePositions{
+		Sender: senderAddress.String(),
+		Liquidations: []exchangev2types.LiquidatePositionData{
+			{
+				SubaccountId: "0x156df4d5bc8e7dd9191433e54bd6a11eeb390921000000000000000000000000",
+				MarketId:     marketId,
+				Order:        firstOrder,
+			},
+			{
+				SubaccountId: "0xbdaedec95d563fb05240d6e01821008454c24c36000000000000000000000000",
+				MarketId:     marketId,
+			},
+		},
+	}
+
+	// AsyncBroadcastMsg, SyncBroadcastMsg, QueueBroadcastMsg
+	response, err := chainClient.AsyncBroadcastMsg(ctx, msg)
+
+	if err != nil {
+		panic(err)
+	}
+
+	str, _ := json.MarshalIndent(response, "", "\t")
+	fmt.Print(string(str))
+
+	gasPrice = chainClient.CurrentChainGasPrice(ctx)
+	// adjust gas price to make it valid even if it changes between the time it is requested and the TX is broadcasted
+	gasPrice = int64(float64(gasPrice) * 1.1)
+	chainClient.SetGasPrice(gasPrice)
+}
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/MsgBatchLiquidatePositions.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th><th class="required-th">Required</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">sender</td><td class="type-td td_text">string</td><td class="description-td td_text">the sender's Injective address</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">liquidations</td><td class="type-td td_text">LiquidatePositionData array</td><td class="description-td td_text">the positions to liquidate</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**LiquidatePositionData**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/LiquidatePositionData.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the subaccount ID the position belongs to</td></tr>
+<tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the position's market ID</td></tr>
+<tr ><td class="parameter-td td_text">order</td><td class="type-td td_text">DerivativeOrder</td><td class="description-td td_text">optional order to provide for liquidation</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**DerivativeOrder**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/DerivativeOrder.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">market_id</td><td class="type-td td_text">string</td><td class="description-td td_text">market_id represents the unique ID of the market</td></tr>
+<tr ><td class="parameter-td td_text">order_info</td><td class="type-td td_text">OrderInfo</td><td class="description-td td_text">order_info contains the information of the order</td></tr>
+<tr ><td class="parameter-td td_text">order_type</td><td class="type-td td_text">OrderType</td><td class="description-td td_text">order types</td></tr>
+<tr ><td class="parameter-td td_text">margin</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">margin is the margin used by the limit order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">trigger_price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">trigger_price is the trigger price used by stop/take orders (in human readable format) (optional)</td></tr>
+<tr ><td class="parameter-td td_text">expiration_block</td><td class="type-td td_text">int64</td><td class="description-td td_text">expiration block is the block number at which the order will expire</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OrderInfo**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderInfo.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">subaccount_id</td><td class="type-td td_text">string</td><td class="description-td td_text">bytes32 subaccount ID that created the order</td></tr>
+<tr ><td class="parameter-td td_text">fee_recipient</td><td class="type-td td_text">string</td><td class="description-td td_text">address fee_recipient address that will receive fees for the order</td></tr>
+<tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">price of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">quantity</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">quantity of the order (in human readable format)</td></tr>
+<tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID (optional)</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**OrderType**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/OrderType.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="code-th">Code</th><th class="name-th">Name</th></tr></thead><tbody ><tr ><td class="code-td td_num">0</td><td class="name-td td_text">UNSPECIFIED</td></tr>
+<tr ><td class="code-td td_num">1</td><td class="name-td td_text">BUY</td></tr>
+<tr ><td class="code-td td_num">2</td><td class="name-td td_text">SELL</td></tr>
+<tr ><td class="code-td td_num">3</td><td class="name-td td_text">STOP_BUY</td></tr>
+<tr ><td class="code-td td_num">4</td><td class="name-td td_text">STOP_SELL</td></tr>
+<tr ><td class="code-td td_num">5</td><td class="name-td td_text">TAKE_BUY</td></tr>
+<tr ><td class="code-td td_num">6</td><td class="name-td td_text">TAKE_SELL</td></tr>
+<tr ><td class="code-td td_num">7</td><td class="name-td td_text">BUY_PO</td></tr>
+<tr ><td class="code-td td_num">8</td><td class="name-td td_text">SELL_PO</td></tr>
+<tr ><td class="code-td td_num">9</td><td class="name-td td_text">BUY_ATOMIC</td></tr>
+<tr ><td class="code-td td_num">10</td><td class="name-td td_text">SELL_ATOMIC</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### Response Parameters
+> Response Example:
+
+``` python
+```
+
+```go
+```
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/tx/BroadcastTxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">tx_response</td><td class="type-td td_text">TxResponse</td><td class="description-td td_text">tx_response is the queried TxResponses.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**TxResponse**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/TxResponse.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">height</td><td class="type-td td_text">int64</td><td class="description-td td_text">The block height</td></tr>
+<tr ><td class="parameter-td td_text">txhash</td><td class="type-td td_text">string</td><td class="description-td td_text">The transaction hash.</td></tr>
+<tr ><td class="parameter-td td_text">codespace</td><td class="type-td td_text">string</td><td class="description-td td_text">Namespace for the Code</td></tr>
+<tr ><td class="parameter-td td_text">code</td><td class="type-td td_text">uint32</td><td class="description-td td_text">Response code.</td></tr>
+<tr ><td class="parameter-td td_text">data</td><td class="type-td td_text">string</td><td class="description-td td_text">Result bytes, if any.</td></tr>
+<tr ><td class="parameter-td td_text">raw_log</td><td class="type-td td_text">string</td><td class="description-td td_text">The output of the application's logger (raw string). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">logs</td><td class="type-td td_text">ABCIMessageLogs</td><td class="description-td td_text">The output of the application's logger (typed). May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">info</td><td class="type-td td_text">string</td><td class="description-td td_text">Additional information. May be non-deterministic.</td></tr>
+<tr ><td class="parameter-td td_text">gas_wanted</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas requested for transaction.</td></tr>
+<tr ><td class="parameter-td td_text">gas_used</td><td class="type-td td_text">int64</td><td class="description-td td_text">Amount of gas consumed by transaction.</td></tr>
+<tr ><td class="parameter-td td_text">tx</td><td class="type-td td_text">Any</td><td class="description-td td_text">The request transaction bytes.</td></tr>
+<tr ><td class="parameter-td td_text">timestamp</td><td class="type-td td_text">string</td><td class="description-td td_text">Time of the previous block. For heights > 1, it's the weighted median of the timestamps of the valid votes in the block.LastCommit. For height == 1, it's genesis time.</td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">Event array</td><td class="description-td td_text">Events defines all the events emitted by processing a transaction. Note, these events include those emitted by processing all the messages and those emitted from the ante. Whereas Logs contains the events, with additional metadata, emitted only by processing the messages.  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+<br/>
+
+**ABCIMessageLog**
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/cosmos/ABCIMessageLog.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">msg_index</td><td class="type-td td_text">uint32</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">log</td><td class="type-td td_text">string</td><td class="description-td td_num"></td></tr>
+<tr ><td class="parameter-td td_text">events</td><td class="type-td td_text">StringEvents</td><td class="description-td td_text">Events contains a slice of Event objects that were emitted during some execution.</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+
 ## MsgIncreasePositionMargin
 
 **IP rate limit group:** `chain`
@@ -6379,6 +6725,7 @@ async def main() -> None:
         new_maintenance_margin_ratio=Decimal("0.085"),
         new_reduce_margin_ratio=Decimal("3.5"),
         new_open_notional_cap=composer.uncapped_open_notional_cap(),
+        cross_margin_eligibility=composer.CROSS_MARGIN_ELIGIBILITY.CM_ELIGIBILITY_INELIGIBLE,
     )
 
     # broadcast the transaction
@@ -6519,7 +6866,8 @@ func main() {
 <tr ><td class="parameter-td td_text">new_initial_margin_ratio</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">(optional) updated value for initial_margin_ratio</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">new_maintenance_margin_ratio</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">(optional) updated value for maintenance_margin_ratio</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">new_reduce_margin_ratio</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">(optional) updated value for reduce_margin_ratio</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">new_open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">(optional) updated value for open_notional_cap</td><td class="required-td td_text">No</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">new_open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">(optional) updated value for open_notional_cap</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">cross_margin_eligibility</td><td class="type-td td_text">CrossMarginEligibility</td><td class="description-td td_text">(optional) tri-state toggle for cross-margin eligibility. Direct message updates are exchange-admin-only and may set either ELIGIBLE or INELIGIBLE. UNSPECIFIED is a no-op (preserves current value).</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>

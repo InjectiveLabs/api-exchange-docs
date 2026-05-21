@@ -3,5 +3,10 @@
     "Parameter": "code",
     "Type": "string",
     "Description": "Error code"
+  },
+  {
+    "Parameter": "id",
+    "Type": "string",
+    "Description": "ID to identify the request or quote in the stream. RFQ_ID for quotes. CLIENT_ID for requests."
   }
 ]

@@ -100,5 +100,11 @@
     "Type": "OpenNotionalCap",
     "Description": "open_notional_cap defines the cap on the open notional",
     "Required": "Yes"
+  },
+  {
+    "Parameter": "cross_margin_eligible",
+    "Type": "bool",
+    "Description": "cross_margin_eligible marks the market as eligible for cross-margin",
+    "Required": "Yes"
   }
 ]

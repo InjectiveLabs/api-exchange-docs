@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "sender is the relayer address broadcasting the update. Any address may relay; security is enforced by the PythLazer EVM contract.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "updates",
+    "Type": "][byte array",
+    "Description": "updates contains one or more Pyth Lazer update blobs; each blob is passed to a single verifyUpdate EVM call.",
+    "Required": "Yes"
+  }
+]

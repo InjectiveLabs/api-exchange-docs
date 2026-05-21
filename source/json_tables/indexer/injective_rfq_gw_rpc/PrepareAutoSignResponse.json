@@ -63,5 +63,10 @@
     "Parameter": "quotes_wait_ms",
     "Type": "uint64",
     "Description": "Actual milliseconds elapsed waiting for quotes; use as quotes_wait_time_ms hint in next request"
+  },
+  {
+    "Parameter": "expired_quotes_count",
+    "Type": "uint64",
+    "Description": "Number of quotes that expired after being received and were excluded from selection"
   }
 ]

@@ -58,5 +58,11 @@
     "Type": "OpenNotionalCap",
     "Description": "(optional) updated value for open_notional_cap",
     "Required": "No"
+  },
+  {
+    "Parameter": "cross_margin_eligibility",
+    "Type": "CrossMarginEligibility",
+    "Description": "(optional) tri-state toggle for cross-margin eligibility. Direct message updates are exchange-admin-only and may set either ELIGIBLE or INELIGIBLE. UNSPECIFIED is a no-op (preserves current value).",
+    "Required": "No"
   }
 ]

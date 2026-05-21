@@ -223,5 +223,45 @@
     "module_name": "oracle",
     "error_code": 45,
     "description": "Band oracle is deprecated and no longer supported"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 46,
+    "description": "stork asset id is empty"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 47,
+    "description": "pyth pro update verification failed"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 48,
+    "description": "seda fast oracle disabled: public key not configured"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 49,
+    "description": "seda fast payload malformed"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 50,
+    "description": "seda fast signature verification failed"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 51,
+    "description": "seda fast exec program id not in allowlist"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 52,
+    "description": "seda fast execution failed (non-zero exit code or no consensus)"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 53,
+    "description": "seda fast result parser failed"
   }
 ]

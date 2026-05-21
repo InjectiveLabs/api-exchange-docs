@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "RESERVATION_POLICY_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "RESERVATION_POLICY_FULL_HOLD"
+  },
+  {
+    "Code": "3",
+    "Name": "RESERVATION_POLICY_NO_HOLD"
+  }
+]

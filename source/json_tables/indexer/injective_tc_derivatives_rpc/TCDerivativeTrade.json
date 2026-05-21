@@ -83,5 +83,10 @@
     "Parameter": "position_entry_price",
     "Type": "string",
     "Description": "Entry price of the position associated with this trade"
+  },
+  {
+    "Parameter": "is_position_closed",
+    "Type": "bool",
+    "Description": "True if the position is closed by this trade"
   }
 ]

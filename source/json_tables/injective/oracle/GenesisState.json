@@ -88,5 +88,15 @@
     "Parameter": "chainlink_data_streams_price_states",
     "Type": "ChainlinkDataStreamsPriceState array",
     "Description": ""
+  },
+  {
+    "Parameter": "pyth_pro_price_states",
+    "Type": "PythProPriceState array",
+    "Description": "pyth_pro_price_states defines the persisted PythPro feed price states at genesis."
+  },
+  {
+    "Parameter": "seda_fast_price_states",
+    "Type": "SedaFastPriceState array",
+    "Description": "seda_fast_price_states defines the persisted SEDA Fast feed price states at genesis, keyed by feed_id (hex-encoded execInputs)."
   }
 ]

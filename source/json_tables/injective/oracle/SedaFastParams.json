@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "public_key",
+    "Type": "byte array",
+    "Description": "SEC1 secp256k1 public key published by SEDA Fast at GET /info. Compressed (33 B, 0x02/0x03 prefix) or uncompressed (65 B, 0x04 prefix). Empty value disables all MsgRelaySedaFastPrices handling."
+  },
+  {
+    "Parameter": "simple_program_ids",
+    "Type": "string array",
+    "Description": "Allowlist of execProgramIds whose dataResult.result payload is an ASCII decimal string (e.g. \"384.48255\"), parsed as LegacyDec."
+  },
+  {
+    "Parameter": "json_program_ids",
+    "Type": "string array",
+    "Description": "Allowlist of execProgramIds whose dataResult.result payload is a UTF-8 JSON object containing {price:{mantissa,expo},...}."
+  }
+]

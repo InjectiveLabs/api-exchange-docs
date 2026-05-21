@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "request",
+    "Type": "RFQGwPrepareEip712RequestType",
+    "Description": "",
+    "Required": "No"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "the subaccount ID the position belongs to"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "the position's market ID"
+  },
+  {
+    "Parameter": "order",
+    "Type": "DerivativeOrder",
+    "Description": "optional order to provide for liquidation"
+  }
+]

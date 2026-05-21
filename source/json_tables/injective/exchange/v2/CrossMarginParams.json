@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "positive_upnl_haircut_rate",
+    "Type": "LegacyDec",
+    "Description": "positive_upnl_haircut_rate defines the haircut applied to positive unrealized PnL for cross-margin admission checks."
+  },
+  {
+    "Parameter": "fees_buffer",
+    "Type": "LegacyDec",
+    "Description": "fees_buffer defines a fixed notional buffer (quote-denom units) subtracted from cross-margin equity calculations."
+  },
+  {
+    "Parameter": "enabled_quote_denoms",
+    "Type": "string array",
+    "Description": "enabled_quote_denoms defines the quote denoms that are eligible for cross-margin pools."
+  },
+  {
+    "Parameter": "perpetual_enabled",
+    "Type": "bool",
+    "Description": "perpetual_enabled defines whether perpetual derivative markets are eligible for cross margin."
+  },
+  {
+    "Parameter": "expiry_enabled",
+    "Type": "bool",
+    "Description": "expiry_enabled defines whether expiry futures derivative markets are eligible for cross margin."
+  },
+  {
+    "Parameter": "max_active_derivative_markets_per_pool",
+    "Type": "uint32",
+    "Description": "max_active_derivative_markets_per_pool defines the maximum number of active derivative markets (positions or orders) a cross-margin subaccount may have within a single quote-denom pool."
+  },
+  {
+    "Parameter": "emergency_paused",
+    "Type": "bool",
+    "Description": "emergency_paused defines whether cross margin is in emergency pause mode. When true: - All cross-margin orders (including reduce-only) are blocked - Profile switching involving cross mode is blocked - Liquidations are still allowed - Withdrawals are allowed up to isolated-margin maintenance level"
+  }
+]

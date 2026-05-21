@@ -371,7 +371,9 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">110</td><td class="description-td td_text">offsetting subaccount IDs cannot be empty</td></tr>
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">111</td><td class="description-td td_text">invalid open notional cap</td></tr>
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">112</td><td class="description-td td_text">open notional cap breached</td></tr>
-<tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">113</td><td class="description-td td_text">no valid offsetting positions found</td></tr></tbody></table>
+<tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">113</td><td class="description-td td_text">no valid offsetting positions found</td></tr>
+<tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">114</td><td class="description-td td_text">targeted market is not the canonical liquidation target</td></tr>
+<tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">115</td><td class="description-td td_text">message type is deprecated</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Feegrant module
@@ -432,14 +434,6 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">host</td><td class="error-code-td td_num">4</td><td class="description-td td_text">invalid packet</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## Hyperlane module
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/hyperlane_errors.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="module-name-th">module_name</th><th class="error-code-th">error_code</th><th class="description-th">description</th></tr></thead><tbody ><tr ><td class="module-name-td td_text">hyperlane</td><td class="error-code-td td_num">1</td><td class="description-td td_text">no receiver ISM</td></tr>
-<tr ><td class="module-name-td td_text">hyperlane</td><td class="error-code-td td_num">2</td><td class="description-td td_text">required hook not set</td></tr>
-<tr ><td class="module-name-td td_text">hyperlane</td><td class="error-code-td td_num">3</td><td class="description-td td_text">default hook not set</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
 ## Ibc module
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/ibc_errors.json) -->
@@ -482,7 +476,8 @@ This section lists all error codes from various modules in the Injective ecosyst
 ## Injective module
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/injective_errors.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="module-name-th">module_name</th><th class="error-code-th">error_code</th><th class="description-th">description</th></tr></thead><tbody ><tr ><td class="module-name-td td_text">injective</td><td class="error-code-td td_num">3</td><td class="description-td td_text">invalid chain ID</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="module-name-th">module_name</th><th class="error-code-th">error_code</th><th class="description-th">description</th></tr></thead><tbody ><tr ><td class="module-name-td td_text">injective</td><td class="error-code-td td_num">3</td><td class="description-td td_text">invalid chain ID</td></tr>
+<tr ><td class="module-name-td td_text">injective</td><td class="error-code-td td_num">4</td><td class="description-td td_text">invalid ethereum signature</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Insurance module
@@ -523,22 +518,6 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">interchainaccounts</td><td class="error-code-td td_num">17</td><td class="description-td td_text">timeout timestamp must be in the future</td></tr>
 <tr ><td class="module-name-td td_text">interchainaccounts</td><td class="error-code-td td_num">18</td><td class="description-td td_text">codec is not supported</td></tr>
 <tr ><td class="module-name-td td_text">interchainaccounts</td><td class="error-code-td td_num">19</td><td class="description-td td_text">invalid account reopening</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-## Ism module
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/ism_errors.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="module-name-th">module_name</th><th class="error-code-th">error_code</th><th class="description-th">description</th></tr></thead><tbody ><tr ><td class="module-name-td td_text">ism</td><td class="error-code-td td_num">1</td><td class="description-td td_text">unexpected error</td></tr>
-<tr ><td class="module-name-td td_text">ism</td><td class="error-code-td td_num">2</td><td class="description-td td_text">invalid multisig configuration</td></tr>
-<tr ><td class="module-name-td td_text">ism</td><td class="error-code-td td_num">3</td><td class="description-td td_text">invalid announce</td></tr>
-<tr ><td class="module-name-td td_text">ism</td><td class="error-code-td td_num">4</td><td class="description-td td_text">mailbox does not exist</td></tr>
-<tr ><td class="module-name-td td_text">ism</td><td class="error-code-td td_num">5</td><td class="description-td td_text">invalid signature</td></tr>
-<tr ><td class="module-name-td td_text">ism</td><td class="error-code-td td_num">6</td><td class="description-td td_text">invalid ism type</td></tr>
-<tr ><td class="module-name-td td_text">ism</td><td class="error-code-td td_num">7</td><td class="description-td td_text">unknown ism id</td></tr>
-<tr ><td class="module-name-td td_text">ism</td><td class="error-code-td td_num">8</td><td class="description-td td_text">no route found</td></tr>
-<tr ><td class="module-name-td td_text">ism</td><td class="error-code-td td_num">9</td><td class="description-td td_text">unauthorized</td></tr>
-<tr ><td class="module-name-td td_text">ism</td><td class="error-code-td td_num">10</td><td class="description-td td_text">invalid owner</td></tr>
-<tr ><td class="module-name-td td_text">ism</td><td class="error-code-td td_num">11</td><td class="description-td td_text">route for domain already exists</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Oracle module
@@ -588,7 +567,15 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">42</td><td class="description-td td_text">invalid stork signature</td></tr>
 <tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">43</td><td class="description-td td_text">stork asset id not unique</td></tr>
 <tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">44</td><td class="description-td td_text">chainlink report verification failed</td></tr>
-<tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">45</td><td class="description-td td_text">Band oracle is deprecated and no longer supported</td></tr></tbody></table>
+<tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">45</td><td class="description-td td_text">Band oracle is deprecated and no longer supported</td></tr>
+<tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">46</td><td class="description-td td_text">stork asset id is empty</td></tr>
+<tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">47</td><td class="description-td td_text">pyth pro update verification failed</td></tr>
+<tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">48</td><td class="description-td td_text">seda fast oracle disabled: public key not configured</td></tr>
+<tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">49</td><td class="description-td td_text">seda fast payload malformed</td></tr>
+<tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">50</td><td class="description-td td_text">seda fast signature verification failed</td></tr>
+<tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">51</td><td class="description-td td_text">seda fast exec program id not in allowlist</td></tr>
+<tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">52</td><td class="description-td td_text">seda fast execution failed (non-zero exit code or no consensus)</td></tr>
+<tr ><td class="module-name-td td_text">oracle</td><td class="error-code-td td_num">53</td><td class="description-td td_text">seda fast result parser failed</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Params module
@@ -653,16 +640,6 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">port</td><td class="error-code-td td_num">3</td><td class="description-td td_text">port not found</td></tr>
 <tr ><td class="module-name-td td_text">port</td><td class="error-code-td td_num">4</td><td class="description-td td_text">invalid port</td></tr>
 <tr ><td class="module-name-td td_text">port</td><td class="error-code-td td_num">5</td><td class="description-td td_text">route not found</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-## Post_dispatch module
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/post_dispatch_errors.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="module-name-th">module_name</th><th class="error-code-th">error_code</th><th class="description-th">description</th></tr></thead><tbody ><tr ><td class="module-name-td td_text">post_dispatch</td><td class="error-code-td td_num">1</td><td class="description-td td_text">mailbox does not exist</td></tr>
-<tr ><td class="module-name-td td_text">post_dispatch</td><td class="error-code-td td_num">2</td><td class="description-td td_text">sender is not designated mailbox</td></tr>
-<tr ><td class="module-name-td td_text">post_dispatch</td><td class="error-code-td td_num">3</td><td class="description-td td_text">hook does not exist or isn't registered</td></tr>
-<tr ><td class="module-name-td td_text">post_dispatch</td><td class="error-code-td td_num">4</td><td class="description-td td_text">unauthorized</td></tr>
-<tr ><td class="module-name-td td_text">post_dispatch</td><td class="error-code-td td_num">5</td><td class="description-td td_text">invalid owner</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Sdk module
@@ -861,11 +838,14 @@ This section lists all error codes from various modules in the Injective ecosyst
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="module-name-th">module_name</th><th class="error-code-th">error_code</th><th class="description-th">description</th></tr></thead><tbody ><tr ><td class="module-name-td td_text">vouchers</td><td class="error-code-td td_num">1</td><td class="description-td td_text">voucher not found</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-## Warp module
+## Wasm-hooks module
 
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/warp_errors.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="module-name-th">module_name</th><th class="error-code-th">error_code</th><th class="description-th">description</th></tr></thead><tbody ><tr ><td class="module-name-td td_text">warp</td><td class="error-code-td td_num">1</td><td class="description-td td_text">not enough collateral</td></tr>
-<tr ><td class="module-name-td td_text">warp</td><td class="error-code-td td_num">2</td><td class="description-td td_text">token not found</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/wasm-hooks_errors.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="module-name-th">module_name</th><th class="error-code-th">error_code</th><th class="description-th">description</th></tr></thead><tbody ><tr ><td class="module-name-td td_text">wasm-hooks</td><td class="error-code-td td_num">3</td><td class="description-td td_text">cannot marshal the ICS20 packet</td></tr>
+<tr ><td class="module-name-td td_text">wasm-hooks</td><td class="error-code-td td_num">4</td><td class="description-td td_text">invalid packet data</td></tr>
+<tr ><td class="module-name-td td_text">wasm-hooks</td><td class="error-code-td td_num">5</td><td class="description-td td_text">cannot create response</td></tr>
+<tr ><td class="module-name-td td_text">wasm-hooks</td><td class="error-code-td td_num">6</td><td class="description-td td_text">wasm error</td></tr>
+<tr ><td class="module-name-td td_text">wasm-hooks</td><td class="error-code-td td_num">7</td><td class="description-td td_text">bad sender</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Wasm module
@@ -896,16 +876,6 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">wasm</td><td class="error-code-td td_num">28</td><td class="description-td td_text">no such code</td></tr>
 <tr ><td class="module-name-td td_text">wasm</td><td class="error-code-td td_num">29</td><td class="description-td td_text">wasmvm error</td></tr>
 <tr ><td class="module-name-td td_text">wasm</td><td class="error-code-td td_num">30</td><td class="description-td td_text">max call depth exceeded</td></tr></tbody></table>
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-## Wasm-hooks module
-
-<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/wasm-hooks_errors.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="module-name-th">module_name</th><th class="error-code-th">error_code</th><th class="description-th">description</th></tr></thead><tbody ><tr ><td class="module-name-td td_text">wasm-hooks</td><td class="error-code-td td_num">3</td><td class="description-td td_text">cannot marshal the ICS20 packet</td></tr>
-<tr ><td class="module-name-td td_text">wasm-hooks</td><td class="error-code-td td_num">4</td><td class="description-td td_text">invalid packet data</td></tr>
-<tr ><td class="module-name-td td_text">wasm-hooks</td><td class="error-code-td td_num">5</td><td class="description-td td_text">cannot create response</td></tr>
-<tr ><td class="module-name-td td_text">wasm-hooks</td><td class="error-code-td td_num">6</td><td class="description-td td_text">wasm error</td></tr>
-<tr ><td class="module-name-td td_text">wasm-hooks</td><td class="error-code-td td_num">7</td><td class="description-td td_text">bad sender</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## Xwasm module

@@ -1,0 +1,62 @@
+[
+  {
+    "Parameter": "rfq_id",
+    "Type": "uint64",
+    "Description": "Generated RFQ ID"
+  },
+  {
+    "Parameter": "data",
+    "Type": "string",
+    "Description": "EIP712-compatible JSON, signable with eth_signTypedData_v4"
+  },
+  {
+    "Parameter": "fee_payer_sig",
+    "Type": "string",
+    "Description": "Hex-encoded fee payer signature over the EIP712 hash"
+  },
+  {
+    "Parameter": "fee_payer",
+    "Type": "string",
+    "Description": "Fee payer address"
+  },
+  {
+    "Parameter": "sign_mode",
+    "Type": "string",
+    "Description": "SIGN_MODE_EIP712_V2 or SIGN_MODE_LEGACY_AMINO_JSON"
+  },
+  {
+    "Parameter": "pub_key_type",
+    "Type": "string",
+    "Description": "Fee payer public key type"
+  },
+  {
+    "Parameter": "fee_payer_pub_key",
+    "Type": "CosmosPubKey",
+    "Description": "Fee payer public key"
+  },
+  {
+    "Parameter": "quotes",
+    "Type": "RFQGwPrepareQuoteResult array",
+    "Description": "Selected quotes in execution order"
+  },
+  {
+    "Parameter": "taker_account_number",
+    "Type": "uint64",
+    "Description": "Taker Cosmos account number"
+  },
+  {
+    "Parameter": "taker_account_sequence",
+    "Type": "uint64",
+    "Description": "Taker Cosmos account sequence"
+  },
+  {
+    "Parameter": "quotes_wait_ms",
+    "Type": "uint64",
+    "Description": "Actual milliseconds elapsed waiting for quotes; use as quotes_wait_time_ms hint in next request"
+  },
+  {
+    "Parameter": "expired_quotes_count",
+    "Type": "uint64",
+    "Description": "Number of quotes that expired after being received and were excluded from selection"
+  }
+]

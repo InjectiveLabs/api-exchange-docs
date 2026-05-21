@@ -1,0 +1,77 @@
+[
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "The quote denom of the pool."
+  },
+  {
+    "Parameter": "quote_balance",
+    "Type": "LegacyDec",
+    "Description": "Available quote balance in the pool (human-readable notional units)."
+  },
+  {
+    "Parameter": "position_margin_total",
+    "Type": "LegacyDec",
+    "Description": "Total margin held in positions."
+  },
+  {
+    "Parameter": "unrealized_pnl",
+    "Type": "LegacyDec",
+    "Description": "Raw unrealised PnL across all positions in the pool."
+  },
+  {
+    "Parameter": "unrealized_pnl_effective",
+    "Type": "LegacyDec",
+    "Description": "Effective unrealised PnL after applying positive uPnL haircut."
+  },
+  {
+    "Parameter": "equity_admission",
+    "Type": "LegacyDec",
+    "Description": "Equity used for order admission checks (quote_balance + position_margin + uPnL_eff - fees_buffer)."
+  },
+  {
+    "Parameter": "equity_liquidation",
+    "Type": "LegacyDec",
+    "Description": "Equity used for liquidation checks (uses raw uPnL, not haircutted)."
+  },
+  {
+    "Parameter": "initial_margin_total",
+    "Type": "LegacyDec",
+    "Description": "Sum of initial margin requirements for existing positions only."
+  },
+  {
+    "Parameter": "maintenance_margin_total",
+    "Type": "LegacyDec",
+    "Description": "Sum of maintenance margin requirements for existing positions."
+  },
+  {
+    "Parameter": "initial_margin_with_orders_total",
+    "Type": "LegacyDec",
+    "Description": "Initial margin using worst-case net exposure (q + B, q - S) across all markets."
+  },
+  {
+    "Parameter": "entry_loss_total",
+    "Type": "LegacyDec",
+    "Description": "Sum of entry losses for all open orders."
+  },
+  {
+    "Parameter": "fee_reserve_total",
+    "Type": "LegacyDec",
+    "Description": "Sum of fee reserves for all open orders."
+  },
+  {
+    "Parameter": "order_lock_requirement",
+    "Type": "LegacyDec",
+    "Description": "Order Lock Requirement = IM_with_orders + entry_loss + fee_reserve. Orders may be cancelled if equity_admission < order_lock_requirement."
+  },
+  {
+    "Parameter": "positive_upnl_haircut_rate",
+    "Type": "LegacyDec",
+    "Description": "The positive uPnL haircut rate applied (e.g., 0.5 = 50%)."
+  },
+  {
+    "Parameter": "health_factor",
+    "Type": "LegacyDec",
+    "Description": "Health factor = equity_liquidation / maintenance_margin_total. When < 1, the account is liquidatable. When < 1.5, the account is in a warning state. Empty if maintenance_margin_total is zero (no positions)."
+  }
+]

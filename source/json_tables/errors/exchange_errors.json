@@ -558,5 +558,15 @@
     "module_name": "exchange",
     "error_code": 113,
     "description": "no valid offsetting positions found"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 114,
+    "description": "targeted market is not the canonical liquidation target"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 115,
+    "description": "message type is deprecated"
   }
 ]

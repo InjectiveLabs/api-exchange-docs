@@ -3,5 +3,10 @@
     "Parameter": "state",
     "Type": "EffectivePosition",
     "Description": ""
+  },
+  {
+    "Parameter": "risk_mode",
+    "Type": "RiskMode",
+    "Description": "The risk mode of the subaccount (ISOLATED or CROSS). For CROSS mode, effective_margin reflects position value but liquidation is determined at pool level. Use CrossMarginPoolSnapshot for pool health."
   }
 ]

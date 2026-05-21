@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "liquidations",
+    "Type": "LiquidatePositionData array",
+    "Description": "the positions to liquidate",
+    "Required": "Yes"
+  }
+]

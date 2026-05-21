@@ -83,5 +83,10 @@
     "Parameter": "cid",
     "Type": "string",
     "Description": "Settlement CID"
+  },
+  {
+    "Parameter": "tx_hash",
+    "Type": "string",
+    "Description": "Settlement transaction hash"
   }
 ]

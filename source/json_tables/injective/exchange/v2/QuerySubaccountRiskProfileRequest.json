@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "32-byte hex string, consistent with existing exchange queries.",
+    "Required": "Yes"
+  }
+]

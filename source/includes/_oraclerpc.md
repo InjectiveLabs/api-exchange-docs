@@ -765,7 +765,7 @@ import (
 )
 
 func main() {
-	network := common.LoadNetwork("testnet", "lb")
+	network := common.LoadNetwork("tstnet", "lb")
 	exchangeClient, err := exchangeclient.NewExchangeClient(network)
 	if err != nil {
 		panic(err)

@@ -118,5 +118,10 @@
     "Parameter": "force_paused_info",
     "Type": "ForcePausedInfo",
     "Description": "force_paused_info defines additional info for force paused markets, only set when status == ForcePaused"
+  },
+  {
+    "Parameter": "cross_margin_eligible",
+    "Type": "bool",
+    "Description": "cross_margin_eligible marks the market as eligible for cross-margin pool participation. Default false means markets are ineligible until explicitly enabled at launch or toggled via governance proposal."
   }
 ]

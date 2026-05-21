@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address (must be exchange admin)",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "receivers",
+    "Type": "string array",
+    "Description": "list of receiver addresses to set as delegation transfer receivers",
+    "Required": "Yes"
+  }
+]

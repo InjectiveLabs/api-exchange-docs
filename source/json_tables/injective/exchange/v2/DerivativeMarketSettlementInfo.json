@@ -8,5 +8,10 @@
     "Parameter": "settlement_price",
     "Type": "LegacyDec",
     "Description": "settlement_price defines the settlement price"
+  },
+  {
+    "Parameter": "is_forced_settlement",
+    "Type": "bool",
+    "Description": "is_forced_settlement indicates whether the settlement was explicitly scheduled by admin or governance force-settlement."
   }
 ]

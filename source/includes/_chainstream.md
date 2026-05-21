@@ -380,7 +380,8 @@ Each message contains a list of events that are filtered by the request paramete
 <tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash</td></tr>
 <tr ><td class="parameter-td td_text">fee_recipient_address</td><td class="type-td td_text">string</td><td class="description-td td_text">the fee recipient address</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID</td></tr>
-<tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the trade ID</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the trade ID</td></tr>
+<tr ><td class="parameter-td td_text">is_liquidation</td><td class="type-td td_text">bool</td><td class="description-td td_text">whether the trade resulted from a liquidation</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>

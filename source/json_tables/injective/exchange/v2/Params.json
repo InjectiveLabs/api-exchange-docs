@@ -183,5 +183,10 @@
     "Parameter": "white_knight_liquidator_reward_share_rate",
     "Type": "LegacyDec",
     "Description": "white_knight_liquidator_reward_share_rate defines the ratio of the split of the surplus collateral that goes to a white knight liquidator"
+  },
+  {
+    "Parameter": "cross_margin_params",
+    "Type": "CrossMarginParams",
+    "Description": "cross_margin_params groups all cross-margin related parameters."
   }
 ]

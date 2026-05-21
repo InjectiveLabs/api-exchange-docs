@@ -3,5 +3,10 @@
     "module_name": "injective",
     "error_code": 3,
     "description": "invalid chain ID"
+  },
+  {
+    "module_name": "injective",
+    "error_code": 4,
+    "description": "invalid ethereum signature"
   }
 ]

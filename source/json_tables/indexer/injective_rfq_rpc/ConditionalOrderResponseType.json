@@ -77,7 +77,7 @@
   {
     "Parameter": "error",
     "Type": "string",
-    "Description": "Last error message, if any"
+    "Description": "Deprecated: use 'errors' instead. Last error message, if any."
   },
   {
     "Parameter": "tx_hash",
@@ -93,5 +93,15 @@
     "Parameter": "evm_chain_id",
     "Type": "uint64",
     "Description": "EVM chain ID embedded in the EIP-712 domain at signing time. Zero for v1 (raw JSON) orders."
+  },
+  {
+    "Parameter": "taker_nonce_time_window_ms",
+    "Type": "uint64",
+    "Description": "Replay protection nonce time window in milliseconds"
+  },
+  {
+    "Parameter": "errors",
+    "Type": "string array",
+    "Description": "All error messages accumulated across execution attempts (most recent last)"
   }
 ]

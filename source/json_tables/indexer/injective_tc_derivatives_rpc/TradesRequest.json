@@ -58,5 +58,11 @@
     "Type": "bool",
     "Description": "Return only trades with non-zero PNL",
     "Required": "Yes"
+  },
+  {
+    "Parameter": "rfq_maker",
+    "Type": "string",
+    "Description": "filter synthetic trades by RFQ maker address",
+    "Required": "Yes"
   }
 ]

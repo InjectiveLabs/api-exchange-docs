@@ -323,7 +323,7 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">62</td><td class="description-td td_text">already opted out of rewards</td></tr>
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">63</td><td class="description-td td_text">invalid margin ratio</td></tr>
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">64</td><td class="description-td td_text">provided funds are below minimum</td></tr>
-<tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">65</td><td class="description-td td_text">position is below initial margin requirement</td></tr>
+<tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">65</td><td class="description-td td_text">position margin is below the required threshold</td></tr>
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">66</td><td class="description-td td_text">pool has non-positive total lp token supply</td></tr>
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">67</td><td class="description-td td_text">passed lp token burn amount is greater than total lp token supply</td></tr>
 <tr ><td class="module-name-td td_text">exchange</td><td class="error-code-td td_num">68</td><td class="description-td td_text">unsupported action</td></tr>

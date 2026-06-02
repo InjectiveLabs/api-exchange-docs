@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "int32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "event_types",
+    "Type": "string array",
+    "Description": "Array of event types",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "batch_size",
+    "Type": "uint32",
+    "Description": "Number of blocks to include in each stream response. The service will have a cap on the batch size, and default to it if it's greater. Once the stream is in sync, the batch size",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "fetchers",
+    "Type": "uint32",
+    "Description": "Number of parallel fetchers. The service will have a cap on the number of fetchers, and default to it. The service may chose to throttle the fetchers based on the current load.",
+    "Required": "Yes"
+  }
+]

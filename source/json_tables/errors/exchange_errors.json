@@ -317,7 +317,7 @@
   {
     "module_name": "exchange",
     "error_code": 65,
-    "description": "position is below initial margin requirement"
+    "description": "position margin is below the required threshold"
   },
   {
     "module_name": "exchange",

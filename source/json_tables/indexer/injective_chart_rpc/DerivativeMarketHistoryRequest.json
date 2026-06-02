@@ -40,5 +40,11 @@
     "Type": "bool",
     "Description": "Use oracle prices as fallback for missing derivative candles.",
     "Required": "Yes"
+  },
+  {
+    "Parameter": "fill_gaps",
+    "Type": "bool",
+    "Description": "When true, fills gaps in derivative candles using oracle/mark prices anchored to neighboring real trade candles.",
+    "Required": "Yes"
   }
 ]

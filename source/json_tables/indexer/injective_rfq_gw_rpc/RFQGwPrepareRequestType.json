@@ -1,0 +1,87 @@
+[
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "direction",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "margin",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "worst_price",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "taker_address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "expiry",
+    "Type": "uint64",
+    "Description": "RFQ request expiry in milliseconds. 0 = no expiry"
+  },
+  {
+    "Parameter": "taker_pub_key",
+    "Type": "string",
+    "Description": "Hex-encoded taker public key"
+  },
+  {
+    "Parameter": "taker_account_number",
+    "Type": "uint64",
+    "Description": "Taker Cosmos account number"
+  },
+  {
+    "Parameter": "taker_account_sequence",
+    "Type": "uint64",
+    "Description": "Taker Cosmos account sequence (nonce)"
+  },
+  {
+    "Parameter": "fee_payer_account_number",
+    "Type": "uint64",
+    "Description": "Fee payer Cosmos account number"
+  },
+  {
+    "Parameter": "fee_payer_account_sequence",
+    "Type": "uint64",
+    "Description": "Fee payer Cosmos account sequence (nonce)"
+  },
+  {
+    "Parameter": "quotes_wait_time_ms",
+    "Type": "uint64",
+    "Description": "How long to wait for quotes (max 5000ms)"
+  },
+  {
+    "Parameter": "unfilled_action",
+    "Type": "RFQSettlementUnfilledActionType",
+    "Description": "Action for quantity not filled by the selected quotes. Set `limit` to place a limit order at the given price, `market` to sweep the remainder as a market order. Omit to settle only the quoted amount."
+  },
+  {
+    "Parameter": "subaccount_nonce",
+    "Type": "uint32",
+    "Description": "Taker subaccount nonce at settlement time. Prevents replay when submitting multiple RFQs in the same block. Defaults to 0 (contract reads the on-chain nonce)."
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "Client order ID echoed through to the on-chain trade event. Used to correlate a trade event back to the originating UI order. Not used server-side."
+  }
+]

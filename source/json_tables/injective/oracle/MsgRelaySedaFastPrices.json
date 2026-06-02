@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "updates",
+    "Type": "][byte array",
+    "Description": "updates contains one or more SEDA Fast result JSON envelopes.",
+    "Required": "Yes"
+  }
+]

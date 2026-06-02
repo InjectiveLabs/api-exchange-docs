@@ -10,5 +10,17 @@
     "Type": "string",
     "Description": "Hex-encoded 65-byte ECDSA recoverable signature (r‖s‖v). To produce: build the canonical JSON object with these fields in exact order, no omitted keys, null for absent values: version              (uint8)   — protocol version chain_id             (string)  — e.g. \"injective-1\" contract_address     (string)  — RFQ contract bech32 address taker               (string)  — taker bech32 address epoch               (uint64)  — taker's current epoch rfq_id              (uint64)  — unique order ID market_id           (string)  — derivative market ID hex subaccount_nonce    (uint32)  — taker subaccount index lane_version        (uint64)  — lane version for replay protection deadline_ms         (uint64)  — expiry timestamp in milliseconds direction           (string)  — \"long\" or \"short\" quantity            (string)  — FPDecimal e.g. \"1\", \"4.9\" margin              (string)  — collateral amount as FPDecimal worst_price         (string)  — FPDecimal worst acceptable price min_total_fill_quantity (string) — FPDecimal minimum fill trigger             (enum)    — {\"mark_price_gte\":\"<price>\"} or {\"mark_price_lte\":\"<price>\"} unfilled_action     (null)    — always null in v1 cid                 (*string) — optional client ID, or null allowed_relayer     (*string) — optional relayer address, or null Then: signature = secp256k1_sign(Keccak256(canonical_json), taker_private_key)",
     "Required": "No"
+  },
+  {
+    "Parameter": "sign_mode",
+    "Type": "string",
+    "Description": "Signature scheme used for the conditional order: \"v1\" (raw JSON keccak256) or \"v2\" (EIP-712). Defaults to \"v1\" when omitted, for backward compatibility with pre-EIP-712 clients.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "evm_chain_id",
+    "Type": "uint64",
+    "Description": "EVM chain ID embedded in the EIP-712 domain. Required when sign_mode is \"v2\"; ignored otherwise. Must match one of the indexer's configured chain IDs.",
+    "Required": "Yes"
   }
 ]

@@ -54,5 +54,13 @@
   {
     "Code": "13",
     "Name": "ChainlinkDataStreams"
+  },
+  {
+    "Code": "14",
+    "Name": "PythPro"
+  },
+  {
+    "Code": "15",
+    "Name": "SedaFast"
   }
 ]

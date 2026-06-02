@@ -106,7 +106,7 @@
   },
   {
     "Parameter": "maker_subaccount_nonce",
-    "Type": "uint64",
+    "Type": "uint32",
     "Description": "Maker subaccount nonce used in quote signature"
   },
   {
@@ -123,5 +123,15 @@
     "Parameter": "client_id",
     "Type": "string",
     "Description": "Client ID from the originating request"
+  },
+  {
+    "Parameter": "sign_mode",
+    "Type": "string",
+    "Description": "Signature scheme used for the quote: \"v1\" (raw JSON keccak256) or \"v2\" (EIP-712). Defaults to \"v1\" when omitted, for backward compatibility with pre-EIP-712 clients."
+  },
+  {
+    "Parameter": "evm_chain_id",
+    "Type": "uint64",
+    "Description": "EVM chain ID embedded in the EIP-712 domain. Required when sign_mode is \"v2\"; ignored otherwise. Must match one of the indexer's configured chain IDs."
   }
 ]

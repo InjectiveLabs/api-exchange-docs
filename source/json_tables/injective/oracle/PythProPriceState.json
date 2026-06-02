@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "feed_id",
+    "Type": "uint32",
+    "Description": "feed_id is the uint32 Pyth Lazer feed identifier."
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "uint64",
+    "Description": "timestamp is the price timestamp extracted from the verified payload (microseconds from epoch)."
+  },
+  {
+    "Parameter": "price_state",
+    "Type": "PriceState",
+    "Description": "price_state holds the verified price, cumulative price, and block timestamp."
+  }
+]

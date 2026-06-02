@@ -103,5 +103,10 @@
     "Parameter": "cid",
     "Type": "string",
     "Description": "Custom client order ID"
+  },
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "Account address that owns the subaccount which placed this order"
   }
 ]

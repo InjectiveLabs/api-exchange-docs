@@ -1,5 +1,10 @@
 # Change Log
 
+## 2026-06-01
+- Updated all messages to reflect the changes included in the chain version v1.20.0, and the Indexer for that chain version
+- Python SDK v1.15.0
+- Go SDK v1.62.0
+
 ## 2026-04-28
 - Updated all messages to reflect the changes included in the chain version v1.19.0, and the Indexer for that chain version
 - Python SDK v1.14.0

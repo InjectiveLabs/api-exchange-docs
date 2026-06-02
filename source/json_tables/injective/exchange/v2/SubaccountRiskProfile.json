@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "mode",
+    "Type": "RiskMode",
+    "Description": ""
+  },
+  {
+    "Parameter": "reservation_policy",
+    "Type": "ReservationPolicy",
+    "Description": ""
+  },
+  {
+    "Parameter": "credit_line_id",
+    "Type": "string",
+    "Description": "credit_line_id is reserved for future use and currently must be empty."
+  }
+]

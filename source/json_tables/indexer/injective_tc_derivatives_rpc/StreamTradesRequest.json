@@ -10,5 +10,11 @@
     "Type": "string",
     "Description": "filter by account address",
     "Required": "Yes"
+  },
+  {
+    "Parameter": "rfq_maker",
+    "Type": "string",
+    "Description": "filter synthetic trades by RFQ maker address (only emits maker-side synthetic trades whose rfqMaker equals this address)",
+    "Required": "Yes"
   }
 ]

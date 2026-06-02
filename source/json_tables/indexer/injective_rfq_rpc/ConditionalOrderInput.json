@@ -98,5 +98,10 @@
     "Parameter": "allowed_relayer",
     "Type": "string",
     "Description": "Optional relayer restriction"
+  },
+  {
+    "Parameter": "taker_nonce_time_window_ms",
+    "Type": "uint64",
+    "Description": "Replay protection nonce time window in milliseconds"
   }
 ]

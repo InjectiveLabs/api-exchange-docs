@@ -88,5 +88,10 @@
     "Parameter": "open_notional_cap",
     "Type": "OpenNotionalCap",
     "Description": "open_notional_cap defines the maximum open notional for the market"
+  },
+  {
+    "Parameter": "cross_margin_eligible",
+    "Type": "bool",
+    "Description": "cross_margin_eligible marks the market as eligible for cross-margin"
   }
 ]

@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "CM_ELIGIBILITY_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "CM_ELIGIBILITY_ELIGIBLE"
+  },
+  {
+    "Code": "2",
+    "Name": "CM_ELIGIBILITY_INELIGIBLE"
+  }
+]

@@ -22,5 +22,17 @@
     "Type": "string",
     "Description": "Signature for the conditional order",
     "Required": "Yes"
+  },
+  {
+    "Parameter": "conditional_order_sign_mode",
+    "Type": "string",
+    "Description": "Signature scheme for the conditional order: \"v1\" (raw JSON keccak256) or \"v2\" (EIP-712). Defaults to \"v1\" when omitted, for backward compatibility with pre-EIP-712 clients.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "conditional_order_evm_chain_id",
+    "Type": "uint64",
+    "Description": "EVM chain ID embedded in the EIP-712 domain for the conditional order. Required when conditional_order_sign_mode is \"v2\".",
+    "Required": "Yes"
   }
 ]

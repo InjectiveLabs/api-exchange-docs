@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "the subaccount ID the position belongs to"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "the position's market ID"
+  },
+  {
+    "Parameter": "success",
+    "Type": "bool",
+    "Description": "whether the liquidation succeeded"
+  },
+  {
+    "Parameter": "error",
+    "Type": "string",
+    "Description": "failure reason when success is false"
+  }
+]

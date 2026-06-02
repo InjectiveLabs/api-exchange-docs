@@ -1,0 +1,18 @@
+[
+  {
+    "Code": "0",
+    "Name": "RISK_MODE_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "RISK_MODE_ISOLATED"
+  },
+  {
+    "Code": "2",
+    "Name": "RISK_MODE_CROSS"
+  },
+  {
+    "Code": "3",
+    "Name": "RISK_MODE_PORTFOLIO"
+  }
+]

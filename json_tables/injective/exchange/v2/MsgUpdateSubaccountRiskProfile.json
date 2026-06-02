@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "the subaccount ID to update the risk profile for",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "risk_profile",
+    "Type": "SubaccountRiskProfile",
+    "Description": "the requested risk profile (subject to eligibility & safety gates)",
+    "Required": "Yes"
+  }
+]

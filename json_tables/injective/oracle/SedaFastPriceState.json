@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "feed_id",
+    "Type": "string",
+    "Description": "feed_id is the hex-encoded execInputs string from the SEDA Fast dataRequest. It is the stable on-chain identity of the feed, invariant across relayer restarts and per-execution result IDs."
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "uint64",
+    "Description": "timestamp is the dataResult.blockTimestamp value (milliseconds from epoch) extracted from the verified SEDA Fast response."
+  },
+  {
+    "Parameter": "price_state",
+    "Type": "PriceState",
+    "Description": "price_state holds the verified price, cumulative price, and block timestamp."
+  }
+]

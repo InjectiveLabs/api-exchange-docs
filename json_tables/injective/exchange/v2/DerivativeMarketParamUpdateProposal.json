@@ -98,5 +98,10 @@
     "Parameter": "has_disabled_minimal_protocol_fee",
     "Type": "DisableMinimalProtocolFeeUpdate",
     "Description": "has_disabled_minimal_protocol_fee defines whether the minimal protocol fee is disabled for the market"
+  },
+  {
+    "Parameter": "cross_margin_eligibility",
+    "Type": "CrossMarginEligibility",
+    "Description": "cross_margin_eligibility controls whether the market can participate in cross-margin pools"
   }
 ]

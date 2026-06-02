@@ -52,5 +52,17 @@
     "Type": "int64",
     "Description": "The ending timestamp in UNIX milliseconds that the trades must be equal or younger than",
     "Required": "Yes"
+  },
+  {
+    "Parameter": "with_pnl",
+    "Type": "bool",
+    "Description": "Return only trades with non-zero PNL",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "rfq_maker",
+    "Type": "string",
+    "Description": "filter synthetic trades by RFQ maker address",
+    "Required": "Yes"
   }
 ]

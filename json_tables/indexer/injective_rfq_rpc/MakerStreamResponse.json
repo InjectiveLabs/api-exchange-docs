@@ -2,7 +2,7 @@
   {
     "Parameter": "message_type",
     "Type": "string",
-    "Description": "Type: 'request', 'quote_ack', 'quote_update', 'settlement_update', 'error', 'pong'"
+    "Description": "Type: 'request', 'quote_ack', 'quote_update', 'settlement_update', 'error', 'pong', 'challenge'"
   },
   {
     "Parameter": "request",
@@ -28,5 +28,10 @@
     "Parameter": "settlement",
     "Type": "RFQSettlementMakerUpdate",
     "Description": "Settlement update for maker"
+  },
+  {
+    "Parameter": "challenge",
+    "Type": "MakerChallenge",
+    "Description": "Auth challenge issued before the stream loop begins"
   }
 ]

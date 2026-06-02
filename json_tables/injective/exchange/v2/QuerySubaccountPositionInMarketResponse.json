@@ -3,5 +3,10 @@
     "Parameter": "state",
     "Type": "Position",
     "Description": ""
+  },
+  {
+    "Parameter": "risk_mode",
+    "Type": "RiskMode",
+    "Description": "The risk mode of the subaccount (ISOLATED or CROSS). For CROSS mode, the position's margin is an accounting value; actual collateral is pooled. Use CrossMarginPoolSnapshot for pool-level health."
   }
 ]

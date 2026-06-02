@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "evm_chain_id",
+    "Type": "uint64",
+    "Description": "EVM chain ID used in the EIP-712 domain"
+  },
+  {
+    "Parameter": "signature",
+    "Type": "string",
+    "Description": "EIP-712 signature over the StreamAuthChallenge typed data"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "nonce",
+    "Type": "string",
+    "Description": "Hex-encoded 32-byte nonce"
+  },
+  {
+    "Parameter": "evm_chain_id",
+    "Type": "uint64",
+    "Description": "EVM chain ID to use when signing the challenge with EIP-712 v2"
+  },
+  {
+    "Parameter": "expires_at",
+    "Type": "int64",
+    "Description": "Unix milliseconds after which the challenge is no longer accepted"
+  }
+]

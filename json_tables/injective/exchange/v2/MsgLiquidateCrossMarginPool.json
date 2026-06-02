@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the liquidator's Injective address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "the cross-margin subaccount to liquidate",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "identifies which cross-margin pool (by quote denom)",
+    "Required": "Yes"
+  }
+]

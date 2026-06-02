@@ -83,5 +83,30 @@
     "Parameter": "position_entry_price",
     "Type": "string",
     "Description": "Entry price of the position associated with this trade"
+  },
+  {
+    "Parameter": "is_position_closed",
+    "Type": "bool",
+    "Description": "True if the position is closed by this trade"
+  },
+  {
+    "Parameter": "rfq_maker",
+    "Type": "string",
+    "Description": "RFQ maker address for the synthetic trade (set only on synthetic trades coming from an RFQ settlement)"
+  },
+  {
+    "Parameter": "account_address",
+    "Type": "string",
+    "Description": "Account address that owns the subaccount which executed this trade"
+  },
+  {
+    "Parameter": "rfq_id",
+    "Type": "uint64",
+    "Description": "RFQ identifier the synthetic trade was settled under (set only on synthetic trades coming from an RFQ settlement)"
+  },
+  {
+    "Parameter": "tx_hash",
+    "Type": "string",
+    "Description": "Transaction hash where the trade was executed"
   }
 ]

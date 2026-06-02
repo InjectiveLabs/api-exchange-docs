@@ -2,13 +2,19 @@
   {
     "Parameter": "message_type",
     "Type": "string",
-    "Description": "Type: 'quote', 'ping'",
+    "Description": "Type: 'quote', 'ping', 'auth'",
     "Required": "Yes"
   },
   {
     "Parameter": "quote",
     "Type": "RFQQuoteType",
     "Description": "Quote to submit",
+    "Required": "No"
+  },
+  {
+    "Parameter": "auth",
+    "Type": "MakerAuth",
+    "Description": "Auth response to a stream challenge",
     "Required": "No"
   }
 ]

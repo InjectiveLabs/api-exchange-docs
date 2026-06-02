@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "32-byte hex string identifying the subaccount.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "The quote denom of the cross-margin pool (e.g., \"USDC\").",
+    "Required": "Yes"
+  }
+]

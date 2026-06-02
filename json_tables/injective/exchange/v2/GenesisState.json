@@ -183,5 +183,10 @@
     "Parameter": "denom_min_notionals",
     "Type": "DenomMinNotional array",
     "Description": ""
+  },
+  {
+    "Parameter": "subaccount_risk_profiles",
+    "Type": "SubaccountRiskProfileRecord array",
+    "Description": ""
   }
 ]

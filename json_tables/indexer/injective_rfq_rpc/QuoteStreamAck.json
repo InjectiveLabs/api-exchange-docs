@@ -8,5 +8,10 @@
     "Parameter": "status",
     "Type": "string",
     "Description": "Status of the operation"
+  },
+  {
+    "Parameter": "taker",
+    "Type": "string",
+    "Description": "Taker address"
   }
 ]

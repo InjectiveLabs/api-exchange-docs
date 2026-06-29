@@ -85,6 +85,16 @@
     "Description": "Client order ID echoed through to the on-chain trade event. Used to correlate a trade event back to the originating UI order. Not used server-side."
   },
   {
+    "Parameter": "simulate",
+    "Type": "bool",
+    "Description": "Simulate the tx on chain and use the estimated gas (with adjustment buffer) instead of the fee payer max gas. Falls back to max gas if the simulation fails."
+  },
+  {
+    "Parameter": "tx_body_memo",
+    "Type": "string",
+    "Description": "Optional outer Cosmos TxBody memo"
+  },
+  {
     "Parameter": "eth_chain_id",
     "Type": "uint64",
     "Description": "EVM chain ID used in the EIP712 domain separator (e.g. 1 for Injective mainnet)"
@@ -97,6 +107,6 @@
   {
     "Parameter": "gas",
     "Type": "uint64",
-    "Description": "Optional gas limit override"
+    "Description": "Optional gas limit override. Takes precedence over simulate"
   }
 ]

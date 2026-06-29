@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "granter_address",
+    "Type": "string",
+    "Description": "Feegrant granter address"
+  },
+  {
+    "Parameter": "grantee_address",
+    "Type": "string",
+    "Description": "Grantee address"
+  },
+  {
+    "Parameter": "tx_hash",
+    "Type": "string",
+    "Description": "Feegrant transaction hash"
+  },
+  {
+    "Parameter": "expiration",
+    "Type": "uint64",
+    "Description": "Feegrant expiration timestamp in Unix milliseconds"
+  },
+  {
+    "Parameter": "spend_limit",
+    "Type": "CosmosCoin",
+    "Description": "Feegrant spend limit"
+  },
+  {
+    "Parameter": "allowed_messages",
+    "Type": "string array",
+    "Description": "Message type URLs allowed by the feegrant"
+  }
+]

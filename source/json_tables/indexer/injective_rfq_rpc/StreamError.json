@@ -7,6 +7,16 @@
   {
     "Parameter": "id",
     "Type": "string",
-    "Description": "ID to identify the request or quote in the stream. RFQ_ID for quotes. CLIENT_ID for requests."
+    "Description": "Client ID. Only filled in taker streams"
+  },
+  {
+    "Parameter": "taker",
+    "Type": "string",
+    "Description": "Taker address. Only filled in the maker stream"
+  },
+  {
+    "Parameter": "rfq_id",
+    "Type": "uint64",
+    "Description": "RFQ ID. Only filled if available"
   }
 ]

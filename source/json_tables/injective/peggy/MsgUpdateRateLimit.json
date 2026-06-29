@@ -14,7 +14,7 @@
   {
     "Parameter": "new_token_price_id",
     "Type": "string",
-    "Description": "new_token_price_id is the new Pyth price ID of the rate limited token",
+    "Description": "unique ID used to obtain the notional USD value of the ERC20 token from oracle",
     "Required": "Yes"
   },
   {
@@ -27,6 +27,12 @@
     "Parameter": "new_rate_limit_window",
     "Type": "uint64",
     "Description": "new_rate_limit_window is the new length of the sliding window",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "new_token_oracle_type",
+    "Type": "OracleType",
+    "Description": "new_token_oracle_type is used to obtain the USD price of the ERC20 token (in relation with token_price_id)",
     "Required": "Yes"
   }
 ]

@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Derivative Market ID"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "The subaccountId that the position belongs to"
+  },
+  {
+    "Parameter": "amount",
+    "Type": "string",
+    "Description": "Amount of the funding payment"
+  },
+  {
+    "Parameter": "timestamp",
+    "Type": "int64",
+    "Description": "Timestamp of funding payment in UNIX millis"
+  }
+]

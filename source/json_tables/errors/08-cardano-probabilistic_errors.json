@@ -1,0 +1,82 @@
+[
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 2,
+    "description": "invalid chain-id"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 3,
+    "description": "invalid trusting period"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 4,
+    "description": "invalid probabilistic header height"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 5,
+    "description": "invalid probabilistic header"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 6,
+    "description": "processed time not found"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 7,
+    "description": "processed height not found"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 8,
+    "description": "packet-specified delay period has not been reached"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 9,
+    "description": "time since latest trusted state has passed the trusting period"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 10,
+    "description": "invalid current epoch"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 12,
+    "description": "invalid security score"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 13,
+    "description": "invalid unique pool count"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 14,
+    "description": "invalid qualified unique stake basis points"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 15,
+    "description": "invalid accepted block"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 16,
+    "description": "invalid host state commitment evidence"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 17,
+    "description": "invalid timestamp"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 18,
+    "description": "not implemented"
+  }
+]

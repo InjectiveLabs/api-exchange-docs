@@ -46,5 +46,11 @@
     "Type": "bool",
     "Description": "When true, fills gaps in derivative candles using oracle/mark prices anchored to neighboring real trade candles.",
     "Required": "Yes"
+  },
+  {
+    "Parameter": "index_prices",
+    "Type": "bool",
+    "Description": "When true, we'll use index prices. Supersedes useOraclePrices and fillGaps. Disabled for binary options markets.",
+    "Required": "Yes"
   }
 ]

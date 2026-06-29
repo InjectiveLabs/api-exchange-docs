@@ -30,6 +30,27 @@ This section lists all error codes from various modules in the Injective ecosyst
 <tr ><td class="module-name-td td_text">07-tendermint</td><td class="error-code-td td_num">14</td><td class="description-td td_text">invalid validator set</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
+## 08-cardano-probabilistic module
+
+<!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/08-cardano-probabilistic_errors.json) -->
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="module-name-th">module_name</th><th class="error-code-th">error_code</th><th class="description-th">description</th></tr></thead><tbody ><tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">2</td><td class="description-td td_text">invalid chain-id</td></tr>
+<tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">3</td><td class="description-td td_text">invalid trusting period</td></tr>
+<tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">4</td><td class="description-td td_text">invalid probabilistic header height</td></tr>
+<tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">5</td><td class="description-td td_text">invalid probabilistic header</td></tr>
+<tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">6</td><td class="description-td td_text">processed time not found</td></tr>
+<tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">7</td><td class="description-td td_text">processed height not found</td></tr>
+<tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">8</td><td class="description-td td_text">packet-specified delay period has not been reached</td></tr>
+<tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">9</td><td class="description-td td_text">time since latest trusted state has passed the trusting period</td></tr>
+<tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">10</td><td class="description-td td_text">invalid current epoch</td></tr>
+<tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">12</td><td class="description-td td_text">invalid security score</td></tr>
+<tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">13</td><td class="description-td td_text">invalid unique pool count</td></tr>
+<tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">14</td><td class="description-td td_text">invalid qualified unique stake basis points</td></tr>
+<tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">15</td><td class="description-td td_text">invalid accepted block</td></tr>
+<tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">16</td><td class="description-td td_text">invalid host state commitment evidence</td></tr>
+<tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">17</td><td class="description-td td_text">invalid timestamp</td></tr>
+<tr ><td class="module-name-td td_text">08-cardano-probabilistic</td><td class="error-code-td td_num">18</td><td class="description-td td_text">not implemented</td></tr></tbody></table>
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
 ## Auction module
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/errors/auction_errors.json) -->

@@ -64,5 +64,11 @@
     "Type": "string",
     "Description": "filter synthetic trades by RFQ maker address",
     "Required": "Yes"
+  },
+  {
+    "Parameter": "participant",
+    "Type": "string",
+    "Description": "filter trades including the address as RFQ maker or the trade account address",
+    "Required": "Yes"
   }
 ]

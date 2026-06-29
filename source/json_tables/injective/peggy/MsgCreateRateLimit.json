@@ -20,7 +20,7 @@
   {
     "Parameter": "token_price_id",
     "Type": "string",
-    "Description": "a Pyth-specific ID used to obtain USD price of the ERC20 token",
+    "Description": "unique ID used to obtain the notional USD value of the ERC20 token from oracle",
     "Required": "Yes"
   },
   {
@@ -39,6 +39,12 @@
     "Parameter": "rate_limit_window",
     "Type": "uint64",
     "Description": "length of the sliding window in which inbound (outbound) traffic is measured",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token_oracle_type",
+    "Type": "OracleType",
+    "Description": "token_oracle_type is used to obtain the USD price of the ERC20 token (in relation with token_price_id)",
     "Required": "Yes"
   }
 ]

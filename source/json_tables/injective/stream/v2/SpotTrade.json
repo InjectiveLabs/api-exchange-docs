@@ -53,5 +53,10 @@
     "Parameter": "trade_id",
     "Type": "string",
     "Description": "the trade ID"
+  },
+  {
+    "Parameter": "notional",
+    "Type": "LegacyDec",
+    "Description": "the fee-exclusive quote amount actually settled for the trade (in human readable format)"
   }
 ]

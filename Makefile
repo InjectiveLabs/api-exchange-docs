@@ -2,7 +2,7 @@
 COSMOS_SDK_VERSION := v0.50.14-inj.11
 COSMOS_SDK_REPO := https://github.com/InjectiveLabs/cosmos-sdk.git
 
-INJECTIVE_CORE_VERSION := v1.20.1
+INJECTIVE_CORE_VERSION := v1.20.3
 INJECTIVE_CORE_REPO := https://github.com/InjectiveLabs/injective-core.git
 
 INDEXER_VERSION := v1.20.49

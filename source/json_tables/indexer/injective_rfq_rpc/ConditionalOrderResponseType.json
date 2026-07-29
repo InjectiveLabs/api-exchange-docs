@@ -87,7 +87,7 @@
   {
     "Parameter": "terminal_at",
     "Type": "int64",
-    "Description": "Terminal timestamp in milliseconds (set when the order reaches a terminal status: completed, failed, or cancelled)"
+    "Description": "Terminal timestamp in milliseconds (set when the order reaches a terminal status: completed, failed, cancelled, or expired)"
   },
   {
     "Parameter": "evm_chain_id",

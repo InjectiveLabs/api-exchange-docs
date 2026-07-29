@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "name",
+    "Type": "string",
+    "Description": "Token full name"
+  },
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "Token contract address (native or not)"
+  },
+  {
+    "Parameter": "symbol",
+    "Type": "string",
+    "Description": "Token symbol short name"
+  },
+  {
+    "Parameter": "logo",
+    "Type": "string",
+    "Description": "URL to the logo image"
+  },
+  {
+    "Parameter": "decimals",
+    "Type": "int32",
+    "Description": "Token decimals"
+  },
+  {
+    "Parameter": "updated_at",
+    "Type": "int64",
+    "Description": "Token metadata fetched timestamp in UNIX millis."
+  }
+]

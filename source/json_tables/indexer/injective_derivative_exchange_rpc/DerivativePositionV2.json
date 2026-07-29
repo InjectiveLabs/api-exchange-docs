@@ -78,5 +78,25 @@
     "Parameter": "upnl",
     "Type": "string",
     "Description": "Unrealized profit and loss of the position (only present when requested with with_upnl=true)"
+  },
+  {
+    "Parameter": "initial_leverage",
+    "Type": "string",
+    "Description": "Leverage at the time the position was opened"
+  },
+  {
+    "Parameter": "initial_margin",
+    "Type": "string",
+    "Description": "Margin at the time the position was opened, in USD"
+  },
+  {
+    "Parameter": "initial_entry_price",
+    "Type": "string",
+    "Description": "Entry price at the time the position was opened, in USD"
+  },
+  {
+    "Parameter": "initial_quantity",
+    "Type": "string",
+    "Description": "Quantity at the time the position was opened"
   }
 ]

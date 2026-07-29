@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "cap",
+    "Type": "string",
+    "Description": "The open notional cap of the market"
+  }
+]

@@ -1,0 +1,117 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "DerivativeMarket ID is crypto.Keccak256Hash([]byte((oracleType.String() + ticker + quoteDenom + oracleBase + oracleQuote))) for perpetual markets and crypto.Keccak256Hash([]byte((oracleType.String() + ticker + quoteDenom + oracleBase + oracleQuote + strconv.Itoa(int(expiry))))) for expiry futures markets"
+  },
+  {
+    "Parameter": "market_status",
+    "Type": "string",
+    "Description": "The status of the market"
+  },
+  {
+    "Parameter": "ticker",
+    "Type": "string",
+    "Description": "A name of the pair in format AAA/BBB, where AAA is base asset, BBB is quote asset."
+  },
+  {
+    "Parameter": "oracle_base",
+    "Type": "string",
+    "Description": "Oracle base currency"
+  },
+  {
+    "Parameter": "oracle_quote",
+    "Type": "string",
+    "Description": "Oracle quote currency"
+  },
+  {
+    "Parameter": "oracle_type",
+    "Type": "string",
+    "Description": "Oracle Type"
+  },
+  {
+    "Parameter": "oracle_scale_factor",
+    "Type": "uint32",
+    "Description": "OracleScaleFactor"
+  },
+  {
+    "Parameter": "initial_margin_ratio",
+    "Type": "string",
+    "Description": "Defines the initial margin ratio of a derivative market"
+  },
+  {
+    "Parameter": "maintenance_margin_ratio",
+    "Type": "string",
+    "Description": "Defines the maintenance margin ratio of a derivative market"
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "Coin denom used for the quote asset."
+  },
+  {
+    "Parameter": "quote_token_meta",
+    "Type": "TokenMeta",
+    "Description": "Token metadata for quote asset"
+  },
+  {
+    "Parameter": "maker_fee_rate",
+    "Type": "string",
+    "Description": "Defines the fee percentage makers pay when trading (in quote asset)"
+  },
+  {
+    "Parameter": "taker_fee_rate",
+    "Type": "string",
+    "Description": "Defines the fee percentage takers pay when trading (in quote asset)"
+  },
+  {
+    "Parameter": "service_provider_fee",
+    "Type": "string",
+    "Description": "Percentage of the transaction fee shared with the service provider"
+  },
+  {
+    "Parameter": "is_perpetual",
+    "Type": "bool",
+    "Description": "True if the market is a perpetual swap market"
+  },
+  {
+    "Parameter": "min_price_tick_size",
+    "Type": "string",
+    "Description": "Defines the minimum required tick size for the order's price"
+  },
+  {
+    "Parameter": "min_quantity_tick_size",
+    "Type": "string",
+    "Description": "Defines the minimum required tick size for the order's quantity"
+  },
+  {
+    "Parameter": "perpetual_market_info",
+    "Type": "PerpetualMarketInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "perpetual_market_funding",
+    "Type": "PerpetualMarketFunding",
+    "Description": ""
+  },
+  {
+    "Parameter": "expiry_futures_market_info",
+    "Type": "ExpiryFuturesMarketInfo",
+    "Description": ""
+  },
+  {
+    "Parameter": "min_notional",
+    "Type": "string",
+    "Description": "Minimum notional value for the order"
+  },
+  {
+    "Parameter": "reduce_margin_ratio",
+    "Type": "string",
+    "Description": "Defines the reduce margin ratio of a derivative market"
+  },
+  {
+    "Parameter": "open_notional_cap",
+    "Type": "OpenNotionalCap",
+    "Description": "The open notional cap of the market, if any"
+  }
+]

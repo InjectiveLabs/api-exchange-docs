@@ -2,7 +2,7 @@
   {
     "Parameter": "addresses",
     "Type": "string array",
-    "Description": "Filter by taker addresses",
+    "Description": "Filter by taker or executed maker addresses",
     "Required": "Yes"
   },
   {

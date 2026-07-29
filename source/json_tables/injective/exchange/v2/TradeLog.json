@@ -33,5 +33,10 @@
     "Parameter": "cid",
     "Type": "string",
     "Description": ""
+  },
+  {
+    "Parameter": "notional",
+    "Type": "LegacyDec",
+    "Description": "the fee-exclusive quote amount actually settled for the trade (in human readable format)"
   }
 ]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "markets",
+    "Type": "DerivativeMarketInfo array",
+    "Description": "Derivative Markets list"
+  },
+  {
+    "Parameter": "next",
+    "Type": "string array",
+    "Description": "Next tokens for pagination"
+  }
+]

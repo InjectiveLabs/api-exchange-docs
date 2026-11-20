@@ -1,7 +1,9 @@
 # Change Log
 
 ## 2026-11-20
-- Updated SDK example references for Python SDK v1.17.0 and Go SDK v1.64.0
+- Updated all messages to reflect the changes included in the chain version v1.21.0, and Indexer v1.21.1
+- Python SDK v1.17.0
+- Go SDK v1.64.0
 - Removed Go examples for query helpers removed from the SDK
 - Removed MitoVaultInfos documentation after its removal from both SDKs
 

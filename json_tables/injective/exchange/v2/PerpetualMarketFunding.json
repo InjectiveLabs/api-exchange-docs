@@ -13,5 +13,20 @@
     "Parameter": "last_timestamp",
     "Type": "int64",
     "Description": "the last funding timestamp in seconds"
+  },
+  {
+    "Parameter": "period_start",
+    "Type": "int64",
+    "Description": "period_start defines the start in seconds of the current funding v2 accrual period"
+  },
+  {
+    "Parameter": "last_premium",
+    "Type": "LegacyDec",
+    "Description": "last_premium defines the most recent funding v2 impact premium"
+  },
+  {
+    "Parameter": "last_sample_timestamp",
+    "Type": "int64",
+    "Description": "last_sample_timestamp defines when in seconds last_premium was sampled"
   }
 ]

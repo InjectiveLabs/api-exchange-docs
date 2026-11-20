@@ -1,0 +1,42 @@
+[
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "Client ID"
+  },
+  {
+    "Parameter": "request_id",
+    "Type": "string",
+    "Description": "Hex-encoded 32-byte signed request ID"
+  },
+  {
+    "Parameter": "request_hash",
+    "Type": "string",
+    "Description": "Hex-encoded EIP-712 digest of signed_request"
+  },
+  {
+    "Parameter": "rfq_id",
+    "Type": "uint64",
+    "Description": "Allocated RFQ quote-round ID"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Execution status"
+  },
+  {
+    "Parameter": "tx_hash",
+    "Type": "string",
+    "Description": "On-chain transaction hash, present once broadcast succeeds"
+  },
+  {
+    "Parameter": "selected_quotes",
+    "Type": "RFQGwPrepareQuoteResult array",
+    "Description": "Selected quotes, if execution reached quote selection"
+  },
+  {
+    "Parameter": "error",
+    "Type": "string",
+    "Description": "Error detail for terminal non-success statuses"
+  }
+]

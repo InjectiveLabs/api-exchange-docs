@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "signature",
+    "Type": "string",
+    "Description": "EIP-712 signature over TakerStreamAuthChallenge(address taker,bytes32 nonce,uint64 expiresAt)"
+  }
+]

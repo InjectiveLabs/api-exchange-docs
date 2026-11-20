@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "pool_denom",
+    "Type": "string",
+    "Description": "Optional exact pool deposit denom. Empty returns every policy.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "PageRequest",
+    "Description": "Key-only pagination. Offset and total-count scans are rejected.",
+    "Required": "No"
+  }
+]

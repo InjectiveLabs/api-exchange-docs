@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "hash",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "timestamp_ms",
+    "Type": "string",
+    "Description": ""
+  }
+]

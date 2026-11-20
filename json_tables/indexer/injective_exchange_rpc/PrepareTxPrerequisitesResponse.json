@@ -1,0 +1,67 @@
+[
+  {
+    "Parameter": "schema_version",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "request_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "operation_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "revision",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "valid_until_ms",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "account",
+    "Type": "TxPrerequisitesAccount",
+    "Description": ""
+  },
+  {
+    "Parameter": "fee_grant",
+    "Type": "TxPrerequisitesFeeGrant",
+    "Description": "Present only when requestFeeGrant is true and preparation succeeds"
+  },
+  {
+    "Parameter": "transaction_context",
+    "Type": "TxPrerequisitesTransactionContext",
+    "Description": ""
+  },
+  {
+    "Parameter": "retry_after_ms",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "blockers",
+    "Type": "TxPrerequisitesBlocker array",
+    "Description": ""
+  }
+]

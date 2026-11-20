@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address (governance authority or exchange admin)",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "blocked",
+    "Type": "bool",
+    "Description": "whether the manual block is set",
+    "Required": "Yes"
+  }
+]

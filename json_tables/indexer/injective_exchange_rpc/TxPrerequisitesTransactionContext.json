@@ -1,0 +1,52 @@
+[
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "context_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "valid_for_ms",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "consistency",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "minimum_observed_height",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "maximum_observed_height",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "height_skew_blocks",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "block",
+    "Type": "TxPrerequisitesBlock",
+    "Description": ""
+  },
+  {
+    "Parameter": "timeout",
+    "Type": "TxPrerequisitesTimeout",
+    "Description": ""
+  },
+  {
+    "Parameter": "chain_clock",
+    "Type": "TxPrerequisitesChainClock",
+    "Description": ""
+  }
+]

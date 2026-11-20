@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID"
+  },
+  {
+    "Parameter": "ts",
+    "Type": "int64",
+    "Description": "Snapshot timestamp in UNIX milliseconds"
+  },
+  {
+    "Parameter": "mark_price",
+    "Type": "string",
+    "Description": "Mark price as a decimal string"
+  },
+  {
+    "Parameter": "tiers",
+    "Type": "RFQPricingTierType array",
+    "Description": "Best bid and ask per notional tier"
+  }
+]

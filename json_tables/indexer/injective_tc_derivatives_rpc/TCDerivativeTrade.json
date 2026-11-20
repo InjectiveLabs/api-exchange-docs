@@ -102,11 +102,16 @@
   {
     "Parameter": "rfq_id",
     "Type": "uint64",
-    "Description": "RFQ identifier the synthetic trade was settled under (set only on synthetic trades coming from an RFQ settlement)"
+    "Description": "RFQ identifier associated with this trade. Set on synthetic RFQ settlement trades and on trades attributed to an atomic RFQ proxy execution; presence alone does not mean the trade is a settlement fill."
   },
   {
     "Parameter": "tx_hash",
     "Type": "string",
     "Description": "Transaction hash where the trade was executed"
+  },
+  {
+    "Parameter": "rfq_participant",
+    "Type": "string",
+    "Description": "RFQ participant address attributed through atomic RFQ proxy execution"
   }
 ]

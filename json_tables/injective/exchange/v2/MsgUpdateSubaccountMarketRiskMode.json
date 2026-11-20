@@ -1,0 +1,26 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "the sender's Injective address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "subaccount_id",
+    "Type": "string",
+    "Description": "the subaccount ID to update the market's margin mode for",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "the derivative market whose mode is pinned or unpinned",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "mode",
+    "Type": "RiskMode",
+    "Description": "the requested mode: ISOLATED or CROSS pins, UNSPECIFIED unpins back to the profile default (subject to eligibility & safety gates)",
+    "Required": "Yes"
+  }
+]

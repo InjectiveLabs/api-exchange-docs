@@ -28,5 +28,20 @@
     "Parameter": "expires_at",
     "Type": "uint64",
     "Description": ""
+  },
+  {
+    "Parameter": "report_schema_version",
+    "Type": "uint32",
+    "Description": "report_schema_version is the Chainlink Data Streams report schema encoded by the feed ID (currently 3 for crypto and 8 for RWA)."
+  },
+  {
+    "Parameter": "market_status",
+    "Type": "uint32",
+    "Description": "market_status is meaningful for the v8 RWA schema: 0 unknown, 1 closed, and 2 open. It is zero for schemas without a market-status field."
+  },
+  {
+    "Parameter": "last_update_timestamp",
+    "Type": "uint64",
+    "Description": "last_update_timestamp is the v8 timestamp of the last valid price update, in nanoseconds. It is zero for schemas without this field and is not assumed to be monotonic across reports."
   }
 ]

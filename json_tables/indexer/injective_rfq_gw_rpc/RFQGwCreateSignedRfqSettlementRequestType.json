@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "signed_request",
+    "Type": "RFQGwSignedRFQRequestType",
+    "Description": ""
+  },
+  {
+    "Parameter": "taker_signature",
+    "Type": "string",
+    "Description": "Hex-encoded taker EIP-712 signature over signed_request"
+  },
+  {
+    "Parameter": "client_id",
+    "Type": "string",
+    "Description": "Client ID used for idempotency and settlement lookup"
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "External/client correlation id passed through to settlement metadata"
+  },
+  {
+    "Parameter": "quote_wait_time_ms",
+    "Type": "uint64",
+    "Description": "How long to wait for quotes (bounded by server config)"
+  }
+]

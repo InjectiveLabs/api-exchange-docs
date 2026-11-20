@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "height",
+    "Type": "string",
+    "Description": "Exact decimal timeout height"
+  },
+  {
+    "Parameter": "blocks",
+    "Type": "uint64",
+    "Description": "Effective timeout-height delta"
+  }
+]

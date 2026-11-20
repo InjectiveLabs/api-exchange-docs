@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "the perpetual market ID"
+  },
+  {
+    "Parameter": "funding",
+    "Type": "PerpetualMarketFunding",
+    "Description": "the current funding state"
+  },
+  {
+    "Parameter": "is_hourly_funding",
+    "Type": "bool",
+    "Description": "whether this update applies the periodic funding payment"
+  },
+  {
+    "Parameter": "funding_payment",
+    "Type": "LegacyDec",
+    "Description": "the quote-denominated funding payment per unit quantity added to funding.cumulative_funding; only present for periodic funding updates"
+  },
+  {
+    "Parameter": "mark_price",
+    "Type": "LegacyDec",
+    "Description": "the mark price used to calculate funding; only present for periodic funding updates"
+  }
+]

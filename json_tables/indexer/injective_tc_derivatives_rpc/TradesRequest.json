@@ -68,7 +68,7 @@
   {
     "Parameter": "participant",
     "Type": "string",
-    "Description": "filter trades including the address as RFQ maker or the trade account address",
+    "Description": "filter trades including the address as trade account, RFQ maker, or RFQ proxy participant",
     "Required": "Yes"
   }
 ]

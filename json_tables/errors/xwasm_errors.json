@@ -53,5 +53,10 @@
     "module_name": "xwasm",
     "error_code": 11,
     "description": "invalid funding mode"
+  },
+  {
+    "module_name": "xwasm",
+    "error_code": 12,
+    "description": "wasmx was removed in v1.21.0"
   }
 ]

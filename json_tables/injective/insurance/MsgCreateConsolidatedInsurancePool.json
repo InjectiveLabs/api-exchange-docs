@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "deposit_denom",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "quote_decimals",
+    "Type": "uint32",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "max_draw_per_market",
+    "Type": "Int",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "redemption_notice_period_seconds",
+    "Type": "int64",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

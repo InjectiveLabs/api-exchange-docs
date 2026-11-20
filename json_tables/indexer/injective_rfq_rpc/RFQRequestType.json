@@ -68,5 +68,30 @@
     "Parameter": "height",
     "Type": "uint64",
     "Description": "Block height"
+  },
+  {
+    "Parameter": "unique_rfq_id",
+    "Type": "string",
+    "Description": "Canonical request identity, the taker address and rfq_id joined as taker:rfq_id. Convenience only - both parts are already present on this message"
+  },
+  {
+    "Parameter": "execution_mode",
+    "Type": "string",
+    "Description": "Execution mode: \"direct\", \"signed_intent\" or \"signed_rfq\""
+  },
+  {
+    "Parameter": "subaccount_nonce",
+    "Type": "uint32",
+    "Description": "Taker subaccount nonce, present for signed_rfq requests"
+  },
+  {
+    "Parameter": "min_total_fill_quantity",
+    "Type": "string",
+    "Description": "Minimum aggregate fill quantity required for settlement, present for signed_rfq requests"
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "Client order ID, present for signed_rfq requests"
   }
 ]

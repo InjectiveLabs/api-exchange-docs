@@ -13,5 +13,10 @@
     "Parameter": "taker",
     "Type": "string",
     "Description": "Taker address"
+  },
+  {
+    "Parameter": "unique_rfq_id",
+    "Type": "string",
+    "Description": "Identity of the request this quote answers, the taker address and rfq_id joined as taker:rfq_id"
   }
 ]

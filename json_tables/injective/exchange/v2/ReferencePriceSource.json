@@ -1,0 +1,30 @@
+[
+  {
+    "Code": "0",
+    "Name": "REFERENCE_PRICE_SOURCE_DISABLED"
+  },
+  {
+    "Code": "1",
+    "Name": "REFERENCE_PRICE_SOURCE_PYTH_EMA_LONG"
+  },
+  {
+    "Code": "2",
+    "Name": "REFERENCE_PRICE_SOURCE_MULTI_ORACLE_TWAP"
+  },
+  {
+    "Code": "3",
+    "Name": "REFERENCE_PRICE_SOURCE_COMPOSITE_LONG"
+  },
+  {
+    "Code": "4",
+    "Name": "REFERENCE_PRICE_SOURCE_PYTH_PRO_EMA_LONG"
+  },
+  {
+    "Code": "5",
+    "Name": "REFERENCE_PRICE_SOURCE_CHAINLINK_DATA_STREAMS_SPOT"
+  },
+  {
+    "Code": "6",
+    "Name": "REFERENCE_PRICE_SOURCE_SEDA_FAST_SPOT"
+  }
+]

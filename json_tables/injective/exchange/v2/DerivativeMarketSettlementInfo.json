@@ -13,5 +13,10 @@
     "Parameter": "is_forced_settlement",
     "Type": "bool",
     "Description": "is_forced_settlement indicates whether the settlement was explicitly scheduled by admin or governance force-settlement."
+  },
+  {
+    "Parameter": "has_settlement_failed",
+    "Type": "bool",
+    "Description": "has_settlement_failed marks a terminally quarantined settlement after its execution failed. BeginBlock keeps the marker for state freezes but does not attempt the settlement again."
   }
 ]

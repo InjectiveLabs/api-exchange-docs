@@ -1,0 +1,47 @@
+[
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "revision",
+    "Type": "string",
+    "Description": "Stable revision derived from the prepared fee-grant identity and policy"
+  },
+  {
+    "Parameter": "granter_address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "grantee_address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "provision_transaction_hash",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "allowance_type",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "allowed_messages",
+    "Type": "string array",
+    "Description": ""
+  },
+  {
+    "Parameter": "spend_limit",
+    "Type": "CosmosCoin",
+    "Description": ""
+  },
+  {
+    "Parameter": "expires_at_ms",
+    "Type": "string",
+    "Description": ""
+  }
+]

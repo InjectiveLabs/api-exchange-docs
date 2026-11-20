@@ -263,5 +263,10 @@
     "module_name": "oracle",
     "error_code": 53,
     "description": "seda fast result parser failed"
+  },
+  {
+    "module_name": "oracle",
+    "error_code": 54,
+    "description": "no Pyth Pro price update applied"
   }
 ]

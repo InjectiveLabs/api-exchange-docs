@@ -88,5 +88,10 @@
     "module_name": "gov",
     "error_code": 23,
     "description": "invalid deposit denom"
+  },
+  {
+    "module_name": "gov",
+    "error_code": 24,
+    "description": "proposal message panicked"
   }
 ]

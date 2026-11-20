@@ -1,0 +1,27 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "is_buy",
+    "Type": "bool",
+    "Description": ""
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "LegacyDec",
+    "Description": "quantity is the base-asset fill quantity (human readable)"
+  },
+  {
+    "Parameter": "price",
+    "Type": "LegacyDec",
+    "Description": "price is the clearing price (human readable)"
+  },
+  {
+    "Parameter": "fee",
+    "Type": "LegacyDec",
+    "Description": "fee is the quote-denom trading fee (human readable)"
+  }
+]

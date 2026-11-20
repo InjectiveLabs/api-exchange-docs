@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "input_denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "input_amount",
+    "Type": "Int",
+    "Description": "Input amount in chain format projected to achieve at least amount_out on the current book; conservatively rounded up. The projection walks aggregated levels, which cannot exclude paused or frozen maker liquidity resting at executable prices, so pair the swap with minOut = amount_out rather than relying on the projection alone"
+  }
+]

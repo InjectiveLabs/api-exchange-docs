@@ -5,6 +5,11 @@
     "Description": "List of quotes considered for settlement"
   },
   {
+    "Parameter": "unique_rfq_id",
+    "Type": "string",
+    "Description": "Identity of the settled request, the taker address and rfq_id joined as taker:rfq_id"
+  },
+  {
     "Parameter": "rfq_id",
     "Type": "uint64",
     "Description": "RFQ ID"

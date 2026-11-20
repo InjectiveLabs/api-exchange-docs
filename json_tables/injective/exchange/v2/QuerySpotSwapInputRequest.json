@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "Market ID of the spot market to swap on",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "output_denom",
+    "Type": "string",
+    "Description": "Denom of the desired output token; the swap direction is derived from which side of the market it matches",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "amount_out",
+    "Type": "string",
+    "Description": "Desired exact output amount in chain format",
+    "Required": "Yes"
+  }
+]

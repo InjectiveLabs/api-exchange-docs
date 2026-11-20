@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "contract",
+    "Type": "byte array",
+    "Description": "Contract is the target EVM contract address"
+  },
+  {
+    "Parameter": "input",
+    "Type": "byte array",
+    "Description": "Input is the ABI-encoded contract call data"
+  },
+  {
+    "Parameter": "gas_limit",
+    "Type": "uint64",
+    "Description": "GasLimit is the maximum EVM gas available to the contract call"
+  }
+]

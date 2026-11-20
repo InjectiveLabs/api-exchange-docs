@@ -2,7 +2,7 @@
   {
     "Parameter": "message_type",
     "Type": "string",
-    "Description": "Type: 'request', 'ping', 'conditional_order'",
+    "Description": "Type: 'request', 'ping', 'conditional_order', 'auth'",
     "Required": "Yes"
   },
   {
@@ -34,5 +34,11 @@
     "Type": "uint64",
     "Description": "EVM chain ID embedded in the EIP-712 domain for the conditional order. Required when conditional_order_sign_mode is \"v2\".",
     "Required": "Yes"
+  },
+  {
+    "Parameter": "auth",
+    "Type": "TakerAuth",
+    "Description": "Taker response to the stream authentication challenge",
+    "Required": "No"
   }
 ]

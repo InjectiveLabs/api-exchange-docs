@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "deposit",
+    "Type": "Coin",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "min_shares_out",
+    "Type": "Int",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

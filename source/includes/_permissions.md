@@ -583,7 +583,8 @@ No parameters
 <tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">managers for each role</td></tr>
 <tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">status for each policy</td></tr>
 <tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr>
-<tr ><td class="parameter-td td_text">evm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to map code-based permissions</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">evm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to map code-based permissions:  must implement isTransferRestricted(address from, address to, Cosmos.Coin amount) returns (bool)</td></tr>
+<tr ><td class="parameter-td td_text">evm_post_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to get called after every successful transfer postTransfer(address from, address to, Cosmos.Coin amount)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1108,7 +1109,8 @@ func main() {
 <tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">managers for each role</td></tr>
 <tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">status for each policy</td></tr>
 <tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr>
-<tr ><td class="parameter-td td_text">evm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to map code-based permissions</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">evm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to map code-based permissions:  must implement isTransferRestricted(address from, address to, Cosmos.Coin amount) returns (bool)</td></tr>
+<tr ><td class="parameter-td td_text">evm_post_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to get called after every successful transfer postTransfer(address from, address to, Cosmos.Coin amount)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2877,7 +2879,8 @@ No parameters
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/permissions/Params.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">contract_hook_max_gas</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Max amount of gas allowed for contract hook queries</td></tr>
 <tr ><td class="parameter-td td_text">deprecated_enforced_restrictions_contracts</td><td class="type-td td_text">string array</td><td class="description-td td_text">DEPRECATED in favor of enforced_restrictions_evm_contracts, but left for compatibility and upgrade purposes  EVM addresses of contracts that will not bypass module-to-module transfers</td></tr>
-<tr ><td class="parameter-td td_text">enforced_restrictions_evm_contracts</td><td class="type-td td_text">EnforcedRestrictionsEVMContract array</td><td class="description-td td_text">EVM Contracts that module will be listening to sync permissions stored inside namespace on every update inside smart contract state</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">enforced_restrictions_evm_contracts</td><td class="type-td td_text">EnforcedRestrictionsEVMContract array</td><td class="description-td td_text">EVM Contracts that module will be listening to sync permissions stored inside namespace on every update inside smart contract state</td></tr>
+<tr ><td class="parameter-td td_text">owner_blacklist_query_max_gas</td><td class="type-td td_text">uint64</td><td class="description-td td_text">Max amount of EVM gas allowed for an isBlacklisted(address) owner query on an enforced restrictions EVM contract. Fixed-gas transactions do not pay for it and active EVM frames prepay it, so it is bounded separately from contract hooks.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2892,7 +2895,8 @@ No parameters
 <tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">managers for each role</td></tr>
 <tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">status for each policy</td></tr>
 <tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr>
-<tr ><td class="parameter-td td_text">evm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to map code-based permissions</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">evm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to map code-based permissions:  must implement isTransferRestricted(address from, address to, Cosmos.Coin amount) returns (bool)</td></tr>
+<tr ><td class="parameter-td td_text">evm_post_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to get called after every successful transfer postTransfer(address from, address to, Cosmos.Coin amount)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3288,7 +3292,8 @@ func main() {
 <tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">managers for each role</td></tr>
 <tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">status for each policy</td></tr>
 <tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">capabilities for each manager for each policy</td></tr>
-<tr ><td class="parameter-td td_text">evm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to map code-based permissions</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">evm_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to map code-based permissions:  must implement isTransferRestricted(address from, address to, Cosmos.Coin amount) returns (bool)</td></tr>
+<tr ><td class="parameter-td td_text">evm_post_hook</td><td class="type-td td_text">string</td><td class="description-td td_text">The address of the EVM contract to get called after every successful transfer postTransfer(address from, address to, Cosmos.Coin amount)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3656,7 +3661,8 @@ func main() {
 <tr ><td class="parameter-td td_text">role_managers</td><td class="type-td td_text">RoleManager array</td><td class="description-td td_text">role managers to update</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">policy_statuses</td><td class="type-td td_text">PolicyStatus array</td><td class="description-td td_text">policy statuses to update</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">policy_manager_capabilities</td><td class="type-td td_text">PolicyManagerCapability array</td><td class="description-td td_text">policy manager capabilities to update</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">evm_hook</td><td class="type-td td_text">MsgUpdateNamespace_SetContractHook</td><td class="description-td td_text">address of EVM smart contract to apply code-based restrictions</td><td class="required-td td_text">No</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">evm_hook</td><td class="type-td td_text">MsgUpdateNamespace_SetContractHook</td><td class="description-td td_text">address of EVM smart contract to apply code-based restrictions</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">evm_post_hook</td><td class="type-td td_text">MsgUpdateNamespace_SetContractHook</td><td class="description-td td_text">address of EVM smart contract to invoke after each successful transfer</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>

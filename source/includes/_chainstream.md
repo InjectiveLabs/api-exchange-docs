@@ -227,7 +227,8 @@ func main() {
 <tr ><td class="parameter-td td_text">positions_filter</td><td class="type-td td_text">PositionsFilter</td><td class="description-td td_text">filter for positions events</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">oracle_price_filter</td><td class="type-td td_text">OraclePriceFilter</td><td class="description-td td_text">filter for oracle prices events</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">order_failures_filter</td><td class="type-td td_text">OrderFailuresFilter</td><td class="description-td td_text">filter for order failures events</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">conditional_order_trigger_failures_filter</td><td class="type-td td_text">ConditionalOrderTriggerFailuresFilter</td><td class="description-td td_text">filter for conditional order trigger failures events</td><td class="required-td td_text">No</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">conditional_order_trigger_failures_filter</td><td class="type-td td_text">ConditionalOrderTriggerFailuresFilter</td><td class="description-td td_text">filter for conditional order trigger failures events</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">market_funding_filter</td><td class="type-td td_text">MarketFundingFilter</td><td class="description-td td_text">filter for perpetual market funding updates</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -286,7 +287,7 @@ func main() {
 **OraclePriceFilter**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/OraclePriceFilter.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string array</td><td class="description-td td_text">list of symbols to filter by</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string array</td><td class="description-td td_text">Feed identifiers to subscribe to. Each entry matches the `symbol` field of `OraclePrice`, which equals `EventOraclePriceUpdate.id`. The format depends on the oracle type: - Coinbase:             asset key (e.g. "BTC") - Pyth:                 price feed ID hex hash - Stork:                asset symbol (e.g. "BTCUSD") - ChainlinkDataStreams:  feed ID hex string (e.g. "0x00034a45...") - PriceFeed:            compound "base/quote" (e.g. "BTC/USDT") - Provider:             compound "provider/symbol" (e.g. "acme/BTC") - PythPro:              decimal string of the uint32 feed ID (e.g. "12345") - SedaFast:             hex(keccak256(execProgramIdBytes || keccak256(execInputsBytes))) Use ["*"] to subscribe to all oracle price updates.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -326,7 +327,8 @@ Each message contains a list of events that are filtered by the request paramete
 <tr ><td class="parameter-td td_text">oracle_prices</td><td class="type-td td_text">OraclePrice array</td><td class="description-td td_text">list of oracle prices updates</td></tr>
 <tr ><td class="parameter-td td_text">gas_price</td><td class="type-td td_text">string</td><td class="description-td td_text">the current gas price when the block was processed (in chain format)</td></tr>
 <tr ><td class="parameter-td td_text">order_failures</td><td class="type-td td_text">OrderFailureUpdate array</td><td class="description-td td_text">list of order failures updates</td></tr>
-<tr ><td class="parameter-td td_text">conditional_order_trigger_failures</td><td class="type-td td_text">ConditionalOrderTriggerFailureUpdate array</td><td class="description-td td_text">list of conditional order trigger failures updates</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">conditional_order_trigger_failures</td><td class="type-td td_text">ConditionalOrderTriggerFailureUpdate array</td><td class="description-td td_text">list of conditional order trigger failures updates</td></tr>
+<tr ><td class="parameter-td td_text">market_funding_updates</td><td class="type-td td_text">MarketFundingUpdate array</td><td class="description-td td_text">list of perpetual market funding updates</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -362,7 +364,8 @@ Each message contains a list of events that are filtered by the request paramete
 <tr ><td class="parameter-td td_text">order_hash</td><td class="type-td td_text">string</td><td class="description-td td_text">the order hash</td></tr>
 <tr ><td class="parameter-td td_text">fee_recipient_address</td><td class="type-td td_text">string</td><td class="description-td td_text">the fee recipient address</td></tr>
 <tr ><td class="parameter-td td_text">cid</td><td class="type-td td_text">string</td><td class="description-td td_text">the client order ID</td></tr>
-<tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the trade ID</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">trade_id</td><td class="type-td td_text">string</td><td class="description-td td_text">the trade ID</td></tr>
+<tr ><td class="parameter-td td_text">notional</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">the fee-exclusive quote amount actually settled for the trade (in human readable format)</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -434,7 +437,7 @@ Each message contains a list of events that are filtered by the request paramete
 **OraclePrice**
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/stream/v2/OraclePrice.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">the symbol of the oracle price</td></tr>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">symbol</td><td class="type-td td_text">string</td><td class="description-td td_text">The feed identifier for this price update, sourced from EventOraclePriceUpdate.id. Its format depends on the oracle type; see OraclePriceFilter.symbol for the per-type mapping.</td></tr>
 <tr ><td class="parameter-td td_text">price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">the updated price</td></tr>
 <tr ><td class="parameter-td td_text">type</td><td class="type-td td_text">string</td><td class="description-td td_text">the oracle type</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->

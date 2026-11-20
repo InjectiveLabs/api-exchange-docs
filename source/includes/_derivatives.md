@@ -1339,7 +1339,9 @@ func main() {
 <tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the maximum open notional for the market</td></tr>
 <tr ><td class="parameter-td td_text">has_disabled_minimal_protocol_fee</td><td class="type-td td_text">bool</td><td class="description-td td_text">has_disabled_minimal_protocol_fee indicates whether the minimal protocol fee is disabled for the market</td></tr>
 <tr ><td class="parameter-td td_text">force_paused_info</td><td class="type-td td_text">ForcePausedInfo</td><td class="description-td td_text">force_paused_info defines additional info for force paused markets, only set when status == ForcePaused</td></tr>
-<tr ><td class="parameter-td td_text">cross_margin_eligible</td><td class="type-td td_text">bool</td><td class="description-td td_text">cross_margin_eligible marks the market as eligible for cross-margin pool participation. Default false means markets are ineligible until explicitly enabled at launch or toggled via governance proposal.</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">cross_margin_eligible</td><td class="type-td td_text">bool</td><td class="description-td td_text">cross_margin_eligible marks the market as eligible for cross-margin pool participation. Default false means markets are ineligible until explicitly enabled at launch or toggled via governance proposal.</td></tr>
+<tr ><td class="parameter-td td_text">reference_price_gate_config</td><td class="type-td td_text">ReferencePriceGateConfig</td><td class="description-td td_text">reference_price_gate_config configures the reference-price gate on position-opening fills for the market. A zero-valued config means the gate is disabled.</td></tr>
+<tr ><td class="parameter-td td_text">synthetic_trade_fee_rate</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">synthetic_trade_fee_rate defines the fee rate charged on synthetic trades (RFQ and contract-driven legs) and position transfers of the market</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1420,7 +1422,8 @@ func main() {
 <tr ><td class="parameter-td td_text">hourly_funding_rate_cap</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">hourly_funding_rate_cap defines the maximum absolute value of the hourly funding rate</td></tr>
 <tr ><td class="parameter-td td_text">hourly_interest_rate</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">hourly_interest_rate defines the hourly interest rate</td></tr>
 <tr ><td class="parameter-td td_text">next_funding_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">next_funding_timestamp defines the next funding timestamp in seconds of a perpetual market</td></tr>
-<tr ><td class="parameter-td td_text">funding_interval</td><td class="type-td td_text">int64</td><td class="description-td td_text">funding_interval defines the next funding interval in seconds of a perpetual market.</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">funding_interval</td><td class="type-td td_text">int64</td><td class="description-td td_text">funding_interval defines the next funding interval in seconds of a perpetual market.</td></tr>
+<tr ><td class="parameter-td td_text">funding_impact_notional</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">funding_impact_notional defines the quote notional (in human readable format) of the impact orders sampled by funding v2. Zero selects legacy funding.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1430,7 +1433,10 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/PerpetualMarketFunding.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">cumulative_funding</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">cumulative_funding defines the cumulative funding of a perpetual market.</td></tr>
 <tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">cumulative_price defines the running time-integral of the perp premium ((VWAP - mark_price) / mark_price) i.e., sum(premium * seconds) used to compute the interval’s average premium for funding</td></tr>
-<tr ><td class="parameter-td td_text">last_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">the last funding timestamp in seconds</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">last_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">the last funding timestamp in seconds</td></tr>
+<tr ><td class="parameter-td td_text">period_start</td><td class="type-td td_text">int64</td><td class="description-td td_text">period_start defines the start in seconds of the current funding v2 accrual period</td></tr>
+<tr ><td class="parameter-td td_text">last_premium</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">last_premium defines the most recent funding v2 impact premium</td></tr>
+<tr ><td class="parameter-td td_text">last_sample_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">last_sample_timestamp defines when in seconds last_premium was sampled</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1697,7 +1703,9 @@ func main() {
 <tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the maximum open notional for the market</td></tr>
 <tr ><td class="parameter-td td_text">has_disabled_minimal_protocol_fee</td><td class="type-td td_text">bool</td><td class="description-td td_text">has_disabled_minimal_protocol_fee indicates whether the minimal protocol fee is disabled for the market</td></tr>
 <tr ><td class="parameter-td td_text">force_paused_info</td><td class="type-td td_text">ForcePausedInfo</td><td class="description-td td_text">force_paused_info defines additional info for force paused markets, only set when status == ForcePaused</td></tr>
-<tr ><td class="parameter-td td_text">cross_margin_eligible</td><td class="type-td td_text">bool</td><td class="description-td td_text">cross_margin_eligible marks the market as eligible for cross-margin pool participation. Default false means markets are ineligible until explicitly enabled at launch or toggled via governance proposal.</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">cross_margin_eligible</td><td class="type-td td_text">bool</td><td class="description-td td_text">cross_margin_eligible marks the market as eligible for cross-margin pool participation. Default false means markets are ineligible until explicitly enabled at launch or toggled via governance proposal.</td></tr>
+<tr ><td class="parameter-td td_text">reference_price_gate_config</td><td class="type-td td_text">ReferencePriceGateConfig</td><td class="description-td td_text">reference_price_gate_config configures the reference-price gate on position-opening fills for the market. A zero-valued config means the gate is disabled.</td></tr>
+<tr ><td class="parameter-td td_text">synthetic_trade_fee_rate</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">synthetic_trade_fee_rate defines the fee rate charged on synthetic trades (RFQ and contract-driven legs) and position transfers of the market</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1778,7 +1786,8 @@ func main() {
 <tr ><td class="parameter-td td_text">hourly_funding_rate_cap</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">hourly_funding_rate_cap defines the maximum absolute value of the hourly funding rate</td></tr>
 <tr ><td class="parameter-td td_text">hourly_interest_rate</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">hourly_interest_rate defines the hourly interest rate</td></tr>
 <tr ><td class="parameter-td td_text">next_funding_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">next_funding_timestamp defines the next funding timestamp in seconds of a perpetual market</td></tr>
-<tr ><td class="parameter-td td_text">funding_interval</td><td class="type-td td_text">int64</td><td class="description-td td_text">funding_interval defines the next funding interval in seconds of a perpetual market.</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">funding_interval</td><td class="type-td td_text">int64</td><td class="description-td td_text">funding_interval defines the next funding interval in seconds of a perpetual market.</td></tr>
+<tr ><td class="parameter-td td_text">funding_impact_notional</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">funding_impact_notional defines the quote notional (in human readable format) of the impact orders sampled by funding v2. Zero selects legacy funding.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -1788,7 +1797,10 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/PerpetualMarketFunding.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">cumulative_funding</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">cumulative_funding defines the cumulative funding of a perpetual market.</td></tr>
 <tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">cumulative_price defines the running time-integral of the perp premium ((VWAP - mark_price) / mark_price) i.e., sum(premium * seconds) used to compute the interval’s average premium for funding</td></tr>
-<tr ><td class="parameter-td td_text">last_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">the last funding timestamp in seconds</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">last_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">the last funding timestamp in seconds</td></tr>
+<tr ><td class="parameter-td td_text">period_start</td><td class="type-td td_text">int64</td><td class="description-td td_text">period_start defines the start in seconds of the current funding v2 accrual period</td></tr>
+<tr ><td class="parameter-td td_text">last_premium</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">last_premium defines the most recent funding v2 impact premium</td></tr>
+<tr ><td class="parameter-td td_text">last_sample_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">last_sample_timestamp defines when in seconds last_premium was sampled</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2306,7 +2318,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountPositionInMarketResponse.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">Position</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">risk_mode</td><td class="type-td td_text">RiskMode</td><td class="description-td td_text">The risk mode of the subaccount (ISOLATED or CROSS). For CROSS mode, the position's margin is an accounting value; actual collateral is pooled. Use CrossMarginPoolSnapshot for pool-level health.</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">risk_mode</td><td class="type-td td_text">RiskMode</td><td class="description-td td_text">The effective margin mode of this (subaccount, market) pair (ISOLATED or CROSS), resolved per market. For CROSS mode, the position's margin is an accounting value; actual collateral is pooled. Use CrossMarginPoolSnapshot for pool-level health.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2700,7 +2712,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountPositionInMarketResponse.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">Position</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">risk_mode</td><td class="type-td td_text">RiskMode</td><td class="description-td td_text">The risk mode of the subaccount (ISOLATED or CROSS). For CROSS mode, the position's margin is an accounting value; actual collateral is pooled. Use CrossMarginPoolSnapshot for pool-level health.</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">risk_mode</td><td class="type-td td_text">RiskMode</td><td class="description-td td_text">The effective margin mode of this (subaccount, market) pair (ISOLATED or CROSS), resolved per market. For CROSS mode, the position's margin is an accounting value; actual collateral is pooled. Use CrossMarginPoolSnapshot for pool-level health.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2869,7 +2881,7 @@ func main() {
 
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/QuerySubaccountEffectivePositionInMarketResponse.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">state</td><td class="type-td td_text">EffectivePosition</td><td class="description-td td_num"></td></tr>
-<tr ><td class="parameter-td td_text">risk_mode</td><td class="type-td td_text">RiskMode</td><td class="description-td td_text">The risk mode of the subaccount (ISOLATED or CROSS). For CROSS mode, effective_margin reflects position value but liquidation is determined at pool level. Use CrossMarginPoolSnapshot for pool health.</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">risk_mode</td><td class="type-td td_text">RiskMode</td><td class="description-td td_text">The effective margin mode of this (subaccount, market) pair (ISOLATED or CROSS), resolved per market. For CROSS mode, effective_margin reflects position value but liquidation is determined at pool level. Use CrossMarginPoolSnapshot for pool health.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -3031,7 +3043,8 @@ func main() {
 <tr ><td class="parameter-td td_text">hourly_funding_rate_cap</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">hourly_funding_rate_cap defines the maximum absolute value of the hourly funding rate</td></tr>
 <tr ><td class="parameter-td td_text">hourly_interest_rate</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">hourly_interest_rate defines the hourly interest rate</td></tr>
 <tr ><td class="parameter-td td_text">next_funding_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">next_funding_timestamp defines the next funding timestamp in seconds of a perpetual market</td></tr>
-<tr ><td class="parameter-td td_text">funding_interval</td><td class="type-td td_text">int64</td><td class="description-td td_text">funding_interval defines the next funding interval in seconds of a perpetual market.</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">funding_interval</td><td class="type-td td_text">int64</td><td class="description-td td_text">funding_interval defines the next funding interval in seconds of a perpetual market.</td></tr>
+<tr ><td class="parameter-td td_text">funding_impact_notional</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">funding_impact_notional defines the quote notional (in human readable format) of the impact orders sampled by funding v2. Zero selects legacy funding.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -3323,7 +3336,10 @@ func main() {
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./source/json_tables/injective/exchange/v2/PerpetualMarketFunding.json) -->
 <table class="JSON-TO-HTML-TABLE"><thead><tr><th class="parameter-th">Parameter</th><th class="type-th">Type</th><th class="description-th">Description</th></tr></thead><tbody ><tr ><td class="parameter-td td_text">cumulative_funding</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">cumulative_funding defines the cumulative funding of a perpetual market.</td></tr>
 <tr ><td class="parameter-td td_text">cumulative_price</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">cumulative_price defines the running time-integral of the perp premium ((VWAP - mark_price) / mark_price) i.e., sum(premium * seconds) used to compute the interval’s average premium for funding</td></tr>
-<tr ><td class="parameter-td td_text">last_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">the last funding timestamp in seconds</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">last_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">the last funding timestamp in seconds</td></tr>
+<tr ><td class="parameter-td td_text">period_start</td><td class="type-td td_text">int64</td><td class="description-td td_text">period_start defines the start in seconds of the current funding v2 accrual period</td></tr>
+<tr ><td class="parameter-td td_text">last_premium</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">last_premium defines the most recent funding v2 impact premium</td></tr>
+<tr ><td class="parameter-td td_text">last_sample_timestamp</td><td class="type-td td_text">int64</td><td class="description-td td_text">last_sample_timestamp defines when in seconds last_premium was sampled</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
@@ -3713,7 +3729,8 @@ func main() {
 <tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market (in human readable format)</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the cap on the open notional</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">cross_margin_eligible</td><td class="type-td td_text">bool</td><td class="description-td td_text">cross_margin_eligible marks the market as eligible for cross-margin</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">cross_margin_eligible</td><td class="type-td td_text">bool</td><td class="description-td td_text">cross_margin_eligible marks the market as eligible for cross-margin</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">synthetic_trade_fee_rate</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">synthetic_trade_fee_rate defines the synthetic trade fee rate of the market. Omitted means zero.</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -4028,7 +4045,8 @@ func main() {
 <tr ><td class="parameter-td td_text">min_notional</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">min_notional defines the minimum notional (in quote asset) required for orders in the market</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">reduce_margin_ratio</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">reduce_margin_ratio defines the ratio of the margin that is reduced</td><td class="required-td td_text">Yes</td></tr>
 <tr ><td class="parameter-td td_text">open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">open_notional_cap defines the cap on the open notional</td><td class="required-td td_text">Yes</td></tr>
-<tr ><td class="parameter-td td_text">cross_margin_eligible</td><td class="type-td td_text">bool</td><td class="description-td td_text">cross_margin_eligible marks the market as eligible for cross-margin</td><td class="required-td td_text">Yes</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">cross_margin_eligible</td><td class="type-td td_text">bool</td><td class="description-td td_text">cross_margin_eligible marks the market as eligible for cross-margin</td><td class="required-td td_text">Yes</td></tr>
+<tr ><td class="parameter-td td_text">synthetic_trade_fee_rate</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">synthetic_trade_fee_rate defines the synthetic trade fee rate of the market. Omitted means zero.</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -6867,7 +6885,8 @@ func main() {
 <tr ><td class="parameter-td td_text">new_maintenance_margin_ratio</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">(optional) updated value for maintenance_margin_ratio</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">new_reduce_margin_ratio</td><td class="type-td td_text">LegacyDec</td><td class="description-td td_text">(optional) updated value for reduce_margin_ratio</td><td class="required-td td_text">No</td></tr>
 <tr ><td class="parameter-td td_text">new_open_notional_cap</td><td class="type-td td_text">OpenNotionalCap</td><td class="description-td td_text">(optional) updated value for open_notional_cap</td><td class="required-td td_text">No</td></tr>
-<tr ><td class="parameter-td td_text">cross_margin_eligibility</td><td class="type-td td_text">CrossMarginEligibility</td><td class="description-td td_text">(optional) tri-state toggle for cross-margin eligibility. Direct message updates are exchange-admin-only and may set either ELIGIBLE or INELIGIBLE. UNSPECIFIED is a no-op (preserves current value).</td><td class="required-td td_text">No</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">cross_margin_eligibility</td><td class="type-td td_text">CrossMarginEligibility</td><td class="description-td td_text">(optional) tri-state toggle for cross-margin eligibility. Direct message updates are exchange-admin-only and may set either ELIGIBLE or INELIGIBLE. UNSPECIFIED is a no-op (preserves current value).</td><td class="required-td td_text">No</td></tr>
+<tr ><td class="parameter-td td_text">new_reference_price_gate_config</td><td class="type-td td_text">ReferencePriceGateConfig</td><td class="description-td td_text">(optional) updated reference-price gate settings. Direct message updates are exchange-admin-only. nil is a no-op (preserves current value).</td><td class="required-td td_text">No</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>

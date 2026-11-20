@@ -2525,7 +2525,12 @@ func main() {
 <tr ><td class="parameter-td td_text">funding_sum</td><td class="type-td td_text">string</td><td class="description-td td_text">Net funding fees since position opened</td></tr>
 <tr ><td class="parameter-td td_text">cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Cumulative funding entry of the position</td></tr>
 <tr ><td class="parameter-td td_text">effective_cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Effective cumulative funding entry of the position</td></tr>
-<tr ><td class="parameter-td td_text">upnl</td><td class="type-td td_text">string</td><td class="description-td td_text">Unrealized profit and loss of the position (only present when requested with with_upnl=true)</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">upnl</td><td class="type-td td_text">string</td><td class="description-td td_text">Unrealized profit and loss of the position (only present when requested with with_upnl=true)</td></tr>
+<tr ><td class="parameter-td td_text">initial_leverage</td><td class="type-td td_text">string</td><td class="description-td td_text">Leverage at the time the position was opened</td></tr>
+<tr ><td class="parameter-td td_text">initial_margin</td><td class="type-td td_text">string</td><td class="description-td td_text">Margin at the time the position was opened, in USD</td></tr>
+<tr ><td class="parameter-td td_text">initial_entry_price</td><td class="type-td td_text">string</td><td class="description-td td_text">Entry price at the time the position was opened, in USD</td></tr>
+<tr ><td class="parameter-td td_text">initial_quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Quantity at the time the position was opened</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_margin</td><td class="type-td td_text">string</td><td class="description-td td_text">Initial margin plus any subsequent margin increases or decreases, excluding accrued funding. Note that funding is folded into this value by the chain whenever the position is modified.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 <br/>
@@ -2771,7 +2776,12 @@ func main() {
 <tr ><td class="parameter-td td_text">funding_sum</td><td class="type-td td_text">string</td><td class="description-td td_text">Net funding fees since position opened</td></tr>
 <tr ><td class="parameter-td td_text">cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Cumulative funding entry of the position</td></tr>
 <tr ><td class="parameter-td td_text">effective_cumulative_funding_entry</td><td class="type-td td_text">string</td><td class="description-td td_text">Effective cumulative funding entry of the position</td></tr>
-<tr ><td class="parameter-td td_text">upnl</td><td class="type-td td_text">string</td><td class="description-td td_text">Unrealized profit and loss of the position (only present when requested with with_upnl=true)</td></tr></tbody></table>
+<tr ><td class="parameter-td td_text">upnl</td><td class="type-td td_text">string</td><td class="description-td td_text">Unrealized profit and loss of the position (only present when requested with with_upnl=true)</td></tr>
+<tr ><td class="parameter-td td_text">initial_leverage</td><td class="type-td td_text">string</td><td class="description-td td_text">Leverage at the time the position was opened</td></tr>
+<tr ><td class="parameter-td td_text">initial_margin</td><td class="type-td td_text">string</td><td class="description-td td_text">Margin at the time the position was opened, in USD</td></tr>
+<tr ><td class="parameter-td td_text">initial_entry_price</td><td class="type-td td_text">string</td><td class="description-td td_text">Entry price at the time the position was opened, in USD</td></tr>
+<tr ><td class="parameter-td td_text">initial_quantity</td><td class="type-td td_text">string</td><td class="description-td td_text">Quantity at the time the position was opened</td></tr>
+<tr ><td class="parameter-td td_text">cumulative_margin</td><td class="type-td td_text">string</td><td class="description-td td_text">Initial margin plus any subsequent margin increases or decreases, excluding accrued funding. Note that funding is folded into this value by the chain whenever the position is modified.</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 

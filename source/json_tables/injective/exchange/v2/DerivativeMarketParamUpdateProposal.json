@@ -103,5 +103,20 @@
     "Parameter": "cross_margin_eligibility",
     "Type": "CrossMarginEligibility",
     "Description": "cross_margin_eligibility controls whether the market can participate in cross-margin pools"
+  },
+  {
+    "Parameter": "reference_price_gate_config",
+    "Type": "ReferencePriceGateConfig",
+    "Description": "reference_price_gate_config updates the reference-price gate settings for the market. nil means no update (the market's current value is preserved)."
+  },
+  {
+    "Parameter": "funding_impact_notional",
+    "Type": "LegacyDec",
+    "Description": "funding_impact_notional updates the funding v2 impact notional of a perpetual market. Zero selects legacy funding. nil means no update."
+  },
+  {
+    "Parameter": "synthetic_trade_fee_rate",
+    "Type": "LegacyDec",
+    "Description": "synthetic_trade_fee_rate updates the synthetic trade fee rate of the market. nil means no update."
   }
 ]

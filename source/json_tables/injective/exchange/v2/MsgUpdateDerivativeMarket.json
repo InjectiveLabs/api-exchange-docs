@@ -64,5 +64,11 @@
     "Type": "CrossMarginEligibility",
     "Description": "(optional) tri-state toggle for cross-margin eligibility. Direct message updates are exchange-admin-only and may set either ELIGIBLE or INELIGIBLE. UNSPECIFIED is a no-op (preserves current value).",
     "Required": "No"
+  },
+  {
+    "Parameter": "new_reference_price_gate_config",
+    "Type": "ReferencePriceGateConfig",
+    "Description": "(optional) updated reference-price gate settings. Direct message updates are exchange-admin-only. nil is a no-op (preserves current value).",
+    "Required": "No"
   }
 ]

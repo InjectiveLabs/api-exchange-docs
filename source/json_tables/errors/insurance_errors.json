@@ -58,5 +58,45 @@
     "module_name": "insurance",
     "error_code": 12,
     "description": "invalid share denom"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 13,
+    "description": "consolidated insurance pool already exists"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 14,
+    "description": "consolidated insurance pool not found"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 15,
+    "description": "consolidated insurance policy not found"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 16,
+    "description": "consolidated insurance payout pause is active"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 17,
+    "description": "insufficient shares out"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 18,
+    "description": "consolidated pool has outstanding shares but no balance"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 19,
+    "description": "consolidated reservation growth is blocked by pending redemptions"
+  },
+  {
+    "module_name": "insurance",
+    "error_code": 20,
+    "description": "market launch proposal is pending"
   }
 ]

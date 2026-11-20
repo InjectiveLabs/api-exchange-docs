@@ -38,5 +38,30 @@
     "Parameter": "vouchers",
     "Type": "AddressVoucher array",
     "Description": "outstanding vouchers (failed redemption deliveries)"
+  },
+  {
+    "Parameter": "consolidated_insurance_pools",
+    "Type": "ConsolidatedInsurancePool array",
+    "Description": "consolidated_insurance_pools contains consolidated pool primaries."
+  },
+  {
+    "Parameter": "consolidated_insurance_policies",
+    "Type": "ConsolidatedInsurancePolicy array",
+    "Description": "consolidated_insurance_policies contains per-market pool policies."
+  },
+  {
+    "Parameter": "consolidated_redemption_schedules",
+    "Type": "ConsolidatedRedemptionSchedule array",
+    "Description": "consolidated_redemption_schedules contains pending automatic redemptions."
+  },
+  {
+    "Parameter": "next_consolidated_redemption_schedule_id",
+    "Type": "uint64",
+    "Description": "next_consolidated_redemption_schedule_id is the next schedule identifier."
+  },
+  {
+    "Parameter": "consolidated_reservation_cursor",
+    "Type": "byte array",
+    "Description": "Last policy visited by the bounded reservation resolution worker."
   }
 ]

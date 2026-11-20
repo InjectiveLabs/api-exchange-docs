@@ -1,0 +1,14 @@
+[
+  {
+    "Code": "0",
+    "Name": "REFERENCE_GATE_REJECT_REASON_UNSPECIFIED"
+  },
+  {
+    "Code": "1",
+    "Name": "REFERENCE_GATE_REJECT_REASON_OUT_OF_BAND"
+  },
+  {
+    "Code": "2",
+    "Name": "REFERENCE_GATE_REJECT_REASON_REFERENCE_UNAVAILABLE"
+  }
+]

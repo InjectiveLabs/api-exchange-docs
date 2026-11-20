@@ -568,5 +568,95 @@
     "module_name": "exchange",
     "error_code": 115,
     "description": "message type is deprecated"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 116,
+    "description": "cross-margin subaccount has reached the per-denom spot order cap"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 117,
+    "description": "spot swap is disabled"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 118,
+    "description": "invalid swap route"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 119,
+    "description": "swap deadline exceeded"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 120,
+    "description": "swap output below minimum"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 121,
+    "description": "pool-funded cross-margin close cannot rest on the orderbook"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 122,
+    "description": "RFQ partial may draw insurance only when the remaining pool positions hold no positive mark equity"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 123,
+    "description": "inactive cross-margin legs may be scheduled for settlement only when the active pool positions hold no positive mark equity"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 124,
+    "description": "a partial RFQ slice may pay below the exact-mark payout only while the pool has no mark shortfall after it"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 125,
+    "description": "cross-exposed subaccount has reached the per-denom isolated active derivative market cap"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 126,
+    "description": "invalid reference price gate config"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 127,
+    "description": "unsupported reference price source"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 128,
+    "description": "position-opening fill rejected by reference price gate"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 129,
+    "description": "address has reached the order-book order cap"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 130,
+    "description": "invalid funding impact notional"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 131,
+    "description": "too many markets use funding v2"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 132,
+    "description": "invalid synthetic trade fee rate"
+  },
+  {
+    "module_name": "exchange",
+    "error_code": 133,
+    "description": "swap input above maximum"
   }
 ]

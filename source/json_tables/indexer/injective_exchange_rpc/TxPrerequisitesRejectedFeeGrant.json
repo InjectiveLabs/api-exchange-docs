@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "revision",
+    "Type": "string",
+    "Description": "Fee-grant revision rejected by the caller after a confirmed chain failure"
+  },
+  {
+    "Parameter": "chain_code",
+    "Type": "uint32",
+    "Description": "Confirmed chain response code associated with the rejected fee grant"
+  },
+  {
+    "Parameter": "transaction_hash",
+    "Type": "string",
+    "Description": "Optional transaction hash associated with the confirmed failure"
+  }
+]

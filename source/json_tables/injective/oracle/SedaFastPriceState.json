@@ -2,7 +2,7 @@
   {
     "Parameter": "feed_id",
     "Type": "string",
-    "Description": "feed_id is the hex-encoded execInputs string from the SEDA Fast dataRequest. It is the stable on-chain identity of the feed, invariant across relayer restarts and per-execution result IDs."
+    "Description": "feed_id is hex(keccak256(execProgramIdBytes || keccak256(execInputsBytes))). It binds the signed Oracle Program and its inputs, avoiding collisions between programs that use identical inputs."
   },
   {
     "Parameter": "timestamp",

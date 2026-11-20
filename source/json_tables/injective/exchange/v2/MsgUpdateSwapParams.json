@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "sender",
+    "Type": "string",
+    "Description": "sender is the governance authority or an exchange admin.",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "swap_params",
+    "Type": "SwapParams",
+    "Description": "swap_params fully replaces the current swap parameter group.",
+    "Required": "Yes"
+  }
+]

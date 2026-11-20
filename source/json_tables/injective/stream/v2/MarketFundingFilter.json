@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "market_ids",
+    "Type": "string array",
+    "Description": "list of perpetual market IDs to filter by; use [\"*\"] for all markets"
+  }
+]

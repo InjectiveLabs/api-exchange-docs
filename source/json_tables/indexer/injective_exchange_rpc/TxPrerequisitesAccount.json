@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "account_number",
+    "Type": "string",
+    "Description": "Exact decimal account number"
+  },
+  {
+    "Parameter": "sequence",
+    "Type": "string",
+    "Description": "Exact decimal sequence observed from chain state"
+  },
+  {
+    "Parameter": "sequence_mode",
+    "Type": "string",
+    "Description": "The sequence is observed and is not reserved"
+  },
+  {
+    "Parameter": "observed_at_height",
+    "Type": "string",
+    "Description": "Exact decimal height at which the account was observed"
+  }
+]

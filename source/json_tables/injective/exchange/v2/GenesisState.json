@@ -188,5 +188,25 @@
     "Parameter": "subaccount_risk_profiles",
     "Type": "SubaccountRiskProfileRecord array",
     "Description": ""
+  },
+  {
+    "Parameter": "subaccount_market_risk_modes",
+    "Type": "SubaccountMarketRiskModeRecord array",
+    "Description": "subaccount_market_risk_modes contains explicit per-(subaccount, market) margin-mode overrides. Markets without a record use the subaccount's risk-profile mode as the default."
+  },
+  {
+    "Parameter": "market_balances",
+    "Type": "MarketBalanceRecord array",
+    "Description": "Signed market ledgers, including temporary gaps backed by consolidated insurance reservations. Positions alone cannot reconstruct these balances."
+  },
+  {
+    "Parameter": "derivative_order_margin_refunds_migrated",
+    "Type": "bool",
+    "Description": "True when isolated derivative order holds use monotone margin refunds. Legacy exports omit this field and require a one-time reservation rebase."
+  },
+  {
+    "Parameter": "outflow_guard_blocked",
+    "Type": "bool",
+    "Description": "True when an exchange admin or governance has set the outflow guard's manual block (MsgSetOutflowGuardBlocked)."
   }
 ]

@@ -1,0 +1,37 @@
+[
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "pool_denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "max_draw",
+    "Type": "Int",
+    "Description": ""
+  },
+  {
+    "Parameter": "outstanding_draw",
+    "Type": "Int",
+    "Description": ""
+  },
+  {
+    "Parameter": "net_prefunding",
+    "Type": "Int",
+    "Description": "net_prefunding is the market ledger's signed prefunding. Live draws that cover a ledger hole add to it, and losses realized against the ledger subtract from it. A positive value is pool cash already paid ahead of a losing position's debt, so RFQ liquidation nets that debt against it instead of drawing again. It moves no funds and never limits a draw."
+  },
+  {
+    "Parameter": "reserved_amount",
+    "Type": "string",
+    "Description": "Whole quote coins reserved for this market's negative ledger, without a transfer or realized loss. Decimal integer text is exact during cached liquidation transitions; admitted reservations must fit max_draw."
+  },
+  {
+    "Parameter": "reservation_repair_cursor",
+    "Type": "byte array",
+    "Description": "Last position visited by the bounded, rotating collateral repair worker."
+  }
+]

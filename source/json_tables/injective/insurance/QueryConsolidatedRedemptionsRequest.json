@@ -1,0 +1,14 @@
+[
+  {
+    "Parameter": "redeemer",
+    "Type": "string",
+    "Description": "Optional redeemer address. Empty returns every pending schedule.",
+    "Required": "No"
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "PageRequest",
+    "Description": "Key-only pagination. Offset and total-count scans are rejected.",
+    "Required": "No"
+  }
+]

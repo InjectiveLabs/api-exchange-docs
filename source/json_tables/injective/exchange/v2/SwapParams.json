@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "enabled",
+    "Type": "bool",
+    "Description": "enabled is the global switch for the native spot swap execution path."
+  },
+  {
+    "Parameter": "allowed_markets",
+    "Type": "string array",
+    "Description": "allowed_markets is the strict allowlist of spot market IDs that swap routes may traverse. An empty list means no markets are swappable."
+  }
+]

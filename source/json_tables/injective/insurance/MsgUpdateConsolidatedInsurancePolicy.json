@@ -1,0 +1,20 @@
+[
+  {
+    "Parameter": "authority",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "max_draw",
+    "Type": "Int",
+    "Description": "",
+    "Required": "Yes"
+  }
+]

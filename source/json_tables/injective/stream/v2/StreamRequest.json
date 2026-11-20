@@ -70,5 +70,11 @@
     "Type": "ConditionalOrderTriggerFailuresFilter",
     "Description": "filter for conditional order trigger failures events",
     "Required": "No"
+  },
+  {
+    "Parameter": "market_funding_filter",
+    "Type": "MarketFundingFilter",
+    "Description": "filter for perpetual market funding updates",
+    "Required": "No"
   }
 ]

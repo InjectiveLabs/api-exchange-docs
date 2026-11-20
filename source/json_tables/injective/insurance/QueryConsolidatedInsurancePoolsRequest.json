@@ -1,0 +1,8 @@
+[
+  {
+    "Parameter": "deposit_denom",
+    "Type": "string",
+    "Description": "Optional exact deposit denom. Empty returns every consolidated pool.",
+    "Required": "No"
+  }
+]

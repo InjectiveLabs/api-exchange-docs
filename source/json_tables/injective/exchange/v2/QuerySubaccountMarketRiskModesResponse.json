@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "records",
+    "Type": "SubaccountMarketRiskModeRecord array",
+    "Description": "the subaccount's explicit per-market overrides, in market-ID byte order"
+  }
+]

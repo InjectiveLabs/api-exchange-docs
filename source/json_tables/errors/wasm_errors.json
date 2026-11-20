@@ -123,5 +123,10 @@
     "module_name": "wasm",
     "error_code": 30,
     "description": "max call depth exceeded"
+  },
+  {
+    "module_name": "wasm",
+    "error_code": 31,
+    "description": "syncing pinned codes failed"
   }
 ]

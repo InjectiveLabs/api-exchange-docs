@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "authenticated",
+    "Type": "bool",
+    "Description": "Whether the challenge signature was successfully verified"
+  },
+  {
+    "Parameter": "code",
+    "Type": "string",
+    "Description": "Stable result code such as success, timeout, invalid_signature, or missing_authz_grant"
+  },
+  {
+    "Parameter": "nonce",
+    "Type": "string",
+    "Description": "Hex-encoded nonce of the authentication challenge, when one was issued"
+  }
+]

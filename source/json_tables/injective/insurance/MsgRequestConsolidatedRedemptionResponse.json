@@ -1,0 +1,7 @@
+[
+  {
+    "Parameter": "schedule_id",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

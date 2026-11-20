@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "schedules",
+    "Type": "ConsolidatedRedemptionSchedule array",
+    "Description": ""
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "PageResponse",
+    "Description": ""
+  }
+]

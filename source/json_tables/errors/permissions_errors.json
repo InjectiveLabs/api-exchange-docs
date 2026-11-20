@@ -83,5 +83,15 @@
     "module_name": "permissions",
     "error_code": 18,
     "description": "invalid erc20 denom"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 19,
+    "description": "contract post hook execution error"
+  },
+  {
+    "module_name": "permissions",
+    "error_code": 20,
+    "description": "invalid evm post send hook"
   }
 ]

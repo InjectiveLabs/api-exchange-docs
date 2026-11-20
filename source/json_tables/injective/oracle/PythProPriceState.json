@@ -13,5 +13,15 @@
     "Parameter": "price_state",
     "Type": "PriceState",
     "Description": "price_state holds the verified price, cumulative price, and block timestamp."
+  },
+  {
+    "Parameter": "ema_price",
+    "Type": "LegacyDec",
+    "Description": "ema_price is the upstream emaPrice value from the verified Pyth Lazer payload, scaled with the feed exponent."
+  },
+  {
+    "Parameter": "ema_timestamp",
+    "Type": "uint64",
+    "Description": "ema_timestamp is the feed update timestamp associated with ema_price (microseconds from epoch). It advances only when a verified payload contains both emaPrice and a valid per-feed feedUpdateTimestamp."
   }
 ]

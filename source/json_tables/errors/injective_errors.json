@@ -8,5 +8,10 @@
     "module_name": "injective",
     "error_code": 4,
     "description": "invalid ethereum signature"
+  },
+  {
+    "module_name": "injective",
+    "error_code": 5,
+    "description": "account sequence check failed"
   }
 ]

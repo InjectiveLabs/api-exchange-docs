@@ -93,5 +93,10 @@
     "Parameter": "cross_margin_eligible",
     "Type": "bool",
     "Description": "cross_margin_eligible marks the market as eligible for cross-margin"
+  },
+  {
+    "Parameter": "synthetic_trade_fee_rate",
+    "Type": "LegacyDec",
+    "Description": "synthetic_trade_fee_rate defines the synthetic trade fee rate of the market. Omitted means zero."
   }
 ]

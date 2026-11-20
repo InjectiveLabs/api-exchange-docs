@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "code",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "component",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "retryable",
+    "Type": "bool",
+    "Description": ""
+  }
+]

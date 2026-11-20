@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "enabled",
+    "Type": "bool",
+    "Description": "whether the guard is enabled in params"
+  },
+  {
+    "Parameter": "manually_blocked",
+    "Type": "bool",
+    "Description": "whether the manual block (MsgSetOutflowGuardBlocked) is set. It only takes effect while the guard is enabled."
+  },
+  {
+    "Parameter": "headroom",
+    "Type": "LegacyDec",
+    "Description": "the remaining 24h net outflow allowance in USD for the current block, ignoring the manual block. Zero when the guard is disabled or failed, zero or negative once the cap is exhausted."
+  },
+  {
+    "Parameter": "blocking",
+    "Type": "bool",
+    "Description": "whether tracked outflows to non-exempt addresses are refused this block: the guard is enabled and either the manual block is set, the guard failed, or the headroom is not positive."
+  }
+]

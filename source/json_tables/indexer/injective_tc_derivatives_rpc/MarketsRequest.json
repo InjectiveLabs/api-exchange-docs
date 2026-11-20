@@ -1,0 +1,38 @@
+[
+  {
+    "Parameter": "market_status",
+    "Type": "string",
+    "Description": "Filter by market status",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "quote_denom",
+    "Type": "string",
+    "Description": "Filter by the Coin denomination of the quote currency",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_statuses",
+    "Type": "string array",
+    "Description": "Filter by multiple market statuses",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "market_ids",
+    "Type": "string array",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "per_page",
+    "Type": "int32",
+    "Description": "Number of results per page",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "token",
+    "Type": "string",
+    "Description": "Pagination token",
+    "Required": "Yes"
+  }
+]

@@ -8,7 +8,7 @@
   {
     "Parameter": "params",
     "Type": "Params",
-    "Description": "params defines the exchange parameters to update.  NOTE: All parameters must be supplied.",
+    "Description": "params defines the exchange parameters to update. Callers should supply a full Params object. Some parameter groups still preserve omitted fields, but cross_margin_params is treated as a full replacement. Sparse/raw payloads must include the full intended cross_margin_params payload because decoded false/zero/empty values are applied literally when they pass validation, including valid explicit zeros such as backstop_margin_ratio = 0.",
     "Required": "Yes"
   }
 ]

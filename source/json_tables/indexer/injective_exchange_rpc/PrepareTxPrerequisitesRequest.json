@@ -1,0 +1,44 @@
+[
+  {
+    "Parameter": "schema_version",
+    "Type": "string",
+    "Description": "",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "chain_id",
+    "Type": "string",
+    "Description": "Optional expected chain ID; the server rejects a different configured chain",
+    "Required": "No"
+  },
+  {
+    "Parameter": "address",
+    "Type": "string",
+    "Description": "Generic account address whose transaction prerequisites are requested",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "timeout_in_blocks",
+    "Type": "uint64",
+    "Description": "Optional timeout-height delta; the server default is used when omitted",
+    "Required": "No"
+  },
+  {
+    "Parameter": "request_fee_grant",
+    "Type": "bool",
+    "Description": "Opt in to queued fee-grant preparation for this address",
+    "Required": "Yes"
+  },
+  {
+    "Parameter": "known_revision",
+    "Type": "string",
+    "Description": "Optional prerequisites revision already held by the caller",
+    "Required": "No"
+  },
+  {
+    "Parameter": "rejected_fee_grant",
+    "Type": "TxPrerequisitesRejectedFeeGrant",
+    "Description": "",
+    "Required": "No"
+  }
+]

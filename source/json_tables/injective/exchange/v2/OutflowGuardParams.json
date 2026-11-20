@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "enabled",
+    "Type": "bool",
+    "Description": "enabled is the global switch for the outflow guard."
+  },
+  {
+    "Parameter": "max_outflow_ratio",
+    "Type": "LegacyDec",
+    "Description": "max_outflow_ratio is the maximum net outflow over the rolling window, as a fraction of the perimeter notional at the start of the window. Must be in (0, 1]."
+  },
+  {
+    "Parameter": "tracked_denoms",
+    "Type": "OutflowGuardTrackedDenom array",
+    "Description": "tracked_denoms lists the denoms that are valued and limited. Transfers of other denoms are not checked."
+  }
+]

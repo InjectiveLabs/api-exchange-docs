@@ -78,5 +78,15 @@
     "module_name": "08-cardano-probabilistic",
     "error_code": 18,
     "description": "not implemented"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 19,
+    "description": "invalid max clock drift"
+  },
+  {
+    "module_name": "08-cardano-probabilistic",
+    "error_code": 20,
+    "description": "epoch context challenge window has not elapsed"
   }
 ]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "mode",
+    "Type": "RiskMode",
+    "Description": "the resolved effective mode for this (subaccount, market) pair"
+  },
+  {
+    "Parameter": "is_override",
+    "Type": "bool",
+    "Description": "true when an explicit per-market record produced the resolution (as opposed to the profile default or the binary-options pin)"
+  }
+]

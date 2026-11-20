@@ -2,7 +2,7 @@
   {
     "Parameter": "message_type",
     "Type": "string",
-    "Description": "Type: 'quote', 'request_ack', 'error', 'pong', 'conditional_order_ack', 'conditional_order_update'"
+    "Description": "Type: 'quote', 'request_ack', 'error', 'pong', 'conditional_order_ack', 'conditional_order_update', 'challenge', 'auth_result'"
   },
   {
     "Parameter": "quote",
@@ -28,5 +28,15 @@
     "Parameter": "conditional_order",
     "Type": "ConditionalOrderResponseType",
     "Description": "Conditional order lifecycle update"
+  },
+  {
+    "Parameter": "challenge",
+    "Type": "TakerChallenge",
+    "Description": "Optional EIP-712 authentication challenge"
+  },
+  {
+    "Parameter": "auth_result",
+    "Type": "TakerAuthResult",
+    "Description": "Result of taker stream authentication; informational and does not change request handling"
   }
 ]

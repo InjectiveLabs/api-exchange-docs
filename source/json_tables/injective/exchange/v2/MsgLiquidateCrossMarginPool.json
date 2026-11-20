@@ -16,5 +16,11 @@
     "Type": "string",
     "Description": "identifies which cross-margin pool (by quote denom)",
     "Required": "Yes"
+  },
+  {
+    "Parameter": "rfq_action",
+    "Type": "string",
+    "Description": "rfq_action is the synthetic-trade action returned by the configured RFQ contract. It is required for an active-market RFQ liquidation and may be empty when an already-paused liquidatable pool is routed to settlement.",
+    "Required": "Yes"
   }
 ]

@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "id",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "pool_denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "redeemer",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "claimable_redemption_time",
+    "Type": "Time",
+    "Description": ""
+  },
+  {
+    "Parameter": "shares",
+    "Type": "Coin",
+    "Description": ""
+  },
+  {
+    "Parameter": "waiting_for_reserved_cash",
+    "Type": "bool",
+    "Description": "Retained through retries; released only when these shares are processed."
+  }
+]

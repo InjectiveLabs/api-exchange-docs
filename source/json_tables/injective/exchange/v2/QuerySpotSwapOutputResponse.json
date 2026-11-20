@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "output_denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "output_amount",
+    "Type": "Int",
+    "Description": "Projected output amount in chain format"
+  },
+  {
+    "Parameter": "spent_amount",
+    "Type": "Int",
+    "Description": "Projected input actually spent in chain format; amount_in minus this is the projected refund"
+  }
+]

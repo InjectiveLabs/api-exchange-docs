@@ -1,0 +1,87 @@
+[
+  {
+    "Parameter": "schema_version",
+    "Type": "uint32",
+    "Description": "Signed request schema version"
+  },
+  {
+    "Parameter": "evm_chain_id",
+    "Type": "uint64",
+    "Description": "EVM chain ID used in the EIP712 domain separator"
+  },
+  {
+    "Parameter": "taker",
+    "Type": "string",
+    "Description": "Taker address"
+  },
+  {
+    "Parameter": "request_id",
+    "Type": "string",
+    "Description": "Hex-encoded 32-byte taker-signed replay key"
+  },
+  {
+    "Parameter": "created_at_ms",
+    "Type": "uint64",
+    "Description": "Signed request creation timestamp in milliseconds"
+  },
+  {
+    "Parameter": "deadline_ms",
+    "Type": "uint64",
+    "Description": "Signed request deadline timestamp in milliseconds"
+  },
+  {
+    "Parameter": "market_id",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "subaccount_nonce",
+    "Type": "uint32",
+    "Description": "Taker subaccount nonce"
+  },
+  {
+    "Parameter": "direction",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "quantity",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "margin",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "worst_price",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "min_total_fill_quantity",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "cid",
+    "Type": "string",
+    "Description": "Client order ID embedded in the signed payload"
+  },
+  {
+    "Parameter": "allowed_relayer",
+    "Type": "string",
+    "Description": "Address allowed to relay this request on-chain; must match the configured executor wallet when set"
+  },
+  {
+    "Parameter": "max_fee_rate",
+    "Type": "string",
+    "Description": "Optional settlement fee-rate ceiling"
+  },
+  {
+    "Parameter": "max_total_taker_funds",
+    "Type": "string",
+    "Description": "Optional settlement-cost ceiling"
+  }
+]

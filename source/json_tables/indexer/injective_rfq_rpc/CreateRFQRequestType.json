@@ -38,5 +38,10 @@
     "Parameter": "price_check",
     "Type": "bool",
     "Description": "Whether the request is for price check only"
+  },
+  {
+    "Parameter": "memo",
+    "Type": "string",
+    "Description": "Optional request memo. Maximum 256 UTF-8 bytes"
   }
 ]

@@ -1,0 +1,12 @@
+[
+  {
+    "Parameter": "policies",
+    "Type": "ConsolidatedInsurancePolicy array",
+    "Description": ""
+  },
+  {
+    "Parameter": "pagination",
+    "Type": "PageResponse",
+    "Description": ""
+  }
+]

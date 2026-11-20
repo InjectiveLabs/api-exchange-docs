@@ -1,0 +1,32 @@
+[
+  {
+    "Parameter": "settlement",
+    "Type": "RFQSettlementType",
+    "Description": "Indexed RFQ settlement, when available"
+  },
+  {
+    "Parameter": "request_id",
+    "Type": "string",
+    "Description": "Hex-encoded 32-byte signed request ID, when available"
+  },
+  {
+    "Parameter": "request_hash",
+    "Type": "string",
+    "Description": "Hex-encoded EIP-712 digest, when available"
+  },
+  {
+    "Parameter": "rfq_id",
+    "Type": "uint64",
+    "Description": "Allocated RFQ quote-round ID, when available"
+  },
+  {
+    "Parameter": "tx_hash",
+    "Type": "string",
+    "Description": "On-chain transaction hash, if submitted but not yet indexed"
+  },
+  {
+    "Parameter": "status",
+    "Type": "string",
+    "Description": "Resolution status"
+  }
+]

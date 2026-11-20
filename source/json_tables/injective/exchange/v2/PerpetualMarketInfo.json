@@ -23,5 +23,10 @@
     "Parameter": "funding_interval",
     "Type": "int64",
     "Description": "funding_interval defines the next funding interval in seconds of a perpetual market."
+  },
+  {
+    "Parameter": "funding_impact_notional",
+    "Type": "LegacyDec",
+    "Description": "funding_impact_notional defines the quote notional (in human readable format) of the impact orders sampled by funding v2. Zero selects legacy funding."
   }
 ]

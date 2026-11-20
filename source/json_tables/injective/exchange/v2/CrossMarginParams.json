@@ -27,11 +27,46 @@
   {
     "Parameter": "max_active_derivative_markets_per_pool",
     "Type": "uint32",
-    "Description": "max_active_derivative_markets_per_pool defines the maximum number of active derivative markets (positions or orders) a cross-margin subaccount may have within a single quote-denom pool."
+    "Description": "max_active_derivative_markets_per_pool is an optional additional admission cap when a cross-margin subaccount introduces a new derivative carrier in a quote-denom pool. Lowering it does not invalidate grandfathered carriers or prohibit activity in an already-counted market."
   },
   {
     "Parameter": "emergency_paused",
     "Type": "bool",
-    "Description": "emergency_paused defines whether cross margin is in emergency pause mode. When true: - All cross-margin orders (including reduce-only) are blocked - Profile switching involving cross mode is blocked - Liquidations are still allowed - Withdrawals are allowed up to isolated-margin maintenance level"
+    "Description": "emergency_paused defines whether new cross-margin activation and public CROSS order admission and matching are paused, including reducing orders. Order cancellation, authenticated liquidation, and scheduled settlement remain available."
+  },
+  {
+    "Parameter": "backstop_margin_ratio",
+    "Type": "LegacyDec",
+    "Description": "backstop_margin_ratio sets the pool-health target of a liquidation. The configured RFQ router may close one bounded slice of one position per transaction (a one-pair partial) and continue slice by slice from bare maintenance toward this target while the liquidation cooldown window is active; a canonical full-pool close remains available."
+  },
+  {
+    "Parameter": "partial_liquidation_ratio",
+    "Type": "LegacyDec",
+    "Description": "partial_liquidation_ratio is the fraction of the distance to the backstop target that one liquidation transaction may close. For a configured-RFQ one-pair partial it is a fresh per-transaction budget applied to current state, not a per-window limit: sequential slices may cumulatively exceed the first slice's budget."
+  },
+  {
+    "Parameter": "liquidation_cooldown_blocks",
+    "Type": "uint64",
+    "Description": "liquidation_cooldown_blocks is the rolling window, refreshed by every successful liquidation slice, during which a configured RFQ router may continue one-pair partial slices against a pool that is at or above bare maintenance but below the backstop target. A value of 0 or 1 disables that continuation; the public orderbook path keeps rejecting that band."
+  },
+  {
+    "Parameter": "max_cross_margin_spot_orders_per_subaccount_per_denom",
+    "Type": "uint32",
+    "Description": "max_cross_margin_spot_orders_per_subaccount_per_denom is an additional, possibly tighter, spot-order admission cap for each cross-margin subaccount and locking denom."
+  },
+  {
+    "Parameter": "util_ratio",
+    "Type": "LegacyDec",
+    "Description": "util_ratio defines the multiplier applied to the cash-floor admission check: util_ratio * (QuoteBalance + PositionMarginTotal - ratcheted MM). It must be in [0, 1]. 1.0 applies no extra utilization haircut; 0 disables new risk-increasing cross-margin orders. Nullable so that an omitted field survives serialization (including the gov proposal re-marshalling) as nil: nil means \"preserve the current value\" in MsgUpdateParams, distinct from an explicit 0 (emergency halt)."
+  },
+  {
+    "Parameter": "liquidation_rfq_contract_address",
+    "Type": "string array",
+    "Description": "liquidation_rfq_contract_address is the bounded set of RFQ router contracts permitted to settle cross-margin liquidations. An empty list disables cross-margin activation and requires cross_margin_enabled_quote_denoms to be empty."
+  },
+  {
+    "Parameter": "max_isolated_active_derivative_markets_per_subaccount_per_denom",
+    "Type": "uint32",
+    "Description": "max_isolated_active_derivative_markets_per_subaccount_per_denom bounds how many isolated-mode derivative markets a subaccount with cross-margin exposure may be active in per quote denom. Pool walks skip isolated-mode markets, so this cap bounds the walk work an account can force on pool builds and liquidation sweeps. Zero-cost for accounts without cross exposure."
   }
 ]

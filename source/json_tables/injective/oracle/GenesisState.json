@@ -97,6 +97,6 @@
   {
     "Parameter": "seda_fast_price_states",
     "Type": "SedaFastPriceState array",
-    "Description": "seda_fast_price_states defines the persisted SEDA Fast feed price states at genesis, keyed by feed_id (hex-encoded execInputs)."
+    "Description": "seda_fast_price_states defines the persisted SEDA Fast feed price states at genesis, keyed by feed_id: hex(keccak256(execProgramIdBytes || keccak256(execInputsBytes)))."
   }
 ]

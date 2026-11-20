@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "snapshot_age_at_response_ms",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "server_processing_ms",
+    "Type": "uint64",
+    "Description": ""
+  },
+  {
+    "Parameter": "upstream_round_trip_ms",
+    "Type": "uint64",
+    "Description": ""
+  }
+]

@@ -92,6 +92,21 @@
   {
     "Parameter": "tx_body_memo",
     "Type": "string",
-    "Description": "Optional outer Cosmos TxBody memo"
+    "Description": "Deprecated compatibility alias for memo"
+  },
+  {
+    "Parameter": "memo",
+    "Type": "string",
+    "Description": "Optional RFQ request memo, also used as the outer Cosmos TxBody memo. Maximum 256 UTF-8 bytes"
+  },
+  {
+    "Parameter": "signed_request",
+    "Type": "RFQGwSignedRFQRequestType",
+    "Description": "Optional taker-signed RFQ intent used for request authentication"
+  },
+  {
+    "Parameter": "taker_signature",
+    "Type": "string",
+    "Description": "Hex-encoded taker EIP-712 signature over signed_request"
   }
 ]

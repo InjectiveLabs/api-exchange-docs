@@ -2,7 +2,7 @@
   {
     "Parameter": "symbol",
     "Type": "string",
-    "Description": ""
+    "Description": "The feed identifier for this price update, sourced from EventOraclePriceUpdate.id. Its format depends on the oracle type; see OraclePriceFilter.symbol for the per-type mapping."
   },
   {
     "Parameter": "price",

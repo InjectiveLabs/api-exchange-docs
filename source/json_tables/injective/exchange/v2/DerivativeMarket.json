@@ -123,5 +123,15 @@
     "Parameter": "cross_margin_eligible",
     "Type": "bool",
     "Description": "cross_margin_eligible marks the market as eligible for cross-margin pool participation. Default false means markets are ineligible until explicitly enabled at launch or toggled via governance proposal."
+  },
+  {
+    "Parameter": "reference_price_gate_config",
+    "Type": "ReferencePriceGateConfig",
+    "Description": "reference_price_gate_config configures the reference-price gate on position-opening fills for the market. A zero-valued config means the gate is disabled."
+  },
+  {
+    "Parameter": "synthetic_trade_fee_rate",
+    "Type": "LegacyDec",
+    "Description": "synthetic_trade_fee_rate defines the fee rate charged on synthetic trades (RFQ and contract-driven legs) and position transfers of the market"
   }
 ]

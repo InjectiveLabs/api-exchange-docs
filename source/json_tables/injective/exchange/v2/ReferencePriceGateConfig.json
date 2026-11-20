@@ -1,0 +1,17 @@
+[
+  {
+    "Parameter": "reference_price_source",
+    "Type": "ReferencePriceSource",
+    "Description": "source of the reference price"
+  },
+  {
+    "Parameter": "reference_window_seconds",
+    "Type": "uint32",
+    "Description": "maximum permitted age of the provider observation used as the reference, in seconds"
+  },
+  {
+    "Parameter": "max_open_deviation_bps",
+    "Type": "uint32",
+    "Description": "maximum deviation, in basis points, between a position-opening fill price and the reference price"
+  }
+]

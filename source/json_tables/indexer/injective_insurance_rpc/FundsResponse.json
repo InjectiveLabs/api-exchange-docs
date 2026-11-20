@@ -3,5 +3,10 @@
     "Parameter": "funds",
     "Type": "InsuranceFund array",
     "Description": ""
+  },
+  {
+    "Parameter": "next",
+    "Type": "string array",
+    "Description": "Next tokens for pagination"
   }
 ]

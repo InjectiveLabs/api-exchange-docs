@@ -1,0 +1,22 @@
+[
+  {
+    "Parameter": "notional_usd",
+    "Type": "uint64",
+    "Description": "Tier notional in USD"
+  },
+  {
+    "Parameter": "bid",
+    "Type": "string",
+    "Description": "Best bid price as a decimal string, empty when no maker quoted it"
+  },
+  {
+    "Parameter": "ask",
+    "Type": "string",
+    "Description": "Best ask price as a decimal string, empty when no maker quoted it"
+  },
+  {
+    "Parameter": "age_ms",
+    "Type": "int64",
+    "Description": "Age in milliseconds of the older of the bid and ask quotes"
+  }
+]

@@ -182,11 +182,26 @@
   {
     "Parameter": "white_knight_liquidator_reward_share_rate",
     "Type": "LegacyDec",
-    "Description": "white_knight_liquidator_reward_share_rate defines the ratio of the split of the surplus collateral that goes to a white knight liquidator"
+    "Description": "white_knight_liquidator_reward_share_rate defines the ratio of the split of the surplus collateral that goes to a white knight liquidator. Nullable so that an omitted field survives serialization (including the gov proposal re-marshalling) as nil: nil means \"preserve the current value\" in MsgUpdateParams, distinct from an explicit value."
   },
   {
     "Parameter": "cross_margin_params",
     "Type": "CrossMarginParams",
     "Description": "cross_margin_params groups all cross-margin related parameters."
+  },
+  {
+    "Parameter": "swap_params",
+    "Type": "SwapParams",
+    "Description": "swap_params groups the native spot swap configuration."
+  },
+  {
+    "Parameter": "outflow_guard_params",
+    "Type": "OutflowGuardParams",
+    "Description": "outflow_guard_params caps the net value leaving the exchange perimeter (exchange, insurance, auction and permissions module accounts) over a rolling 24h window."
+  },
+  {
+    "Parameter": "min_expiry_futures_market_duration_seconds",
+    "Type": "int64",
+    "Description": "min_expiry_futures_market_duration_seconds defines the minimum number of seconds between the launch block time and a new expiry futures market's expiry. It must cover at least the 30 minute settlement TWAP window."
   }
 ]

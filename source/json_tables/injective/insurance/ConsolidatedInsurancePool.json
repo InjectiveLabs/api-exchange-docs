@@ -1,0 +1,52 @@
+[
+  {
+    "Parameter": "deposit_denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "share_denom",
+    "Type": "string",
+    "Description": ""
+  },
+  {
+    "Parameter": "quote_decimals",
+    "Type": "uint32",
+    "Description": ""
+  },
+  {
+    "Parameter": "redemption_notice_period_duration",
+    "Type": "Duration",
+    "Description": ""
+  },
+  {
+    "Parameter": "balance",
+    "Type": "Int",
+    "Description": ""
+  },
+  {
+    "Parameter": "total_share",
+    "Type": "Int",
+    "Description": ""
+  },
+  {
+    "Parameter": "max_draw_per_market",
+    "Type": "Int",
+    "Description": ""
+  },
+  {
+    "Parameter": "paused",
+    "Type": "bool",
+    "Description": "paused is an insurance-payout pause. It disables fresh draws, underwriting, and enrollment, but does not halt enrolled markets or automatic redemptions."
+  },
+  {
+    "Parameter": "reserved_balance",
+    "Type": "string",
+    "Description": "Whole quote coins committed to negative market ledgers. This derived sum is separate from cash and does not reduce the value used to issue shares. Decimal integer text keeps intermediate liquidation sums unbounded."
+  },
+  {
+    "Parameter": "pending_reservation_redemptions",
+    "Type": "uint64",
+    "Description": "Number of mature redemptions waiting for reserved cash. While nonzero, ordinary executions cannot grow reservations and re-lock released cash."
+  }
+]

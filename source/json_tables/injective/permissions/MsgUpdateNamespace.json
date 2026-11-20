@@ -46,5 +46,11 @@
     "Type": "MsgUpdateNamespace_SetContractHook",
     "Description": "address of EVM smart contract to apply code-based restrictions",
     "Required": "No"
+  },
+  {
+    "Parameter": "evm_post_hook",
+    "Type": "MsgUpdateNamespace_SetContractHook",
+    "Description": "address of EVM smart contract to invoke after each successful transfer",
+    "Required": "No"
   }
 ]
